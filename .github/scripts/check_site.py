@@ -1,12 +1,11 @@
 """Pre-deploy checks for the Thinking Lab static site.
 
-Run from the repo root: python3 .github/scripts/check_site.py [inline-js-out-dir]
-If an output directory is given, the inline <script> blocks from index.html are
-written there so CI can syntax-check them with node.
+Run from the repo root: python3 .github/scripts/check_site.py
 """
 import json
 import os
 import re
+import glob
 import subprocess
 import sys
 
@@ -36,12 +35,31 @@ m = re.search(r"const FILES = (\[.*?\]);", sw, re.S)
 if not m:
     fail("could not find FILES list in sw.js")
 else:
-    files = [f for f in json.loads(m.group(1)) if f != "./"]
-    gone = [f for f in files if not os.path.isfile(f)]
+    precached = [f for f in json.loads(m.group(1)) if f != "./"]
+    gone = [f for f in precached if not os.path.isfile(f)]
     for f in gone:
         fail(f"sw.js precaches a file that does not exist: {f}")
     if not gone:
-        ok(f"all {len(files)} precached files exist")
+        ok(f"all {len(precached)} precached files exist")
+
+# 2b. Every script and stylesheet the page loads must exist and be precached, or the app breaks offline.
+#     Inline scripts are not allowed: the Content-Security-Policy in _headers blocks them.
+html = open("index.html", encoding="utf-8").read()
+assets = re.findall(r'<script src="([^"]+)"', html) + re.findall(r'<link rel="stylesheet" href="([^"]+)"', html)
+bad = 0
+for f in assets:
+    if not os.path.isfile(f):
+        fail(f"index.html loads a file that does not exist: {f}"); bad += 1
+    elif m and f not in precached:
+        fail(f"index.html loads {f} but sw.js does not precache it"); bad += 1
+inline = len(re.findall(r"<script(?![^>]*\bsrc=)[^>]*>", html))
+if inline:
+    fail(f"index.html has {inline} inline <script> block(s); move them into js/ (the CSP blocks inline scripts)"); bad += 1
+unused = sorted(set(glob.glob("js/**/*.js", recursive=True)) - set(assets))
+for f in unused:
+    fail(f"{f} is never loaded by index.html"); bad += 1
+if not bad:
+    ok(f"all {len(assets)} scripts and stylesheets exist, are precached and are loaded")
 
 # 3. Manifest is valid JSON and its icons exist.
 try:
@@ -54,14 +72,15 @@ try:
 except (OSError, ValueError, KeyError) as e:
     fail(f"manifest.webmanifest is invalid: {e}")
 
-# 4. Clips load as clips/<unit id>.js, so every clip file must match a unit in index.html.
+# 4. Clips load as clips/<unit id>.js, so every clip file must match a unit in js/content.
 #    Units without a clip are fine: the app simply plays no voice for them.
-html = open("index.html", encoding="utf-8").read()
-units = set(re.findall(r'id: "([\w-]+)"', html))
+units = set()
+for f in glob.glob("js/content/*.js"):
+    units.update(re.findall(r'id: "([\w-]+)"', open(f, encoding="utf-8").read()))
 clips = sorted(f[:-3] for f in os.listdir("clips") if f.endswith(".js"))
 orphans = [c for c in clips if c not in units]
 for c in orphans:
-    fail(f"clips/{c}.js does not match any unit id in index.html")
+    fail(f"clips/{c}.js does not match any unit id in js/content")
 if not orphans:
     ok(f"all {len(clips)} clip files match a unit")
 
@@ -97,16 +116,6 @@ for f in tracked:
             found = True
 if not found:
     ok("no credentials found in tracked files")
-
-# 7. Hand inline scripts to node for a syntax check.
-if len(sys.argv) > 1:
-    out = sys.argv[1]
-    os.makedirs(out, exist_ok=True)
-    blocks = re.findall(r"<script>(.*?)</script>", html, re.S)
-    for i, block in enumerate(blocks):
-        with open(os.path.join(out, f"inline-{i}.js"), "w", encoding="utf-8") as fh:
-            fh.write(block)
-    ok(f"extracted {len(blocks)} inline scripts to {out}")
 
 if errors:
     print(f"\n{len(errors)} check(s) failed")

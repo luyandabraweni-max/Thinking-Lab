@@ -1,0 +1,257 @@
+"use strict";
+
+// ---------- Skills batch 2: Growing food, Sewing, Building and fixing, Art and design. Original content. ----------
+SKILLS.push(
+  { id: "sk-garden", name: "Growing food", icon: "🌱", domain: "Inquiry and Systems Thinking",
+    about: "Growing vegetables and herbs, caring for soil, and feeding your family from a garden.",
+    leads: ["Farmer or market gardener", "Nursery worker", "Landscaper", "Running a vegetable business"],
+    link: "Links to the Department of Basic Education's occupational subject Agricultural Studies, and to Agricultural Sciences in Grades 10 to 12. TVET colleges and agricultural colleges offer plant production programmes.",
+    levels: {
+      "3-6": [
+        { id: "gd1-bean", title: "Grow a bean in a jar", time: "10 minutes, then a few minutes each day", adult: true, need: ["A clear jar or cup", "Cotton wool or paper towel", "Two or three dry beans", "Water"],
+          safety: ["Do not eat raw dry beans. Some can make you sick.", "Wash your hands after touching soil or seeds."],
+          steps: ["Fill the jar with damp cotton wool or paper towel.", "Push the beans between the cotton wool and the glass so you can see them.", "Put the jar in a light place, but not in hot sun.", "Add a little water each day to keep it damp.", "Look every day. First the roots grow, then the shoot.", "Tell someone what changed."],
+          reflect: ["Planting", "Watering", "Watching it grow", "Telling someone"], badge: "Seed Starter" },
+        { id: "gd2-water", title: "Water the garden", time: "15 minutes", adult: true, need: ["A watering can or a bottle with holes in the lid", "Plants to water"],
+          safety: ["Stay away from taps that are hard to turn, and from deep water.", "Water early in the morning or late in the afternoon, when it is cooler."],
+          steps: ["Fill the watering can or bottle half way, so it is not too heavy.", "Water the soil around the plant, not the leaves.", "Count to five for each plant.", "Feel the soil. Damp is good. Puddles mean too much.", "Put the can back where it belongs."],
+          reflect: ["Carrying water", "Counting", "Feeling the soil", "Not sure"], badge: "Garden Helper" },
+        { id: "gd3-minibeasts", title: "Garden minibeast hunt", time: "20 minutes", adult: true, need: ["A garden or park", "A magnifying glass if you have one", "Paper and crayons"],
+          safety: ["Look, but do not touch. Some insects sting or bite.", "Do not lift big stones. A grown-up can help."],
+          steps: ["Walk slowly and look under leaves and around plants.", "Find an ant, a worm, a ladybird or a snail.", "Count how many legs it has.", "Draw it on your paper.", "Talk about how it helps the garden. Worms make soil better. Ladybirds eat pests."],
+          reflect: ["Looking carefully", "Counting legs", "Drawing", "Learning how it helps"], badge: "Minibeast Spotter" }
+      ],
+      "7-12": [
+        { id: "gd4-herbs", title: "Plant a herb pot", time: "30 minutes, then watering", adult: false, need: ["A pot, a tin or a cut plastic bottle with holes in the bottom", "Potting soil or garden soil with compost", "Herb seeds or a small herb plant, such as parsley, mint or basil", "Water"],
+          safety: ["Wear gloves or wash your hands after touching soil.", "A grown-up makes holes in tins with a nail and hammer."],
+          steps: ["Make sure the pot has holes for water to drain.", "Fill the pot with soil up to two fingers from the top.", "Plant the seeds as deep as the packet says, or plant the small herb.", "Water gently until water comes out of the bottom.", "Put the pot where it gets morning sun.", "Water when the top of the soil feels dry, and keep a diary of how it grows."],
+          reflect: ["Preparing the pot", "Planting", "Watering", "Keeping a diary"], badge: "Herb Grower" },
+        { id: "gd5-compost", title: "Start a compost heap", time: "45 minutes", adult: true, need: ["A corner of the garden or a large bin with holes", "Green waste: vegetable peels, grass cuttings", "Brown waste: dry leaves, shredded newspaper, cardboard", "A spade or fork"],
+          safety: ["Do not add meat, bones, dairy or oily food. They smell and attract animals.", "Wear gloves and wash your hands afterwards."],
+          steps: ["Choose a spot that gets some shade.", "Put down a layer of brown waste.", "Add a layer of green waste on top.", "Keep adding layers: brown, green, brown, green.", "Sprinkle with water so it is damp like a sponge.", "Turn the heap with a fork every week. In a few months it becomes dark, crumbly compost."],
+          reflect: ["Layering", "Keeping it damp", "Turning it", "Knowing what not to add"], badge: "Compost Maker" },
+        { id: "gd6-plan", title: "Plan a small vegetable bed", time: "45 minutes", adult: false, need: ["Paper, a ruler and a pencil", "Seed packets or information about vegetables that grow in your area"],
+          safety: ["Plan with a grown-up so you use a space you are allowed to dig."],
+          steps: ["Measure a space, for example 1 metre by 2 metres.", "Draw it on paper. Let one square on the paper be 10 centimetres.", "Choose three vegetables that grow in your season, such as spinach, onions and carrots.", "Read the seed packets to see how far apart to plant them.", "Draw where each vegetable will go.", "Write when you will plant and when you hope to harvest."],
+          reflect: ["Measuring", "Drawing to scale", "Choosing vegetables", "Planning dates"], badge: "Garden Planner" }
+      ],
+      "13-18": [
+        { id: "gd7-trench", title: "Build a trench bed", time: "One weekend", adult: true, need: ["A spade and a garden fork", "Organic material: dry leaves, grass, cardboard, kitchen scraps", "Compost or manure", "Water"],
+          safety: ["Lift with your legs, not your back.", "Wear closed shoes and gloves.", "Take breaks and drink water."],
+          steps: ["Mark out a bed about 1 metre wide and 2 metres long.", "Dig out the topsoil about 60 centimetres deep and keep it to one side.", "Fill the trench with layers of organic material, watering each layer.", "Put the topsoil back on top, mixed with compost.", "Water well and let it settle for a week.", "Plant your seedlings. The buried material feeds the plants and holds water for months."],
+          reflect: ["Digging", "Layering", "Working as a team", "Seeing the result"], badge: "Trench Bed Builder" },
+        { id: "gd8-water", title: "Save water in the garden", time: "1 hour", adult: false, need: ["A garden or vegetable bed", "Mulch: dry grass, leaves or wood chips", "Plastic bottles", "Paper and a pen"],
+          safety: ["Only use clean grey water from washing up or baths. Do not use water with strong chemicals."],
+          steps: ["Spread mulch around your plants, about 5 centimetres thick. It keeps the soil cool and damp.", "Make a drip feeder: poke small holes in a bottle lid, fill the bottle and push it upside down into the soil next to a plant.", "Collect clean grey water in a bucket for the garden.", "Water in the early morning.", "For two weeks, record how often you water. Compare a bed with mulch and one without."],
+          reflect: ["Mulching", "Making a drip feeder", "Using grey water", "Comparing results"], badge: "Water Saver" },
+        { id: "gd9-harvest", title: "Harvest and sell your vegetables", time: "Over a few weeks", adult: true, need: ["Vegetables ready to harvest", "Clean bags or boxes", "A price list", "A small float of coins for change"],
+          safety: ["Wash vegetables in clean water.", "Sell with a grown-up's permission, in a safe place."],
+          steps: ["Harvest in the morning, when vegetables are fresh.", "Wash and bundle them, for example a bunch of spinach.", "Find out what shops near you charge, and set a fair price.", "Write a price list.", "Sell to neighbours or family, and record every sale.", "Add up your money and work out your profit after the cost of seeds and compost."],
+          reflect: ["Harvesting", "Setting prices", "Selling", "Working out profit"], badge: "Market Gardener" }
+      ],
+      "19-25": [
+        { id: "gd10-business", title: "Plan a food garden business", time: "2 hours", adult: false, need: ["Paper or a spreadsheet", "Prices of seeds, compost, tools and water", "Prices of vegetables at shops and markets near you"],
+          safety: ["Check that you are allowed to use the land, and get permission in writing."],
+          steps: ["Decide on three crops that sell well near you and grow in your climate.", "Work out how much space each one needs and how long it takes to grow.", "List your start-up costs: seeds, compost, tools, fencing, water.", "Estimate how much you can harvest and sell each month.", "Work out when you will break even, the point where income covers your costs.", "Write a one-page plan with who you will sell to: neighbours, spaza shops, a market or a school."],
+          reflect: ["Choosing crops", "Costs", "Break-even point", "Finding buyers"], badge: "Garden Business Planner" },
+        { id: "gd11-seedlings", title: "Grow seedlings to sell", time: "6 weeks", adult: false, need: ["Seedling trays or egg boxes", "Seedling mix or fine compost", "Seeds such as tomatoes, spinach and peppers", "A sheltered spot", "Labels"],
+          safety: ["Keep seed and fertiliser packets away from children and pets."],
+          steps: ["Fill the trays with seedling mix and press down lightly.", "Sow two seeds in each space and label each tray with the name and the date.", "Water with a fine spray every day. Keep them out of strong wind.", "Remove the weaker seedling in each space when they are a few centimetres tall.", "After four to six weeks, harden them off by putting them outside for longer each day.", "Sell them in trays, with a care card that you write."],
+          reflect: ["Sowing", "Daily care", "Hardening off", "Selling"], badge: "Seedling Grower" },
+        { id: "gd12-pests", title: "Control pests without poison", time: "1 hour", adult: false, need: ["A vegetable garden", "Soap, garlic or chilli, and water", "A spray bottle"],
+          safety: ["Keep sprays away from your eyes.", "Label your spray bottle clearly."],
+          steps: ["Walk through the garden and look under the leaves for pests such as aphids and caterpillars.", "Remove caterpillars and snails by hand.", "Mix a spray: one teaspoon of dish soap in one litre of water. Test it on one leaf first.", "Plant marigolds, garlic or basil between vegetables to keep some pests away.", "Encourage ladybirds and birds. They eat pests.", "Keep a log of which pests you found and what worked."],
+          reflect: ["Spotting pests", "Making a safe spray", "Companion planting", "Keeping a log"], badge: "Natural Pest Control" }
+      ]
+    } },
+
+  { id: "sk-sewing", name: "Sewing", icon: "🧵", domain: "Creativity and Metacognition",
+    about: "Threading, stitching, mending and making things from fabric.",
+    leads: ["Tailor or dressmaker", "Clothing production", "Fashion design", "Upholstery and soft furnishings"],
+    link: "Links to the Department of Basic Education's occupational subject Consumer Clothing, and to Consumer Studies in Grades 10 to 12. TVET colleges offer clothing production programmes.",
+    levels: {
+      "3-6": [
+        { id: "sw1-lace", title: "Lacing card", time: "15 minutes", adult: true, need: ["A piece of cardboard with holes punched around a shape", "A shoelace or wool with tape wrapped on the end"],
+          safety: ["Use a blunt end, not a needle.", "Keep wool away from your neck."],
+          steps: ["Look at the holes in the card.", "Push the lace up through the first hole.", "Pull it all the way through.", "Push it down through the next hole.", "Keep going, up and down, all the way round.", "Show someone your shape."],
+          reflect: ["Finding the holes", "Up and down", "Pulling through", "Finishing"], badge: "Lacing Star" },
+        { id: "sw2-buttons", title: "Sort and thread buttons", time: "15 minutes", adult: true, need: ["A tin of big buttons", "A pipe cleaner or wool with tape on the end"],
+          safety: ["Small buttons are a choking danger. Use big buttons and keep them out of your mouth."],
+          steps: ["Sort the buttons by colour.", "Sort them again by size.", "Count the buttons with two holes and the ones with four holes.", "Thread buttons onto the pipe cleaner to make a pattern.", "Twist the ends together to make a bracelet."],
+          reflect: ["Sorting", "Counting holes", "Making a pattern", "Threading"], badge: "Button Sorter" },
+        { id: "sw3-fabric", title: "Feel the fabric", time: "15 minutes", adult: false, need: ["Pieces of different fabric: denim, wool, cotton, a towel, silk or satin"],
+          safety: ["Only use fabric a grown-up has given you."],
+          steps: ["Touch each piece of fabric.", "Find one that is soft and one that is rough.", "Find one that stretches.", "Find one that keeps you warm.", "Match each fabric to clothes you know, like jeans or a jersey."],
+          reflect: ["Feeling soft and rough", "Stretching", "Matching to clothes", "Not sure"], badge: "Fabric Explorer" }
+      ],
+      "7-12": [
+        { id: "sw4-thread", title: "Thread a needle and tie a knot", time: "20 minutes", adult: true, need: ["A needle with a big eye", "Thread", "A needle threader if you have one", "A pincushion"],
+          safety: ["Needles are sharp. Always put them back in the pincushion.", "Count your needles before and after."],
+          steps: ["Cut a piece of thread about as long as your arm.", "Cut the end straight so it goes through easily.", "Push the thread through the eye of the needle, or use the threader.", "Pull the thread so one side is longer.", "Wrap the long end around your finger, roll it off and pull to make a knot.", "Put the needle in the pincushion when you are done."],
+          reflect: ["Cutting the thread", "Threading", "Making a knot", "Keeping the needle safe"], badge: "Needle Ready" },
+        { id: "sw5-button", title: "Sew on a button", time: "30 minutes", adult: true, need: ["A threaded needle with a knot", "A button", "A scrap of fabric or a shirt that needs a button"],
+          safety: ["Keep your fingers away from the needle point.", "Ask a grown-up to check before you use someone's clothes."],
+          steps: ["Mark where the button goes.", "Push the needle up from the back of the fabric through one hole of the button.", "Push it down through the opposite hole and through the fabric.", "Repeat four or five times.", "If the button has four holes, do the other two holes too.", "Finish with a few small stitches at the back and cut the thread."],
+          reflect: ["Placing the button", "Stitching", "Finishing off", "Fixing real clothes"], badge: "Button Fixer" },
+        { id: "sw6-bag", title: "Hand-sew a small bag", time: "1 hour", adult: true, need: ["Two pieces of fabric the same size, about 15 by 20 centimetres", "A threaded needle", "Pins", "A ribbon or string for a handle"],
+          safety: ["Count your pins before and after.", "Keep needles and pins in the pincushion."],
+          steps: ["Put the two pieces on top of each other, with the pretty sides facing in.", "Pin them together on three sides. Leave the top open.", "Sew a running stitch along the three sides, about 1 centimetre from the edge.", "Take out the pins.", "Turn the bag the right way out.", "Sew on a ribbon or string for a handle."],
+          reflect: ["Pinning", "Running stitch", "Turning it out", "Adding a handle"], badge: "Bag Maker" }
+      ],
+      "13-18": [
+        { id: "sw7-mend", title: "Mend a tear and a hem", time: "1 hour", adult: false, need: ["Clothing with a small tear or a loose hem", "Matching thread and a needle", "Pins and scissors"],
+          safety: ["Keep scissors closed when you are not cutting.", "Ask permission before you mend someone else's clothes."],
+          steps: ["Turn the clothing inside out.", "For a tear, pin the edges together and sew small, close stitches across it.", "For a hem, fold it back to where it was and pin it.", "Sew a slip stitch: pick up one thread of the outside fabric, then go through the fold.", "Keep stitches small so they hardly show on the outside.", "Press it with an iron, with a grown-up's permission."],
+          reflect: ["Planning the repair", "Small neat stitches", "Hemming", "Pressing"], badge: "Clothes Mender" },
+        { id: "sw8-machine", title: "Use a sewing machine safely", time: "1 hour", adult: true, need: ["A sewing machine", "Scrap fabric", "Thread", "Someone who knows the machine"],
+          safety: ["Keep fingers away from the needle.", "Switch the machine off before threading or changing anything.", "Tie back long hair and loose sleeves."],
+          steps: ["Learn the parts: needle, presser foot, bobbin, foot pedal and hand wheel.", "Watch the machine being threaded, then do it yourself with the power off.", "Sew straight lines on scrap fabric. Go slowly.", "Practise turning a corner: stop with the needle down, lift the foot, turn, lower the foot.", "Sew a reverse stitch at the start and end to lock it.", "Switch off and clean up."],
+          reflect: ["Threading", "Straight lines", "Corners", "Working safely"], badge: "Machine Ready" },
+        { id: "sw9-upcycle", title: "Upcycle old clothes", time: "2 hours", adult: false, need: ["An old T-shirt or pair of jeans", "Scissors, pins, needle and thread or a sewing machine", "A plan on paper"],
+          safety: ["Make sure the clothes are no longer needed."],
+          steps: ["Choose what to make: a tote bag from a T-shirt, or shorts from jeans.", "Draw a simple plan with measurements.", "Mark cutting lines with chalk.", "Cut carefully along the lines.", "Sew the seams by hand or by machine.", "Show your before and after, and work out how much a new one would cost."],
+          reflect: ["Planning", "Measuring and cutting", "Sewing", "Saving money"], badge: "Upcycler" }
+      ],
+      "19-25": [
+        { id: "sw10-measure", title: "Take body measurements for a customer", time: "1 hour", adult: false, need: ["A tape measure", "A notebook", "A willing friend or family member"],
+          safety: ["Always ask permission before measuring someone, and explain what you will do.", "Keep customer measurements private."],
+          steps: ["Explain each measurement before you take it.", "Measure the bust or chest, waist and hips around the widest part, with the tape level.", "Measure shoulder width, arm length and the length of the garment.", "Write each number clearly with the date and the customer's name.", "Measure twice to check.", "Make a simple measurement card you can use for every customer."],
+          reflect: ["Explaining clearly", "Accurate measuring", "Recording", "Respecting the customer"], badge: "Measuring Pro" },
+        { id: "sw11-price", title: "Price an alterations service", time: "1 hour", adult: false, need: ["A list of common jobs: hems, zips, taking in waists", "Prices from tailors near you", "A calculator"],
+          safety: ["Agree the price and the collection date with the customer before you start."],
+          steps: ["Time yourself doing each job, for example a trouser hem.", "Decide what an hour of your work is worth.", "Add the cost of thread, zips and electricity.", "Work out a price for each job.", "Compare with tailors near you.", "Make a price list and a simple job slip with the customer's name, the job, the price and the date."],
+          reflect: ["Timing jobs", "Costing", "Comparing", "Making a price list"], badge: "Alterations Pricing" },
+        { id: "sw12-portfolio", title: "Build a sewing portfolio", time: "Ongoing", adult: false, need: ["Things you have sewn", "A phone camera", "A folder or a free online album"],
+          safety: ["Ask permission before taking photos of other people wearing your work.", "Do not share customers' personal details."],
+          steps: ["Photograph each item in good light, from the front and close-up.", "Write what it is, the fabric and how long it took.", "Show before and after photos for repairs.", "Choose your best six pieces.", "Put them in a folder or album you can show.", "Use it when you apply for jobs, courses or customers."],
+          reflect: ["Taking photos", "Describing work", "Choosing the best", "Showing it"], badge: "Sewing Portfolio" }
+      ]
+    } },
+
+  { id: "sk-build", name: "Building and fixing", icon: "🔨", domain: "Logical and Analytical Thinking",
+    about: "Measuring, building, using tools safely and fixing things around the home.",
+    leads: ["Carpenter or joiner", "Bricklayer", "Plumber", "Maintenance worker"],
+    link: "Links to Technology in Grades 7 to 9, and to Civil Technology and Engineering Graphics and Design in Grades 10 to 12. TVET colleges offer building, plumbing and civil construction programmes, and apprenticeships lead to trade tests.",
+    levels: {
+      "3-6": [
+        { id: "bd1-tower", title: "Build the tallest tower", time: "20 minutes", adult: false, need: ["Blocks, boxes or empty containers"],
+          safety: ["Build on the floor, away from people's feet.", "Do not build taller than you are."],
+          steps: ["Make a wide base at the bottom.", "Stack the next layer on top.", "Keep going and count how many layers.", "If it falls, look at why and try again.", "Measure it against your body: knee, tummy or shoulder?"],
+          reflect: ["A wide base", "Trying again", "Counting layers", "Measuring"], badge: "Tower Builder" },
+        { id: "bd2-box", title: "Make a box house", time: "30 minutes", adult: true, need: ["A cardboard box", "Crayons or paint", "Child scissors", "Glue or tape"],
+          safety: ["A grown-up cuts thick cardboard."],
+          steps: ["Look at the box. Which side is the roof?", "Draw a door and windows.", "A grown-up helps cut the door so it opens.", "Colour or paint your house.", "Put a toy inside. Who lives there?"],
+          reflect: ["Planning", "Drawing", "Decorating", "Playing with it"], badge: "House Maker" },
+        { id: "bd3-tools", title: "Name the tools", time: "15 minutes", adult: true, need: ["Some safe tools to look at, or pictures: a hammer, a screwdriver, a tape measure, a spirit level"],
+          safety: ["Look, but only touch with a grown-up.", "Tools are not toys."],
+          steps: ["Look at each tool.", "Say its name with a grown-up.", "Find out what each one does. A hammer knocks in nails. A tape measure measures.", "Pull out the tape measure and measure a table, with help.", "Help put the tools away."],
+          reflect: ["Naming tools", "Learning what they do", "Measuring", "Putting away"], badge: "Tool Spotter" }
+      ],
+      "7-12": [
+        { id: "bd4-bridge", title: "Build a paper bridge", time: "45 minutes", adult: false, need: ["Sheets of paper", "Two piles of books the same height", "Coins to test strength", "Tape"],
+          safety: ["Keep the coins away from small children."],
+          steps: ["Put the book piles 20 centimetres apart.", "Lay one flat sheet across. Add coins until it falls. Count them.", "Now fold a sheet like a fan, back and forth.", "Test the folded bridge with coins.", "Try rolling sheets into tubes and taping them side by side.", "Which shape held the most coins? Why?"],
+          reflect: ["Testing", "Folding for strength", "Comparing", "Explaining why"], badge: "Bridge Engineer" },
+        { id: "bd5-measure", title: "Measure and mark like a builder", time: "30 minutes", adult: true, need: ["A tape measure", "A pencil", "A ruler or a straight piece of wood", "A piece of cardboard or wood"],
+          safety: ["Let the tape measure roll back slowly. It can cut fingers."],
+          steps: ["Measure a door and a window at home in centimetres. Write them down.", "Measure twice to check.", "On the cardboard, mark a line 30 centimetres long using the ruler.", "Mark a square 10 centimetres by 10 centimetres.", "Check that all four sides are the same.", "Remember the builder's rule: measure twice, cut once."],
+          reflect: ["Measuring", "Marking lines", "Checking", "The builder's rule"], badge: "Measure Twice" },
+        { id: "bd6-birdfeeder", title: "Make a bird feeder", time: "1 hour", adult: true, need: ["An empty plastic bottle or milk carton", "A wooden spoon or stick", "String", "Bird seed", "Scissors"],
+          safety: ["A grown-up makes the holes with scissors or a craft knife."],
+          steps: ["A grown-up cuts two small holes opposite each other near the bottom.", "Push the spoon or stick through both holes to make a perch.", "Cut a small hole above the perch for the seed to come out.", "Make a hole in the lid and tie the string through.", "Fill with seed, close the lid and hang it from a branch.", "Watch which birds come to visit."],
+          reflect: ["Planning", "Making holes safely", "Hanging it", "Watching birds"], badge: "Feeder Builder" }
+      ],
+      "13-18": [
+        { id: "bd7-tap", title: "Fix a dripping tap", time: "1 hour", adult: true, need: ["A spanner or adjustable wrench", "A new tap washer of the right size", "A screwdriver", "A cloth"],
+          safety: ["Turn off the water at the main or under the sink first.", "Work with a grown-up the first time."],
+          steps: ["Turn off the water supply to the tap.", "Open the tap to let out any water left in the pipe.", "Put the plug in the sink so small parts do not fall down the drain.", "Unscrew the tap head and remove the old washer.", "Fit the new washer and put the tap back together.", "Turn the water on and check that it has stopped dripping."],
+          reflect: ["Turning off the water", "Taking it apart", "Fitting the washer", "Testing"], badge: "Tap Fixer" },
+        { id: "bd8-shelf", title: "Build a simple shelf", time: "Half a day", adult: true, need: ["A plank of wood", "Two brackets", "Screws and wall plugs", "A drill, a screwdriver, a spirit level and a pencil"],
+          safety: ["Wear safety glasses when drilling.", "Check for pipes and wires before drilling a wall. A grown-up must help.", "Keep the drill unplugged when changing bits."],
+          steps: ["Decide where the shelf goes and mark the height.", "Hold a bracket in place, use the spirit level, and mark the screw holes.", "Drill the holes and push in the wall plugs.", "Screw on both brackets, checking they are level.", "Screw the plank onto the brackets.", "Test it gently with a few books before loading it."],
+          reflect: ["Marking", "Using the level", "Drilling safely", "Testing"], badge: "Shelf Builder" },
+        { id: "bd9-model", title: "Draw a plan and build a model", time: "Two sessions", adult: false, need: ["Graph paper", "A ruler and a pencil", "Cardboard, glue and a craft knife"],
+          safety: ["Cut away from your body on a cutting board.", "A grown-up supervises the craft knife."],
+          steps: ["Choose a simple building, such as a one-room house.", "Draw the floor plan to scale: 1 centimetre on paper is 1 metre in real life.", "Draw the front view, showing the door and windows.", "Cut out the walls from cardboard using your plan.", "Glue the walls together and add a roof.", "Check that the model matches your drawings."],
+          reflect: ["Drawing to scale", "Different views", "Cutting accurately", "Matching plan to model"], badge: "Plan Reader" }
+      ],
+      "19-25": [
+        { id: "bd10-quote", title: "Quote for a small repair job", time: "1 hour", adult: false, need: ["A real or practice job, such as painting a room", "A tape measure", "Hardware store prices", "A calculator"],
+          safety: ["Only promise a job you can do safely. Electrical and gas work need a qualified person by law."],
+          steps: ["Measure the job, for example the walls of a room in square metres.", "Work out the materials: how many litres of paint for that area.", "Price the materials.", "Estimate the hours and decide on your rate per hour.", "Add the total and a small amount for surprises.", "Write a quote with your name, the job, the price, the time it will take and how long the quote is valid."],
+          reflect: ["Measuring the job", "Materials", "Labour cost", "Writing the quote"], badge: "Quote Writer" },
+        { id: "bd11-ppe", title: "Health and safety on site", time: "1 hour", adult: false, need: ["Paper and a pen", "Pictures of a building site, or a real one to observe from a safe place"],
+          safety: ["Never enter a building site without permission and safety gear."],
+          steps: ["List the protective equipment: hard hat, safety boots, gloves, glasses, ear protection, reflective vest.", "Next to each item, write what danger it protects you from.", "List five dangers on a site, such as falling, electricity and heavy loads.", "Write how each danger can be reduced.", "Find out what the Occupational Health and Safety Act says about the employer's and worker's duties.", "Make a daily safety checklist."],
+          reflect: ["Protective equipment", "Spotting dangers", "Reducing risk", "Knowing the law"], badge: "Site Safety" },
+        { id: "bd12-trade", title: "Find a path to a trade", time: "2 hours", adult: false, need: ["A phone or computer", "Paper and a pen"],
+          safety: ["Check that any college or training provider is accredited before you pay."],
+          steps: ["Choose a trade: carpentry, bricklaying, plumbing, tiling or electrical work.", "Find TVET colleges near you that offer it.", "Find out about apprenticeships and learnerships. SETAs, such as the construction SETA, list them.", "Find out what a trade test is and where it is done.", "List the entry requirements and costs.", "Write your next three steps with dates."],
+          reflect: ["Choosing a trade", "Finding training", "Understanding trade tests", "Next steps"], badge: "Trade Pathway" }
+      ]
+    } },
+
+  { id: "sk-art", name: "Art and design", icon: "🎨", domain: "Creativity and Metacognition",
+    about: "Drawing, painting, making and designing things that people will see and use.",
+    leads: ["Graphic designer", "Illustrator", "Crafter selling work", "Signwriter or printer"],
+    link: "Links to Creative Arts in Grades 4 to 9, and to Visual Arts and Design in Grades 10 to 12. TVET colleges and design schools offer art and design programmes.",
+    levels: {
+      "3-6": [
+        { id: "ar1-mix", title: "Mix new colours", time: "20 minutes", adult: true, need: ["Red, yellow and blue paint", "A brush, water and paper", "An apron or old shirt"],
+          safety: ["Keep paint away from your mouth and eyes.", "Wash your hands when you finish."],
+          steps: ["Paint a red spot, a yellow spot and a blue spot.", "Mix red and yellow. What colour do you get?", "Mix yellow and blue. What colour now?", "Mix red and blue.", "Paint a picture using your new colours.", "Wash your brush in the water."],
+          reflect: ["Mixing", "Finding new colours", "Painting", "Cleaning up"], badge: "Colour Mixer" },
+        { id: "ar2-collage", title: "Make a nature collage", time: "30 minutes", adult: true, need: ["Leaves, petals, seeds and sticks from the ground", "Glue", "Paper or cardboard"],
+          safety: ["Only pick up things from the ground. Do not pull plants.", "Do not touch berries or mushrooms."],
+          steps: ["Collect things that have fallen on the ground.", "Sort them by colour or shape.", "Arrange them on the paper to make a picture.", "Glue them down.", "Give your picture a name."],
+          reflect: ["Collecting", "Arranging", "Gluing", "Naming it"], badge: "Nature Artist" },
+        { id: "ar3-print", title: "Print with shapes", time: "20 minutes", adult: true, need: ["Paint on a plate", "Things to print with: a cut potato, bottle tops, a sponge, leaves", "Paper"],
+          safety: ["A grown-up cuts the potato."],
+          steps: ["Dip a shape into the paint.", "Press it onto the paper and lift it off.", "Try each shape.", "Make a pattern: circle, square, circle, square.", "Let it dry and show someone."],
+          reflect: ["Printing", "Making a pattern", "Trying shapes", "Showing it"], badge: "Shape Printer" }
+      ],
+      "7-12": [
+        { id: "ar4-observe", title: "Draw what you see", time: "30 minutes", adult: false, need: ["A pencil and paper", "An object: a shoe, a cup or a plant"],
+          safety: ["Sit comfortably with good light so you do not strain your eyes."],
+          steps: ["Put the object in front of you.", "Look at it for one whole minute before you draw.", "Draw the big outline shapes lightly first.", "Add the smaller details.", "Look for the dark parts and shade them.", "Write the date. Draw the same object again next week and compare."],
+          reflect: ["Looking carefully", "Big shapes first", "Shading", "Comparing over time"], badge: "Observer" },
+        { id: "ar5-poster", title: "Design a poster with a message", time: "45 minutes", adult: false, need: ["Paper, pencils and markers", "A message, such as Save water or Read every day"],
+          safety: ["Use markers in a room with fresh air, and put the lids back on."],
+          steps: ["Choose your message. Keep it short.", "Sketch three small ideas first.", "Choose the best idea.", "Make the words big enough to read from across the room.", "Use only two or three colours that stand out together.", "Ask someone: what is the poster saying? Did they get it?"],
+          reflect: ["Planning ideas", "Big clear words", "Choosing colours", "Testing it on someone"], badge: "Poster Designer" },
+        { id: "ar6-recycled", title: "Make art from recycled things", time: "1 hour", adult: false, need: ["Clean bottle tops, boxes, wire, cans or packets", "Glue, tape and scissors"],
+          safety: ["Watch out for sharp edges on cans. A grown-up can help.", "Only use clean recycling."],
+          steps: ["Look at South African wire and bead art for ideas.", "Collect clean recycled materials.", "Decide what to make: an animal, a car or a mask.", "Plan how the parts will join.", "Build it and decorate it.", "Write a label with the title and the materials you used."],
+          reflect: ["Getting ideas", "Planning joins", "Building", "Labelling"], badge: "Upcycle Artist" }
+      ],
+      "13-18": [
+        { id: "ar7-logo", title: "Design a logo", time: "1 hour", adult: false, need: ["Paper and pencils", "A business or club to design for, real or imagined"],
+          safety: ["Do not copy another company's logo. Your design must be your own."],
+          steps: ["Find out what the business does and who its customers are.", "Write three words that describe it, such as friendly, fast, local.", "Sketch at least ten small, quick ideas.", "Choose three and draw them bigger.", "Test them: does each one still work very small and in black and white?", "Choose the best one and explain why it fits the three words."],
+          reflect: ["Understanding the client", "Sketching many ideas", "Testing", "Explaining my choice"], badge: "Logo Designer" },
+        { id: "ar8-perspective", title: "Draw a street in perspective", time: "1 hour", adult: false, need: ["Paper, a ruler and a pencil"],
+          safety: ["Take a short break every 20 minutes to rest your eyes and hand."],
+          steps: ["Draw a horizon line across the page.", "Put a dot on it. This is the vanishing point.", "Draw lines from the corners of the page to the dot. These are the edges of the road.", "Draw buildings as rectangles. Join their corners to the dot.", "Add windows that get smaller as they get closer to the dot.", "Add people, trees and cars. Things far away are smaller."],
+          reflect: ["Horizon line", "Vanishing point", "Getting smaller", "Adding detail"], badge: "Perspective Artist" },
+        { id: "ar9-sell", title: "Make and sell cards", time: "Two sessions", adult: true, need: ["Card, paper, pens or paint", "Envelopes", "A price list"],
+          safety: ["Sell with a grown-up's permission, in a safe place."],
+          steps: ["Design one card for an occasion, such as a birthday.", "Make a sample and ask three people what they think.", "Work out the cost of materials for one card.", "Make a small batch, such as ten cards.", "Set a price that covers costs and your time.", "Sell them and record what sold best."],
+          reflect: ["Designing", "Getting feedback", "Costing", "Selling"], badge: "Card Maker" }
+      ],
+      "19-25": [
+        { id: "ar10-brief", title: "Work from a client brief", time: "2 hours", adult: false, need: ["A brief from a real or practice client: what they want, who it is for, the deadline", "Drawing materials or a free design app"],
+          safety: ["Agree the price, the number of changes and the deadline in writing before you start."],
+          steps: ["Read the brief and write down any questions.", "Ask the client your questions.", "Make three rough ideas and show them.", "Develop the one they choose.", "Make one round of changes from their feedback.", "Deliver the final work on time, in the format they need."],
+          reflect: ["Understanding the brief", "Asking questions", "Handling feedback", "Delivering on time"], badge: "Client Ready" },
+        { id: "ar11-portfolio", title: "Build an art and design portfolio", time: "Ongoing", adult: false, need: ["Your best work", "A phone camera", "A free online portfolio site or a folder"],
+          safety: ["Only show work you made yourself. Ask permission before sharing work made for a client."],
+          steps: ["Choose eight to twelve of your strongest pieces.", "Photograph each one flat, in daylight, with no shadows.", "Write a short note for each: the brief, the materials and your role.", "Put your best piece first and last.", "Add a short paragraph about yourself and how to contact you.", "Ask someone in the industry to look at it and give feedback."],
+          reflect: ["Choosing work", "Photographing", "Writing about my work", "Getting feedback"], badge: "Design Portfolio" },
+        { id: "ar12-price", title: "Price your creative work", time: "1 hour", adult: false, need: ["A list of things you make or services you offer", "A calculator", "Prices from other artists or designers"],
+          safety: ["Keep records of every sale for tax purposes."],
+          steps: ["Add up the cost of materials for one piece.", "Time how long it takes you.", "Decide on a fair hourly rate.", "Price = materials plus time, plus a little for overheads.", "Compare with others at your level.", "Make a price list and practise saying your prices confidently."],
+          reflect: ["Materials cost", "Valuing my time", "Comparing", "Saying my price"], badge: "Creative Pricing" }
+      ]
+    } }
+);
+for (const id of ["sk-garden", "sk-sewing", "sk-build", "sk-art"]) { const i = SKILLS_SOON.findIndex(s => s[0] === id); if (i >= 0) SKILLS_SOON.splice(i, 1); }
