@@ -33,12 +33,11 @@ jobs:
           node-version: "20"
 
       - name: Site checks (files, offline cache, manifest, secrets)
-        run: python3 .github/scripts/check_site.py
+        run: python3 .github/scripts/check_site.py "$RUNNER_TEMP/inline-js"
 
       - name: JavaScript syntax
         run: |
-          shopt -s globstar
-          for f in sw.js clips.js clips/*.js js/**/*.js; do
+          for f in sw.js clips.js clips/*.js "$RUNNER_TEMP"/inline-js/*.js; do
             node --check "$f" || exit 1
           done
           echo "All JavaScript parses"
