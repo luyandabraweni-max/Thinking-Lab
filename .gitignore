@@ -35,6 +35,8 @@ desktop.ini
 
 # Dependencies, builds, logs
 node_modules/
+test-results/
+playwright-report/
 dist/
 build/
 *.log

@@ -13,6 +13,7 @@ function applyMyWay() {
   const m = S.my;
   root.toggleAttribute("data-calm", !!m.calm);
   root.toggleAttribute("data-grey", !!m.grey);
+  if (m.palette && m.palette !== "standard") root.setAttribute("data-palette", m.palette); else root.removeAttribute("data-palette");
   root.toggleAttribute("data-plain", !!m.plain);
   root.toggleAttribute("data-spacing", !!m.spacing);
   root.toggleAttribute("data-pictures", m.how === "pictures");
@@ -31,6 +32,8 @@ function openMyWay() {
         <div class="choices">${opt("how", "read", "I read it myself", "📖")}${opt("how", "listen", "Read it to me", "👂")}${opt("how", "pictures", "Pictures help me", "🖼️")}</div>
         <p class="eyebrow">My screen</p>
         <div class="choices"><button class="choice" data-low aria-pressed="${lowStim()}">${icon("🌙")}<span class="lbl">Low stimulation: grey, calm, still and quiet</span></button>${tog("calm", "Calm screen", "🍃")}${tog("grey", "Grey screen (no colours)", "🔘")}${tog("plain", "Plain words", "💬")}${tog("spacing", "More space between letters", "↔️")}${tog("ruler", "Reading ruler", "📏")}${tog("highlight", "Light up words as they are read", "✨")}</div>
+        <p class="eyebrow">Colours I can see best</p>
+        <div class="choices">${opt("palette", "standard", "Usual colours", "🎨")}${opt("palette", "redgreen", "Red and green look alike", "👁️")}${opt("palette", "blueyellow", "Blue and yellow look alike", "👁️")}</div>
         <p class="eyebrow">Sound</p>
         <div class="choices">${`<button class="choice" data-mq aria-pressed="${!S.quiet}">${icon(S.quiet ? "🔇" : "🔊")}<span class="lbl">${S.quiet ? "Sound is off" : "Sound is on"}</span></button>`}${opt("vol", "0.5", "Quiet voice", "🔈")}${opt("vol", "0.8", "Medium voice", "🔉")}${opt("vol", "1", "Loud voice", "🔊")}</div>
         <div class="choices">${opt("speed", "slow", "Slower voice", "🐢")}${opt("speed", "normal", "Normal voice", "🙂")}${opt("speed", "fast", "Faster voice", "🐇")}</div>
@@ -53,7 +56,7 @@ function openMyWay() {
 const lowStim = () => !!(S.my.grey && S.my.calm && S.motion && S.quiet);
 function describeMyWay() {
   const m = S.my, out = [{ read: "reads it", listen: "listens", pictures: "pictures help" }[m.how]];
-  if (m.calm) out.push("calm screen"); if (m.grey) out.push("grey screen"); if (m.plain) out.push("plain words"); if (m.spacing) out.push("more spacing"); if (m.ruler) out.push("reading ruler");
+  if (m.calm) out.push("calm screen"); if (m.grey) out.push("grey screen"); if (m.palette && m.palette !== "standard") out.push(PALETTES[m.palette].toLowerCase()); if (m.plain) out.push("plain words"); if (m.spacing) out.push("more spacing"); if (m.ruler) out.push("reading ruler");
   if (S.quiet) out.push("sound off"); if (m.theme && m.theme !== "none") out.push("topic: " + m.theme);
   return out.join(", ");
 }
