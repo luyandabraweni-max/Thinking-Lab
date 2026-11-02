@@ -12,6 +12,7 @@ function currentTitle() { const h = $main.querySelector("h1, h2"); return h ? h.
 function applyMyWay() {
   const m = S.my;
   root.toggleAttribute("data-calm", !!m.calm);
+  root.toggleAttribute("data-grey", !!m.grey);
   root.toggleAttribute("data-plain", !!m.plain);
   root.toggleAttribute("data-spacing", !!m.spacing);
   root.toggleAttribute("data-pictures", m.how === "pictures");
@@ -29,7 +30,7 @@ function openMyWay() {
         <p class="eyebrow">How I like to learn</p>
         <div class="choices">${opt("how", "read", "I read it myself", "📖")}${opt("how", "listen", "Read it to me", "👂")}${opt("how", "pictures", "Pictures help me", "🖼️")}</div>
         <p class="eyebrow">My screen</p>
-        <div class="choices">${tog("calm", "Calm screen", "🍃")}${tog("plain", "Plain words", "💬")}${tog("spacing", "More space between letters", "↔️")}${tog("ruler", "Reading ruler", "📏")}${tog("highlight", "Light up words as they are read", "✨")}</div>
+        <div class="choices"><button class="choice" data-low aria-pressed="${lowStim()}">${icon("🌙")}<span class="lbl">Low stimulation: grey, calm, still and quiet</span></button>${tog("calm", "Calm screen", "🍃")}${tog("grey", "Grey screen (no colours)", "🔘")}${tog("plain", "Plain words", "💬")}${tog("spacing", "More space between letters", "↔️")}${tog("ruler", "Reading ruler", "📏")}${tog("highlight", "Light up words as they are read", "✨")}</div>
         <p class="eyebrow">Sound</p>
         <div class="choices">${`<button class="choice" data-mq aria-pressed="${!S.quiet}">${icon(S.quiet ? "🔇" : "🔊")}<span class="lbl">${S.quiet ? "Sound is off" : "Sound is on"}</span></button>`}${opt("vol", "0.5", "Quiet voice", "🔈")}${opt("vol", "0.8", "Medium voice", "🔉")}${opt("vol", "1", "Loud voice", "🔊")}</div>
         <div class="choices">${opt("speed", "slow", "Slower voice", "🐢")}${opt("speed", "normal", "Normal voice", "🙂")}${opt("speed", "fast", "Faster voice", "🐇")}</div>
@@ -39,6 +40,7 @@ function openMyWay() {
       </div>`);
     $layer.querySelectorAll("[data-mw]").forEach(b => b.onclick = () => { const [k, v] = b.dataset.mw.split(":"); m[k] = v; applyMyWay(); draw(); const again = $layer.querySelector(`[data-mw="${k}:${v}"]`); if (again) again.focus(); });
     $layer.querySelectorAll("[data-mt]").forEach(b => b.onclick = () => { const k = b.dataset.mt; m[k] = !m[k]; applyMyWay(); draw(); const again = $layer.querySelector(`[data-mt="${k}"]`); if (again) again.focus(); });
+    $layer.querySelector("[data-low]").onclick = () => { const on = !lowStim(); m.grey = m.calm = S.motion = S.quiet = on; if (on) stopSpeaking(); applySettings(); draw(); $layer.querySelector("[data-low]").focus(); };
     $layer.querySelector("[data-mq]").onclick = () => { S.quiet = !S.quiet; if (S.quiet) stopSpeaking(); draw(); $layer.querySelector("[data-mq]").focus(); };
     document.getElementById("mwDone").onclick = () => { closeLayer(); logVoice("my way", describeMyWay()); refreshBar(); };
     document.getElementById("mwPass").onclick = () => { closeLayer(); passportStart(); };
@@ -47,9 +49,11 @@ function openMyWay() {
   setSay("My way. Choose what helps you. You can change it any time.");
   draw();
 }
+// Low stimulation is one tap for sensory-sensitive learners: greyscale, calm screen, no movement and no sound together
+const lowStim = () => !!(S.my.grey && S.my.calm && S.motion && S.quiet);
 function describeMyWay() {
   const m = S.my, out = [{ read: "reads it", listen: "listens", pictures: "pictures help" }[m.how]];
-  if (m.calm) out.push("calm screen"); if (m.plain) out.push("plain words"); if (m.spacing) out.push("more spacing"); if (m.ruler) out.push("reading ruler");
+  if (m.calm) out.push("calm screen"); if (m.grey) out.push("grey screen"); if (m.plain) out.push("plain words"); if (m.spacing) out.push("more spacing"); if (m.ruler) out.push("reading ruler");
   if (S.quiet) out.push("sound off"); if (m.theme && m.theme !== "none") out.push("topic: " + m.theme);
   return out.join(", ");
 }

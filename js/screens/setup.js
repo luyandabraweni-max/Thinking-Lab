@@ -40,6 +40,7 @@ function setup() {
         <div class="row">
           <label class="row" for="fAuto" style="flex-direction:row"><input type="checkbox" id="fAuto"${S.autoRead ? " checked" : ""}> Read every screen aloud</label>
           <label class="row" for="fContrast" style="flex-direction:row"><input type="checkbox" id="fContrast"${S.contrast ? " checked" : ""}> Stronger outlines</label>
+          <label class="row" for="fGrey" style="flex-direction:row"><input type="checkbox" id="fGrey"${S.my.grey ? " checked" : ""}> Greyscale (no colours; games switch to patterns)</label>
           <label class="row" for="fMotion" style="flex-direction:row"><input type="checkbox" id="fMotion"${S.motion ? " checked" : ""}> No movement</label>
           <label class="row" for="fScan" style="flex-direction:row"><input type="checkbox" id="fScan"${S.my.scan ? " checked" : ""}> Switch scanning (one switch or the space bar)</label>
           <label for="fScanSpeed" style="flex-direction:row;align-items:center;gap:8px">Scanning speed <select id="fScanSpeed"><option value="slow"${S.my.scanSpeed === "slow" ? " selected" : ""}>Slow</option><option value="medium"${S.my.scanSpeed === "medium" ? " selected" : ""}>Medium</option><option value="fast"${S.my.scanSpeed === "fast" ? " selected" : ""}>Fast</option></select></label>
@@ -67,6 +68,7 @@ function setup() {
     S.my.how = S.autoRead ? "listen" : (S.my.how === "listen" ? "read" : S.my.how);
     S.my.scan = document.getElementById("fScan").checked; S.my.scanSpeed = document.getElementById("fScanSpeed").value;
     S.contrast = document.getElementById("fContrast").checked;
+    S.my.grey = document.getElementById("fGrey").checked;
     S.motion = document.getElementById("fMotion").checked;
     applySettings();
   };
