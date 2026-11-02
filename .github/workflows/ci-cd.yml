@@ -33,18 +33,50 @@ jobs:
           node-version: "20"
 
       - name: Site checks (files, offline cache, manifest, secrets)
-        run: python3 .github/scripts/check_site.py "$RUNNER_TEMP/inline-js"
+        run: python3 .github/scripts/check_site.py
 
       - name: JavaScript syntax
         run: |
-          for f in sw.js clips.js clips/*.js "$RUNNER_TEMP"/inline-js/*.js; do
+          shopt -s globstar
+          for f in sw.js clips.js clips/*.js js/**/*.js; do
             node --check "$f" || exit 1
           done
           echo "All JavaScript parses"
 
+  test:
+    name: Tests (unit, accessibility in every display mode, offline)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install test tools
+        run: npm ci
+
+      - name: Unit and content tests
+        run: npm run test:unit
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser tests (axe in every display mode, phone and laptop, offline)
+        run: npm run test:e2e
+
+      - name: Keep the report if browser tests fail
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
   deploy:
     name: Deploy to ${{ github.ref_name == 'main' && 'production' || 'dev preview' }}
-    needs: check
+    needs: [check, test]
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
@@ -58,7 +90,7 @@ jobs:
           node-version: "20"
 
       - name: Stage site files
-        run: rsync -a --exclude='.*' --exclude='netlify.toml' ./ _site/
+        run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='node_modules' --exclude='tests' --exclude='docs' --exclude='package*.json' --exclude='*.config.js' --exclude='test-results' --exclude='playwright-report' ./ _site/
 
       - name: Deploy to Netlify
         id: deploy

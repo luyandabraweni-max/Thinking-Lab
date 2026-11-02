@@ -23,10 +23,14 @@ function setup() {
           <label for="fLen">Lesson length<select id="fLen">
             <option value="full"${S.lessonLen !== "short" ? " selected" : ""}>Full (all questions)</option>
             <option value="short"${S.lessonLen === "short" ? " selected" : ""}>Shorter (3 questions)</option></select></label>
-          <label for="fGrade">Grade for Learn lessons<select id="fGrade">
-            ${cohortGrades().map(g => `<option value="${g}"${curGrade() === g ? " selected" : ""}>${gradeName(g)}</option>`).join("")}</select></label>
+          <label for="fGrade">Usual level for Learn lessons<select id="fGrade">
+            ${levelOptions(curGrade())}</select></label>
         </div>
-        <p class="note">Age groups are provisional and will be confirmed with specialists. Age changes only the wording and look. Challenge and answer style are set separately, because age says nothing about ability.</p>
+        <details class="passage"${Object.keys(S.levels).length ? " open" : ""}><summary>A different level for some learning areas</summary>
+          <p class="note">For example, a D-CAPS learner may work at Foundation Phase level in maths and higher in life skills.</p>
+          <div class="fields">${Object.entries(AREAS).map(([a, [label]]) => `<label for="fLv-${a}">${label}<select id="fLv-${a}" data-area="${a}"><option value="">Same as usual level</option>${levelOptions(S.levels[a])}</select></label>`).join("")}</div>
+        </details>
+        <p class="note">Age groups are provisional and will be confirmed with specialists. Age changes only the wording and look. Level, challenge and answer style are set separately, because age says nothing about ability.</p>
         <label class="row" for="fAssist" style="flex-direction:row;font-family:var(--font-display)"><input type="checkbox" id="fAssist"${S.assisted ? " checked" : ""}> The learner points and an adult taps for them</label>
         <h2>Screen and sound</h2>
         <div class="fields">
@@ -36,10 +40,13 @@ function setup() {
             <option value="1">Standard</option><option value="1.15"${S.textSize == 1.15 ? " selected" : ""}>Larger</option><option value="1.3"${S.textSize == 1.3 ? " selected" : ""}>Largest</option></select></label>
           <label for="fFont">Letters<select id="fFont">
             <option value="atkinson">Clear letters</option><option value="lexend"${S.font === "lexend" ? " selected" : ""}>Wide, easy-reading letters</option></select></label>
+          <label for="fPalette">Colour vision<select id="fPalette">
+            ${Object.entries(PALETTES).map(([k, v]) => `<option value="${k}"${S.my.palette === k ? " selected" : ""}>${v}</option>`).join("")}</select></label>
         </div>
         <div class="row">
           <label class="row" for="fAuto" style="flex-direction:row"><input type="checkbox" id="fAuto"${S.autoRead ? " checked" : ""}> Read every screen aloud</label>
           <label class="row" for="fContrast" style="flex-direction:row"><input type="checkbox" id="fContrast"${S.contrast ? " checked" : ""}> Stronger outlines</label>
+          <label class="row" for="fGrey" style="flex-direction:row"><input type="checkbox" id="fGrey"${S.my.grey ? " checked" : ""}> Greyscale (no colours; games switch to patterns)</label>
           <label class="row" for="fMotion" style="flex-direction:row"><input type="checkbox" id="fMotion"${S.motion ? " checked" : ""}> No movement</label>
           <label class="row" for="fScan" style="flex-direction:row"><input type="checkbox" id="fScan"${S.my.scan ? " checked" : ""}> Switch scanning (one switch or the space bar)</label>
           <label for="fScanSpeed" style="flex-direction:row;align-items:center;gap:8px">Scanning speed <select id="fScanSpeed"><option value="slow"${S.my.scanSpeed === "slow" ? " selected" : ""}>Slow</option><option value="medium"${S.my.scanSpeed === "medium" ? " selected" : ""}>Medium</option><option value="fast"${S.my.scanSpeed === "fast" ? " selected" : ""}>Fast</option></select></label>
@@ -53,11 +60,12 @@ function setup() {
     const typed = (document.getElementById("fCode").value || "T01").trim().slice(0, 20); if (typed !== S.code) S.demoLearner = null; S.code = typed;
     const coh = document.getElementById("fCohort").value;
     if (coh !== S.cohort && !bandTouched) { S.band = coh === "3-6" ? "younger" : "older"; document.getElementById("fBand").value = S.band; }
-    if (coh !== S.cohort) { if (coh === "3-6") document.getElementById("fAuto").checked = true; S.cohort = coh; const fg = document.getElementById("fGrade"); fg.innerHTML = cohortGrades().map(g => `<option value="${g}"${curGrade() === g ? " selected" : ""}>${gradeName(g)}</option>`).join(""); }
+    if (coh !== S.cohort) { if (coh === "3-6") document.getElementById("fAuto").checked = true; S.cohort = coh; if (!gradeTouched) document.getElementById("fGrade").value = DEFAULT_GRADE[coh]; }
     S.cohort = coh;
     S.band = document.getElementById("fBand").value;
     S.answer = document.getElementById("fAnswer").value;
     S.grade = +document.getElementById("fGrade").value;
+    S.levels = {}; $main.querySelectorAll("[data-area]").forEach(n => { if (n.value !== "") S.levels[n.dataset.area] = +n.value; });
     S.lessonLen = document.getElementById("fLen").value;
     S.assisted = document.getElementById("fAssist").checked;
     S.theme = document.getElementById("fTheme").value;
@@ -67,11 +75,14 @@ function setup() {
     S.my.how = S.autoRead ? "listen" : (S.my.how === "listen" ? "read" : S.my.how);
     S.my.scan = document.getElementById("fScan").checked; S.my.scanSpeed = document.getElementById("fScanSpeed").value;
     S.contrast = document.getElementById("fContrast").checked;
+    S.my.grey = document.getElementById("fGrey").checked;
+    S.my.palette = document.getElementById("fPalette").value;
     S.motion = document.getElementById("fMotion").checked;
     applySettings();
   };
-  let bandTouched = false;
+  let bandTouched = false, gradeTouched = false;
   document.getElementById("fBand").addEventListener("change", () => { bandTouched = true; });
+  document.getElementById("fGrade").addEventListener("change", () => { gradeTouched = true; });
   $main.querySelectorAll("input,select").forEach(n => n.addEventListener("change", sync));
   on("#go", () => { sync(); S.started = new Date(); assent(); });
   on("#goDash", dashboard); renderInstall();

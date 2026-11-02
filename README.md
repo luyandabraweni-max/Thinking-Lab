@@ -37,6 +37,18 @@ _headers            Security headers for Netlify
 - **No inline scripts or `onclick="..."` attributes:** the Content-Security-Policy in `_headers` blocks them.
 - **Adding a grade's lessons:** create `js/content/grade-N.js` defining `UNITS_GN` and `WORDS_GN`, end it with `Object.assign(WORDS, WORDS_GN);`, load it before `all-units.js`, and add `...UNITS_GN` to the list in `all-units.js`.
 
+## Tests
+
+The site has no build step; Node is only needed for the tests.
+
+```bash
+npm install
+npm run test:unit   # Vitest: app logic and every lesson's content, run in jsdom
+npm run test:e2e    # Playwright: axe accessibility checks on key screens in every display mode, phone and laptop sizes, and offline mode
+```
+
+Locally the browser tests use the installed Microsoft Edge (set `PW_CHANNEL=chrome` for Chrome, or run `npx playwright install chromium`). CI runs both on every push and pull request, and nothing deploys unless they pass. When you add a screen or a display mode, add it to `tests/e2e/display-modes.spec.js`.
+
 ## Branches and deployment
 
 - `dev`: every push runs the checks and deploys to the Netlify dev preview.

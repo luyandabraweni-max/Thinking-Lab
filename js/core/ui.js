@@ -22,7 +22,7 @@ function bar(mode) {
   let html = "";
   if (mode !== "adult" && trail.length > 1) html += `<button class="btn small" id="bBack" aria-label="Go back"><span class="em" aria-hidden="true">⬅️</span><span>Back</span></button>`;
   if (mode !== "adult" && (S.need || S.played.length)) html += `<button class="btn small" id="bHome" aria-label="Go to home"><span class="em" aria-hidden="true">🏠</span><span>Home</span></button>`;
-  if (mode !== "adult") html += `<button class="btn small" id="bRead" aria-label="Read this aloud"${S.quiet ? " disabled" : ""}>${speakerIcon}<span>Read<span class="wide-only"> aloud</span></span></button>`;
+  if (mode !== "adult") html += `<button class="btn small" id="bRead" aria-label="Read aloud"${S.quiet ? " disabled" : ""}>${speakerIcon}<span>Read<span class="wide-only"> aloud</span></span></button>`;
   if (mode !== "adult") html += `<button class="btn small" id="bSound" aria-pressed="${S.quiet}"><span class="em" aria-hidden="true">${S.quiet ? "🔇" : "🔊"}</span><span>${S.quiet ? "Sound off" : "Sound on"}</span></button>`;
   if (mode !== "adult") html += `<button class="btn small" id="bTalk">${icon("💬")}<span>Talk</span></button>`;
   if (mode !== "adult") html += `<button class="btn small" id="bMyWay">${icon("⚙️")}<span>My way</span></button>`;

@@ -6,12 +6,32 @@ function shape(kind, opts) {
   const size = opts.size || 56, col = opts.color || ({ circle: "var(--shape-a)", square: "var(--shape-b)", triangle: "var(--shape-c)", diamond: "var(--shape-d)" }[kind] || "var(--shape-a)");
   const s = opts.small ? 0.62 : 1;
   const c = 28, r = 20 * s;
-  let p = "";
-  if (kind === "circle") p = `<circle cx="${c}" cy="${c}" r="${r}" fill="${col}"/>`;
-  else if (kind === "square") p = `<rect x="${c - r}" y="${c - r}" width="${2 * r}" height="${2 * r}" rx="4" fill="${col}"/>`;
-  else if (kind === "triangle") p = `<path d="M${c} ${c - r - 2} L${c + r + 2} ${c + r} L${c - r - 2} ${c + r} Z" fill="${col}"/>`;
-  else if (kind === "diamond") p = `<path d="M${c} ${c - r - 4} L${c + r + 2} ${c} L${c} ${c + r + 4} L${c - r - 2} ${c} Z" fill="${col}"/>`;
-  return `<svg width="${size}" height="${size}" viewBox="0 0 56 56" role="img" aria-label="${opts.label || kind}">${p}</svg>`;
+  const outline = fill =>
+    kind === "circle" ? `<circle cx="${c}" cy="${c}" r="${r}" fill="${fill}"/>`
+    : kind === "square" ? `<rect x="${c - r}" y="${c - r}" width="${2 * r}" height="${2 * r}" rx="4" fill="${fill}"/>`
+    : kind === "triangle" ? `<path d="M${c} ${c - r - 2} L${c + r + 2} ${c + r} L${c - r - 2} ${c + r} Z" fill="${fill}"/>`
+    : kind === "diamond" ? `<path d="M${c} ${c - r - 4} L${c + r + 2} ${c} L${c} ${c + r + 4} L${c - r - 2} ${c} Z" fill="${fill}"/>` : "";
+  // opts.texture: texture names drawn over the colour, so colour is never the only cue
+  const tex = textures(opts.texture);
+  const p = outline(col) + tex.urls.map(outline).join("");
+  return `<svg width="${size}" height="${size}" viewBox="0 0 56 56" role="img" aria-label="${opts.label || kind}">${tex.defs}${p}</svg>`;
+}
+
+// ---------- Textures (patterns that stand in for colour in greyscale) ----------
+const TEXTURE = {
+  stripes: '<path d="M-2 2 L2 -2 M0 8 L8 0 M6 10 L10 6" stroke="var(--ink)" stroke-opacity="0.55" stroke-width="1.4"/>',
+  dots: '<circle cx="4" cy="4" r="1.3" fill="var(--ink)" fill-opacity="0.6"/>',
+  lines: '<path d="M0 6.5 H8" stroke="var(--ink)" stroke-opacity="0.55" stroke-width="1.2"/>',
+  rings: '<circle cx="0" cy="0" r="1.8" fill="none" stroke="var(--ink)" stroke-opacity="0.55" stroke-width="0.9"/><circle cx="8" cy="8" r="1.8" fill="none" stroke="var(--ink)" stroke-opacity="0.55" stroke-width="0.9"/>'
+};
+let textureId = 0;
+function textures(names) {
+  if (!names || !names.length) return { defs: "", urls: [] };
+  const ids = names.map(n => [n, "tx" + (++textureId)]);
+  return {
+    defs: `<defs>${ids.map(([n, id]) => `<pattern id="${id}" width="8" height="8" patternUnits="userSpaceOnUse">${TEXTURE[n]}</pattern>`).join("")}</defs>`,
+    urls: ids.map(([, id]) => `url(#${id})`)
+  };
 }
 const NAME = { circle: "circle", square: "square", triangle: "triangle", diamond: "diamond" };
 
