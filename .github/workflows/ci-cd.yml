@@ -1,0 +1,82 @@
+name: CI/CD
+
+# dev  -> checks, then deploys to the Netlify dev preview (https://dev--<site>.netlify.app)
+# main -> checks, then deploys to the Netlify production site
+# Pull requests into either branch run the checks only.
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Check site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Site checks (files, offline cache, manifest, secrets)
+        run: python3 .github/scripts/check_site.py "$RUNNER_TEMP/inline-js"
+
+      - name: JavaScript syntax
+        run: |
+          for f in sw.js clips.js clips/*.js "$RUNNER_TEMP"/inline-js/*.js; do
+            node --check "$f" || exit 1
+          done
+          echo "All JavaScript parses"
+
+  deploy:
+    name: Deploy to ${{ github.ref_name == 'main' && 'production' || 'dev preview' }}
+    needs: check
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name == 'main' && 'production' || 'development' }}
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Stage site files
+        run: rsync -a --exclude='.*' --exclude='netlify.toml' ./ _site/
+
+      - name: Deploy to Netlify
+        id: deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "::error::Add NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID in Settings > Secrets and variables > Actions"
+            exit 1
+          fi
+          if [ "$GITHUB_REF_NAME" = "main" ]; then
+            target="--prod"
+          else
+            target="--alias=dev"
+          fi
+          npx --yes netlify-cli@17.38.1 deploy --dir=_site $target \
+            --message="$GITHUB_REF_NAME @ ${GITHUB_SHA::7}" --json > deploy.json
+          url=$(python3 -c "import json; d=json.load(open('deploy.json')); print(d.get('url') or d['deploy_url'])")
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Deployed to $url" >> "$GITHUB_STEP_SUMMARY"
