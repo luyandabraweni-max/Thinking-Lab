@@ -2,6 +2,8 @@
 
 Calm, accessible thinking activities and CAPS-aligned lessons for learners aged 3 to 25. A static, offline-capable web app (PWA) with no build step and no stored learner data. Prototype with made-up learners only.
 
+The target architecture (web, iOS and Android apps, offline sync, multiple curricula including D-CAPS, POPIA and EU compliance) is in [docs/system-design.md](docs/system-design.md).
+
 ## Run locally
 
 ```bash
