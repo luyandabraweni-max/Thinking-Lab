@@ -41,12 +41,14 @@ function setup() {
           <label class="row" for="fAuto" style="flex-direction:row"><input type="checkbox" id="fAuto"${S.autoRead ? " checked" : ""}> Read every screen aloud</label>
           <label class="row" for="fContrast" style="flex-direction:row"><input type="checkbox" id="fContrast"${S.contrast ? " checked" : ""}> Stronger outlines</label>
           <label class="row" for="fMotion" style="flex-direction:row"><input type="checkbox" id="fMotion"${S.motion ? " checked" : ""}> No movement</label>
+          <label class="row" for="fGrey" style="flex-direction:row"><input type="checkbox" id="fGrey"${S.my.grey ? " checked" : ""}> Greyscale (no colours)</label>
           <label class="row" for="fScan" style="flex-direction:row"><input type="checkbox" id="fScan"${S.my.scan ? " checked" : ""}> Switch scanning (one switch or the space bar)</label>
           <label for="fScanSpeed" style="flex-direction:row;align-items:center;gap:8px">Scanning speed <select id="fScanSpeed"><option value="slow"${S.my.scanSpeed === "slow" ? " selected" : ""}>Slow</option><option value="medium"${S.my.scanSpeed === "medium" ? " selected" : ""}>Medium</option><option value="fast"${S.my.scanSpeed === "fast" ? " selected" : ""}>Fast</option></select></label>
         </div>
         <p class="note">English only in this version. Read-aloud is off unless you tick the box above. The learner can always tap Read aloud on any screen, and tap it again to stop. The voice is a recorded synthetic voice built from the LibriTTS dataset (CC BY 4.0) using Piper. Lines without a recording use this device's voice.</p>
+        ${S.portalLearner && S.demoLearner == null ? `<p class="note demo-flag">Portal learner: ${esc(S.code)}. This session will be added to their history when you end it.</p>` : ""}
         ${S.demoLearner != null ? `<p class="note demo-flag">Demo learner: ${esc(S.code)}. This made-up session will be added to their demo history when you end it.</p>` : ""}
-        <div class="row"><button class="btn primary" id="go" data-focus>Hand over to the learner</button><button class="btn" id="goDash">Open the demo dashboard</button></div>
+        <div class="row"><button class="btn primary" id="go" data-focus>Hand over to the learner</button><button class="btn" id="goPortal">Parent and specialist portal</button><button class="btn" id="goDash">Open the demo dashboard</button></div>
         <p class="note">Credits: voice recorded with Piper using the LibriTTS dataset (CC BY 4.0). Fonts: Lexend and Atkinson Hyperlegible (SIL Open Font License). Details in CREDITS.txt.</p>
       </section>`);
   const sync = () => {
@@ -68,11 +70,12 @@ function setup() {
     S.my.scan = document.getElementById("fScan").checked; S.my.scanSpeed = document.getElementById("fScanSpeed").value;
     S.contrast = document.getElementById("fContrast").checked;
     S.motion = document.getElementById("fMotion").checked;
+    S.my.grey = document.getElementById("fGrey").checked;
     applySettings();
   };
   let bandTouched = false;
   document.getElementById("fBand").addEventListener("change", () => { bandTouched = true; });
   $main.querySelectorAll("input,select").forEach(n => n.addEventListener("change", sync));
   on("#go", () => { sync(); S.started = new Date(); assent(); });
-  on("#goDash", dashboard); renderInstall();
+  on("#goDash", dashboard); on("#goPortal", () => { S.portalLearner = null; S.demoLearner = null; portalHome(); }); renderInstall();
 }

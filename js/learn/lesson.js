@@ -263,11 +263,12 @@ function unitFinish(u, run) {
           <p class="eyebrow">${esc(achieve)}</p>
           <div class="feedback">${esc(fbText)}</div>
           <p>${esc(u.done)}</p>
+          ${safetyNote(u)}
           <div class="row"><button class="btn primary" id="ufLearn" data-focus>Choose another lesson</button><button class="btn" id="ufHome">Back to home</button>${tellButton()}</div>
         </section>`);
     setSayLines([achieve, fbText, u.done]);
     planDone("lesson");
-    on("#ufLearn", () => needsBattery() ? batteryCheck(learnHome) : learnHome()); on("#ufHome", home); wireTell();
+    on("#ufLearn", () => needsBattery() ? batteryCheck(learnHome) : learnHome()); on("#ufHome", home); wireTell(); on("#sfUnsafe", () => feelUnsafe("lesson"));
   }
 }
 function drawReflection(u, done) {

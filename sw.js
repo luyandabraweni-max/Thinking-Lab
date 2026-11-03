@@ -1,5 +1,5 @@
 // 2to.iQ Thinking Lab offline cache. The app is cached on install; each lesson's voice file is cached the first time that lesson is opened. The app stores no learner records.
-const CACHE = "thinking-lab-f712b8dc90";
+const CACHE = "thinking-lab-de7e807b77";
 const FILES = [
   "./",
   "index.html",
@@ -9,6 +9,7 @@ const FILES = [
   "js/core/speech.js",
   "js/core/profile.js",
   "js/core/ui.js",
+  "js/core/motion.js",
   "js/core/install.js",
   "js/screens/setup.js",
   "js/screens/check-in.js",
@@ -55,7 +56,14 @@ const FILES = [
   "js/support/talk-board.js",
   "js/support/access.js",
   "js/support/wellbeing.js",
+  "js/support/safety.js",
   "js/screens/adult.js",
+  "js/reports/pdf.js",
+  "js/reports/docx.js",
+  "js/reports/report.js",
+  "js/portal/portal.js",
+  "js/portal/parent.js",
+  "js/portal/specialist.js",
   "js/main.js",
   "manifest.webmanifest",
   "fonts/atkinson-hyperlegible-latin-400-normal.woff2",

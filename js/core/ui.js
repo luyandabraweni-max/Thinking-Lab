@@ -3,7 +3,7 @@
 // ---------- Helpers ----------
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 function el(html) { const t = document.createElement("template"); t.innerHTML = html.trim(); return t.content.firstElementChild; }
-function render(html) { $main.innerHTML = html; mainHeading(); $main.scrollTop = 0; window.scrollTo(0, 0); const f = $main.querySelector("[data-focus]"); if (f) f.focus({ preventScroll: true }); }
+function render(html) { if (typeof savePortal === "function") savePortal(); $main.innerHTML = html; mainHeading(); $main.scrollTop = 0; window.scrollTo(0, 0); const f = $main.querySelector("[data-focus]"); if (f) f.focus({ preventScroll: true }); }
 function on(sel, fn) { $main.querySelectorAll(sel).forEach(n => n.addEventListener("click", fn)); }
 function shuffle(a) { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
 const speakerIcon = '<svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
@@ -13,6 +13,8 @@ function applySettings() {
   if (S.theme === "system") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", S.theme);
   if (S.contrast) root.setAttribute("data-contrast", "high"); else root.removeAttribute("data-contrast");
   if (S.motion) root.setAttribute("data-motion", "reduce"); else root.removeAttribute("data-motion");
+  updateMotion();
+  root.toggleAttribute("data-grey", !!(S.my && S.my.grey));
   root.setAttribute("data-font", S.font);
   root.style.setProperty("--text", (1.15 * S.textSize).toFixed(2) + "rem");
 }
@@ -95,13 +97,14 @@ function openHelp() {
         <button class="choice" data-h="break" data-focus><span class="lbl">I need a quiet break</span></button>
         <button class="choice" data-h="breathe"><span class="lbl">Breathe slowly</span></button>
         <button class="choice" data-h="card"><span class="lbl">Show my help card</span></button>
+        <button class="choice" data-h="unsafe"><span class="lbl">I feel unsafe</span></button>
       </div>
       <p class="muted">You can always stop and ask a grown-up.</p>
       <div class="row"><button class="btn" id="hClose">Back</button></div>
     </div>`);
   $layer.querySelectorAll("[data-h]").forEach(b => b.onclick = () => {
     const k = b.dataset.h;
-    if (k === "card") helpCard(); else breakScreen(k === "breathe" ? "Let's breathe slowly together." : "Take a quiet break. Stay as long as you like.");
+    if (k === "unsafe") feelUnsafe("Help menu"); else if (k === "card") helpCard(); else breakScreen(k === "breathe" ? "Let's breathe slowly together." : "Take a quiet break. Stay as long as you like.");
   });
   document.getElementById("hClose").onclick = () => { closeLayer(); setSay(currentReturnSay, false); };
 }

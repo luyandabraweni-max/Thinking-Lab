@@ -2,7 +2,7 @@
 
 // ---------- Boot ----------
 applySettings();
-setup();
+welcome();
 
 // Offline support: register the service worker on HTTPS or localhost.
 if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {

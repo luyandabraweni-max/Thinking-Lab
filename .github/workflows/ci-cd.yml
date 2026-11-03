@@ -43,6 +43,12 @@ jobs:
           done
           echo "All JavaScript parses"
 
+      - name: App tests (lessons, avatar, greyscale, safeguarding, portal, reports)
+        run: node tests/run-tests.js "$RUNNER_TEMP/reports"
+
+      - name: Generated PDF and Word reports are valid
+        run: python3 .github/scripts/check_reports.py "$RUNNER_TEMP/reports"
+
   deploy:
     name: Deploy to ${{ github.ref_name == 'main' && 'production' || 'dev preview' }}
     needs: check
@@ -59,7 +65,7 @@ jobs:
           node-version: "20"
 
       - name: Stage site files
-        run: rsync -a --exclude='.*' --exclude='netlify.toml' ./ _site/
+        run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='tests' --exclude='docs' --exclude='README.md' ./ _site/
 
       - name: Deploy to Netlify
         id: deploy

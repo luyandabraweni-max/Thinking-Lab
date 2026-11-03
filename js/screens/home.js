@@ -15,7 +15,7 @@ function home() {
   render(`
       <section class="hub">
         <div class="hub-hello card">
-          <button class="av-mini" id="hAvatar" aria-label="${S.avatar ? "Change your character" : "Make your character"}">${avatarSvg(S.avatar, 96, S.avatar ? `${S.avatar.name}, your character` : "Make your character")}</button>
+          ${S.avatar ? avatarStage(S.avatar, 112, `Wave hello, ${S.avatar.name}`) : `<button class="av-mini" id="hAvatar" aria-label="Make your character">${avatarSvg(null, 96, "Make your character")}</button>`}
           <div style="flex:1;min-width:0">
             <p class="eyebrow">2to.iQ Thinking Lab</p>
             ${firstVisit ? `<p class="lead">${esc(S.welcome)}</p>` : ""}
@@ -44,6 +44,11 @@ function home() {
       </section>`);
   setSayLines(hubLines);
   on("#hAvatar", () => avatarBuilder()); on("#hMine", () => avatarBuilder());
+  if (S.avatar) {
+    const hello = $main.querySelector(".hub-hello");
+    wireAvatarStage(hello); on(".av-tap", () => avatarSayHello(hello, S.avatar));
+    if (S.avWaveNext) { S.avWaveNext = false; setTimeout(() => avatarSayHello(hello, S.avatar), 450); }
+  }
   on("#hLearn", () => needsBattery() ? batteryCheck(learnHome) : learnHome()); on("#hLab", () => needsBattery() ? batteryCheck(labHome) : labHome()); on("#hSkills", () => needsBattery() ? batteryCheck(skillsHome) : skillsHome()); on("#hWork", myWork); on("#hPass", passportStart); wirePlan();
   on("#hDone", goodbye);
   on("[data-route]", e => { const [k, id] = e.currentTarget.dataset.route.split(":"); if (k === "unit") unitIntro(UNITS.find(u => u.id === id)); else startExercise(EXERCISES.find(x => x.id === id)); });

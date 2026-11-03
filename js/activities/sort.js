@@ -3,11 +3,17 @@
 // ---------- Colour and Shape Sort (Flexible Thinking) ----------
 function gameSort(run) {
   const B = "var(--shape-c)", G = "var(--shape-b)";
-  const items = S.band === "older"
+  // In greyscale, blue and gold look alike, so the game sorts by shape and size instead of colour.
+  const grey = !!(S.my && S.my.grey);
+  const items = grey ? (S.band === "older"
+    ? [["blue", "circle", "big"], ["blue", "square", "small"], ["gold", "circle", "small"], ["gold", "square", "big"], ["blue", "circle", "small"], ["gold", "square", "small"]]
+    : [["blue", "circle", "big"], ["gold", "square", "small"], ["blue", "square", "big"], ["gold", "circle", "small"]])
+    : S.band === "older"
     ? [["blue", "circle", "big"], ["blue", "square", "small"], ["gold", "circle", "small"], ["gold", "square", "big"], ["blue", "circle", "small"], ["gold", "circle", "big"]]
     : [["blue", "circle", "big"], ["gold", "square", "big"], ["blue", "square", "big"], ["gold", "circle", "big"]];
-  const rules = [{ by: 0, title: "Sort by colour", bins: ["blue", "gold"] }, { by: 1, title: "Now sort by shape", bins: ["circle", "square"] }]
-    .concat(S.band === "older" ? [{ by: 2, title: "Now sort by size", bins: ["big", "small"] }] : []);
+  const rules = grey ? [{ by: 1, title: "Sort by shape", bins: ["circle", "square"] }, { by: 2, title: "Now sort by size", bins: ["big", "small"] }]
+    : [{ by: 0, title: "Sort by colour", bins: ["blue", "gold"] }, { by: 1, title: "Now sort by shape", bins: ["circle", "square"] }]
+      .concat(S.band === "older" ? [{ by: 2, title: "Now sort by size", bins: ["big", "small"] }] : []);
   const itemSvg = (it, size) => shape(it[1], { size: size || 52, small: it[2] === "small", color: it[0] === "blue" ? B : G, label: `${it[2] === "small" ? "small " : ""}${it[0]} ${it[1]}` });
   const binSign = v => v === "blue" || v === "gold" ? shape("circle", { size: 30, color: v === "blue" ? B : G, label: v }) : v === "circle" || v === "square" ? shape(v, { size: 30, color: "var(--muted)", label: v }) : shape("square", { size: 30, small: v === "small", color: "var(--muted)", label: v });
   const results = []; let ri = 0;

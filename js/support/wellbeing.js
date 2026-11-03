@@ -64,7 +64,7 @@ function passportView() {
 }
 
 // ---------- 9. Tell us ----------
-const TELL = [["😴", "Too easy"], ["😣", "Too hard"], ["😊", "I liked it"], ["🙁", "I didn't like it"], ["😕", "It was confusing"], ["🔊", "Too busy or noisy"]];
+const TELL = [["😴", "Too easy"], ["😣", "Too hard"], ["😊", "I liked it"], ["🙁", "I didn't like it"], ["😕", "It was confusing"], ["🔊", "Too busy or noisy"], ["🛟", "I feel unsafe"]];
 function tellButton() { return `<button class="btn small" id="tellUs">${icon("💬")}<span>Tell us</span></button>`; }
 function wireTell() { on("#tellUs", openTellUs); }
 function openTellUs() {
@@ -73,7 +73,7 @@ function openTellUs() {
       <div class="choices">${TELL.map(([e, t], i) => `<button class="choice" data-tl="${i}">${icon(e)}<span class="lbl">${t}</span></button>`).join("")}</div>
       <div class="row"><button class="btn quiet" id="tlClose" data-focus>Close</button></div></div>`);
   setSayLines(["Tell us. What did you think?"].concat(TELL.map(t => t[1])), false);
-  $layer.querySelectorAll("[data-tl]").forEach(b => b.onclick = () => { const t = TELL[+b.dataset.tl][1]; S.voice.push({ kind: "tell us", what: t, where, at: new Date() });
+  $layer.querySelectorAll("[data-tl]").forEach(b => b.onclick = () => { const t = TELL[+b.dataset.tl][1]; S.voice.push({ kind: "tell us", what: t, where, at: new Date() }); if (t === UNSAFE) { feelUnsafe("Tell us panel"); return; }
     overlay(`<div class="card" style="text-align:center"><h2>Thank you for telling us.</h2><div class="row" style="justify-content:center"><button class="btn primary" id="tlOk" data-focus>Close</button></div></div>`); speakNow("Thank you for telling us."); document.getElementById("tlOk").onclick = closeLayer; });
   document.getElementById("tlClose").onclick = closeLayer;
 }

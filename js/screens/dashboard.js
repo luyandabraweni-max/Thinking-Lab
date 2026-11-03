@@ -145,15 +145,17 @@ function learnerPage(i, tab) {
   on("[data-dis]", e => { demoDecisions[L.code + e.currentTarget.dataset.dis] = "no"; learnerPage(i, tab); });
   on("[data-undo]", e => { delete demoDecisions[L.code + e.currentTarget.dataset.undo]; learnerPage(i, tab); });
   on("#dlStart", () => {
-    Object.assign(S, { code: L.code, cohort: L.cohort, band: L.band, answer: L.answer, demoLearner: i });
+    Object.assign(S, { code: L.code, cohort: L.cohort, band: L.band, answer: L.answer, demoLearner: i, portalLearner: null });
     setup();
   });
 }
 
-// When a demo learner's session ends, add it to their in-memory history.
+// When a demo or portal learner's session ends, add it to their in-memory history (demo learners share theirs with the portal).
 function addSessionToDemo() {
-  if (S.demoLearner == null) return 0;
-  const L = DEMO[S.demoLearner], today = new Date().toISOString().slice(0, 10); let n = 0;
+  if (S.portalLearner) syncPortalLearner();
+  const L = S.portalLearner ? portalLearner(S.portalLearner) : S.demoLearner != null ? DEMO[S.demoLearner] : null;
+  if (!L) return 0;
+  const today = new Date().toISOString().slice(0, 10); let n = 0;
   S.obs.forEach(o => o.items.forEach(it => { L.rows.push([today, o.id, statusOf(it), it.mode || "tap", it.hints || 0, o.reflection]); n++; }));
   return n;
 }

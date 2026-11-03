@@ -74,6 +74,7 @@ function openAdult() {
       <section class="card">
         <p class="eyebrow">Grown-up view · session notes</p>
         <h1>Learner ${esc(S.code)}</h1>
+        ${concernsAdultHtml()}
         <p class="note">Age group ${COHORTS[S.cohort]} · ${LEVEL[S.band]} · answers by ${S.answer === "build" ? "building step by step" : "choosing pictures"}${S.assisted ? " · points while an adult taps" : ""} · about ${mins} minute(s) so far · ${S.declined ? "chose not to take part" : "what they needed at the start: " + esc(needText)}</p>
         <p class="note">These are task observations, not a diagnosis or proof of mastery. Help from a person is not recorded.</p>
         <div class="obs">${obsHtml}</div>
@@ -97,6 +98,7 @@ function openAdult() {
     const lines = [`2to.iQ try-out · Learner ${S.code} · age group ${COHORTS[S.cohort]} · ${LEVEL[S.band]} · answers by ${S.answer}${S.assisted ? " (adult taps)" : ""} · ${new Date().toISOString().slice(0, 10)}`];
     S.obs.forEach(o => { lines.push(`${o.ex} (${o.cat}; ${o.domain})${o.exampleOpened ? " [example opened]" : ""}`); o.items.forEach(it => lines.push(`  - ${it.title}: ${STATUS_TEXT[statusOf(it)]}; checks ${it.checks}; hints ${it.hints}; answered by ${it.mode}`)); lines.push(`  Learner said what helped: ${o.reflection}`); if (o.extra) lines.push("  " + o.extra); });
     S.obs.forEach(o => { if (o.id && CAPS_LINK[o.id]) lines.push(`Curriculum link for ${o.ex} (proposed): ${curriculumLink(o.id, S.cohort)}`); });
+    (S.concerns || []).forEach(c => lines.push(`SAFEGUARDING: the learner said they feel unsafe at ${c.at.toTimeString().slice(0, 5)} (${c.where}). Follow your child protection policy.`));
     learnerVoiceLines().forEach(l => lines.push(l));
     if (S.liked) lines.push(`Liked: ${S.liked}. Tricky: ${S.tricky}.`);
     if (S.adultNotes) lines.push("Notes: " + S.adultNotes);
@@ -110,10 +112,11 @@ function openAdult() {
     document.getElementById("xNo").onclick = closeLayer;
     document.getElementById("xYes").onclick = () => {
       closeLayer();
-      const demoI = S.demoLearner, added = addSessionToDemo();
+      const demoI = S.demoLearner, portalI = S.portalLearner, added = addSessionToDemo(); S.portalLearner = null; S.concerns = [];
       const keep = { grade: S.grade, lessonLen: S.lessonLen, cohort: S.cohort, band: S.band, answer: S.answer, assisted: S.assisted, autoRead: S.autoRead, theme: S.theme, contrast: S.contrast, motion: S.motion, font: S.font, textSize: S.textSize };
-      Object.assign(S, { code: demoI != null ? "T01" : nextCode(S.code), demoLearner: null, started: null, need: null, played: [], learned: [], avatar: null, welcome: null, my: { how: "read", calm: false, plain: false, spacing: false, ruler: false, highlight: true, vol: "1", speed: "normal", theme: "none", scan: false, scanSpeed: "medium" }, plan: null, planStep: 0, battery: [], voice: [], passport: null, lastBattery: null, obs: [], liked: null, tricky: null, adultNotes: "", declined: false }, keep);
-      if (demoI != null) { learnerPage(demoI, "teacher"); if (added) { const m = document.createElement("p"); m.className = "feedback"; m.setAttribute("role", "status"); m.textContent = `Today's session was added: ${added} new record${added > 1 ? "s" : ""} in the history below.`; $main.querySelector(".card").insertBefore(m, $main.querySelector("[role=tablist]")); } }
+      Object.assign(S, { code: demoI != null || portalI ? "T01" : nextCode(S.code), demoLearner: null, started: null, need: null, played: [], learned: [], avatar: null, welcome: null, my: { how: "read", calm: false, plain: false, spacing: false, ruler: false, highlight: true, vol: "1", speed: "normal", theme: "none", scan: false, scanSpeed: "medium" }, plan: null, planStep: 0, battery: [], voice: [], passport: null, lastBattery: null, obs: [], liked: null, tricky: null, adultNotes: "", declined: false }, keep);
+      if (portalI && PORTAL.me) portalAfterSession(portalI, added);
+      else if (demoI != null) { learnerPage(demoI, "teacher"); if (added) { const m = document.createElement("p"); m.className = "feedback"; m.setAttribute("role", "status"); m.textContent = `Today's session was added: ${added} new record${added > 1 ? "s" : ""} in the history below.`; $main.querySelector(".card").insertBefore(m, $main.querySelector("[role=tablist]")); } }
       else setup();
     };
   });
