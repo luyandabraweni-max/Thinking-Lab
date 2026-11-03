@@ -180,14 +180,27 @@ describe("avatar and motion", () => {
     app.run(`S.avatar = Object.assign(defaultAvatar(), { base: "robot3d", top: 1, name: "Bolt" }); home()`);
     expect(app.run(`can3d()`)).toBe(false); // jsdom has no WebGL
     const stage = app.window.document.querySelector(".hub-hello .av-stage");
-    expect(JSON.parse(stage.querySelector(".av-3d").dataset.colours).top).toBe("#6A86A8");
+    expect(JSON.parse(stage.querySelector(".av-3d").dataset.colours).top).toBe(app.run(`AV.top[1][0]`));
     expect(stage.querySelector("svg.av3d")).not.toBeNull();
     expect(stage.classList.contains("is3d")).toBe(false);
     app.run(`avatarBuilder()`);
     expect(app.main()).toContain("3D robot");
     app.run(`S.avatar = Object.assign(defaultAvatar(), { base: "person3d", skin: 5 }); avatarBuilder()`);
     expect(app.main()).toContain("Skin tone");
-    expect(app.run(`avatarSvg(S.avatar, 100, "x")`)).toContain(app.run(`shade(AV.skin[5][0], 0.3)`));
+    expect(app.run(`avatarSvg(S.avatar, 100, "x")`)).toContain(app.run(`AV.skin[5][0]`));
+  });
+  it("every outfit and held item draws, for people and robots", () => {
+    const bad = app.run(`const out = [];
+      for (const base of ["person", "robot"]) for (const [cloth] of AV.cloth) for (const [prop] of AV.prop) {
+        const s = avatarSvg(Object.assign(defaultAvatar(), { base, cloth, prop }), 200, "", { full: true });
+        if (!s.startsWith("<svg") || s.split("<g").length !== s.split("</g>").length || s.includes("undefined")) out.push(base + "/" + cloth + "/" + prop);
+      } out`);
+    expect(bad).toEqual([]);
+  });
+  it("characters saved before the illustrated style still draw", () => {
+    const old = app.run(`fullAvatar({ base: "person", skin: 2, hair: "curls", hairCol: 5, eyes: "wide", mouth: "grin", extra: "none", top: 5, bg: 5, name: "Old" })`);
+    expect(old).toMatchObject({ eyes: "brown", cloth: "jacket", name: "Old" });
+    expect(app.run(`fullAvatar({ eyes: "happy", top: 99 })`)).toMatchObject({ eyes: "happy", top: 0 });
   });
   it("names are cleaned and capped", () => {
     expect(app.run(`cleanAvatarName("<b>Zoë</b>!!")`)).toBe("bZoëb");

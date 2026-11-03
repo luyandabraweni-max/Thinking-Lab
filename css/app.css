@@ -249,7 +249,7 @@ ul.plain { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column
 canvas.pad { width: 100%; max-width: 520px; aspect-ratio: 4/3; border: 2px solid var(--line); border-radius: 14px; background: var(--surface); touch-action: none; }
 .hub { display: flex; flex-direction: column; gap: 16px; }
 .hub-hello { flex-direction: row; align-items: center; gap: 18px; flex-wrap: wrap; }
-.av-mini { border: none; background: transparent; padding: 0; border-radius: 50%; line-height: 0; }
+.av-mini { border: none; background: transparent; padding: 0; border-radius: 12%; line-height: 0; }
 .av-mini:focus-visible { outline: 3px solid var(--shape-c); outline-offset: 3px; }
 .av-layout { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 760px) { .av-layout { grid-template-columns: 240px minmax(0, 1fr); align-items: start; } .av-preview { position: sticky; top: 12px; } }
@@ -325,11 +325,12 @@ ol.story li { display: flex; gap: 10px; align-items: flex-start; }
 
 /* ---------- Avatar ---------- */
 .av-stage { position: relative; display: inline-block; line-height: 0; flex: none; perspective: 700px; }
-.av-tap { border: none; background: transparent; padding: 0; border-radius: 50%; line-height: 0; }
+.av-tap { border: none; background: transparent; padding: 0; border-radius: 12%; line-height: 0; }
 .av-tap:focus-visible { outline: 3px solid var(--shape-c); outline-offset: 4px; }
 .av3d { display: block; overflow: visible; }
 .av3d .av-arm { opacity: 0; transform-origin: 62px 172px; }
 .av3d.av-waving .av-arm { opacity: 1; }
+.av3d.av-waving .av-proparm { opacity: 0; } /* a raised prop arm steps aside for the wave */
 .av3d .av-mouth-open { transform: scale(0); }
 .av3d.av-talking .av-mouth-open { transform: scale(0.8); }
 .av-bubble {
@@ -505,7 +506,7 @@ ul.helplines li { display: flex; flex-direction: column; align-items: center; ga
 
 /* 3D robot: drawn over the 2D robot, which shows until it has loaded (and stays if 3D can't run) */
 .av-tap { position: relative; }
-.av-3d { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.av-3d { position: absolute; inset: 0; border-radius: 12%; overflow: hidden; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
 .av-3d canvas { display: block; width: 100% !important; height: 100% !important; }
 .av-stage.is3d .av-3d { opacity: 1; }
 .av-stage.is3d .av-tap > svg { visibility: hidden; }
