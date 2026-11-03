@@ -30,6 +30,9 @@ js/portal/          Front door, registration, sign-in, parent, specialist and sc
 js/main.js          Starts the app and registers the service worker
 clips.js, clips/    Recorded voice clips (shared lines, and one file per Grade 4 to 6 lesson)
 sw.js               Offline cache
+modules/avatar3d.js 3D robot character (ES module, loaded only when a learner picks it)
+vendor/three/       three.js r160 (MIT), kept here so it works offline
+assets/3d/          3D model: "RobotExpressive" by Tomás Laulhé (Quaternius), CC0
 native/             Android and iOS app wrapper (Capacitor) and the Android build script
 tests/              App tests (run in CI)
 _headers            Security headers for Netlify
@@ -63,6 +66,12 @@ Parents and specialists can register, sign in with an emailed code (shown on scr
 - **Parents** see their children's progress (with a weekly chart), supports, sharing and reports.
 - **Specialists** see learners shared with them: progress, goals, notes and reports.
 - **School admins** see their school's staff and totals, and choose the safeguarding lead. They never see an individual learner's records. Real accounts wait for the legal sign-off in the system design.
+
+## 3D character
+
+Learners can pick a **3D robot** in My character. It is the free CC0 model "RobotExpressive" by Tomás Laulhé ([Quaternius](https://quaternius.com)), drawn with [three.js](https://threejs.org). It idles, turns towards the pointer, and waves when it says its name. The files (about 1.3 MB) download only when someone picks it, then work offline. With No movement or Calm screen on, in Data saver, or without WebGL, the 2D robot drawing is shown instead.
+
+More free CC0 characters (people, animals) for later: [Quaternius](https://quaternius.com) (Universal Base Characters, Ultimate Modular Characters) and [Kenney](https://kenney.nl/assets) (Animated Characters). They need to be exported to `.glb` (free in [Blender](https://www.blender.org)) and kept small for low-cost phones. When you change files in `modules/` or `vendor/`, change the `CACHE` name in `sw.js` as well.
 
 ## Android and iOS apps
 

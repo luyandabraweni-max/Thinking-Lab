@@ -107,7 +107,7 @@ SECRETS = {
 }
 found = False
 for f in tracked:
-    if not f or f.endswith((".png", ".woff2", ".py")):
+    if not f or f.endswith((".png", ".woff2", ".glb", ".py")):
         continue
     text = open(f, encoding="utf-8", errors="ignore").read()
     for name, pat in SECRETS.items():

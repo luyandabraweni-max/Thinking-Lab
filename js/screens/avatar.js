@@ -20,6 +20,9 @@ const AV = {
   names: ["Star", "River", "Comet", "Sunny", "Pebble", "Nova", "Echo", "Maple", "Breeze", "Ember"]
 };
 const AV_NAME_MAX = 16;
+// The 3D robot needs WebGL and movement allowed; otherwise (and while it loads) the 2D robot drawing stands in.
+const can3d = () => typeof motionAllowed === "function" && motionAllowed() && !!window.WebGLRenderingContext
+  && !(navigator.connection && navigator.connection.saveData) && !document.documentElement.hasAttribute("data-calm");
 function defaultAvatar() { return { base: "person", skin: 2, hair: "curls", hairCol: 0, eyes: "round", mouth: "smile", extra: "none", top: 0, bg: 0, name: "Star" }; }
 // Letters (any language), numbers, spaces, hyphens and apostrophes only.
 function cleanAvatarName(v) { return String(v || "").replace(/[^\p{L}\p{N} '\-]/gu, "").replace(/\s+/g, " ").trimStart().slice(0, AV_NAME_MAX); }
@@ -51,7 +54,7 @@ function avatarSvg(a, size, label, opts) {
       <ellipse cx="38" cy="112" rx="11" ry="13" fill="${hand}"/><ellipse cx="48" cy="119" rx="4" ry="6.5" transform="rotate(35 48 119)" fill="${hand}"/></g>` : "";
   const mouthOpen = cy => `<ellipse class="av-mouth-open" cx="100" cy="${cy}" rx="7" ry="5.5" fill="${ink}" style="transform-origin:100px ${cy}px"/>`;
 
-  if (a.base === "robot") {
+  if (a.base === "robot" || a.base === "robot3d") {
     const mouth = a.mouth === "calm" ? `<line x1="90" y1="98" x2="110" y2="98" stroke="${ink}" stroke-width="3" stroke-linecap="round"/>` : `<path d="M88 95 Q100 ${a.mouth === "grin" ? 106 : 102} 112 95" stroke="${ink}" stroke-width="3" fill="none" stroke-linecap="round"/>`;
     return svgOpen + body + arm(topF, "#B8C2C0") + `<g class="av-head">
         <line x1="100" y1="48" x2="100" y2="30" stroke="${shade(top, -0.2)}" stroke-width="5"/><circle cx="100" cy="27" r="7" fill="#D9B44A"/><circle cx="98" cy="25" r="2.5" fill="#FFF6D8"/>
@@ -95,10 +98,25 @@ function avatarSvg(a, size, label, opts) {
 }
 // A tappable avatar with a speech bubble. Call wireAvatarStage once per screen on the element around it.
 function avatarStage(a, size, tapLabel) {
-  return `<div class="av-stage"><button class="av-tap" type="button" aria-label="${esc(tapLabel)}">${avatarSvg(a, size, "", { full: true, decorative: true })}</button><p class="av-bubble" role="status" aria-live="polite"></p></div>`;
+  const three = a && a.base === "robot3d" ? `<span class="av-3d" aria-hidden="true" data-colour="${AV.top[a.top][0]}" style="background:${AV.bg[a.bg][0]}"></span>` : "";
+  return `<div class="av-stage"><button class="av-tap" type="button" aria-label="${esc(tapLabel)}">${avatarSvg(a, size, "", { full: true, decorative: true })}${three}</button><p class="av-bubble" role="status" aria-live="polite"></p></div>`;
+}
+// Swap in the 3D robot once it has loaded. If it can't load, the drawing simply stays.
+let avatar3d = null;
+function bring3d(scope) {
+  scope.querySelectorAll(".av-3d:not([data-on])").forEach(box => {
+    box.setAttribute("data-on", "");
+    if (!can3d()) return;
+    const st = box.closest(".av-stage");
+    (avatar3d || (avatar3d = import(new URL("modules/avatar3d.js", document.baseURI).href)))
+      .then(m => m.mount(box, box.dataset.colour))
+      .then(r => { if (r) { st._av3d = r; st.classList.add("is3d"); } })
+      .catch(() => { avatar3d = null; });
+  });
 }
 // Head, face and eyes lean towards the pointer anywhere inside scope (CSS turns the --tx/--ty values into depth).
 function wireAvatarStage(scope) {
+  bring3d(scope);
   const set = (x, y) => { scope.style.setProperty("--tx", x.toFixed(3)); scope.style.setProperty("--ty", y.toFixed(3)); };
   scope.addEventListener("pointermove", e => {
     const st = scope.querySelector(".av-stage"); if (!st) return;
@@ -117,6 +135,7 @@ function avatarSayHello(scope, a) {
   bubble.textContent = text; bubble.classList.add("show");
   svg.classList.add("av-waving", "av-talking");
   speakNow(text);
+  if (st._av3d) st._av3d.wave();
   st._t1 = setTimeout(() => svg.classList.remove("av-talking"), 1800);
   st._t2 = setTimeout(() => svg.classList.remove("av-waving"), 2700);
   st._t3 = setTimeout(() => { bubble.classList.remove("show"); bubble.textContent = ""; }, 4200);
@@ -136,10 +155,11 @@ function avatarBuilder(after) {
       <div class="choices av-choices av-namechips">${AV.names.map(n => `<button class="choice" data-avname="${n}" aria-pressed="${a.name === n}"><span class="lbl">${n}</span></button>`).join("")}</div></div>`;
   const optionsHtml = () => `
       ${nameGroup()}
-      ${group("base", "Character", [["person", "Person"], ["robot", "Robot"]])}
+      ${group("base", "Character", [["person", "Person"], ["robot", "Robot"], ["robot3d", "3D robot"]])}
+      ${a.base === "robot3d" ? `<p class="note">${W("The 3D robot moves and waves.", "The 3D robot moves, waves and turns to follow you.")} It needs a bit more data the first time. With No movement or Calm screen on, or on phones that can't show 3D, it shows as a drawing.</p>` : ""}
       ${a.base === "person" ? group("skin", "Skin tone", AV.skin, true) + group("hair", "Hair or head covering", AV.hair) + (["doek", "hijab", "none"].includes(a.hair) ? "" : group("hairCol", "Hair colour", AV.hairCol, true)) + group("eyes", "Eyes", AV.eyes) + group("extra", "Extras", AV.extra) : ""}
       ${group("mouth", "Mouth", AV.mouth)}
-      ${group("top", a.base === "robot" ? "Robot colour" : "Clothes colour", AV.top, true)}
+      ${group("top", a.base !== "person" ? "Robot colour" : "Clothes colour", AV.top, true)}
       ${group("bg", "Background", AV.bg, true)}`;
   const shownName = () => a.name.trim() || defaultAvatar().name;
   let card;
@@ -148,6 +168,7 @@ function avatarBuilder(after) {
     const holder = document.getElementById("avStage");
     holder.innerHTML = avatarStage(a, 220, `Wave and say hello, ${shownName()}`);
     holder.querySelector(".av-tap").addEventListener("click", () => avatarSayHello(card, a));
+    bring3d(holder);
     if (pop) holder.querySelector("svg").classList.add("av-pop");
   };
   const refreshOptions = keep => {
