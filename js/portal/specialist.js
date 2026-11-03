@@ -77,6 +77,8 @@ function specialistLearner(id, tab) {
         <h2>Strengths and preferences</h2>
         <p class="note">Observations of activities, not a diagnosis or proof of mastery. Each one shows its evidence.</p>
         <div class="obs">${ss.map(s => `<div class="obs-item"><span class="status lvl-${s.level.toLowerCase()}">${s.level}</span> <b>${esc(s.label)}</b><div class="note">Evidence: ${esc(s.evidence)}.${s.level === "Early" ? "" : ` Suggestion: ${esc(s.suggestion)}.`}</div></div>`).join("") || '<p class="muted">No observations yet. Start a session to begin.</p>'}</div>
+        <h2>Activities each week</h2>
+        ${progressChart(L)}
         <h2>Activities by thinking domain</h2>
         <div class="dombars">${REPORT_DOMAINS.map(d => `<div class="dombar"><span>${esc(d)}</span><span class="track"><span class="fill" style="width:${dc(d) / max * 100}%"></span></span><span>${dc(d)}</span></div>`).join("")}</div>
         ${rows.length ? `<h2>Recent sessions</h2><div class="tablewrap" tabindex="0" role="region" aria-label="Recent sessions"><table class="hist"><thead><tr><th scope="col">Date</th><th scope="col">Activity</th><th scope="col">Observed</th><th scope="col">Hints</th></tr></thead>

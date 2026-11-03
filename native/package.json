@@ -1,0 +1,11 @@
+{
+  "name": "thinking-lab-native",
+  "private": true,
+  "description": "Wraps the web app as Android and iOS apps with Capacitor. The android/ and ios/ projects are generated in CI, not stored here.",
+  "devDependencies": {
+    "@capacitor/android": "7.0.0",
+    "@capacitor/cli": "7.0.0",
+    "@capacitor/core": "7.0.0",
+    "@capacitor/ios": "7.0.0"
+  }
+}

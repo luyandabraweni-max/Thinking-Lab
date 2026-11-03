@@ -29,6 +29,8 @@ const SCREENS = {
   "registration": `registerStart("parent")`,
   "parent child": `PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-parent"); parentChild("demo-l1", "progress")`,
   "specialist learner": `PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-specialist"); specialistLearner("demo-l1", "goals")`,
+  "specialist overview with chart": `PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-specialist"); specialistLearner("demo-l0", "overview"); document.querySelector(".ch-table").open = true`,
+  "school admin": `PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-admin"); adminHome()`,
   "report preview": `PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-specialist"); reportScreen(portalLearner("demo-l1"), PORTAL.me, specialistHome)`,
   "i feel unsafe": `feelUnsafe("talk board")`
 };

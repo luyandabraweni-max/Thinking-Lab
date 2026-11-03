@@ -95,7 +95,7 @@ jobs:
           node-version: "20"
 
       - name: Stage site files
-        run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='node_modules' --exclude='tests' --exclude='docs' --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='test-results' --exclude='playwright-report' ./ _site/
+        run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='node_modules' --exclude='native' --exclude='tests' --exclude='docs' --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='test-results' --exclude='playwright-report' ./ _site/
 
       - name: Deploy to Netlify
         id: deploy
@@ -130,3 +130,30 @@ jobs:
           url=$(python3 -c "import json; d=json.load(open('deploy.json')); print(d.get('url') or d['deploy_url'])")
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Deployed to $url" >> "$GITHUB_STEP_SUMMARY"
+
+  android:
+    name: Android app (test build)
+    needs: [check, test]
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Build the Android app
+        run: ./native/build-android.sh
+
+      - name: Keep the app for download
+        uses: actions/upload-artifact@v4
+        with:
+          name: thinking-lab-android-${{ github.ref_name }}
+          path: native/android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30

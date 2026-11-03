@@ -26,10 +26,11 @@ js/content/all-units.js   Combines every grade's units into UNITS (keep it after
 js/support/         My way (incl. greyscale), talk board, switch scanning, reading ruler, breaks, Support Passport,
                     safeguarding ("I feel unsafe", helplines, concern records)
 js/reports/         Report model, plus PDF and Word (.docx) writers that run on the device
-js/portal/          Front door, registration, sign-in, parent portal, specialist portal
+js/portal/          Front door, registration, sign-in, parent, specialist and school admin portals, progress chart
 js/main.js          Starts the app and registers the service worker
 clips.js, clips/    Recorded voice clips (shared lines, and one file per Grade 4 to 6 lesson)
 sw.js               Offline cache
+native/             Android and iOS app wrapper (Capacitor) and the Android build script
 tests/              App tests (run in CI)
 _headers            Security headers for Netlify
 ```
@@ -57,7 +58,20 @@ The unit tests also write sample PDF and Word reports when `REPORT_DIR` is set; 
 
 ## Portal (demo)
 
-Parents and specialists can register, sign in with an emailed code (shown on screen in the demo), and use their portal. Accounts are pretend: they stay in the browser, sign-in is never kept between visits, and "Clear demo data" on the welcome screen removes them. Demo accounts: `parent@example.org` and `specialist@example.org`. Real accounts wait for the legal sign-off in the system design.
+Parents and specialists can register, sign in with an emailed code (shown on screen in the demo), and use their portal. Accounts are pretend: they stay in the browser, sign-in is never kept between visits, and "Clear demo data" on the welcome screen removes them. Demo accounts: `parent@example.org`, `specialist@example.org` (also the safeguarding lead), `therapist@example.org` and `admin@example.org` (school admin).
+
+- **Parents** see their children's progress (with a weekly chart), supports, sharing and reports.
+- **Specialists** see learners shared with them: progress, goals, notes and reports.
+- **School admins** see their school's staff and totals, and choose the safeguarding lead. They never see an individual learner's records. Real accounts wait for the legal sign-off in the system design.
+
+## Android and iOS apps
+
+The same web app is wrapped as a native app with [Capacitor](https://capacitorjs.com) (`native/`). The `android/` and `ios/` projects are generated, not stored in the repo.
+
+- **Android:** every deploy also builds a test app. Download it from the run's **Artifacts** on the GitHub Actions page (`thinking-lab-android-main`), unzip it and install `app-debug.apk` on a phone (allow "install unknown apps"). Locally: `./native/build-android.sh` (needs Node 20+, JDK 21 and the Android SDK).
+- **Before the Play Store:** a Google Play developer account (one-off USD 25), a signing key stored as a CI secret, and the store listing, privacy policy and Data safety form (see the system design).
+- **iOS:** needs a Mac with Xcode and an Apple Developer account (USD 99 a year). Then `cd native && npm install && npx cap add ios && npx cap open ios`.
+- **App ID:** `africa.pholoso.thinkinglab` in `native/capacitor.config.json`. Confirm it before the first store upload: it can't be changed afterwards.
 
 ## Branches and deployment
 

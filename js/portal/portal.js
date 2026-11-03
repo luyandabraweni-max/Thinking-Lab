@@ -10,12 +10,17 @@ const COUNTRIES = [["ZA", "South Africa"], ["AT", "Austria"], ["BE", "Belgium"],
 const lawFor = c => c === "ZA" ? "POPIA (South Africa)" : "GDPR (European Union)";
 
 const PORTAL = { accounts: [], learners: [], me: null, seq: 0 };
+const ROLE_NAMES = { parent: "Parent portal", specialist: "Specialist portal", admin: "School admin" };
+// Demo accounts, also restored into older saved demo data that doesn't have them yet.
+const SEED_ACCOUNTS = [
+  { id: "demo-parent", role: "parent", name: "Demo Parent", email: "parent@example.org", country: "ZA", demo: true, created: "2026-10-01", consents: { guardian: true, terms: true, support: true, share: true } },
+  { id: "demo-specialist", role: "specialist", name: "Demo Specialist", email: "specialist@example.org", country: "ZA", profession: "Special-needs educator", org: "Demo Special School", regNo: "", demo: true, created: "2026-10-01", consents: { terms: true, confidential: true, safeguarding: true, honest: true, dsl: true } },
+  { id: "demo-ot", role: "specialist", name: "Demo Therapist", email: "therapist@example.org", country: "ZA", profession: "Occupational therapist", org: "Demo Special School", regNo: "", demo: true, created: "2026-10-01", consents: { terms: true, confidential: true, safeguarding: true, honest: true } },
+  { id: "demo-admin", role: "admin", name: "Demo School Admin", email: "admin@example.org", country: "ZA", profession: "School administrator", org: "Demo Special School", demo: true, created: "2026-10-01", consents: { terms: true, confidential: true, safeguarding: true, honest: true } }];
 const newId = p => `${p}${++PORTAL.seq}`;
 // Demo accounts and learners, built on the demo dashboard's made-up learners so their histories are shared.
 (function seedPortal() {
-  PORTAL.accounts.push(
-    { id: "demo-parent", role: "parent", name: "Demo Parent", email: "parent@example.org", country: "ZA", demo: true, created: "2026-10-01", consents: { guardian: true, terms: true, support: true, share: true } },
-    { id: "demo-specialist", role: "specialist", name: "Demo Specialist", email: "specialist@example.org", country: "ZA", profession: "Special-needs educator", org: "Demo Special School", regNo: "", demo: true, created: "2026-10-01", consents: { terms: true, confidential: true, safeguarding: true, honest: true, dsl: true } });
+  PORTAL.accounts.push(...JSON.parse(JSON.stringify(SEED_ACCOUNTS)));
   const extra = [
     { curriculum: "NCF", level: "Grade R", guardianId: "demo-parent", supportNeeds: "" },
     { curriculum: "D-CAPS", level: "Foundation level", guardianId: "demo-parent", supportNeeds: "Needs extra time to process spoken instructions. Prefers building answers step by step.",
@@ -26,18 +31,18 @@ const newId = p => `${p}${++PORTAL.seq}`;
     consent: { guardian: true, support: i === 1, share: true, date: "2026-10-01", law: lawFor("ZA"), schoolHeld: i === 2 } }, extra[i])));
 })();
 const portalLearner = id => PORTAL.learners.find(l => l.id === id);
-// Access rules: guardians see their own children; specialists see learners shared with them.
-function canSee(acc, L) { return !!acc && !!L && (acc.role === "parent" ? L.guardianId === acc.id : L.specialists.includes(acc.id)); }
+// Access rules: guardians see their own children; specialists see learners shared with them; school admins see no learner records.
+function canSee(acc, L) { return !!acc && !!L && (acc.role === "parent" ? L.guardianId === acc.id : acc.role === "specialist" && L.specialists.includes(acc.id)); }
 function myLearners() { return PORTAL.learners.filter(L => canSee(PORTAL.me, L)); }
 
 function portalHead() {
   const me = PORTAL.me; if (!me) return "";
-  return `<div class="portal-head"><span class="ph-who">${icon(me.role === "parent" ? "👪" : "🧑‍🏫")}<span><b>${esc(me.name)}</b><span class="muted"> · ${me.role === "parent" ? "Parent portal" : "Specialist portal"}</span></span></span>
+  return `<div class="portal-head"><span class="ph-who">${icon({ parent: "👪", specialist: "🧑‍🏫", admin: "🏫" }[me.role])}<span><b>${esc(me.name)}</b><span class="muted"> · ${ROLE_NAMES[me.role]}</span></span></span>
     <span class="row"><button class="btn small" id="phHome">My dashboard</button><button class="btn small" id="phAccount">My account</button><button class="btn small quiet" id="phOut">Sign out</button></span></div>
     <p class="note demo-flag">Demo portal: accounts and learners here are pretend and live only on this page. Nothing is sent or saved.</p>`;
 }
 function wirePortalHead() { on("#phHome", portalHome); on("#phAccount", accountPage); on("#phOut", () => { PORTAL.me = null; welcome(); }); }
-function portalHome() { if (!PORTAL.me) return welcome(); (PORTAL.me.role === "parent" ? parentHome : specialistHome)(); }
+function portalHome() { if (!PORTAL.me) return welcome(); ({ parent: parentHome, specialist: specialistHome, admin: adminHome }[PORTAL.me.role] || welcome)(); }
 
 // ---------- Front door ----------
 function welcome() {
@@ -56,7 +61,8 @@ function welcome() {
             <div class="row"><button class="btn" id="wTry">Start a try-out session</button></div></div>
         </div>
         <p class="note demo-flag">This is a prototype. Registration works, but accounts are pretend and live only on this page. Please use made-up details. To look around quickly, sign in with a demo account.</p>
-        <div class="row"><button class="btn small" id="wDemoParent">Demo parent account</button><button class="btn small" id="wDemoSpec">Demo specialist account</button><button class="btn small quiet" id="wClear">Clear demo data</button></div>
+        <div class="row"><button class="btn small" id="wDemoParent">Demo parent account</button><button class="btn small" id="wDemoSpec">Demo specialist account</button><button class="btn small" id="wDemoAdmin">Demo school admin</button><button class="btn small quiet" id="wClear">Clear demo data</button></div>
+        <p class="note">School admins: <button class="btn small quiet" data-signin="admin">Sign in as a school admin</button> School admin accounts are set up with us when a school joins.</p>
         <p class="note">Demo accounts you create are kept in this browser only, so you can come back to them. They are never sent anywhere. You stay signed out each time you return, so a child can't open your portal.</p>
       </section>`);
   on("[data-reg]", e => registerStart(e.currentTarget.dataset.reg));
@@ -69,6 +75,7 @@ function welcome() {
   on("#wTry", () => { S.portalLearner = null; S.demoLearner = null; setup(); });
   on("#wDemoParent", () => { PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-parent"); parentHome(); });
   on("#wDemoSpec", () => { PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-specialist"); specialistHome(); });
+  on("#wDemoAdmin", () => { PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-admin"); adminHome(); });
 }
 
 // ---------- Sign in (a one-time code by email, as in the design) ----------
@@ -76,19 +83,19 @@ function signIn(role) {
   bar("adult");
   render(`
       <section class="card setup">
-        <p class="eyebrow">${role === "parent" ? "Parents and guardians" : "Specialists and teachers"}</p>
+        <p class="eyebrow">${{ parent: "Parents and guardians", specialist: "Specialists and teachers", admin: "School admins" }[role]}</p>
         <h1>Sign in</h1>
         <p>We'll send a 6-digit code to your email. There are no passwords to remember.</p>
         <label for="siEmail">Email address<input id="siEmail" type="email" autocomplete="email" inputmode="email" aria-describedby="siErr"></label>
         <p class="field-error" id="siErr" role="alert"></p>
         <div class="row"><button class="btn primary" id="siGo" data-focus>Send my code</button><button class="btn quiet" id="siBack">Back</button></div>
-        <p class="note">Demo accounts: parent@example.org and specialist@example.org.</p>
+        <p class="note">Demo accounts: parent@example.org, specialist@example.org, therapist@example.org and admin@example.org.</p>
       </section>`);
   on("#siBack", welcome);
   const go = () => {
     const email = document.getElementById("siEmail").value.trim().toLowerCase();
     const acc = PORTAL.accounts.find(a => a.email === email && a.role === role);
-    if (!acc) { document.getElementById("siErr").textContent = `No ${role} account uses that email on this page. Check it, or register first.`; return; }
+    if (!acc) { document.getElementById("siErr").textContent = `No ${role === "admin" ? "school admin" : role} account uses that email on this page. Check it, or register first.`; return; }
     verifyCode(email, () => { PORTAL.me = acc; portalHome(); }, () => signIn(role));
   };
   on("#siGo", go);
@@ -267,7 +274,7 @@ function accountPage() {
         <h1>${esc(me.name)}</h1>
         <table class="hist"><tbody>
           <tr><th scope="row">Email</th><td>${esc(me.email)}</td></tr>
-          <tr><th scope="row">Account</th><td>${me.role === "parent" ? "Parent or guardian" : esc(me.profession) + ", " + esc(me.org)}</td></tr>
+          <tr><th scope="row">Account</th><td>${me.role === "parent" ? "Parent or guardian" : esc(me.profession) + ", " + esc(me.org || "no school")}</td></tr>
           <tr><th scope="row">Country</th><td>${esc((COUNTRIES.find(c => c[0] === me.country) || [, ""])[1])} · protected by ${lawFor(me.country)}</td></tr>
           <tr><th scope="row">Registered</th><td>${fullDate(me.created)}</td></tr>
           ${me.role === "specialist" ? `<tr><th scope="row">Safeguarding lead</th><td>${me.consents.dsl ? "Yes: you receive safeguarding concerns" : "No"}</td></tr>` : ""}</tbody></table>
@@ -353,6 +360,7 @@ function loadPortal() {
     const d = JSON.parse(localStorage.getItem(PORTAL_KEY) || "null");
     if (!d || d.v !== 1 || !Array.isArray(d.accounts) || !Array.isArray(d.learners)) return;
     PORTAL.accounts = d.accounts; PORTAL.learners = d.learners; PORTAL.seq = d.seq || 0;
+    SEED_ACCOUNTS.forEach(a => { if (!PORTAL.accounts.some(x => x.id === a.id)) PORTAL.accounts.push(JSON.parse(JSON.stringify(a))); });
     PORTAL.learners.forEach(L => { if (L.demoIndex != null && DEMO[L.demoIndex]) DEMO[L.demoIndex].rows = L.rows; }); // the demo dashboard shares these histories
   } catch (e) {}
 }

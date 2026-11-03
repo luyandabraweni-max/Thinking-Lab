@@ -478,3 +478,27 @@ ul.helplines li { display: flex; flex-direction: column; align-items: center; ga
 .child-head .av-stage { margin-top: 30px; }
 .tile-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
 .tile-top svg { flex: none; }
+
+/* Progress chart: each result has a pattern as well as a colour, so it reads in greyscale */
+.chart { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.chart > svg { width: 100%; height: auto; max-height: 260px; }
+.chart rect[class^="ch-"]:not([class^="ch-bg"]) { stroke: var(--ink); stroke-width: 1; }
+.ch-alone { fill: var(--ok); }
+.ch-support { fill: url(#chp-support); }
+.ch-notyet { fill: url(#chp-notyet); }
+.ch-open { fill: url(#chp-open); }
+.ch-bg-support { fill: var(--brand-soft); }
+.ch-bg-notyet { fill: var(--gold-soft); }
+.ch-bg-open { fill: var(--sky); }
+.ch-line { stroke: var(--brand); stroke-width: 3; }
+.ch-dot { fill: var(--ink); }
+.ch-grid { stroke: var(--line); stroke-width: 1; }
+.ch-label { fill: var(--muted); font-size: 12px; font-family: var(--font-body); }
+.ch-legend { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.92rem; }
+.ch-legend li { display: flex; align-items: center; gap: 6px; }
+.ch-table summary { cursor: pointer; font-family: var(--font-display); min-height: 44px; display: flex; align-items: center; }
+
+/* School admin */
+.stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.stat { border: 2px solid var(--line); border-radius: var(--radius); padding: 12px 14px; background: var(--bg); display: flex; flex-direction: column; gap: 2px; }
+.stat b { font-family: var(--font-display); font-size: 1.6rem; }

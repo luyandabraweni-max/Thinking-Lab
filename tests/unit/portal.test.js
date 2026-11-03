@@ -128,6 +128,45 @@ describe("reports", () => {
   });
 });
 
+describe("progress chart", () => {
+  it("counts every activity in Monday-to-Sunday weeks", () => {
+    expect(app.run(`[weekStart("2026-11-01"), weekStart("2026-11-02")]`)).toEqual(["2026-10-26", "2026-11-02"]);
+    expect(app.run(`const L = portalLearner("demo-l0"); weeklyCounts(L.rows).reduce((n, w) => n + weekTotal(w), 0) === L.rows.length`)).toBe(true);
+  });
+  it("is described for screen readers and has a table", () => {
+    const html = app.run(`progressChart(portalLearner("demo-l0"))`);
+    expect(html).toContain('role="img"');
+    expect(html).toContain("Show as a table");
+    expect(app.run(`progressChart({ nickname: "x", rows: [] })`)).toContain("after the first session");
+  });
+  it("shows on the parent and specialist pages", () => {
+    app.run(`PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-parent"); parentChild("demo-l1", "progress")`);
+    expect(app.main()).toContain("Activities each week");
+    app.run(`PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-specialist"); specialistLearner("demo-l1", "overview")`);
+    expect(app.main()).toContain("Activities each week");
+  });
+});
+
+describe("school admin", () => {
+  it("sees staff and totals, never a learner's records", () => {
+    app.run(`PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-admin"); adminHome()`);
+    expect(app.main()).toContain("Demo Therapist");
+    expect(app.run(`PORTAL.learners.some(L => canSee(PORTAL.me, L))`)).toBe(false);
+    for (const n of app.run(`PORTAL.learners.map(L => L.nickname)`)) expect(app.main()).not.toContain(n);
+  });
+  it("warns when nobody is the safeguarding lead, and can choose one", () => {
+    app.run(`PORTAL.accounts.find(a => a.id === "demo-specialist").consents.dsl = false; PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-admin"); adminHome()`);
+    expect(app.main()).toContain("No safeguarding lead");
+    app.run(`const b = document.getElementById("dsl-demo-ot"); b.checked = true; b.dispatchEvent(new Event("change"))`);
+    expect(app.run(`PORTAL.accounts.find(a => a.id === "demo-ot").consents.dsl`)).toBe(true);
+  });
+  it("removing staff ends access to school-held learners only", () => {
+    app.run(`PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-admin"); adminHome();
+      document.querySelector('[data-leave="demo-specialist"]').click(); document.getElementById("lvYes").click()`);
+    expect(app.run(`[portalLearner("demo-l2").specialists.includes("demo-specialist"), portalLearner("demo-l0").specialists.includes("demo-specialist")]`)).toEqual([false, true]);
+  });
+});
+
 describe("avatar and motion", () => {
   it("every avatar combination draws a balanced picture", () => {
     const bad = app.run(`const out = [];

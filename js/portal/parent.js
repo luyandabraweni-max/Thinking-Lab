@@ -38,6 +38,8 @@ function parentChild(id, tab) {
     const goals = L.goals || [], notes = (L.notes || []).filter(n => n.shareFamily);
     body = `
         <p>${esc(rep.sections[0].paras[0])}</p>
+        <h2>Activities each week</h2>
+        ${progressChart(L)}
         <h2>What went well</h2>
         ${well.bullets.length ? `<ul class="plain">${well.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : `<p class="muted">${esc(well.paras[0])}</p>`}
         ${explored && explored.bullets.length ? `<h2>What ${esc(L.nickname)} explored</h2><ul class="plain">${explored.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
