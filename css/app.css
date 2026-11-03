@@ -502,3 +502,11 @@ ul.helplines li { display: flex; flex-direction: column; align-items: center; ga
 .stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 .stat { border: 2px solid var(--line); border-radius: var(--radius); padding: 12px 14px; background: var(--bg); display: flex; flex-direction: column; gap: 2px; }
 .stat b { font-family: var(--font-display); font-size: 1.6rem; }
+
+/* 3D robot: drawn over the 2D robot, which shows until it has loaded (and stays if 3D can't run) */
+.av-tap { position: relative; }
+.av-3d { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+.av-3d canvas { display: block; width: 100% !important; height: 100% !important; }
+.av-stage.is3d .av-3d { opacity: 1; }
+.av-stage.is3d .av-tap > svg { visibility: hidden; }
+:root[data-grey] .av-3d canvas { filter: grayscale(1); }

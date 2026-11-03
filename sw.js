@@ -1,5 +1,5 @@
-﻿// 2to.iQ Thinking Lab offline cache. The app is cached on install; each lesson's voice file is cached the first time that lesson is opened. The app stores no learner records.
-const CACHE = "thinking-lab-32cb6d2dbf";
+﻿// 2to.iQ Thinking Lab offline cache. The app is cached on install; each lesson's voice file, and the 3D character files, are cached the first time they are used. The app stores no learner records.
+const CACHE = "thinking-lab-a840a80e37";
 const FILES = [
   "./",
   "index.html",
@@ -84,5 +84,5 @@ self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c =>
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith("thinking-lab-") && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener("fetch", e => {
   const r = e.request; if (r.method !== "GET" || new URL(r.url).origin !== location.origin) return;
-  e.respondWith(caches.match(r, { ignoreSearch: r.mode === "navigate" }).then(hit => hit || (r.mode === "navigate" ? caches.match("index.html") : null)).then(hit => hit || fetch(r).then(res => { if (res.ok && new URL(r.url).pathname.includes("/clips/")) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(r, copy)); } return res; })));
+  e.respondWith(caches.match(r, { ignoreSearch: r.mode === "navigate" }).then(hit => hit || (r.mode === "navigate" ? caches.match("index.html") : null)).then(hit => hit || fetch(r).then(res => { if (res.ok && /\/(clips|vendor|modules|assets)\//.test(new URL(r.url).pathname)) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(r, copy)); } return res; })));
 });

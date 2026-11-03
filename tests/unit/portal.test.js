@@ -176,6 +176,19 @@ describe("avatar and motion", () => {
       } out`);
     expect(bad).toEqual([]);
   });
+  it("the 3D robot falls back to the robot drawing when 3D can't run", () => {
+    app.run(`S.avatar = Object.assign(defaultAvatar(), { base: "robot3d", top: 1, name: "Bolt" }); home()`);
+    expect(app.run(`can3d()`)).toBe(false); // jsdom has no WebGL
+    const stage = app.window.document.querySelector(".hub-hello .av-stage");
+    expect(JSON.parse(stage.querySelector(".av-3d").dataset.colours).top).toBe("#6A86A8");
+    expect(stage.querySelector("svg.av3d")).not.toBeNull();
+    expect(stage.classList.contains("is3d")).toBe(false);
+    app.run(`avatarBuilder()`);
+    expect(app.main()).toContain("3D robot");
+    app.run(`S.avatar = Object.assign(defaultAvatar(), { base: "person3d", skin: 5 }); avatarBuilder()`);
+    expect(app.main()).toContain("Skin tone");
+    expect(app.run(`avatarSvg(S.avatar, 100, "x")`)).toContain(app.run(`shade(AV.skin[5][0], 0.3)`));
+  });
   it("names are cleaned and capped", () => {
     expect(app.run(`cleanAvatarName("<b>Zoë</b>!!")`)).toBe("bZoëb");
     expect(app.run(`cleanAvatarName("A".repeat(40)).length`)).toBe(16);
