@@ -202,6 +202,20 @@ describe("avatar and motion", () => {
     expect(old).toMatchObject({ eyes: "brown", cloth: "jacket", name: "Old" });
     expect(app.run(`fullAvatar({ eyes: "happy", top: 99 })`)).toMatchObject({ eyes: "happy", top: 0 });
   });
+  it("uses the Avatar System's codes, descriptions and Calm screen", () => {
+    expect(app.run(`AV_SETS.every(([, c]) => avatarCode(c) !== null)`)).toBe(true);
+    expect(app.run(`avatarCode(AV_SETS[0][1])`)).toBe("0-3-0-0-0-0-0-0-0-0"); // the engine's own code for its first team character
+    expect(app.run(`const c = avatarCode(AV_SETS[7][1]); avatarCode(avatarFromCode(c)) === c`)).toBe(true);
+    expect(app.run(`avatarCode({ base: "robot" })`)).toBeNull();
+    expect(app.run(`describeAvatar(AV_SETS[7][1])`)).toBe("A child with locs, wearing a jacket, with ear defenders, holding a telescope, smiling calmly.");
+    const busy = app.run(`avatarSvg(AV_SETS[5][1], 100, "x", { calm: false })`), calm = app.run(`avatarSvg(AV_SETS[5][1], 100, "x", { calm: true })`);
+    expect(busy).toContain('opacity="0.35"');
+    expect(calm).not.toContain('opacity="0.35"');
+    app.run(`S.avatar = null; avatarBuilder()`);
+    expect(app.window.document.querySelectorAll("[data-avset]").length).toBe(12);
+    app.run(`document.querySelector('[data-avset="6"]').click()`);
+    expect(app.window.document.getElementById("avName").textContent).toBe("Star"); // a ready-made look keeps the child's name
+  });
   it("names are cleaned and capped", () => {
     expect(app.run(`cleanAvatarName("<b>Zoë</b>!!")`)).toBe("bZoëb");
     expect(app.run(`cleanAvatarName("A".repeat(40)).length`)).toBe(16);

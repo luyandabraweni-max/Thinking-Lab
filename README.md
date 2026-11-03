@@ -68,6 +68,10 @@ Parents and specialists can register, sign in with an emailed code (shown on scr
 - **Specialists** see learners shared with them: progress, goals, notes and reports.
 - **School admins** see their school's staff and totals, and choose the safeguarding lead. They never see an individual learner's records. Real accounts wait for the legal sign-off in the system design.
 
+## Characters
+
+Learners make their own character in My character. The drawings come from the **2to.iQ Avatar System v1.0** (Pholoso Afrika Foundation): the team set and inclusive set are ready-made starting points, and every part can be changed. The app's version (`js/screens/avatar.js`) adds what the engine lists as next steps (afro, bun, long hair, head wrap, hijab, hearing aid, grey hair, a robot), the wave and talking motion, and Calm screen (softer colours, no sparkles). `avatarCode()` and `avatarFromCode()` read and write the engine's short codes, so other 2to.iQ apps can show the same character; options the engine doesn't have yet give no code.
+
 ## 3D character
 
 Learners can pick a **3D person** or a **3D robot** in My character. Both are free CC0 models by [Quaternius](https://quaternius.com) ("Casual_Hoodie" from Ultimate Modular Characters, and "RobotExpressive" by Tomás Laulhé), drawn with [three.js](https://threejs.org). The person takes the learner's skin tone, hair colour and clothes colour. Each idles, turns towards the pointer, and waves when it says its name. The files (about 1.5 MB with one character) download only when someone picks one, then work offline. With No movement or Calm screen on, in Data saver, or without WebGL, the 2D robot drawing is shown instead.

@@ -511,3 +511,9 @@ ul.helplines li { display: flex; flex-direction: column; align-items: center; ga
 .av-stage.is3d .av-3d { opacity: 1; }
 .av-stage.is3d .av-tap > svg { visibility: hidden; }
 :root[data-grey] .av-3d canvas { filter: grayscale(1); }
+
+/* Ready-made characters from the 2to.iQ Avatar System */
+.av-sets { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+.av-set { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px; min-height: 44px; border: 2px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); font: inherit; font-size: 0.8rem; line-height: 1.2; text-align: center; cursor: pointer; }
+.av-set:focus-visible { outline: 3px solid var(--shape-c); outline-offset: 2px; }
+.av-set svg { border-radius: 12%; }

@@ -8,7 +8,8 @@
 // =====================================================================
 
 // ---------- Avatar ----------
-// Illustrated style: bold outlines, big shiny eyes, bright colours (from the 2to.iQ avatar builder v3 "team set" design).
+// Illustrated style from the 2to.iQ Avatar System v1.0 (Pholoso Afrika Foundation): bold outlines, big shiny eyes, bright colours.
+// This version adds the motion hooks, Calm screen and the engine's planned options (afro, bun, long hair, head wrap, hijab, hearing aid).
 const AV = {
   skin: [["#FBD9C0", "Skin tone 1"], ["#F1C09A", "Skin tone 2"], ["#D49A6A", "Skin tone 3"], ["#B57A4E", "Skin tone 4"], ["#8A573A", "Skin tone 5"], ["#6B4430", "Skin tone 6"]],
   hairCol: [["#24203A", "Black"], ["#5A3420", "Dark brown"], ["#8E5A2E", "Brown"], ["#E8572A", "Red"], ["#F07A2A", "Ginger"], ["#F4C542", "Blonde"], ["#7A55B8", "Purple"], ["#9E9E9E", "Grey"]],
@@ -56,7 +57,9 @@ const AV_DRAW = (() => {
   const blob = (a, c) => a.map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r + 2.4}" fill="${OL}"/>`).join("") + a.map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${c}"/>`).join("");
   const arc = (cx, cy, rx, ry, a0, a1, st, r) => { const o = []; for (let a = a0; a <= a1; a += st) { const t = a * Math.PI / 180; o.push([+(cx + rx * Math.cos(t)).toFixed(1), +(cy - ry * Math.sin(t)).toFixed(1), r]); } return o; };
   const HL = (d, c) => `<path d="${d}" stroke="${shade(c, 0.5)}" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>`;
-  const sp = (x, y, s, c = "#FFFFFF") => `<path d="M${x} ${y - s}Q${x} ${y} ${x + s} ${y}Q${x} ${y} ${x} ${y + s}Q${x} ${y} ${x - s} ${y}Q${x} ${y} ${x} ${y - s}Z" fill="${c}" opacity="0.85"/>`;
+  let calm = false; // Calm screen: softer background, no sparkles or glow
+  const glow = (x, y, r, c, o) => calm ? "" : `<circle cx="${x}" cy="${y}" r="${r}" fill="${c}" opacity="${o}"/>`;
+  const sp = (x, y, s, c = "#FFFFFF") => calm ? "" : `<path d="M${x} ${y - s}Q${x} ${y} ${x + s} ${y}Q${x} ${y} ${x} ${y + s}Q${x} ${y} ${x - s} ${y}Q${x} ${y} ${x} ${y - s}Z" fill="${c}" opacity="0.85"/>`;
   const star = (cx, cy, R, r, f) => { const p = []; for (let i = 0; i < 10; i++) { const a = Math.PI / 5 * i - Math.PI / 2, d = i % 2 ? r : R; p.push((cx + d * Math.cos(a)).toFixed(1) + "," + (cy + d * Math.sin(a)).toFixed(1)); } return `<polygon points="${p.join(" ")}" fill="${f}" stroke="${OL}" stroke-width="2" stroke-linejoin="round"/>`; };
   const CAP = "M52 96 Q50 36 100 36 Q150 36 148 96Z", PART = "M54 96 Q52 40 100 40 Q148 40 146 96 Q140 62 100 54 Q60 62 54 96Z";
   // Behind the head
@@ -81,7 +84,7 @@ const AV_DRAW = (() => {
     if (s === "braids" || s === "puffs" || s === "bun" || s === "long") return P(PART, c) + `<path d="M100 41 L100 54" stroke="${shade(c, 0.6)}" stroke-width="1.6"/>` + HL("M66 62 Q78 50 94 47", c) + HL("M106 47 Q122 50 134 62", c);
     if (s === "locs") return P(PART, c) + blob(arc(100, 62, 42, 22, 15, 165, 25, 9), c);
     if (s === "curls") return blob(arc(100, 62, 42, 30, 0, 180, 18, 15), c) + HL("M84 42 Q92 36 102 38", c) + HL("M60 66 Q58 58 62 52", c);
-    if (s === "ponytail") return P("M54 96 Q46 70 56 52 Q50 40 66 42 Q78 30 100 36 Q122 30 136 42 Q152 40 146 56 Q156 72 146 96 Q142 72 124 62 L118 72 L108 60 Q96 74 82 64 L76 74 Q60 72 54 96Z", c) + HL("M74 46 Q90 38 108 40", c) + `<path d="M52 84 Q42 88 46 100 M148 84 Q158 88 154 100" stroke="${c}" stroke-width="3" fill="none" stroke-linecap="round"/>` + C(112, 42, 6, "#7F77DD");
+    if (s === "ponytail") return P("M54 96 Q46 70 56 52 Q50 40 66 42 Q78 30 100 36 Q122 30 136 42 Q152 40 146 56 Q156 72 146 96 Q142 72 124 62 L118 72 L108 60 Q96 74 82 64 L76 74 Q60 72 54 96Z", c) + HL("M74 46 Q90 38 108 40", c) + C(112, 42, 6, "#7F77DD");
     if (s === "afro") return blob(arc(100, 62, 44, 26, 10, 170, 16, 13), c) + HL("M80 40 Q96 32 114 36", c);
     if (s === "doek") return P("M50 94 Q46 30 100 26 Q154 30 150 94 Q142 62 100 58 Q58 62 50 94Z", w) + P("M112 32 Q140 2 158 28 Q142 26 130 42Z", w) + P("M108 34 Q84 6 70 30 Q88 26 98 42Z", shade(w, -0.12)) + C(110, 36, 7, shade(w, -0.12)) + HL("M64 56 Q100 40 136 56", w);
     if (s === "hijab") return P("M52 100 Q50 42 100 42 Q150 42 148 100 Q144 66 100 60 Q56 66 52 100Z", w) + HL("M70 50 Q100 40 130 50", w);
@@ -107,14 +110,14 @@ const AV_DRAW = (() => {
     const H = (x, y) => C(x, y, 8.5, sk);
     const raised = `<path d="M62 172 L42 140" stroke="${OL}" stroke-width="16" stroke-linecap="round"/><path d="M62 172 L42 140" stroke="${sleeve}" stroke-width="11" stroke-linecap="round"/>`;
     if (p === "notebook") return `<g transform="rotate(-6 142 168)"><rect x="116" y="138" width="52" height="62" rx="4" fill="#FFFBEF" stroke="${OL}" stroke-width="2.4"/><g font-family="sans-serif" font-size="11.5"><text x="123" y="154" fill="#2C2C3A">A = 2</text><text x="123" y="168" fill="#E8613C">2 = 8</text><text x="123" y="182" fill="#4CB848">3 = 3</text><text x="123" y="196" fill="#3D7DD8">3 = 5</text></g></g>` + H(166, 170);
-    if (p === "point") return `<g class="av-proparm"><text x="6" y="66" font-size="13" fill="#F3FFB0" font-family="sans-serif" font-weight="500">H−Σ+3</text>${sp(12, 90, 4)}${sp(56, 44, 4)}${sp(22, 40, 3)}${sp(8, 118, 3)}${raised}<circle cx="41" cy="111" r="13" fill="#FFF27A" opacity="0.35"/><rect x="37.5" y="110" width="7" height="22" rx="3.5" fill="${sk}" stroke="${OL}" stroke-width="2"/>${C(42, 136, 8.5, sk)}<circle cx="41" cy="111" r="5" fill="#FFF8B0" opacity="0.9"/></g>`;
+    if (p === "point") return `<g class="av-proparm"><text x="6" y="66" font-size="13" fill="#F3FFB0" font-family="sans-serif" font-weight="500">H−Σ+3</text>${sp(12, 90, 4)}${sp(56, 44, 4)}${sp(22, 40, 3)}${sp(8, 118, 3)}${raised}${glow(41, 111, 13, "#FFF27A", 0.35)}<rect x="37.5" y="110" width="7" height="22" rx="3.5" fill="${sk}" stroke="${OL}" stroke-width="2"/>${C(42, 136, 8.5, sk)}${glow(41, 111, 5, "#FFF8B0", 0.9)}</g>`;
     if (p === "globe") return `<path d="M161 186 L161 196" stroke="${OL}" stroke-width="3"/>` + P("M150 194 h22 v6 h-22z", "#8E5A2E") + C(161, 166, 20, "#5AAEEA") + P("M150 158 q6 -7 12 -2 q2 8 -6 10 q-6 0 -6 -8z", "#4CB848") + P("M164 170 q8 -2 10 4 q-2 8 -8 6 q-4 -4 -2 -10z", "#4CB848") + H(140, 182);
     if (p === "telescope") return `<path d="M162 176 L148 206 M162 176 L178 206" stroke="${OL}" stroke-width="3"/><g transform="rotate(-32 156 160)"><rect x="128" y="153" width="56" height="14" rx="5" fill="#6E7A99" stroke="${OL}" stroke-width="2.2"/><rect x="178" y="149" width="11" height="22" rx="3" fill="#85B7EB" stroke="${OL}" stroke-width="2.2"/></g>` + H(150, 176);
     if (p === "paint") return P("M128 196 Q120 168 146 160 Q174 154 178 176 Q180 190 166 186 Q156 184 156 194 Q156 204 128 196Z", "#F3D9A4") + C(146, 172, 4, "#E24B4A") + C(160, 168, 4, "#378ADD") + C(170, 178, 4, "#F2C230") + C(140, 186, 4, "#4CB848") + `<path d="M152 202 L180 148" stroke="${OL}" stroke-width="6" stroke-linecap="round"/><path d="M152 202 L180 148" stroke="#C98A3E" stroke-width="3" stroke-linecap="round"/>` + C(180, 148, 4, "#8A5CC4") + H(132, 192);
     if (p === "robot") return `<g class="av-proparm"><path d="M31 142 L31 150" stroke="${OL}" stroke-width="2.4"/>` + C(31, 139, 4, "#E24B4A") + `<rect x="14" y="150" width="34" height="27" rx="9" fill="#FFFFFF" stroke="${OL}" stroke-width="2.2"/><rect x="11" y="158" width="4" height="10" rx="2" fill="#E24B4A"/><rect x="47" y="158" width="4" height="10" rx="2" fill="#E24B4A"/><rect x="19" y="156" width="24" height="14" rx="6" fill="#2C2C3A"/><circle cx="26" cy="163" r="3" fill="#5DCAA5"/><circle cx="36" cy="163" r="3" fill="#5DCAA5"/><rect x="18" y="179" width="26" height="24" rx="6" fill="#FFFFFF" stroke="${OL}" stroke-width="2.2"/></g>`;
     if (p === "tablet") return `<g transform="rotate(-10 150 178)"><rect x="126" y="156" width="48" height="40" rx="6" fill="#2C2C3A" stroke="${OL}" stroke-width="2.4"/><rect x="131" y="161" width="38" height="30" rx="3" fill="#E9F7F4"/><circle cx="141" cy="170" r="5" fill="#E8613C"/><polygon points="150,184 158,169 166,184" fill="#F2C230"/><rect x="135" y="179" width="8" height="8" fill="#3D7DD8"/></g>` + H(128, 190);
     if (p === "flasks") return P("M125 152 h8 v14 l10 26 q2 5 -3 5 h-22 q-5 0 -3 -5 l10 -26z", "#FFFFFF") + `<path d="M116 182 L142 182 L145 191 Q146 196 141 196 L117 196 Q112 196 113 191Z" fill="#F9DA5E"/>` + P("M94 164 h8 v8 l12 24 q2 4 -3 4 h-26 q-5 0 -3 -4 l12 -24z", "#FFFFFF") + `<path d="M86 186 L110 186 L113 194 Q114 198 110 198 L86 198 Q82 198 83 194Z" fill="#4FD69C"/>` + P("M57 140 h10 v22 a19 19 0 1 1 -10 0z", "#FFFFFF") + `<path d="M44 182 a18 18 0 0 0 36 0z" fill="#E05BB5"/><circle cx="56" cy="188" r="2" fill="#FFFFFF"/><circle cx="66" cy="192" r="1.5" fill="#FFFFFF"/>` + sp(90, 154, 4) + H(62, 146);
-    if (p === "wand") return `<g class="av-proparm">${sp(34, 48, 5)}${sp(6, 96, 4)}${sp(40, 86, 3)}${raised}<circle cx="17" cy="68" r="18" fill="#FFF59D" opacity="0.35"/><path d="M42 146 L18 74" stroke="${OL}" stroke-width="6" stroke-linecap="round"/><path d="M42 146 L18 74" stroke="#7A4A1E" stroke-width="3" stroke-linecap="round"/>${star(17, 68, 13, 6, "#FAC775")}${C(40, 136, 8.5, sk)}</g>`;
+    if (p === "wand") return `<g class="av-proparm">${sp(34, 48, 5)}${sp(6, 96, 4)}${sp(40, 86, 3)}${raised}${glow(17, 68, 18, "#FFF59D", 0.35)}<path d="M42 146 L18 74" stroke="${OL}" stroke-width="6" stroke-linecap="round"/><path d="M42 146 L18 74" stroke="#7A4A1E" stroke-width="3" stroke-linecap="round"/>${star(17, 68, 13, 6, "#FAC775")}${C(40, 136, 8.5, sk)}</g>`;
     return "";
   }
   const eye = (x, col) => col ? `<ellipse cx="${x}" cy="98" rx="11" ry="13" fill="#FFFFFF" stroke="${OL}" stroke-width="2"/><g class="av-pupils"><circle cx="${x + 1}" cy="100" r="8.5" fill="${col}"/><circle cx="${x + 1}" cy="100" r="4" fill="#0D0D1A"/><circle cx="${x + 4}" cy="96" r="3.2" fill="#FFFFFF"/><circle cx="${x - 2}" cy="104" r="1.5" fill="#FFFFFF"/></g><path d="M${x - 11} 94 Q${x} 82 ${x + 11} 94" stroke="${OL}" stroke-width="3" fill="none" stroke-linecap="round"/>`
@@ -152,19 +155,65 @@ const AV_DRAW = (() => {
           <g class="av-mouth">${mouthOf(a.mouth)}</g>${mouthOpen}${a.extra === "glasses" ? extra("glasses") : ""}</g>
         ${front(a.hair, hc, wrap)}${a.extra === "glasses" ? "" : extra(a.extra)}</g>${prop(a.prop, sk, sleeve)}</g>`;
   }
-  const sparkles = sp(26, 24, 5) + sp(180, 24, 5) + sp(184, 110, 4);
-  return { figure, sparkles };
+  // The whole picture inside the frame. isCalm: Calm screen (softer background, no sparkles or glow).
+  function scene(a, full, isCalm) {
+    calm = !!isCalm;
+    const bg = AV.bg[a.bg][0], out = `<rect width="200" height="200" fill="${calm ? shade(bg, 0.55) : bg}"/>` + sp(26, 24, 5) + sp(180, 24, 5) + sp(184, 110, 4) + figure(a, full);
+    calm = false;
+    return out;
+  }
+  return { scene };
 })();
 
 // opts.full adds the waving arm; opts.decorative hides the drawing from screen readers (its button carries the label).
 function avatarSvg(a, size, label, opts) {
   a = fullAvatar(a); size = size || 160; opts = opts || {};
-  const id = "av" + (++avSeq), name = label || `${a.name}, your character`;
+  const id = "av" + (++avSeq), name = label || `${a.name}, your character. ${describeAvatar(a)}`;
+  const calm = opts.calm != null ? opts.calm : !!(typeof S !== "undefined" && S.my && S.my.calm);
   return `<svg class="av3d${opts.full ? " av-full" : ""}" width="${size}" height="${size}" viewBox="0 0 200 200" ${opts.decorative ? 'aria-hidden="true" focusable="false"' : `role="img" aria-label="${esc(name)}"`}>`
     + `<defs><clipPath id="${id}c"><rect x="2.5" y="2.5" width="195" height="195" rx="22"/></clipPath></defs>`
-    + `<g clip-path="url(#${id}c)"><rect width="200" height="200" fill="${AV.bg[a.bg][0]}"/>${AV_DRAW.sparkles}${AV_DRAW.figure(a, opts.full)}</g>`
+    + `<g clip-path="url(#${id}c)">${AV_DRAW.scene(a, opts.full, calm)}</g>`
     + `<rect x="2.5" y="2.5" width="195" height="195" rx="22" fill="none" stroke="#FFF3DC" stroke-width="5"/></svg>`;
 }
+// Plain-language description for screen readers.
+function describeAvatar(a) {
+  a = fullAvatar(a);
+  const label = (k, v) => (AV[k].find(x => x[0] === v) || [, v])[1].toLowerCase();
+  if (a.base === "robot" || a.base === "robot3d") return `A robot wearing ${label("cloth", a.cloth)}${a.prop === "none" ? "" : `, holding a ${label("prop", a.prop)}`}.`;
+  const hair = a.hair === "none" ? "no hair" : a.hair === "hijab" ? "a hijab" : a.hair === "doek" ? "a head wrap" : label("hair", a.hair);
+  const parts = [`A child with ${hair}`, `wearing a ${label("cloth", a.cloth)}`];
+  if (a.extra !== "none") parts.push(`with ${label("extra", a.extra)}`);
+  if (a.prop !== "none") parts.push(`holding a ${label("prop", a.prop)}`);
+  return parts.join(", ") + (a.mouth === "grin" ? ", smiling widely." : a.mouth === "calm" ? "." : ", smiling calmly.");
+}
+// The 2to.iQ Avatar System's two ready-made sets, as starting points in the builder.
+const AV_SETS = [
+  ["Number explorer", { skin: 0, hairCol: 3, hair: "pigtails", top: 0, cloth: "collar", bg: 0, extra: "none", mouth: "smile", prop: "notebook", eyes: "blue" }],
+  ["Idea spark", { skin: 0, hairCol: 5, hair: "ponytail", top: 1, cloth: "overalls", bg: 1, extra: "none", mouth: "smile", prop: "point", eyes: "blue" }],
+  ["Robot builder", { skin: 3, hairCol: 0, hair: "braids", top: 2, cloth: "jacket", bg: 2, extra: "none", mouth: "smile", prop: "robot", eyes: "brown" }],
+  ["Sky watcher", { skin: 0, hairCol: 1, hair: "short", top: 3, cloth: "tee", bg: 3, extra: "none", mouth: "smile", prop: "telescope", eyes: "brown" }],
+  ["Lab scientist", { skin: 0, hairCol: 6, hair: "bob", top: 6, cloth: "labcoat", bg: 4, extra: "glasses", mouth: "smile", prop: "flasks", eyes: "blue" }],
+  ["Story wizard", { skin: 0, hairCol: 4, hair: "curls", top: 4, cloth: "cape", bg: 5, extra: "none", mouth: "grin", prop: "wand", eyes: "blue" }],
+  ["World finder", { skin: 5, hairCol: 0, hair: "puffs", top: 3, cloth: "tee", bg: 4, extra: "none", mouth: "grin", prop: "globe", eyes: "brown" }],
+  ["Star gazer", { skin: 4, hairCol: 0, hair: "locs", top: 2, cloth: "jacket", bg: 2, extra: "defenders", mouth: "smile", prop: "telescope", eyes: "brown" }],
+  ["Colour maker", { skin: 1, hairCol: 0, hair: "bob", top: 1, cloth: "overalls", bg: 5, extra: "glasses", mouth: "smile", prop: "paint", eyes: "blue" }],
+  ["Robot coder", { skin: 2, hairCol: 1, hair: "short", top: 4, cloth: "labcoat", bg: 3, extra: "none", mouth: "grin", prop: "robot", eyes: "brown" }],
+  ["Shape solver", { skin: 0, hairCol: 5, hair: "pigtails", top: 5, cloth: "collar", bg: 1, extra: "none", mouth: "smile", prop: "tablet", eyes: "blue" }],
+  ["Spell weaver", { skin: 3, hairCol: 0, hair: "braids", top: 6, cloth: "cape", bg: 0, extra: "none", mouth: "grin", prop: "wand", eyes: "brown" }]];
+// Codes in the Avatar System's format ("skin-hair-outfit-bg-eye-style-cloth-acc-mouth-prop"), so other 2to.iQ apps
+// can show the same character. Options the engine doesn't have yet (robot, head wrap, hijab, hearing aid...) give null.
+const AV_ENGINE = { style: ["pigtails", "ponytail", "braids", "short", "bob", "curls", "puffs", "locs"], cloth: ["collar", "overalls", "jacket", "tee", "labcoat", "cape"],
+  acc: ["none", "glasses", "defenders"], mouth: ["smile", "grin"], prop: ["notebook", "point", "robot", "telescope", "flasks", "wand", "globe", "paint", "tablet", "none"], eye: ["blue", "brown"] };
+function avatarCode(a) {
+  a = fullAvatar(a);
+  const n = [a.skin, a.hairCol, a.top, a.bg, AV_ENGINE.eye.indexOf(a.eyes), AV_ENGINE.style.indexOf(a.hair), AV_ENGINE.cloth.indexOf(a.cloth), AV_ENGINE.acc.indexOf(a.extra), AV_ENGINE.mouth.indexOf(a.mouth), AV_ENGINE.prop.indexOf(a.prop)];
+  return a.base === "person" && a.hairCol < 7 && n.every(x => x >= 0) ? n.join("-") : null;
+}
+function avatarFromCode(code, name) {
+  const n = String(code).split("-").map(Number), at = (k, i) => AV_ENGINE[k][n[i]];
+  return fullAvatar({ base: "person", skin: n[0], hairCol: n[1], top: n[2], bg: n[3], eyes: at("eye", 4), hair: at("style", 5), cloth: at("cloth", 6), extra: at("acc", 7), mouth: at("mouth", 8), prop: at("prop", 9), name: name || defaultAvatar().name });
+}
+
 // A tappable avatar with a speech bubble. Call wireAvatarStage once per screen on the element around it.
 function avatarStage(a, size, tapLabel) {
   a = a && fullAvatar(a);
@@ -224,8 +273,10 @@ function avatarBuilder(after) {
       <input id="avNameInput" class="av-name-input" type="text" maxlength="${AV_NAME_MAX}" autocomplete="off" spellcheck="false" autocapitalize="words" value="${esc(a.name)}" aria-describedby="avNameNote">
       <p class="note" id="avNameNote">${W("Make up a name. Don't use your real full name.", "Use a nickname, not your full real name.")}</p>
       <div class="choices av-choices av-namechips">${AV.names.map(n => `<button class="choice" data-avname="${n}" aria-pressed="${a.name === n}"><span class="lbl">${n}</span></button>`).join("")}</div></div>`;
+  const setsHtml = () => `<div><p class="eyebrow">Start from a character</p><div class="av-sets">${AV_SETS.map(([t, c], i) => `<button class="av-set" type="button" data-avset="${i}" aria-label="${esc(t)}: ${esc(describeAvatar(c))}">${avatarSvg(c, 64, "", { decorative: true })}<span>${esc(t)}</span></button>`).join("")}</div></div>`;
   const optionsHtml = () => `
       ${nameGroup()}
+      ${setsHtml()}
       ${group("base", "Character", [["person", "Person"], ["robot", "Robot"], ["person3d", "3D person"], ["robot3d", "3D robot"]])}
       ${AV_3D[a.base] ? `<p class="note">${W("Your 3D character moves and waves.", "Your 3D character moves, waves and turns to follow you.")} It needs a bit more data the first time. With No movement or Calm screen on, or on phones that can't show 3D, it shows as a drawing.${a.base === "person3d" ? " The 3D person has one hairstyle; your hair choice shows in the drawing." : ""}</p>` : ""}
       ${a.base === "person" || a.base === "person3d" ? group("skin", "Skin tone", AV.skin, true) + group("hair", "Hair or head covering", AV.hair) + (["doek", "hijab", "none"].includes(a.hair) ? "" : group("hairCol", "Hair colour", AV.hairCol, true)) + group("eyes", "Eyes", AV.eyes) + group("extra", "Extras", AV.extra) + group("mouth", "Expression", AV.mouth) : ""}
@@ -246,7 +297,7 @@ function avatarBuilder(after) {
   const refreshOptions = keep => {
     const box = document.getElementById("avOptions");
     box.innerHTML = optionsHtml(); wireOptions(box);
-    if (keep) { const again = box.querySelector(`[data-av="${keep}"], [data-avname="${keep}"]`); if (again) { again.focus({ preventScroll: true }); again.classList.add("pop"); } }
+    if (keep) { const again = box.querySelector(`[data-av="${keep}"], [data-avname="${keep}"], [data-avset="${keep}"]`); if (again) { again.focus({ preventScroll: true }); again.classList.add("pop"); } }
   };
   const setName = v => {
     a.name = cleanAvatarName(v);
@@ -262,6 +313,10 @@ function avatarBuilder(after) {
       refreshPreview(true); refreshOptions(e.currentTarget.dataset.av);
     }));
     box.querySelectorAll("[data-avname]").forEach(b => b.addEventListener("click", e => { setName(e.currentTarget.dataset.avname); avatarSayHello(card, a); }));
+    box.querySelectorAll("[data-avset]").forEach(b => b.addEventListener("click", e => {
+      Object.assign(a, { base: "person" }, AV_SETS[+e.currentTarget.dataset.avset][1]); // keeps the name
+      refreshPreview(true); refreshOptions(e.currentTarget.dataset.avset);
+    }));
     const input = box.querySelector("#avNameInput");
     input.addEventListener("input", () => setName(input.value));
     input.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); setName(input.value); avatarSayHello(card, a); } });
