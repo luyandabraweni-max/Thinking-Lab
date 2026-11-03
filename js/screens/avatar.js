@@ -109,8 +109,8 @@ const AV_DRAW = (() => {
   function prop(p, sk, sleeve) {
     const H = (x, y) => C(x, y, 8.5, sk);
     const raised = `<path d="M62 172 L42 140" stroke="${OL}" stroke-width="16" stroke-linecap="round"/><path d="M62 172 L42 140" stroke="${sleeve}" stroke-width="11" stroke-linecap="round"/>`;
-    if (p === "notebook") return `<g transform="rotate(-6 142 168)"><rect x="116" y="138" width="52" height="62" rx="4" fill="#FFFBEF" stroke="${OL}" stroke-width="2.4"/><g font-family="sans-serif" font-size="11.5"><text x="123" y="154" fill="#2C2C3A">A = 2</text><text x="123" y="168" fill="#E8613C">2 = 8</text><text x="123" y="182" fill="#4CB848">3 = 3</text><text x="123" y="196" fill="#3D7DD8">3 = 5</text></g></g>` + H(166, 170);
-    if (p === "point") return `<g class="av-proparm"><text x="6" y="66" font-size="13" fill="#F3FFB0" font-family="sans-serif" font-weight="500">H−Σ+3</text>${sp(12, 90, 4)}${sp(56, 44, 4)}${sp(22, 40, 3)}${sp(8, 118, 3)}${raised}${glow(41, 111, 13, "#FFF27A", 0.35)}<rect x="37.5" y="110" width="7" height="22" rx="3.5" fill="${sk}" stroke="${OL}" stroke-width="2"/>${C(42, 136, 8.5, sk)}${glow(41, 111, 5, "#FFF8B0", 0.9)}</g>`;
+    if (p === "notebook") return `<g transform="rotate(-6 142 168)"><rect x="116" y="138" width="52" height="62" rx="4" fill="#FFFBEF" stroke="${OL}" stroke-width="2.4"/><g font-family="sans-serif" font-size="11.5"><text x="121" y="154" fill="#2C2C3A">1+1=2</text><text x="121" y="168" fill="#C2410C">2+3=5</text><text x="121" y="182" fill="#2E7D32">3×2=6</text><text x="121" y="196" fill="#1F5FB8">8−3=5</text></g></g>` + H(166, 170);
+    if (p === "point") return `<g class="av-proparm"><text x="6" y="66" font-size="13" fill="#F3FFB0" font-family="sans-serif" font-weight="500">1+2=3</text>${sp(12, 90, 4)}${sp(56, 44, 4)}${sp(22, 40, 3)}${sp(8, 118, 3)}${raised}${glow(41, 111, 13, "#FFF27A", 0.35)}<rect x="37.5" y="110" width="7" height="22" rx="3.5" fill="${sk}" stroke="${OL}" stroke-width="2"/>${C(42, 136, 8.5, sk)}${glow(41, 111, 5, "#FFF8B0", 0.9)}</g>`;
     if (p === "globe") return `<path d="M161 186 L161 196" stroke="${OL}" stroke-width="3"/>` + P("M150 194 h22 v6 h-22z", "#8E5A2E") + C(161, 166, 20, "#5AAEEA") + P("M150 158 q6 -7 12 -2 q2 8 -6 10 q-6 0 -6 -8z", "#4CB848") + P("M164 170 q8 -2 10 4 q-2 8 -8 6 q-4 -4 -2 -10z", "#4CB848") + H(140, 182);
     if (p === "telescope") return `<path d="M162 176 L148 206 M162 176 L178 206" stroke="${OL}" stroke-width="3"/><g transform="rotate(-32 156 160)"><rect x="128" y="153" width="56" height="14" rx="5" fill="#6E7A99" stroke="${OL}" stroke-width="2.2"/><rect x="178" y="149" width="11" height="22" rx="3" fill="#85B7EB" stroke="${OL}" stroke-width="2.2"/></g>` + H(150, 176);
     if (p === "paint") return P("M128 196 Q120 168 146 160 Q174 154 178 176 Q180 190 166 186 Q156 184 156 194 Q156 204 128 196Z", "#F3D9A4") + C(146, 172, 4, "#E24B4A") + C(160, 168, 4, "#378ADD") + C(170, 178, 4, "#F2C230") + C(140, 186, 4, "#4CB848") + `<path d="M152 202 L180 148" stroke="${OL}" stroke-width="6" stroke-linecap="round"/><path d="M152 202 L180 148" stroke="#C98A3E" stroke-width="3" stroke-linecap="round"/>` + C(180, 148, 4, "#8A5CC4") + H(132, 192);
@@ -219,7 +219,7 @@ function avatarStage(a, size, tapLabel) {
   a = a && fullAvatar(a);
   const kind = a && AV_3D[a.base], colours = kind && JSON.stringify({ top: AV.top[a.top][0], skin: AV.skin[a.skin][0], hair: AV.hairCol[a.hairCol][0] });
   const three = kind ? `<span class="av-3d" aria-hidden="true" data-kind="${kind}" data-colours='${colours}' style="background:${AV.bg[a.bg][0]}"></span>` : "";
-  return `<div class="av-stage"><button class="av-tap" type="button" aria-label="${esc(tapLabel)}">${avatarSvg(a, size, "", { full: true, decorative: true })}${three}</button><p class="av-bubble" role="status" aria-live="polite"></p></div>`;
+  return `<div class="av-stage"><button class="av-tap" type="button"><span class="sr av-tap-label">${esc(tapLabel)}</span>${avatarSvg(a, size, "", { full: true, decorative: true })}${three}</button><p class="av-bubble" role="status" aria-live="polite"></p></div>`;
 }
 // Swap in the 3D character once it has loaded. If it can't load, the drawing simply stays.
 let avatar3d = null;
@@ -273,7 +273,7 @@ function avatarBuilder(after) {
       <input id="avNameInput" class="av-name-input" type="text" maxlength="${AV_NAME_MAX}" autocomplete="off" spellcheck="false" autocapitalize="words" value="${esc(a.name)}" aria-describedby="avNameNote">
       <p class="note" id="avNameNote">${W("Make up a name. Don't use your real full name.", "Use a nickname, not your full real name.")}</p>
       <div class="choices av-choices av-namechips">${AV.names.map(n => `<button class="choice" data-avname="${n}" aria-pressed="${a.name === n}"><span class="lbl">${n}</span></button>`).join("")}</div></div>`;
-  const setsHtml = () => `<div><p class="eyebrow">Start from a character</p><div class="av-sets">${AV_SETS.map(([t, c], i) => `<button class="av-set" type="button" data-avset="${i}" aria-label="${esc(t)}: ${esc(describeAvatar(c))}">${avatarSvg(c, 64, "", { decorative: true })}<span>${esc(t)}</span></button>`).join("")}</div></div>`;
+  const setsHtml = () => `<div><p class="eyebrow">Start from a character</p><div class="av-sets">${AV_SETS.map(([t, c], i) => `<button class="av-set" type="button" data-avset="${i}">${avatarSvg(c, 64, "", { decorative: true })}<span>${esc(t)}</span><span class="sr">: ${esc(describeAvatar(c))}</span></button>`).join("")}</div></div>`;
   const optionsHtml = () => `
       ${nameGroup()}
       ${setsHtml()}
@@ -302,7 +302,7 @@ function avatarBuilder(after) {
   const setName = v => {
     a.name = cleanAvatarName(v);
     document.getElementById("avName").textContent = shownName();
-    const tap = card.querySelector(".av-tap"); if (tap) tap.setAttribute("aria-label", `Wave and say hello, ${shownName()}`);
+    const tap = card.querySelector(".av-tap-label"); if (tap) tap.textContent = `Wave and say hello, ${shownName()}`;
     card.querySelectorAll("[data-avname]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.avname === a.name)));
     const input = document.getElementById("avNameInput"); if (input && input.value !== a.name) input.value = a.name; // drops characters that aren't allowed
   };
