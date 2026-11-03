@@ -309,7 +309,8 @@ function accountPage() {
 function startPortalSession(L) {
   Object.assign(S, { code: L.nickname, cohort: L.cohort, band: L.band, answer: L.answer, demoLearner: L.demoIndex != null ? L.demoIndex : null, portalLearner: L.id,
     avatar: L.avatar ? Object.assign({}, L.avatar) : null, my: Object.assign(JSON.parse(JSON.stringify(MY_DEFAULTS)), L.my || {}), passport: L.passport ? JSON.parse(JSON.stringify(L.passport)) : null,
-    started: new Date(), need: null, played: [], learned: [], badges: [], obs: [], voice: [], battery: [], concerns: [], plan: null, planStep: 0, welcome: null }, L.display || {});
+    started: new Date(), need: null, played: [], learned: [], badges: [], obs: [], voice: [], battery: [], concerns: [], plan: null, planStep: 0, welcome: null,
+    grade: L.learnGrade != null ? L.learnGrade : S.grade, levels: Object.assign({}, L.learnLevels || {}) }, L.display || {});
   applySettings(); assent();
 }
 function portalAfterSession(id, added) {
@@ -329,11 +330,12 @@ function syncPortalLearner() {
   if (S.passport) L.passport = JSON.parse(JSON.stringify(S.passport));
   L.my = JSON.parse(JSON.stringify(S.my));
   L.display = {}; DISPLAY_KEYS.forEach(k => { L.display[k] = S[k]; });
+  L.learnGrade = S.grade; L.learnLevels = Object.assign({}, S.levels || {}); // usual level and per-area levels
   savePortal();
 }
 function describePrefs(L) {
   const m = L.my || {}, d = L.display || {}, out = [];
-  if (m.grey) out.push("greyscale"); if (m.calm) out.push("calm screen"); if (m.plain) out.push("plain words"); if (m.spacing) out.push("extra letter spacing"); if (m.ruler) out.push("reading ruler");
+  if (m.grey) out.push("grey screen"); if (m.palette && m.palette !== "standard") out.push(PALETTES[m.palette].toLowerCase()); if (m.calm) out.push("calm screen"); if (m.plain) out.push("plain words"); if (m.spacing) out.push("extra letter spacing"); if (m.ruler) out.push("reading ruler");
   if (m.how === "listen" || d.autoRead) out.push("read aloud"); if (m.how === "pictures") out.push("pictures"); if (m.scan) out.push("switch scanning");
   if (d.motion) out.push("no movement"); if (d.contrast) out.push("stronger outlines"); if (d.textSize > 1) out.push("larger text"); if (d.quiet) out.push("sound off"); if (d.theme === "dark") out.push("dark screen");
   return out.join(", ");

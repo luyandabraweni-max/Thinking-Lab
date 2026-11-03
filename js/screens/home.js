@@ -33,7 +33,7 @@ function home() {
         </div>
         <div class="card"><h2>My plan today</h2>${planHtml()}</div>
         <div class="grid">
-          <button class="tile" id="hLearn"><span class="pill">${S.learned.length} done</span><span class="t-name">Learn</span><span class="t-cat">${esc([...new Set(UNITS.filter(u => cohortGrades().includes(u.grade)).map(u => u.subject))].slice(0, 4).join(", "))}</span><span class="t-dom">${esc(cohortGrades().map(gradeName).join(", "))}</span></button>
+          <button class="tile" id="hLearn"><span class="pill">${S.learned.length} done</span><span class="t-name">Learn</span><span class="t-cat">${esc([...new Set(myUnits().map(u => u.subject))].slice(0, 4).join(", "))}</span><span class="t-dom">${esc([...new Set(myUnits().map(u => u.grade))].sort((a, b) => a - b).map(gradeName).join(", "))}</span></button>
           <button class="tile" id="hSkills"><span class="pill">${S.badges.length} badge${S.badges.length === 1 ? "" : "s"}</span><span class="t-name">Skills</span><span class="t-cat">Hands-on projects: cooking, coding, business, sport and more</span><span class="t-dom">${esc(SKILL_LEVELS[S.cohort] || "")}</span></button>
           <button class="tile" id="hLab"><span class="pill">${S.played.length} done</span><span class="t-name">Thinking Lab</span><span class="t-cat">${EXERCISES.length} thinking ${gamesWord()}</span><span class="t-dom">All four domains</span></button>
           <button class="tile" id="hMine"><span class="pill">${S.avatar ? "Change" : "New"}</span><span class="t-name">My character</span><span class="t-cat">${W("Make it look how you like", "Design how you look here")}</span></button>

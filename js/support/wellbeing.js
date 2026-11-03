@@ -48,10 +48,31 @@ function passportPage(i) {
   };
   draw();
 }
+// Screen and level settings travel with the passport, so the next adult or device can set them up the same way
+function screenSettings() {
+  const m = S.my, out = [];
+  if (m.grey) out.push("Grey screen, no colours");
+  if (m.palette && m.palette !== "standard") out.push(PALETTES[m.palette]);
+  if (S.contrast) out.push("Stronger outlines");
+  if (m.calm) out.push("Calm screen");
+  if (S.motion) out.push("No movement");
+  if (S.quiet) out.push("Sound off");
+  if (m.plain) out.push("Plain words");
+  if (m.spacing) out.push("More space between letters");
+  if (m.ruler) out.push("Reading ruler");
+  if (m.scan) out.push(`Switch scanning (${m.scanSpeed})`);
+  if (S.textSize > 1) out.push(S.textSize >= 1.3 ? "Largest text" : "Larger text");
+  if (S.font === "lexend") out.push("Wide, easy-reading letters");
+  if (S.theme !== "system") out.push(S.theme === "dark" ? "Dark screen" : "Light screen");
+  out.push(`Learn level: ${gradeName(curGrade())}`);
+  Object.entries(S.levels).forEach(([a, g]) => out.push(`${AREAS[a][0]}: ${gradeName(g)}`));
+  return out;
+}
 function passportHtml() {
   const P2 = S.passport || {};
+  const screen = `<div class="pp-sec"><h2 class="pp-h">${icon("🖥️")} How my screen and lessons should look</h2><ul class="plain">${screenSettings().map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>`;
   return `<div class="passport"><div class="passport-head">${avatarSvg(S.avatar, 88, S.avatar ? S.avatar.name : "Learner")}<div><p class="eyebrow">My Support Passport</p><h1 class="as-h2">${S.avatar ? esc(S.avatar.name) : "Learner " + esc(S.code)}</h1><p class="muted">What helps me learn. Made by me.</p></div></div>
-      ${PASS.map(([key, title, em]) => (P2[key] || []).length ? `<div class="pp-sec"><h2 class="pp-h">${icon(em)} ${esc(title)}</h2><ul class="plain">${P2[key].map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "").join("") || '<p class="muted">Nothing chosen yet.</p>'}</div>${S.badges.length ? `<div class="pp-sec"><h2 class="pp-h">${icon("🏅")} My skill badges</h2>${badgeList()}</div>` : ""}`;
+      ${PASS.map(([key, title, em]) => (P2[key] || []).length ? `<div class="pp-sec"><h2 class="pp-h">${icon(em)} ${esc(title)}</h2><ul class="plain">${P2[key].map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "").join("") || '<p class="muted">Nothing chosen yet.</p>'}${screen}</div>${S.badges.length ? `<div class="pp-sec"><h2 class="pp-h">${icon("🏅")} My skill badges</h2>${badgeList()}</div>` : ""}`;
 }
 function passportView() {
   planDone("passport"); logVoice("passport", "made or updated");
@@ -59,7 +80,7 @@ function passportView() {
       <p class="note">This passport is kept only for this session. Print it to keep a copy.</p>
       <div class="row"><button class="btn primary" id="ppPrint">Print my passport</button><button class="btn" id="ppEdit">Change it</button><button class="btn" id="ppHome" data-focus>Back to home</button></div></section>`);
   const P2 = S.passport || {};
-  setSayLines(["My Support Passport."].concat(...PASS.map(([key, title]) => (P2[key] || []).length ? [title].concat(P2[key]) : [])));
+  setSayLines(["My Support Passport."].concat(...PASS.map(([key, title]) => (P2[key] || []).length ? [title].concat(P2[key]) : []), ["How my screen and lessons should look."], screenSettings()));
   on("#ppPrint", () => window.print()); on("#ppEdit", () => passportPage(0)); on("#ppHome", home);
 }
 

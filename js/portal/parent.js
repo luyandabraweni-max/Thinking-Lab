@@ -106,7 +106,7 @@ function parentChild(id, tab) {
 function makeShareCode() { const a = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; let c = ""; for (let i = 0; i < 6; i++) c += a[Math.floor(Math.random() * a.length)]; return c.slice(0, 3) + "-" + c.slice(3); }
 
 // Screen and sound settings a parent can set for every session (stored on the learner, like My way).
-const PREF_TOGGLES = [["grey", "Greyscale (no colours)"], ["calm", "Calm screen"], ["plain", "Plain words"], ["autoRead", "Read every screen aloud"], ["quiet", "Sound off"], ["motion", "No movement"], ["contrast", "Stronger outlines"], ["large", "Larger text"]];
+const PREF_TOGGLES = [["grey", "Grey screen (no colours)"], ["calm", "Calm screen"], ["plain", "Plain words"], ["autoRead", "Read every screen aloud"], ["quiet", "Sound off"], ["motion", "No movement"], ["contrast", "Stronger outlines"], ["large", "Larger text"]];
 const MY_PREFS = ["grey", "calm", "plain"];
 function prefOn(L, k) { const m = L.my || {}, d = L.display || {}; return k === "large" ? d.textSize > 1 : MY_PREFS.includes(k) ? !!m[k] : !!d[k]; }
 function setPref(L, k, on) {

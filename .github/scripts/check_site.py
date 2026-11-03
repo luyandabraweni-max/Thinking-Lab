@@ -55,7 +55,7 @@ for f in assets:
 inline = len(re.findall(r"<script(?![^>]*\bsrc=)[^>]*>", html))
 if inline:
     fail(f"index.html has {inline} inline <script> block(s); move them into js/ (the CSP blocks inline scripts)"); bad += 1
-unused = sorted(set(glob.glob("js/**/*.js", recursive=True)) - set(assets))
+unused = sorted(set(f.replace(os.sep, "/") for f in glob.glob("js/**/*.js", recursive=True)) - set(assets))
 for f in unused:
     fail(f"{f} is never loaded by index.html"); bad += 1
 if not bad:

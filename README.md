@@ -43,12 +43,17 @@ _headers            Security headers for Netlify
 
 ## Tests
 
+The site has no build step; Node is only needed for the tests.
+
 ```bash
-node tests/run-tests.js /tmp/reports                       # Node
-python3 .github/scripts/check_reports.py /tmp/reports      # checks the sample PDF and Word files
+npm install
+npm run test:unit   # Vitest: app logic and every lesson's content, run in jsdom
+npm run test:e2e    # Playwright: axe accessibility checks on key screens in every display mode, phone and laptop sizes, and offline mode
 ```
 
-The tests load every script in `index.html` order with a stand-in for the browser, then check lessons, the avatar, motion and greyscale settings, safeguarding, portal access rules, saved demo data and report files. CI runs them on every push and pull request.
+Locally the browser tests use the installed Microsoft Edge (set `PW_CHANNEL=chrome` for Chrome, or run `npx playwright install chromium`). CI runs both on every push and pull request, and nothing deploys unless they pass. When you add a screen or a display mode, add it to `tests/e2e/display-modes.spec.js`.
+
+The unit tests also write sample PDF and Word reports when `REPORT_DIR` is set; `python3 .github/scripts/check_reports.py <folder>` checks they are valid files. CI does both.
 
 ## Portal (demo)
 
