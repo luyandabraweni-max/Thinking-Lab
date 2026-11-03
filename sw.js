@@ -1,5 +1,5 @@
 ﻿// 2to.iQ Thinking Lab offline cache. The app is cached on install; each lesson's voice file, and the 3D character files, are cached the first time they are used. The app stores no learner records.
-const CACHE = "thinking-lab-ac7d43ec2f";
+const CACHE = "thinking-lab-a840a80e37";
 const FILES = [
   "./",
   "index.html",

@@ -20,7 +20,8 @@ const AV = {
   names: ["Star", "River", "Comet", "Sunny", "Pebble", "Nova", "Echo", "Maple", "Breeze", "Ember"]
 };
 const AV_NAME_MAX = 16;
-// The 3D robot needs WebGL and movement allowed; otherwise (and while it loads) the 2D robot drawing stands in.
+// 3D characters need WebGL and movement allowed; otherwise (and while they load) the matching 2D drawing stands in.
+const AV_3D = { robot3d: "robot", person3d: "person" };
 const can3d = () => typeof motionAllowed === "function" && motionAllowed() && !!window.WebGLRenderingContext
   && !(navigator.connection && navigator.connection.saveData) && !document.documentElement.hasAttribute("data-calm");
 function defaultAvatar() { return { base: "person", skin: 2, hair: "curls", hairCol: 0, eyes: "round", mouth: "smile", extra: "none", top: 0, bg: 0, name: "Star" }; }
@@ -98,10 +99,11 @@ function avatarSvg(a, size, label, opts) {
 }
 // A tappable avatar with a speech bubble. Call wireAvatarStage once per screen on the element around it.
 function avatarStage(a, size, tapLabel) {
-  const three = a && a.base === "robot3d" ? `<span class="av-3d" aria-hidden="true" data-colour="${AV.top[a.top][0]}" style="background:${AV.bg[a.bg][0]}"></span>` : "";
+  const kind = a && AV_3D[a.base], colours = kind && JSON.stringify({ top: AV.top[a.top][0], skin: AV.skin[a.skin][0], hair: AV.hairCol[a.hairCol][0] });
+  const three = kind ? `<span class="av-3d" aria-hidden="true" data-kind="${kind}" data-colours='${colours}' style="background:${AV.bg[a.bg][0]}"></span>` : "";
   return `<div class="av-stage"><button class="av-tap" type="button" aria-label="${esc(tapLabel)}">${avatarSvg(a, size, "", { full: true, decorative: true })}${three}</button><p class="av-bubble" role="status" aria-live="polite"></p></div>`;
 }
-// Swap in the 3D robot once it has loaded. If it can't load, the drawing simply stays.
+// Swap in the 3D character once it has loaded. If it can't load, the drawing simply stays.
 let avatar3d = null;
 function bring3d(scope) {
   scope.querySelectorAll(".av-3d:not([data-on])").forEach(box => {
@@ -109,7 +111,7 @@ function bring3d(scope) {
     if (!can3d()) return;
     const st = box.closest(".av-stage");
     (avatar3d || (avatar3d = import(new URL("modules/avatar3d.js", document.baseURI).href)))
-      .then(m => m.mount(box, box.dataset.colour))
+      .then(m => m.mount(box, box.dataset.kind, JSON.parse(box.dataset.colours)))
       .then(r => { if (r) { st._av3d = r; st.classList.add("is3d"); } })
       .catch(() => { avatar3d = null; });
   });
@@ -155,11 +157,11 @@ function avatarBuilder(after) {
       <div class="choices av-choices av-namechips">${AV.names.map(n => `<button class="choice" data-avname="${n}" aria-pressed="${a.name === n}"><span class="lbl">${n}</span></button>`).join("")}</div></div>`;
   const optionsHtml = () => `
       ${nameGroup()}
-      ${group("base", "Character", [["person", "Person"], ["robot", "Robot"], ["robot3d", "3D robot"]])}
-      ${a.base === "robot3d" ? `<p class="note">${W("The 3D robot moves and waves.", "The 3D robot moves, waves and turns to follow you.")} It needs a bit more data the first time. With No movement or Calm screen on, or on phones that can't show 3D, it shows as a drawing.</p>` : ""}
-      ${a.base === "person" ? group("skin", "Skin tone", AV.skin, true) + group("hair", "Hair or head covering", AV.hair) + (["doek", "hijab", "none"].includes(a.hair) ? "" : group("hairCol", "Hair colour", AV.hairCol, true)) + group("eyes", "Eyes", AV.eyes) + group("extra", "Extras", AV.extra) : ""}
+      ${group("base", "Character", [["person", "Person"], ["robot", "Robot"], ["person3d", "3D person"], ["robot3d", "3D robot"]])}
+      ${AV_3D[a.base] ? `<p class="note">${W("Your 3D character moves and waves.", "Your 3D character moves, waves and turns to follow you.")} It needs a bit more data the first time. With No movement or Calm screen on, or on phones that can't show 3D, it shows as a drawing.${a.base === "person3d" ? " The 3D person has one hairstyle; your hair choice shows in the drawing." : ""}</p>` : ""}
+      ${a.base === "person" || a.base === "person3d" ? group("skin", "Skin tone", AV.skin, true) + group("hair", "Hair or head covering", AV.hair) + (["doek", "hijab", "none"].includes(a.hair) ? "" : group("hairCol", "Hair colour", AV.hairCol, true)) + group("eyes", "Eyes", AV.eyes) + group("extra", "Extras", AV.extra) : ""}
       ${group("mouth", "Mouth", AV.mouth)}
-      ${group("top", a.base !== "person" ? "Robot colour" : "Clothes colour", AV.top, true)}
+      ${group("top", a.base === "robot" || a.base === "robot3d" ? "Robot colour" : "Clothes colour", AV.top, true)}
       ${group("bg", "Background", AV.bg, true)}`;
   const shownName = () => a.name.trim() || defaultAvatar().name;
   let card;

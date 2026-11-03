@@ -32,7 +32,8 @@ clips.js, clips/    Recorded voice clips (shared lines, and one file per Grade 4
 sw.js               Offline cache
 modules/avatar3d.js 3D robot character (ES module, loaded only when a learner picks it)
 vendor/three/       three.js r160 (MIT), kept here so it works offline
-assets/3d/          3D model: "RobotExpressive" by Tomás Laulhé (Quaternius), CC0
+assets/3d/          3D models (CC0, Quaternius): the robot and the casual person; credits in LICENSE.txt
+tools/              Blender script that slims a character to its Idle and Wave animations
 native/             Android and iOS app wrapper (Capacitor) and the Android build script
 tests/              App tests (run in CI)
 _headers            Security headers for Netlify
@@ -69,9 +70,9 @@ Parents and specialists can register, sign in with an emailed code (shown on scr
 
 ## 3D character
 
-Learners can pick a **3D robot** in My character. It is the free CC0 model "RobotExpressive" by Tomás Laulhé ([Quaternius](https://quaternius.com)), drawn with [three.js](https://threejs.org). It idles, turns towards the pointer, and waves when it says its name. The files (about 1.3 MB) download only when someone picks it, then work offline. With No movement or Calm screen on, in Data saver, or without WebGL, the 2D robot drawing is shown instead.
+Learners can pick a **3D person** or a **3D robot** in My character. Both are free CC0 models by [Quaternius](https://quaternius.com) ("Casual_Hoodie" from Ultimate Modular Characters, and "RobotExpressive" by Tomás Laulhé), drawn with [three.js](https://threejs.org). The person takes the learner's skin tone, hair colour and clothes colour. Each idles, turns towards the pointer, and waves when it says its name. The files (about 1.5 MB with one character) download only when someone picks one, then work offline. With No movement or Calm screen on, in Data saver, or without WebGL, the 2D robot drawing is shown instead.
 
-More free CC0 characters (people, animals) for later: [Quaternius](https://quaternius.com) (Universal Base Characters, Ultimate Modular Characters) and [Kenney](https://kenney.nl/assets) (Animated Characters). They need to be exported to `.glb` (free in [Blender](https://www.blender.org)) and kept small for low-cost phones. When you change files in `modules/` or `vendor/`, change the `CACHE` name in `sw.js` as well.
+More free CC0 characters (people, animals) for later: [Quaternius](https://quaternius.com) (Universal Base Characters, Ultimate Modular Characters) and [Kenney](https://kenney.nl/assets) (Animated Characters). Slim each one with `tools/slim-character.py` in [Blender](https://www.blender.org): it keeps only the Idle and Wave animations (the packs also have fighting and weapon animations, which don't belong here) and exports a `.glb`. Then add it to `MODELS` in `modules/avatar3d.js`. When you change files in `modules/` or `vendor/`, change the `CACHE` name in `sw.js` as well.
 
 ## Android and iOS apps
 
