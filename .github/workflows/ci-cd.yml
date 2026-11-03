@@ -101,12 +101,25 @@ jobs:
         id: deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          # The site (project) ID is not secret, so a repository variable is fine too.
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID || vars.NETLIFY_SITE_ID }}
+          # Only used to say where a misplaced token is; never passed to Netlify.
+          TOKEN_IN_VARS: ${{ vars.NETLIFY_AUTH_TOKEN != '' }}
         run: |
-          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
-            echo "::error::Add NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID in Settings > Secrets and variables > Actions"
-            exit 1
+          missing=0
+          if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+            if [ "$TOKEN_IN_VARS" = "true" ]; then
+              echo "::error::NETLIFY_AUTH_TOKEN is saved as a Variable. Delete it from the Variables tab and add it on the Secrets tab (Settings > Secrets and variables > Actions)"
+            else
+              echo "::error::NETLIFY_AUTH_TOKEN is missing. Add it as a repository secret: Settings > Secrets and variables > Actions > Secrets > New repository secret"
+            fi
+            missing=1
           fi
+          if [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "::error::NETLIFY_SITE_ID is missing. Add your Netlify Project ID as a repository secret with this exact name"
+            missing=1
+          fi
+          [ "$missing" = 0 ] || exit 1
           if [ "$GITHUB_REF_NAME" = "main" ]; then
             target="--prod"
           else
