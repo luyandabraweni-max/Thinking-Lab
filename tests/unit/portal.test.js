@@ -176,18 +176,15 @@ describe("avatar and motion", () => {
       } out`);
     expect(bad).toEqual([]);
   });
-  it("the 3D robot falls back to the robot drawing when 3D can't run", () => {
+  it("3D characters are hidden for now and show as drawings", () => {
+    expect(app.run(`AV_3D_ON`)).toBe(false);
     app.run(`S.avatar = Object.assign(defaultAvatar(), { base: "robot3d", top: 1, name: "Bolt" }); home()`);
-    expect(app.run(`can3d()`)).toBe(false); // jsdom has no WebGL
     const stage = app.window.document.querySelector(".hub-hello .av-stage");
-    expect(JSON.parse(stage.querySelector(".av-3d").dataset.colours).top).toBe(app.run(`AV.top[1][0]`));
+    expect(stage.querySelector(".av-3d")).toBeNull();
     expect(stage.querySelector("svg.av3d")).not.toBeNull();
-    expect(stage.classList.contains("is3d")).toBe(false);
     app.run(`avatarBuilder()`);
-    expect(app.main()).toContain("3D robot");
-    app.run(`S.avatar = Object.assign(defaultAvatar(), { base: "person3d", skin: 5 }); avatarBuilder()`);
-    expect(app.main()).toContain("Skin tone");
-    expect(app.run(`avatarSvg(S.avatar, 100, "x")`)).toContain(app.run(`AV.skin[5][0]`));
+    expect(app.main()).not.toContain("3D robot");
+    expect(app.main()).not.toContain("3D person");
   });
   it("every outfit and held item draws, for people and robots", () => {
     const bad = app.run(`const out = [];

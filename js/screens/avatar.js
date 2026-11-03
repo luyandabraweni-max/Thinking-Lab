@@ -27,12 +27,15 @@ const AV_EYE = { brown: "#5A3420", dark: "#2A1A12", blue: "#1F2A6B", green: "#2F
 const AV_NAME_MAX = 16;
 // 3D characters need WebGL and movement allowed; otherwise (and while they load) the matching 2D drawing stands in.
 const AV_3D = { robot3d: "robot", person3d: "person" };
+// Off until the team's own 3D model is ready: the choices are hidden and saved 3D characters show as drawings.
+const AV_3D_ON = false;
 const can3d = () => typeof motionAllowed === "function" && motionAllowed() && !!window.WebGLRenderingContext
   && !(navigator.connection && navigator.connection.saveData) && !document.documentElement.hasAttribute("data-calm");
 function defaultAvatar() { return { base: "person", skin: 3, hair: "braids", hairCol: 0, eyes: "brown", mouth: "smile", extra: "none", cloth: "jacket", prop: "robot", top: 2, bg: 2, name: "Star" }; }
 // Characters saved before the illustrated style get the new fields, and old eye shapes become eye colours.
 function fullAvatar(a) {
   const out = Object.assign(defaultAvatar(), a || {}), ok = (k, v) => AV[k].some(x => x[0] === v);
+  if (!AV_3D_ON && AV_3D[out.base]) out.base = AV_3D[out.base];
   if (!ok("eyes", out.eyes)) out.eyes = out.eyes === "happy" ? "happy" : "brown";
   ["hair", "mouth", "extra", "cloth", "prop"].forEach(k => { if (!ok(k, out[k])) out[k] = defaultAvatar()[k]; });
   ["skin", "hairCol", "top", "bg"].forEach(k => { if (!AV[k][out[k]]) out[k] = 0; });
@@ -277,7 +280,7 @@ function avatarBuilder(after) {
   const optionsHtml = () => `
       ${nameGroup()}
       ${setsHtml()}
-      ${group("base", "Character", [["person", "Person"], ["robot", "Robot"], ["person3d", "3D person"], ["robot3d", "3D robot"]])}
+      ${group("base", "Character", [["person", "Person"], ["robot", "Robot"]].concat(AV_3D_ON ? [["person3d", "3D person"], ["robot3d", "3D robot"]] : []))}
       ${AV_3D[a.base] ? `<p class="note">${W("Your 3D character moves and waves.", "Your 3D character moves, waves and turns to follow you.")} It needs a bit more data the first time. With No movement or Calm screen on, or on phones that can't show 3D, it shows as a drawing.${a.base === "person3d" ? " The 3D person has one hairstyle; your hair choice shows in the drawing." : ""}</p>` : ""}
       ${a.base === "person" || a.base === "person3d" ? group("skin", "Skin tone", AV.skin, true) + group("hair", "Hair or head covering", AV.hair) + (["doek", "hijab", "none"].includes(a.hair) ? "" : group("hairCol", "Hair colour", AV.hairCol, true)) + group("eyes", "Eyes", AV.eyes) + group("extra", "Extras", AV.extra) + group("mouth", "Expression", AV.mouth) : ""}
       ${group("cloth", "Clothes", AV.cloth)}

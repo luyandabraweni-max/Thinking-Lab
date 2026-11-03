@@ -74,6 +74,8 @@ Learners make their own character in My character. The drawings come from the **
 
 ## 3D character
 
+**Hidden for now** (`AV_3D_ON = false` in `js/screens/avatar.js`): the free models didn't give the look the team wants, so the choices are off until the team's own model is ready. Saved 3D characters show as drawings. The notes below describe how it works when switched on.
+
 Learners can pick a **3D person** or a **3D robot** in My character. Both are free CC0 models by [Quaternius](https://quaternius.com) ("Casual_Hoodie" from Ultimate Modular Characters, and "RobotExpressive" by Tomás Laulhé), drawn with [three.js](https://threejs.org). The person takes the learner's skin tone, hair colour and clothes colour. Each idles, turns towards the pointer, and waves when it says its name. The files (about 1.5 MB with one character) download only when someone picks one, then work offline. With No movement or Calm screen on, in Data saver, or without WebGL, the 2D robot drawing is shown instead.
 
 More free CC0 characters (people, animals) for later: [Quaternius](https://quaternius.com) (Universal Base Characters, Ultimate Modular Characters) and [Kenney](https://kenney.nl/assets) (Animated Characters). Slim each one with `tools/slim-character.py` in [Blender](https://www.blender.org): it keeps only the Idle and Wave animations (the packs also have fighting and weapon animations, which don't belong here) and exports a `.glb`. Then add it to `MODELS` in `modules/avatar3d.js`. When you change files in `modules/` or `vendor/`, change the `CACHE` name in `sw.js` as well.
