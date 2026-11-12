@@ -147,6 +147,7 @@ describe("learners on a shared device", () => {
     for (const p of ["lion", "moon", "star"]) await user.click(screen.getByRole("button", { name: p }));
     expect(await screen.findByText(/Not quite/)).toBeInTheDocument();
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     expect(await screen.findByText("Well done for fixing Bolt's instructions all by yourself!")).toBeInTheDocument();
     expect(screen.queryByText(/Lots of laughing/)).toBeNull(); // team-only messages stay with the team
     await user.click(screen.getByRole("button", { name: "Thank you!" }));
@@ -165,6 +166,7 @@ describe("the Thinking Lab", () => {
     await user.click(screen.getByRole("button", { name: "I'm a learner" }));
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     await user.click(await screen.findByRole("button", { name: /My way/ })); // no waiting for the beam animation
     await user.click(screen.getByRole("checkbox", { name: "No movement" }));
     await user.click(screen.getByRole("button", { name: "Done" }));
@@ -203,6 +205,7 @@ describe("safeguarding", () => {
     await user.click(screen.getByRole("button", { name: "I'm a learner" }));
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     await user.click(await screen.findByRole("button", { name: /I feel unsafe/ }));
     expect(await screen.findByRole("alertdialog", { name: "Thank you for telling us" })).toHaveTextContent("you are not in trouble");
     expect(screen.getByText("116")).toBeInTheDocument();
@@ -240,6 +243,7 @@ describe("My way", () => {
       await user.click(screen.getByRole("button", { name: "I'm a learner" }));
       await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
       for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+      await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     };
     await enter();
     await user.click(await screen.findByRole("button", { name: /My way/ }));
@@ -316,6 +320,7 @@ describe("adapting", () => {
     await user.click(screen.getByRole("button", { name: "I'm a learner" }));
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     await user.click(await screen.findByRole("button", { name: "Learn" }));
     expect(await screen.findByRole("heading", { name: /^Maths\s*· Grade 6$/ })).toBeInTheDocument();
   });
@@ -377,6 +382,7 @@ describe("next-session plan", () => {
     await user.click(screen.getByRole("button", { name: "I'm a learner" }));
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     expect(await screen.findByRole("heading", { name: "My plan today" })).toBeInTheDocument();
     expect(screen.getByText(/Demo Specialist made this plan for you/)).toBeInTheDocument();
     expect((await store.kv.all("learner_settings"))[0]).toMatchObject({ plan: null, lastPlan: { by: "Demo Specialist" } }); // used once
@@ -393,6 +399,7 @@ describe("next-session plan", () => {
     await user.click(screen.getByRole("button", { name: "I'm a learner" }));
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?"
     await user.click(await screen.findByRole("button", { name: "Make my plan" }));
     const maker = within(screen.getByRole("region", { name: "Make my plan" }));
     await user.click(maker.getByRole("button", { name: "Thinking Lab" }));
@@ -468,5 +475,44 @@ describe("adding staff", () => {
     await user.click(screen.getByRole("button", { name: /^Remove Demo Therapist from / }));
     expect(await screen.findByText(/Demo Therapist is no longer staff/)).toBeInTheDocument();
     expect(screen.queryByRole("rowheader", { name: /Demo Therapist/ })).toBeNull();
+  });
+});
+
+describe("check-ins and breaks", () => {
+  it("asks how the learner feels, offers a break with movement ideas, and a help card for a grown-up", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    expect(await screen.findByRole("heading", { name: "How are you feeling?" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Worried" }));
+    await user.click(await screen.findByRole("button", { name: "A quiet break first" }));
+    expect(await screen.findByRole("heading", { name: "Take a break. Stay as long as you like." })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Stretch up high" }));
+    expect(screen.getByRole("status")).toHaveTextContent(/Reach your arms up high/);
+    await user.click(screen.getByRole("button", { name: "I'm ready" }));
+    expect(await screen.findByRole("heading", { name: "Hello, Brave Meerkat" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "I need help" }));
+    expect(await screen.findByRole("heading", { name: "I would like some help, please." })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Done" }));
+    expect(await screen.findByRole("heading", { name: "Hello, Brave Meerkat" })).toBeInTheDocument();
+    // Energy is checked before every second activity, not before the first
+    await user.click(screen.getByRole("button", { name: "Thinking Lab" }));
+    for (let i = 0; i < 2; i++) {
+      await user.click(await screen.findByRole("button", { name: /^Light the Village\./ }));
+      await user.click(await screen.findByRole("button", { name: "Back to games" }));
+    }
+    expect(screen.queryByRole("heading", { name: "How's your battery?" })).toBeNull();
+    await user.click(await screen.findByRole("button", { name: /^Light the Village\./ }));
+    expect(await screen.findByRole("heading", { name: "How's your battery?" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Low" }));
+    await user.click(screen.getByRole("button", { name: "Take a break first" }));
+    await user.click(await screen.findByRole("button", { name: "I'm ready" }));
+    expect(await screen.findByRole("heading", { name: "Light the Village" })).toBeInTheDocument(); // the game starts after the break
   });
 });

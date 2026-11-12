@@ -1,4 +1,5 @@
 import { ADAPT, adaptLive, toRow, type AdaptSettings, type Row } from "@tl/adaptation";
+import { BreakScreen } from "../wellbeing";
 import { areaOf, levelName, type Question, type Unit, type WordHelp } from "@tl/content";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { SafetyNote } from "../safety";
@@ -14,7 +15,10 @@ export interface LessonProps {
   say?: (text: string) => void;
   /** What the adults around the learner set: automatic changes on or off, and rules switched off. */
   adapt?: AdaptSettings;
+  /** The learner chose a short lesson (for example when their energy is low). */
+  short?: boolean;
 }
+const noSay = () => {};
 const STEPS = ["Learn", "Example", "Practice", "Reflect"];
 const Html = ({ html }: { html: string }) => <div dangerouslySetInnerHTML={{ __html: html }} />; // reviewed lesson content from this repo only
 const Ic = ({ e }: { e: string }) => <span className="em" aria-hidden="true">{e}</span>;
@@ -45,7 +49,7 @@ type Step = { at: "intro" } | { at: "learn"; i: number } | { at: "example"; show
 export function Lesson(props: LessonProps) {
   const { unit: u, words, history, onBack } = props;
   const [skipShort, setSkipShort] = useState(false);
-  const short = !skipShort && !!adaptLive(history, props.adapt ?? { auto: true }).shorter;
+  const short = !skipShort && (!!props.short || !!adaptLive(history, props.adapt ?? { auto: true }).shorter);
   const [qs, setQs] = useState<Question[]>(() => pickQuestions(u.questions, short));
   const [step, setStep] = useState<Step>({ at: "intro" }), [recs, setRecs] = useState<GameItem[]>([]);
   const [skips] = useState(() => new Set<string>()); // changes the learner undid this lesson ("fewer")
@@ -193,12 +197,7 @@ function QuestionView({ unit: u, words, history, say, adapt, q, qi, count, recs,
     }
   };
 
-  if (onBreak) return (
-    <section className="card">
-      <h2>Take a break</h2>
-      <p>Stay as long as you like. Breathe in slowly, and out slowly.</p>
-      <div className="row"><button className="btn primary" autoFocus onClick={() => setOnBreak(false)}>I'm ready to carry on</button></div>
-    </section>);
+  if (onBreak) return <BreakScreen text="Take a break" say={say ?? noSay} onReady={() => setOnBreak(false)} />;
   let body: ReactNode = null;
   if (choosingType && (q.type === "mcq" || q.options) && !typing) body = <div className={`choices${u.grade <= 0 ? " big" : ""}`}>{opts.map(i =>
     <button key={i} className="choice" aria-pressed={ans.picked === i} onClick={() => { setAns(a => ({ ...a, picked: i })); setFb(""); }}>
