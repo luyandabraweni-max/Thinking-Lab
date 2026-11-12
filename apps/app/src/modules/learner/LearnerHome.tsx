@@ -72,7 +72,7 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
     if (check === "break") return <BreakScreen say={say} onReady={resume} />;
     if (check === "help") return <HelpCard say={say} onDone={() => setCheck(null)} />;
     if (screen === "myway") return <MyWay prefs={prefs} change={changePrefs} onDone={() => setScreen("home")} />;
-    if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} adapt={{ auto: settings.adaptAuto, off: settings.adaptOff }} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} short={short} onBack={() => { setLesson(null); setShort(false); }} /></Suspense>;
+    if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} adapt={{ auto: settings.adaptAuto, off: settings.adaptOff }} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} short={short} voiceAnswers={prefs.voiceIn} onBack={() => { setLesson(null); setShort(false); }} /></Suspense>;
     if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} levels={settings.levels} onPick={id => begin(() => void openLesson(id))} onBack={() => setScreen("home")} /></Suspense>;
     if (space && screen !== "home") {
       const run: LabRun = { id: screen === "lab" ? "light" : (screen as GameId), band: older ? "older" : "younger", learnerName: space.learner.nickname, W: (kid, grown) => (older ? grown : kid), reduceMotion: !motionAllowed(prefs), say };

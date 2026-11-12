@@ -19,8 +19,9 @@ export interface Prefs {
   scanSpeed: "slow" | "medium" | "fast";
   dwell: boolean;         // choose by resting the pointer (eye-gaze and head pointers)
   dwellSpeed: "slow" | "medium" | "fast";
+  voiceIn: boolean;       // answer lesson questions by speaking (a grown-up turns it on)
 }
-export const DEFAULT_PREFS: Prefs = { theme: "system", contrast: false, grey: false, palette: "standard", font: "atkinson", size: "normal", spacing: false, calm: false, motion: false, plain: false, pictures: false, speak: false, captions: false, rate: "normal", scan: false, scanSpeed: "medium", dwell: false, dwellSpeed: "medium" };
+export const DEFAULT_PREFS: Prefs = { theme: "system", contrast: false, grey: false, palette: "standard", font: "atkinson", size: "normal", spacing: false, calm: false, motion: false, plain: false, pictures: false, speak: false, captions: false, rate: "normal", scan: false, scanSpeed: "medium", dwell: false, dwellSpeed: "medium", voiceIn: false };
 const SIZES = { normal: "1.15rem", large: "1.3rem", larger: "1.5rem" };
 
 /** Animation only when it can't get in the way: not for "No movement", calm mode, or a device set to reduce motion. */

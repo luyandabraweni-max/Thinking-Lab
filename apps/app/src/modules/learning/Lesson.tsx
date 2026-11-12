@@ -1,6 +1,8 @@
 import { ADAPT, adaptLive, toRow, type AdaptSettings, type Row } from "@tl/adaptation";
 import { BreakScreen } from "../wellbeing";
 import { areaOf, levelName, type Question, type Unit, type WordHelp } from "@tl/content";
+import { matchSpoken, spokenNumber } from "@tl/voice";
+import { useVoice } from "@tl/voice/react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { SafetyNote } from "../safety";
 import { DrawPad, matchedFeedback, newRec, toAttempts, type GameItem } from "../thinking-lab";
@@ -15,6 +17,8 @@ export interface LessonProps {
   say?: (text: string) => void;
   /** What the adults around the learner set: automatic changes on or off, and rules switched off. */
   adapt?: AdaptSettings;
+  /** The learner can answer by speaking (set in My way, after a grown-up agreed). */
+  voiceAnswers?: boolean;
   /** The learner chose a short lesson (for example when their energy is low). */
   short?: boolean;
 }
@@ -140,7 +144,7 @@ export function Lesson(props: LessonProps) {
     </section>);
 }
 
-function QuestionView({ unit: u, words, history, say, adapt, q, qi, count, recs, skips, onDone }: LessonProps & { q: Question; qi: number; count: number; recs: GameItem[]; skips: Set<string>; onDone: (rec: GameItem) => void }) {
+function QuestionView({ unit: u, words, history, say, adapt, voiceAnswers, q, qi, count, recs, skips, onDone }: LessonProps & { q: Question; qi: number; count: number; recs: GameItem[]; skips: Set<string>; onDone: (rec: GameItem) => void }) {
   const area = areaOf(u.subject), fewerKey = `fewer:${area}`;
   const today = new Date().toISOString().slice(0, 10);
   const rows = (): Row[] => [...history, ...recs.map(r => toRow(r, u.id, "", today))];
@@ -168,6 +172,28 @@ function QuestionView({ unit: u, words, history, say, adapt, q, qi, count, recs,
     return () => clearTimeout(t);
   }, [done, ad.sooner]);
 
+  // Answering by speaking: what was heard fills in the answer, and the learner still presses Check (nothing is recorded).
+  const voice = useVoice(), [listening, setListening] = useState(false);
+  const choices = q.type === "mcq" || q.type === "num" ? q.options : undefined;
+  const canSpeak = !!voiceAnswers && !!voice.engine && voice.consent && ((!!choices && !typing) || typing);
+  const sayAnswer = async () => {
+    if (!voice.engine || listening) return;
+    if (!(await voice.engine.permit())) return setFb("The microphone isn't allowed on this device. You can tap your answer instead.");
+    setListening(true); setFb("Listening… say your answer.");
+    try {
+      const h = await voice.engine.listen({ lang: voice.lang, maxMs: 8000 }), heard = [h.text, ...h.alternatives].filter(Boolean);
+      if (!heard.length) return setFb("I didn't hear anything. Try again, or tap your answer.");
+      if (typing) {
+        const n = heard.map(spokenNumber).find(x => x !== null);
+        if (n) { setAns(a => ({ ...a, typed: n })); setFb(`I heard ${n}. Press Check my answer.`); } else setFb(`I heard "${heard[0]}". Say a number, or type it.`);
+      } else {
+        const i = choices ? matchSpoken(heard, choices, opts) : null;
+        if (i !== null) { setAns(a => ({ ...a, picked: i })); setFb(`I heard "${choices![i]}". Press Check my answer, or choose another.`); }
+        else setFb(`I heard "${heard[0]}". Try again, or tap your answer.`);
+      }
+    } catch { setFb("Listening didn't work this time. Tap your answer instead."); }
+    finally { setListening(false); }
+  };
   const takeHint = () => { const h = Math.min(q.hints.length, hint + 1); setHint(h); rec.current.hints = h; setFb(""); say?.(q.hints[h - 1]!); };
   useEffect(() => { say?.(q.q); }, [say, q]);
   useEffect(() => { if (fb) say?.(fb); }, [fb, say]);
@@ -237,6 +263,7 @@ function QuestionView({ unit: u, words, history, say, adapt, q, qi, count, recs,
       {fb ? <div className={`feedback${done ? "" : " gentle"}`} role="status">{fb}</div> : null}
       <div className="row">
         {done ? <button className="btn primary" autoFocus onClick={finish}>{qi + 1 < count ? "Next question" : "Finish"}</button> : <>
+          {canSpeak ? <button className="btn" disabled={listening} onClick={() => void sayAnswer()}><Ic e="🎤" /><span>{listening ? "Listening…" : "Say my answer"}</span></button> : null}
           <button className="btn primary" onClick={checkIt}>Check my answer</button>
           <button className="btn" disabled={hint >= q.hints.length} onClick={takeHint}>{hint ? "Another hint" : "Use a hint"}</button>
           <button className="btn quiet" onClick={() => { rec.current.movedOn = true; finish(); }}>Move on without an answer</button>

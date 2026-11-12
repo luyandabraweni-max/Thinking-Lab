@@ -1,6 +1,7 @@
 import type { Kv } from "@tl/data";
 import { applyPrefs, DEFAULT_PREFS, type Prefs } from "@tl/ui";
 import { speak, stopSpeaking } from "@tl/voice";
+import { useVoice } from "@tl/voice/react";
 import { useCallback, useEffect, useState } from "react";
 import { startDwell, startScanning } from "./access";
 
@@ -82,7 +83,22 @@ export function MyWay({ prefs, change, onDone }: { prefs: Prefs; change: (p: Par
       <Toggle k="dwell" label="Choose by resting the pointer (for eye-gaze and head pointers)" {...t} />
       {prefs.dwell ? <Group label="How long to rest" k="dwellSpeed" options={[["slow", "Longer"], ["medium", "Medium"], ["fast", "Shorter"]]} {...t} /> : null}
       <p className="note">A switch that sends Space or Enter works with scanning. Touch screens aren't affected by resting: a tap still chooses.</p>
+      <VoiceAnswers {...t} />
       <div className="row"><button className="btn primary" autoFocus onClick={onDone}>Done</button></div>
     </section>
   );
+}
+
+/** Answering by speaking: off until a grown-up turns it on, because some browsers send the sound away to turn it into words. */
+function VoiceAnswers({ prefs, change }: { prefs: Prefs; change: (p: Partial<Prefs>) => void }) {
+  const voice = useVoice();
+  const [asking, setAsking] = useState(false);
+  if (!voice.engine) return null;
+  if (asking) return (
+    <div className="obs-item tl-stack" role="group" aria-labelledby="vaH">
+      <h3 id="vaH">For a grown-up</h3>
+      <p>{voice.engine.sendsAudioAway ? "This browser sends what is said to Google or Apple to turn it into words. They don't keep it for Thinking Lab, but it does leave this device." : "This device turns what is said into words. Some older phones use their maker's online service to do this."} Thinking Lab never records or keeps the sound. Tapping and typing always work too.</p>
+      <div className="tl-row"><button className="btn primary" onClick={() => { voice.agree(); change({ voiceIn: true }); setAsking(false); }}>I'm a grown-up, and I agree</button><button className="btn quiet" onClick={() => setAsking(false)}>Not now</button></div>
+    </div>);
+  return <label className="consent"><input type="checkbox" checked={prefs.voiceIn} onChange={e => (e.target.checked && !voice.consent ? setAsking(true) : change({ voiceIn: e.target.checked }))} /><span>Answer questions by speaking</span></label>;
 }

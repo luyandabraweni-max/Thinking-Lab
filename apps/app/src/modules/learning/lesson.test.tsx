@@ -3,6 +3,8 @@ import { areaOf, CATALOGUE, loadUnit, type Question, type Unit } from "@tl/conte
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
+import type { SpeechEngine } from "@tl/voice";
+import { VoiceProvider } from "@tl/voice/react";
 import { Lesson } from "./Lesson";
 import { norm } from "./logic";
 
@@ -82,5 +84,30 @@ describe("a lesson", () => {
     expect(screen.getByText("Childline South Africa")).toBeInTheDocument();
     await click(user, /I feel unsafe/);
     expect(onUnsafe).toHaveBeenCalledWith("lesson");
+  });
+});
+
+describe("answering by speaking", () => {
+  const engine = (said: string): SpeechEngine => ({ kind: "web", sendsAudioAway: true, available: async () => true, permit: async () => true, listen: async () => ({ text: said, alternatives: [] }) });
+  it("fills in the choice the learner said; they still press Check", async () => {
+    const unit = await unitWhere(u => u.questions[0]?.type === "mcq" && !u.questions[0].open && !u.questions[0].fixed);
+    const q = unit.questions[0] as Extract<Question, { type: "mcq" }>, right = q.options[q.answer]!;
+    localStorage.setItem("tl-voice-consent", "yes");
+    const user = userEvent.setup(), onSave = vi.fn(async () => {});
+    render(<VoiceProvider engine={engine(`I think ${right}`)} say={async () => {}}><Lesson unit={unit} older={false} history={[]} country={null} onSave={onSave} onUnsafe={() => {}} onBack={() => {}} voiceAnswers /></VoiceProvider>);
+    await toQuestions(user, unit);
+    await click(user, "Say my answer");
+    expect(await screen.findByText(`I heard "${right}". Press Check my answer, or choose another.`)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: exact(right), pressed: true })).toBeInTheDocument();
+    await click(user, "Check my answer");
+    expect(screen.getByRole("button", { name: /Next question|Finish/ })).toBeInTheDocument();
+    localStorage.clear();
+  });
+  it("isn't offered unless it was turned on", async () => {
+    const unit = await unitWhere(u => u.questions[0]?.type === "mcq");
+    const user = userEvent.setup();
+    render(<VoiceProvider engine={engine("anything")} say={async () => {}}><Lesson unit={unit} older={false} history={[]} country={null} onSave={async () => {}} onUnsafe={() => {}} onBack={() => {}} /></VoiceProvider>);
+    await toQuestions(user, unit);
+    expect(screen.queryByRole("button", { name: "Say my answer" })).toBeNull();
   });
 });
