@@ -79,13 +79,19 @@ function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "ad
         <p className="tl-muted">Google shares only your name and email address with Thinking Lab.</p>
         <p><b>Or use your email</b></p></> : null}
       {step.at === "adult" ? <div className="tl-stack">
-        <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.signInWithPassword(email, password); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
-          <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required />
-          {auth.methods.password ? <Field label="Password" type="password" value={password} onChange={setPassword} autoComplete="current-password" /> : null}
-          {auth.methods.password ? <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !email.trim() || !password}>Sign in</Button></div> : null}
-        </form>
-        <p><b>{auth.methods.password ? "New here, or forgot your password?" : "Sign in with your email"}</b> We'll email you a link that signs you in. You can then set a password, so you won't need emails after that.</p>
-        <div className="tl-row"><Button disabled={busy || !email.trim()} onClick={() => void attempt(async () => { await auth.sendEmailCode(email.trim()); setStep({ at: "code", door: step.door, email: email.trim() }); })}>Email me a sign-in link</Button></div>
+        <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required />
+        {auth.methods.password ? <section className="tl-stack" aria-labelledby="siHave">
+          <h2 id="siHave">I already have an account</h2>
+          <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { if (!email.trim()) throw new Error("Type your email address first."); const r = await auth.signInWithPassword(email, password); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
+            <Field label="Password" type="password" value={password} onChange={setPassword} autoComplete="current-password" />
+            <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !password}>Sign in</Button></div>
+          </form>
+        </section> : null}
+        <section className="tl-stack" aria-labelledby="siNew">
+          <h2 id="siNew">I'm new, or I forgot my password</h2>
+          <p>Type your email above, then press the button. We'll email you a link: open it <b>on this device</b>, and you can then choose a password.</p>
+          <div className="tl-row"><Button variant={auth.methods.password ? undefined : "primary"} disabled={busy} onClick={() => void attempt(async () => { if (!email.trim()) throw new Error("Type your email address first, then press the button again."); await auth.sendEmailCode(email.trim()); setStep({ at: "code", door: step.door, email: email.trim() }); })}>Email me a sign-in link</Button></div>
+        </section>
       </div> : <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.verifyEmailCode(step.email, code); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
         {mode === "demo" ? <Notice>Demo mode: no email is sent. The code is <b>{DEMO_CODE}</b>.</Notice>
           : <><p>We sent an email to <b>{step.email}</b>. Open it <b>on this device, in this browser</b>, and tap the sign-in link. Use the newest email: each link works once, within an hour.</p>

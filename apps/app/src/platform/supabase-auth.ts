@@ -11,7 +11,8 @@ const within = <T,>(p: Promise<T>, ms: number, why: string) => new Promise<T>((r
 });
 
 export class SupabaseAuth implements AuthAdapter {
-  readonly methods = { google: true, emailCode: true, password: true, demo: false };
+  // Google appears only once it's switched on in Supabase (Authentication > Providers) and VITE_GOOGLE_SIGNIN=on is set.
+  readonly methods = { google: import.meta.env.VITE_GOOGLE_SIGNIN === "on", emailCode: true, password: true, demo: false };
   constructor(private client: SupabaseClient, private store: LocalStore, private afterSignIn: () => Promise<unknown>, private link: string | null = null) {}
   linkProblem() { return this.link; }
 
