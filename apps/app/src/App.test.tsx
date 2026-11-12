@@ -35,7 +35,7 @@ describe("signing in", () => {
     await user.type(await screen.findByLabelText(/Your name/), "Thandi");
     await user.click(screen.getByRole("button", { name: "Continue" }));
     expect(await screen.findByRole("heading", { name: "Your children" })).toBeInTheDocument();
-    expect(screen.getByText("No children registered yet.")).toBeInTheDocument();
+    expect(screen.getByText("No children yet. Add your child below to get started.")).toBeInTheDocument();
   });
   it("shows a school admin totals and staff, never learner records, and lets them choose the safeguarding lead", async () => {
     const user = start();
@@ -384,5 +384,22 @@ describe("next-session plan", () => {
     await user.click(screen.getByRole("button", { name: "Save my plan" }));
     expect(screen.getByRole("list", { name: "My plan today" })).toHaveTextContent(/Thinking Lab.*Finish/);
     expect(screen.getByRole("button", { name: "Start: Thinking Lab" })).toBeInTheDocument();
+  });
+});
+
+describe("adding a child", () => {
+  it("lets a parent add their child, with consent, and the child appears", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: "Add a child" }));
+    await user.type(await screen.findByLabelText(/^Nickname/), "Happy Hippo");
+    await user.selectOptions(screen.getByLabelText("Age"), "early");
+    expect(screen.getByLabelText("Level to start at")).toHaveValue("0");
+    await user.click(screen.getByRole("button", { name: "Add child" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent(/tick the box/);
+    await user.click(screen.getByRole("checkbox", { name: /I am this child's parent or guardian/ }));
+    await user.click(screen.getByRole("button", { name: "Add child" }));
+    expect(await screen.findByRole("heading", { name: "Happy Hippo" })).toBeInTheDocument();
+    expect(screen.getByText("NCF, Grade R")).toBeInTheDocument();
   });
 });
