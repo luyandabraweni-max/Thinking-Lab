@@ -516,3 +516,32 @@ describe("check-ins and breaks", () => {
     expect(await screen.findByRole("heading", { name: "Light the Village" })).toBeInTheDocument(); // the game starts after the break
   });
 });
+
+describe("talk board", () => {
+  it("is in reach on every learner screen, says the picture tapped, and 'I feel unsafe' gets help", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    expect(await screen.findByRole("button", { name: "Talk board" })).toBeInTheDocument(); // even on "How are you feeling?"
+    await user.click(screen.getByRole("button", { name: "Skip" }));
+    await user.click(screen.getByRole("button", { name: "Thinking Lab" }));
+    await user.click(await screen.findByRole("button", { name: /^Light the Village\./ }));
+    await user.click(screen.getByRole("button", { name: "Talk board" })); // mid-game
+    const board = within(await screen.findByRole("dialog", { name: "Talk board" }));
+    await user.click(board.getByRole("button", { name: "I need the toilet" }));
+    expect(board.getByRole("status")).toHaveTextContent("I need the toilet");
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).toBeNull();
+    expect(screen.getByRole("button", { name: "Talk board" })).toHaveFocus();
+    await user.click(screen.getByRole("button", { name: "Talk board" }));
+    await user.click(within(await screen.findByRole("dialog")).getByRole("button", { name: "I feel unsafe" }));
+    expect(await screen.findByText(/You did the right thing/)).toBeInTheDocument();
+    expect((await store.kv.all("concerns"))[0]).toMatchObject({ where: "talk board" });
+  });
+});

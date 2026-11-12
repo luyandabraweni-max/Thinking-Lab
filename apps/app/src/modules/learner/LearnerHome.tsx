@@ -1,6 +1,6 @@
 import { Button, Card, motionAllowed, type Prefs } from "@tl/ui";
 import { VoiceField } from "@tl/voice/react";
-import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
+import { lazy, Suspense, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { useServices, type DeviceLearner } from "../../platform";
 import type { Row } from "@tl/adaptation";
 import type { Unit, WordHelp } from "@tl/content";
@@ -9,7 +9,7 @@ import { CaptionBar, MyWay, usePrefs, useSay } from "../my-way";
 import { UNSAFE, UnsafeDialog } from "../safety";
 import type { GameId, LabRun } from "../thinking-lab";
 import { PLAN_KINDS, PLAN_MAX } from "./plan";
-import { BATTERY_EVERY, BatteryCheck, BreakScreen, Feelings, HelpCard } from "../wellbeing";
+import { BATTERY_EVERY, BatteryCheck, BreakScreen, Feelings, HelpCard, TalkBoard } from "../wellbeing";
 
 // Lessons and games load when the learner opens them, so the app starts fast on low-end phones.
 const LearnHome = lazy(() => import("../learning").then(m => ({ default: m.LearnHome })));
@@ -63,47 +63,56 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
     })().catch((e: Error) => setNote(e.message));
   }, [store, learner]);
   const older = space ? space.learner.cohort === "teen" || space.learner.cohort === "adult" : false;
-  if (unsafe) return <UnsafeDialog older={older} country={null} onClose={() => setUnsafe(false)} />;
-  if (space && check === "feelings") return <Feelings older={older} say={say} onDone={n => setCheck(n === "start" ? null : n)} />;
-  if (check === "battery") return <BatteryCheck say={say} onDone={c => { setAsked(started); if (c === "break") setCheck("break"); else { if (c === "short") setShort(true); resume(); } }} />;
-  if (check === "break") return <BreakScreen say={say} onReady={resume} />;
-  if (check === "help") return <HelpCard say={say} onDone={() => setCheck(null)} />;
-  if (screen === "myway") return <MyWay prefs={prefs} change={changePrefs} onDone={() => setScreen("home")} />;
-  if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} adapt={{ auto: settings.adaptAuto, off: settings.adaptOff }} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} short={short} onBack={() => { setLesson(null); setShort(false); }} /></Suspense>;
-  if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} levels={settings.levels} onPick={id => begin(() => void openLesson(id))} onBack={() => setScreen("home")} /></Suspense>;
-  if (space && screen !== "home") {
-    const run: LabRun = { id: screen === "lab" ? "light" : (screen as GameId), band: older ? "older" : "younger", learnerName: space.learner.nickname, W: (kid, grown) => (older ? grown : kid), reduceMotion: !motionAllowed(prefs), say };
-    if (screen === "lab") return <Suspense fallback={<Loading />}><LabHome W={run.W} onPick={g => begin(() => setScreen(g))} onBack={() => setScreen("home")} /></Suspense>;
-    return <Suspense fallback={<Loading />}><Exercise key={screen} run={run} onSave={a => space.record(a)} onBack={() => setScreen("lab")} /></Suspense>;
-  }
-  const startStep = () => {
-    const k = plan?.steps[plan.at]?.key;
-    if (!plan || !k) return;
-    setPlan({ ...plan, at: plan.at + 1 });
-    if (k === "finish") onDone();
-    else if (k === "lesson") setScreen("learn");
-    else if (k === "lab") setScreen("lab");
-    else if (k.startsWith("x:")) begin(() => setScreen(k.slice(2) as GameId));
-    else if (k.startsWith("u:")) begin(() => void openLesson(k.slice(2)));
-  };
-  const reply = async (body: string) => { if (!space) return; await space.reply(body); setText(""); setInbox(await space.inbox()); setNote("Sent!"); };
-  return (
-    <Card>
-      <h1>Hello, {learner.nickname}</h1>
-      <div className="row"><Button variant="primary" onClick={() => setScreen("learn")}>Learn</Button><Button variant="primary" onClick={() => setScreen("lab")}>Thinking Lab</Button><Button onClick={() => setScreen("myway")}><span aria-hidden="true">🎛️</span>My way</Button><Button onClick={() => setCheck("break")}><span aria-hidden="true">🌿</span>Take a break</Button><Button onClick={() => setCheck("help")}><span aria-hidden="true">🙋</span>I need help</Button></div>
-      <MyPlan plan={plan} onStart={startStep} onSave={steps => { setPlan({ steps, by: null, at: 0 }); say(`Your plan: ${steps.map(x => x.label).join(", ")}.`); }} />
-      <h2>Messages for you</h2>
-      {inbox.length ? <ol className="tl-stack" style={{ listStyle: "none", padding: 0, margin: 0 }}>{inbox.map(m => <li key={m.id}><Card as="article"><p className="tl-muted"><b>{m.fromRole === "learner" ? "You" : m.fromName}</b></p><p>{m.body}</p></Card></li>)}</ol>
-        : <p className="tl-muted">No messages yet.</p>}
-      <div className="tl-row">{STICKERS.map(s => <Button key={s} onClick={() => void reply(s)}>{s}</Button>)}</div>
-      <form className="tl-stack" onSubmit={e => { e.preventDefault(); void reply(text); }}>
-        <VoiceField label="Or say something yourself" value={text} onChange={setText} kind="long" />
-        <div className="tl-row"><Button type="submit" variant="primary" disabled={!text.trim()}>Send</Button></div>
-      </form>
-      <p role="status">{note}</p>
-      <div className="tl-row"><Button onClick={onDone}>I'm done</Button><Button onClick={() => raiseConcern("home")}><span aria-hidden="true">🛟</span>{UNSAFE}</Button></div>
-    </Card>
-  );
+  const [talk, setTalk] = useState(false), talkBtn = useRef<HTMLButtonElement>(null);
+  const closeTalk = useCallback(() => { setTalk(false); talkBtn.current?.focus(); }, []);
+  const view = ((): ReactNode => {
+    if (unsafe) return <UnsafeDialog older={older} country={null} onClose={() => setUnsafe(false)} />;
+    if (space && check === "feelings") return <Feelings older={older} say={say} onDone={n => setCheck(n === "start" ? null : n)} />;
+    if (check === "battery") return <BatteryCheck say={say} onDone={c => { setAsked(started); if (c === "break") setCheck("break"); else { if (c === "short") setShort(true); resume(); } }} />;
+    if (check === "break") return <BreakScreen say={say} onReady={resume} />;
+    if (check === "help") return <HelpCard say={say} onDone={() => setCheck(null)} />;
+    if (screen === "myway") return <MyWay prefs={prefs} change={changePrefs} onDone={() => setScreen("home")} />;
+    if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} adapt={{ auto: settings.adaptAuto, off: settings.adaptOff }} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} short={short} onBack={() => { setLesson(null); setShort(false); }} /></Suspense>;
+    if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} levels={settings.levels} onPick={id => begin(() => void openLesson(id))} onBack={() => setScreen("home")} /></Suspense>;
+    if (space && screen !== "home") {
+      const run: LabRun = { id: screen === "lab" ? "light" : (screen as GameId), band: older ? "older" : "younger", learnerName: space.learner.nickname, W: (kid, grown) => (older ? grown : kid), reduceMotion: !motionAllowed(prefs), say };
+      if (screen === "lab") return <Suspense fallback={<Loading />}><LabHome W={run.W} onPick={g => begin(() => setScreen(g))} onBack={() => setScreen("home")} /></Suspense>;
+      return <Suspense fallback={<Loading />}><Exercise key={screen} run={run} onSave={a => space.record(a)} onBack={() => setScreen("lab")} /></Suspense>;
+    }
+    const startStep = () => {
+      const k = plan?.steps[plan.at]?.key;
+      if (!plan || !k) return;
+      setPlan({ ...plan, at: plan.at + 1 });
+      if (k === "finish") onDone();
+      else if (k === "lesson") setScreen("learn");
+      else if (k === "lab") setScreen("lab");
+      else if (k.startsWith("x:")) begin(() => setScreen(k.slice(2) as GameId));
+      else if (k.startsWith("u:")) begin(() => void openLesson(k.slice(2)));
+    };
+    const reply = async (body: string) => { if (!space) return; await space.reply(body); setText(""); setInbox(await space.inbox()); setNote("Sent!"); };
+    return (
+      <Card>
+        <h1>Hello, {learner.nickname}</h1>
+        <div className="row"><Button variant="primary" onClick={() => setScreen("learn")}>Learn</Button><Button variant="primary" onClick={() => setScreen("lab")}>Thinking Lab</Button><Button onClick={() => setScreen("myway")}><span aria-hidden="true">🎛️</span>My way</Button><Button onClick={() => setCheck("break")}><span aria-hidden="true">🌿</span>Take a break</Button><Button onClick={() => setCheck("help")}><span aria-hidden="true">🙋</span>I need help</Button></div>
+        <MyPlan plan={plan} onStart={startStep} onSave={steps => { setPlan({ steps, by: null, at: 0 }); say(`Your plan: ${steps.map(x => x.label).join(", ")}.`); }} />
+        <h2>Messages for you</h2>
+        {inbox.length ? <ol className="tl-stack" style={{ listStyle: "none", padding: 0, margin: 0 }}>{inbox.map(m => <li key={m.id}><Card as="article"><p className="tl-muted"><b>{m.fromRole === "learner" ? "You" : m.fromName}</b></p><p>{m.body}</p></Card></li>)}</ol>
+          : <p className="tl-muted">No messages yet.</p>}
+        <div className="tl-row">{STICKERS.map(s => <Button key={s} onClick={() => void reply(s)}>{s}</Button>)}</div>
+        <form className="tl-stack" onSubmit={e => { e.preventDefault(); void reply(text); }}>
+          <VoiceField label="Or say something yourself" value={text} onChange={setText} kind="long" />
+          <div className="tl-row"><Button type="submit" variant="primary" disabled={!text.trim()}>Send</Button></div>
+        </form>
+        <p role="status">{note}</p>
+        <div className="tl-row"><Button onClick={onDone}>I'm done</Button><Button onClick={() => raiseConcern("home")}><span aria-hidden="true">🛟</span>{UNSAFE}</Button></div>
+      </Card>
+    );
+  })();
+  return <>
+    {unsafe ? null : <div className="talk-fab"><button ref={talkBtn} className="btn" onClick={() => setTalk(true)}><span className="em" aria-hidden="true">💬</span><span>Talk board</span></button></div>}
+    {view}
+    {talk ? <TalkBoard say={say} onClose={closeTalk} onUnsafe={() => { setTalk(false); raiseConcern("talk board"); }} /> : null}
+  </>;
 }
 
 function MyPlan({ plan, onStart, onSave }: { plan: { steps: PlanStep[]; by: string | null; at: number } | null; onStart: () => void; onSave: (steps: PlanStep[]) => void }) {

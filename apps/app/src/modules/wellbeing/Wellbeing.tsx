@@ -113,3 +113,27 @@ export function BatteryCheck({ say, onDone }: { say: (t: string) => void; onDone
 
 /** Ask about energy before every second activity, but not before the first (the session just started with a check-in). */
 export const BATTERY_EVERY = 2;
+
+// The talk board (ported from js/support/talk-board.js): tap a picture and the device says it. Open from every
+// learner screen, so a learner who doesn't speak can say "stop", "toilet" or "I feel unsafe" mid-lesson.
+export const UNSAFE_WORDS = "I feel unsafe";
+const TALK: [string, string][] = [["👍", "Yes"], ["👎", "No"], ["🙋", "I need help"], ["🌿", "I need a break"], ["🔁", "Again, please"], ["✋", "Stop, please"], ["🤷", "I don't know"], ["✅", "I'm finished"],
+  ["💧", "I need water"], ["🚻", "I need the toilet"], ["😊", "I like this"], ["🔊", "It's too loud"], ["🛟", UNSAFE_WORDS]];
+export function TalkBoard({ say, onUnsafe, onClose }: { say: (t: string) => void; onUnsafe: () => void; onClose: () => void }) {
+  const [said, setSaid] = useState("");
+  useEffect(() => {
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    addEventListener("keydown", esc);
+    return () => removeEventListener("keydown", esc);
+  }, [onClose]);
+  return (
+    <div className="overlay" onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="card talk" role="dialog" aria-modal="true" aria-labelledby="tkH">
+        <h2 id="tkH">Talk board</h2><p className="muted">Tap a picture to say it.</p>
+        <p className="said" role="status">{said}</p>
+        <div className="talk-grid">{TALK.map(([e, t]) => <button key={t} className="choice" onClick={() => { if (t === UNSAFE_WORDS) { onUnsafe(); return; } setSaid(t); say(t); }}>
+          <span className="em" aria-hidden="true">{e}</span><span className="lbl">{t}</span></button>)}</div>
+        <div className="row"><button className="btn primary" autoFocus onClick={onClose}>Close</button></div>
+      </div>
+    </div>);
+}

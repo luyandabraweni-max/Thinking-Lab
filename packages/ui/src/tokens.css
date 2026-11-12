@@ -131,3 +131,7 @@ p { margin: 0; }
 :root:not([data-motion="reduce"]) .tl-listening::before { animation: tl-pulse 1.2s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .tl-listening::before { animation: none !important; } }
 @keyframes tl-pulse { 50% { transform: scale(1.5); opacity: 0.6; } }
+
+/* The learner's talk board button stays in reach on every screen, above the content, without covering it. */
+.talk-fab { position: sticky; top: 8px; z-index: 15; display: flex; justify-content: flex-end; margin-bottom: 8px; pointer-events: none; }
+.talk-fab .btn { pointer-events: auto; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
