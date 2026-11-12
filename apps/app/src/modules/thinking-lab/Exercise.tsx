@@ -1,10 +1,17 @@
 import { useState, type ComponentType } from "react";
 import { GAMES, type GameId } from "./catalogue";
+import { DescribeGame } from "./games/describe/DescribeGame";
+import { InventGame } from "./games/invent/InventGame";
 import { LightGame } from "./games/light/LightGame";
+import { LiteralGame } from "./games/literal/LiteralGame";
+import { RuleGame } from "./games/rule/RuleGame";
+import { StoryGame } from "./games/story/StoryGame";
+import { SureGame } from "./games/sure/SureGame";
+import { VeldGame } from "./games/veld/VeldGame";
 import { DrawPad, matchedFeedback, toAttempts, type GameItem, type GameProps, type GameResult, type LabRun } from "./kit";
 
 // One game from start to finish: intro, play, reflect (choose or draw), then feedback that names what the learner did.
-export const PLAYABLE: Partial<Record<GameId, ComponentType<GameProps>>> = { light: LightGame };
+export const PLAYABLE: Partial<Record<GameId, ComponentType<GameProps>>> = { light: LightGame, rule: RuleGame, story: StoryGame, invent: InventGame, literal: LiteralGame, describe: DescribeGame, veld: VeldGame, sure: SureGame };
 
 type Step = { at: "intro" } | { at: "play" } | { at: "reflect"; r: GameResult } | { at: "draw"; r: GameResult } | { at: "done"; items: GameItem[] };
 

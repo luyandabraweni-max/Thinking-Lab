@@ -24,7 +24,7 @@ export function LearnerHome({ learner, onDone }: { learner: DeviceLearner; onDon
   }, [store, learner]);
   if (space && screen !== "home") {
     const older = space.learner.cohort === "teen" || space.learner.cohort === "adult";
-    const run: LabRun = { id: screen === "lab" ? "light" : screen, band: older ? "older" : "younger", W: (kid, grown) => (older ? grown : kid), reduceMotion: reducedMotion(), say: () => {} };
+    const run: LabRun = { id: screen === "lab" ? "light" : screen, band: older ? "older" : "younger", learnerName: space.learner.nickname, W: (kid, grown) => (older ? grown : kid), reduceMotion: reducedMotion(), say: () => {} };
     if (screen === "lab") return <LabHome W={run.W} onPick={setScreen} onBack={() => setScreen("home")} />;
     return <Exercise key={screen} run={run} onSave={a => space.record(a)} onBack={() => setScreen("lab")} />;
   }

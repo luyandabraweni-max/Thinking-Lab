@@ -11,14 +11,18 @@ apps/app/                 The app for learners, families and specialists
   src/platform/           Composition root: picks demo mode or Supabase, sign-in adapters, shared-device learner lock
   src/modules/auth/       Front door: sign-in for every role
   src/modules/team/       Adults around a learner: learners, messages, health, sharing and consent
-  src/modules/learner/    The learner's own space (games and lessons join here as they are ported)
+  src/modules/learner/    The learner's own space: messages and the Thinking Lab (lessons join here next)
+  src/modules/thinking-lab/  The 8 Thinking Lab games: each game's rules in logic.ts (tested), its screen in React
   native/build.sh         Android and iOS test builds
 packages/data/            The only code that reads or saves data: local store, outbox, sync, access rules, transports
 packages/voice/           Speaking instead of typing: speech engines (web, iOS, Android), commands, voice-filled forms
-packages/ui/              Design system: tokens for every display mode, accessible components
+packages/ui/              Design system: tokens for every display mode, accessible components, and the live stylesheet
+packages/content/         Lessons, word help and skills as data: one pack per level, plus a small catalogue
+packages/adaptation/      The adaptation rules (docs/adaptation-rules.md) as pure functions
 supabase/migrations/      The database: schema, row-level security, audit, sync functions (plain Postgres)
 supabase/tests/           Database access-rule tests, run on a real Postgres in-process (PGlite)
 tools/check-boundaries.mjs  Enforces the module rules below
+tools/export-content.mjs    Exports lessons and styles from the live site; CI fails if they drift
 ```
 
 ### Module rules (checked in CI by `npm run platform:bounds`)
@@ -76,9 +80,16 @@ To connect to Supabase:
 - voice forms on the web, iOS and Android
 - CI builds for Android and iOS
 
+**Also ported:**
+- lessons as data packs (180 lessons, 15 packs)
+- the adaptation rules
+- all 8 Thinking Lab games, played start to finish in tests
+- attempts saved and synced for the adaptation history
+
 **Next**, in the order of the system design's Phase 0:
-1. Port the lessons, the 8 Thinking Lab games, the adaptation layer (`js/core/adapt.js`), the learner flows (check-in, breaks, My way) and the display settings into modules.
-2. Port goals, observations, notes, reports and the rule review into the team module. The database tables already exist.
-3. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.
-4. Accessibility tests (axe) for the new app in every display mode, as the live site has.
-5. Replace the live site once the port reaches parity.
+1. Port the lesson player (`js/learn/lesson.js`), with the adaptation rules applied during lessons.
+2. Port the learner flows (check-in, breaks, My way, avatar), the display settings and read-aloud. Story Weaver's "Me" uses the learner's nickname until the avatar is ported.
+3. Port goals, observations, notes, reports, level suggestions and the rule review into the team module. The database tables already exist.
+4. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.
+5. Accessibility tests (axe) for the new app in every display mode, as the live site has.
+6. Replace the live site once the port reaches parity.

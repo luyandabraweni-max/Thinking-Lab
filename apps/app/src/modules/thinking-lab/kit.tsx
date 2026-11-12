@@ -11,6 +11,8 @@ export type Band = "younger" | "older";
 export interface LabRun {
   id: GameId;
   band: Band;
+  /** The learner's nickname, for Story Weaver's "Me". */
+  learnerName: string;
   /** Respectful wording for older learners: W("game", "activity"). */
   W: (kid: string, grown: string) => string;
   reduceMotion: boolean;
@@ -23,7 +25,27 @@ export const newRec = (title: string, extra: Partial<GameItem> = {}): GameItem =
 export interface GameResult { items: GameItem[]; extra: string; reflect: { q: string; options: string[] } }
 export interface GameProps { run: LabRun; onFinish: (r: GameResult) => void }
 
+/** Escapes text placed inside game art markup. */
+export const esc = (s: string) => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 export const pick = <T,>(a: readonly T[]): T => a[Math.floor(Math.random() * a.length)]!;
+export function shuffle<T>(a: readonly T[]): T[] {
+  const b = [...a];
+  for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j]!, b[i]!]; }
+  return b;
+}
+
+/** Plays frames one after another, or jumps to the last one when movement is off. Stops if the game closes. */
+export function usePlayFrames(run: LabRun) {
+  const t = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  useEffect(() => () => clearTimeout(t.current), []);
+  return (n: number, ms: number, frame: (i: number, last: boolean) => void, done: () => void) => {
+    clearTimeout(t.current);
+    if (run.reduceMotion || n <= 1) { frame(n - 1, true); done(); return; }
+    let i = 0;
+    const tick = () => { frame(i, i === n - 1); i++; t.current = setTimeout(i < n ? tick : done, ms); };
+    tick();
+  };
+}
 
 export function LabHead({ run, step }: { run: LabRun; step?: string }) {
   return <p className="eyebrow">{GAMES[run.id].name}{step ? ` · ${step}` : ""}</p>;
@@ -60,6 +82,13 @@ export const Feedback = ({ text, done }: { text: string; done?: boolean }) =>
   text ? <div className={`feedback${done ? "" : " gentle"}`} role="status">{text}</div> : null;
 
 export const Icon = ({ e }: { e: string }) => <span className="em" aria-hidden="true">{e}</span>;
+
+/**
+ * Game art, kept as the same SVG markup the live site draws so the games look identical. Only for markup built by
+ * our own code from fixed numbers and words: never pass anything a person typed or said.
+ */
+export const Art = ({ svg, className }: { svg: string; className?: string }) =>
+  <span className={className} style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: svg }} />;
 
 /** Runs a step after a pause for an animation, or at once when movement is off. Cancelled if the game closes. */
 export function useLater() {
