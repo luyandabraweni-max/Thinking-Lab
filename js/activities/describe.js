@@ -13,7 +13,7 @@ const DI_FEATURES = {
 // The same clue said as a "not", which older learners hear from Bolt.
 const DI_NOT = { "hat:none": "does NOT wear a hat", "skin:plain": "does NOT have spots or stripes", "body:round": "is NOT tall", "body:tall": "is NOT round" };
 const diClues = () => Object.entries(DI_FEATURES).flatMap(([k, vs]) => vs.map(([v, t]) => ({ k, v, t, f: c => c[k] === v })));
-const diName = c => `a ${c.body} Blip with ${c.eyes === 1 ? "one eye" : c.eyes + " eyes"}, ${c.hat === "hat" ? "a hat" : "no hat"} and ${c.skin === "plain" ? "no pattern" : c.skin}`;
+const diName = c => `a ${c.body} Blip with ${["one eye", "two eyes", "three eyes"][c.eyes - 1]}, ${c.hat === "hat" ? "a hat" : "no hat"} and ${c.skin === "plain" ? "no pattern" : c.skin}`;
 // The fewest true clues that pick out the target from the others.
 function diMinClues(target, all) {
   const mine = diClues().filter(c => c.f(target));
