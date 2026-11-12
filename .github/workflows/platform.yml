@@ -1,7 +1,8 @@
 name: Platform
 
 # The React platform (apps/, packages/, supabase/): checks on every push and pull request that touches it,
-# plus test builds of the Android and iOS apps. Nothing here deploys; the live site's pipeline is ci-cd.yml.
+# plus test builds of the Android and iOS apps. Pushes to the platform branch also publish the new app at its own
+# Netlify address (app--<site>.netlify.app); the live site and its pipeline (ci-cd.yml) are untouched.
 on:
   push:
     paths: ["apps/**", "packages/**", "supabase/**", "tools/**", "js/content/**", "css/app.css", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
@@ -41,6 +42,42 @@ jobs:
           size=$(cat apps/app/dist/assets/index-*.js | gzip -c | wc -c)
           echo "Main bundle: $((size / 1024)) KB gzipped" >> "$GITHUB_STEP_SUMMARY"
           [ "$size" -lt 150000 ] || { echo "::error::Main bundle is $((size / 1024)) KB gzipped; the budget is 150 KB"; exit 1; }
+
+  preview:
+    name: Publish the new app (app--<site>.netlify.app)
+    needs: checks
+    if: github.event_name == 'push' && github.ref_name == 'platform'
+    runs-on: ubuntu-latest
+    environment:
+      name: platform-preview
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Build, connected to Supabase
+        env:
+          # The project URL and publishable key are public by design (every visitor's browser gets them); they are kept
+          # as repository variables, not in the code. Without them the app is built in demo mode.
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
+        run: |
+          [ -n "$VITE_SUPABASE_URL" ] || echo "::warning::VITE_SUPABASE_URL isn't set (Settings > Secrets and variables > Actions > Variables), so this build is in demo mode"
+          npm run app:build
+      - name: Deploy to Netlify
+        id: deploy
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID || vars.NETLIFY_SITE_ID }}
+        run: |
+          npx --yes netlify-cli@17.38.1 deploy --dir=apps/app/dist --alias=app \
+            --message="platform @ ${GITHUB_SHA::7}" --json > deploy.json
+          url=$(python3 -c "import json; d=json.load(open('deploy.json')); print(d.get('deploy_url') or d['url'])")
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "New app published at $url" >> "$GITHUB_STEP_SUMMARY"
 
   android:
     name: Android app (test build)
