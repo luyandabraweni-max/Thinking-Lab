@@ -10,6 +10,8 @@ import { check, passageParts, pickQuestions, shuffle, twoChoices, type Answer } 
 export interface LessonProps {
   unit: Unit; words?: WordHelp; older: boolean; history: Row[]; country: "ZA" | "EU" | null;
   onSave: (attempts: ReturnType<typeof toAttempts>) => Promise<void>; onUnsafe: (where: string) => void; onBack: () => void;
+  /** Reads aloud (and captions) when the learner wants it. */
+  say?: (text: string) => void;
 }
 const STEPS = ["Learn", "Example", "Practice", "Reflect"];
 const Html = ({ html }: { html: string }) => <div dangerouslySetInnerHTML={{ __html: html }} />; // reviewed lesson content from this repo only
@@ -46,6 +48,16 @@ export function Lesson(props: LessonProps) {
   const [step, setStep] = useState<Step>({ at: "intro" }), [recs, setRecs] = useState<GameItem[]>([]);
   const [skips] = useState(() => new Set<string>()); // changes the learner undid this lesson ("fewer")
   const finish = (reflection: string) => { setStep({ at: "done", reflection }); void props.onSave(toAttempts(u.id, recs, reflection)); };
+  // Read each screen aloud as it appears (questions read themselves, below).
+  const say = props.say;
+  useEffect(() => {
+    if (!say) return;
+    if (step.at === "intro") say(`${u.title}. ${u.intention} Press Begin when you are ready.`);
+    else if (step.at === "learn") { const pg = u.lesson[step.i]!; say(`${pg.h}. ${pg.say}`); }
+    else if (step.at === "example") say(step.shown === 1 ? `Worked example. ${u.example.q} ${u.example.steps[0]}` : u.example.steps[step.shown - 1]!);
+    else if (step.at === "reflect") say(`${u.reflect.q} ${u.reflect.options.join(". ")}.`);
+    else if (step.at === "done") say(u.done);
+  }, [step, say, u]);
 
   if (step.at === "intro") return (
     <section className="card">
@@ -122,7 +134,7 @@ export function Lesson(props: LessonProps) {
     </section>);
 }
 
-function QuestionView({ unit: u, words, history, q, qi, count, recs, skips, onDone }: LessonProps & { q: Question; qi: number; count: number; recs: GameItem[]; skips: Set<string>; onDone: (rec: GameItem) => void }) {
+function QuestionView({ unit: u, words, history, say, q, qi, count, recs, skips, onDone }: LessonProps & { q: Question; qi: number; count: number; recs: GameItem[]; skips: Set<string>; onDone: (rec: GameItem) => void }) {
   const area = areaOf(u.subject), fewerKey = `fewer:${area}`;
   const today = new Date().toISOString().slice(0, 10);
   const rows = (): Row[] => [...history, ...recs.map(r => toRow(r, u.id, "", today))];
@@ -150,7 +162,10 @@ function QuestionView({ unit: u, words, history, q, qi, count, recs, skips, onDo
     return () => clearTimeout(t);
   }, [done, ad.sooner]);
 
-  const takeHint = () => { const h = Math.min(q.hints.length, hint + 1); setHint(h); rec.current.hints = h; setFb(""); };
+  const takeHint = () => { const h = Math.min(q.hints.length, hint + 1); setHint(h); rec.current.hints = h; setFb(""); say?.(q.hints[h - 1]!); };
+  useEffect(() => { say?.(q.q); }, [say, q]);
+  useEffect(() => { if (fb) say?.(fb); }, [fb, say]);
+  useEffect(() => { if (offer) say?.(offer); }, [offer, say]);
   const makeEasier = () => {
     setEasy(e => ({ ...e, easier: true }));
     if (choosingType && opts.length > 2) { setOpts(twoChoices(q as Parameters<typeof twoChoices>[0], opts)); setAns(a => ({ ...a, picked: null })); rec.current.mode = "chose (easier)"; }

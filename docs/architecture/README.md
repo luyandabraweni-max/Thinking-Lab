@@ -13,6 +13,9 @@ apps/app/                 The app for learners, families and specialists
   src/modules/team/       Adults around a learner: learners, messages, health, sharing and consent
   src/modules/learner/    The learner's own space: messages and the Thinking Lab (lessons join here next)
   src/modules/thinking-lab/  The 8 Thinking Lab games: each game's rules in logic.ts (tested), its screen in React
+  src/modules/learning/   The lesson menu and lesson player, with the adaptation rules applied during lessons
+  src/modules/my-way/     The learner's display and sound preferences, read-aloud and captions
+  src/modules/safety/     "Who can help me?", helplines, and the "I feel unsafe" response
   native/build.sh         Android and iOS test builds
 packages/data/            The only code that reads or saves data: local store, outbox, sync, access rules, transports
 packages/voice/           Speaking instead of typing: speech engines (web, iOS, Android), commands, voice-filled forms
@@ -87,8 +90,8 @@ To connect to Supabase:
 - attempts saved and synced for the adaptation history
 
 **Next**, in the order of the system design's Phase 0:
-1. Port the lesson player (`js/learn/lesson.js`), with the adaptation rules applied during lessons.
-2. Port the learner flows (check-in, breaks, My way, avatar), the display settings and read-aloud. Story Weaver's "Me" uses the learner's nickname until the avatar is ported.
+1. Port the learner flows still missing: feelings check-in, battery check-in, breaks, talk board, avatar, switch scanning, pointer resting, answering by voice in lessons, and recorded voice clips. Story Weaver's "Me" uses the learner's nickname until the avatar is ported.
+2. Sync My way preferences between devices (today they're saved on the device).
 3. Port goals, observations, notes, reports, level suggestions and the rule review into the team module. The database tables already exist.
 4. Admin screens: appoint safeguarding leads (the database function exists), and warn when an organisation has none.
 5. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.

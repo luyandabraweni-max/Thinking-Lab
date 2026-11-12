@@ -1,6 +1,6 @@
 import { DEMO, LocalStore, MemoryKv } from "@tl/data";
 import type { SpeechEngine } from "@tl/voice";
-import { render, screen, within } from "@testing-library/react";
+import { cleanup, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it } from "vitest";
 import { App } from "./App";
@@ -132,7 +132,6 @@ describe("learners on a shared device", () => {
 
 describe("the Thinking Lab", () => {
   it("lets a learner solve Light the Village, reflect, and saves how they worked", async () => {
-    document.documentElement.dataset.motion = "reduce"; // no waiting for the beam animation
     const user = start();
     await signInDemo(user, "Demo parent");
     await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
@@ -142,6 +141,9 @@ describe("the Thinking Lab", () => {
     await user.click(screen.getByRole("button", { name: "I'm a learner" }));
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: /My way/ })); // no waiting for the beam animation
+    await user.click(screen.getByRole("checkbox", { name: "No movement" }));
+    await user.click(screen.getByRole("button", { name: "Done" }));
     await user.click(await screen.findByRole("button", { name: "Thinking Lab" }));
     await user.click(await screen.findByRole("button", { name: /^Light the Village/ })); // the Thinking Lab loads when opened
     await user.click(await screen.findByRole("button", { name: "Begin" }));
@@ -163,7 +165,6 @@ describe("the Thinking Lab", () => {
     expect(await screen.findByText("You tried a different approach when your first idea did not work.")).toBeInTheDocument();
     const saved = (await store.kv.all("attempts")).map(a => [a.activityId, a.status, a.mode, a.reflection]);
     expect(saved).toEqual([["light", "alone", "placed mirrors", "I tried, then fixed it"], ["light", "support", "placed mirrors", "I tried, then fixed it"]]);
-    delete document.documentElement.dataset.motion;
   });
 });
 
@@ -200,5 +201,39 @@ describe("safeguarding", () => {
     await user.click(screen.getByRole("button", { name: "Mark as followed up" }));
     expect(await screen.findByRole("heading", { name: /Safeguarding: nothing open/ })).toBeInTheDocument();
     expect((await store.kv.outbox()).filter(e => e.table === "concerns")).toHaveLength(1); // queued for the server
+  });
+});
+
+describe("My way", () => {
+  it("changes how things look and sound for the learner, remembers it, and resets for the next person", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    const enter = async () => {
+      await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+      await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+      for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    };
+    await enter();
+    await user.click(await screen.findByRole("button", { name: /My way/ }));
+    await user.click(screen.getByRole("button", { name: "Dark" }));
+    await user.click(screen.getByRole("checkbox", { name: "Grey only (no colours)" }));
+    await user.click(screen.getByRole("checkbox", { name: "Show the words when it talks" }));
+    const root = document.documentElement;
+    expect([root.dataset.theme, root.hasAttribute("data-grey")]).toEqual(["dark", true]);
+    await user.click(screen.getByRole("button", { name: "Done" }));
+    await user.click(screen.getByRole("button", { name: "Thinking Lab" }));
+    await user.click(await screen.findByRole("button", { name: /^Light the Village/ }));
+    await user.click(await screen.findByRole("button", { name: "Begin" }));
+    expect(await screen.findByText("Plan a path for light using mirrors, then test and adjust.")).toHaveClass("captions");
+    cleanup();
+    expect(root.hasAttribute("data-grey")).toBe(false); // the next person on the device starts fresh
+    const again = start(); void again;
+    await enter();
+    await screen.findByRole("button", { name: /My way/ });
+    expect(root.dataset.theme).toBe("dark"); // remembered for this learner
   });
 });

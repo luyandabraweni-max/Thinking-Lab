@@ -98,14 +98,16 @@ export async function pickEngine(): Promise<SpeechEngine | null> {
 }
 
 /** Reads text aloud with the device's own voice, where it has one. */
-export function speak(text: string, lang = DEFAULT_LANG): Promise<void> {
+export function speak(text: string, lang = DEFAULT_LANG, rate = 0.95): Promise<void> {
   const synth = (globalThis as { speechSynthesis?: SpeechSynthesis }).speechSynthesis;
   if (!synth || typeof SpeechSynthesisUtterance === "undefined") return Promise.resolve();
   return new Promise(resolve => {
     synth.cancel();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang; u.rate = 0.95;
+    u.lang = lang; u.rate = rate;
     u.onend = () => resolve(); u.onerror = () => resolve();
     synth.speak(u);
   });
 }
+/** Stops anything being read aloud. */
+export function stopSpeaking() { (globalThis as { speechSynthesis?: SpeechSynthesis }).speechSynthesis?.cancel(); }
