@@ -2,7 +2,8 @@ name: Platform
 
 # The React platform (apps/, packages/, supabase/): checks on every push and pull request that touches it,
 # plus test builds of the Android and iOS apps. Pushes to the platform branch also publish the new app at its own
-# Netlify address (app--<site>.netlify.app); the live site and its pipeline (ci-cd.yml) are untouched.
+# Netlify address (app--<site>.netlify.app), connected to Supabase through the repository variables VITE_SUPABASE_URL
+# and VITE_SUPABASE_ANON_KEY. The live site and its pipeline (ci-cd.yml) are untouched.
 on:
   push:
     paths: ["apps/**", "packages/**", "supabase/**", "tools/**", "js/content/**", "css/app.css", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
