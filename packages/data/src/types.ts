@@ -80,6 +80,16 @@ export interface Observation { id: string; goalId: string; learnerId: string; le
 /** A specialist's note: the family sees it only when it is shared with them. */
 export interface Note { id: string; learnerId: string; authorId: string; authorName: string; body: string; shareFamily: boolean; createdAt: string }
 
+/** How the platform adapts for one learner (docs/adaptation-rules.md). Shared by their family and team. */
+export interface LearnerSettings {
+  id: string; // the learner's id
+  adaptAuto: boolean;
+  adaptOff: Partial<Record<"sooner" | "shorter" | "breaks" | "fewer", boolean>>;
+  levels: Partial<Record<string, number>>; // learning level per area
+  decisions: Record<string, { d: "yes" | "no"; at: number }>;
+  log: { date: string; text: string; by: string }[];
+}
+
 /** A learner said they feel unsafe. Sent to the server for the safeguarding lead; never pulled back to devices. */
 export interface ConcernRow { id: string; learnerId: string; at: string; where: "home" | "lesson" | "talk board" | "tell us" | "help" }
 
@@ -95,6 +105,7 @@ export type Tables = {
   goals: Goal;
   observations: Observation;
   notes: Note;
+  learner_settings: LearnerSettings;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings"];

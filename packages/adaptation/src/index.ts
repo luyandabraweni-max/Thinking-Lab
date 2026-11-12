@@ -114,3 +114,6 @@ export function supportText(r: Row) {
   const f = flagsOf(r);
   return [r[4] ? `${r[4]} hint${r[4] > 1 ? "s" : ""}` : "", f.e ? "made easier" : "", f.a ? "started with fewer choices" : "", f.s ? "moved on" : "", f.b ? "took a break" : "", f.q ? "answered very quickly" : ""].filter(Boolean).join(", ") || "None";
 }
+/** A saved attempt (packages/data) as a history row. */
+export const fromAttempt = (a: { occurredAt: string; activityId: string; status: Status; mode: string; hints: number; reflection: string; flags: Flags | null }): Row =>
+  (a.flags ? [a.occurredAt.slice(0, 10), a.activityId, a.status, a.mode, a.hints, a.reflection, a.flags] : [a.occurredAt.slice(0, 10), a.activityId, a.status, a.mode, a.hints, a.reflection]);

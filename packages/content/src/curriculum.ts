@@ -20,3 +20,5 @@ export const AREAS: Record<Area, [string, string[]]> = {
   creative: ["Creativity", ["Creativity"]]
 };
 export const areaOf = (subject: string): Area => (Object.keys(AREAS) as Area[]).find(a => AREAS[a][1].includes(subject)) ?? "life";
+/** The platform stores age groups as words; the curriculum model uses ranges. */
+export const cohortFor = (c: "early" | "child" | "teen" | "adult"): Cohort => ({ early: "3-6", child: "7-12", teen: "13-18", adult: "19-25" } as const)[c];

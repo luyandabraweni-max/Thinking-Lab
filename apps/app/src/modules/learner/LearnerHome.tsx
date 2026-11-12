@@ -4,7 +4,7 @@ import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 import { useServices, type DeviceLearner } from "../../platform";
 import type { Row } from "@tl/adaptation";
 import type { Unit, WordHelp } from "@tl/content";
-import type { ConcernRow, LearnerSpace, Message } from "@tl/data";
+import { defaultSettings, type ConcernRow, type LearnerSettings, type LearnerSpace, type Message } from "@tl/data";
 import { CaptionBar, MyWay, usePrefs, useSay } from "../my-way";
 import { UNSAFE, UnsafeDialog } from "../safety";
 import type { GameId, LabRun } from "../thinking-lab";
@@ -29,6 +29,7 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
   const { store } = useServices();
   const [space, setSpace] = useState<LearnerSpace>(), [inbox, setInbox] = useState<Message[]>([]), [text, setText] = useState(""), [note, setNote] = useState<ReactNode>("");
   const [screen, setScreen] = useState<"home" | "lab" | "learn" | "myway" | GameId>("home");
+  const [settings, setSettings] = useState<LearnerSettings>(defaultSettings(learner.learnerId));
   const [lesson, setLesson] = useState<{ unit: Unit; words?: WordHelp; history: Row[] } | null>(null), [unsafe, setUnsafe] = useState(false);
   const raiseConcern = (where: ConcernRow["where"]) => { setUnsafe(true); void space?.reportConcern(where); };
   const openLesson = async (id: string) => {
@@ -41,14 +42,16 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
       const adult = await store.account(learner.adultId);
       if (!adult) return setNote("The grown-up who set up this device needs to sign in again.");
       const sp = await store.learnerSpace(adult, learner.learnerId);
-      setSpace(sp); setInbox(await sp.inbox()); await sp.markRead();
+      const [box, st] = await Promise.all([sp.inbox(), sp.settings()]);
+      setSettings(st); setInbox(box); setSpace(sp); // settings first, so the learner never sees the old levels
+      await sp.markRead();
     })().catch((e: Error) => setNote(e.message));
   }, [store, learner]);
   const older = space ? space.learner.cohort === "teen" || space.learner.cohort === "adult" : false;
   if (unsafe) return <UnsafeDialog older={older} country={null} onClose={() => setUnsafe(false)} />;
   if (screen === "myway") return <MyWay prefs={prefs} change={changePrefs} onDone={() => setScreen("home")} />;
-  if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} onBack={() => setLesson(null)} /></Suspense>;
-  if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} onPick={id => void openLesson(id)} onBack={() => setScreen("home")} /></Suspense>;
+  if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} adapt={{ auto: settings.adaptAuto, off: settings.adaptOff }} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} onBack={() => setLesson(null)} /></Suspense>;
+  if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} levels={settings.levels} onPick={id => void openLesson(id)} onBack={() => setScreen("home")} /></Suspense>;
   if (space && screen !== "home") {
     const run: LabRun = { id: screen === "lab" ? "light" : (screen as GameId), band: older ? "older" : "younger", learnerName: space.learner.nickname, W: (kid, grown) => (older ? grown : kid), reduceMotion: !motionAllowed(prefs), say };
     if (screen === "lab") return <Suspense fallback={<Loading />}><LabHome W={run.W} onPick={setScreen} onBack={() => setScreen("home")} /></Suspense>;

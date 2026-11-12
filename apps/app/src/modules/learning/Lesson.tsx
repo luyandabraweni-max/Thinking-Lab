@@ -1,4 +1,4 @@
-import { ADAPT, adaptLive, toRow, type Row } from "@tl/adaptation";
+import { ADAPT, adaptLive, toRow, type AdaptSettings, type Row } from "@tl/adaptation";
 import { areaOf, levelName, type Question, type Unit, type WordHelp } from "@tl/content";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { SafetyNote } from "../safety";
@@ -12,6 +12,8 @@ export interface LessonProps {
   onSave: (attempts: ReturnType<typeof toAttempts>) => Promise<void>; onUnsafe: (where: string) => void; onBack: () => void;
   /** Reads aloud (and captions) when the learner wants it. */
   say?: (text: string) => void;
+  /** What the adults around the learner set: automatic changes on or off, and rules switched off. */
+  adapt?: AdaptSettings;
 }
 const STEPS = ["Learn", "Example", "Practice", "Reflect"];
 const Html = ({ html }: { html: string }) => <div dangerouslySetInnerHTML={{ __html: html }} />; // reviewed lesson content from this repo only
@@ -43,7 +45,7 @@ type Step = { at: "intro" } | { at: "learn"; i: number } | { at: "example"; show
 export function Lesson(props: LessonProps) {
   const { unit: u, words, history, onBack } = props;
   const [skipShort, setSkipShort] = useState(false);
-  const short = !skipShort && !!adaptLive(history, { auto: true }).shorter;
+  const short = !skipShort && !!adaptLive(history, props.adapt ?? { auto: true }).shorter;
   const [qs, setQs] = useState<Question[]>(() => pickQuestions(u.questions, short));
   const [step, setStep] = useState<Step>({ at: "intro" }), [recs, setRecs] = useState<GameItem[]>([]);
   const [skips] = useState(() => new Set<string>()); // changes the learner undid this lesson ("fewer")
@@ -134,12 +136,12 @@ export function Lesson(props: LessonProps) {
     </section>);
 }
 
-function QuestionView({ unit: u, words, history, say, q, qi, count, recs, skips, onDone }: LessonProps & { q: Question; qi: number; count: number; recs: GameItem[]; skips: Set<string>; onDone: (rec: GameItem) => void }) {
+function QuestionView({ unit: u, words, history, say, adapt, q, qi, count, recs, skips, onDone }: LessonProps & { q: Question; qi: number; count: number; recs: GameItem[]; skips: Set<string>; onDone: (rec: GameItem) => void }) {
   const area = areaOf(u.subject), fewerKey = `fewer:${area}`;
   const today = new Date().toISOString().slice(0, 10);
   const rows = (): Row[] => [...history, ...recs.map(r => toRow(r, u.id, "", today))];
   // Adaptation: what the learner did earlier shapes how this question starts.
-  const [ad] = useState(() => adaptLive(rows(), { auto: true }));
+  const [ad] = useState(() => adaptLive(rows(), adapt ?? { auto: true }));
   const choosingType = q.type === "mcq" || q.type === "num";
   const allOpts = () => (q.type === "mcq" || q.type === "num") && q.options ? (q.type === "mcq" && q.fixed ? q.options.map((_, i) => i) : shuffle(q.options.map((_, i) => i))) : [];
   const rec = useRef(newRec(`Question ${qi + 1}`, { mode: q.type === "num" ? "chose" : q.type === "order" ? "ordered" : q.type === "sort" ? "sorted" : "chose" }));

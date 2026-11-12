@@ -43,12 +43,18 @@ export const DEMO_NOTES = [
   { id: id(701), learnerId: DEMO.kid, authorId: DEMO.specialist, authorName: "Demo Specialist", body: "Planned all the robot's steps before starting today. A big step.", shareFamily: true, createdAt: "2026-10-15T14:00:00Z" },
   { id: id(702), learnerId: DEMO.kid, authorId: DEMO.specialist, authorName: "Demo Specialist", body: "Try the pattern activity again with building, not picture choice.", shareFamily: false, createdAt: "2026-10-20T14:00:00Z" }];
 
+// Two days of maths at Grade 5 answered without support, so the adults see a level suggestion (as in the live demo).
+export const DEMO_ATTEMPTS = ["2026-11-01", "2026-11-03"].flatMap((d, k) => [0, 1, 2, 3].map(i => ({
+  id: id(800 + k * 10 + i), learnerId: DEMO.kid, activityId: ["m5-fractions", "m5-bignumbers", "m5-factors", "m5-fractions"][i]!, status: "alone" as const,
+  mode: "chose", hints: 0, flags: null, reflection: "", occurredAt: `${d}T09:0${i}:00Z` })));
+
 /** Loads the demo data as if it came from the server, so none of it is queued to be sent anywhere. */
 export async function seedDemo(store: LocalStore) {
   await store.receive("accounts", DEMO_ACCOUNTS);
   await store.receive("learners", DEMO_LEARNERS);
   await store.receive("messages", DEMO_MESSAGES);
   await store.receive("medications", DEMO_MEDICATIONS);
+  await store.receive("attempts", DEMO_ATTEMPTS);
   await store.receive("goals", DEMO_GOALS);
   await store.receive("observations", DEMO_OBSERVATIONS);
   await store.receive("notes", DEMO_NOTES);

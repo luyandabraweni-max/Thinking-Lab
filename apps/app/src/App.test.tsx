@@ -171,7 +171,7 @@ describe("the Thinking Lab", () => {
     await user.click(screen.getByRole("button", { name: "Finish" }));
     await user.click(screen.getByRole("button", { name: "I tried, then fixed it" }));
     expect(await screen.findByText("You tried a different approach when your first idea did not work.")).toBeInTheDocument();
-    const saved = (await store.kv.all("attempts")).map(a => [a.activityId, a.status, a.mode, a.reflection]);
+    const saved = (await store.kv.all("attempts")).filter(a => a.activityId === "light").map(a => [a.activityId, a.status, a.mode, a.reflection]);
     expect(saved).toEqual([["light", "alone", "placed mirrors", "I tried, then fixed it"], ["light", "support", "placed mirrors", "I tried, then fixed it"]]);
   });
 });
@@ -274,5 +274,33 @@ describe("the support plan", () => {
     expect(screen.getByText("Planned all the robot's steps before starting today. A big step.")).toBeInTheDocument(); // shared
     expect(screen.queryByText("Talked about turn-taking with the class.")).toBeNull(); // not shared
     expect(screen.queryByRole("button", { name: "Add goal" })).toBeNull();
+  });
+});
+
+describe("adapting", () => {
+  it("shows adults a level suggestion with its evidence, applies it only when chosen, and the learner's lessons follow", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Adapting" }));
+    expect(await screen.findByText("Ready for more in maths: try Grade 6")).toBeInTheDocument();
+    expect(screen.getByText(/8 of the last 8 maths questions at Grade 5 were answered without support/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Use this" }));
+    expect(await screen.findByText("Done. Brave Meerkat's maths lessons now use Grade 6.")).toBeInTheDocument();
+    expect(screen.queryByText("Ready for more in maths: try Grade 6")).toBeNull();
+    await user.click(screen.getByText("Switch single rules off"));
+    await user.click(screen.getByRole("checkbox", { name: "Shorter lessons (3 questions)" }));
+    await user.click(screen.getByText(/Changes made/));
+    expect(screen.getByText(/Maths level set to Grade 6 \(Demo Specialist\)/)).toBeInTheDocument();
+    expect((await store.kv.all("learner_settings"))[0]).toMatchObject({ levels: { maths: 6 }, adaptOff: { shorter: true } });
+    // The learner's Learn menu now shows maths at Grade 6
+    await user.click(screen.getByRole("tab", { name: "Team" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Learn" }));
+    expect(await screen.findByRole("heading", { name: /^Maths\s*· Grade 6$/ })).toBeInTheDocument();
   });
 });

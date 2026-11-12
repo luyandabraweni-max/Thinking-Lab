@@ -149,6 +149,22 @@ describe("goals, observations and notes", () => {
   });
 });
 
+describe("learner settings", () => {
+  const settings = (patch: object) => ({ id: kid, adaptAuto: true, adaptOff: {}, levels: {}, decisions: {}, log: [], ...patch });
+  it("are shared by the family and the team, merge their logs, and stay private to them", async () => {
+    expect((await push(PARENT, [{ id: uuid(60), table: "learner_settings", row: settings({ adaptOff: { shorter: true }, log: [{ date: "2026-11-12", text: "Shorter lessons turned off", by: "Demo Parent" }] }) }])).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, [{ id: uuid(61), table: "learner_settings", row: settings({ adaptOff: { shorter: true }, levels: { maths: 4 }, log: [{ date: "2026-11-12", text: "Maths level set to Grade 4", by: "Demo Specialist" }] }) }])).applied).toHaveLength(1);
+    const mine = (await pull(PARENT)).learner_settings as unknown as { levels: object; log: unknown[] }[];
+    expect(mine[0]).toMatchObject({ levels: { maths: 4 } });
+    expect(mine[0]!.log).toHaveLength(2); // both changes kept
+    expect((await push(STRANGER, [{ id: uuid(62), table: "learner_settings", row: settings({ adaptAuto: false }) }])).rejected).toHaveLength(1);
+    expect((await pull(STRANGER)).learner_settings).toEqual([]);
+  });
+  it("refuses kinds of data the server doesn't know", async () => {
+    expect((await push(PARENT, [{ id: uuid(63), table: "drop table", row: {} }])).rejected[0]!.reason).toMatch(/unknown table/);
+  });
+});
+
 describe("sync pull", () => {
   it("returns only what the caller may see", async () => {
     const mine = await pull(PARENT), theirs = await pull(OTHER_PARENT), stranger = await pull(STRANGER);

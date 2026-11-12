@@ -1,11 +1,13 @@
 import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, ConcernRow, Consent, Goal, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, ConcernRow, Consent, Goal, LearnerSettings, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
 
 const now = () => new Date().toISOString();
+export const defaultSettings = (learnerId: string): LearnerSettings => ({ id: learnerId, adaptAuto: true, adaptOff: {}, levels: {}, decisions: {}, log: [] });
+const settingsOf = async (kv: Kv, learnerId: string) => (await kv.all("learner_settings")).find(x => x.id === learnerId) ?? defaultSettings(learnerId);
 const newId = () => crypto.randomUUID();
 
 export class LocalStore {
@@ -58,6 +60,8 @@ export class LearnerSpace {
   async reportConcern(where: ConcernRow["where"]) {
     await this.store.write("concerns", { id: newId(), learnerId: this.learner.id, at: now(), where });
   }
+  /** How the adults around the learner set the adaptation rules and levels. */
+  settings() { return settingsOf(this.store.kv, this.learner.id); }
   /** Earlier work, oldest first: the history the adaptation rules read. */
   async history() {
     return (await this.store.kv.all("attempts")).filter(a => a.learnerId === this.learner.id).sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
@@ -135,6 +139,24 @@ export class Session {
   async setHealthAccess(learnerId: string, userId: string, on: boolean) {
     const L = await this.learnerFor(learnerId, canChangeConsent, "changing who sees health records (only the family can)");
     await this.store.write("learners", { ...L, team: L.team.map(t => (t.userId === userId ? { ...t, healthAccess: on } : t)) });
+  }
+
+  /** The learner's saved work, oldest first, for the adaptation rules and the adults' views. */
+  async attempts(learnerId: string) {
+    await this.learner(learnerId);
+    return (await this.kv.all("attempts")).filter(a => a.learnerId === learnerId).sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
+  }
+
+  // ---------- How the platform adapts for the learner ----------
+  async settings(learnerId: string) { await this.learner(learnerId); return settingsOf(this.kv, learnerId); }
+  /** The family and the team change these; every change is logged with who made it. */
+  async changeSettings(learnerId: string, patch: Partial<Omit<LearnerSettings, "id" | "log">>, logText: string) {
+    const L = await this.learner(learnerId);
+    if (!(canChangeConsent(this.me, L) || isTeamMember(this.me, L))) throw new AccessDenied("changing how the platform adapts");
+    const cur = await settingsOf(this.kv, learnerId);
+    const next: LearnerSettings = { ...cur, ...patch, log: [...cur.log, { date: now().slice(0, 10), text: logText, by: this.me.name }] };
+    await this.store.write("learner_settings", next);
+    return next;
   }
 
   // ---------- Support plan: goals, observations and notes ----------
