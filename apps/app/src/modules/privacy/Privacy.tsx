@@ -1,7 +1,7 @@
 // The privacy notice families read before adding a child (POPIA sections 18 and 72). Plain language, short sections.
 // DRAFT: to be reviewed by the foundation (and ideally a POPIA adviser) before real families use the app.
 
-export const PRIVACY_CONTACT = "milisa@pholoso.africa";
+export const PRIVACY_CONTACT = "know@pholoso.africa";
 export const PRIVACY_VERSION = "2026-11-12";
 
 export function PrivacyNotice() {
