@@ -320,3 +320,25 @@ describe("reports", () => {
     expect(screen.queryByText(/Try the pattern activity again/)).toBeNull(); // a specialists-only note
   });
 });
+
+describe("progress", () => {
+  it("shows the week-by-week chart, the domains by month and a timeline", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Progress" }));
+    expect(await screen.findByRole("heading", { name: "How Brave Meerkat is developing" })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /^Brave Meerkat's activities over the last/ })).toBeInTheDocument();
+    expect(screen.getByRole("region", { name: "Thinking domains by month" })).toBeInTheDocument();
+    expect(screen.getAllByText(/^Session: \d+ activities$/).length).toBeGreaterThan(0);
+    expect(screen.getByText(/Try the pattern activity again/)).toBeInTheDocument(); // the team sees all notes
+  });
+  it("shows the family their shared notes and health entries, and nothing for specialists only", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Progress" }));
+    expect(await screen.findByText(/Started Example medicine/)).toBeInTheDocument();
+    expect(screen.queryByText(/Try the pattern activity again/)).toBeNull();
+  });
+});

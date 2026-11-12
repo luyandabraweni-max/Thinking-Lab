@@ -2,7 +2,7 @@ import { strengths } from "./strengths";
 import type { ReportInput, ReportModel, ReportOptions, ReportSection } from "./types";
 
 // The report model, ported from js/reports/report.js. Health and medication are never included in any report.
-const DOMAINS = ["Communication and Expression", "Logical and Analytical Thinking", "Inquiry and Systems Thinking", "Creativity and Metacognition"];
+export const DOMAINS = ["Communication and Expression", "Logical and Analytical Thinking", "Inquiry and Systems Thinking", "Creativity and Metacognition"];
 const GOAL_STATUS = { todo: "Not started", doing: "Working on it", done: "Achieved" };
 const STATUS_TEXT: Record<string, string> = { alone: "Shown without support", support: "Shown with support", notyet: "Not yet shown", open: "Idea shared (open-ended)" };
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
