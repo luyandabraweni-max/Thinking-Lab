@@ -4,6 +4,12 @@ import { checkPassword, WRONG_PASSWORD, type AuthAdapter } from "./auth";
 
 // Sign-in through Supabase Auth: Google (asking only for name and email) and one-time email codes.
 // The user's account row arrives through sync, so the app works the same offline after the first sign-in.
+/** Waits for a promise, but not for ever. */
+const within = <T,>(p: Promise<T>, ms: number, why: string) => new Promise<T>((resolve, reject) => {
+  const t = setTimeout(() => reject(new Error(why)), ms);
+  p.then(v => { clearTimeout(t); resolve(v); }, e => { clearTimeout(t); reject(e); });
+});
+
 export class SupabaseAuth implements AuthAdapter {
   readonly methods = { google: true, emailCode: true, password: true, demo: false };
   constructor(private client: SupabaseClient, private store: LocalStore, private afterSignIn: () => Promise<unknown>, private link: string | null = null) {}
@@ -15,11 +21,17 @@ export class SupabaseAuth implements AuthAdapter {
     return (await this.store.account(data.user.id)) ?? null;
   }
   async current() { return this.account(); }
+  watch(onSignedIn: () => void) {
+    // Never call Supabase inside this callback (it holds a lock); hand over to the app on the next turn instead.
+    const { data } = this.client.auth.onAuthStateChange(event => { if (event === "SIGNED_IN") setTimeout(onSignedIn, 0); });
+    return () => data.subscription.unsubscribe();
+  }
   async session() {
-    const { data } = await this.client.auth.getSession();
+    const { data } = await within(this.client.auth.getSession(), 10000, "Signing in is taking too long. Please check your internet connection and reload the page.");
     if (!data.session) return null;
     let syncError: Error | null = null;
-    await this.afterSignIn().catch((e: Error) => { syncError = e; }); // fetch the account; offline, the copy on the device is used
+    // Fetch the account; offline, or if the server is slow, the copy on the device is used and sync carries on later.
+    await within(this.afterSignIn(), 8000, "slow").catch((e: Error) => { if (e.message !== "slow") syncError = e; });
     const me = await this.account();
     if (me) return me;
     if (syncError && navigator.onLine) throw syncError; // signed in, but the account couldn't be fetched: say why

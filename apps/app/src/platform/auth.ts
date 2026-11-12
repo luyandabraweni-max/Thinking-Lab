@@ -17,6 +17,8 @@ export interface AuthAdapter {
   setPassword(password: string): Promise<void>;
   /** True when the signed-in adult came in by email and has no password yet. */
   needsPassword(): Promise<boolean>;
+  /** Calls back when this person signs in from another tab (for example, the email link opened in a new tab). */
+  watch?(onSignedIn: () => void): () => void;
   /** Why an email link didn't work (used, expired), read once when the app opens. */
   linkProblem(): string | null;
   /** After a first sign-in: who this person is. Admin roles are set up when an organisation joins. */
