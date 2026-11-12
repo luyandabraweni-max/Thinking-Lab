@@ -30,7 +30,7 @@ jobs:
       - name: Lessons and styles match the live site
         run: |
           node tools/export-content.mjs
-          git diff --exit-code -- packages/content/data packages/ui/src || { echo "::error::Run node tools/export-content.mjs and commit the result"; exit 1; }
+          git diff --exit-code -- packages/content/data packages/ui/src apps/app/src/modules/avatar/legacy-avatar.js || { echo "::error::Run node tools/export-content.mjs and commit the result"; exit 1; }
       - run: npm run platform:types
       - run: npm run platform:lint
       - run: npm run platform:bounds

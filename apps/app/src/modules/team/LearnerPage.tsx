@@ -2,6 +2,7 @@ import type { Account } from "@tl/data";
 import { Button, Card, TabPanel, Tabs } from "@tl/ui";
 import { lazy, Suspense, useState } from "react";
 import { useServices } from "../../platform";
+import { AvatarPicture } from "../avatar";
 import { Health } from "./Health";
 import { Messages } from "./Messages";
 import { Goals, Notes } from "./Plan";
@@ -17,6 +18,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
   const { store } = useServices();
   const [learner, reload, error] = useLoad(() => store.as(me).learner(learnerId), [store, me, learnerId]);
   const [tab, setTab] = useState("messages");
+  const [settings] = useLoad(() => store.as(me).settings(learnerId), [store, me, learnerId]);
   const [concerns] = useLoad(() => store.as(me).concernsOnDevice(learnerId), [store, me, learnerId]);
   if (error) return <Card><p className="tl-error">{error}</p><Button onClick={onBack}>Back</Button></Card>;
   if (!learner) return <Card><p>Loading…</p></Card>;
@@ -25,7 +27,10 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
   return (
     <Card>
       <div className="tl-row"><Button variant="quiet" onClick={onBack}>All learners</Button></div>
-      <h1>{learner.nickname}</h1>
+      <div className="tl-row" style={{ alignItems: "center" }}>
+        {settings?.avatar ? <AvatarPicture look={settings.avatar} size={72} label={`${learner.nickname}'s character, ${settings.avatar.name}`} /> : null}
+        <h1>{learner.nickname}</h1>
+      </div>
       <p className="tl-muted">{learner.curriculum}, {learner.level}</p>
       {concerns?.length ? <div className="safety-alert" role="alert">
         <h2><span aria-hidden="true">🛟</span> Safeguarding: {learner.nickname} said they feel unsafe</h2>

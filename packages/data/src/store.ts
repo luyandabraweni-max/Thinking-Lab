@@ -1,6 +1,6 @@
 import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, RuleReview, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, AvatarLook, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, RuleReview, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -62,6 +62,11 @@ export class LearnerSpace {
   }
   /** How the adults around the learner set the adaptation rules and levels. */
   settings() { return settingsOf(this.store.kv, this.learner.id); }
+  /** Save the character the learner made. Their family and team see it. */
+  async setAvatar(look: AvatarLook) {
+    const cur = await this.settings();
+    await this.store.write("learner_settings", { ...cur, avatar: look });
+  }
   /** The plan an adult made for this session, if there is one. Taking it clears it, so it is used once. */
   async takePlan(): Promise<SessionPlan | null> {
     const cur = await this.settings();

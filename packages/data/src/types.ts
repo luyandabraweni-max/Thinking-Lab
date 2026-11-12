@@ -90,9 +90,13 @@ export interface LearnerSettings {
   log: { date: string; text: string; by: string }[];
   /** The next session's plan, set by an adult; the learner takes it when their next session starts. */
   plan?: SessionPlan | null;
+  /** The character the learner made (shown on their home, and to their family and team). */
+  avatar?: AvatarLook | null;
   /** The plan the learner last took, and when. */
   lastPlan?: (SessionPlan & { used: string }) | null;
 }
+/** A learner's character (the 2to.iQ Avatar System): option names and colour numbers, and a made-up name. */
+export interface AvatarLook { base: string; skin: number; hair: string; hairCol: number; eyes: string; mouth: string; extra: string; cloth: string; prop: string; top: number; bg: number; name: string }
 /** One step: a kind ("lesson", "lab", "finish"), a game ("x:light") or a lesson ("u:<unit id>"), with what the learner sees. */
 export interface PlanStep { key: string; pic: string; label: string }
 export interface SessionPlan { steps: PlanStep[]; by: string; at: string }

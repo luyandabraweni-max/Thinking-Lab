@@ -545,3 +545,31 @@ describe("talk board", () => {
     expect((await store.kv.all("concerns"))[0]).toMatchObject({ where: "talk board" });
   });
 });
+
+describe("my character", () => {
+  it("lets the learner make a character that waves on their home, and sends it for their family and team", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" }));
+    await user.click(screen.getByRole("button", { name: "Make my character" }));
+    expect(await screen.findByRole("heading", { name: "Make your character" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /^Sky watcher/ }));
+    await user.click(screen.getByRole("button", { name: "Robot" }));
+    expect(screen.queryByRole("group", { name: "Skin tone" })).toBeNull(); // robots have no skin or hair
+    await user.clear(screen.getByLabelText("Name for your character"));
+    await user.type(screen.getByLabelText("Name for your character"), "Zuzu<b>!");
+    expect(screen.getByLabelText("Name for your character")).toHaveValue("Zuzub"); // only letters, numbers, spaces
+    await user.click(screen.getByRole("button", { name: "I like it" }));
+    await user.click(await screen.findByRole("button", { name: "Wave and say hello, Zuzub" }));
+    expect(screen.getByText("Hi, I'm Zuzub!")).toBeInTheDocument();
+    expect((await store.kv.all("learner_settings"))[0]).toMatchObject({ avatar: { base: "robot", name: "Zuzub", prop: "telescope" } });
+    expect((await store.kv.outbox()).some(e => e.table === "learner_settings")).toBe(true); // goes to the server for the family and team
+  });
+});

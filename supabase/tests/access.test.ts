@@ -168,6 +168,12 @@ describe("learner settings", () => {
     expect(((await pull(SPECIALIST)).learner_settings as unknown as { plan: unknown; lastPlan: { used: string } }[])[0]).toMatchObject({ plan: null, lastPlan: { used: "2026-11-13" } });
     expect((await push(SPECIALIST, [{ id: uuid(66), table: "learner_settings", row: settings({ plan: { ...plan, steps: Array(6).fill(step) } }) }])).rejected).toHaveLength(1);
   });
+  it("keep the learner's character, and an older device that sends none doesn't wipe it", async () => {
+    const look = { base: "robot", skin: 0, hair: "short", hairCol: 0, eyes: "brown", mouth: "smile", extra: "none", cloth: "tee", prop: "telescope", top: 1, bg: 2, name: "Zuzu" };
+    expect((await push(PARENT, [{ id: uuid(67), table: "learner_settings", row: settings({ avatar: look }) }])).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, [{ id: uuid(68), table: "learner_settings", row: settings({ adaptAuto: false }) }])).applied).toHaveLength(1);
+    expect(((await pull(SPECIALIST)).learner_settings as unknown as { avatar: unknown }[])[0]!.avatar).toEqual(look);
+  });
   it("refuses kinds of data the server doesn't know", async () => {
     expect((await push(PARENT, [{ id: uuid(63), table: "drop table", row: {} }])).rejected[0]!.reason).toMatch(/unknown table/);
   });

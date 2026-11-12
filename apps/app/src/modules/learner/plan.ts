@@ -5,6 +5,7 @@ import type { PlanStep } from "@tl/data";
 export const PLAN_KINDS: PlanStep[] = [
   { key: "lesson", pic: "📚", label: "A lesson" },
   { key: "lab", pic: "🧪", label: "Thinking Lab" },
+  { key: "avatar", pic: "🎨", label: "My character" },
   { key: "finish", pic: "🏁", label: "Finish" }
 ];
 export const PLAN_MAX = 5;
