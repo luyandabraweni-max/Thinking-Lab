@@ -73,6 +73,13 @@ export interface Attempt {
   flags: { e?: 1; a?: 1; s?: 1; b?: 1; q?: number } | null; reflection: string; occurredAt: string;
 }
 
+/** A support-plan goal (Individual Support Plan), set by a teacher or specialist on the learner's team. */
+export interface Goal { id: string; learnerId: string; text: string; area: string; status: "todo" | "doing" | "done"; target: string; createdBy: string; createdAt: string }
+/** What the team saw, against a goal (append only). */
+export interface Observation { id: string; goalId: string; learnerId: string; level: "notyet" | "support" | "alone"; note: string; by: string; byName: string; at: string }
+/** A specialist's note: the family sees it only when it is shared with them. */
+export interface Note { id: string; learnerId: string; authorId: string; authorName: string; body: string; shareFamily: boolean; createdAt: string }
+
 /** A learner said they feel unsafe. Sent to the server for the safeguarding lead; never pulled back to devices. */
 export interface ConcernRow { id: string; learnerId: string; at: string; where: "home" | "lesson" | "talk board" | "tell us" | "help" }
 
@@ -85,6 +92,9 @@ export type Tables = {
   health_log: HealthEntry;
   attempts: Attempt;
   concerns: ConcernRow;
+  goals: Goal;
+  observations: Observation;
+  notes: Note;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes"];

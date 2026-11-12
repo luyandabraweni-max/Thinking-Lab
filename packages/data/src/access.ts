@@ -19,3 +19,5 @@ export const canChangeConsent = (me: Account, L: Learner) => isGuardian(me, L);
 export class AccessDenied extends Error {
   constructor(what: string) { super(`Not allowed: ${what}`); this.name = "AccessDenied"; }
 }
+/** Support-plan goals, observations and notes are written by teachers and specialists on the learner's team. */
+export const canEditPlan = (me: Account, L: Learner) => isTeamMember(me, L);

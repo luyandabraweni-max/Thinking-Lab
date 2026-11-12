@@ -22,6 +22,18 @@ describe("access", () => {
   });
 });
 
+describe("support plan", () => {
+  it("is written by the team, and the family sees goals and shared notes only", async () => {
+    const parent = await who(DEMO.parent), specialist = await who(DEMO.specialist);
+    await expect(parent.addGoal(DEMO.kid, { text: "Anything", area: "Communication" })).rejects.toBeInstanceOf(AccessDenied);
+    const g = await specialist.addGoal(DEMO.kid, { text: "Waits for a turn in a game", area: "Social and emotional" });
+    await specialist.observe(DEMO.kid, g.id, "alone", "Waited twice without a prompt.");
+    expect((await parent.goals(DEMO.kid)).find(x => x.id === g.id)!.status).toBe("doing"); // seen done alone: now being worked on
+    expect((await parent.notes(DEMO.kid)).map(n => n.shareFamily)).toEqual([true]);
+    expect(await specialist.notes(DEMO.kid)).toHaveLength(2);
+  });
+});
+
 describe("offline first", () => {
   it("saves every change on the device and queues it for the server", async () => {
     const parent = await who(DEMO.parent);

@@ -129,6 +129,26 @@ describe("safeguarding concerns", () => {
   });
 });
 
+describe("goals, observations and notes", () => {
+  const goal = () => ({ id: uuid(40), learnerId: kid, text: "Follows a 3-step plan without reminders", area: "Logical and Analytical Thinking", status: "todo", target: "", createdAt: "2026-11-12T08:00:00Z" });
+  it("are set by the team, not the family", async () => {
+    expect((await push(PARENT, [{ id: uuid(41), table: "goals", row: goal() }])).rejected).toHaveLength(1);
+    expect((await push(SPECIALIST, [{ id: uuid(42), table: "goals", row: goal() }])).applied).toEqual([uuid(42)]);
+    expect((await push(SPECIALIST, [{ id: uuid(43), table: "observations", row: { id: uuid(44), goalId: uuid(40), learnerId: kid, level: "support", note: "With one picture prompt.", at: "2026-11-12T09:00:00Z" } }])).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, [{ id: uuid(45), table: "goals", row: { ...goal(), status: "doing" } }])).applied).toHaveLength(1);
+    const g = (await pull(PARENT)).goals as unknown as { status: string }[];
+    expect(g.map(x => x.status)).toEqual(["doing"]); // the family sees the goals and their progress
+  });
+  it("keep specialist-only notes from the family", async () => {
+    const note = (n: number, shareFamily: boolean) => ({ id: uuid(n), table: "notes", row: { id: uuid(n + 1), learnerId: kid, body: shareFamily ? "Shared note" : "Team-only note", shareFamily, createdAt: "2026-11-12T10:00:00Z" } });
+    expect((await push(SPECIALIST, [note(50, true), note(52, false)])).applied).toHaveLength(2);
+    const forFamily = ((await pull(PARENT)).notes as unknown as { body: string }[]).map(n => n.body), forTeam = ((await pull(SPECIALIST)).notes as unknown as { body: string }[]).map(n => n.body);
+    expect(forFamily).toEqual(["Shared note"]);
+    expect(forTeam.sort()).toEqual(["Shared note", "Team-only note"]);
+    expect(((await pull(STRANGER)).notes as unknown[])).toEqual([]);
+  });
+});
+
 describe("sync pull", () => {
   it("returns only what the caller may see", async () => {
     const mine = await pull(PARENT), theirs = await pull(OTHER_PARENT), stranger = await pull(STRANGER);

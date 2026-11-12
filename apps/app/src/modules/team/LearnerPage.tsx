@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useServices } from "../../platform";
 import { Health } from "./Health";
 import { Messages } from "./Messages";
+import { Goals, Notes } from "./Plan";
 import { Sharing } from "./Sharing";
 import { useLoad } from "./use-load";
 
@@ -14,7 +15,8 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
   const [concerns] = useLoad(() => store.as(me).concernsOnDevice(learnerId), [store, me, learnerId]);
   if (error) return <Card><p className="tl-error">{error}</p><Button onClick={onBack}>Back</Button></Card>;
   if (!learner) return <Card><p>Loading…</p></Card>;
-  const tabs = [{ id: "messages", label: "Messages" }, { id: "health", label: "Health" }, { id: "sharing", label: me.role === "guardian" ? "Sharing" : "Team" }];
+  const team = me.role === "teacher" || me.role === "specialist";
+  const tabs = [{ id: "messages", label: "Messages" }, { id: "goals", label: "Goals" }, ...(team ? [{ id: "notes", label: "Notes" }] : []), { id: "health", label: "Health" }, { id: "sharing", label: team ? "Team" : "Sharing" }];
   return (
     <Card>
       <div className="tl-row"><Button variant="quiet" onClick={onBack}>All learners</Button></div>
@@ -27,7 +29,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
       </div> : null}
       <Tabs label={`${learner.nickname}'s sections`} tabs={tabs} current={tab} onChange={setTab} />
       <TabPanel id={tab}>
-        {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "health" ? <Health me={me} learner={learner} /> : <Sharing me={me} learner={learner} onChanged={reload} />}
+        {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "goals" ? <Goals me={me} learner={learner} /> : tab === "notes" ? <Notes me={me} learner={learner} /> : tab === "health" ? <Health me={me} learner={learner} /> : <Sharing me={me} learner={learner} onChanged={reload} />}
       </TabPanel>
     </Card>
   );

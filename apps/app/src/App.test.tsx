@@ -237,3 +237,34 @@ describe("My way", () => {
     await waitFor(() => expect(root.dataset.theme).toBe("dark")); // remembered for this learner (loads just after the screen)
   });
 });
+
+describe("the support plan", () => {
+  it("lets a specialist set goals, observe and write notes, and shows the family the goals and shared notes only", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Goals" }));
+    expect(await screen.findByText("Follows a 3-step plan without reminders")).toBeInTheDocument();
+    await user.type(screen.getByRole("textbox", { name: /^Goal/ }), "Waits for a turn in a game");
+    await user.click(screen.getByRole("button", { name: "Add goal" }));
+    const item = (await screen.findByText("Waits for a turn in a game")).closest("li")!;
+    await user.click(within(item).getByText("Add an observation"));
+    await user.click(within(item).getByLabelText(/On their own/));
+    await user.click(within(item).getByRole("button", { name: "Save observation" }));
+    expect(await within(item).findByText(/Working on it/)).toBeInTheDocument(); // seen done alone
+    expect(within(item).getByRole("img", { name: /On their own/ })).toBeInTheDocument();
+    await user.click(screen.getByRole("tab", { name: "Notes" }));
+    await user.type(await screen.findByLabelText("New note"), "Talked about turn-taking with the class.");
+    await user.click(screen.getByRole("button", { name: "Save note" }));
+    expect(await screen.findByText("Talked about turn-taking with the class.")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    expect(screen.queryByRole("tab", { name: "Notes" })).toBeNull();
+    await user.click(screen.getByRole("tab", { name: "Goals" }));
+    expect(await screen.findByText("Waits for a turn in a game")).toBeInTheDocument();
+    expect(screen.getByText("Planned all the robot's steps before starting today. A big step.")).toBeInTheDocument(); // shared
+    expect(screen.queryByText("Talked about turn-taking with the class.")).toBeNull(); // not shared
+    expect(screen.queryByRole("button", { name: "Add goal" })).toBeNull();
+  });
+});

@@ -1,6 +1,6 @@
-import { AccessDenied, canChangeConsent, canEditHealth, canSeeHealth, canSeeLearner } from "./access";
+import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, ConcernRow, Consent, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, ConcernRow, Consent, Goal, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -135,6 +135,51 @@ export class Session {
   async setHealthAccess(learnerId: string, userId: string, on: boolean) {
     const L = await this.learnerFor(learnerId, canChangeConsent, "changing who sees health records (only the family can)");
     await this.store.write("learners", { ...L, team: L.team.map(t => (t.userId === userId ? { ...t, healthAccess: on } : t)) });
+  }
+
+  // ---------- Support plan: goals, observations and notes ----------
+  private planWrite(learnerId: string) { return this.learnerFor(learnerId, canEditPlan, "changing the support plan (only the learner's teachers and specialists can)"); }
+  async goals(learnerId: string) {
+    await this.learner(learnerId);
+    return (await this.kv.all("goals")).filter(g => g.learnerId === learnerId).sort((a, b) => a.createdAt.localeCompare(b.createdAt));
+  }
+  async observations(learnerId: string) {
+    await this.learner(learnerId);
+    return (await this.kv.all("observations")).filter(o => o.learnerId === learnerId).sort((a, b) => a.at.localeCompare(b.at));
+  }
+  async addGoal(learnerId: string, input: { text: string; area: string; target?: string }) {
+    await this.planWrite(learnerId);
+    const text = input.text.trim();
+    if (!text) throw new Error("A goal needs some words.");
+    const g: Goal = { id: newId(), learnerId, text: text.slice(0, 500), area: input.area, status: "todo", target: input.target ?? "", createdBy: this.me.id, createdAt: now() };
+    await this.store.write("goals", g);
+    return g;
+  }
+  async setGoalStatus(learnerId: string, goalId: string, status: Goal["status"]) {
+    await this.planWrite(learnerId);
+    const g = (await this.kv.all("goals")).find(x => x.id === goalId && x.learnerId === learnerId);
+    if (g && g.status !== status) await this.store.write("goals", { ...g, status });
+  }
+  /** What the team saw. Seeing it done alone moves a goal that hadn't started to "working on it". */
+  async observe(learnerId: string, goalId: string, level: Observation["level"], note = "") {
+    await this.planWrite(learnerId);
+    const o: Observation = { id: newId(), goalId, learnerId, level, note: note.trim().slice(0, 400), by: this.me.id, byName: this.me.name, at: now() };
+    await this.store.write("observations", o);
+    if (level === "alone") { const g = (await this.kv.all("goals")).find(x => x.id === goalId); if (g?.status === "todo") await this.store.write("goals", { ...g, status: "doing" }); }
+    return o;
+  }
+  /** The team sees every note; the family sees only notes shared with them. */
+  async notes(learnerId: string) {
+    const L = await this.learner(learnerId), team = isTeamMember(this.me, L);
+    return (await this.kv.all("notes")).filter(n => n.learnerId === learnerId && (team || n.shareFamily)).sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  }
+  async addNote(learnerId: string, body: string, shareFamily: boolean) {
+    await this.planWrite(learnerId);
+    const text = body.trim();
+    if (!text) throw new Error("A note needs some words.");
+    const n: Note = { id: newId(), learnerId, authorId: this.me.id, authorName: this.me.name, body: text.slice(0, 4000), shareFamily, createdAt: now() };
+    await this.store.write("notes", n);
+    return n;
   }
 
   /** Concerns the learner raised on this device (see LearnerSpace.reportConcern). */
