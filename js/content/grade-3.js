@@ -256,7 +256,7 @@ const UNITS_G3 = [
     questions: [
       { type: "mcq", q: "Which is the safest place to play?", options: ["A park", "A building site", "A railway line"], answer: 0, hints: ["Which one has no machines or trains?", "Parks are made for playing.", "A park."], explain: "A park is a safe place to play." },
       { type: "mcq", q: "You see a fallen electric wire. What should you do?", options: ["Stay away and tell a grown-up", "Pick it up", "Jump over it"], answer: 0, hints: ["Electricity can kill.", "Do not touch.", "Stay away and tell a grown-up."], explain: "Stay away and tell a grown-up." },
-      { type: "mcq", q: "What does a skull sign on a bottle mean?", pics: ["☠️"], options: ["Poison", "Sweets", "Water"], answer: 0, hints: ["It is a warning.", "It can make you very sick.", "Poison."], explain: "A skull means poison." },
+      { type: "mcq", q: "What does a skull sign on a bottle mean?", pics: ["☠️", "🍬", "💧"], options: ["Poison", "Sweets", "Water"], answer: 0, hints: ["It is a warning.", "It can make you very sick.", "Poison."], explain: "A skull means poison." },
       { type: "mcq", q: "What does a flame sign mean?", options: ["It can catch fire", "It is cold", "It is food"], answer: 0, hints: ["A flame is fire.", "Keep it away from heat.", "It can catch fire."], explain: "A flame sign means flammable: it can catch fire." },
       { type: "sort", q: "Sort into safe and dangerous places.", items: ["School playground", "Rubbish dump", "Backyard", "Busy road"], bins: ["Safe", "Dangerous"], answer: [0, 1, 0, 1], hints: ["Where could you get hurt?", "Dumps and roads are dangerous.", "Playgrounds and yards are safer."], explain: "Playgrounds and backyards are safer places to play." }
     ],
