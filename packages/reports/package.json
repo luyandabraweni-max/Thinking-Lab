@@ -1,0 +1,8 @@
+{
+  "name": "@tl/reports",
+  "private": true,
+  "description": "Learner reports: one model for the on-screen preview, the PDF and the Word file, made on the device with no library.",
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@tl/adaptation": "*" }
+}

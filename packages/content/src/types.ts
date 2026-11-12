@@ -29,6 +29,6 @@ export interface Unit {
   done: string;
   passage?: string;
 }
-export type CatalogueEntry = Pick<Unit, "id" | "grade" | "subject" | "title" | "topic" | "domain" | "category"> & { pack: string };
+export type CatalogueEntry = Pick<Unit, "id" | "grade" | "subject" | "title" | "topic" | "domain" | "category" | "caps"> & { pack: string };
 export interface WordHelp { words?: [string, string, string][]; phrases?: [string, string][] }
 export interface Pack { level: string; units: Unit[]; words: Record<string, WordHelp> }

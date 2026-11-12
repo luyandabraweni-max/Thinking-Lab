@@ -25,3 +25,34 @@ export const GAME_LIST = list;
 export const GAMES = Object.fromEntries(list.map(g => [g.id, g])) as Record<GameId, GameInfo>;
 export const THINK: Record<GameId, string> = { light: "Where does the light need to turn?", rule: "What do all the YES things have in common?", story: "How would you feel if you were in the story?", invent: "What could make it even better?",
   literal: "What will Bolt do with that step?", veld: "What changes first, and what does that change next?", describe: "What makes yours different from the others?", sure: "How do you know?" };
+
+// For reports and families (ported from js/screens/dashboard.js and js/activities/curriculum.js).
+export const HOME_IDEA: Record<GameId, string> = {
+  light: "Shine a torch at a small mirror together and try to make the light land on a spot on the wall.",
+  rule: "Play 'secret rule': sort spoons, socks or toys by a rule you keep secret, and let them work it out.",
+  story: "Tell a story together, taking turns to say what happens next and how someone feels.",
+  invent: "Build something from recycling that carries water from one cup to another, then make it better.",
+  literal: "Ask for exact steps for a simple job, like making toast, and follow them exactly, even when it's funny.",
+  veld: "Talk about a food chain you can see, like birds eating insects. What would happen if one disappeared?",
+  describe: "Hide a small toy and describe it without saying its name. Can they find it? Then swap.",
+  sure: "When someone says 'I'm sure', ask 'How do you know?' and check together."
+};
+// Curriculum links: proposed, awaiting specialist confirmation. Ages 3-4: NCF; 5-18: CAPS; 19-25: domains only.
+const CAPS_LINK: Record<GameId, string> = {
+  light: "Mathematics: Space and Shape (position and direction); Natural Sciences and Technology: Energy and Change (light travels in straight lines and reflects)",
+  rule: "Mathematics: Data Handling (sorting and classifying by properties); Natural Sciences: the scientific process (fair tests)",
+  story: "Home Language: listening and speaking, and writing and presenting (stories); Life Skills: Personal and Social Well-being (feelings)",
+  invent: "Technology: the design process (investigate, design, make, evaluate) and Systems and Control; Natural Sciences: Matter and Materials",
+  literal: "Mathematics: Patterns, Functions and Algebra (following and writing steps); Technology: algorithms and coding (to confirm)",
+  veld: "Natural Sciences and Technology: Life and Living (food chains and ecosystems); Social Sciences Geography: weather and climate",
+  describe: "Home Language: listening and speaking (describing, and following a description); Mathematics: properties of shapes",
+  sure: "No direct content area: thinking about thinking, used across subjects; Mathematics: number patterns and comparing lengths"
+};
+const NCF_LINK: Record<GameId, string> = { light: "Exploring mathematics; Knowledge and understanding of the world", rule: "Exploring mathematics; Knowledge and understanding of the world", story: "Communication; Creativity; Identity and belonging",
+  invent: "Knowledge and understanding of the world; Creativity", literal: "Communication; Exploring mathematics", veld: "Knowledge and understanding of the world", describe: "Communication", sure: "Well-being; Exploring mathematics" };
+export function curriculumLink(id: GameId, cohort: string) {
+  if (cohort === "3-6") return `NCF birth to four (ages 3 to 4): ${NCF_LINK[id]}. CAPS Grade R (ages 5 to 6): ${CAPS_LINK[id]}.`;
+  if (cohort === "7-12") return `CAPS Foundation and Intermediate Phase: ${CAPS_LINK[id]}.`;
+  if (cohort === "13-18") return `CAPS Senior and FET Phase (IEB schools also follow CAPS). Related area: ${CAPS_LINK[id]}. Subject names change in older phases; to confirm with specialists.`;
+  return "No school curriculum after 18. Linked to the four 2to.iQ domains only.";
+}

@@ -22,6 +22,7 @@ packages/voice/           Speaking instead of typing: speech engines (web, iOS, 
 packages/ui/              Design system: tokens for every display mode, accessible components, and the live stylesheet
 packages/content/         Lessons, word help and skills as data: one pack per level, plus a small catalogue
 packages/adaptation/      The adaptation rules (docs/adaptation-rules.md) as pure functions
+packages/reports/         Reports: one model for the preview, the PDF and the Word file, made on the device
 supabase/migrations/      The database: schema, row-level security, audit, sync functions (plain Postgres)
 supabase/tests/           Database access-rule tests, run on a real Postgres in-process (PGlite)
 tools/check-boundaries.mjs  Enforces the module rules below
@@ -92,7 +93,7 @@ To connect to Supabase:
 **Next**, in the order of the system design's Phase 0:
 1. Port the learner flows still missing: feelings check-in, battery check-in, breaks, talk board, avatar, switch scanning, pointer resting, answering by voice in lessons, and recorded voice clips. Story Weaver's "Me" uses the learner's nickname until the avatar is ported.
 2. Sync My way preferences between devices (today they're saved on the device).
-3. Port reports (PDF and Word), level suggestions, development charts, the next-session plan and the rule review into the team module. Goals, observations, notes and the admin screen are done.
+3. Port the development charts, the next-session plan and the rule review into the team module. Goals, observations, notes, reports, level suggestions and the admin screen are done.
 4. Adding staff to an organisation: today staff join a school only when an admin adds their membership in the database.
 5. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.
 6. Accessibility tests (axe) for the new app in every display mode, as the live site has.

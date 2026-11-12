@@ -15,6 +15,7 @@
     "@tl/adaptation": "*",
     "@tl/content": "*",
     "@tl/data": "*",
+    "@tl/reports": "*",
     "@tl/ui": "*",
     "@tl/voice": "*",
     "react": "19.3.1",

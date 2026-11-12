@@ -304,3 +304,19 @@ describe("adapting", () => {
     expect(await screen.findByRole("heading", { name: /^Maths\s*· Grade 6$/ })).toBeInTheDocument();
   });
 });
+
+describe("reports", () => {
+  it("previews a report and never includes health records", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Report" }));
+    expect(await screen.findByRole("heading", { name: "Learning report for Brave Meerkat" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Individual support goals" })).toBeInTheDocument();
+    expect(screen.getByText("Follows a 3-step plan without reminders")).toBeInTheDocument();
+    expect(screen.queryByText(/Example medicine/)).toBeNull();
+    await user.selectOptions(screen.getByLabelText("Type of report"), "family");
+    expect(await screen.findByRole("heading", { name: "Family summary for Brave Meerkat" })).toBeInTheDocument();
+    expect(screen.queryByText(/Try the pattern activity again/)).toBeNull(); // a specialists-only note
+  });
+});

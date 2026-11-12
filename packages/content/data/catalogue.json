@@ -7,6 +7,7 @@
   "topic": "Numeric patterns",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 4 Mathematics, Term 1: Numeric patterns, including flow diagrams (Patterns, Functions and Algebra)",
   "pack": "grade-4"
  },
  {
@@ -17,6 +18,7 @@
   "topic": "Common fractions",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 5 Mathematics: Common fractions (compare and order to twelfths, add and subtract with the same denominator, mixed numbers, fractions of whole numbers)",
   "pack": "grade-5"
  },
  {
@@ -27,6 +29,7 @@
   "topic": "Equivalent forms and percentages",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 6 Mathematics: Common fractions, decimal fractions and percentages (tenths and hundredths, equivalent forms, percentages of whole numbers)",
   "pack": "grade-6"
  },
  {
@@ -37,6 +40,7 @@
   "topic": "Folklore, nouns and adjectives",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 4 English Home Language, Term 1: Folklore (reading and viewing); language structures: common and proper nouns, adjectives",
   "pack": "grade-4"
  },
  {
@@ -47,6 +51,7 @@
   "topic": "Information text, verbs and tense",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 5 English Home Language, Term 1: Information text with visuals (reading and viewing); language structures: verbs and tense",
   "pack": "grade-5"
  },
  {
@@ -57,6 +62,7 @@
   "topic": "Advertisements, fact and opinion",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 6 English Home Language, Term 1: Persuasive text (advertisement), reading and viewing critically; language structures: degrees of comparison, imperatives",
   "pack": "grade-6"
  },
  {
@@ -67,6 +73,7 @@
   "topic": "Life and Living",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 4 Natural Sciences and Technology, Term 1, Life and Living: Living and non-living things; what plants need to grow",
   "pack": "grade-4"
  },
  {
@@ -77,6 +84,7 @@
   "topic": "Life and Living",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 5 Natural Sciences and Technology, Term 1, Life and Living: Food chains (producers, consumers, herbivores, carnivores, omnivores)",
   "pack": "grade-5"
  },
  {
@@ -87,6 +95,7 @@
   "topic": "Photosynthesis",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 6 Natural Sciences and Technology, Term 1, Life and Living: Photosynthesis (plants make their own food)",
   "pack": "grade-6"
  },
  {
@@ -97,6 +106,7 @@
   "topic": "Personal and Social Well-being: personal strengths",
   "domain": "Creativity and Metacognition",
   "category": "Reflection",
+  "caps": "CAPS Grade 4 Life Skills, Term 1, Personal and Social Well-being: Personal strengths (own strengths and those of others; using strengths to improve)",
   "pack": "grade-4"
  },
  {
@@ -107,6 +117,7 @@
   "topic": "Personal and Social Well-being: coping with emotions",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 5 Life Skills, Term 1, Personal and Social Well-being: Coping with emotions (anger, disappointment, sadness; empathy and compassion)",
   "pack": "grade-5"
  },
  {
@@ -117,6 +128,7 @@
   "topic": "Personal and Social Well-being: peer pressure",
   "domain": "Creativity and Metacognition",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 6 Life Skills, Term 1, Personal and Social Well-being: Peer pressure (examples, and appropriate responses)",
   "pack": "grade-6"
  },
  {
@@ -127,6 +139,7 @@
   "topic": "Whole numbers to 4 digits",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 4 Mathematics, Term 1: Whole numbers (place value to 4 digits; rounding to the nearest 10, 100 and 1 000; ordering and comparing)",
   "pack": "grade-4"
  },
  {
@@ -137,6 +150,7 @@
   "topic": "Common fractions",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 4 Mathematics, Term 2: Common fractions (halves to eighths; comparing and ordering; equivalent fractions; adding with the same denominator)",
   "pack": "grade-4"
  },
  {
@@ -147,6 +161,7 @@
   "topic": "Whole numbers to 6 digits",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 5 Mathematics: Whole numbers (place value to 6 digits; ordering and comparing; rounding to the nearest 5, 10, 100 and 1 000)",
   "pack": "grade-5"
  },
  {
@@ -157,6 +172,7 @@
   "topic": "Multiples and factors to 100",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 5 Mathematics: Whole numbers, properties of numbers (multiples and factors of 2-digit numbers to at least 100)",
   "pack": "grade-5"
  },
  {
@@ -167,6 +183,7 @@
   "topic": "Properties of whole numbers",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 6 Mathematics: Whole numbers, properties of numbers (prime numbers to at least 100; prime factors of numbers to at least 100)",
   "pack": "grade-6"
  },
  {
@@ -177,6 +194,7 @@
   "topic": "Calculations with brackets",
   "domain": "Logical and Analytical Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 6 Mathematics: Whole numbers, calculations with multiple operations (including brackets)",
   "pack": "grade-6"
  },
  {
@@ -187,6 +205,7 @@
   "topic": "Poetry, rhyme and sound words",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 4 English Home Language, Term 1: Poetry (reading and viewing); rhyme, rhythm, repetition and sound words",
   "pack": "grade-4"
  },
  {
@@ -197,6 +216,7 @@
   "topic": "Instructional text, command verbs",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 4 English Home Language, Term 1: Instructional text (reading and viewing); command verbs and sequence words",
   "pack": "grade-4"
  },
  {
@@ -207,6 +227,7 @@
   "topic": "Newspaper article, the 5 Ws",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 5 English Home Language, Term 1: Newspaper or magazine article (reading and viewing); direct speech",
   "pack": "grade-5"
  },
  {
@@ -217,6 +238,7 @@
   "topic": "Poetry and similes",
   "domain": "Communication and Expression",
   "category": "Creativity",
+  "caps": "CAPS Grade 5 English Home Language, Term 1: Poetry (reading and viewing); figurative language: similes",
   "pack": "grade-5"
  },
  {
@@ -227,6 +249,7 @@
   "topic": "Drama, play scripts and stage directions",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 6 English Home Language, Term 1: Drama (reading and viewing); features of a play script",
   "pack": "grade-6"
  },
  {
@@ -237,6 +260,7 @@
   "topic": "Metaphor and personification",
   "domain": "Communication and Expression",
   "category": "Creativity",
+  "caps": "CAPS Grade 6 English Home Language, Term 1: Poetry (reading and viewing); figurative language: metaphor and personification",
   "pack": "grade-6"
  },
  {
@@ -247,6 +271,7 @@
   "topic": "Life and Living",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 4 Natural Sciences and Technology, Term 1, Life and Living: Habitats of animals (different habitats; the need for a habitat)",
   "pack": "grade-4"
  },
  {
@@ -257,6 +282,7 @@
   "topic": "Matter and Materials",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 4 Natural Sciences and Technology, Term 2, Matter and Materials: Materials around us (solids, liquids and gases)",
   "pack": "grade-4"
  },
  {
@@ -267,6 +293,7 @@
   "topic": "Life and Living",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 5 Natural Sciences and Technology, Term 1, Life and Living: Life cycles (check against the Grade 5 ATP)",
   "pack": "grade-5"
  },
  {
@@ -277,6 +304,7 @@
   "topic": "Matter and Materials",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 5 Natural Sciences and Technology, Term 2, Matter and Materials: Metals and non-metals, uses of metals (check against the Grade 5 ATP)",
   "pack": "grade-5"
  },
  {
@@ -287,6 +315,7 @@
   "topic": "Life and Living",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 6 Natural Sciences and Technology, Term 1, Life and Living: Nutrients in food; nutrition (check against the Grade 6 ATP)",
   "pack": "grade-6"
  },
  {
@@ -297,6 +326,7 @@
   "topic": "Matter and Materials",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 6 Natural Sciences and Technology, Term 2, Matter and Materials: Mixtures; solutions as special mixtures; dissolving (check against the Grade 6 ATP)",
   "pack": "grade-6"
  },
  {
@@ -307,6 +337,7 @@
   "topic": "Personal and Social Well-being: respect for own and others' bodies",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 4 Life Skills, Term 1, Personal and Social Well-being: Respect for own and others' bodies (caring for the body, privacy, avoiding harmful substances)",
   "pack": "grade-4"
  },
  {
@@ -317,6 +348,7 @@
   "topic": "Personal and Social Well-being: dealing with conflict",
   "domain": "Creativity and Metacognition",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 4 Life Skills, Term 1, Personal and Social Well-being: Dealing with conflict (at home and at school; ways to avoid and respond to conflict)",
   "pack": "grade-4"
  },
  {
@@ -327,6 +359,7 @@
   "topic": "Personal and Social Well-being: giving and receiving feedback",
   "domain": "Creativity and Metacognition",
   "category": "Reflection",
+  "caps": "CAPS Grade 5 Life Skills, Term 1, Personal and Social Well-being: Giving and receiving feedback (positive and negative, from peers and adults)",
   "pack": "grade-5"
  },
  {
@@ -337,6 +370,7 @@
   "topic": "Personal and Social Well-being: relationships with peers, older people and strangers",
   "domain": "Creativity and Metacognition",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 5 Life Skills, Term 1, Personal and Social Well-being: Relationships with peers, older people and strangers (safe and unsafe, good and bad relationships)",
   "pack": "grade-5"
  },
  {
@@ -347,6 +381,7 @@
   "topic": "Personal and Social Well-being: abilities, interests and potential",
   "domain": "Creativity and Metacognition",
   "category": "Reflection",
+  "caps": "CAPS Grade 6 Life Skills, Term 1, Personal and Social Well-being: Abilities, interests and potential (how they link; an action plan)",
   "pack": "grade-6"
  },
  {
@@ -357,6 +392,7 @@
   "topic": "Personal and Social Well-being: problem-solving in conflict situations",
   "domain": "Creativity and Metacognition",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 6 Life Skills, Term 1, Personal and Social Well-being: Problem-solving in conflict situations (mediation and peacekeeping skills)",
   "pack": "grade-6"
  },
  {
@@ -367,6 +403,7 @@
   "topic": "Keeping clean",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 1: Well-being (children are healthy and have a sense of good hygiene)",
   "pack": "early"
  },
  {
@@ -377,6 +414,7 @@
   "topic": "Staying safe",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 1: Well-being (children build a sense of safety and security; identify dangerous objects and situations)",
   "pack": "early"
  },
  {
@@ -387,6 +425,7 @@
   "topic": "Me and what I can do",
   "domain": "Creativity and Metacognition",
   "category": "Reflection",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 2: Identity and Belonging (children are aware of themselves as capable and confident learners; celebrating differences)",
   "pack": "early"
  },
  {
@@ -397,6 +436,7 @@
   "topic": "Playing with others",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 2: Identity and Belonging (children build strong relationships; take turns, share and follow simple rules)",
   "pack": "early"
  },
  {
@@ -407,6 +447,7 @@
   "topic": "Listening",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 3: Communication (children listen to sounds and speech; identify a wide range of sounds; enjoy songs and rhymes)",
   "pack": "early"
  },
  {
@@ -417,6 +458,7 @@
   "topic": "Reading pictures in order",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 3: Communication (children make meaning by \"reading\" what they see; arrange pictures to form a story)",
   "pack": "early"
  },
  {
@@ -427,6 +469,7 @@
   "topic": "Counting",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 4: Exploring Mathematics (children count and use number names in play)",
   "pack": "early"
  },
  {
@@ -437,6 +480,7 @@
   "topic": "Shapes and sorting",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 4: Exploring Mathematics (shapes and space; sorting by colour, size and shape)",
   "pack": "early"
  },
  {
@@ -447,6 +491,7 @@
   "topic": "Colours and mixing",
   "domain": "Creativity and Metacognition",
   "category": "Creativity",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 5: Creativity (children explore art materials, colour and making things)",
   "pack": "early"
  },
  {
@@ -457,6 +502,7 @@
   "topic": "Music and movement",
   "domain": "Creativity and Metacognition",
   "category": "Creativity",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 5: Creativity (children explore music, rhythm and movement)",
   "pack": "early"
  },
  {
@@ -467,6 +513,7 @@
   "topic": "Animals",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 6: Knowledge and Understanding of the World (children explore living things around them)",
   "pack": "early"
  },
  {
@@ -477,6 +524,7 @@
   "topic": "Weather",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 6: Knowledge and Understanding of the World (children explore the weather and their environment)",
   "pack": "early"
  },
  {
@@ -487,6 +535,7 @@
   "topic": "Count objects, more and less",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade R Mathematics: Numbers, Operations and Relationships (count objects to 10; number symbols 0 to 10; more than, less than, equal to)",
   "pack": "grade-0"
  },
  {
@@ -497,6 +546,7 @@
   "topic": "Simple patterns",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade R Mathematics: Patterns, Functions and Algebra (copy and extend simple patterns using objects and drawings, such as colours and shapes)",
   "pack": "grade-0"
  },
  {
@@ -507,6 +557,7 @@
   "topic": "3-D objects and position",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade R Mathematics: Space and Shape (recognise and name ball shapes and box shapes; sort by whether they roll or slide; position: on top of, under, behind, next to)",
   "pack": "grade-0"
  },
  {
@@ -517,6 +568,7 @@
   "topic": "Comparing length, mass and capacity",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade R Mathematics: Measurement (informal comparison of length, mass and capacity: taller and shorter, heavy and light, full and empty)",
   "pack": "grade-0"
  },
  {
@@ -527,6 +579,7 @@
   "topic": "Rhyming words",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade R English Home Language: Phonological awareness (identify rhyming words; repeat rhymes and songs)",
   "pack": "grade-0"
  },
  {
@@ -537,6 +590,7 @@
   "topic": "Initial sounds",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade R English Home Language: Phonics (recognise some initial consonants and vowels; recognise own name)",
   "pack": "grade-0"
  },
  {
@@ -547,6 +601,7 @@
   "topic": "Syllables",
   "domain": "Communication and Expression",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade R English Home Language: Phonological awareness (divide multisyllabic words into syllables, for example by clapping)",
   "pack": "grade-0"
  },
  {
@@ -557,6 +612,7 @@
   "topic": "Listening to a story",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade R English Home Language: Listening and speaking, and shared reading (listen to a story; answer simple questions; talk about the beginning, middle and end)",
   "pack": "grade-0"
  },
  {
@@ -567,6 +623,7 @@
   "topic": "My body",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade R Life Skills (Personal and Social Well-being), Term 1: My body (body parts and what they do; who may touch my body; keeping my body healthy)",
   "pack": "grade-0"
  },
  {
@@ -577,6 +634,7 @@
   "topic": "Yesterday, today and tomorrow",
   "domain": "Logical and Analytical Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade R Life Skills (Beginning Knowledge), Term 1: Days of the week (names of the days; activities on different days; yesterday, today and tomorrow)",
   "pack": "grade-0"
  },
  {
@@ -587,6 +645,7 @@
   "topic": "Transport",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade R Life Skills (Beginning Knowledge), Term 3: Transport (how we get to school; kinds of transport on land, water and in the air; transport long ago)",
   "pack": "grade-0"
  },
  {
@@ -597,6 +656,7 @@
   "topic": "Wild animals and where they live",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade R Life Skills (Beginning Knowledge), Term 4: Wild animals (what a wild animal is; kinds of wild animals; where they live; finding out about one wild animal)",
   "pack": "grade-0"
  },
  {
@@ -607,6 +667,7 @@
   "topic": "Count, before and after",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 1 Mathematics: Numbers, Operations and Relationships (count forwards and backwards in 1s from any number 0 to 100; skip count in 2s, 5s and 10s; number before and after)",
   "pack": "grade-1"
  },
  {
@@ -617,6 +678,7 @@
   "topic": "Addition and subtraction",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 1 Mathematics: Numbers, Operations and Relationships (add and subtract to 20; number bonds to 10; solve word problems in context)",
   "pack": "grade-1"
  },
  {
@@ -627,6 +689,7 @@
   "topic": "Equal sharing, grouping and repeated addition",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 1 Mathematics: Numbers, Operations and Relationships (repeated addition to 20; equal sharing and grouping to 20, including remainders)",
   "pack": "grade-1"
  },
  {
@@ -637,6 +700,7 @@
   "topic": "South African coins and notes",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 1 Mathematics: Measurement and Numbers (recognise South African coins and notes; solve money problems with totals and change to R20)",
   "pack": "grade-1"
  },
  {
@@ -647,6 +711,7 @@
   "topic": "Letter sounds and word families",
   "domain": "Communication and Expression",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 1 English Home Language: Phonics (letter-sound relationships of single letters; build word families such as -at, -ig, -op, -un)",
   "pack": "grade-1"
  },
  {
@@ -657,6 +722,7 @@
   "topic": "Capital letters and full stops",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 1 English Home Language: Writing and Language Structure (write sentences using a capital letter and a full stop)",
   "pack": "grade-1"
  },
  {
@@ -667,6 +733,7 @@
   "topic": "Beginning, middle and end",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 1 English Home Language: Listening and Speaking, Reading (listen to a story; answer questions; retell a story with a beginning, middle and end)",
   "pack": "grade-1"
  },
  {
@@ -677,6 +744,7 @@
   "topic": "Nouns and verbs",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 1 English Home Language: Language Structure and Use (nouns, verbs, pronouns I, you, he, she, it; plurals with -s)",
   "pack": "grade-1"
  },
  {
@@ -687,6 +755,7 @@
   "topic": "Sleep, food, washing and exercise",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 1 Life Skills, Beginning Knowledge and Personal and Social Well-being, Term 1: Healthy habits (sleep, healthy eating, washing hands, personal cleanliness, exercise)",
   "pack": "grade-1"
  },
  {
@@ -697,6 +766,7 @@
   "topic": "Dangers at home and emergency numbers",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 1 Life Skills, Personal and Social Well-being, Term 2: Safety in the home (dangers at home; medicines and poisons; emergency numbers)",
   "pack": "grade-1"
  },
  {
@@ -707,6 +777,7 @@
   "topic": "Plant parts and what plants need",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 1 Life Skills, Beginning Knowledge, Term 3: Plants and seeds (parts of a plant; seeds; what plants need; growing a seed)",
   "pack": "grade-1"
  },
  {
@@ -717,6 +788,7 @@
   "topic": "Manners and responsibilities",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 1 Life Skills, Personal and Social Well-being, Term 3: Manners and responsibilities (greeting; taking turns; listening; sharing; kindness; honesty; respect)",
   "pack": "grade-1"
  },
  {
@@ -727,6 +799,7 @@
   "topic": "Place value and calculations to 99",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 2 Mathematics: Numbers, Operations and Relationships (place value of 2-digit numbers; add and subtract to 99; word problems)",
   "pack": "grade-2"
  },
  {
@@ -737,6 +810,7 @@
   "topic": "Multiplication by 2, 5 and 10",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 2 Mathematics: Numbers, Operations and Relationships (repeated addition leading to multiplication; skip counting in 2s, 5s and 10s; grouping and sharing)",
   "pack": "grade-2"
  },
  {
@@ -747,6 +821,7 @@
   "topic": "Fractions of shapes and groups",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 2 Mathematics: Numbers, Operations and Relationships (fractions: halves, quarters, thirds and fifths; sharing leading to fractions)",
   "pack": "grade-2"
  },
  {
@@ -757,6 +832,7 @@
   "topic": "O'clock and half past",
   "domain": "Logical and Analytical Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 2 Mathematics: Measurement (read 12-hour time in hours and half hours on analogue clocks; calendars and lengths of time)",
   "pack": "grade-2"
  },
  {
@@ -767,6 +843,7 @@
   "topic": "Vowel digraphs ee, oo, ai, oa",
   "domain": "Communication and Expression",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 2 English Home Language: Phonics (vowel digraphs such as ee, oo, ai, oa, ea; consonant digraphs sh, ch, th, wh)",
   "pack": "grade-2"
  },
  {
@@ -777,6 +854,7 @@
   "topic": "Punctuation",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 2 English Home Language: Language Structure and Use (full stop, question mark, exclamation mark, comma in a list)",
   "pack": "grade-2"
  },
  {
@@ -787,6 +865,7 @@
   "topic": "Past, present and future tense",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 2 English Home Language: Language Structure and Use (present, past and future tense)",
   "pack": "grade-2"
  },
  {
@@ -797,6 +876,7 @@
   "topic": "Reading a poem and rhyme",
   "domain": "Communication and Expression",
   "category": "Creativity",
+  "caps": "CAPS Grade 2 English Home Language: Reading and Viewing (read a poem; answer questions; identify rhyming words; make up own rhymes)",
   "pack": "grade-2"
  },
  {
@@ -807,6 +887,7 @@
   "topic": "Myself and others",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 2 Life Skills, Personal and Social Well-being, Term 1: Myself and others (qualities of friends; sharing, helping, respect; dealing with conflict and bullying)",
   "pack": "grade-2"
  },
  {
@@ -817,6 +898,7 @@
   "topic": "Seasons and how they change things",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 2 Life Skills, Beginning Knowledge, Term 2: Seasons (the four seasons; effects on people, plants and animals)",
   "pack": "grade-2"
  },
  {
@@ -827,6 +909,7 @@
   "topic": "Where animals live",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 2 Life Skills, Beginning Knowledge, Term 2: Animal homes (creatures that build, find or carry their homes); Animals that live in water",
   "pack": "grade-2"
  },
  {
@@ -837,6 +920,7 @@
   "topic": "Crossing the road and road signs",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 2 Life Skills, Personal and Social Well-being, Term 3: Road safety (rules for pedestrians and passengers; road signs; scholar patrols)",
   "pack": "grade-2"
  },
  {
@@ -847,6 +931,7 @@
   "topic": "Place value to 999",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 3 Mathematics: Numbers, Operations and Relationships (place value of 3-digit numbers; compare and order to 999; add and subtract to 999)",
   "pack": "grade-3"
  },
  {
@@ -857,6 +942,7 @@
   "topic": "Multiplication and division by 2, 3, 4, 5 and 10",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 3 Mathematics: Numbers, Operations and Relationships (multiply and divide by 2, 3, 4, 5 and 10 to 100; grouping and sharing with remainders)",
   "pack": "grade-3"
  },
  {
@@ -867,6 +953,7 @@
   "topic": "Fractions and equivalence",
   "domain": "Logical and Analytical Thinking",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 3 Mathematics: Numbers, Operations and Relationships (halves, thirds, quarters, fifths, sixths and eighths; unitary and non-unitary fractions; equivalence)",
   "pack": "grade-3"
  },
  {
@@ -877,6 +964,7 @@
   "topic": "Length, mass and capacity",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 3 Mathematics: Measurement (length in metres and centimetres; mass in kilograms and grams; capacity in litres and millilitres)",
   "pack": "grade-3"
  },
  {
@@ -887,6 +975,7 @@
   "topic": "Reading for information",
   "domain": "Communication and Expression",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 3 English Home Language: Reading and Viewing (read an information text; identify main idea and details; use headings)",
   "pack": "grade-3"
  },
  {
@@ -897,6 +986,7 @@
   "topic": "Conjunctions and, but, because",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 3 English Home Language: Language Structure and Use (conjunctions to form compound sentences; subject and verb)",
   "pack": "grade-3"
  },
  {
@@ -907,6 +997,7 @@
   "topic": "Synonyms and antonyms",
   "domain": "Communication and Expression",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 3 English Home Language: Language Structure and Use (synonyms and antonyms; building vocabulary; using a dictionary)",
   "pack": "grade-3"
  },
  {
@@ -917,6 +1008,7 @@
   "topic": "Speech marks and contractions",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 3 English Home Language: Language Structure and Use (inverted commas for direct speech; apostrophes in contractions)",
   "pack": "grade-3"
  },
  {
@@ -927,6 +1019,7 @@
   "topic": "Feelings",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 3 Life Skills, Personal and Social Well-being, Term 1: Feelings (things that make me happy or sad; anger, fear, worry, loneliness; good ways to express feelings; apologies)",
   "pack": "grade-3"
  },
  {
@@ -937,6 +1030,7 @@
   "topic": "Recycling and waste",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 3 Life Skills, Beginning Knowledge, Term 2: Recycling (what happens to waste; re-using, recycling and reducing; compost; re-using water)",
   "pack": "grade-3"
  },
  {
@@ -947,6 +1041,7 @@
   "topic": "Frog, butterfly and chicken",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 3 Life Skills, Beginning Knowledge, Term 2: Life cycles (mammal, insect, amphibian and bird); Insects",
   "pack": "grade-3"
  },
  {
@@ -957,6 +1052,7 @@
   "topic": "Public safety",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 3 Life Skills, Personal and Social Well-being, Term 3: Public Safety (dangerous places to play; dangers of electricity; poisonous and flammable substances; warning signs)",
   "pack": "grade-3"
  },
  {
@@ -967,6 +1063,7 @@
   "topic": "Ordering, adding and subtracting integers",
   "domain": "Logical and Analytical Thinking",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 7 Mathematics, Term 3: Integers (count, order and compare integers; add and subtract integers; integers in context)",
   "pack": "grade-7"
  },
  {
@@ -977,6 +1074,7 @@
   "topic": "Exponents",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 7 Mathematics, Term 1: Exponents (squares, cubes, square roots and cube roots; exponential form)",
   "pack": "grade-7"
  },
  {
@@ -987,6 +1085,7 @@
   "topic": "Algebraic equations",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 7 Mathematics, Term 3: Algebraic equations (write equations from descriptions; solve by inspection and by trial and improvement)",
   "pack": "grade-7"
  },
  {
@@ -997,6 +1096,7 @@
   "topic": "Plot, conflict and character",
   "domain": "Communication and Expression",
   "category": "Reflection",
+  "caps": "CAPS Grade 7 English Home Language: Reading and Viewing (short story: plot, conflict, character, setting; inference)",
   "pack": "grade-7"
  },
  {
@@ -1007,6 +1107,7 @@
   "topic": "Simile, metaphor, personification, hyperbole",
   "domain": "Communication and Expression",
   "category": "Creativity",
+  "caps": "CAPS Grade 7 English Home Language: Language Structures and Conventions; Literature (figurative language: simile, metaphor, personification, hyperbole, alliteration)",
   "pack": "grade-7"
  },
  {
@@ -1017,6 +1118,7 @@
   "topic": "Direct and indirect speech",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 7 English Home Language: Language Structures and Conventions (direct and indirect speech; tense changes; punctuation)",
   "pack": "grade-7"
  },
  {
@@ -1027,6 +1129,7 @@
   "topic": "Classifying living things",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 7 Natural Sciences, Life and Living: Biodiversity (classification of living things; vertebrates and invertebrates; plants with and without seeds; importance of biodiversity)",
   "pack": "grade-7"
  },
  {
@@ -1037,6 +1140,7 @@
   "topic": "Filtration, evaporation, distillation, chromatography",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 7 Natural Sciences, Matter and Materials: Separating mixtures (hand sorting, sieving, filtration, decanting, evaporation, distillation, chromatography)",
   "pack": "grade-7"
  },
  {
@@ -1047,6 +1151,7 @@
   "topic": "Conduction, convection and radiation",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 7 Natural Sciences, Energy and Change: Heat transfer (conduction, convection, radiation; insulation and energy saving)",
   "pack": "grade-7"
  },
  {
@@ -1057,6 +1162,7 @@
   "topic": "Development of the self",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 7 Life Orientation: Development of the self in society (self-image; peer pressure; personal strengths; respect for self and others)",
   "pack": "grade-7"
  },
  {
@@ -1067,6 +1173,7 @@
   "topic": "The Bill of Rights",
   "domain": "Inquiry and Systems Thinking",
   "category": "Reflection",
+  "caps": "CAPS Grade 7 Life Orientation: Constitutional rights and responsibilities (the Bill of Rights; children's rights; responsibilities that go with rights)",
   "pack": "grade-7"
  },
  {
@@ -1077,6 +1184,7 @@
   "topic": "World of work: study skills",
   "domain": "Creativity and Metacognition",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 7 Life Orientation: World of work (study skills and study methods; planning a study timetable; learning styles and strategies)",
   "pack": "grade-7"
  },
  {
@@ -1087,6 +1195,7 @@
   "topic": "Like terms and expanding brackets",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 8 Mathematics, Term 2: Algebraic expressions (like terms; add, subtract, multiply and divide expressions; expand using the distributive law)",
   "pack": "grade-8"
  },
  {
@@ -1097,6 +1206,7 @@
   "topic": "Right-angled triangles",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 8 Mathematics, Term 3: Theorem of Pythagoras (determine whether a triangle is right-angled; calculate missing lengths)",
   "pack": "grade-8"
  },
  {
@@ -1107,6 +1217,7 @@
   "topic": "Financial mathematics",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 8 Mathematics, Term 1: Financial mathematics (profit, loss, discount, VAT; simple and compound interest; hire purchase)",
   "pack": "grade-8"
  },
  {
@@ -1117,6 +1228,7 @@
   "topic": "Imagery, tone and mood",
   "domain": "Communication and Expression",
   "category": "Creativity",
+  "caps": "CAPS Grade 8 English Home Language: Literature (poetry: imagery, figures of speech, rhyme, tone and mood)",
   "pack": "grade-8"
  },
  {
@@ -1127,6 +1239,7 @@
   "topic": "Voice",
   "domain": "Communication and Expression",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 8 English Home Language: Language Structures and Conventions (active and passive voice; subject and object; tense)",
   "pack": "grade-8"
  },
  {
@@ -1137,6 +1250,7 @@
   "topic": "Persuasive techniques and bias",
   "domain": "Communication and Expression",
   "category": "Reflection",
+  "caps": "CAPS Grade 8 English Home Language: Reading and Viewing, Listening and Speaking (persuasive texts and advertisements; emotive language; fact and opinion; bias)",
   "pack": "grade-8"
  },
  {
@@ -1147,6 +1261,7 @@
   "topic": "How plants and animals use energy",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 8 Natural Sciences, Term 1 Life and Living: Photosynthesis and respiration (word equations; the role of light, carbon dioxide, water, glucose and oxygen)",
   "pack": "grade-8"
  },
  {
@@ -1157,6 +1272,7 @@
   "topic": "The particle model of matter",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 8 Natural Sciences, Term 2 Matter and Materials: Atoms (structure of the atom; elements and the Periodic Table; compounds; the particle model)",
   "pack": "grade-8"
  },
  {
@@ -1167,6 +1283,7 @@
   "topic": "Energy transfer in electrical systems",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 8 Natural Sciences, Term 3 Energy and Change: Energy transfer in electrical systems (components of circuits; series and parallel; effects of current; circuit diagrams)",
   "pack": "grade-8"
  },
  {
@@ -1177,6 +1294,7 @@
   "topic": "World of work",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 8 Life Orientation: World of work (career fields; interests and abilities; subject choices for Grade 10; sources of career information)",
   "pack": "grade-8"
  },
  {
@@ -1187,6 +1305,7 @@
   "topic": "Risky situations and decision-making",
   "domain": "Creativity and Metacognition",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 8 Life Orientation: Health, social and environmental responsibility (risky behaviour and situations; decision-making steps; where to get help)",
   "pack": "grade-8"
  },
  {
@@ -1197,6 +1316,7 @@
   "topic": "Social responsibility",
   "domain": "Creativity and Metacognition",
   "category": "Reflection",
+  "caps": "CAPS Grade 8 Life Orientation: Constitutional rights and responsibilities; Social and environmental responsibility (cultural diversity; stereotyping, prejudice and discrimination; respect)",
   "pack": "grade-8"
  },
  {
@@ -1207,6 +1327,7 @@
   "topic": "Common factors and difference of squares",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 9 Mathematics, Term 1: Algebraic expressions (products of binomials; factorise by taking out a common factor; difference of two squares; trinomials)",
   "pack": "grade-9"
  },
  {
@@ -1217,6 +1338,7 @@
   "topic": "Linear graphs: gradient and y-intercept",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 9 Mathematics, Term 3: Graphs (draw and interpret linear graphs; gradient and y-intercept; y = mx + c)",
   "pack": "grade-9"
  },
  {
@@ -1227,6 +1349,7 @@
   "topic": "Chance and outcomes",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 9 Mathematics, Term 4: Probability (sample space; relative frequency; probability of simple events; compare predicted and actual results)",
   "pack": "grade-9"
  },
  {
@@ -1237,6 +1360,7 @@
   "topic": "Argumentative texts",
   "domain": "Communication and Expression",
   "category": "Reflection",
+  "caps": "CAPS Grade 9 English Home Language: Reading and Viewing; Writing and Presenting (argumentative and discursive texts: claims, evidence, counter-arguments, conclusion)",
   "pack": "grade-9"
  },
  {
@@ -1247,6 +1371,7 @@
   "topic": "Summary skills",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 9 English Home Language: Reading and Viewing (summarise a text: select main points, use own words, keep to a word limit)",
   "pack": "grade-9"
  },
  {
@@ -1257,6 +1382,7 @@
   "topic": "Concord",
   "domain": "Communication and Expression",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 9 English Home Language: Language Structures and Conventions (concord: subject-verb agreement, including collective nouns and indefinite pronouns)",
   "pack": "grade-9"
  },
  {
@@ -1267,6 +1393,7 @@
   "topic": "Cells as the basic units of life",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 9 Natural Sciences, Term 1 Life and Living: Cells as the basic units of life (plant and animal cells; cells, tissues, organs and systems)",
   "pack": "grade-9"
  },
  {
@@ -1277,6 +1404,7 @@
   "topic": "Acids and bases",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 9 Natural Sciences, Term 2 Matter and Materials: Reactions of acids with bases (pH scale; indicators; neutralisation)",
   "pack": "grade-9"
  },
  {
@@ -1287,6 +1415,7 @@
   "topic": "The lithosphere",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 9 Natural Sciences, Term 4 Planet Earth and Beyond: Lithosphere (Earth's layers; the rock cycle; mining and refining minerals; environmental impacts of mining)",
   "pack": "grade-9"
  },
  {
@@ -1297,6 +1426,7 @@
   "topic": "World of work: subject choice",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 9 Life Orientation: World of work (subject choice for Grade 10 to 12; career and study pathways; requirements for further study)",
   "pack": "grade-9"
  },
  {
@@ -1307,6 +1437,7 @@
   "topic": "Development of the self: goal setting",
   "domain": "Creativity and Metacognition",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 9 Life Orientation: Development of the self in society (goal-setting skills; personal lifestyle plan; time management)",
   "pack": "grade-9"
  },
  {
@@ -1317,6 +1448,7 @@
   "topic": "Social and environmental responsibility",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 9 Life Orientation: Social and environmental responsibility (community and environmental problems; volunteering; planning a community project)",
   "pack": "grade-9"
  },
  {
@@ -1327,6 +1459,7 @@
   "topic": "Exponents",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 10 Mathematics, Term 1: Exponents (laws of exponents for integral exponents; simplify expressions; solve simple exponential equations)",
   "pack": "grade-10"
  },
  {
@@ -1337,6 +1470,7 @@
   "topic": "Sin, cos and tan",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 10 Mathematics, Term 2: Trigonometry (define sin, cos and tan in right-angled triangles; solve two-dimensional problems)",
   "pack": "grade-10"
  },
  {
@@ -1347,6 +1481,7 @@
   "topic": "Statistics",
   "domain": "Logical and Analytical Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 10 Mathematics, Term 4: Statistics (measures of central tendency; range, quartiles and interquartile range; five-number summary)",
   "pack": "grade-10"
  },
  {
@@ -1357,6 +1492,7 @@
   "topic": "Analysing poetry",
   "domain": "Communication and Expression",
   "category": "Creativity",
+  "caps": "CAPS Grade 10 English Home Language: Literature (poetry: imagery, metaphor, enjambment, tone, theme; contextual questions)",
   "pack": "grade-10"
  },
  {
@@ -1367,6 +1503,7 @@
   "topic": "Visual literacy: adverts and cartoons",
   "domain": "Communication and Expression",
   "category": "Reflection",
+  "caps": "CAPS Grade 10 English Home Language: Reading and Viewing (visual literacy: advertisements and cartoons; layout, font, colour, target audience, purpose)",
   "pack": "grade-10"
  },
  {
@@ -1377,6 +1514,7 @@
   "topic": "Narrative, descriptive, argumentative and reflective essays",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 10 English Home Language: Writing and Presenting (essays: narrative, descriptive, argumentative, discursive, reflective; planning and paragraphing)",
   "pack": "grade-10"
  },
  {
@@ -1387,6 +1525,7 @@
   "topic": "The cell cycle",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 10 Life Sciences, Term 1: Cell division (the cell cycle; mitosis: prophase, metaphase, anaphase, telophase; importance of mitosis; cancer)",
   "pack": "grade-10"
  },
  {
@@ -1397,6 +1536,7 @@
   "topic": "Biosphere to ecosystems",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 10 Life Sciences, Term 4: Biosphere to ecosystems (biotic and abiotic factors; trophic levels; food chains and webs; energy pyramids; nutrient cycles)",
   "pack": "grade-10"
  },
  {
@@ -1407,6 +1547,7 @@
   "topic": "Xylem, phloem and transpiration",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 10 Life Sciences, Term 3: Support and transport systems in plants (xylem and phloem; transpiration; factors affecting transpiration; wilting)",
   "pack": "grade-10"
  },
  {
@@ -1417,6 +1558,7 @@
   "topic": "Development of the self in society",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 10 Life Orientation: Development of the self in society (strategies to enhance self-awareness and well-being; coping with stress)",
   "pack": "grade-10"
  },
  {
@@ -1427,6 +1569,7 @@
   "topic": "Democracy and human rights",
   "domain": "Inquiry and Systems Thinking",
   "category": "Reflection",
+  "caps": "CAPS Grade 10 Life Orientation: Democracy and human rights (human rights violations; discrimination; campaigns and organisations that protect human rights)",
   "pack": "grade-10"
  },
  {
@@ -1437,6 +1580,7 @@
   "topic": "Careers and career choices: funding",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 10 Life Orientation: Careers and career choices (options after school; financial aid, bursaries, scholarships and loans; requirements)",
   "pack": "grade-10"
  },
  {
@@ -1447,6 +1591,7 @@
   "topic": "Equations and inequalities",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 11 Mathematics, Term 1: Equations and inequalities (solve quadratic equations by factorisation and the quadratic formula; nature of roots)",
   "pack": "grade-11"
  },
  {
@@ -1457,6 +1602,7 @@
   "topic": "Finance: depreciation and compound growth",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 11 Mathematics, Term 4: Finance, growth and decay (simple and compound decay; straight-line and reducing-balance depreciation; nominal and effective rates)",
   "pack": "grade-11"
  },
  {
@@ -1467,6 +1613,7 @@
   "topic": "Euclidean geometry: circle theorems",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 11 Mathematics, Term 3: Euclidean geometry (circle theorems: perpendicular from centre bisects chord; angle at centre; angles in the same segment; cyclic quadrilaterals; tangents)",
   "pack": "grade-11"
  },
  {
@@ -1477,6 +1624,7 @@
   "topic": "Dramatic techniques",
   "domain": "Communication and Expression",
   "category": "Reflection",
+  "caps": "CAPS Grade 11 English Home Language: Literature (drama: stage directions, dialogue, aside, dramatic irony, tension, characterisation; contextual questions)",
   "pack": "grade-11"
  },
  {
@@ -1487,6 +1635,7 @@
   "topic": "Transactional writing",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 11 English Home Language: Writing and Presenting (transactional texts: CV, covering letter, formal letter; register and format)",
   "pack": "grade-11"
  },
  {
@@ -1497,6 +1646,7 @@
   "topic": "Denotation, connotation and manipulation",
   "domain": "Communication and Expression",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 11 English Home Language: Language Structures and Conventions; Reading and Viewing (critical language awareness: denotation and connotation; emotive and manipulative language; bias)",
   "pack": "grade-11"
  },
  {
@@ -1507,6 +1657,7 @@
   "topic": "Animal nutrition",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 11 Life Sciences, Term 2: Animal nutrition (human digestive system; mechanical and chemical digestion; enzymes; absorption; balanced diet)",
   "pack": "grade-11"
  },
  {
@@ -1517,6 +1668,7 @@
   "topic": "Population size and interactions",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 11 Life Sciences, Term 3: Population ecology (population size; mark-recapture; growth curves; predator-prey, competition, symbiosis)",
   "pack": "grade-11"
  },
  {
@@ -1527,6 +1679,7 @@
   "topic": "Climate, water and biodiversity",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 11 Life Sciences, Term 4: Human impact on the environment (atmosphere and climate change; water availability and quality; food security; loss of biodiversity; solid waste)",
   "pack": "grade-11"
  },
  {
@@ -1537,6 +1690,7 @@
   "topic": "Democracy and human rights: the role of the media",
   "domain": "Inquiry and Systems Thinking",
   "category": "Reflection",
+  "caps": "CAPS Grade 11 Life Orientation: Democracy and human rights (role of the media in a democratic society; freedom of expression and its limits; responsible use of social media)",
   "pack": "grade-11"
  },
  {
@@ -1547,6 +1701,7 @@
   "topic": "Careers and career choices: admission and applications",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 11 Life Orientation: Careers and career choices (requirements for admission to higher education; Admission Point Score; application processes and deadlines)",
   "pack": "grade-11"
  },
  {
@@ -1557,6 +1712,7 @@
   "topic": "Development of the self in society",
   "domain": "Creativity and Metacognition",
   "category": "Emotional Readiness",
+  "caps": "CAPS Grade 11 Life Orientation: Development of the self in society (relationships: signs of healthy and unhealthy relationships; respect and boundaries; where to get help)",
   "pack": "grade-11"
  },
  {
@@ -1567,6 +1723,7 @@
   "topic": "Number patterns, sequences and series",
   "domain": "Logical and Analytical Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 12 Mathematics, Term 1: Number patterns, sequences and series (arithmetic and geometric sequences; general term; sum of series; sigma notation)",
   "pack": "grade-12"
  },
  {
@@ -1577,6 +1734,7 @@
   "topic": "Differential calculus",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 12 Mathematics, Term 2: Differential calculus (average gradient; derivative from first principles; rules of differentiation; equation of a tangent; cubic graphs; optimisation)",
   "pack": "grade-12"
  },
  {
@@ -1587,6 +1745,7 @@
   "topic": "Finance: annuities",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 12 Mathematics, Term 1: Finance, growth and decay (future value and present value annuities; loans and bond repayments; sinking funds)",
   "pack": "grade-12"
  },
  {
@@ -1597,6 +1756,7 @@
   "topic": "Character, symbol and theme",
   "domain": "Communication and Expression",
   "category": "Reflection",
+  "caps": "CAPS Grade 12 English Home Language: Literature (novel: characterisation, symbolism, setting, theme; contextual questions and literary essay)",
   "pack": "grade-12"
  },
  {
@@ -1607,6 +1767,7 @@
   "topic": "Answering comprehension questions",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 12 English Home Language: Reading and Viewing (comprehension: literal, inferential, evaluative and appreciative questions; quoting; own words)",
   "pack": "grade-12"
  },
  {
@@ -1617,6 +1778,7 @@
   "topic": "Listening and speaking",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "CAPS Grade 12 English Home Language: Listening and Speaking (prepared formal speech; interview skills; body language; register)",
   "pack": "grade-12"
  },
  {
@@ -1627,6 +1789,7 @@
   "topic": "DNA: the code of life",
   "domain": "Inquiry and Systems Thinking",
   "category": "Pattern Thinking",
+  "caps": "CAPS Grade 12 Life Sciences, Term 1: DNA, the code of life (structure of DNA and RNA; DNA replication; protein synthesis: transcription and translation; DNA profiling)",
   "pack": "grade-12"
  },
  {
@@ -1637,6 +1800,7 @@
   "topic": "Monohybrid crosses",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "CAPS Grade 12 Life Sciences, Term 2: Genetics and inheritance (genes, alleles, genotype, phenotype; dominance; monohybrid crosses; Punnett squares; blood groups)",
   "pack": "grade-12"
  },
  {
@@ -1647,6 +1811,7 @@
   "topic": "Evolution",
   "domain": "Inquiry and Systems Thinking",
   "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 12 Life Sciences, Term 2: Evolution by natural selection (variation; Darwin's theory; artificial selection; speciation; evidence for evolution; human evolution and the Cradle of Humankind)",
   "pack": "grade-12"
  },
  {
@@ -1657,6 +1822,7 @@
   "topic": "Study skills: exam preparation",
   "domain": "Creativity and Metacognition",
   "category": "Planning and Organisation",
+  "caps": "CAPS Grade 12 Life Orientation: Study skills (exam writing skills; time management; managing exam stress)",
   "pack": "grade-12"
  },
  {
@@ -1667,6 +1833,7 @@
   "topic": "Careers: unemployment, entrepreneurship and change",
   "domain": "Inquiry and Systems Thinking",
   "category": "Flexible Thinking",
+  "caps": "CAPS Grade 12 Life Orientation: Careers and career choices (reasons for unemployment; innovative solutions; entrepreneurship; coping with change and the transition after school)",
   "pack": "grade-12"
  },
  {
@@ -1677,6 +1844,7 @@
   "topic": "Democracy and human rights: voting and participation",
   "domain": "Inquiry and Systems Thinking",
   "category": "Reflection",
+  "caps": "CAPS Grade 12 Life Orientation: Democracy and human rights (responsible citizenship; participation in civic life; voting; the role of the IEC)",
   "pack": "grade-12"
  },
  {
@@ -1687,6 +1855,7 @@
   "topic": "Reading and completing forms",
   "domain": "Communication and Expression",
   "category": "Planning and Organisation",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), English: reading and completing functional texts such as application forms",
   "pack": "adult"
  },
  {
@@ -1697,6 +1866,7 @@
   "topic": "Workplace writing",
   "domain": "Communication and Expression",
   "category": "Communication",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), English: writing functional texts for work, such as emails and messages",
   "pack": "adult"
  },
  {
@@ -1707,6 +1877,7 @@
   "topic": "Reading contracts",
   "domain": "Communication and Expression",
   "category": "Problem Solving",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), English: reading for understanding in everyday documents such as contracts; links to the Rental Housing Act",
   "pack": "adult"
  },
  {
@@ -1717,6 +1888,7 @@
   "topic": "Personal finance",
   "domain": "Logical and Analytical Thinking",
   "category": "Planning and Organisation",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), Mathematics: number and calculations in personal finance (income, expenses, budgets)",
   "pack": "adult"
  },
  {
@@ -1727,6 +1899,7 @@
   "topic": "Gross pay, deductions and net pay",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), Mathematics: percentages and calculations in the workplace (wages, deductions); links to the Basic Conditions of Employment Act",
   "pack": "adult"
  },
  {
@@ -1737,6 +1910,7 @@
   "topic": "Unit prices and comparing value",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), Mathematics: ratio, rate and measurement in everyday contexts (unit prices, comparing value)",
   "pack": "adult"
  },
  {
@@ -1747,6 +1921,7 @@
   "topic": "Online safety",
   "domain": "Inquiry and Systems Thinking",
   "category": "Problem Solving",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), Information and Communication Technology elective: safe and responsible use of digital devices and the internet",
   "pack": "adult"
  },
  {
@@ -1757,6 +1932,7 @@
   "topic": "Using a spreadsheet",
   "domain": "Logical and Analytical Thinking",
   "category": "Planning and Organisation",
+  "caps": "Aligned to the General Education and Training Certificate for Adults (GETCA, NQF level 1), Information and Communication Technology elective: using application software such as spreadsheets",
   "pack": "adult"
  },
  {
@@ -1767,6 +1943,7 @@
   "topic": "Job search",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "Life and work skills: job search strategies, linked to the Department of Employment and Labour and youth employment services",
   "pack": "adult"
  },
  {
@@ -1777,6 +1954,7 @@
   "topic": "Basic Conditions of Employment",
   "domain": "Inquiry and Systems Thinking",
   "category": "Reflection",
+  "caps": "Life and work skills: workers' rights under the Basic Conditions of Employment Act, the National Minimum Wage Act and the Unemployment Insurance Act",
   "pack": "adult"
  },
  {
@@ -1787,6 +1965,7 @@
   "topic": "Borrowing wisely",
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
+  "caps": "Life and work skills: consumer finance, linked to the National Credit Act (credit agreements, credit records, debt counselling)",
   "pack": "adult"
  },
  {
@@ -1797,6 +1976,7 @@
   "topic": "Running a household",
   "domain": "Inquiry and Systems Thinking",
   "category": "Planning and Organisation",
+  "caps": "Life and work skills: independent living (housing, utilities, transport, health services and personal documents)",
   "pack": "adult"
  }
 ]
