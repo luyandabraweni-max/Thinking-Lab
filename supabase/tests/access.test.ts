@@ -287,3 +287,15 @@ describe("adding staff", () => {
     expect((await overview()).invites).toEqual([]);
   });
 });
+
+describe("what each person may still see", () => {
+  it("lists the learners and health records a person can see, so devices remove the rest", async () => {
+    const visible = async (who: string) => ((await as(db, who, q => q<{ r: { changes: { visible: { learners: string[]; health: string[] } } } }>("select public.sync_pull(null) as r")))[0]!.r.changes.visible);
+    expect((await visible(PARENT)).learners).toContain(kid);
+    expect((await visible(PARENT)).health).toContain(kid);
+    expect((await visible(STRANGER)).learners).not.toContain(kid);
+    await db.query("update public.learner_team set health_access = false where learner_id = $1 and user_id = $2", [kid, SPECIALIST]);
+    expect((await visible(SPECIALIST)).learners).toContain(kid);
+    expect((await visible(SPECIALIST)).health).not.toContain(kid);
+  });
+});

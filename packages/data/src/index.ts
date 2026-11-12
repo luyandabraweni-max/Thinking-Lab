@@ -4,6 +4,6 @@ export { AccessDenied, canChangeConsent, canEditPlan, canEditHealth, canSeeHealt
 export { BLOCKED, IdbKv, MemoryKv, type Kv, type OutboxEntry } from "./kv";
 export { defaultSettings, LearnerSpace, LocalStore, Session, type NewMedication } from "./store";
 export { LocalSafeguarding, type ConcernRecord, type Safeguarding } from "./safeguarding";
-export { sync, type Changes, type SyncResult, type Transport } from "./sync";
+export { prune, sync, type Changes, type SyncResult, type Transport, type Visible } from "./sync";
 export { DEMO, DEMO_ACCOUNTS, DEMO_LEARNERS, seedDemo } from "./demo";
 export { LocalOrgAdmin, type OrgAdmin, type OrgOverview, type StaffInvite, type StaffRow } from "./admin";

@@ -9,6 +9,8 @@ export interface OutboxEntry { id: string; table: TableName; row: Tables[TableNa
 export interface Kv {
   all<T extends TableName>(table: T): Promise<Tables[T][]>;
   put<T extends TableName>(table: T, row: Tables[T]): Promise<void>;
+  /** Removes rows from this device only (the server keeps them). */
+  remove(table: TableName, ids: string[]): Promise<void>;
   outbox(): Promise<OutboxEntry[]>;
   enqueue(entry: OutboxEntry): Promise<void>;
   dequeue(ids: string[]): Promise<void>;
@@ -26,6 +28,7 @@ export class MemoryKv implements Kv {
   private table(t: TableName) { let m = this.rows.get(t); if (!m) this.rows.set(t, (m = new Map())); return m; }
   async all<T extends TableName>(t: T) { return [...this.table(t).values()].map(r => clone(r)) as Tables[T][]; }
   async put<T extends TableName>(t: T, row: Tables[T]) { this.table(t).set(row.id, clone(row)); }
+  async remove(t: TableName, ids: string[]) { for (const id of ids) this.rows.get(t)?.delete(id); }
   async outbox() { return clone(this.queue); }
   async enqueue(e: OutboxEntry) { this.queue.push(clone(e)); }
   async dequeue(ids: string[]) { this.queue = this.queue.filter(e => !ids.includes(e.id)); }
@@ -56,6 +59,7 @@ export class IdbKv implements Kv {
   }
   async all<T extends TableName>(t: T) { return (await (await this.db).getAll(t)) as Tables[T][]; }
   async put<T extends TableName>(t: T, row: Tables[T]) { await (await this.db).put(t, row); }
+  async remove(t: TableName, ids: string[]) { const tx = (await this.db).transaction(t, "readwrite"); await Promise.all([...ids.map(id => tx.store.delete(id)), tx.done]); }
   async outbox() { const all = (await (await this.db).getAll("outbox")) as OutboxEntry[]; return all.sort((a, b) => a.at.localeCompare(b.at)); }
   async enqueue(e: OutboxEntry) { await (await this.db).put("outbox", e); }
   async dequeue(ids: string[]) { const tx = (await this.db).transaction("outbox", "readwrite"); await Promise.all([...ids.map(id => tx.store.delete(id)), tx.done]); }
