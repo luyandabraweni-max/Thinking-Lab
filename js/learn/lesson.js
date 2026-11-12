@@ -248,7 +248,7 @@ function unitQuestion(u, run, qi) {
       let ok = null;
       if (q.type === "mcq" || (q.type === "num" && !buildMode)) { if (picked === null) { tell([L.pick], false); return; } ok = q.type === "mcq" ? picked === q.answer : norm(q.options[picked]) === norm(q.answer); }
       else if (q.type === "num") { if (!typed.trim()) { tell([L.type], false); return; } ok = [q.answer].concat(q.accept || []).some(a => norm(a) === norm(typed)); }
-      else if (q.type === "order") { if (order.length < q.items.length) { tell([L.orderAll], false); return; } ok = order.every((v, k) => v === k); }
+      else if (q.type === "order") { if (order.length < q.items.length) { tell([L.orderAll], false); return; } ok = order.every((v, k) => q.items[v] === q.items[k]); } // by wording, so two identical steps can go either way
       else if (q.type === "sort") { if (sortPlace.some(v => v === null)) { tell([L.sortAll], false); return; } ok = sortPlace.every((v, i) => v === q.answer[i]); }
       rec.checks++; if (rec.firstMatched === null) rec.firstMatched = ok; rec.latestMatched = ok; run.acted = true;
       const quick = !ok && Date.now() - shownAt < ADAPT.quickMs; shownAt = Date.now();
