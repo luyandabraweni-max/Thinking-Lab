@@ -143,8 +143,8 @@ describe("the Thinking Lab", () => {
     await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
     for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
     await user.click(await screen.findByRole("button", { name: "Thinking Lab" }));
-    await user.click(screen.getByRole("button", { name: /^Light the Village/ }));
-    await user.click(screen.getByRole("button", { name: "Begin" }));
+    await user.click(await screen.findByRole("button", { name: /^Light the Village/ })); // the Thinking Lab loads when opened
+    await user.click(await screen.findByRole("button", { name: "Begin" }));
     // Village 1: one mirror, tilted down to the right
     await user.click(screen.getByRole("button", { name: "row 1, column 3: empty" }));
     await user.click(screen.getByRole("button", { name: /row 1, column 3: mirror/ }));
