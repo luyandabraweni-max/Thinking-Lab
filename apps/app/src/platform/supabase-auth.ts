@@ -17,8 +17,12 @@ export class SupabaseAuth implements AuthAdapter {
   async session() {
     const { data } = await this.client.auth.getSession();
     if (!data.session) return null;
-    await this.afterSignIn().catch(() => {}); // fetch the account; offline, the copy on the device is used
-    return (await this.account()) ?? "new";
+    let syncError: Error | null = null;
+    await this.afterSignIn().catch((e: Error) => { syncError = e; }); // fetch the account; offline, the copy on the device is used
+    const me = await this.account();
+    if (me) return me;
+    if (syncError && navigator.onLine) throw syncError; // signed in, but the account couldn't be fetched: say why
+    return "new";
   }
   async signInWithGoogle() {
     const { error } = await this.client.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname, scopes: "openid email profile" } });

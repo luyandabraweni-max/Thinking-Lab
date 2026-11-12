@@ -14,10 +14,10 @@ type View = { at: "front" } | { at: "home" } | { at: "learner"; id: string } | {
 /** `voice` lets tests use a scripted microphone; the app finds the device's own. */
 export function App({ services, voice }: { services: Services; voice?: { engine: SpeechEngine | null; say: (t: string) => Promise<void> } }) {
   const [me, setMe] = useState<Account | null>(null), [view, setView] = useState<View>({ at: "front" });
-  const [registering, setRegistering] = useState(false);
+  const [registering, setRegistering] = useState(false), [problem, setProblem] = useState("");
   // Opening the app from the sign-in link in an email: the person is already signed in.
   useEffect(() => {
-    void services.auth.session().then(s => { if (s === "new") setRegistering(true); else if (s) { setMe(s); setView({ at: "home" }); } }).catch(() => {});
+    void services.auth.session().then(s => { if (s === "new") setRegistering(true); else if (s) { setMe(s); setView({ at: "home" }); } }).catch((e: Error) => setProblem(e.message));
   }, [services]);
   const signOut = async () => { await services.auth.signOut(); setMe(null); setRegistering(false); setView({ at: "front" }); };
   return (
@@ -32,6 +32,7 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
             </div>
           </header> : null}
           <main id="main" className="tl-page">
+            {problem ? <div className="tl-error" role="alert"><p>{problem}</p><Button small onClick={() => location.reload()}>Reload</Button></div> : null}
             {view.at === "space" ? <LearnerHome learner={view.learner} onDone={() => setView({ at: "front" })} />
               : !me ? <SignIn key={String(registering)} registering={registering} onAdult={a => { setMe(a); setRegistering(false); setView({ at: "home" }); }} onLearner={l => setView({ at: "space", learner: l })} />
               : view.at === "learner" ? <LearnerPage me={me} learnerId={view.id} onBack={() => setView({ at: "home" })} />

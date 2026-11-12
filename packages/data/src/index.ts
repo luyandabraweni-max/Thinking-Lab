@@ -1,7 +1,7 @@
 // Public interface of the data module. Everything else in it is private (tools/check-boundaries.mjs enforces this).
 export type { Account, AdultRole, Attempt, ConcernRow, Consent, Goal, LearnerSettings, Note, PlanStep, SessionPlan, Observation, Dose, HealthEntry, Law, Learner, Medication, Message, Role, TableName, Tables, TeamMember } from "./types";
 export { AccessDenied, canChangeConsent, canEditPlan, canEditHealth, canSeeHealth, canSeeLearner, isGuardian, isTeamMember } from "./access";
-export { IdbKv, MemoryKv, type Kv, type OutboxEntry } from "./kv";
+export { BLOCKED, IdbKv, MemoryKv, type Kv, type OutboxEntry } from "./kv";
 export { defaultSettings, LearnerSpace, LocalStore, Session, type NewMedication } from "./store";
 export { LocalSafeguarding, type ConcernRecord, type Safeguarding } from "./safeguarding";
 export { sync, type Changes, type SyncResult, type Transport } from "./sync";

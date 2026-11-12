@@ -34,15 +34,24 @@ export class MemoryKv implements Kv {
   async clear() { this.rows.clear(); this.queue = []; this.meta.clear(); }
 }
 
+/** Shown when another tab of the app holds an older copy of the device database. */
+export const BLOCKED = "Thinking Lab is open in another tab or window. Close the other ones, then reload this page.";
+
 export class IdbKv implements Kv {
   private db: Promise<IDBPDatabase>;
   constructor(name = "thinking-lab") {
-    this.db = openDB(name, 5, {
-      upgrade(db) { // version 2 added attempts, 3 concerns, 4 goals, observations and notes, 5 learner settings; creating only what's missing upgrades older devices in place
-        for (const t of TABLES) if (!db.objectStoreNames.contains(t)) db.createObjectStore(t, { keyPath: "id" });
-        if (!db.objectStoreNames.contains("outbox")) db.createObjectStore("outbox", { keyPath: "id" });
-        if (!db.objectStoreNames.contains("meta")) db.createObjectStore("meta");
-      }
+    // An app tab still open on an older version holds the database and stops the upgrade, and the browser just waits.
+    // Newer tabs step aside when asked (blocking); if an old tab doesn't, say so instead of waiting forever.
+    this.db = new Promise((resolve, reject) => {
+      openDB(name, 5, {
+        upgrade(db) { // version 2 added attempts, 3 concerns, 4 goals, observations and notes, 5 learner settings; creating only what's missing upgrades older devices in place
+          for (const t of TABLES) if (!db.objectStoreNames.contains(t)) db.createObjectStore(t, { keyPath: "id" });
+          if (!db.objectStoreNames.contains("outbox")) db.createObjectStore("outbox", { keyPath: "id" });
+          if (!db.objectStoreNames.contains("meta")) db.createObjectStore("meta");
+        },
+        blocked: () => reject(new Error(BLOCKED)),
+        blocking: (_now, _next, event) => (event.target as IDBDatabase).close()
+      }).then(resolve, reject);
     });
   }
   async all<T extends TableName>(t: T) { return (await (await this.db).getAll(t)) as Tables[T][]; }
