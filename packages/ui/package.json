@@ -3,6 +3,12 @@
   "private": true,
   "description": "Design system: tokens for every display mode (light, dark, high contrast, greyscale, calm) and accessible components.",
   "type": "module",
-  "exports": { ".": "./src/index.ts", "./tokens.css": "./src/tokens.css" },
-  "peerDependencies": { "react": "19.3.1" }
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./src/tokens.css",
+    "./legacy.css": "./src/legacy.css"
+  },
+  "peerDependencies": {
+    "react": "19.3.1"
+  }
 }

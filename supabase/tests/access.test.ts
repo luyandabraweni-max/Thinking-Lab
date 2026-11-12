@@ -86,6 +86,16 @@ describe("health records", () => {
   });
 });
 
+describe("attempts", () => {
+  it("are recorded once by the learner's team, and seen only by people who can see the learner", async () => {
+    const a = { id: uuid(20), learnerId: kid, activityId: "light", status: "alone", mode: "placed mirrors", hints: 0, flags: null, reflection: "I planned", occurredAt: "2026-11-12T08:00:00Z" };
+    expect((await push(PARENT, [{ id: uuid(21), table: "attempts", row: a }, { id: uuid(22), table: "attempts", row: a }])).applied).toHaveLength(2);
+    expect(await as(db, SPECIALIST, q => q("select activity_id from public.attempts"))).toEqual([{ activity_id: "light" }]);
+    expect(await as(db, OTHER_PARENT, q => q("select activity_id from public.attempts"))).toEqual([]);
+    expect((await push(STRANGER, [{ id: uuid(23), table: "attempts", row: { ...a, id: uuid(24) } }])).rejected).toHaveLength(1);
+  });
+});
+
 describe("sync pull", () => {
   it("returns only what the caller may see", async () => {
     const mine = await pull(PARENT), theirs = await pull(OTHER_PARENT), stranger = await pull(STRANGER);

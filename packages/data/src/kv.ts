@@ -37,11 +37,11 @@ export class MemoryKv implements Kv {
 export class IdbKv implements Kv {
   private db: Promise<IDBPDatabase>;
   constructor(name = "thinking-lab") {
-    this.db = openDB(name, 1, {
-      upgrade(db) {
-        for (const t of TABLES) db.createObjectStore(t, { keyPath: "id" });
-        db.createObjectStore("outbox", { keyPath: "id" });
-        db.createObjectStore("meta");
+    this.db = openDB(name, 2, {
+      upgrade(db) { // version 2 added attempts; creating only what's missing upgrades older devices in place
+        for (const t of TABLES) if (!db.objectStoreNames.contains(t)) db.createObjectStore(t, { keyPath: "id" });
+        if (!db.objectStoreNames.contains("outbox")) db.createObjectStore("outbox", { keyPath: "id" });
+        if (!db.objectStoreNames.contains("meta")) db.createObjectStore("meta");
       }
     });
   }

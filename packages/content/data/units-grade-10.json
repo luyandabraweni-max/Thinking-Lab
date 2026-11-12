@@ -1,0 +1,1848 @@
+{
+ "level": "grade-10",
+ "units": [
+  {
+   "id": "g10-exponents",
+   "grade": 10,
+   "subject": "Mathematics",
+   "title": "Laws of exponents",
+   "topic": "Exponents",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 10 Mathematics, Term 1: Exponents (laws of exponents for integral exponents; simplify expressions; solve simple exponential equations)",
+   "intention": "Today I am using the laws of exponents to simplify expressions.",
+   "prompt": "Which law do you find easiest to remember, and why?",
+   "lesson": [
+    {
+     "h": "Multiplying and dividing",
+     "say": "When multiplying powers with the same base, add the exponents. When dividing, subtract them. x to the 3 times x to the 4 is x to the 7.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">aᵐ × aⁿ = aᵐ⁺ⁿ</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">aᵐ ÷ aⁿ = aᵐ⁻ⁿ</span></div><p>Only works when the <b>base</b> is the same.</p>"
+    },
+    {
+     "h": "Power of a power",
+     "say": "A power raised to another power: multiply the exponents. x squared, all cubed, is x to the 6.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">(aᵐ)ⁿ = aᵐⁿ</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">(ab)ⁿ = aⁿbⁿ</span></div><p>Every factor inside the bracket gets the exponent.</p>"
+    },
+    {
+     "h": "Zero and negative exponents",
+     "say": "Anything except zero to the power of zero is one. A negative exponent means one over the positive power. Two to the minus three is one over eight.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a⁰ = 1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a⁻ⁿ = 1/aⁿ</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2⁻³ = 1/8</span></div><p>A negative exponent does <b>not</b> make the answer negative.</p>"
+    }
+   ],
+   "example": {
+    "q": "Simplify (2x³)² × x⁻⁴.",
+    "steps": [
+     "(2x³)² = 4x⁶.",
+     "4x⁶ × x⁻⁴: add the exponents, 6 + (−4) = 2.",
+     "Answer: 4x²."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Simplify: a⁵ × a³",
+     "options": [
+      "a⁸",
+      "a¹⁵",
+      "a²",
+      "2a⁸"
+     ],
+     "answer": 0,
+     "hints": [
+      "Same base, multiplying.",
+      "Add the exponents.",
+      "5 + 3."
+     ],
+     "explain": "a⁵ × a³ = a⁸."
+    },
+    {
+     "type": "mcq",
+     "q": "Simplify: y¹⁰ ÷ y⁴",
+     "options": [
+      "y⁶",
+      "y¹⁴",
+      "y⁴⁰",
+      "y²·⁵"
+     ],
+     "answer": 0,
+     "hints": [
+      "Dividing: subtract.",
+      "10 − 4.",
+      "y⁶."
+     ],
+     "explain": "y¹⁰ ÷ y⁴ = y⁶."
+    },
+    {
+     "type": "mcq",
+     "q": "What is 5⁰?",
+     "options": [
+      "1",
+      "0",
+      "5",
+      "Undefined"
+     ],
+     "answer": 0,
+     "hints": [
+      "Any non-zero number to the power 0.",
+      "Always the same answer.",
+      "1."
+     ],
+     "explain": "5⁰ = 1."
+    },
+    {
+     "type": "mcq",
+     "q": "What is 3⁻²?",
+     "options": [
+      "1/9",
+      "−9",
+      "−6",
+      "9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Negative exponent: one over.",
+      "1/3².",
+      "1/9."
+     ],
+     "explain": "3⁻² = 1/9."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve: 2ˣ = 32",
+     "options": [
+      "x = 5",
+      "x = 16",
+      "x = 4",
+      "x = 6"
+     ],
+     "answer": 0,
+     "hints": [
+      "Write 32 as a power of 2.",
+      "32 = 2⁵.",
+      "So x = 5."
+     ],
+     "explain": "2⁵ = 32, so x = 5."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing the laws out",
+     "Checking the base is the same",
+     "Writing numbers as powers",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used the laws of exponents to simplify expressions and solve simple exponential equations.",
+   "teacher": "Shows applying exponent laws, zero and negative exponents, and solving exponential equations with a common base.",
+   "done": "Same base: add when multiplying, subtract when dividing, multiply for a power of a power."
+  },
+  {
+   "id": "g10-trig",
+   "grade": 10,
+   "subject": "Mathematics",
+   "title": "Trigonometric ratios",
+   "topic": "Sin, cos and tan",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 10 Mathematics, Term 2: Trigonometry (define sin, cos and tan in right-angled triangles; solve two-dimensional problems)",
+   "intention": "Today I am using sin, cos and tan to work with right-angled triangles.",
+   "prompt": "How do you decide which ratio to use?",
+   "lesson": [
+    {
+     "h": "Naming the sides",
+     "say": "Choose an angle, called theta. The hypotenuse is the longest side. The opposite side is across from theta. The adjacent side is next to theta.",
+     "html": "<svg width=\"190\" height=\"140\" viewBox=\"0 0 190 140\" role=\"img\" aria-label=\"Right-angled triangle with angle theta at the bottom left. Opposite side 3, adjacent side 4, hypotenuse 5.\"><polygon points=\"20,120 170,120 170,20\" fill=\"var(--brand-soft)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><rect x=\"156\" y=\"106\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"var(--ink)\"/><text x=\"40\" y=\"116\" font-size=\"13\" fill=\"var(--ink)\">θ</text><text x=\"95\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">adjacent 4</text><text x=\"178\" y=\"72\" font-size=\"13\" fill=\"var(--ink)\">3</text><text x=\"80\" y=\"62\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">hyp 5</text></svg><p>Labels depend on <b>which angle</b> you choose.</p>"
+    },
+    {
+     "h": "The three ratios",
+     "say": "Sine theta is opposite over hypotenuse. Cosine theta is adjacent over hypotenuse. Tangent theta is opposite over adjacent. Remember SOH CAH TOA.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sin θ = O/H</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">cos θ = A/H</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">tan θ = O/A</span></div><p><b>SOH CAH TOA</b></p>"
+    },
+    {
+     "h": "Using them",
+     "say": "In this triangle, sine theta is three fifths, cosine theta is four fifths, and tangent theta is three quarters.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sin θ = 3/5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">cos θ = 4/5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">tan θ = 3/4</span></div><p>Use a calculator in <b>degree</b> mode to find angles and lengths.</p>"
+    }
+   ],
+   "example": {
+    "q": "A ramp is 10 m long and rises at 30°. How high does it rise?",
+    "steps": [
+     "The ramp is the hypotenuse, 10 m. The height is opposite the 30° angle.",
+     "Opposite and hypotenuse: use sin.",
+     "height = 10 × sin 30° = 10 × 0,5 = 5 m."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which ratio is opposite over hypotenuse?",
+     "options": [
+      "sin θ",
+      "cos θ",
+      "tan θ"
+     ],
+     "answer": 0,
+     "hints": [
+      "SOH.",
+      "S, O, H.",
+      "Sine."
+     ],
+     "explain": "sin θ = opposite/hypotenuse."
+    },
+    {
+     "type": "mcq",
+     "q": "In the triangle shown, what is tan θ?",
+     "html": "<svg width=\"190\" height=\"140\" viewBox=\"0 0 190 140\" role=\"img\" aria-label=\"Right-angled triangle with angle theta at the bottom left. Opposite side 3, adjacent side 4, hypotenuse 5.\"><polygon points=\"20,120 170,120 170,20\" fill=\"var(--brand-soft)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><rect x=\"156\" y=\"106\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"var(--ink)\"/><text x=\"40\" y=\"116\" font-size=\"13\" fill=\"var(--ink)\">θ</text><text x=\"95\" y=\"136\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">adjacent 4</text><text x=\"178\" y=\"72\" font-size=\"13\" fill=\"var(--ink)\">3</text><text x=\"80\" y=\"62\" font-size=\"13\" text-anchor=\"middle\" fill=\"var(--ink)\">hyp 5</text></svg>",
+     "options": [
+      "3/4",
+      "4/3",
+      "3/5",
+      "4/5"
+     ],
+     "answer": 0,
+     "hints": [
+      "TOA.",
+      "Opposite over adjacent.",
+      "3 over 4."
+     ],
+     "explain": "tan θ = 3/4."
+    },
+    {
+     "type": "mcq",
+     "q": "You know the adjacent side and the hypotenuse. Which ratio do you use?",
+     "options": [
+      "cos",
+      "sin",
+      "tan"
+     ],
+     "answer": 0,
+     "hints": [
+      "Adjacent and hypotenuse.",
+      "CAH.",
+      "Cosine."
+     ],
+     "explain": "cos θ = adjacent/hypotenuse."
+    },
+    {
+     "type": "num",
+     "q": "sin θ = 0,5. What is θ, in degrees?",
+     "answer": "30",
+     "options": [
+      "30",
+      "60",
+      "45",
+      "90"
+     ],
+     "hints": [
+      "Use sin⁻¹ on a calculator.",
+      "Or remember a special angle.",
+      "sin 30° = 0,5."
+     ],
+     "explain": "θ = 30°."
+    },
+    {
+     "type": "num",
+     "q": "A ladder 6 m long makes 60° with the ground. How far is its foot from the wall?",
+     "answer": "3",
+     "options": [
+      "3",
+      "5,2",
+      "6",
+      "12"
+     ],
+     "hints": [
+      "The distance is adjacent to 60°.",
+      "Use cos.",
+      "6 × cos 60° = 6 × 0,5."
+     ],
+     "explain": "6 × cos 60° = 3 m."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Labelling the sides first",
+     "SOH CAH TOA",
+     "Drawing a sketch",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used sin, cos and tan to find sides and angles in right-angled triangles.",
+   "teacher": "Shows labelling sides relative to an angle, selecting the correct ratio and solving 2-D problems.",
+   "done": "Label the sides, choose the ratio with SOH CAH TOA, then solve."
+  },
+  {
+   "id": "g10-stats",
+   "grade": 10,
+   "subject": "Mathematics",
+   "title": "Mean, median and spread",
+   "topic": "Statistics",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 10 Mathematics, Term 4: Statistics (measures of central tendency; range, quartiles and interquartile range; five-number summary)",
+   "intention": "Today I am summarising data using averages and spread.",
+   "prompt": "When is the median a better average than the mean?",
+   "lesson": [
+    {
+     "h": "Three averages",
+     "say": "The mean adds all values and divides by how many there are. The median is the middle value when the data is in order. The mode is the most common value.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mean: add ÷ count</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Median: middle</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mode: most often</span></div><p>Data: 2, 3, 3, 5, 7. Mean 4, median 3, mode 3.</p>"
+    },
+    {
+     "h": "Outliers",
+     "say": "An outlier is a value far from the rest. It pulls the mean towards it, but barely moves the median. That is why the median is often used for incomes and house prices.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3, 4, 4, 5, 34</span></div><p>Mean = 10, but the median = 4 describes the data better.</p>"
+    },
+    {
+     "h": "Spread",
+     "say": "The range is the highest minus the lowest. Quartiles split ordered data into four equal parts. The interquartile range is Q3 minus Q1, the spread of the middle half.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Min</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Q1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Median</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Q3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Max</span></div><p>This is the <b>five-number summary</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Test marks: 45, 52, 58, 61, 64, 70, 88. Find the median and range.",
+    "steps": [
+     "The data is already in order, with 7 values.",
+     "The middle value is the 4th: 61.",
+     "Range = 88 − 45 = 43."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the mean of 4, 6, 8, 10, 12.",
+     "answer": "8",
+     "options": [
+      "8",
+      "40",
+      "10",
+      "6"
+     ],
+     "hints": [
+      "Add them: 40.",
+      "There are 5 values.",
+      "40 ÷ 5."
+     ],
+     "explain": "40 ÷ 5 = 8."
+    },
+    {
+     "type": "num",
+     "q": "Find the median of 9, 2, 7, 4, 5.",
+     "answer": "5",
+     "options": [
+      "5",
+      "7",
+      "4",
+      "9"
+     ],
+     "hints": [
+      "Put them in order first.",
+      "2, 4, 5, 7, 9.",
+      "The middle value."
+     ],
+     "explain": "In order: 2, 4, 5, 7, 9. The median is 5."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the mode of 3, 5, 5, 6, 8, 5, 2?",
+     "options": [
+      "5",
+      "3",
+      "6",
+      "4,9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Most common.",
+      "Count each value.",
+      "5 appears three times."
+     ],
+     "explain": "5 appears most often."
+    },
+    {
+     "type": "mcq",
+     "q": "Salaries in a small company: R8 000, R9 000, R9 500, R10 000, R95 000. Which average is most representative?",
+     "options": [
+      "Median",
+      "Mean",
+      "Range",
+      "Maximum"
+     ],
+     "answer": 0,
+     "hints": [
+      "One value is an outlier.",
+      "The mean will be pulled up.",
+      "The median."
+     ],
+     "explain": "The median (R9 500) is not distorted by the outlier."
+    },
+    {
+     "type": "num",
+     "q": "Q1 = 12 and Q3 = 30. What is the interquartile range?",
+     "answer": "18",
+     "options": [
+      "18",
+      "42",
+      "21",
+      "12"
+     ],
+     "hints": [
+      "IQR = Q3 − Q1.",
+      "30 − 12.",
+      "18."
+     ],
+     "explain": "IQR = 30 − 12 = 18."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Ordering the data first",
+     "Spotting outliers",
+     "The five-number summary",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child summarised data with mean, median, mode, range and quartiles.",
+   "teacher": "Shows calculating measures of central tendency and dispersion, and judging which average represents data best.",
+   "done": "Use averages for the centre and range or IQR for the spread."
+  },
+  {
+   "id": "g10-poetry",
+   "grade": 10,
+   "subject": "English Home Language",
+   "title": "Poem: Rank",
+   "topic": "Analysing poetry",
+   "domain": "Communication and Expression",
+   "category": "Creativity",
+   "caps": "CAPS Grade 10 English Home Language: Literature (poetry: imagery, metaphor, enjambment, tone, theme; contextual questions)",
+   "intention": "Today I am analysing how a poet creates meaning through imagery and structure.",
+   "prompt": "What do you think the poem is saying about the workers?",
+   "passage": "<div class=\"passage-text\"><p><b>Rank</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>At five the rank is already awake,<br>a throat of engines clearing<br>the night from its voice.</p>\n<p>Gogo Nomsa sells boiled eggs and patience,<br>her hands a quiet arithmetic<br>of coins and change and small talk.</p>\n<p>The queue unspools like thread from a spool,<br>each worker stitched<br>to a city that never learns their names.</p>\n<p>And still they laugh. And still<br>the hooter's two short notes<br>are a kind of song.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the poem",
+     "say": "Read the poem, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Rank</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>At five the rank is already awake,<br>a throat of engines clearing<br>the night from its voice.</p>\n<p>Gogo Nomsa sells boiled eggs and patience,<br>her hands a quiet arithmetic<br>of coins and change and small talk.</p>\n<p>The queue unspools like thread from a spool,<br>each worker stitched<br>to a city that never learns their names.</p>\n<p>And still they laugh. And still<br>the hooter's two short notes<br>are a kind of song.</p></div>"
+    },
+    {
+     "h": "Metaphor and imagery",
+     "say": "The rank is a throat of engines clearing the night from its voice. The rank is personified as a person waking up. Gogo Nomsa sells boiled eggs and patience, which mixes something concrete with something abstract.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">throat of engines</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">eggs and patience</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a quiet arithmetic</span></div><p>Unexpected pairings make us <b>look again</b>.</p>"
+    },
+    {
+     "h": "Enjambment and theme",
+     "say": "Enjambment is when a sentence runs over the end of a line without punctuation. It creates flow, like the moving queue. The theme is the dignity and resilience of workers in a city that overlooks them.",
+     "html": "<p><b>Enjambment</b>: each worker stitched / to a city …</p><p><b>Theme</b>: dignity and resilience.</p>"
+    }
+   ],
+   "example": {
+    "q": "What does the simile The queue unspools like thread from a spool suggest?",
+    "steps": [
+     "Thread unspools steadily and continuously.",
+     "The queue moves forward in a long, steady line.",
+     "It also links to stitched, suggesting workers are sewn into the city's fabric."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What figure of speech is a throat of engines clearing the night from its voice?",
+     "options": [
+      "Personification",
+      "Simile",
+      "Hyperbole",
+      "Alliteration"
+     ],
+     "answer": 0,
+     "hints": [
+      "Does a rank have a throat?",
+      "Human qualities given to a place.",
+      "Personification."
+     ],
+     "explain": "The rank is described as a person clearing its throat."
+    },
+    {
+     "type": "mcq",
+     "q": "Why might the poet say she sells boiled eggs and patience?",
+     "options": [
+      "She is patient with customers as well as selling food",
+      "Patience is an egg",
+      "She sells nothing",
+      "It is a mistake"
+     ],
+     "answer": 0,
+     "hints": [
+      "Patience cannot be sold literally.",
+      "What does she give customers besides eggs?",
+      "Patience and kindness."
+     ],
+     "explain": "It suggests she offers patience along with her goods."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a city that never learns their names suggest?",
+     "options": [
+      "The workers are overlooked",
+      "The city is friendly",
+      "Nobody has a name",
+      "The workers are famous"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who notices the workers?",
+      "Nobody knows them.",
+      "They are overlooked."
+     ],
+     "explain": "The workers are essential but unnoticed."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the tone of the final stanza?",
+     "options": [
+      "Hopeful and resilient",
+      "Angry",
+      "Despairing",
+      "Bored"
+     ],
+     "answer": 0,
+     "hints": [
+      "And still they laugh.",
+      "Despite everything.",
+      "Hopeful."
+     ],
+     "explain": "And still they laugh shows resilience and hope."
+    },
+    {
+     "type": "mcq",
+     "q": "What is enjambment?",
+     "options": [
+      "A sentence running on past the end of a line",
+      "A rhyme at the end of a line",
+      "A repeated first sound",
+      "A comparison with like"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is about lines.",
+      "No punctuation at the line end.",
+      "It runs on."
+     ],
+     "explain": "Enjambment carries a sentence over a line break."
+    }
+   ],
+   "reflect": {
+    "q": "How did you understand the poem best?",
+    "options": [
+     "Reading it slowly",
+     "Listening to it",
+     "Unpacking one image at a time",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed a poem's imagery, structure, tone and theme.",
+   "teacher": "Shows interpreting personification, metaphor and simile, enjambment, tone and theme in an unseen poem.",
+   "done": "Look at imagery, structure and tone to find a poem's theme."
+  },
+  {
+   "id": "g10-visual",
+   "grade": 10,
+   "subject": "English Home Language",
+   "title": "Reading visual texts",
+   "topic": "Visual literacy: adverts and cartoons",
+   "domain": "Communication and Expression",
+   "category": "Reflection",
+   "caps": "CAPS Grade 10 English Home Language: Reading and Viewing (visual literacy: advertisements and cartoons; layout, font, colour, target audience, purpose)",
+   "intention": "Today I am analysing how pictures and words work together in adverts and cartoons.",
+   "prompt": "Which advert has persuaded you recently, and how?",
+   "lesson": [
+    {
+     "h": "Elements of a visual text",
+     "say": "Visual texts combine images and words. Look at the layout, font size, colour, the main image, the slogan and the logo.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Image</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slogan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Font</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Colour</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Layout</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Logo</span></div><p>Ask: what do I notice <b>first</b>, and why?</p>"
+    },
+    {
+     "h": "Audience and purpose",
+     "say": "Every advert targets an audience and has a purpose: to sell, inform or change behaviour. Colours, models and language are chosen for that audience.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Who is it for?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">What does it want?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">How does it persuade?</span></div><p>A sports drink advert might use bold colours and action shots for young athletes.</p>"
+    },
+    {
+     "h": "Cartoons",
+     "say": "Cartoons comment on issues, often with humour or exaggeration. Caricature exaggerates features. Speech bubbles, captions and symbols carry the message.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Speech bubble and pen\">💬 🖋️</p><p>Ask: what is the cartoonist <b>criticising</b>?</p>"
+    }
+   ],
+   "example": {
+    "q": "An advert shows a smiling family around a braai with the slogan Real meat, real moments. Who is the target audience and what is the message?",
+    "steps": [
+     "The image shows families and a South African tradition.",
+     "The slogan links the product to togetherness.",
+     "It targets parents and suggests the product creates family moments."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is a slogan?",
+     "options": [
+      "A short, memorable phrase",
+      "The company's address",
+      "The price",
+      "A long paragraph"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is catchy.",
+      "Often under the logo.",
+      "Short and memorable."
+     ],
+     "explain": "A slogan is a short, memorable phrase."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are the largest words usually the most important?",
+     "options": [
+      "They draw the eye first",
+      "They are cheaper",
+      "They are random",
+      "They are hidden"
+     ],
+     "answer": 0,
+     "hints": [
+      "Size creates focus.",
+      "What do you read first?",
+      "They draw the eye."
+     ],
+     "explain": "Size directs attention."
+    },
+    {
+     "type": "mcq",
+     "q": "What is caricature?",
+     "options": [
+      "Exaggerating someone's features",
+      "A type of font",
+      "A real photograph",
+      "A logo"
+     ],
+     "answer": 0,
+     "hints": [
+      "Used in cartoons.",
+      "Big ears, big nose.",
+      "Exaggeration."
+     ],
+     "explain": "Caricature exaggerates features for effect."
+    },
+    {
+     "type": "mcq",
+     "q": "An energy drink advert uses neon colours and skateboarders. Who is the target audience?",
+     "options": [
+      "Young people",
+      "Retired people",
+      "Babies",
+      "Farmers only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Skateboarding.",
+      "Bright, bold colours.",
+      "Young people."
+     ],
+     "explain": "The images target young, active people."
+    },
+    {
+     "type": "mcq",
+     "q": "A public health poster says Wash your hands, save lives. What is its purpose?",
+     "options": [
+      "To change behaviour",
+      "To sell soap",
+      "To entertain",
+      "To advertise a shop"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is not selling a brand.",
+      "It wants people to act.",
+      "Change behaviour."
+     ],
+     "explain": "It aims to change behaviour."
+    }
+   ],
+   "reflect": {
+    "q": "What will you look for first next time?",
+    "options": [
+     "The target audience",
+     "The slogan",
+     "Colour and layout",
+     "The hidden message"
+    ]
+   },
+   "parent": "Your child analysed how adverts and cartoons use images and words to persuade.",
+   "teacher": "Shows identifying visual elements, target audience, purpose and techniques in adverts and cartoons.",
+   "done": "Ask who a visual text is for, what it wants, and how it persuades."
+  },
+  {
+   "id": "g10-essay",
+   "grade": 10,
+   "subject": "English Home Language",
+   "title": "Essay types",
+   "topic": "Narrative, descriptive, argumentative and reflective essays",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 10 English Home Language: Writing and Presenting (essays: narrative, descriptive, argumentative, discursive, reflective; planning and paragraphing)",
+   "intention": "Today I am learning the features of different essay types.",
+   "prompt": "Which essay type do you enjoy writing most?",
+   "lesson": [
+    {
+     "h": "Four main types",
+     "say": "A narrative essay tells a story. A descriptive essay paints a picture with the senses. An argumentative essay takes a side and argues it. A reflective essay explores your own thoughts and growth.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Narrative: story</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Descriptive: senses</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Argumentative: one side</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reflective: thoughts</span></div>"
+    },
+    {
+     "h": "Planning",
+     "say": "Before writing, brainstorm, then make a plan: introduction, three or four body paragraphs, and a conclusion. Each body paragraph has one main idea.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Brainstorm</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Plan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Draft</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Edit</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Final copy</span></div><p>Most exams give marks for your <b>plan</b>.</p>"
+    },
+    {
+     "h": "Strong paragraphs",
+     "say": "Start each paragraph with a topic sentence. Support it with detail or evidence. Link it to the next paragraph with a transition.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Topic sentence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Support</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Link</span></div><p>Vary sentence length to keep the reader interested.</p>"
+    }
+   ],
+   "example": {
+    "q": "The topic is The day I learned to stand up for myself. Which essay type fits best?",
+    "steps": [
+     "It is about a personal experience.",
+     "It could tell a story and reflect on what you learned.",
+     "A narrative or reflective essay fits best."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which essay type takes one side of an issue?",
+     "options": [
+      "Argumentative",
+      "Descriptive",
+      "Narrative",
+      "Reflective"
+     ],
+     "answer": 0,
+     "hints": [
+      "It argues.",
+      "One side.",
+      "Argumentative."
+     ],
+     "explain": "Argumentative essays take one side."
+    },
+    {
+     "type": "mcq",
+     "q": "Which essay focuses on sights, sounds and smells?",
+     "options": [
+      "Descriptive",
+      "Argumentative",
+      "Discursive",
+      "Transactional"
+     ],
+     "answer": 0,
+     "hints": [
+      "Senses.",
+      "Painting a picture.",
+      "Descriptive."
+     ],
+     "explain": "Descriptive essays appeal to the senses."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a topic sentence?",
+     "options": [
+      "The sentence that states a paragraph's main idea",
+      "The last sentence of an essay",
+      "The title",
+      "A quote"
+     ],
+     "answer": 0,
+     "hints": [
+      "It starts a paragraph.",
+      "It tells what the paragraph is about.",
+      "Main idea."
+     ],
+     "explain": "It states the paragraph's main idea."
+    },
+    {
+     "type": "mcq",
+     "q": "Should school uniforms be scrapped? Which types could fit this topic?",
+     "options": [
+      "Argumentative or discursive",
+      "Narrative only",
+      "Descriptive only",
+      "None"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a debate topic.",
+      "One side, or both sides.",
+      "Argumentative or discursive."
+     ],
+     "explain": "A debate topic suits argumentative or discursive writing."
+    },
+    {
+     "type": "order",
+     "q": "Put the writing process in order.",
+     "items": [
+      "Brainstorm",
+      "Plan",
+      "Draft",
+      "Edit",
+      "Final copy"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Ideas first.",
+      "Then structure.",
+      "Edit before the final copy."
+     ],
+     "explain": "Brainstorm, plan, draft, edit, final copy."
+    }
+   ],
+   "reflect": {
+    "q": "Which part of essay writing will you work on?",
+    "options": [
+     "Planning",
+     "Topic sentences",
+     "Descriptive detail",
+     "Editing"
+    ]
+   },
+   "parent": "Your child learned the features of narrative, descriptive, argumentative and reflective essays.",
+   "teacher": "Shows distinguishing essay types, the writing process and paragraph structure.",
+   "done": "Choose the right essay type, plan first, and build strong paragraphs."
+  },
+  {
+   "id": "g10-mitosis",
+   "grade": 10,
+   "subject": "Life Sciences",
+   "title": "Cell division: mitosis",
+   "topic": "The cell cycle",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 10 Life Sciences, Term 1: Cell division (the cell cycle; mitosis: prophase, metaphase, anaphase, telophase; importance of mitosis; cancer)",
+   "intention": "Today I am learning how cells divide by mitosis.",
+   "prompt": "Why must the new cells be identical to the parent cell?",
+   "lesson": [
+    {
+     "h": "The cell cycle",
+     "say": "Most of a cell's life is spent in interphase, growing and copying its DNA. Then it divides by mitosis, making two identical daughter cells.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Interphase</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mitosis</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cytokinesis</span></div><p>DNA is copied during <b>interphase</b>.</p>"
+    },
+    {
+     "h": "The four phases",
+     "say": "In prophase, chromosomes become visible. In metaphase, they line up in the middle. In anaphase, the chromatids are pulled apart to opposite poles. In telophase, two new nuclei form.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Prophase</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Metaphase</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Anaphase</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Telophase</span></div><p>Remember <b>PMAT</b>.</p>"
+    },
+    {
+     "h": "Why it matters",
+     "say": "Mitosis allows growth, repair of damaged tissue and asexual reproduction. When cell division goes out of control, a tumour can form. This is how cancer develops.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Growth</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Repair</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Asexual reproduction</span></div><p>Uncontrolled mitosis can lead to <b>cancer</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "In which phase do chromosomes line up across the middle of the cell?",
+    "steps": [
+     "Think: M for middle.",
+     "Metaphase.",
+     "The chromosomes line up on the equator of the cell."
+    ]
+   },
+   "questions": [
+    {
+     "type": "order",
+     "q": "Put the phases of mitosis in order.",
+     "items": [
+      "Prophase",
+      "Metaphase",
+      "Anaphase",
+      "Telophase"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "PMAT.",
+      "P, M, A, T.",
+      "Prophase first."
+     ],
+     "explain": "Prophase, metaphase, anaphase, telophase."
+    },
+    {
+     "type": "mcq",
+     "q": "When is DNA copied?",
+     "options": [
+      "Interphase",
+      "Metaphase",
+      "Anaphase",
+      "Telophase"
+     ],
+     "answer": 0,
+     "hints": [
+      "Before mitosis begins.",
+      "The longest phase.",
+      "Interphase."
+     ],
+     "explain": "DNA replicates during interphase."
+    },
+    {
+     "type": "mcq",
+     "q": "In which phase are chromatids pulled to opposite poles?",
+     "options": [
+      "Anaphase",
+      "Prophase",
+      "Metaphase",
+      "Interphase"
+     ],
+     "answer": 0,
+     "hints": [
+      "A for apart.",
+      "They separate.",
+      "Anaphase."
+     ],
+     "explain": "Chromatids separate in anaphase."
+    },
+    {
+     "type": "mcq",
+     "q": "How many daughter cells does mitosis produce?",
+     "options": [
+      "Two identical cells",
+      "Four different cells",
+      "One cell",
+      "Eight cells"
+     ],
+     "answer": 0,
+     "hints": [
+      "One cell divides.",
+      "Into how many?",
+      "Two, identical."
+     ],
+     "explain": "Two genetically identical daughter cells."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is NOT a function of mitosis?",
+     "options": [
+      "Making sex cells",
+      "Growth",
+      "Repair",
+      "Asexual reproduction"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sex cells need half the chromosomes.",
+      "That needs a different division.",
+      "Meiosis makes sex cells."
+     ],
+     "explain": "Sex cells are made by meiosis, not mitosis."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "PMAT",
+     "Picturing each phase",
+     "Linking it to growth and repair",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned the cell cycle and the four phases of mitosis.",
+   "teacher": "Shows sequencing the cell cycle and phases of mitosis, and explaining the role of mitosis and its link to cancer.",
+   "done": "Mitosis makes two identical cells for growth and repair."
+  },
+  {
+   "id": "g10-ecosystems",
+   "grade": 10,
+   "subject": "Life Sciences",
+   "title": "Energy flow in ecosystems",
+   "topic": "Biosphere to ecosystems",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 10 Life Sciences, Term 4: Biosphere to ecosystems (biotic and abiotic factors; trophic levels; food chains and webs; energy pyramids; nutrient cycles)",
+   "intention": "Today I am tracing how energy moves through an ecosystem.",
+   "prompt": "Why are there usually fewer top predators than plants?",
+   "lesson": [
+    {
+     "h": "Biotic and abiotic",
+     "say": "An ecosystem has biotic, living factors like plants and animals, and abiotic, non-living factors like sunlight, water, soil and temperature.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Biotic: living</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Abiotic: non-living</span></div><p>Both affect what can live there.</p>"
+    },
+    {
+     "h": "Trophic levels",
+     "say": "Producers make food from sunlight. Primary consumers eat producers. Secondary consumers eat primary consumers. Decomposers break down dead matter.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Grass</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Springbok</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cheetah</span></div><p>Each step is a <b>trophic level</b>.</p>"
+    },
+    {
+     "h": "The ten percent rule",
+     "say": "Only about ten percent of energy passes to the next level. The rest is used for life processes or lost as heat. That is why energy pyramids get narrower at the top.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10 000 J</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 000 J</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">100 J</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10 J</span></div><p>Fewer <b>top predators</b> can be supported.</p>"
+    }
+   ],
+   "example": {
+    "q": "Grass has 20 000 J of energy. About how much reaches a cheetah that eats a springbok?",
+    "steps": [
+     "Grass to springbok: 10% of 20 000 = 2 000 J.",
+     "Springbok to cheetah: 10% of 2 000 = 200 J.",
+     "About 200 J."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is an abiotic factor?",
+     "options": [
+      "Rainfall",
+      "Grass",
+      "Bacteria",
+      "Lions"
+     ],
+     "answer": 0,
+     "hints": [
+      "Non-living.",
+      "Weather.",
+      "Rainfall."
+     ],
+     "explain": "Rainfall is non-living, so abiotic."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the role of decomposers?",
+     "options": [
+      "Break down dead matter and recycle nutrients",
+      "Make food from sunlight",
+      "Hunt other animals",
+      "Produce oxygen only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Fungi and bacteria.",
+      "They break things down.",
+      "Recycle nutrients."
+     ],
+     "explain": "Decomposers recycle nutrients from dead matter."
+    },
+    {
+     "type": "mcq",
+     "q": "In grass → grasshopper → frog → snake, what is the frog?",
+     "options": [
+      "Secondary consumer",
+      "Producer",
+      "Primary consumer",
+      "Decomposer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Grass is the producer.",
+      "The grasshopper is primary.",
+      "The frog eats the grasshopper."
+     ],
+     "explain": "The frog is a secondary consumer."
+    },
+    {
+     "type": "num",
+     "q": "A producer level has 50 000 J. Using the 10% rule, how much reaches the primary consumers?",
+     "answer": "5000",
+     "options": [
+      "5000",
+      "500",
+      "45000",
+      "50000"
+     ],
+     "hints": [
+      "10% passes on.",
+      "50 000 ÷ 10.",
+      "5 000 J."
+     ],
+     "explain": "10% of 50 000 = 5 000 J."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is energy lost between trophic levels?",
+     "options": [
+      "Used for life processes and lost as heat",
+      "It is destroyed",
+      "It is stored forever",
+      "It turns into water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Animals move and keep warm.",
+      "Respiration releases heat.",
+      "Life processes and heat."
+     ],
+     "explain": "Most energy is used or lost as heat."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Food chain examples",
+     "The 10% rule",
+     "The pyramid shape",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child traced how energy flows through ecosystems.",
+   "teacher": "Shows identifying biotic and abiotic factors, trophic levels and applying the 10% energy transfer rule.",
+   "done": "Energy flows from producers to consumers, and about 90% is lost at each step."
+  },
+  {
+   "id": "g10-transport",
+   "grade": 10,
+   "subject": "Life Sciences",
+   "title": "Transport in plants",
+   "topic": "Xylem, phloem and transpiration",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 10 Life Sciences, Term 3: Support and transport systems in plants (xylem and phloem; transpiration; factors affecting transpiration; wilting)",
+   "intention": "Today I am learning how water and food move through a plant.",
+   "prompt": "Why might a plant wilt on a hot, windy day?",
+   "lesson": [
+    {
+     "h": "Xylem and phloem",
+     "say": "Xylem carries water and minerals up from the roots. Phloem carries food, made in the leaves, to all parts of the plant.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Xylem: water up</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Phloem: food everywhere</span></div><p>Together they form <b>vascular bundles</b>.</p>"
+    },
+    {
+     "h": "Transpiration",
+     "say": "Transpiration is the loss of water vapour from leaves through tiny pores called stomata. It pulls water up the xylem like drinking through a straw.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Leaf and water\">🍃 💧</p><p>The <b>transpiration pull</b> moves water upwards.</p>"
+    },
+    {
+     "h": "Factors",
+     "say": "Transpiration is faster when it is hot, windy, bright and dry. It is slower when it is cool, still and humid.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">↑ temperature</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">↑ wind</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">↑ light</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">↓ humidity</span></div><p>If plants lose water faster than they take it in, they <b>wilt</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Why do plants in the desert often have small, waxy leaves?",
+    "steps": [
+     "Deserts are hot and dry, so transpiration is fast.",
+     "Small, waxy leaves lose less water.",
+     "This helps the plant survive."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does xylem transport?",
+     "options": [
+      "Water and minerals",
+      "Glucose",
+      "Oxygen only",
+      "Seeds"
+     ],
+     "answer": 0,
+     "hints": [
+      "From the roots.",
+      "Up the stem.",
+      "Water and minerals."
+     ],
+     "explain": "Xylem carries water and minerals."
+    },
+    {
+     "type": "mcq",
+     "q": "What does phloem transport?",
+     "options": [
+      "Food made in the leaves",
+      "Water only",
+      "Soil",
+      "Carbon dioxide"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sugars.",
+      "From the leaves.",
+      "Food."
+     ],
+     "explain": "Phloem carries sugars from the leaves."
+    },
+    {
+     "type": "mcq",
+     "q": "What are stomata?",
+     "options": [
+      "Pores in leaves",
+      "Root hairs",
+      "Seeds",
+      "Flowers"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tiny openings.",
+      "Mostly under the leaf.",
+      "Pores."
+     ],
+     "explain": "Stomata are tiny pores, mainly on the underside of leaves."
+    },
+    {
+     "type": "mcq",
+     "q": "Which condition slows transpiration?",
+     "options": [
+      "High humidity",
+      "Strong wind",
+      "Bright light",
+      "High temperature"
+     ],
+     "answer": 0,
+     "hints": [
+      "The air is already full of water vapour.",
+      "Less difference.",
+      "High humidity."
+     ],
+     "explain": "Humid air slows water loss from leaves."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does a plant wilt?",
+     "options": [
+      "It loses more water than it takes in",
+      "It has too much food",
+      "It grows too fast",
+      "It has too much light"
+     ],
+     "answer": 0,
+     "hints": [
+      "Cells lose water.",
+      "They go floppy.",
+      "Water loss."
+     ],
+     "explain": "Water loss greater than uptake makes cells floppy."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The straw comparison",
+     "Xylem up, phloem everywhere",
+     "Real plant examples",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned how xylem and phloem transport water and food, and what affects transpiration.",
+   "teacher": "Shows distinguishing xylem and phloem, explaining transpiration and factors affecting its rate.",
+   "done": "Xylem carries water up, phloem carries food, and leaves lose water by transpiration."
+  },
+  {
+   "id": "g10-stress",
+   "grade": 10,
+   "subject": "Life Orientation",
+   "title": "Managing stress",
+   "topic": "Development of the self in society",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "CAPS Grade 10 Life Orientation: Development of the self in society (strategies to enhance self-awareness and well-being; coping with stress)",
+   "intention": "Today I am learning to recognise stress and use healthy ways to cope.",
+   "prompt": "What is one healthy thing that helps you when you are stressed?",
+   "lesson": [
+    {
+     "h": "What stress is",
+     "say": "Stress is your body's response to pressure. A little stress can help you focus. Too much, for too long, can affect sleep, mood, concentration and health.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pressure</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">→</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Body response</span></div><p>Signs: headaches, poor sleep, irritability, worry.</p>"
+    },
+    {
+     "h": "Healthy coping",
+     "say": "Healthy ways to cope include exercise, sleep, talking to someone, breaking tasks into steps, slow breathing and time for things you enjoy.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Move</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sleep</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Talk</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Plan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Breathe</span></div><p>Try <b>box breathing</b>: in for 4, hold 4, out 4, hold 4.</p>"
+    },
+    {
+     "h": "Unhealthy coping and help",
+     "say": "Unhealthy coping, like isolating yourself or using alcohol, makes stress worse over time. If stress feels overwhelming, talk to a trusted adult, a school counsellor or a helpline.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Trusted adult</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Counsellor</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Clinic</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Helpline</span></div><p>Asking for help is a <b>strength</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Andile has three assignments due and cannot sleep. What could help?",
+    "steps": [
+     "Recognise the signs: poor sleep and worry.",
+     "Make a plan: list tasks, set small daily goals.",
+     "Look after himself: exercise, a regular bedtime, and talk to a teacher about deadlines."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a sign of too much stress?",
+     "options": [
+      "Trouble sleeping",
+      "Feeling rested",
+      "Good concentration",
+      "Calm mood"
+     ],
+     "answer": 0,
+     "hints": [
+      "Stress affects the body.",
+      "Which is a problem?",
+      "Trouble sleeping."
+     ],
+     "explain": "Poor sleep is a common sign of stress."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a healthy coping strategy?",
+     "options": [
+      "Exercise",
+      "Skipping meals",
+      "Isolating yourself",
+      "Staying up all night"
+     ],
+     "answer": 0,
+     "hints": [
+      "Good for body and mind.",
+      "Moving helps.",
+      "Exercise."
+     ],
+     "explain": "Exercise reduces stress hormones."
+    },
+    {
+     "type": "mcq",
+     "q": "Can some stress be useful?",
+     "options": [
+      "Yes, a little can help you focus",
+      "No, never",
+      "Only for adults",
+      "Only at night"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of before a race.",
+      "It sharpens attention.",
+      "Yes, a little."
+     ],
+     "explain": "Short-term stress can improve focus."
+    },
+    {
+     "type": "order",
+     "q": "Put box breathing in order.",
+     "items": [
+      "Breathe in for 4",
+      "Hold for 4",
+      "Breathe out for 4",
+      "Hold for 4"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start by breathing in.",
+      "Then hold.",
+      "Then out, then hold."
+     ],
+     "explain": "In, hold, out, hold."
+    },
+    {
+     "type": "mcq",
+     "q": "Stress has felt overwhelming for weeks. What is the best step?",
+     "options": [
+      "Talk to a counsellor or trusted adult",
+      "Keep it to yourself",
+      "Ignore it",
+      "Drop all friends"
+     ],
+     "answer": 0,
+     "hints": [
+      "You don't have to handle it alone.",
+      "Professional support helps.",
+      "Talk to someone."
+     ],
+     "explain": "Talking to a counsellor or trusted adult is the best step."
+    }
+   ],
+   "reflect": {
+    "q": "Which strategy will you try?",
+    "options": [
+     "Exercise",
+     "Box breathing",
+     "Planning my tasks",
+     "Talking to someone"
+    ]
+   },
+   "parent": "Your child learned to recognise stress and practise healthy coping strategies.",
+   "teacher": "Shows identifying signs of stress, distinguishing healthy from unhealthy coping and knowing where to seek help.",
+   "done": "Notice stress early, use healthy strategies, and ask for help when it is too much."
+  },
+  {
+   "id": "g10-rights",
+   "grade": 10,
+   "subject": "Life Orientation",
+   "title": "Human rights in action",
+   "topic": "Democracy and human rights",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Reflection",
+   "caps": "CAPS Grade 10 Life Orientation: Democracy and human rights (human rights violations; discrimination; campaigns and organisations that protect human rights)",
+   "intention": "Today I am learning how human rights are protected and how to respond to violations.",
+   "prompt": "Which human rights issue do you care about most?",
+   "lesson": [
+    {
+     "h": "Violations",
+     "say": "A human rights violation is when someone's rights are denied or abused, such as discrimination, gender-based violence, or a child being kept out of school.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Discrimination</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Violence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Exclusion</span></div><p>Violations can happen at home, school, work or online.</p>"
+    },
+    {
+     "h": "Who protects rights",
+     "say": "In South Africa, the courts, the South African Human Rights Commission, the Commission for Gender Equality and the Public Protector help protect rights. These are Chapter 9 institutions.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Courts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Human Rights Commission</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gender Commission</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Public Protector</span></div><p>Anyone can lodge a complaint with the <b>SAHRC</b>.</p>"
+    },
+    {
+     "h": "Taking action",
+     "say": "You can respond by reporting, supporting the person affected, raising awareness through a campaign, or joining an organisation that works on the issue.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Report</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Support</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Raise awareness</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Join</span></div><p>A campaign needs a clear <b>goal</b>, <b>audience</b> and <b>message</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A learner is refused entry to a school activity because of their religion. What could be done?",
+    "steps": [
+     "This is unfair discrimination, which violates the right to equality.",
+     "The learner and family can raise it with the school and governing body.",
+     "If not resolved, they can complain to the SAHRC."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a human rights violation?",
+     "options": [
+      "Refusing someone a job because of their race",
+      "Choosing a sports team",
+      "Wearing a uniform",
+      "Doing homework"
+     ],
+     "answer": 0,
+     "hints": [
+      "Unfair treatment.",
+      "Because of who someone is.",
+      "Race discrimination."
+     ],
+     "explain": "Refusing a job because of race is unfair discrimination."
+    },
+    {
+     "type": "mcq",
+     "q": "Which institution handles human rights complaints?",
+     "options": [
+      "South African Human Rights Commission",
+      "SARS",
+      "The Post Office",
+      "A bank"
+     ],
+     "answer": 0,
+     "hints": [
+      "Its name says it.",
+      "A Chapter 9 institution.",
+      "SAHRC."
+     ],
+     "explain": "The SAHRC handles human rights complaints."
+    },
+    {
+     "type": "mcq",
+     "q": "What are Chapter 9 institutions?",
+     "options": [
+      "Bodies that support democracy",
+      "Shops",
+      "Sports teams",
+      "Schools"
+     ],
+     "answer": 0,
+     "hints": [
+      "Named after a chapter of the Constitution.",
+      "They protect democracy.",
+      "Supporting democracy."
+     ],
+     "explain": "Chapter 9 institutions support constitutional democracy."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a campaign need?",
+     "options": [
+      "A clear goal, audience and message",
+      "Only a logo",
+      "Nothing",
+      "Lots of money only"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do you want?",
+      "Who should hear it?",
+      "Goal, audience, message."
+     ],
+     "explain": "A clear goal, audience and message."
+    },
+    {
+     "type": "mcq",
+     "q": "You see someone being bullied online for their sexuality. What is a helpful response?",
+     "options": [
+      "Support them and report the posts",
+      "Share the posts",
+      "Ignore it",
+      "Join in"
+     ],
+     "answer": 0,
+     "hints": [
+      "Stand with the person.",
+      "Platforms can remove abuse.",
+      "Support and report."
+     ],
+     "explain": "Supporting and reporting helps protect their rights."
+    }
+   ],
+   "reflect": {
+    "q": "How would you take action?",
+    "options": [
+     "Report",
+     "Support someone",
+     "Run a campaign",
+     "Join an organisation"
+    ]
+   },
+   "parent": "Your child learned about human rights violations and how they are addressed in South Africa.",
+   "teacher": "Shows identifying violations, knowing Chapter 9 institutions and planning responses and campaigns.",
+   "done": "Human rights are protected by law and by people who take action."
+  },
+  {
+   "id": "g10-funding",
+   "grade": 10,
+   "subject": "Life Orientation",
+   "title": "Paying for further study",
+   "topic": "Careers and career choices: funding",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 10 Life Orientation: Careers and career choices (options after school; financial aid, bursaries, scholarships and loans; requirements)",
+   "intention": "Today I am finding out how to pay for study after school.",
+   "prompt": "Which funding option might suit you?",
+   "lesson": [
+    {
+     "h": "Options after school",
+     "say": "After matric you can go to a university, a university of technology, a TVET college, a private college, a learnership, or into work or business.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">University</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">TVET college</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Learnership</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Work or business</span></div>"
+    },
+    {
+     "h": "Funding options",
+     "say": "NSFAS offers bursaries to qualifying students at public universities and TVET colleges, based on household income. Companies, government departments and charities also offer bursaries and scholarships. Loans must be repaid.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">NSFAS</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bursaries</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Scholarships</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Student loans</span></div><p>Learnerships let you <b>earn while you learn</b>.</p>"
+    },
+    {
+     "h": "Plan early",
+     "say": "Applications often close in the year before you study, sometimes by September or earlier. Keep certified copies of your ID and results ready, and check the official websites.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Research</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gather documents</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Apply early</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Follow up</span></div><p>Beware of <b>scams</b>: you should never pay to apply for NSFAS.</p>"
+    }
+   ],
+   "example": {
+    "q": "Thandeka wants to study nursing but her family cannot afford fees. What should she do?",
+    "steps": [
+     "Check whether she qualifies for NSFAS.",
+     "Look for health bursaries from provincial health departments and hospital groups.",
+     "Apply early and keep copies of all documents."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does NSFAS provide?",
+     "options": [
+      "Financial aid for qualifying students",
+      "Free cars",
+      "Jobs only",
+      "Private school fees"
+     ],
+     "answer": 0,
+     "hints": [
+      "National Student Financial Aid Scheme.",
+      "For study.",
+      "Financial aid."
+     ],
+     "explain": "NSFAS funds qualifying students at public institutions."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the difference between a bursary and a loan?",
+     "options": [
+      "A loan must be paid back",
+      "A bursary must be paid back with interest",
+      "They are the same",
+      "Loans are free"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one do you owe?",
+      "Loans are borrowed money.",
+      "Loans must be repaid."
+     ],
+     "explain": "Loans must be repaid. Bursaries usually do not, though some require work-back."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a learnership?",
+     "options": [
+      "Earning while you learn in a workplace",
+      "A type of loan",
+      "A university degree",
+      "A holiday"
+     ],
+     "answer": 0,
+     "hints": [
+      "Work and study together.",
+      "Often with a stipend.",
+      "Earn while you learn."
+     ],
+     "explain": "A learnership combines workplace learning and study."
+    },
+    {
+     "type": "mcq",
+     "q": "Someone asks you to pay R500 to apply for NSFAS. What is it?",
+     "options": [
+      "Probably a scam",
+      "Normal",
+      "Required",
+      "A bursary"
+     ],
+     "answer": 0,
+     "hints": [
+      "NSFAS applications are free.",
+      "Paying is a red flag.",
+      "A scam."
+     ],
+     "explain": "NSFAS applications are free, so this is likely a scam."
+    },
+    {
+     "type": "mcq",
+     "q": "When should you start researching funding?",
+     "options": [
+      "Early, in Grade 10 or 11",
+      "After you finish studying",
+      "Never",
+      "The week classes start"
+     ],
+     "answer": 0,
+     "hints": [
+      "Deadlines are early.",
+      "Plan ahead.",
+      "Grade 10 or 11."
+     ],
+     "explain": "Start early, because many deadlines fall in the year before study."
+    }
+   ],
+   "reflect": {
+    "q": "What will you do next?",
+    "options": [
+     "Check NSFAS",
+     "Look for bursaries",
+     "Find learnerships",
+     "Talk to my family"
+    ]
+   },
+   "parent": "Your child learned about study options after school and ways to fund them, including NSFAS, bursaries and learnerships.",
+   "teacher": "Shows knowledge of post-school pathways, funding options, application timing and avoiding scams.",
+   "done": "Research funding early: NSFAS, bursaries, scholarships and learnerships."
+  }
+ ],
+ "words": {
+  "g10-exponents": {
+   "words": [
+    [
+     "🔢",
+     "Base",
+     "the number being multiplied"
+    ],
+    [
+     "⬆️",
+     "Exponent",
+     "how many times the base is multiplied"
+    ]
+   ]
+  },
+  "g10-trig": {
+   "words": [
+    [
+     "📐",
+     "Hypotenuse",
+     "the longest side, opposite the right angle"
+    ],
+    [
+     "↔️",
+     "Adjacent",
+     "the side next to the angle"
+    ],
+    [
+     "↕️",
+     "Opposite",
+     "the side across from the angle"
+    ]
+   ]
+  },
+  "g10-stats": {
+   "words": [
+    [
+     "➗",
+     "Mean",
+     "the total divided by the number of values"
+    ],
+    [
+     "🎯",
+     "Median",
+     "the middle value in ordered data"
+    ],
+    [
+     "🚩",
+     "Outlier",
+     "a value far from the rest"
+    ]
+   ]
+  },
+  "g10-poetry": {
+   "words": [
+    [
+     "↪️",
+     "Enjambment",
+     "a sentence running on past the end of a line"
+    ],
+    [
+     "🎭",
+     "Personification",
+     "giving human qualities to non-human things"
+    ],
+    [
+     "🚖",
+     "Rank",
+     "a place where taxis wait for passengers"
+    ]
+   ]
+  },
+  "g10-visual": {
+   "words": [
+    [
+     "📢",
+     "Slogan",
+     "a short, memorable phrase"
+    ],
+    [
+     "🎯",
+     "Target audience",
+     "the people a text is aimed at"
+    ],
+    [
+     "🤡",
+     "Caricature",
+     "a drawing that exaggerates features"
+    ]
+   ]
+  },
+  "g10-essay": {
+   "words": [
+    [
+     "🧭",
+     "Topic sentence",
+     "the sentence that gives a paragraph's main idea"
+    ],
+    [
+     "🔗",
+     "Transition",
+     "a word or phrase linking ideas"
+    ]
+   ]
+  },
+  "g10-mitosis": {
+   "words": [
+    [
+     "🧬",
+     "Chromosome",
+     "a structure made of DNA"
+    ],
+    [
+     "➗",
+     "Mitosis",
+     "cell division that makes two identical cells"
+    ],
+    [
+     "🔄",
+     "Interphase",
+     "the stage when the cell grows and copies its DNA"
+    ]
+   ]
+  },
+  "g10-ecosystems": {
+   "words": [
+    [
+     "🌿",
+     "Biotic",
+     "living"
+    ],
+    [
+     "🪨",
+     "Abiotic",
+     "non-living"
+    ],
+    [
+     "🪜",
+     "Trophic level",
+     "a feeding level in a food chain"
+    ]
+   ]
+  },
+  "g10-transport": {
+   "words": [
+    [
+     "⬆️",
+     "Xylem",
+     "tubes that carry water up"
+    ],
+    [
+     "🍯",
+     "Phloem",
+     "tubes that carry food"
+    ],
+    [
+     "💨",
+     "Transpiration",
+     "water loss from leaves"
+    ]
+   ]
+  },
+  "g10-stress": {
+   "words": [
+    [
+     "🧠",
+     "Stress",
+     "the body's response to pressure"
+    ],
+    [
+     "🧰",
+     "Coping",
+     "dealing with a difficulty"
+    ]
+   ]
+  },
+  "g10-rights": {
+   "words": [
+    [
+     "⚖️",
+     "Violation",
+     "when a right is denied or abused"
+    ],
+    [
+     "🏛️",
+     "SAHRC",
+     "South African Human Rights Commission"
+    ]
+   ]
+  },
+  "g10-funding": {
+   "words": [
+    [
+     "🎓",
+     "Bursary",
+     "money for study that usually does not have to be paid back"
+    ],
+    [
+     "🏦",
+     "NSFAS",
+     "National Student Financial Aid Scheme"
+    ],
+    [
+     "🛠️",
+     "Learnership",
+     "earning while you learn in a workplace"
+    ]
+   ]
+  }
+ }
+}

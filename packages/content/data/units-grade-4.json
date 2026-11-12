@@ -1,0 +1,2090 @@
+{
+ "level": "grade-4",
+ "units": [
+  {
+   "id": "m4-patterns",
+   "grade": 4,
+   "subject": "Mathematics",
+   "title": "Number patterns and flow diagrams",
+   "topic": "Numeric patterns",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 4 Mathematics, Term 1: Numeric patterns, including flow diagrams (Patterns, Functions and Algebra)",
+   "intention": "Today I am practising finding the rule in a number pattern.",
+   "prompt": "What stays the same each time?",
+   "lesson": [
+    {
+     "h": "Patterns follow a rule",
+     "say": "A number pattern follows a rule. In 4, 8, 12, 16 the rule is add 4 each time.",
+     "html": "<p>A number pattern follows a <b>rule</b>. Look at this pattern:</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">12</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">16</span></div><p>Each number is <b>4 more</b> than the one before. The rule is <b>add 4</b>. The amount we add each time is called the <b>constant difference</b>.</p>"
+    },
+    {
+     "h": "Some patterns multiply",
+     "say": "Some patterns grow by multiplying. In 3, 6, 12, 24 the rule is multiply by 2.",
+     "html": "<p>Some patterns grow faster because they <b>multiply</b>:</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">12</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">24</span></div><p>Each number is <b>double</b> the one before. The rule is <b>multiply by 2</b>. Patterns can also get smaller, by subtracting or dividing.</p>"
+    },
+    {
+     "h": "Flow diagrams",
+     "say": "A flow diagram has an input, a rule and an output. If the rule is times 5, an input of 3 gives an output of 15.",
+     "html": "<p>A <b>flow diagram</b> shows an <b>input</b>, a <b>rule</b> and an <b>output</b>.</p><div class=\"row\" style=\"gap:8px\" role=\"img\" aria-label=\"Flow diagram: input 3, rule × 5, output 15\"><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Input: 3\">3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Rule: × 5\">× 5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Output: 15\">15</span></div><p>To find the input when you know the output, work <b>backwards</b> with the opposite operation: 15 ÷ 5 = 3.</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the next two numbers: 7, 14, 21, 28, …",
+    "steps": [
+     "Find the difference between the numbers: 14 − 7 = 7, and 21 − 14 = 7.",
+     "The difference stays the same, so the rule is add 7.",
+     "28 + 7 = 35, and 35 + 7 = 42. The next two numbers are 35 and 42."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "What is the next number? 5, 10, 15, 20, …",
+     "answer": "25",
+     "options": [
+      "25",
+      "30",
+      "21",
+      "24"
+     ],
+     "hints": [
+      "Look at how much the numbers grow each time.",
+      "Work out 10 − 5 and 15 − 10.",
+      "The pattern adds 5 each time. What is 20 + 5?"
+     ],
+     "explain": "The rule is add 5, so 20 + 5 = 25."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the rule? 100, 90, 80, 70",
+     "options": [
+      "Subtract 10",
+      "Add 10",
+      "Subtract 20",
+      "Divide by 10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Are the numbers getting bigger or smaller?",
+      "Work out 100 − 90.",
+      "The numbers get 10 smaller each time."
+     ],
+     "explain": "Each number is 10 less than the one before, so the rule is subtract 10."
+    },
+    {
+     "type": "num",
+     "q": "The rule is × 4. The input is 6. What is the output?",
+     "html": "<div class=\"row\" style=\"gap:8px\" role=\"img\" aria-label=\"Flow diagram: input 6, rule × 4, output ?\"><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Input: 6\">6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Rule: × 4\">× 4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Output: ?\">?</span></div>",
+     "answer": "24",
+     "options": [
+      "24",
+      "10",
+      "64",
+      "20"
+     ],
+     "hints": [
+      "Multiplying means making equal groups.",
+      "You need 6 groups of 4.",
+      "Count in 4s six times: 4, 8, 12, 16, 20, …"
+     ],
+     "explain": "6 × 4 = 24."
+    },
+    {
+     "type": "num",
+     "q": "The rule is + 25. The output is 75. What was the input?",
+     "html": "<div class=\"row\" style=\"gap:8px\" role=\"img\" aria-label=\"Flow diagram: input ?, rule + 25, output 75\"><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Input: ?\">?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Rule: + 25\">+ 25</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"min-width:64px;font-size:1.1rem\" aria-label=\"Output: 75\">75</span></div>",
+     "answer": "50",
+     "options": [
+      "50",
+      "100",
+      "75",
+      "25"
+     ],
+     "hints": [
+      "Work backwards from the output.",
+      "The opposite of adding is subtracting.",
+      "Work out 75 − 25."
+     ],
+     "explain": "Working backwards, 75 − 25 = 50. Check: 50 + 25 = 75."
+    },
+    {
+     "type": "num",
+     "q": "What number is missing? 3, 6, 12, __, 48",
+     "answer": "24",
+     "options": [
+      "24",
+      "18",
+      "20",
+      "36"
+     ],
+     "hints": [
+      "The numbers grow faster each time. Is the pattern adding or multiplying?",
+      "6 is 3 × 2, and 12 is 6 × 2.",
+      "Multiply 12 by 2."
+     ],
+     "explain": "The rule is multiply by 2: 12 × 2 = 24, and 24 × 2 = 48."
+    },
+    {
+     "type": "mcq",
+     "q": "Thandi saves R15 every week. She starts with nothing. How much has she saved after 6 weeks?",
+     "options": [
+      "R90",
+      "R21",
+      "R75",
+      "R60"
+     ],
+     "answer": 0,
+     "hints": [
+      "The savings make a pattern: R15, R30, R45, …",
+      "Keep adding R15 until you have 6 numbers.",
+      "15 × 6 = 90."
+     ],
+     "explain": "R15 × 6 = R90. The pattern is 15, 30, 45, 60, 75, 90."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you find the rule?",
+    "options": [
+     "Finding the difference",
+     "Working backwards",
+     "Counting in groups",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised finding rules in number patterns and flow diagrams, which builds early algebra.",
+   "teacher": "Shows whether the learner finds a constant difference, recognises multiplication patterns and can reverse a flow diagram.",
+   "done": "Number patterns are everywhere: in times tables, calendars and savings."
+  },
+  {
+   "id": "e4-folktale",
+   "grade": 4,
+   "subject": "English Home Language",
+   "title": "Folktale: Why Hare Has Long Ears",
+   "topic": "Folklore, nouns and adjectives",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 4 English Home Language, Term 1: Folklore (reading and viewing); language structures: common and proper nouns, adjectives",
+   "intention": "Today I am practising understanding a story and the words that build it.",
+   "prompt": "What caught your attention in the story?",
+   "passage": "<div class=\"passage-text\"><p><b>Why Hare Has Long Ears</b> <span class=\"muted\">(a 2to.iQ folktale)</span></p>\n<p>Long ago, Hare had short, round ears, just like Mouse. Hare was quick, but he never listened.</p>\n<p>One afternoon, Grandmother Tortoise called all the animals together. \"Tonight the rain will be heavy,\" she said slowly. \"The river will flood. Move your homes to the high rocks.\"</p>\n<p>All the animals listened, except Hare. He was busy racing his own shadow across the veld.</p>\n<p>That night, the water rose higher and higher. Hare woke up wet and cold, and he had to swim all the way to the high rocks.</p>\n<p>In the morning, Hare sat shivering beside Tortoise. \"I was foolish,\" he said. \"I wish I could hear better.\"</p>\n<p>Tortoise smiled. \"Then stretch your ears towards wise words,\" she said.</p>\n<p>So every day, Hare stretched his ears to listen to the wind, the birds and his friends. His ears grew longer and longer. And that is why, to this day, Hare has long ears and hears danger before anyone else.</p></div>",
+   "lesson": [
+    {
+     "h": "What is a folktale?",
+     "say": "A folktale is an old story that people told aloud. Folktales often explain why something is the way it is, and they teach a lesson.",
+     "html": "<p>A <b>folktale</b> is an old story that people passed on by telling it aloud. Folktales often:</p><ul class=\"plain\"><li>explain <b>why</b> something is the way it is</li><li>have <b>animals that talk</b></li><li>teach a <b>lesson</b></li></ul>"
+    },
+    {
+     "h": "Read the story",
+     "say": "Read the story. You can press Read aloud to listen to it.",
+     "html": "<div class=\"passage-text\"><p><b>Why Hare Has Long Ears</b> <span class=\"muted\">(a 2to.iQ folktale)</span></p>\n<p>Long ago, Hare had short, round ears, just like Mouse. Hare was quick, but he never listened.</p>\n<p>One afternoon, Grandmother Tortoise called all the animals together. \"Tonight the rain will be heavy,\" she said slowly. \"The river will flood. Move your homes to the high rocks.\"</p>\n<p>All the animals listened, except Hare. He was busy racing his own shadow across the veld.</p>\n<p>That night, the water rose higher and higher. Hare woke up wet and cold, and he had to swim all the way to the high rocks.</p>\n<p>In the morning, Hare sat shivering beside Tortoise. \"I was foolish,\" he said. \"I wish I could hear better.\"</p>\n<p>Tortoise smiled. \"Then stretch your ears towards wise words,\" she said.</p>\n<p>So every day, Hare stretched his ears to listen to the wind, the birds and his friends. His ears grew longer and longer. And that is why, to this day, Hare has long ears and hears danger before anyone else.</p></div>"
+    },
+    {
+     "h": "Nouns and adjectives",
+     "say": "A noun names a person, animal, place or thing. A proper noun names a particular one and starts with a capital letter. An adjective describes a noun.",
+     "html": "<p>A <b>noun</b> names a person, animal, place or thing: <i>river, ears, rocks</i>.</p><p>A <b>proper noun</b> names a particular person, place or character and starts with a <b>capital letter</b>: <i>Hare, Tortoise, Cape Town</i>.</p><p>An <b>adjective</b> describes a noun: <i>short</i> ears, <i>high</i> rocks, <i>wise</i> words.</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the adjectives: \"Hare woke up wet and cold.\"",
+    "steps": [
+     "An adjective describes a noun.",
+     "Which words tell us what Hare was like?",
+     "\"Wet\" and \"cold\" describe Hare, so they are adjectives."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Who warned the animals about the flood?",
+     "options": [
+      "Grandmother Tortoise",
+      "Mouse",
+      "Hare",
+      "The birds"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look near the start of the story.",
+      "Find who \"called all the animals together\".",
+      "It was the oldest, slowest animal."
+     ],
+     "explain": "Grandmother Tortoise warned them that the river would flood."
+    },
+    {
+     "type": "mcq",
+     "q": "What was Hare doing while the others listened?",
+     "options": [
+      "Racing his shadow",
+      "Sleeping",
+      "Eating grass",
+      "Swimming"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find the sentence that starts \"All the animals listened, except Hare.\"",
+      "Read the next sentence.",
+      "He was busy with a game on the veld."
+     ],
+     "explain": "Hare was racing his own shadow across the veld."
+    },
+    {
+     "type": "order",
+     "q": "Put the events in the order they happened.",
+     "items": [
+      "Tortoise warns the animals",
+      "Hare does not listen",
+      "The river floods",
+      "Hare stretches his ears every day"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What happens at the very beginning?",
+      "The flood happens at night.",
+      "The ending explains why Hare's ears are long."
+     ],
+     "explain": "Warning, not listening, the flood, then Hare's ears grow long."
+    },
+    {
+     "type": "mcq",
+     "q": "Why did Hare say, \"I was foolish\"?",
+     "options": [
+      "He had not listened to the warning",
+      "He lost a race",
+      "He was hungry",
+      "He did not like rain"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happened to Hare that night?",
+      "Why did he get wet when the others did not?",
+      "He did not move his home because he did not listen."
+     ],
+     "explain": "Hare got wet and cold because he did not listen to Tortoise's warning."
+    },
+    {
+     "type": "mcq",
+     "q": "What lesson does this folktale teach?",
+     "options": [
+      "It is wise to listen",
+      "Running fast is the most important thing",
+      "Rivers are always dangerous",
+      "Tortoises are slow"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about what Hare learnt.",
+      "What did Tortoise tell Hare to do?",
+      "\"Stretch your ears towards wise words.\""
+     ],
+     "explain": "The story teaches that it is wise to listen, especially to good advice."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the words into nouns and adjectives.",
+     "items": [
+      "river",
+      "short",
+      "ears",
+      "cold",
+      "rocks",
+      "wise"
+     ],
+     "bins": [
+      "Nouns",
+      "Adjectives"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A noun is a thing. An adjective describes a thing.",
+      "Can you put \"the\" in front of it? Then it is probably a noun.",
+      "short, cold and wise describe things."
+     ],
+     "explain": "river, ears and rocks are nouns. short, cold and wise are adjectives."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is a proper noun in this story?",
+     "options": [
+      "Tortoise",
+      "river",
+      "rocks",
+      "wind"
+     ],
+     "answer": 0,
+     "hints": [
+      "A proper noun names a particular character.",
+      "It starts with a capital letter in the story.",
+      "Look for a character's name."
+     ],
+     "explain": "\"Tortoise\" is used as a character's name, so it is a proper noun with a capital letter."
+    }
+   ],
+   "reflect": {
+    "q": "How did you understand the story best?",
+    "options": [
+     "Reading it myself",
+     "Listening to it",
+     "Looking back at the text",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a folktale, answered questions about it, and practised nouns and adjectives.",
+   "teacher": "Shows literal recall, sequencing, inference (why Hare felt foolish) and identification of nouns and adjectives. Note whether the learner used the text or read-aloud.",
+   "done": "Folktales carry wisdom from one generation to the next."
+  },
+  {
+   "id": "n4-living",
+   "grade": 4,
+   "subject": "Natural Sciences and Technology",
+   "title": "Living and non-living things",
+   "topic": "Life and Living",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 4 Natural Sciences and Technology, Term 1, Life and Living: Living and non-living things; what plants need to grow",
+   "intention": "Today I am practising using evidence to decide if something is living.",
+   "prompt": "What evidence did you use?",
+   "lesson": [
+    {
+     "h": "Seven life processes",
+     "say": "All living things carry out seven life processes: they move, breathe, feed, grow, reproduce, excrete waste, and sense and respond.",
+     "html": "<p>All living things carry out <b>seven life processes</b>:</p><ul class=\"plain\"><li><b>Move</b>: even plants move slowly, turning towards light</li><li><b>Breathe</b>: take in and give out gases</li><li><b>Feed</b>: need food for energy</li><li><b>Grow</b>: get bigger and change</li><li><b>Reproduce</b>: make young ones or seeds</li><li><b>Excrete</b>: get rid of waste</li><li><b>Sense and respond</b>: notice and react to their surroundings</li></ul>"
+    },
+    {
+     "h": "Non-living things",
+     "say": "Non-living things do not carry out all seven life processes. A car moves and uses fuel, but it cannot grow or reproduce, so it is not living.",
+     "html": "<p><b>Non-living</b> things do not carry out <b>all seven</b> life processes.</p><p>A car moves and uses fuel, but it cannot <b>grow</b> or <b>reproduce</b>, so it is not living. A seed looks still, but it is living: when it gets water and warmth, it grows.</p>"
+    },
+    {
+     "h": "What plants need to grow",
+     "say": "Plants need water, light and air to grow well. Most also need soil for nutrients and to hold their roots.",
+     "html": "<p>Plants need <b>water</b>, <b>light</b> and <b>air</b> to grow well. Most plants also grow in <b>soil</b>, which gives them nutrients and holds their roots.</p>"
+    }
+   ],
+   "example": {
+    "q": "Is a candle flame living or non-living?",
+    "steps": [
+     "Check the life processes. A flame seems to move and grow, and it needs air.",
+     "But it cannot reproduce by itself, and it does not sense and respond like a living thing.",
+     "So a candle flame is non-living, even though it shares some features with living things."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these into living and non-living.",
+     "items": [
+      "dog",
+      "rock",
+      "tree",
+      "cloud",
+      "mushroom",
+      "bicycle"
+     ],
+     "bins": [
+      "Living",
+      "Non-living"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Ask: does it grow and reproduce?",
+      "A mushroom is a fungus. It grows and makes spores.",
+      "A cloud moves and changes, but it does not feed or reproduce."
+     ],
+     "explain": "Dogs, trees and mushrooms are living. Rocks, clouds and bicycles are non-living."
+    },
+    {
+     "type": "mcq",
+     "q": "A plant on a windowsill bends towards the light. Which life process is this?",
+     "options": [
+      "Sensing and responding",
+      "Excreting",
+      "Reproducing",
+      "Breathing"
+     ],
+     "answer": 0,
+     "hints": [
+      "The plant notices something around it.",
+      "Then it reacts.",
+      "Noticing and reacting is called ..."
+     ],
+     "explain": "The plant senses the light and responds by bending towards it."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is a car NOT a living thing, even though it moves?",
+     "options": [
+      "It cannot grow or reproduce",
+      "It is made of metal",
+      "It is too big",
+      "It makes a noise"
+     ],
+     "answer": 0,
+     "hints": [
+      "Living things carry out all seven life processes.",
+      "Can a car make baby cars?",
+      "Can a car get bigger by itself?"
+     ],
+     "explain": "A car moves and uses fuel, but it cannot grow or reproduce."
+    },
+    {
+     "type": "mcq",
+     "q": "A bean seed is kept in a dry box. Is it living?",
+     "options": [
+      "Yes, it can grow when it gets water",
+      "No, it doesn't move",
+      "No, it is too small",
+      "Only on weekends"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about what happens when you plant a seed and water it.",
+      "A seed is waiting for the right conditions.",
+      "It can grow and make a new plant."
+     ],
+     "explain": "A seed is living. It is resting until it gets water and warmth, then it grows."
+    },
+    {
+     "type": "mcq",
+     "q": "Musa puts one plant in a dark cupboard and one in the sun. Both get the same water. What do you predict?",
+     "options": [
+      "The plant in the sun grows better",
+      "Both grow the same",
+      "The plant in the cupboard grows better",
+      "Neither plant changes"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do plants need to grow?",
+      "The only difference is light.",
+      "Which plant has everything it needs?"
+     ],
+     "explain": "Plants need light to grow well, so the plant in the sun will grow better. The plant in the dark will turn pale and weak."
+    },
+    {
+     "type": "mcq",
+     "q": "In Musa's test, why do both plants get the same amount of water?",
+     "options": [
+      "So that light is the only thing that is different",
+      "Because water is cheap",
+      "So they look the same",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "A fair test changes only one thing.",
+      "What is Musa trying to find out about?",
+      "If water were different too, could we tell what made the difference?"
+     ],
+     "explain": "In a fair test, only one thing changes. Here it is light, so we know light caused any difference."
+    }
+   ],
+   "reflect": {
+    "q": "How did you decide if something was living?",
+    "options": [
+     "Checked the seven processes",
+     "Thought of examples I know",
+     "Imagined what it does over time",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used the seven life processes to decide what is living, and thought about a fair test with plants.",
+   "teacher": "Shows classification using criteria, handling of tricky cases (seed, flame, cloud), prediction and an early understanding of fair testing.",
+   "done": "Scientists use evidence, not just how things look, to decide."
+  },
+  {
+   "id": "l4-strengths",
+   "grade": 4,
+   "subject": "Life Skills",
+   "title": "My strengths",
+   "topic": "Personal and Social Well-being: personal strengths",
+   "domain": "Creativity and Metacognition",
+   "category": "Reflection",
+   "caps": "CAPS Grade 4 Life Skills, Term 1, Personal and Social Well-being: Personal strengths (own strengths and those of others; using strengths to improve)",
+   "intention": "Today I am practising noticing strengths in myself and in others.",
+   "prompt": "How could a strength help with something hard?",
+   "lesson": [
+    {
+     "h": "What is a strength?",
+     "say": "A strength is something you do well, or a good quality you have. Everyone has different strengths.",
+     "html": "<p>A <b>strength</b> is something you do well, or a good quality you have.</p><ul class=\"plain\"><li>Things you do well: drawing, building, remembering facts, running, singing</li><li>Good qualities: being kind, patient, honest, a good listener, a helper</li></ul><p><b>Everyone</b> has strengths, and they are different for each person.</p>"
+    },
+    {
+     "h": "Strengths help with hard things",
+     "say": "You can use a strength to help with something you find hard. Zizi finds spelling hard, but she is good at drawing. She draws a picture for each spelling word.",
+     "html": "<p>Meet <b>Zizi</b>. She finds spelling hard, but she is very good at drawing. She draws a small picture next to each spelling word, and the pictures help her remember.</p><p>When something goes badly, we can learn from it and try a new way.</p>"
+    },
+    {
+     "h": "Noticing strengths in others",
+     "say": "When we notice and appreciate other people's strengths, we can work well together.",
+     "html": "<p>When we <b>notice</b> other people's strengths and tell them, everyone feels respected. A team works best when people use their different strengths.</p>"
+    }
+   ],
+   "example": {
+    "q": "Ayanda is very patient. How could this help him in a group project?",
+    "steps": [
+     "Being patient means staying calm and waiting without getting upset.",
+     "In a group, people work at different speeds.",
+     "Ayanda could help a group member who is slower, calmly and without rushing them."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these into things people do well and good qualities.",
+     "items": [
+      "drawing",
+      "kind",
+      "building with blocks",
+      "honest",
+      "singing",
+      "patient"
+     ],
+     "bins": [
+      "Things people do well",
+      "Good qualities"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A quality describes what a person is like.",
+      "Things people do well are activities.",
+      "Kind, honest and patient describe a person."
+     ],
+     "explain": "Drawing, building and singing are things people do well. Kind, honest and patient are good qualities."
+    },
+    {
+     "type": "mcq",
+     "q": "Zizi is good at drawing but finds spelling hard. What is a good way for her to use her strength?",
+     "options": [
+      "Draw pictures to help her remember words",
+      "Stop doing spelling",
+      "Only draw all day",
+      "Copy a friend's spelling"
+     ],
+     "answer": 0,
+     "hints": [
+      "Her strength can help with the hard thing.",
+      "Pictures can help us remember.",
+      "Which answer uses drawing to help with spelling?"
+     ],
+     "explain": "Zizi uses her drawing to help her remember spelling words."
+    },
+    {
+     "type": "mcq",
+     "q": "Thabo's team lost a soccer match. What could help him learn from it?",
+     "options": [
+      "Think about what to practise next time",
+      "Never play again",
+      "Blame the referee",
+      "Shout at his team"
+     ],
+     "answer": 0,
+     "hints": [
+      "A less successful experience can still teach us something.",
+      "What can Thabo do to improve?",
+      "Which answer looks forward to next time?"
+     ],
+     "explain": "Thinking about what to practise turns a loss into learning."
+    },
+    {
+     "type": "mcq",
+     "q": "Your classmate builds an amazing model. What is a respectful thing to say?",
+     "options": [
+      "\"You're really good at building. How did you do it?\"",
+      "\"Mine is better.\"",
+      "\"That's nothing special.\"",
+      "Say nothing and look away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Respect means noticing and valuing someone.",
+      "Which answer names their strength?",
+      "A question shows you are interested."
+     ],
+     "explain": "Naming someone's strength and showing interest is respectful and kind."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sentence is TRUE?",
+     "options": [
+      "Everyone has strengths, and they can be different",
+      "Only clever people have strengths",
+      "Strengths can never change",
+      "Strengths are only about sport"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about your family and friends.",
+      "Do they all do the same things well?",
+      "Strengths can be skills or good qualities, and they grow with practice."
+     ],
+     "explain": "Everyone has strengths. They are different for each person and can grow with practice."
+    },
+    {
+     "type": "mcq",
+     "q": "Choose one strength you have. There is no wrong answer.",
+     "options": [
+      "I am kind",
+      "I am good at making things",
+      "I am a good listener",
+      "I keep trying"
+     ],
+     "answer": -1,
+     "open": true,
+     "hints": [
+      "Think about what you enjoy.",
+      "What do other people say you do well?",
+      "Any choice is right."
+     ],
+     "explain": "That is a real strength. You can use it to help with things that feel hard."
+    }
+   ],
+   "reflect": {
+    "q": "How did it feel to think about strengths?",
+    "options": [
+     "Good",
+     "A bit hard",
+     "I learnt something",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child thought about strengths in themselves and others, and how strengths can help with things that feel hard.",
+   "teacher": "Shows understanding of skills versus qualities, using strengths to improve, and respectful responses. The final choice is the learner's own and is not marked.",
+   "done": "Knowing your strengths helps you learn in your own way."
+  },
+  {
+   "id": "m4-place",
+   "grade": 4,
+   "subject": "Mathematics",
+   "title": "Place value and rounding",
+   "topic": "Whole numbers to 4 digits",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 4 Mathematics, Term 1: Whole numbers (place value to 4 digits; rounding to the nearest 10, 100 and 1 000; ordering and comparing)",
+   "intention": "Today I am practising what each digit is worth, and rounding numbers.",
+   "prompt": "Which digit helped you decide?",
+   "lesson": [
+    {
+     "h": "What each digit is worth",
+     "say": "In 4 735 the 4 is worth 4 thousand, the 7 is worth 7 hundred, the 3 is worth 3 tens, and the 5 is worth 5 units.",
+     "html": "<p>In <b>4 735</b>, each digit has a <b>place value</b>:</p><table class=\"hist\"><thead><tr><th>Thousands</th><th>Hundreds</th><th>Tens</th><th>Units</th></tr></thead><tbody><tr><td>4</td><td>7</td><td>3</td><td>5</td></tr></tbody></table><p>So 4 735 = 4 000 + 700 + 30 + 5. This is called <b>expanded notation</b>. In South Africa we leave a space between the thousands and the hundreds.</p>"
+    },
+    {
+     "h": "Rounding",
+     "say": "To round, look at the digit just to the right of the place you are rounding to. If it is 5 or more, round up. If it is less than 5, round down.",
+     "html": "<p>To round, look at the digit <b>just to the right</b> of the place you are rounding to.</p><ul class=\"plain\"><li>5 or more: round <b>up</b></li><li>less than 5: round <b>down</b></li></ul><p>4 735 to the nearest 10 is <b>4 740</b>. To the nearest 100 it is <b>4 700</b>. To the nearest 1 000 it is <b>5 000</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Round 2 368 to the nearest 100.",
+    "steps": [
+     "The hundreds digit is 3, so the answer is either 2 300 or 2 400.",
+     "Look at the digit to the right: the tens digit is 6.",
+     "6 is 5 or more, so round up: 2 368 is 2 400 to the nearest 100."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the value of the 7 in 4 735?",
+     "options": [
+      "700",
+      "7",
+      "70",
+      "7 000"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find the place the 7 is in.",
+      "Count from the right: units, tens, hundreds, thousands.",
+      "The 7 is in the hundreds place."
+     ],
+     "explain": "The 7 is in the hundreds place, so it is worth 700."
+    },
+    {
+     "type": "mcq",
+     "q": "Which shows 6 052 in expanded notation?",
+     "options": [
+      "6 000 + 50 + 2",
+      "6 000 + 500 + 2",
+      "600 + 50 + 2",
+      "6 000 + 5 + 2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Break the number into thousands, hundreds, tens and units.",
+      "There are 0 hundreds.",
+      "6 thousands, 5 tens and 2 units."
+     ],
+     "explain": "6 052 = 6 000 + 50 + 2. There are no hundreds."
+    },
+    {
+     "type": "num",
+     "q": "Round 3 486 to the nearest 10.",
+     "answer": "3 490",
+     "options": [
+      "3 490",
+      "3 480",
+      "3 500",
+      "3 000"
+     ],
+     "hints": [
+      "Look at the units digit.",
+      "The units digit is 6, which is 5 or more.",
+      "Round the tens up: 80 becomes 90."
+     ],
+     "explain": "The units digit is 6, so we round up: 3 490."
+    },
+    {
+     "type": "num",
+     "q": "Round 7 251 to the nearest 1 000.",
+     "answer": "7 000",
+     "options": [
+      "7 000",
+      "8 000",
+      "7 300",
+      "7 250"
+     ],
+     "hints": [
+      "The answer will be 7 000 or 8 000.",
+      "Look at the hundreds digit.",
+      "The hundreds digit is 2, which is less than 5."
+     ],
+     "explain": "The hundreds digit is 2, so we round down to 7 000."
+    },
+    {
+     "type": "order",
+     "q": "Put these numbers in order from smallest to biggest.",
+     "items": [
+      "5 093",
+      "5 309",
+      "5 930"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "All three have 5 thousands.",
+      "Compare the hundreds digits next.",
+      "0 hundreds, then 3 hundreds, then 9 hundreds."
+     ],
+     "explain": "5 093 is less than 5 309, which is less than 5 930."
+    },
+    {
+     "type": "mcq",
+     "q": "A school has 1 476 learners. To the nearest 100, about how many is that?",
+     "options": [
+      "1 500",
+      "1 400",
+      "1 000",
+      "2 000"
+     ],
+     "answer": 0,
+     "hints": [
+      "Will it be 1 400 or 1 500?",
+      "Look at the tens digit.",
+      "The tens digit is 7, so round up."
+     ],
+     "explain": "The tens digit is 7, so 1 476 rounds up to 1 500."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The place value table",
+     "Looking at the next digit",
+     "Saying the number aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out what each digit is worth, and rounded numbers to the nearest 10, 100 and 1 000.",
+   "teacher": "Shows place value understanding to 4 digits, expanded notation, the rounding rule and comparing numbers.",
+   "done": "Rounding helps us estimate quickly, like checking a shop bill."
+  },
+  {
+   "id": "m4-fractions",
+   "grade": 4,
+   "subject": "Mathematics",
+   "title": "Halves, quarters and eighths",
+   "topic": "Common fractions",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 4 Mathematics, Term 2: Common fractions (halves to eighths; comparing and ordering; equivalent fractions; adding with the same denominator)",
+   "intention": "Today I am practising naming, comparing and finding equal fractions.",
+   "prompt": "How did the picture help you?",
+   "lesson": [
+    {
+     "h": "Equal parts",
+     "say": "A fraction is part of a whole that has been cut into equal parts. Three quarters means 3 out of 4 equal parts.",
+     "html": "<p>A fraction is part of a whole cut into <b>equal</b> parts.</p><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"3 out of 4 equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><p>This shows <b>3/4</b>: 3 out of 4 equal parts.</p>"
+    },
+    {
+     "h": "Fractions that are equal",
+     "say": "One half, two quarters and four eighths are equal. They cover the same amount.",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"1 half\"><rect x=\"1\" y=\"2\" width=\"148\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"148\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"2 quarters\"><rect x=\"1\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"4 eighths\"><rect x=\"1\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"38.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"113.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"188.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"263.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><p><b>1/2 = 2/4 = 4/8</b>. These are <b>equivalent fractions</b>: they cover the same amount.</p>"
+    }
+   ],
+   "example": {
+    "q": "Which is bigger: 2/3 or 2/5?",
+    "steps": [
+     "Both fractions have 2 parts.",
+     "Thirds are bigger than fifths, because the whole is cut into fewer parts.",
+     "So 2/3 is bigger than 2/5."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What fraction is shaded?",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"3 out of 8 parts shaded\"><rect x=\"1\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"38.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"113.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"188.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"263.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg>",
+     "options": [
+      "3/8",
+      "5/8",
+      "3/5",
+      "8/3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count all the equal parts.",
+      "Now count the shaded parts.",
+      "Shaded parts go on top."
+     ],
+     "explain": "3 out of 8 equal parts are shaded: 3/8."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is bigger: 1/3 or 1/7?",
+     "options": [
+      "1/3",
+      "1/7"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Both have 1 part.",
+      "Which whole is cut into fewer pieces?",
+      "Fewer pieces means bigger pieces."
+     ],
+     "explain": "A third is bigger than a seventh."
+    },
+    {
+     "type": "mcq",
+     "q": "Which fraction is equal to 1/2?",
+     "options": [
+      "2/4",
+      "1/4",
+      "2/3",
+      "3/8"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the fraction bars on the lesson page.",
+      "Half of 4 is 2.",
+      "2 out of 4 is the same as half."
+     ],
+     "explain": "2/4 covers the same amount as 1/2."
+    },
+    {
+     "type": "order",
+     "q": "Put these in order from smallest to biggest.",
+     "items": [
+      "1/8",
+      "1/4",
+      "1/2"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "All have 1 as the numerator.",
+      "The bigger the denominator, the smaller the part.",
+      "Eighths are the smallest parts."
+     ],
+     "explain": "1/8 is smaller than 1/4, which is smaller than 1/2."
+    },
+    {
+     "type": "mcq",
+     "q": "Mama cuts a loaf into 8 equal slices. The family eats 5 slices. What fraction of the loaf is left?",
+     "options": [
+      "3/8",
+      "5/8",
+      "3/5",
+      "8/3"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many slices were there altogether?",
+      "How many are left? 8 − 5.",
+      "3 slices out of 8."
+     ],
+     "explain": "8 − 5 = 3 slices are left: 3/8 of the loaf."
+    },
+    {
+     "type": "mcq",
+     "q": "2/6 + 3/6 = ?",
+     "options": [
+      "5/6",
+      "5/12",
+      "1/6",
+      "6/6"
+     ],
+     "answer": 0,
+     "hints": [
+      "The denominators are the same.",
+      "Add the numerators.",
+      "2 + 3 = 5."
+     ],
+     "explain": "2/6 + 3/6 = 5/6."
+    }
+   ],
+   "reflect": {
+    "q": "How did you work out the fractions?",
+    "options": [
+     "Looking at the pictures",
+     "Counting the parts",
+     "Thinking about sharing food",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child named fractions, compared them and found fractions that are equal.",
+   "teacher": "Shows part-whole understanding, comparison of unit fractions, early equivalence and adding like fractions.",
+   "done": "Fractions are all around us: in food, time and money."
+  },
+  {
+   "id": "e4-poetry",
+   "grade": 4,
+   "subject": "English Home Language",
+   "title": "Poetry: Rain on the Roof",
+   "topic": "Poetry, rhyme and sound words",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 4 English Home Language, Term 1: Poetry (reading and viewing); rhyme, rhythm, repetition and sound words",
+   "intention": "Today I am practising enjoying a poem and noticing how it uses sounds.",
+   "prompt": "Which line could you hear in your head?",
+   "passage": "<div class=\"passage-text\"><p><b>Rain on the Roof</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>Tap-tap, tip-tap, the rain begins to fall,<br>It drums upon the tin roof and patters down the wall.<br>The thirsty garden opens up, the dusty road turns brown,<br>And all the little puddles shine like silver in the town.</p>\n<p>Tap-tap, tip-tap, the clouds roll slowly by,<br>And then the sun peeps out again to dry the morning sky.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the poem",
+     "say": "Read the poem, or press Read aloud to listen.",
+     "html": "<div class=\"passage-text\"><p><b>Rain on the Roof</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>Tap-tap, tip-tap, the rain begins to fall,<br>It drums upon the tin roof and patters down the wall.<br>The thirsty garden opens up, the dusty road turns brown,<br>And all the little puddles shine like silver in the town.</p>\n<p>Tap-tap, tip-tap, the clouds roll slowly by,<br>And then the sun peeps out again to dry the morning sky.</p></div>"
+    },
+    {
+     "h": "How poems use sound",
+     "say": "Poems often rhyme. They have a beat called rhythm. They repeat words. And they use sound words like tap and drum.",
+     "html": "<ul class=\"plain\"><li><b>Rhyme</b>: words that end with the same sound, like <i>fall</i> and <i>wall</i></li><li><b>Rhythm</b>: the beat you hear when you read it aloud</li><li><b>Repetition</b>: words used again, like <i>tap-tap, tip-tap</i></li><li><b>Sound words</b>: words that sound like the noise they describe, like <i>tap</i>, <i>drum</i> and <i>patter</i></li></ul>"
+    }
+   ],
+   "example": {
+    "q": "Find a word that rhymes with \"brown\".",
+    "steps": [
+     "Find \"brown\" at the end of line 3.",
+     "Look at the end of the next line.",
+     "\"Town\" ends with the same sound, so \"brown\" and \"town\" rhyme."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with \"fall\"?",
+     "options": [
+      "wall",
+      "roof",
+      "rain",
+      "tin"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the end of line 2.",
+      "Rhyming words end with the same sound.",
+      "f-all, w-all."
+     ],
+     "explain": "\"Fall\" and \"wall\" rhyme."
+    },
+    {
+     "type": "mcq",
+     "q": "Which of these is a sound word?",
+     "options": [
+      "patters",
+      "garden",
+      "silver",
+      "morning"
+     ],
+     "answer": 0,
+     "hints": [
+      "A sound word sounds like the noise it describes.",
+      "Which word sounds like rain hitting something?",
+      "Say each one aloud."
+     ],
+     "explain": "\"Patters\" sounds like light rain landing."
+    },
+    {
+     "type": "mcq",
+     "q": "What does \"the thirsty garden\" mean?",
+     "options": [
+      "The garden needed water",
+      "The garden was drinking juice",
+      "The garden was very big",
+      "The garden was cold"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can a garden really be thirsty?",
+      "What happens to a garden when there is no rain?",
+      "The rain gives the garden what it needs."
+     ],
+     "explain": "The poet means the dry garden needed water."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the poet repeat \"Tap-tap, tip-tap\"?",
+     "options": [
+      "To sound like the rain",
+      "Because the poet forgot",
+      "To make the poem shorter",
+      "To show it is night"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say \"tap-tap, tip-tap\" aloud.",
+      "What does it sound like?",
+      "Repetition can copy a sound."
+     ],
+     "explain": "The repeated words sound like raindrops falling."
+    },
+    {
+     "type": "order",
+     "q": "Put these in the order they happen in the poem.",
+     "items": [
+      "The rain begins to fall",
+      "The puddles shine like silver",
+      "The clouds roll slowly by",
+      "The sun peeps out again"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "The poem starts with rain.",
+      "Puddles come after the rain.",
+      "The sun appears at the end."
+     ],
+     "explain": "Rain, puddles, clouds moving away, then the sun."
+    }
+   ],
+   "reflect": {
+    "q": "How did you enjoy the poem most?",
+    "options": [
+     "Reading it aloud",
+     "Listening to it",
+     "Picturing it in my head",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a poem about rain and noticed rhyme, repetition and sound words.",
+   "teacher": "Shows identification of rhyme and onomatopoeia, interpretation of figurative language, and sequencing within a poem.",
+   "done": "Poems let us hear and picture the world in new ways."
+  },
+  {
+   "id": "e4-instructions",
+   "grade": 4,
+   "subject": "English Home Language",
+   "title": "Instructions: Grow a bean in a jar",
+   "topic": "Instructional text, command verbs",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 4 English Home Language, Term 1: Instructional text (reading and viewing); command verbs and sequence words",
+   "intention": "Today I am practising following and understanding instructions.",
+   "prompt": "What would happen if you skipped a step?",
+   "passage": "<div class=\"passage-text\"><p><b>How to Grow a Bean in a Jar</b></p>\n<p><b>You will need:</b> a clean glass jar, two paper towels, water and two bean seeds.</p>\n<ol><li>First, fold the paper towels and press them around the inside of the jar.</li><li>Next, push the bean seeds between the glass and the paper, so that you can see them.</li><li>Then pour a little water into the jar to make the paper damp, but not soaking.</li><li>Put the jar in a warm place that gets some light.</li><li>Finally, check your beans every day. Add a little water if the paper feels dry.</li></ol>\n<p>After a few days, you should see roots growing from the beans.</p></div>",
+   "lesson": [
+    {
+     "h": "What instructions look like",
+     "say": "Instructions tell you how to do something. They have a title, a list of what you need, and numbered steps.",
+     "html": "<p><b>Instructions</b> tell you how to do something. They usually have:</p><ul class=\"plain\"><li>a <b>title</b> that says what you will make or do</li><li>a <b>\"You will need\"</b> list</li><li><b>numbered steps</b> in order</li><li><b>sequence words</b>: first, next, then, finally</li><li><b>command verbs</b> at the start: <i>fold, push, pour</i></li></ul>"
+    },
+    {
+     "h": "Read the instructions",
+     "say": "Read the instructions for growing a bean in a jar.",
+     "html": "<div class=\"passage-text\"><p><b>How to Grow a Bean in a Jar</b></p>\n<p><b>You will need:</b> a clean glass jar, two paper towels, water and two bean seeds.</p>\n<ol><li>First, fold the paper towels and press them around the inside of the jar.</li><li>Next, push the bean seeds between the glass and the paper, so that you can see them.</li><li>Then pour a little water into the jar to make the paper damp, but not soaking.</li><li>Put the jar in a warm place that gets some light.</li><li>Finally, check your beans every day. Add a little water if the paper feels dry.</li></ol>\n<p>After a few days, you should see roots growing from the beans.</p></div>"
+    }
+   ],
+   "example": {
+    "q": "Find the command verb in: \"Pour a little water into the jar.\"",
+    "steps": [
+     "A command verb tells you what to do.",
+     "It is usually the first word of the step.",
+     "\"Pour\" is the command verb."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the purpose of this text?",
+     "options": [
+      "To tell you how to grow a bean",
+      "To tell a story about a bean",
+      "To sell beans",
+      "To describe a garden"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the title.",
+      "Does it tell a story, or tell you what to do?",
+      "It starts with \"How to…\"."
+     ],
+     "explain": "It tells you how to grow a bean in a jar."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps in the right order.",
+     "items": [
+      "Fold the paper towels into the jar",
+      "Push the bean seeds in",
+      "Pour in a little water",
+      "Put the jar in a warm place"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Look for the sequence words.",
+      "The jar needs paper before the beans go in.",
+      "Water comes after the beans."
+     ],
+     "explain": "Paper, beans, water, then a warm place."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these words: command verbs or sequence words.",
+     "items": [
+      "fold",
+      "first",
+      "pour",
+      "next",
+      "check",
+      "finally"
+     ],
+     "bins": [
+      "Command verbs",
+      "Sequence words"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A command verb tells you to do something.",
+      "Sequence words tell you when.",
+      "first, next and finally show order."
+     ],
+     "explain": "fold, pour and check are command verbs. first, next and finally are sequence words."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are the steps numbered?",
+     "options": [
+      "So you do them in the right order",
+      "To make the text longer",
+      "Because numbers look nice",
+      "To count the beans"
+     ],
+     "answer": 0,
+     "hints": [
+      "Does the order matter here?",
+      "Could you water the beans before putting them in?",
+      "Numbers show the order."
+     ],
+     "explain": "The numbers help you do the steps in the right order."
+    },
+    {
+     "type": "mcq",
+     "q": "The paper towel feels dry. What should you do?",
+     "options": [
+      "Add a little water",
+      "Throw the beans away",
+      "Put the jar in the fridge",
+      "Add a lot of water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Read the last step.",
+      "What does it say to do when the paper is dry?",
+      "\"Add a little water.\""
+     ],
+     "explain": "Step 5 says to add a little water if the paper feels dry."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you follow the instructions?",
+    "options": [
+     "The numbers",
+     "The sequence words",
+     "Picturing each step",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read instructions, put steps in order and found command verbs and sequence words.",
+   "teacher": "Shows understanding of the structure and purpose of procedural text, sequencing, and grammatical features (imperatives, connectives).",
+   "done": "Good instructions are clear, short and in the right order."
+  },
+  {
+   "id": "n4-habitats",
+   "grade": 4,
+   "subject": "Natural Sciences and Technology",
+   "title": "Habitats of animals",
+   "topic": "Life and Living",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 4 Natural Sciences and Technology, Term 1, Life and Living: Habitats of animals (different habitats; the need for a habitat)",
+   "intention": "Today I am practising explaining why animals live where they do.",
+   "prompt": "What does the animal need from its home?",
+   "lesson": [
+    {
+     "h": "What is a habitat?",
+     "say": "A habitat is the place where an animal lives. It gives the animal food, water, shelter and space to raise its young.",
+     "html": "<p>A <b>habitat</b> is the place where an animal lives. A good habitat gives an animal:</p><ul class=\"plain\"><li><b>food</b> and <b>water</b></li><li><b>shelter</b> from weather and danger</li><li><b>space</b> to move and to raise its young</li></ul>"
+    },
+    {
+     "h": "Different habitats",
+     "say": "South Africa has many habitats, such as grasslands, forests, deserts, wetlands and the ocean.",
+     "html": "<ul class=\"plain\"><li><b>Grassland</b>: zebra, springbok</li><li><b>Forest</b>: monkeys, many birds</li><li><b>Desert</b>, like the Kalahari: gemsbok, meerkats</li><li><b>Wetland</b> or pond: frogs, ducks</li><li><b>Ocean</b>: dolphins, fish, penguins on the shore</li></ul><p>Animals have body parts and habits that suit their habitat. A frog needs water to lay its eggs.</p>"
+    }
+   ],
+   "example": {
+    "q": "Why do frogs live near ponds?",
+    "steps": [
+     "Think about what a frog needs.",
+     "Frogs lay their eggs in water, and tadpoles live in water.",
+     "Frogs also catch insects that live near water. So a pond gives them water, food and a place to breed."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort the animals into their main habitat.",
+     "items": [
+      "dolphin",
+      "gemsbok",
+      "frog",
+      "meerkat",
+      "fish",
+      "duck"
+     ],
+     "bins": [
+      "Ocean",
+      "Desert",
+      "Wetland"
+     ],
+     "answer": [
+      0,
+      1,
+      2,
+      1,
+      0,
+      2
+     ],
+     "hints": [
+      "Which animals need to live in water all the time?",
+      "The Kalahari is a desert.",
+      "Frogs and ducks live in or near ponds."
+     ],
+     "explain": "Dolphins and fish live in the ocean, gemsbok and meerkats in the desert, frogs and ducks in wetlands."
+    },
+    {
+     "type": "mcq",
+     "q": "Which of these does a habitat NOT need to give an animal?",
+     "options": [
+      "A television",
+      "Food",
+      "Shelter",
+      "Water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about what animals need to survive.",
+      "Food, water, shelter and space.",
+      "Which one is a human object?"
+     ],
+     "explain": "Animals need food, water, shelter and space. They do not need a television."
+    },
+    {
+     "type": "mcq",
+     "q": "A wetland is drained to build houses. What will happen to the frogs?",
+     "options": [
+      "They lose their habitat and may die or move",
+      "They will live in the houses",
+      "Nothing will change",
+      "They will learn to swim in the sea"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do frogs need water for?",
+      "Where will they lay their eggs?",
+      "Without water, the habitat is gone."
+     ],
+     "explain": "The frogs lose the water they need, so they must move or they may die."
+    },
+    {
+     "type": "mcq",
+     "q": "Why can a gemsbok survive in the Kalahari?",
+     "options": [
+      "It can go a long time without drinking water",
+      "It needs to swim every day",
+      "It eats fish",
+      "It sleeps in trees"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is scarce in a desert?",
+      "Desert animals are suited to dry places.",
+      "Gemsbok get much of their water from the plants they eat."
+     ],
+     "explain": "Gemsbok can survive a long time without drinking, which suits the dry Kalahari."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do different animals live in different habitats?",
+     "options": [
+      "Each animal is suited to the place that meets its needs",
+      "Animals choose by colour",
+      "All animals can live anywhere",
+      "Habitats are chosen by people"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about the frog and the gemsbok.",
+      "Their needs are different.",
+      "A habitat must give an animal what it needs."
+     ],
+     "explain": "Each animal's body and habits suit the habitat that gives it food, water and shelter."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you understand habitats?",
+    "options": [
+     "Thinking about what animals need",
+     "Picturing the places",
+     "Animals I have seen",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt what a habitat is and why animals live where they do.",
+   "teacher": "Shows understanding of animal needs, classification by habitat, and reasoning about the effects of habitat loss.",
+   "done": "Protecting habitats protects the animals that live in them."
+  },
+  {
+   "id": "n4-states",
+   "grade": 4,
+   "subject": "Natural Sciences and Technology",
+   "title": "Solids, liquids and gases",
+   "topic": "Matter and Materials",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 4 Natural Sciences and Technology, Term 2, Matter and Materials: Materials around us (solids, liquids and gases)",
+   "intention": "Today I am practising sorting materials by how they behave.",
+   "prompt": "What did you notice about its shape?",
+   "lesson": [
+    {
+     "h": "Three states",
+     "say": "Materials can be solid, liquid or gas. Solids keep their shape. Liquids flow and take the shape of their container. Gases spread out to fill any space.",
+     "html": "<ul class=\"plain\"><li><b>Solids</b> keep their own shape: a stone, a spoon, ice</li><li><b>Liquids</b> flow and take the shape of their container, but keep the same amount: water, milk, cooking oil</li><li><b>Gases</b> spread out to fill all the space they are in: air, steam</li></ul>"
+    },
+    {
+     "h": "Changing state",
+     "say": "Heating ice makes it melt into water. Heating water makes it boil and become steam. Cooling water makes it freeze.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">ice (solid)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">water (liquid)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">steam (gas)</span></div><p><b>Heating</b> melts ice into water and boils water into steam. <b>Cooling</b> turns steam back into water and freezes water into ice.</p>"
+    }
+   ],
+   "example": {
+    "q": "Is sand a solid or a liquid? It can be poured.",
+    "steps": [
+     "Look at one grain of sand.",
+     "Each grain keeps its own shape, so each grain is a solid.",
+     "Sand pours because it is made of many tiny solid pieces. So sand is a solid."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these into solids, liquids and gases.",
+     "items": [
+      "stone",
+      "milk",
+      "air",
+      "ice",
+      "cooking oil",
+      "steam"
+     ],
+     "bins": [
+      "Solid",
+      "Liquid",
+      "Gas"
+     ],
+     "answer": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+     ],
+     "hints": [
+      "Does it keep its own shape?",
+      "Does it flow and take the shape of a cup?",
+      "Does it spread out and fill a space?"
+     ],
+     "explain": "Stone and ice are solids, milk and oil are liquids, air and steam are gases."
+    },
+    {
+     "type": "mcq",
+     "q": "You pour juice from a bottle into a glass. What happens to its shape?",
+     "options": [
+      "It takes the shape of the glass",
+      "It stays bottle-shaped",
+      "It turns into a gas",
+      "It becomes solid"
+     ],
+     "answer": 0,
+     "hints": [
+      "Juice is a liquid.",
+      "Liquids flow.",
+      "Liquids take the shape of their container."
+     ],
+     "explain": "Liquids take the shape of their container, so the juice takes the shape of the glass."
+    },
+    {
+     "type": "mcq",
+     "q": "What fills a balloon when you blow it up?",
+     "options": [
+      "A gas (air)",
+      "A liquid",
+      "A solid",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "What comes out of your mouth when you blow?",
+      "You cannot see it.",
+      "It spreads out to fill the balloon."
+     ],
+     "explain": "Air is a gas. It spreads out to fill the balloon."
+    },
+    {
+     "type": "mcq",
+     "q": "An ice block is left in the sun. What happens?",
+     "options": [
+      "It melts into water",
+      "It turns into stone",
+      "It gets bigger",
+      "It stays the same"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sun heats the ice.",
+      "Heating a solid can change its state.",
+      "Ice becomes a liquid."
+     ],
+     "explain": "Heat from the sun melts the solid ice into liquid water."
+    },
+    {
+     "type": "order",
+     "q": "Put these in order as water is heated.",
+     "items": [
+      "ice",
+      "water",
+      "steam"
+     ],
+     "orderLabel": "coldest to hottest",
+     "hints": [
+      "Start with the coldest.",
+      "Ice melts first.",
+      "Boiling water makes steam."
+     ],
+     "explain": "Ice melts into water, and water boils into steam."
+    }
+   ],
+   "reflect": {
+    "q": "How did you decide the state?",
+    "options": [
+     "Thinking about its shape",
+     "Thinking about pouring it",
+     "Things I have seen at home",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child sorted materials into solids, liquids and gases and thought about how heating changes them.",
+   "teacher": "Shows classification by observable properties, handling of a tricky case (sand), and understanding of changes of state.",
+   "done": "Everything around us is a solid, a liquid or a gas."
+  },
+  {
+   "id": "l4-body",
+   "grade": 4,
+   "subject": "Life Skills",
+   "title": "Respecting my body and others' bodies",
+   "topic": "Personal and Social Well-being: respect for own and others' bodies",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "CAPS Grade 4 Life Skills, Term 1, Personal and Social Well-being: Respect for own and others' bodies (caring for the body, privacy, avoiding harmful substances)",
+   "intention": "Today I am practising ways to care for my body and respect other people's bodies.",
+   "prompt": "Who could you talk to about that?",
+   "lesson": [
+    {
+     "h": "Caring for my body",
+     "say": "We care for our bodies by washing, eating healthy food, sleeping enough and moving every day.",
+     "html": "<ul class=\"plain\"><li>Wash your hands and body, and brush your teeth</li><li>Eat healthy food and drink clean water</li><li>Sleep enough</li><li>Move and play every day</li><li>Only take medicine from a parent, carer or nurse</li></ul>"
+    },
+    {
+     "h": "My body belongs to me",
+     "say": "Your body belongs to you. Private parts are the parts covered by a swimming costume. It is okay to say no. If anything makes you feel unsafe or confused, tell a grown-up you trust.",
+     "html": "<p>Your body belongs to <b>you</b>. The parts covered by a swimming costume are <b>private</b>.</p><ul class=\"plain\"><li>It is okay to say <b>no</b> to touch you do not want, even from someone you know</li><li>There should be <b>no secrets</b> about touching</li><li>If anything makes you feel <b>unsafe or confused</b>, tell a grown-up you trust, and keep telling until someone helps</li></ul><p>Respect other people's bodies too: ask before you hug, and stop when someone says no.</p>"
+    }
+   ],
+   "example": {
+    "q": "Someone at the park offers Lindo some pills and says they will make him feel great. What should he do?",
+    "steps": [
+     "Only a parent, carer or nurse should give medicine.",
+     "Lindo should say no and walk away.",
+     "Then he should tell a trusted grown-up what happened."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these: caring for my body, or not caring for my body?",
+     "items": [
+      "Washing my hands before eating",
+      "Staying up very late every night",
+      "Drinking clean water",
+      "Taking pills from a stranger"
+     ],
+     "bins": [
+      "Caring for my body",
+      "Not caring for my body"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which habits keep us healthy?",
+      "Do we need enough sleep?",
+      "Medicine should only come from a trusted adult."
+     ],
+     "explain": "Washing hands and drinking clean water care for the body. Too little sleep and pills from a stranger do not."
+    },
+    {
+     "type": "mcq",
+     "q": "A friend wants a hug, but Nomsa does not want one today. What is true?",
+     "options": [
+      "It is okay for Nomsa to say no",
+      "Nomsa must always hug friends",
+      "Nomsa should be punished",
+      "Nomsa should keep it a secret"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who does Nomsa's body belong to?",
+      "Respect works both ways.",
+      "She can say no kindly, like \"Can we high-five instead?\""
+     ],
+     "explain": "Nomsa's body belongs to her, so she can say no. A good friend will respect that."
+    },
+    {
+     "type": "mcq",
+     "q": "Someone asks a child to keep a secret about touching. What should the child do?",
+     "options": [
+      "Tell a trusted grown-up",
+      "Keep the secret",
+      "Forget about it",
+      "Tell only other children"
+     ],
+     "answer": 0,
+     "hints": [
+      "Are secrets about touching okay?",
+      "Who can help keep children safe?",
+      "A trusted grown-up, like a parent or teacher."
+     ],
+     "explain": "There should be no secrets about touching. The child should tell a trusted grown-up."
+    },
+    {
+     "type": "mcq",
+     "q": "How can you show respect for someone else's body?",
+     "options": [
+      "Ask before you hug, and stop if they say no",
+      "Push them when you are cross",
+      "Tease them about how they look",
+      "Grab their things"
+     ],
+     "answer": 0,
+     "hints": [
+      "Respect means caring how others feel.",
+      "Asking first shows respect.",
+      "Stopping when someone says no shows respect."
+     ],
+     "explain": "Asking first and stopping when someone says no shows respect."
+    },
+    {
+     "type": "mcq",
+     "q": "If a trusted grown-up does not listen the first time, what should you do?",
+     "options": [
+      "Tell another trusted grown-up",
+      "Give up",
+      "Keep it to yourself",
+      "Tell a stranger online"
+     ],
+     "answer": 0,
+     "hints": [
+      "Keep telling until someone helps.",
+      "Think of other adults you trust.",
+      "A teacher, a relative, a nurse."
+     ],
+     "explain": "Keep telling different trusted grown-ups until someone helps."
+    }
+   ],
+   "reflect": {
+    "q": "Who are trusted grown-ups you could talk to?",
+    "options": [
+     "A parent or carer",
+     "A teacher",
+     "Another relative",
+     "I'd like help to think of one"
+    ]
+   },
+   "parent": "Your child learnt about caring for their body, privacy, saying no and telling a trusted grown-up. Please talk about this together at home.",
+   "teacher": "Protective, scenario-based content. If a learner discloses anything during or after this lesson, follow your school's safeguarding procedure. The final reflection is not marked.",
+   "done": "Your body belongs to you, and there is always someone who can help."
+  },
+  {
+   "id": "l4-conflict",
+   "grade": 4,
+   "subject": "Life Skills",
+   "title": "Dealing with conflict",
+   "topic": "Personal and Social Well-being: dealing with conflict",
+   "domain": "Creativity and Metacognition",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 4 Life Skills, Term 1, Personal and Social Well-being: Dealing with conflict (at home and at school; ways to avoid and respond to conflict)",
+   "intention": "Today I am practising calm ways to sort out disagreements.",
+   "prompt": "How might the other person feel?",
+   "lesson": [
+    {
+     "h": "What is conflict?",
+     "say": "Conflict is a disagreement or fight between people. It happens at home and at school. It is normal, but how we deal with it matters.",
+     "html": "<p><b>Conflict</b> is a disagreement between people. It happens at home and at school, for example over toys, turns, or hurtful words. Conflict is normal. What matters is <b>how we deal with it</b>.</p>"
+    },
+    {
+     "h": "Steps to sort it out",
+     "say": "Stop and calm down. Say how you feel using I statements. Listen to the other person. Find a solution together. Ask a grown-up for help if you need it.",
+     "html": "<ol class=\"steps\"><li><b>Stop</b> and calm down</li><li>Say how you feel: <i>\"I feel upset when…\"</i></li><li><b>Listen</b> to the other person</li><li>Find a <b>solution together</b>: take turns, share, or say sorry</li><li>Ask a <b>grown-up</b> for help if you need it</li></ol>"
+    }
+   ],
+   "example": {
+    "q": "Two friends both want the same swing. What could they do?",
+    "steps": [
+     "Stop and stay calm, without pushing.",
+     "Each says what they want: \"I really want a turn.\"",
+     "Agree on a solution: take turns, for example counting to 50 each."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is an \"I statement\"?",
+     "options": [
+      "\"I feel sad when you take my pencil.\"",
+      "\"You always take my things!\"",
+      "\"Give it back now!\"",
+      "\"You're mean.\""
+     ],
+     "answer": 0,
+     "hints": [
+      "An I statement starts with \"I feel…\".",
+      "It talks about your feeling, not blaming.",
+      "Which one sounds calm?"
+     ],
+     "explain": "\"I feel sad when…\" explains your feeling without blaming."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps for sorting out conflict in order.",
+     "items": [
+      "Stop and calm down",
+      "Say how you feel",
+      "Listen to the other person",
+      "Find a solution together"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "You need to be calm before talking.",
+      "Then each person speaks and listens.",
+      "The solution comes last."
+     ],
+     "explain": "Calm down, say how you feel, listen, then find a solution together."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these responses to conflict.",
+     "items": [
+      "Take turns",
+      "Hit back",
+      "Talk it through",
+      "Call names",
+      "Ask a teacher for help",
+      "Ignore them for ever"
+     ],
+     "bins": [
+      "Helpful",
+      "Not helpful"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Helpful responses solve the problem safely.",
+      "Does it make things better or worse?",
+      "Hitting and name-calling make things worse."
+     ],
+     "explain": "Taking turns, talking and asking for help are helpful. Hitting, name-calling and ignoring for ever are not."
+    },
+    {
+     "type": "mcq",
+     "q": "Sipho bumps into Ayanda and her tower falls. Sipho didn't mean it. What could Ayanda do?",
+     "options": [
+      "Take a breath and say, \"Please be careful. Can you help me rebuild it?\"",
+      "Knock down Sipho's tower",
+      "Shout at Sipho",
+      "Never speak to Sipho again"
+     ],
+     "answer": 0,
+     "hints": [
+      "It was an accident.",
+      "Which answer is calm and helps solve it?",
+      "Asking for help to fix it is a solution."
+     ],
+     "explain": "Calmly explaining and asking for help turns the accident into teamwork."
+    },
+    {
+     "type": "mcq",
+     "q": "How can you avoid some conflicts before they start?",
+     "options": [
+      "Share, take turns and speak kindly",
+      "Always win",
+      "Never play with others",
+      "Take what you want"
+     ],
+     "answer": 0,
+     "hints": [
+      "Many conflicts are about sharing and turns.",
+      "Kind words help.",
+      "Which answer prevents problems?"
+     ],
+     "explain": "Sharing, taking turns and kind words prevent many conflicts."
+    }
+   ],
+   "reflect": {
+    "q": "Which step would help you most?",
+    "options": [
+     "Calming down first",
+     "Using an I statement",
+     "Listening",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised calm ways to sort out disagreements, like I statements and taking turns.",
+   "teacher": "Scenario-based. Shows knowledge of conflict-resolution steps, assertive language and the difference between helpful and harmful responses.",
+   "done": "Calm words solve more problems than angry ones."
+  }
+ ],
+ "words": {
+  "m4-patterns": {
+   "words": [
+    [
+     "🔁",
+     "Pattern",
+     "things that follow a rule"
+    ],
+    [
+     "📏",
+     "Rule",
+     "what you do to get the next number"
+    ],
+    [
+     "➡️",
+     "Input",
+     "the number that goes in"
+    ],
+    [
+     "⬅️",
+     "Output",
+     "the number that comes out"
+    ]
+   ]
+  },
+  "e4-folktale": {
+   "words": [
+    [
+     "📜",
+     "Folktale",
+     "an old story passed on by telling it"
+    ],
+    [
+     "🌊",
+     "Flood",
+     "when water covers land that is usually dry"
+    ],
+    [
+     "🌾",
+     "Veld",
+     "open grassland"
+    ],
+    [
+     "🙈",
+     "Foolish",
+     "not wise"
+    ]
+   ],
+   "phrases": [
+    [
+     "racing his own shadow",
+     "running around playing by himself"
+    ],
+    [
+     "stretch your ears towards wise words",
+     "listen carefully to good advice"
+    ]
+   ]
+  },
+  "n4-living": {
+   "words": [
+    [
+     "🌱",
+     "Life processes",
+     "the things every living thing does"
+    ],
+    [
+     "👀",
+     "Respond",
+     "react to something"
+    ],
+    [
+     "🗑️",
+     "Excrete",
+     "get rid of waste"
+    ]
+   ]
+  },
+  "l4-strengths": {
+   "words": [
+    [
+     "💪",
+     "Strength",
+     "something you do well, or a good quality you have"
+    ],
+    [
+     "🌟",
+     "Quality",
+     "what a person is like, such as kind or honest"
+    ],
+    [
+     "⏳",
+     "Patient",
+     "able to wait calmly"
+    ]
+   ]
+  },
+  "m4-place": {
+   "words": [
+    [
+     "🔢",
+     "Digit",
+     "one of the signs 0 to 9"
+    ],
+    [
+     "🏠",
+     "Place value",
+     "what a digit is worth because of where it is"
+    ],
+    [
+     "🎯",
+     "Round",
+     "change a number to a simpler number close to it"
+    ]
+   ]
+  },
+  "m4-fractions": {
+   "words": [
+    [
+     "🍕",
+     "Fraction",
+     "a part of a whole"
+    ],
+    [
+     "⚖️",
+     "Equal parts",
+     "parts that are exactly the same size"
+    ],
+    [
+     "🟰",
+     "Equivalent",
+     "worth the same amount"
+    ]
+   ]
+  },
+  "e4-poetry": {
+   "words": [
+    [
+     "🎵",
+     "Rhyme",
+     "words that end with the same sound"
+    ],
+    [
+     "🌧️",
+     "Patter",
+     "a light tapping sound"
+    ],
+    [
+     "💧",
+     "Puddle",
+     "a small pool of water on the ground"
+    ]
+   ],
+   "phrases": [
+    [
+     "the thirsty garden",
+     "the garden needed water"
+    ],
+    [
+     "shine like silver",
+     "look bright and shiny"
+    ],
+    [
+     "the sun peeps out",
+     "the sun starts to show from behind the clouds"
+    ]
+   ]
+  },
+  "e4-instructions": {
+   "words": [
+    [
+     "📋",
+     "Instructions",
+     "steps that tell you how to do something"
+    ],
+    [
+     "💧",
+     "Damp",
+     "a little bit wet"
+    ],
+    [
+     "👉",
+     "Command verb",
+     "a word that tells you what to do"
+    ]
+   ]
+  },
+  "n4-habitats": {
+   "words": [
+    [
+     "🏞️",
+     "Habitat",
+     "the place where an animal lives"
+    ],
+    [
+     "🛖",
+     "Shelter",
+     "a safe place to hide or rest"
+    ],
+    [
+     "🦆",
+     "Wetland",
+     "land that is wet, like a marsh or pond"
+    ]
+   ]
+  },
+  "n4-states": {
+   "words": [
+    [
+     "🧊",
+     "Solid",
+     "keeps its own shape"
+    ],
+    [
+     "💧",
+     "Liquid",
+     "flows and takes the shape of its container"
+    ],
+    [
+     "🎈",
+     "Gas",
+     "spreads out to fill a space"
+    ],
+    [
+     "🔥",
+     "Melt",
+     "change from solid to liquid when heated"
+    ]
+   ]
+  },
+  "l4-body": {
+   "words": [
+    [
+     "🔒",
+     "Private",
+     "just for you"
+    ],
+    [
+     "🧑‍🏫",
+     "Trusted adult",
+     "a grown-up who keeps you safe and listens"
+    ],
+    [
+     "🤝",
+     "Respect",
+     "treating people and their bodies with care"
+    ]
+   ]
+  },
+  "l4-conflict": {
+   "words": [
+    [
+     "⚡",
+     "Conflict",
+     "a disagreement between people"
+    ],
+    [
+     "🗨️",
+     "I statement",
+     "saying how you feel, starting with \"I feel\""
+    ],
+    [
+     "💡",
+     "Solution",
+     "a way to fix a problem"
+    ]
+   ]
+  }
+ }
+}

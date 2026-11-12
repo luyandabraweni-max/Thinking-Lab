@@ -1,6 +1,6 @@
 import { AccessDenied, canChangeConsent, canEditHealth, canSeeHealth, canSeeLearner } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Consent, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, Consent, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -49,6 +49,14 @@ export class LearnerSpace {
   }
   async markRead() {
     for (const m of await this.inbox()) if (!m.readBy.includes(this.learner.id)) await this.store.write("messages", { ...m, readBy: [...m.readBy, this.learner.id] });
+  }
+  /** Saves what the learner did in a game or lesson, one entry per question or round. */
+  async record(entries: Omit<Attempt, "id" | "learnerId">[]) {
+    for (const e of entries) await this.store.write("attempts", { ...e, id: newId(), learnerId: this.learner.id });
+  }
+  /** Earlier work, oldest first: the history the adaptation rules read. */
+  async history() {
+    return (await this.store.kv.all("attempts")).filter(a => a.learnerId === this.learner.id).sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
   }
 }
 

@@ -1,0 +1,1886 @@
+{
+ "level": "grade-2",
+ "units": [
+  {
+   "id": "g2-addsub",
+   "grade": 2,
+   "subject": "Mathematics",
+   "title": "Tens and ones, adding and subtracting",
+   "topic": "Place value and calculations to 99",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 2 Mathematics: Numbers, Operations and Relationships (place value of 2-digit numbers; add and subtract to 99; word problems)",
+   "intention": "Today I am using tens and ones to add and subtract bigger numbers.",
+   "prompt": "Did you work with the tens first or the ones first?",
+   "lesson": [
+    {
+     "h": "Tens and ones",
+     "say": "The number 47 has 4 tens and 7 ones. Four tens is forty, and seven ones is seven.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"4 tens and 7 ones\">🔟 🔟 🔟 🔟 🔹 🔹 🔹 🔹 🔹 🔹 🔹</p><p>47 = <b>40</b> + <b>7</b>. The 4 is worth 40.</p>"
+    },
+    {
+     "h": "Adding tens and ones",
+     "say": "To add 32 and 25, add the tens: 30 and 20 make 50. Add the ones: 2 and 5 make 7. Together that is 57.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">30 + 20 = 50</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 + 5 = 7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">50 + 7 = 57</span></div><p>Break the numbers into <b>tens</b> and <b>ones</b>, then put them back together.</p>"
+    },
+    {
+     "h": "Subtracting",
+     "say": "To work out 68 take away 23, take away the tens: 60 take away 20 is 40. Take away the ones: 8 take away 3 is 5. The answer is 45.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">60 − 20 = 40</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8 − 3 = 5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">40 + 5 = 45</span></div><p>Subtract the tens, then the ones.</p>"
+    }
+   ],
+   "example": {
+    "q": "There are 14 children on one bus and 23 children on another bus. How many children altogether?",
+    "steps": [
+     "Altogether means add.",
+     "Tens: 10 + 20 = 30. Ones: 4 + 3 = 7.",
+     "30 + 7 = 37 children."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many tens are in 63?",
+     "options": [
+      "6",
+      "3",
+      "63"
+     ],
+     "answer": 0,
+     "hints": [
+      "The first digit shows the tens.",
+      "63 is 60 and 3.",
+      "60 is 6 tens."
+     ],
+     "explain": "63 has 6 tens and 3 ones."
+    },
+    {
+     "type": "num",
+     "q": "What is 41 plus 26?",
+     "answer": "67",
+     "options": [
+      "67",
+      "15",
+      "57",
+      "66"
+     ],
+     "hints": [
+      "Add the tens: 40 + 20.",
+      "Add the ones: 1 + 6.",
+      "60 + 7."
+     ],
+     "explain": "41 + 26 = 67."
+    },
+    {
+     "type": "num",
+     "q": "What is 79 take away 35?",
+     "answer": "44",
+     "options": [
+      "44",
+      "114",
+      "34",
+      "45"
+     ],
+     "hints": [
+      "Tens: 70 − 30.",
+      "Ones: 9 − 5.",
+      "40 + 4."
+     ],
+     "explain": "79 − 35 = 44."
+    },
+    {
+     "type": "num",
+     "q": "A farmer has 58 sheep. He sells 20. How many are left?",
+     "answer": "38",
+     "options": [
+      "38",
+      "78",
+      "28",
+      "40"
+     ],
+     "hints": [
+      "Selling means fewer.",
+      "Take away 2 tens.",
+      "58 − 20 = 38."
+     ],
+     "explain": "58 − 20 = 38 sheep."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number has 8 tens and 2 ones?",
+     "options": [
+      "82",
+      "28",
+      "10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tens come first.",
+      "8 tens is 80.",
+      "80 and 2 is 82."
+     ],
+     "explain": "8 tens and 2 ones is 82."
+    },
+    {
+     "type": "order",
+     "q": "Put the numbers in order, smallest first.",
+     "items": [
+      "39",
+      "54",
+      "61",
+      "95"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "Compare the tens.",
+      "3 tens is the least.",
+      "9 tens is the most."
+     ],
+     "explain": "39, 54, 61, 95."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Splitting into tens and ones",
+     "Counting on",
+     "Thinking about the story",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used tens and ones to add and subtract numbers up to 99.",
+   "teacher": "Shows place value of 2-digit numbers and addition and subtraction to 99 by breaking down numbers.",
+   "done": "Split numbers into tens and ones to add and subtract."
+  },
+  {
+   "id": "g2-times",
+   "grade": 2,
+   "subject": "Mathematics",
+   "title": "Equal groups and times",
+   "topic": "Multiplication by 2, 5 and 10",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 2 Mathematics: Numbers, Operations and Relationships (repeated addition leading to multiplication; skip counting in 2s, 5s and 10s; grouping and sharing)",
+   "intention": "Today I am learning that times means equal groups.",
+   "prompt": "How did counting in groups help you?",
+   "lesson": [
+    {
+     "h": "Equal groups",
+     "say": "Three plates with four cupcakes on each. That is three groups of four, which is twelve.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Three groups of four cupcakes\">🧁🧁🧁🧁 &nbsp; 🧁🧁🧁🧁 &nbsp; 🧁🧁🧁🧁</p><p>3 groups of 4: 4 + 4 + 4 = <b>12</b>.</p>"
+    },
+    {
+     "h": "Times is a short way",
+     "say": "Three groups of four can be written as three times four. Three times four equals twelve.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4 + 4 + 4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">=</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3 × 4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">=</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">12</span></div><p>The <b>×</b> sign means <b>groups of</b>.</p>"
+    },
+    {
+     "h": "Counting in 2s, 5s and 10s",
+     "say": "Counting in twos, fives and tens helps us find answers fast. Five times two is ten. Five times five is twenty-five.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10</span></div><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">15</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">20</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">25</span></div><p>Skip count to <b>multiply</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A spider has 8 legs. How many legs do 2 spiders have?",
+    "steps": [
+     "2 groups of 8.",
+     "8 + 8.",
+     "2 × 8 = 16 legs."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many socks are in 4 pairs? A pair is 2.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Four pairs of socks\">🧦🧦 🧦🧦 🧦🧦 🧦🧦</p>",
+     "options": [
+      "8",
+      "6",
+      "4"
+     ],
+     "answer": 0,
+     "hints": [
+      "4 groups of 2.",
+      "Count in 2s: 2, 4, 6, …",
+      "2, 4, 6, 8."
+     ],
+     "explain": "4 × 2 = 8 socks."
+    },
+    {
+     "type": "mcq",
+     "q": "What is 5 times 3?",
+     "options": [
+      "15",
+      "8",
+      "53"
+     ],
+     "answer": 0,
+     "hints": [
+      "3 groups of 5.",
+      "Count in 5s three times.",
+      "5, 10, 15."
+     ],
+     "explain": "5 × 3 = 15."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the same as 10 plus 10 plus 10?",
+     "options": [
+      "3 × 10",
+      "10 × 10",
+      "3 + 10"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many tens are added?",
+      "There are 3 tens.",
+      "3 groups of 10."
+     ],
+     "explain": "10 + 10 + 10 = 3 × 10 = 30."
+    },
+    {
+     "type": "num",
+     "q": "Each hand has 5 fingers. How many fingers on 6 hands?",
+     "answer": "30",
+     "options": [
+      "30",
+      "11",
+      "25",
+      "35"
+     ],
+     "hints": [
+      "6 groups of 5.",
+      "Count in 5s six times.",
+      "5, 10, 15, 20, 25, 30."
+     ],
+     "explain": "6 × 5 = 30 fingers."
+    },
+    {
+     "type": "num",
+     "q": "Share 20 sweets equally into groups of 5. How many groups?",
+     "answer": "4",
+     "options": [
+      "4",
+      "5",
+      "15",
+      "25"
+     ],
+     "hints": [
+      "How many 5s make 20?",
+      "Count in 5s until 20.",
+      "5, 10, 15, 20 is four 5s."
+     ],
+     "explain": "20 shared into groups of 5 makes 4 groups."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Drawing groups",
+     "Skip counting",
+     "Adding the same number",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned that multiplying means equal groups and practised counting in 2s, 5s and 10s.",
+   "teacher": "Shows repeated addition as multiplication, skip counting in 2s, 5s and 10s, and grouping.",
+   "done": "Times means equal groups. Skip counting helps you multiply."
+  },
+  {
+   "id": "g2-fractions",
+   "grade": 2,
+   "subject": "Mathematics",
+   "title": "Halves, quarters and thirds",
+   "topic": "Fractions of shapes and groups",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 2 Mathematics: Numbers, Operations and Relationships (fractions: halves, quarters, thirds and fifths; sharing leading to fractions)",
+   "intention": "Today I am learning to share a whole into equal parts.",
+   "prompt": "How did you check the parts were equal?",
+   "lesson": [
+    {
+     "h": "A half",
+     "say": "When we cut something into two equal parts, each part is one half.",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"One of two equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"148\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"148\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><p>2 equal parts. Each part is <b>one half</b>.</p>"
+    },
+    {
+     "h": "A quarter",
+     "say": "When we cut something into four equal parts, each part is one quarter.",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"One of four equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"73\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><p>4 equal parts. Each part is <b>one quarter</b>.</p>"
+    },
+    {
+     "h": "A third",
+     "say": "When we cut something into three equal parts, each part is one third. The parts must be equal.",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"One of three equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"101\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"201\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><p>3 equal parts. Each part is <b>one third</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Mum cuts a pizza into 4 equal slices. You eat 1 slice. What fraction did you eat?",
+    "steps": [
+     "The pizza has 4 equal parts.",
+     "You ate 1 part.",
+     "You ate one quarter."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What fraction is shaded?",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"1 out of 2 equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"148\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"148\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg>",
+     "options": [
+      "One half",
+      "One quarter",
+      "One third"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the equal parts.",
+      "There are 2 parts.",
+      "1 out of 2 is one half."
+     ],
+     "explain": "1 of 2 equal parts is one half."
+    },
+    {
+     "type": "mcq",
+     "q": "What fraction is shaded?",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"1 out of 3 equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"101\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"201\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg>",
+     "options": [
+      "One third",
+      "One half",
+      "One quarter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the parts.",
+      "There are 3 parts.",
+      "1 out of 3 is one third."
+     ],
+     "explain": "1 of 3 equal parts is one third."
+    },
+    {
+     "type": "mcq",
+     "q": "Half of 10 sweets is how many?",
+     "options": [
+      "5",
+      "2",
+      "10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Share 10 between 2.",
+      "Each gets the same.",
+      "5 and 5."
+     ],
+     "explain": "Half of 10 is 5."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is bigger, one half or one quarter of the same cake?",
+     "options": [
+      "One half",
+      "One quarter"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "More pieces means smaller pieces.",
+      "A quarter is 1 of 4 pieces.",
+      "A half is 1 of 2 bigger pieces."
+     ],
+     "explain": "One half is bigger than one quarter."
+    },
+    {
+     "type": "mcq",
+     "q": "A quarter of 8 apples is how many?",
+     "options": [
+      "2",
+      "4",
+      "8"
+     ],
+     "answer": 0,
+     "hints": [
+      "Share 8 into 4 equal groups.",
+      "Each group gets the same.",
+      "8 shared by 4 is 2."
+     ],
+     "explain": "A quarter of 8 is 2."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you with fractions?",
+    "options": [
+     "The coloured bars",
+     "Thinking about food",
+     "Sharing into groups",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned halves, quarters and thirds, and found half and a quarter of a group.",
+   "teacher": "Shows recognition of unit fractions as equal parts of a whole and of a group.",
+   "done": "Fractions are equal parts of a whole."
+  },
+  {
+   "id": "g2-time",
+   "grade": 2,
+   "subject": "Mathematics",
+   "title": "Telling the time",
+   "topic": "O'clock and half past",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 2 Mathematics: Measurement (read 12-hour time in hours and half hours on analogue clocks; calendars and lengths of time)",
+   "intention": "Today I am learning to read o'clock and half past on a clock.",
+   "prompt": "How did the hands help you tell the time?",
+   "lesson": [
+    {
+     "h": "The clock hands",
+     "say": "A clock has a short hand and a long hand. The short hand shows the hour. The long hand shows the minutes.",
+     "html": "<svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"A clock showing 3 o'clock\"><circle cx=\"50\" cy=\"50\" r=\"46\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"50\" y=\"16\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">12</text><text x=\"69\" y=\"21.091034656191326\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">1</text><text x=\"82.90896534380866\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">2</text><text x=\"88\" y=\"54\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">3</text><text x=\"82.90896534380867\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">4</text><text x=\"69\" y=\"86.90896534380867\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">5</text><text x=\"50.00000000000001\" y=\"92\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">6</text><text x=\"30.999999999999996\" y=\"86.90896534380866\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">7</text><text x=\"17.09103465619134\" y=\"73.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">8</text><text x=\"12\" y=\"54.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">9</text><text x=\"17.091034656191333\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">10</text><text x=\"30.999999999999982\" y=\"21.09103465619134\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">11</text><line x1=\"50\" y1=\"50\" x2=\"72\" y2=\"50\" stroke=\"var(--ink)\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"17\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"var(--ink)\"/></svg><p>The <b>short</b> hand shows the <b>hour</b>. The <b>long</b> hand shows the <b>minutes</b>.</p>"
+    },
+    {
+     "h": "O'clock",
+     "say": "When the long hand points to 12, it is o'clock. This clock shows three o'clock.",
+     "html": "<svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"A clock showing 3 o'clock\"><circle cx=\"50\" cy=\"50\" r=\"46\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"50\" y=\"16\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">12</text><text x=\"69\" y=\"21.091034656191326\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">1</text><text x=\"82.90896534380866\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">2</text><text x=\"88\" y=\"54\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">3</text><text x=\"82.90896534380867\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">4</text><text x=\"69\" y=\"86.90896534380867\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">5</text><text x=\"50.00000000000001\" y=\"92\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">6</text><text x=\"30.999999999999996\" y=\"86.90896534380866\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">7</text><text x=\"17.09103465619134\" y=\"73.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">8</text><text x=\"12\" y=\"54.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">9</text><text x=\"17.091034656191333\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">10</text><text x=\"30.999999999999982\" y=\"21.09103465619134\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">11</text><line x1=\"50\" y1=\"50\" x2=\"72\" y2=\"50\" stroke=\"var(--ink)\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"17\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"var(--ink)\"/></svg><p>Long hand on <b>12</b> means <b>o'clock</b>. This is <b>3 o'clock</b>.</p>"
+    },
+    {
+     "h": "Half past",
+     "say": "When the long hand points to 6, it is half past. The short hand is halfway between two numbers. This clock shows half past four.",
+     "html": "<svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"A clock showing half past 4\"><circle cx=\"50\" cy=\"50\" r=\"46\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"50\" y=\"16\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">12</text><text x=\"69\" y=\"21.091034656191326\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">1</text><text x=\"82.90896534380866\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">2</text><text x=\"88\" y=\"54\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">3</text><text x=\"82.90896534380867\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">4</text><text x=\"69\" y=\"86.90896534380867\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">5</text><text x=\"50.00000000000001\" y=\"92\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">6</text><text x=\"30.999999999999996\" y=\"86.90896534380866\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">7</text><text x=\"17.09103465619134\" y=\"73.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">8</text><text x=\"12\" y=\"54.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">9</text><text x=\"17.091034656191333\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">10</text><text x=\"30.999999999999982\" y=\"21.09103465619134\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">11</text><line x1=\"50\" y1=\"50\" x2=\"65.55634918610404\" y2=\"65.55634918610404\" stroke=\"var(--ink)\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50.00000000000001\" y2=\"83\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"var(--ink)\"/></svg><p>Long hand on <b>6</b> means <b>half past</b>. This is <b>half past 4</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "School starts at 8 o'clock. Where does the long hand point?",
+    "steps": [
+     "O'clock means the long hand is on 12.",
+     "The short hand points to 8.",
+     "The long hand points to 12."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What time does this clock show?",
+     "html": "<svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"A clock showing 7 o'clock\"><circle cx=\"50\" cy=\"50\" r=\"46\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"50\" y=\"16\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">12</text><text x=\"69\" y=\"21.091034656191326\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">1</text><text x=\"82.90896534380866\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">2</text><text x=\"88\" y=\"54\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">3</text><text x=\"82.90896534380867\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">4</text><text x=\"69\" y=\"86.90896534380867\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">5</text><text x=\"50.00000000000001\" y=\"92\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">6</text><text x=\"30.999999999999996\" y=\"86.90896534380866\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">7</text><text x=\"17.09103465619134\" y=\"73.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">8</text><text x=\"12\" y=\"54.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">9</text><text x=\"17.091034656191333\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">10</text><text x=\"30.999999999999982\" y=\"21.09103465619134\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">11</text><line x1=\"50\" y1=\"50\" x2=\"39\" y2=\"69.05255888325765\" stroke=\"var(--ink)\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"17\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"var(--ink)\"/></svg>",
+     "options": [
+      "7 o'clock",
+      "12 o'clock",
+      "Half past 7"
+     ],
+     "answer": 0,
+     "hints": [
+      "Where is the long hand?",
+      "It is on 12, so it is o'clock.",
+      "The short hand is on 7."
+     ],
+     "explain": "It is 7 o'clock."
+    },
+    {
+     "type": "mcq",
+     "q": "What time does this clock show?",
+     "html": "<svg width=\"140\" height=\"140\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"A clock showing half past 2\"><circle cx=\"50\" cy=\"50\" r=\"46\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-width=\"2\"/><text x=\"50\" y=\"16\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">12</text><text x=\"69\" y=\"21.091034656191326\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">1</text><text x=\"82.90896534380866\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">2</text><text x=\"88\" y=\"54\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">3</text><text x=\"82.90896534380867\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">4</text><text x=\"69\" y=\"86.90896534380867\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">5</text><text x=\"50.00000000000001\" y=\"92\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">6</text><text x=\"30.999999999999996\" y=\"86.90896534380866\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">7</text><text x=\"17.09103465619134\" y=\"73.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">8</text><text x=\"12\" y=\"54.00000000000001\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">9</text><text x=\"17.091034656191333\" y=\"35\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">10</text><text x=\"30.999999999999982\" y=\"21.09103465619134\" font-size=\"10\" text-anchor=\"middle\" fill=\"var(--ink)\">11</text><line x1=\"50\" y1=\"50\" x2=\"71.25036817835951\" y2=\"44.30598100774454\" stroke=\"var(--ink)\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50.00000000000001\" y2=\"83\" stroke=\"var(--brand)\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"var(--ink)\"/></svg>",
+     "options": [
+      "Half past 2",
+      "2 o'clock",
+      "6 o'clock"
+     ],
+     "answer": 0,
+     "hints": [
+      "The long hand is on 6.",
+      "That means half past.",
+      "The short hand is just past 2."
+     ],
+     "explain": "It is half past 2."
+    },
+    {
+     "type": "mcq",
+     "q": "How many minutes are in one hour?",
+     "options": [
+      "60",
+      "30",
+      "100"
+     ],
+     "answer": 0,
+     "hints": [
+      "The long hand goes all the way round.",
+      "Count in 5s around the clock.",
+      "60 minutes."
+     ],
+     "explain": "There are 60 minutes in one hour."
+    },
+    {
+     "type": "mcq",
+     "q": "It is 1 o'clock. What time will it be in one hour?",
+     "options": [
+      "2 o'clock",
+      "12 o'clock",
+      "Half past 1"
+     ],
+     "answer": 0,
+     "hints": [
+      "One hour later.",
+      "The short hand moves to the next number.",
+      "2 o'clock."
+     ],
+     "explain": "One hour after 1 o'clock is 2 o'clock."
+    },
+    {
+     "type": "order",
+     "q": "Put the day in order.",
+     "items": [
+      "Wake up at 6 o'clock",
+      "School at 8 o'clock",
+      "Supper at 6 in the evening"
+     ],
+     "orderLabel": "earliest to latest",
+     "hints": [
+      "What happens first in the morning?",
+      "Then school.",
+      "Supper is in the evening."
+     ],
+     "explain": "Wake up, school, then supper."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you read the clock?",
+    "options": [
+     "Looking at the long hand first",
+     "Counting in 5s",
+     "Thinking about my day",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned to read o'clock and half past on a clock. Ask them to read your kitchen clock.",
+   "teacher": "Shows reading analogue time to the hour and half hour and simple elapsed time.",
+   "done": "Long hand on 12 is o'clock. Long hand on 6 is half past."
+  },
+  {
+   "id": "g2-digraphs",
+   "grade": 2,
+   "subject": "English Home Language",
+   "title": "Two letters, one sound",
+   "topic": "Vowel digraphs ee, oo, ai, oa",
+   "domain": "Communication and Expression",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 2 English Home Language: Phonics (vowel digraphs such as ee, oo, ai, oa, ea; consonant digraphs sh, ch, th, wh)",
+   "intention": "Today I am reading words where two letters make one sound.",
+   "prompt": "Which two letters worked together?",
+   "lesson": [
+    {
+     "h": "Two letters, one sound",
+     "say": "Sometimes two letters make one sound. E and e together say ee, like in tree and see.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">tr-ee</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">s-ee</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">f-ee-t</span></div><p class=\"pics\" role=\"img\" aria-label=\"Tree, see, feet\">🌳 👀 🦶</p><p><b>ee</b> says one long sound.</p>"
+    },
+    {
+     "h": "oo and ai",
+     "say": "O and o say oo, like in moon. A and i say ai, like in rain.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m-oo-n</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sp-oo-n</span></div><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">r-ai-n</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">s-ai-l</span></div><p class=\"pics\" role=\"img\" aria-label=\"Moon, spoon, rain, sail\">🌙 🥄 🌧️ ⛵</p>"
+    },
+    {
+     "h": "oa and sh",
+     "say": "O and a say oa, like in boat. S and h say sh, like in ship.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">b-oa-t</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">g-oa-t</span></div><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sh-i-p</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">f-i-sh</span></div><p class=\"pics\" role=\"img\" aria-label=\"Boat, goat, ship, fish\">🚤 🐐 🚢 🐟</p>"
+    }
+   ],
+   "example": {
+    "q": "Read the word: s, oa, p. What is it?",
+    "steps": [
+     "s says s.",
+     "oa says the long o sound.",
+     "s, oa, p makes soap."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word has the ee sound?",
+     "pics": [
+      "🐝",
+      "🐱",
+      "🌙"
+     ],
+     "options": [
+      "bee",
+      "cat",
+      "moon"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for two e letters.",
+      "B, e, e.",
+      "Bee."
+     ],
+     "explain": "Bee has the ee sound."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word has the oo sound like moon?",
+     "pics": [
+      "🥄",
+      "🚤",
+      "🐟"
+     ],
+     "options": [
+      "spoon",
+      "boat",
+      "fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for two o letters.",
+      "Sp, oo, n.",
+      "Spoon."
+     ],
+     "explain": "Spoon has the oo sound."
+    },
+    {
+     "type": "mcq",
+     "q": "Which letters make the sound in rain?",
+     "options": [
+      "ai",
+      "ee",
+      "oa"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say rain slowly.",
+      "r, ai, n.",
+      "ai."
+     ],
+     "explain": "Rain has the ai sound."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word starts with sh?",
+     "pics": [
+      "👟",
+      "🐍",
+      "🪑"
+     ],
+     "options": [
+      "shoe",
+      "snake",
+      "chair"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sh is a quiet sound.",
+      "Shhh.",
+      "Shoe."
+     ],
+     "explain": "Shoe starts with sh."
+    },
+    {
+     "type": "sort",
+     "q": "Sort by sound.",
+     "items": [
+      "green",
+      "coat",
+      "sheep",
+      "road"
+     ],
+     "bins": [
+      "ee words",
+      "oa words"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Look for ee or oa.",
+      "Green and sheep have ee.",
+      "Coat and road have oa."
+     ],
+     "explain": "Green and sheep have ee. Coat and road have oa."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you read the words?",
+    "options": [
+     "Finding the letter pairs",
+     "Saying each sound",
+     "Using the picture",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read words where two letters make one sound, such as ee, oo, ai, oa and sh.",
+   "teacher": "Shows decoding of vowel digraphs ee, oo, ai, oa and the consonant digraph sh.",
+   "done": "Sometimes two letters work together to make one sound."
+  },
+  {
+   "id": "g2-punct",
+   "grade": 2,
+   "subject": "English Home Language",
+   "title": "Question marks and exclamation marks",
+   "topic": "Punctuation",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 2 English Home Language: Language Structure and Use (full stop, question mark, exclamation mark, comma in a list)",
+   "intention": "Today I am choosing the right mark to end a sentence.",
+   "prompt": "How did you know which mark to use?",
+   "lesson": [
+    {
+     "h": "Telling sentences",
+     "say": "A telling sentence gives information. It ends with a full stop. The dog is brown.",
+     "html": "<div class=\"passage-text\"><p>The dog is brown<b>.</b></p></div><p>A <b>telling</b> sentence ends with a <b>full stop</b>.</p>"
+    },
+    {
+     "h": "Asking sentences",
+     "say": "An asking sentence asks a question. It ends with a question mark. Where is my bag?",
+     "html": "<div class=\"passage-text\"><p>Where is my bag<b>?</b></p></div><p>Asking words: who, what, where, when, why, how. Use a <b>question mark</b>.</p>"
+    },
+    {
+     "h": "Strong feelings",
+     "say": "When we feel something strongly, we use an exclamation mark. Watch out! What a big fish!",
+     "html": "<div class=\"passage-text\"><p>Watch out<b>!</b></p><p>What a big fish<b>!</b></p></div><p>An <b>exclamation mark</b> shows surprise, excitement or danger.</p>"
+    }
+   ],
+   "example": {
+    "q": "Which mark ends this sentence? What is your name",
+    "steps": [
+     "It starts with what.",
+     "It is asking something.",
+     "It needs a question mark."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which mark ends this sentence? How old are you",
+     "options": [
+      "Question mark",
+      "Full stop",
+      "Exclamation mark"
+     ],
+     "answer": 0,
+     "hints": [
+      "Is it asking or telling?",
+      "It starts with how.",
+      "Questions end with a question mark."
+     ],
+     "explain": "How old are you? It is a question."
+    },
+    {
+     "type": "mcq",
+     "q": "Which mark ends this sentence? I have a red bike",
+     "options": [
+      "Full stop",
+      "Question mark",
+      "Exclamation mark"
+     ],
+     "answer": 0,
+     "hints": [
+      "Is it asking or telling?",
+      "It tells us something.",
+      "Telling sentences end with a full stop."
+     ],
+     "explain": "I have a red bike. It is a telling sentence."
+    },
+    {
+     "type": "mcq",
+     "q": "Which mark ends this sentence? Help, the house is on fire",
+     "options": [
+      "Exclamation mark",
+      "Question mark",
+      "Full stop"
+     ],
+     "answer": 0,
+     "hints": [
+      "This is very urgent.",
+      "It shows strong feeling.",
+      "An exclamation mark."
+     ],
+     "explain": "Help, the house is on fire! It shows danger."
+    },
+    {
+     "type": "mcq",
+     "q": "Where do the commas go? I like apples pears and grapes.",
+     "options": [
+      "After apples",
+      "After like",
+      "After grapes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Commas separate things in a list.",
+      "The list is apples, pears and grapes.",
+      "A comma goes after apples."
+     ],
+     "explain": "I like apples, pears and grapes."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the sentences.",
+     "items": [
+      "Can you swim",
+      "The sky is blue",
+      "Where do you live",
+      "We eat at six"
+     ],
+     "bins": [
+      "Needs ?",
+      "Needs ."
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which ones ask something?",
+      "Can and where are asking words.",
+      "The others tell."
+     ],
+     "explain": "Can you swim? Where do you live? The sky is blue. We eat at six."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you choose?",
+    "options": [
+     "Looking for asking words",
+     "Reading it in a voice",
+     "Thinking about feelings",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child chose between full stops, question marks and exclamation marks, and used commas in a list.",
+   "teacher": "Shows use of end punctuation by sentence type and commas in a list.",
+   "done": "Telling sentences end with a full stop, questions with a question mark."
+  },
+  {
+   "id": "g2-tense",
+   "grade": 2,
+   "subject": "English Home Language",
+   "title": "Yesterday, today and tomorrow",
+   "topic": "Past, present and future tense",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 2 English Home Language: Language Structure and Use (present, past and future tense)",
+   "intention": "Today I am learning how verbs change for yesterday, today and tomorrow.",
+   "prompt": "Which words told you when it happened?",
+   "lesson": [
+    {
+     "h": "Today: present",
+     "say": "Things happening now are in the present tense. Today I play.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Today</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">I play</span></div><p><b>Present</b> tense: it is happening <b>now</b>.</p>"
+    },
+    {
+     "h": "Yesterday: past",
+     "say": "Things that already happened are in the past tense. We often add e d. Yesterday I played.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Yesterday</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">I played</span></div><p><b>Past</b> tense: it already happened. Many verbs add <b>-ed</b>.</p>"
+    },
+    {
+     "h": "Tomorrow: future",
+     "say": "Things that will happen are in the future tense. We use will. Tomorrow I will play.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tomorrow</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">I will play</span></div><p><b>Future</b> tense: it <b>will</b> happen.</p>"
+    }
+   ],
+   "example": {
+    "q": "Change to the past: Today I jump.",
+    "steps": [
+     "Past means it already happened.",
+     "Add e d to jump.",
+     "Yesterday I jumped."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Yesterday we … to the park.",
+     "options": [
+      "walked",
+      "walk",
+      "will walk"
+     ],
+     "answer": 0,
+     "hints": [
+      "Yesterday is in the past.",
+      "Add e d.",
+      "Walked."
+     ],
+     "explain": "Yesterday we walked to the park."
+    },
+    {
+     "type": "mcq",
+     "q": "Tomorrow I … my granny.",
+     "options": [
+      "will visit",
+      "visited",
+      "visits"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tomorrow is the future.",
+      "Use will.",
+      "Will visit."
+     ],
+     "explain": "Tomorrow I will visit my granny."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sentence is happening now?",
+     "options": [
+      "She is reading.",
+      "She read.",
+      "She will read."
+     ],
+     "answer": 0,
+     "hints": [
+      "Now means present.",
+      "Is reading is happening now.",
+      "She is reading."
+     ],
+     "explain": "She is reading. It is happening now."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word shows the future?",
+     "options": [
+      "will",
+      "yesterday",
+      "jumped"
+     ],
+     "answer": 0,
+     "hints": [
+      "Future means later.",
+      "Will tells us it has not happened yet.",
+      "Will."
+     ],
+     "explain": "Will shows the future."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into past and future.",
+     "items": [
+      "I cooked",
+      "I will cook",
+      "We danced",
+      "We will dance"
+     ],
+     "bins": [
+      "Past",
+      "Future"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Look for e d or will.",
+      "Cooked and danced already happened.",
+      "Will cook and will dance are later."
+     ],
+     "explain": "Cooked and danced are past. Will cook and will dance are future."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you?",
+    "options": [
+     "Looking for e d",
+     "Looking for will",
+     "Thinking yesterday, today, tomorrow",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned how verbs change for past, present and future.",
+   "teacher": "Shows regular past tense with -ed, present tense and future with will.",
+   "done": "Verbs change to show yesterday, today and tomorrow."
+  },
+  {
+   "id": "g2-poem",
+   "grade": 2,
+   "subject": "English Home Language",
+   "title": "Poem: The Year Goes Round",
+   "topic": "Reading a poem and rhyme",
+   "domain": "Communication and Expression",
+   "category": "Creativity",
+   "caps": "CAPS Grade 2 English Home Language: Reading and Viewing (read a poem; answer questions; identify rhyming words; make up own rhymes)",
+   "intention": "Today I am reading a poem and finding the rhyming words.",
+   "prompt": "Which season in the poem do you like best?",
+   "passage": "<div class=\"passage-text\"><p><b>The Year Goes Round</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>In summer, the sun is hot and high,<br>We swim and play below the sky.</p>\n<p>In autumn, leaves turn brown and fall,<br>The wind blows cool across the wall.</p>\n<p>In winter, nights are long and cold,<br>We wear warm jerseys, new and old.</p>\n<p>In spring, the flowers start to grow,<br>And baby birds sing soft and low.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the poem",
+     "say": "Read the poem, or press Read aloud to hear it.",
+     "html": "<div class=\"passage-text\"><p><b>The Year Goes Round</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>In summer, the sun is hot and high,<br>We swim and play below the sky.</p>\n<p>In autumn, leaves turn brown and fall,<br>The wind blows cool across the wall.</p>\n<p>In winter, nights are long and cold,<br>We wear warm jerseys, new and old.</p>\n<p>In spring, the flowers start to grow,<br>And baby birds sing soft and low.</p></div>"
+    },
+    {
+     "h": "Verses",
+     "say": "A poem is written in short lines. A group of lines is called a verse. This poem has four verses, one for each season.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Summer</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Autumn</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Winter</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spring</span></div><p>Each <b>verse</b> is about one <b>season</b>.</p>"
+    },
+    {
+     "h": "Rhyme",
+     "say": "Poems often rhyme. High rhymes with sky. Fall rhymes with wall.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">high, sky</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">fall, wall</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">cold, old</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">grow, low</span></div><p>Rhyming words <b>sound the same at the end</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Which word rhymes with high?",
+    "steps": [
+     "Say high.",
+     "Look at the end of the next line.",
+     "Sky rhymes with high."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "In which season do leaves turn brown and fall?",
+     "options": [
+      "Autumn",
+      "Spring",
+      "Summer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at verse two.",
+      "Leaves turn brown.",
+      "Autumn."
+     ],
+     "explain": "In autumn, leaves turn brown and fall."
+    },
+    {
+     "type": "mcq",
+     "q": "What do we wear in winter?",
+     "options": [
+      "Warm jerseys",
+      "Swimming costumes",
+      "Sunglasses"
+     ],
+     "answer": 0,
+     "hints": [
+      "Winter is cold.",
+      "Look at verse three.",
+      "Warm jerseys."
+     ],
+     "explain": "In winter we wear warm jerseys."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with grow?",
+     "options": [
+      "low",
+      "sing",
+      "flowers"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the spring verse.",
+      "Grow ends with ow.",
+      "Low."
+     ],
+     "explain": "Grow and low rhyme."
+    },
+    {
+     "type": "mcq",
+     "q": "How many verses does the poem have?",
+     "options": [
+      "4",
+      "2",
+      "8"
+     ],
+     "answer": 0,
+     "hints": [
+      "One verse for each season.",
+      "How many seasons are there?",
+      "4."
+     ],
+     "explain": "The poem has 4 verses, one per season."
+    },
+    {
+     "type": "order",
+     "q": "Put the seasons in the order of the poem.",
+     "items": [
+      "Summer",
+      "Autumn",
+      "Winter",
+      "Spring"
+     ],
+     "orderLabel": "first verse to last verse",
+     "hints": [
+      "The poem starts with the hot season.",
+      "Then leaves fall.",
+      "Spring is last."
+     ],
+     "explain": "Summer, autumn, winter, spring."
+    }
+   ],
+   "reflect": {
+    "q": "How did you enjoy the poem best?",
+    "options": [
+     "Reading it myself",
+     "Listening to it",
+     "Finding the rhymes",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a poem about the seasons and found rhyming words.",
+   "teacher": "Shows comprehension of a poem, the concept of a verse, and identification of rhyming pairs.",
+   "done": "Poems have verses, and many poems rhyme."
+  },
+  {
+   "id": "g2-bully",
+   "grade": 2,
+   "subject": "Life Skills",
+   "title": "Friends and bullying",
+   "topic": "Myself and others",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "CAPS Grade 2 Life Skills, Personal and Social Well-being, Term 1: Myself and others (qualities of friends; sharing, helping, respect; dealing with conflict and bullying)",
+   "intention": "Today I am learning what makes a good friend and what to do about bullying.",
+   "prompt": "What makes you a good friend?",
+   "lesson": [
+    {
+     "h": "A good friend",
+     "say": "A good friend is kind, shares, listens and helps you.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Kind, caring, listening\">🤝 💛 👂</p><p>Good friends are <b>kind</b>, <b>fair</b> and <b>helpful</b>.</p>"
+    },
+    {
+     "h": "What bullying is",
+     "say": "Bullying is when someone hurts or frightens another person again and again, on purpose.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"A worried child\">😟</p><p><b>Bullying</b> happens on purpose and keeps happening. It is never okay.</p>"
+    },
+    {
+     "h": "What to do",
+     "say": "If you are bullied or see bullying, tell a grown-up you trust. Telling is not tattling. It keeps people safe.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Say stop</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Walk away</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tell a grown-up</span></div><p><b>Tell a trusted grown-up</b>, like a teacher or parent.</p>"
+    }
+   ],
+   "example": {
+    "q": "Every day, a boy takes Zola's lunch and laughs at her. What should Zola do?",
+    "steps": [
+     "This keeps happening and it is on purpose.",
+     "It is bullying.",
+     "Zola should tell a grown-up she trusts."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is what a good friend does?",
+     "options": [
+      "Shares with you",
+      "Laughs at you",
+      "Leaves you out"
+     ],
+     "answer": 0,
+     "hints": [
+      "How does a good friend make you feel?",
+      "Kind things.",
+      "Shares with you."
+     ],
+     "explain": "A good friend shares and is kind."
+    },
+    {
+     "type": "mcq",
+     "q": "Someone is pushing a child at break every day. What is this?",
+     "options": [
+      "Bullying",
+      "A game",
+      "Helping"
+     ],
+     "answer": 0,
+     "hints": [
+      "It happens again and again.",
+      "It hurts someone.",
+      "Bullying."
+     ],
+     "explain": "Hurting someone again and again on purpose is bullying."
+    },
+    {
+     "type": "mcq",
+     "q": "Who can you tell about bullying?",
+     "options": [
+      "A trusted grown-up",
+      "Nobody",
+      "Only the bully"
+     ],
+     "answer": 0,
+     "hints": [
+      "Grown-ups can help stop it.",
+      "Who keeps you safe?",
+      "A trusted grown-up."
+     ],
+     "explain": "Tell a teacher, parent or another grown-up you trust."
+    },
+    {
+     "type": "mcq",
+     "q": "You see a new child sitting alone. What could you do?",
+     "options": [
+      "Invite them to play",
+      "Ignore them",
+      "Laugh at them"
+     ],
+     "answer": 0,
+     "hints": [
+      "How would you feel alone?",
+      "Be kind.",
+      "Invite them to play."
+     ],
+     "explain": "Inviting them to play is kind."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into kind and unkind.",
+     "items": [
+      "Helping someone up",
+      "Calling names",
+      "Sharing a snack",
+      "Taking someone's things"
+     ],
+     "bins": [
+      "Kind",
+      "Unkind"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "How would the other person feel?",
+      "Helping and sharing feel good.",
+      "Calling names and taking things hurt."
+     ],
+     "explain": "Helping and sharing are kind."
+    }
+   ],
+   "reflect": {
+    "q": "How do you show you are a good friend?",
+    "options": [
+     "I share",
+     "I listen",
+     "I help",
+     "I include others"
+    ]
+   },
+   "parent": "Your child talked about friendship and learned to tell a trusted adult about bullying.",
+   "teacher": "Shows understanding of friendship qualities, recognising bullying and seeking adult help.",
+   "done": "Good friends are kind. Tell a trusted grown-up about bullying."
+  },
+  {
+   "id": "g2-seasons",
+   "grade": 2,
+   "subject": "Life Skills",
+   "title": "The four seasons",
+   "topic": "Seasons and how they change things",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 2 Life Skills, Beginning Knowledge, Term 2: Seasons (the four seasons; effects on people, plants and animals)",
+   "intention": "Today I am learning about the four seasons and how they change our lives.",
+   "prompt": "Which season is it now where you live?",
+   "lesson": [
+    {
+     "h": "Four seasons",
+     "say": "There are four seasons in a year: summer, autumn, winter and spring.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Summer, autumn, winter, spring\">☀️ 🍂 ❄️ 🌸</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Summer</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Autumn</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Winter</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spring</span></div>"
+    },
+    {
+     "h": "In South Africa",
+     "say": "In South Africa, summer is in December and winter is in June and July. In parts of the country, most rain falls in summer. In the Western Cape, most rain falls in winter.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">December: summer</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">July: winter</span></div><p>Our seasons are the opposite of countries in the north.</p>"
+    },
+    {
+     "h": "Plants and animals",
+     "say": "In autumn many trees lose their leaves. In spring, plants grow new leaves and flowers, and many animals have babies.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Leaves fall, then flowers and chicks\">🍂 🌳 → 🌸 🐣</p><p>Seasons change what <b>plants</b> and <b>animals</b> do.</p>"
+    }
+   ],
+   "example": {
+    "q": "It is cold and the days are short. Which season is it?",
+    "steps": [
+     "Cold weather.",
+     "Short days and long nights.",
+     "It is winter."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "In which month is it summer in South Africa?",
+     "options": [
+      "December",
+      "July",
+      "June"
+     ],
+     "answer": 0,
+     "hints": [
+      "Summer is hot.",
+      "Think of Christmas holidays.",
+      "December."
+     ],
+     "explain": "December is summer in South Africa."
+    },
+    {
+     "type": "mcq",
+     "q": "When do many trees lose their leaves?",
+     "options": [
+      "Autumn",
+      "Spring",
+      "Summer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Leaves turn brown first.",
+      "It is the season before winter.",
+      "Autumn."
+     ],
+     "explain": "Many trees lose their leaves in autumn."
+    },
+    {
+     "type": "mcq",
+     "q": "When do flowers start to bloom?",
+     "pics": [
+      "🌸",
+      "❄️"
+     ],
+     "options": [
+      "Spring",
+      "Winter"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "After the cold.",
+      "New life starts.",
+      "Spring."
+     ],
+     "explain": "Flowers bloom in spring."
+    },
+    {
+     "type": "order",
+     "q": "Put the seasons in order, starting with summer.",
+     "items": [
+      "Summer",
+      "Autumn",
+      "Winter",
+      "Spring"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "After summer it gets cooler.",
+      "Then cold.",
+      "Then flowers."
+     ],
+     "explain": "Summer, autumn, winter, spring."
+    },
+    {
+     "type": "sort",
+     "q": "What do we wear?",
+     "items": [
+      "Shorts",
+      "Scarf",
+      "Sun hat",
+      "Gloves"
+     ],
+     "bins": [
+      "Summer",
+      "Winter"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Summer is hot, winter is cold.",
+      "Scarves and gloves keep us warm.",
+      "Shorts and sun hats are for hot days."
+     ],
+     "explain": "Shorts and sun hats for summer. Scarf and gloves for winter."
+    }
+   ],
+   "reflect": {
+    "q": "Which season do you like best?",
+    "options": [
+     "Summer",
+     "Autumn",
+     "Winter",
+     "Spring"
+    ]
+   },
+   "parent": "Your child learned the four seasons and how they change weather, plants, animals and clothes.",
+   "teacher": "Shows naming and sequencing the seasons and describing their effects on people, plants and animals.",
+   "done": "The four seasons change our weather, plants and animals."
+  },
+  {
+   "id": "g2-animalhomes",
+   "grade": 2,
+   "subject": "Life Skills",
+   "title": "Animal homes",
+   "topic": "Where animals live",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 2 Life Skills, Beginning Knowledge, Term 2: Animal homes (creatures that build, find or carry their homes); Animals that live in water",
+   "intention": "Today I am learning how animals build, find or carry their homes.",
+   "prompt": "Which animal home surprised you?",
+   "lesson": [
+    {
+     "h": "Animals that build",
+     "say": "Some animals build their homes. Birds build nests. Weaver birds weave nests from grass. Bees build a hive.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Nest and bee\">🪺 🐝</p><p>Birds build <b>nests</b>. Bees build <b>hives</b>.</p>"
+    },
+    {
+     "h": "Animals that find",
+     "say": "Some animals find a home. A bat finds a cave. A meerkat lives in a burrow under the ground.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Bat and hole\">🦇 🕳️</p><p>Animals can find <b>caves</b>, <b>holes</b> and <b>trees</b> to live in.</p>"
+    },
+    {
+     "h": "Animals that carry",
+     "say": "Some animals carry their homes on their backs. A snail and a tortoise carry their shells.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Snail and tortoise\">🐌 🐢</p><p>A <b>shell</b> is a home you can carry.</p>"
+    }
+   ],
+   "example": {
+    "q": "A hermit crab lives in an empty shell and moves to a bigger one when it grows. Does it build, find or carry its home?",
+    "steps": [
+     "It does not make the shell.",
+     "It finds an empty shell, and takes it with it.",
+     "It finds and carries its home."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What home does a bird build?",
+     "pics": [
+      "🪺",
+      "🐚",
+      "🕳️"
+     ],
+     "options": [
+      "A nest",
+      "A shell",
+      "A burrow"
+     ],
+     "answer": 0,
+     "hints": [
+      "Made of twigs and grass.",
+      "Eggs are laid in it.",
+      "A nest."
+     ],
+     "explain": "Birds build nests."
+    },
+    {
+     "type": "mcq",
+     "q": "Which animal carries its home?",
+     "pics": [
+      "🐢",
+      "🐝",
+      "🦇"
+     ],
+     "options": [
+      "Tortoise",
+      "Bee",
+      "Bat"
+     ],
+     "answer": 0,
+     "hints": [
+      "Its home is on its back.",
+      "It has a hard shell.",
+      "Tortoise."
+     ],
+     "explain": "A tortoise carries its shell."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does a meerkat live?",
+     "options": [
+      "In a burrow under the ground",
+      "In a nest",
+      "In the sea"
+     ],
+     "answer": 0,
+     "hints": [
+      "Meerkats dig.",
+      "Their home is under the ground.",
+      "A burrow."
+     ],
+     "explain": "Meerkats live in burrows."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the animals.",
+     "items": [
+      "Weaver bird",
+      "Snail",
+      "Bee",
+      "Tortoise"
+     ],
+     "bins": [
+      "Builds a home",
+      "Carries a home"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which ones make their homes?",
+      "Weaver birds and bees build.",
+      "Snails and tortoises carry shells."
+     ],
+     "explain": "Weaver birds and bees build. Snails and tortoises carry."
+    },
+    {
+     "type": "mcq",
+     "q": "Which animal lives in the sea?",
+     "pics": [
+      "🐙",
+      "🐒",
+      "🐄"
+     ],
+     "options": [
+      "Octopus",
+      "Monkey",
+      "Cow"
+     ],
+     "answer": 0,
+     "hints": [
+      "It has eight arms.",
+      "It swims.",
+      "Octopus."
+     ],
+     "explain": "An octopus lives in the sea."
+    }
+   ],
+   "reflect": {
+    "q": "Which animal home would you like to see?",
+    "options": [
+     "A weaver nest",
+     "A beehive",
+     "A burrow",
+     "A shell"
+    ]
+   },
+   "parent": "Your child learned how animals build, find or carry their homes.",
+   "teacher": "Shows classification of animal homes as built, found or carried, and identifying a water creature.",
+   "done": "Animals build, find or carry their homes."
+  },
+  {
+   "id": "g2-road",
+   "grade": 2,
+   "subject": "Life Skills",
+   "title": "Road safety",
+   "topic": "Crossing the road and road signs",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 2 Life Skills, Personal and Social Well-being, Term 3: Road safety (rules for pedestrians and passengers; road signs; scholar patrols)",
+   "intention": "Today I am learning how to stay safe on the road.",
+   "prompt": "What will you do the next time you cross a road?",
+   "lesson": [
+    {
+     "h": "Stop, look and listen",
+     "say": "Before you cross, stop at the side of the road. Look right, look left and look right again. Listen for cars.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Stop</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Look right</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Look left</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Look right</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Listen</span></div><p>Cross only when the road is <b>clear</b>. Walk, do not run.</p>"
+    },
+    {
+     "h": "Safe places to cross",
+     "say": "Cross at a pedestrian crossing, at a traffic light when the green man shows, or where a scholar patrol helps you.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Crossing, traffic light, walking\">🚸 🚦 🧍</p><p><b>Green man</b> means you may cross. <b>Red man</b> means wait.</p>"
+    },
+    {
+     "h": "In a car or taxi",
+     "say": "In a car, always wear your seatbelt. Get in and out on the side of the pavement, not the road.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Car and seatbelt\">🚗 🔒</p><p>Buckle your <b>seatbelt</b> every time.</p>"
+    }
+   ],
+   "example": {
+    "q": "Neo wants to cross the road to the shop. There is a pedestrian crossing a little further on. What should he do?",
+    "steps": [
+     "Crossings are safer.",
+     "Walk to the crossing.",
+     "Stop, look right, left and right again, then cross."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What should you do first before crossing?",
+     "options": [
+      "Stop at the side of the road",
+      "Run across",
+      "Close your eyes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Do not rush.",
+      "First you stop.",
+      "Stop at the side of the road."
+     ],
+     "explain": "Always stop at the side of the road first."
+    },
+    {
+     "type": "mcq",
+     "q": "The traffic light shows the red man. What do you do?",
+     "options": [
+      "Wait",
+      "Cross quickly",
+      "Dance"
+     ],
+     "answer": 0,
+     "hints": [
+      "Red means stop.",
+      "Do not cross.",
+      "Wait."
+     ],
+     "explain": "Red man means wait."
+    },
+    {
+     "type": "mcq",
+     "q": "What must you wear in a car?",
+     "options": [
+      "A seatbelt",
+      "A hat",
+      "Gloves"
+     ],
+     "answer": 0,
+     "hints": [
+      "It keeps you in your seat.",
+      "Click it closed.",
+      "A seatbelt."
+     ],
+     "explain": "Always wear a seatbelt."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps in order.",
+     "items": [
+      "Stop at the side",
+      "Look right, left and right again",
+      "Cross when it is clear"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What do you do first?",
+      "Then you look.",
+      "Then you cross."
+     ],
+     "explain": "Stop, look, then cross."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into safe and not safe.",
+     "items": [
+      "Crossing at the green man",
+      "Playing ball in the road",
+      "Wearing a seatbelt",
+      "Crossing between parked cars"
+     ],
+     "bins": [
+      "Safe",
+      "Not safe"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which could get you hurt?",
+      "Playing in the road and crossing between cars are dangerous.",
+      "The green man and seatbelts are safe."
+     ],
+     "explain": "Crossing at the green man and wearing a seatbelt are safe."
+    }
+   ],
+   "reflect": {
+    "q": "What will you remember?",
+    "options": [
+     "Stop, look and listen",
+     "Wait for the green man",
+     "Wear my seatbelt",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned how to cross the road safely and to wear a seatbelt. Practise on your next walk together.",
+   "teacher": "Shows knowledge of pedestrian rules, traffic light signals and passenger safety.",
+   "done": "Stop, look and listen before you cross the road."
+  }
+ ],
+ "words": {
+  "g2-addsub": {
+   "words": [
+    [
+     "🔟",
+     "Tens",
+     "groups of ten"
+    ],
+    [
+     "🔹",
+     "Ones",
+     "single units"
+    ]
+   ]
+  },
+  "g2-times": {
+   "words": [
+    [
+     "✖️",
+     "Times",
+     "groups of"
+    ],
+    [
+     "⏭️",
+     "Skip count",
+     "count in jumps, like 2, 4, 6"
+    ]
+   ]
+  },
+  "g2-fractions": {
+   "words": [
+    [
+     "🍕",
+     "Half",
+     "one of two equal parts"
+    ],
+    [
+     "🍰",
+     "Quarter",
+     "one of four equal parts"
+    ],
+    [
+     "🥧",
+     "Third",
+     "one of three equal parts"
+    ]
+   ]
+  },
+  "g2-time": {
+   "words": [
+    [
+     "🕐",
+     "O'clock",
+     "the long hand points to 12"
+    ],
+    [
+     "🕧",
+     "Half past",
+     "the long hand points to 6"
+    ]
+   ]
+  },
+  "g2-digraphs": {
+   "words": [
+    [
+     "🔤",
+     "Digraph",
+     "two letters that make one sound"
+    ]
+   ]
+  },
+  "g2-punct": {
+   "words": [
+    [
+     "❓",
+     "Question mark",
+     "ends an asking sentence"
+    ],
+    [
+     "❗",
+     "Exclamation mark",
+     "shows strong feeling"
+    ],
+    [
+     "🔸",
+     "Comma",
+     "separates things in a list"
+    ]
+   ]
+  },
+  "g2-tense": {
+   "words": [
+    [
+     "⏪",
+     "Past",
+     "already happened"
+    ],
+    [
+     "▶️",
+     "Present",
+     "happening now"
+    ],
+    [
+     "⏩",
+     "Future",
+     "will happen"
+    ]
+   ]
+  },
+  "g2-poem": {
+   "words": [
+    [
+     "📜",
+     "Verse",
+     "a group of lines in a poem"
+    ],
+    [
+     "🧶",
+     "Jersey",
+     "a warm top, also called a jumper"
+    ]
+   ]
+  },
+  "g2-bully": {
+   "words": [
+    [
+     "😟",
+     "Bullying",
+     "hurting or frightening someone again and again on purpose"
+    ],
+    [
+     "🧑‍🏫",
+     "Trusted grown-up",
+     "a grown-up who keeps you safe and listens"
+    ]
+   ]
+  },
+  "g2-seasons": {
+   "words": [
+    [
+     "🗓️",
+     "Season",
+     "a part of the year with its own weather"
+    ]
+   ]
+  },
+  "g2-animalhomes": {
+   "words": [
+    [
+     "🕳️",
+     "Burrow",
+     "a hole in the ground where an animal lives"
+    ],
+    [
+     "🐝",
+     "Hive",
+     "a home that bees build"
+    ]
+   ]
+  },
+  "g2-road": {
+   "words": [
+    [
+     "🚶",
+     "Pedestrian",
+     "a person walking"
+    ],
+    [
+     "🚸",
+     "Scholar patrol",
+     "people who help children cross the road"
+    ]
+   ]
+  }
+ }
+}

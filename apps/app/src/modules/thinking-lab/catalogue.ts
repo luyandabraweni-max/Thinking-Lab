@@ -1,0 +1,27 @@
+// The Thinking Lab games and their briefs (docs/thinking-lab-games.md), carried over from js/screens/lab-home.js and
+// js/activities/exercise.js. Drafts for specialist review: each records how the learner worked, not only the answer.
+export type GameId = "light" | "rule" | "story" | "invent" | "literal" | "veld" | "describe" | "sure";
+export interface GameInfo { id: GameId; name: string; pic: string; cat: string; domain: string; intention: string; purpose: string; parent: string; teacher: string }
+
+const list: GameInfo[] = [
+  { id: "light", name: "Light the Village", pic: "☀️", cat: "Planning", domain: "Logical and Analytical Thinking", intention: "Today I am practising planning before I act.", purpose: "Plan a path for light using mirrors, then test and adjust.",
+    parent: "planned where to put mirrors so sunlight reached every hut, which builds planning and spatial thinking.", teacher: "Shows whether the learner plans before testing (mirrors placed before the first shine) or works by trying and adjusting, and how many tests it took." },
+  { id: "rule", name: "The Secret Rule Machine", pic: "⚙️", cat: "Investigation", domain: "Inquiry and Systems Thinking", intention: "Today I am practising finding a hidden rule by testing ideas.", purpose: "Investigate by testing, notice what changes, and check an idea.",
+    parent: "discovered a machine's secret rule by testing objects, the way scientists find out how things work.", teacher: "Shows how the learner investigates: number of tests, fair tests (one change at a time), and whether a wrong guess sends them back to gather evidence." },
+  { id: "story", name: "Story Weaver", pic: "📖", cat: "Storytelling", domain: "Communication and Expression", intention: "Today I am practising telling a story my way.", purpose: "Tell a story with a beginning, middle and end, and name feelings.",
+    parent: "made their own picture story, choosing what happens and how the characters feel.", teacher: "No right answer. Shows how the learner prefers to express themselves (choosing, typing, drawing or speaking), and how they name feelings and take another point of view." },
+  { id: "invent", name: "Invention Workshop", pic: "🛠️", cat: "Design and Improvement", domain: "Creativity and Metacognition", intention: "Today I am practising designing something, testing it and making it better.", purpose: "Design a solution, test it, improve it, and judge it.",
+    parent: "designed a way to carry water to a garden, tested it and made it better, like an engineer.", teacher: "Shows how the learner responds to a failed test (revises one part or starts over), how many designs they try, and how they judge their own invention." },
+  { id: "literal", name: "The Literal Robot", pic: "🤖", cat: "Sequencing and Debugging", domain: "Logical and Analytical Thinking", intention: "Today I am practising giving exact instructions in the right order.", purpose: "Sequence steps precisely and debug them when they go wrong.",
+    parent: "gave a robot step-by-step instructions and fixed them when the robot got muddled, an early step in coding.", teacher: "Shows how the learner sequences and debugs: runs needed, whether they fix one step or start again, and extra steps added." },
+  { id: "veld", name: "Veld Balance", pic: "🌾", cat: "Systems Thinking", domain: "Inquiry and Systems Thinking", intention: "Today I am practising thinking about how one change affects everything else.", purpose: "Predict and explain ripple effects in a living system.",
+    parent: "predicted what happens in a veld when the rain or the animals change, which builds systems thinking.", teacher: "Shows whether the learner predicts effects one or two steps away, and in the open experiment, how they explore (runs, one change at a time)." },
+  { id: "describe", name: "Describe It", pic: "💬", cat: "Precise Communication", domain: "Communication and Expression", intention: "Today I am practising saying exactly what I mean, and listening carefully.", purpose: "Describe precisely so someone else can find it, and follow a description.",
+    parent: "described creatures so a robot could find them, and found creatures from the robot's clues.", teacher: "Shows how precise the learner's descriptions are (clues used compared with the fewest needed, clues that didn't fit) and how they follow a description." },
+  { id: "sure", name: "How Sure Am I?", pic: "🤔", cat: "Knowing What You Know", domain: "Creativity and Metacognition", intention: "Today I am practising noticing how sure I am.", purpose: "Judge confidence before seeing the answer, and reflect on it.",
+    parent: "solved puzzles and optical illusions, and noticed how sure they felt before seeing the answer.", teacher: "Shows how well the learner's confidence matches being right (the Sure-o-meter), a view of self-awareness. Illusions show how they respond when certainty is wrong." }
+];
+export const GAME_LIST = list;
+export const GAMES = Object.fromEntries(list.map(g => [g.id, g])) as Record<GameId, GameInfo>;
+export const THINK: Record<GameId, string> = { light: "Where does the light need to turn?", rule: "What do all the YES things have in common?", story: "How would you feel if you were in the story?", invent: "What could make it even better?",
+  literal: "What will Bolt do with that step?", veld: "What changes first, and what does that change next?", describe: "What makes yours different from the others?", sure: "How do you know?" };

@@ -64,6 +64,13 @@ export interface Medication {
 export interface Dose { id: string; learnerId: string; medicationId: string; givenAt: string; givenBy: string; note: string }
 export interface HealthEntry { id: string; learnerId: string; at: string; by: string; text: string }
 
+/** One answered question or game round (append only). Flags: see @tl/adaptation. */
+export interface Attempt {
+  id: string; learnerId: string; activityId: string;
+  status: "alone" | "support" | "notyet" | "open"; mode: string; hints: number;
+  flags: { e?: 1; a?: 1; s?: 1; b?: 1; q?: number } | null; reflection: string; occurredAt: string;
+}
+
 export type Tables = {
   accounts: Account;
   learners: Learner;
@@ -71,6 +78,7 @@ export type Tables = {
   medications: Medication;
   doses: Dose;
   health_log: HealthEntry;
+  attempts: Attempt;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts"];

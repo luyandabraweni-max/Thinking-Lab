@@ -1,0 +1,4781 @@
+{
+ "list": [
+  {
+   "id": "sk-cooking",
+   "name": "Cooking",
+   "icon": "🍳",
+   "domain": "Inquiry and Systems Thinking",
+   "about": "Making healthy, safe and tasty food for yourself and others.",
+   "leads": [
+    "Cook or chef",
+    "Baker",
+    "Caterer",
+    "Running a food business"
+   ],
+   "link": "Links to the Department of Basic Education's occupational subject Food Production, and to Hospitality Studies and Consumer Studies in Grades 10 to 12. TVET colleges offer hospitality and catering programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "ck1-fruit",
+      "title": "Make a fruit salad",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "A banana",
+       "An apple or a pear",
+       "An orange",
+       "A bowl and a spoon",
+       "A child-safe knife or a grown-up to cut"
+      ],
+      "safety": [
+       "Wash your hands first.",
+       "A grown-up does any cutting with a sharp knife."
+      ],
+      "steps": [
+       "Wash your hands with soap and water.",
+       "Wash the apple and the orange.",
+       "Peel the banana and the orange. A grown-up can help.",
+       "Break or cut the fruit into small pieces.",
+       "Put all the pieces into the bowl and stir gently.",
+       "Share your fruit salad with someone."
+      ],
+      "reflect": [
+       "Peeling",
+       "Stirring",
+       "Sharing",
+       "Eating it"
+      ],
+      "badge": "Fruit Salad Maker"
+     },
+     {
+      "id": "ck2-sandwich",
+      "title": "Make a sandwich",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "Two slices of bread",
+       "A spread, such as peanut butter or margarine",
+       "A filling, such as cheese or tomato",
+       "A blunt knife and a plate"
+      ],
+      "safety": [
+       "Wash your hands first.",
+       "Ask before using any food. Some people are allergic to peanuts."
+      ],
+      "steps": [
+       "Wash your hands.",
+       "Put two slices of bread on the plate.",
+       "Spread one slice with a blunt knife.",
+       "Put the filling on top.",
+       "Put the other slice on top and press gently.",
+       "Clean up your space."
+      ],
+      "reflect": [
+       "Spreading",
+       "Choosing a filling",
+       "Cleaning up",
+       "Eating it"
+      ],
+      "badge": "Sandwich Maker"
+     },
+     {
+      "id": "ck3-sort",
+      "title": "Sort the shopping",
+      "time": "15 minutes",
+      "adult": false,
+      "need": [
+       "Some food from the kitchen cupboard and fridge, such as fruit, a tin, bread and milk"
+      ],
+      "safety": [
+       "Only handle food a grown-up has given you.",
+       "Put cold food back in the fridge when you finish."
+      ],
+      "steps": [
+       "Look at all the food.",
+       "Find the food that comes from plants, like fruit and vegetables.",
+       "Find the food that comes from animals, like milk and eggs.",
+       "Find the food that must stay cold.",
+       "Help put everything back where it belongs."
+      ],
+      "reflect": [
+       "Finding plant food",
+       "Finding cold food",
+       "Putting things away",
+       "Not sure"
+      ],
+      "badge": "Kitchen Helper"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "ck4-oats",
+      "title": "Cook oats porridge",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "Half a cup of oats",
+       "One cup of water or milk",
+       "A pot and a wooden spoon",
+       "A stove",
+       "Fruit or a little honey to top it"
+      ],
+      "safety": [
+       "A grown-up must be with you at the stove.",
+       "Turn pot handles inwards so nobody knocks the pot.",
+       "Use an oven glove for hot handles."
+      ],
+      "steps": [
+       "Wash your hands.",
+       "Put the oats and the water or milk in the pot.",
+       "Put the pot on the stove on medium heat.",
+       "Stir all the time for about five minutes until it is thick.",
+       "Turn off the stove.",
+       "Spoon it into a bowl and add your topping. Let it cool a little before you eat."
+      ],
+      "reflect": [
+       "Measuring",
+       "Stirring",
+       "Being safe at the stove",
+       "Adding a topping"
+      ],
+      "badge": "Porridge Cook"
+     },
+     {
+      "id": "ck5-measure",
+      "title": "Measure and mix: flapjack batter",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "One cup of flour",
+       "Two teaspoons of baking powder",
+       "One egg",
+       "One cup of milk",
+       "A pinch of salt",
+       "A bowl, measuring cups, spoons and a whisk"
+      ],
+      "safety": [
+       "Wash your hands after touching raw egg.",
+       "A grown-up does the frying in a hot pan."
+      ],
+      "steps": [
+       "Wash your hands and read all the steps first.",
+       "Measure the flour, baking powder and salt into the bowl.",
+       "Crack the egg into a cup, then add it to the bowl.",
+       "Add the milk a little at a time and whisk until smooth.",
+       "A grown-up cooks spoonfuls in a pan until bubbles show, then turns them.",
+       "Wash the bowl and spoons."
+      ],
+      "reflect": [
+       "Measuring",
+       "Cracking the egg",
+       "Whisking",
+       "Reading the steps"
+      ],
+      "badge": "Batter Mixer"
+     },
+     {
+      "id": "ck6-plate",
+      "title": "Plan a healthy plate",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Paper and crayons, or the foods at home"
+      ],
+      "safety": [
+       "Ask before taking food from the kitchen."
+      ],
+      "steps": [
+       "Draw a big circle for a plate.",
+       "Fill half the plate with vegetables and fruit.",
+       "Fill a quarter with a starch, like pap, rice or bread.",
+       "Fill a quarter with a protein, like beans, eggs, fish or chicken.",
+       "Add a glass of water.",
+       "Show your plan to someone at home and ask if you can make it together."
+      ],
+      "reflect": [
+       "Choosing vegetables",
+       "Choosing a protein",
+       "Drawing it",
+       "Sharing my plan"
+      ],
+      "badge": "Healthy Plate Planner"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "ck7-recipe",
+      "title": "Follow a recipe: vegetable soup",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "An onion, two carrots, two potatoes and a tomato",
+       "A stock cube and water",
+       "Oil, salt and pepper",
+       "A chopping board, a knife, a pot and a spoon"
+      ],
+      "safety": [
+       "Use the claw grip: curl your fingertips away from the knife.",
+       "Keep pot handles turned in.",
+       "Have a grown-up nearby the first time you use the stove."
+      ],
+      "steps": [
+       "Read the whole recipe and set out everything you need.",
+       "Wash and peel the vegetables. Chop them into small even pieces.",
+       "Heat a little oil in the pot and fry the onion until soft.",
+       "Add the other vegetables, the stock cube and enough water to cover them.",
+       "Simmer for about 25 minutes until the potatoes are soft.",
+       "Taste, season with salt and pepper, and serve."
+      ],
+      "reflect": [
+       "Chopping safely",
+       "Timing",
+       "Tasting and seasoning",
+       "Following the recipe"
+      ],
+      "badge": "Soup Cook"
+     },
+     {
+      "id": "ck8-hygiene",
+      "title": "Food safety: clean, separate, cook, chill",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "A kitchen to look at",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Do not touch cleaning chemicals."
+      ],
+      "steps": [
+       "Clean: wash hands, boards and surfaces before and after handling food.",
+       "Separate: keep raw meat away from food that is ready to eat.",
+       "Cook: cook meat, chicken and eggs all the way through.",
+       "Chill: keep milk, meat and leftovers cold, and do not leave them out for more than two hours.",
+       "Walk through your kitchen and write one thing that is safe and one thing to improve.",
+       "Make a small poster of the four words for the kitchen."
+      ],
+      "reflect": [
+       "Clean",
+       "Separate",
+       "Cook",
+       "Chill"
+      ],
+      "badge": "Food Safety Checker"
+     },
+     {
+      "id": "ck9-budget",
+      "title": "Cook a meal for four on a budget",
+      "time": "2 hours",
+      "adult": true,
+      "need": [
+       "A budget agreed with your family, for example R100",
+       "A shop price list or till slips",
+       "A recipe for four people"
+      ],
+      "safety": [
+       "Agree the budget and the menu with a grown-up first.",
+       "Follow the food safety rules."
+      ],
+      "steps": [
+       "Choose a meal for four, such as pap, beans and cabbage.",
+       "List the ingredients and the amounts you need.",
+       "Find the price of each ingredient and add them up.",
+       "Change the plan if the total is more than the budget.",
+       "Cook the meal with a grown-up nearby.",
+       "Work out the cost per person: the total divided by four."
+      ],
+      "reflect": [
+       "Planning",
+       "Working out costs",
+       "Cooking",
+       "Feeding people"
+      ],
+      "badge": "Budget Cook"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "ck10-cost",
+      "title": "Cost a recipe and set a price",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A recipe you can make well, such as vetkoek or muffins",
+       "Shop prices for each ingredient",
+       "A calculator"
+      ],
+      "safety": [
+       "Use real prices from a shop near you."
+      ],
+      "steps": [
+       "Write down every ingredient and the amount the recipe uses.",
+       "Work out the cost of the amount used, not the whole packet. For example, 250 grams from a 1 kilogram bag of flour is a quarter of the price.",
+       "Add the cost of packaging and electricity or gas.",
+       "Divide the total by the number of items the recipe makes. This is the cost per item.",
+       "Add a profit, for example double the cost, to set a selling price.",
+       "Compare your price with what similar food sells for nearby."
+      ],
+      "reflect": [
+       "Costing ingredients",
+       "Adding hidden costs",
+       "Setting a price",
+       "Comparing prices"
+      ],
+      "badge": "Food Costing"
+     },
+     {
+      "id": "ck11-sell",
+      "title": "Food hygiene for selling food",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "Your local municipality's website or office for the rules"
+      ],
+      "safety": [
+       "Anyone who sells food to the public in South Africa needs a certificate of acceptability from the municipality. Check your local rules."
+      ],
+      "steps": [
+       "List the food you would sell and where you would prepare it.",
+       "Write a hand washing and cleaning routine for each day.",
+       "Plan how you will keep hot food hot and cold food cold.",
+       "Plan how you will store and label food with the date it was made.",
+       "Find out how to apply for a certificate of acceptability at your municipality.",
+       "Make a one-page checklist you can use every day."
+      ],
+      "reflect": [
+       "Daily routine",
+       "Hot and cold food",
+       "Labelling",
+       "The certificate"
+      ],
+      "badge": "Safe Food Seller"
+     },
+     {
+      "id": "ck12-week",
+      "title": "Plan a week of meals",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A weekly food budget",
+       "Paper and a pen",
+       "Shop prices"
+      ],
+      "safety": [
+       "Plan for any allergies or health needs in your household."
+      ],
+      "steps": [
+       "Write the days of the week and three meals for each day.",
+       "Use the same ingredients in more than one meal to waste less.",
+       "Write one shopping list for the whole week.",
+       "Price the list and adjust it to fit the budget.",
+       "Plan which meals you can cook ahead and freeze.",
+       "After the week, note what worked and what you would change."
+      ],
+      "reflect": [
+       "Planning meals",
+       "Wasting less",
+       "Sticking to the budget",
+       "Cooking ahead"
+      ],
+      "badge": "Meal Planner"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-coding",
+   "name": "Coding and digital",
+   "icon": "💻",
+   "domain": "Logical and Analytical Thinking",
+   "about": "Giving clear step-by-step instructions, making things with computers, and staying safe online.",
+   "leads": [
+    "Software developer",
+    "IT support",
+    "Digital designer",
+    "Data and office work"
+   ],
+   "link": "Links to the Department of Basic Education's Coding and Robotics curriculum, and to Information Technology and Computer Applications Technology in Grades 10 to 12. TVET colleges offer IT and computer science programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "cd1-robot",
+      "title": "Be a robot",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A partner",
+       "Some space on the floor",
+       "A toy to find"
+      ],
+      "safety": [
+       "Clear the floor so nobody trips."
+      ],
+      "steps": [
+       "One person is the robot. The other person gives instructions.",
+       "Hide the toy a few steps away.",
+       "Give one instruction at a time: step forward, turn left or turn right.",
+       "The robot only does exactly what it is told.",
+       "Keep going until the robot finds the toy.",
+       "Swap places and play again."
+      ],
+      "reflect": [
+       "Giving instructions",
+       "Being the robot",
+       "Turning left and right",
+       "Finding the toy"
+      ],
+      "badge": "Robot Commander"
+     },
+     {
+      "id": "cd2-steps",
+      "title": "Steps to brush your teeth",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "Your toothbrush and toothpaste",
+       "A grown-up to listen"
+      ],
+      "safety": [
+       "Use a small amount of toothpaste."
+      ],
+      "steps": [
+       "Think of all the steps to brush your teeth.",
+       "Tell a grown-up the first step.",
+       "Tell the next step, and the next.",
+       "Did you miss a step? Computers need every step.",
+       "Now brush your teeth, following your steps."
+      ],
+      "reflect": [
+       "Thinking of the steps",
+       "Putting them in order",
+       "Finding a missed step",
+       "Not sure"
+      ],
+      "badge": "Step Thinker"
+     },
+     {
+      "id": "cd3-pattern",
+      "title": "Code a bead pattern",
+      "time": "15 minutes",
+      "adult": false,
+      "need": [
+       "Beads, buttons or blocks in two colours",
+       "A string, or just a table"
+      ],
+      "safety": [
+       "Small beads are not for putting in your mouth."
+      ],
+      "steps": [
+       "Make a rule, like red, blue, red, blue.",
+       "Follow your rule to make a line.",
+       "Make a new rule, like red, red, blue.",
+       "Ask someone to guess your rule.",
+       "Make a necklace or a line with your favourite rule."
+      ],
+      "reflect": [
+       "Making a rule",
+       "Following the rule",
+       "Guessing someone's rule",
+       "Not sure"
+      ],
+      "badge": "Pattern Coder"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "cd4-algorithm",
+      "title": "Write an algorithm",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pen"
+      ],
+      "safety": [
+       "None needed."
+      ],
+      "steps": [
+       "An algorithm is a list of steps that solves a problem.",
+       "Choose a task, like making a cup of tea or tying a shoelace.",
+       "Write every step in order and number them.",
+       "Give your steps to someone and ask them to follow them exactly.",
+       "Watch for steps that are missing or unclear. That is a bug.",
+       "Fix the bug and test your algorithm again."
+      ],
+      "reflect": [
+       "Writing steps",
+       "Testing",
+       "Finding a bug",
+       "Fixing it"
+      ],
+      "badge": "Algorithm Writer"
+     },
+     {
+      "id": "cd5-loops",
+      "title": "Loops in a dance",
+      "time": "15 minutes",
+      "adult": false,
+      "need": [
+       "Some space",
+       "Music if you like"
+      ],
+      "safety": [
+       "Clear the space so you do not bump into things."
+      ],
+      "steps": [
+       "Make up three moves, like clap, jump and spin.",
+       "Write them as code: clap, jump, spin.",
+       "A loop repeats code. Write: repeat 4 times: clap, jump, spin.",
+       "Do your loop dance.",
+       "Add a condition: if the music stops, freeze.",
+       "Teach your code to someone else."
+      ],
+      "reflect": [
+       "Making moves",
+       "Writing the loop",
+       "Adding the condition",
+       "Teaching it"
+      ],
+      "badge": "Loop Dancer"
+     },
+     {
+      "id": "cd6-safe",
+      "title": "Be safe online",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "A grown-up",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Never share your password, address or school with people online."
+      ],
+      "steps": [
+       "A strong password is long and hard to guess. Make up an example using three random words, but do not use it for real.",
+       "Personal information is your full name, address, school and phone number. Keep it private.",
+       "If someone online asks to meet you or for photos, stop and tell a trusted grown-up.",
+       "Not everything online is true. Check with a second source.",
+       "Make a poster with your three best online safety rules."
+      ],
+      "reflect": [
+       "Passwords",
+       "Private information",
+       "Telling a grown-up",
+       "Checking facts"
+      ],
+      "badge": "Online Safety Star"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "cd7-scratch",
+      "title": "Make a simple game in Scratch",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A computer or tablet with internet",
+       "The free Scratch website, scratch.mit.edu"
+      ],
+      "safety": [
+       "Use a username that is not your real name."
+      ],
+      "steps": [
+       "Open Scratch and start a new project.",
+       "Choose a sprite, the character in your game.",
+       "Add code: when the green flag is clicked, go to the middle.",
+       "Add code so the arrow keys move your sprite.",
+       "Add a second sprite to catch, and a score that goes up when you touch it.",
+       "Test your game, fix any bugs, and ask a friend to play."
+      ],
+      "reflect": [
+       "Moving the sprite",
+       "Making a score",
+       "Fixing bugs",
+       "Sharing my game"
+      ],
+      "badge": "Game Maker"
+     },
+     {
+      "id": "cd8-docs",
+      "title": "Make a neat document",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "A computer or phone with a word processor"
+      ],
+      "safety": [
+       "Save your work often."
+      ],
+      "steps": [
+       "Open a new document.",
+       "Type a title and make it a heading.",
+       "Write three short paragraphs about something you know well.",
+       "Add a bulleted list and a table.",
+       "Check spelling and use one clear font.",
+       "Save it as a PDF and give it a sensible file name."
+      ],
+      "reflect": [
+       "Headings",
+       "Lists and tables",
+       "Checking spelling",
+       "Saving as PDF"
+      ],
+      "badge": "Document Pro"
+     },
+     {
+      "id": "cd9-spreadsheet",
+      "title": "Track something in a spreadsheet",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "A spreadsheet app, such as Google Sheets or Excel"
+      ],
+      "safety": [
+       "Do not put other people's private information in your sheet."
+      ],
+      "steps": [
+       "Choose something to track, like your pocket money or rainfall for a week.",
+       "Make columns: date, item and amount.",
+       "Fill in at least seven rows.",
+       "Use the SUM formula to add up the amounts.",
+       "Make a simple chart from your data.",
+       "Write one sentence about what the chart shows."
+      ],
+      "reflect": [
+       "Setting up columns",
+       "Using SUM",
+       "Making a chart",
+       "Explaining it"
+      ],
+      "badge": "Spreadsheet Starter"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "cd10-cv",
+      "title": "Make a CV on a computer",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A computer or phone with a word processor",
+       "Your work, study and volunteer history"
+      ],
+      "safety": [
+       "Do not put your ID number on a CV. Share it only when an employer actually needs it."
+      ],
+      "steps": [
+       "Add your name, phone number and email at the top.",
+       "Write two lines about who you are and what work you want.",
+       "List your skills, including practical skills.",
+       "List your education and any training.",
+       "List work, volunteering and projects, newest first.",
+       "Save it as a PDF with your name in the file name."
+      ],
+      "reflect": [
+       "Writing about me",
+       "Listing skills",
+       "Layout",
+       "Saving as PDF"
+      ],
+      "badge": "Digital CV"
+     },
+     {
+      "id": "cd11-email",
+      "title": "Write a professional email",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "An email account"
+      ],
+      "safety": [
+       "Check the address before you press send."
+      ],
+      "steps": [
+       "Use a simple email address with your name, not a nickname.",
+       "Write a clear subject line, like: Application for kitchen assistant.",
+       "Start with a greeting: Dear Ms Dlamini.",
+       "Say why you are writing in the first sentence.",
+       "Keep it short and polite, and attach your CV as a PDF.",
+       "End with: Kind regards, and your full name and phone number."
+      ],
+      "reflect": [
+       "Subject line",
+       "Being clear",
+       "Attaching a file",
+       "Being polite"
+      ],
+      "badge": "Professional Emailer"
+     },
+     {
+      "id": "cd12-scams",
+      "title": "Spot scams and protect your accounts",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "Your phone or computer"
+      ],
+      "safety": [
+       "Never share a one-time PIN with anyone. Your bank will never ask for it."
+      ],
+      "steps": [
+       "Turn on two-step verification for your email.",
+       "Use a different strong password for each important account.",
+       "Learn the signs of a scam: urgency, prizes you did not enter, and requests for PINs or money.",
+       "Fake job adverts ask you to pay to get a job. Real employers do not.",
+       "Check links before you click: look at the web address carefully.",
+       "If you are scammed, contact your bank straight away and report it."
+      ],
+      "reflect": [
+       "Two-step verification",
+       "Strong passwords",
+       "Spotting scams",
+       "Fake job adverts"
+      ],
+      "badge": "Scam Spotter"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-business",
+   "name": "Money and small business",
+   "icon": "💰",
+   "domain": "Logical and Analytical Thinking",
+   "about": "Understanding money, saving, and starting something of your own.",
+   "leads": [
+    "Running your own business",
+    "Shop or sales work",
+    "Bookkeeping",
+    "Bank or office work"
+   ],
+   "link": "Links to Economic and Management Sciences in Grades 7 to 9 and Business Studies and Accounting in Grades 10 to 12. TVET colleges offer business and finance programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "mb1-shop",
+      "title": "Play shop",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "Some toys or food packets to sell",
+       "Real or pretend coins"
+      ],
+      "safety": [
+       "Coins are small. Do not put them in your mouth."
+      ],
+      "steps": [
+       "Put the things you will sell on a table.",
+       "Give each thing a price, like R1, R2 or R5.",
+       "One person is the shopkeeper and one is the customer.",
+       "The customer chooses something and pays.",
+       "The shopkeeper says thank you and gives the item.",
+       "Swap and play again."
+      ],
+      "reflect": [
+       "Being the shopkeeper",
+       "Being the customer",
+       "Counting money",
+       "Not sure"
+      ],
+      "badge": "Little Shopkeeper"
+     },
+     {
+      "id": "mb2-coins",
+      "title": "Know your coins",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "South African coins: 10c, 20c, 50c, R1, R2 and R5"
+      ],
+      "safety": [
+       "Wash your hands after handling money."
+      ],
+      "steps": [
+       "Put the coins on the table.",
+       "Find the gold coins and the silver coins.",
+       "Find the R5 coin. It is the biggest.",
+       "Find the R1 coin and the R2 coin.",
+       "Put the coins in order from smallest value to biggest value."
+      ],
+      "reflect": [
+       "Colours",
+       "Sizes",
+       "Putting them in order",
+       "Not sure"
+      ],
+      "badge": "Coin Spotter"
+     },
+     {
+      "id": "mb3-jar",
+      "title": "Make a saving jar",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "A clean jar or tin with a lid",
+       "Paper, crayons and glue"
+      ],
+      "safety": [
+       "A grown-up cuts the slot in the lid."
+      ],
+      "steps": [
+       "Decorate your jar with a picture of something you want to save for.",
+       "A grown-up cuts a slot in the lid.",
+       "When you get a coin, put it in the jar.",
+       "Count your coins with a grown-up each week.",
+       "Saving means waiting to buy something bigger later."
+      ],
+      "reflect": [
+       "Decorating",
+       "Choosing a goal",
+       "Counting",
+       "Waiting"
+      ],
+      "badge": "Saver"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "mb4-needs",
+      "title": "Needs and wants",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "Pictures from adverts if you have them"
+      ],
+      "safety": [
+       "None needed."
+      ],
+      "steps": [
+       "A need is something you must have to live, like food, water and a home.",
+       "A want is something nice to have, like a new game.",
+       "Make two columns: needs and wants.",
+       "Sort ten things into the columns.",
+       "Talk with someone at home about why needs come first."
+      ],
+      "reflect": [
+       "Needs",
+       "Wants",
+       "Sorting",
+       "Talking about it"
+      ],
+      "badge": "Smart Chooser"
+     },
+     {
+      "id": "mb5-budget",
+      "title": "Plan a party budget",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "A pretend budget of R200",
+       "Prices from a shop catalogue"
+      ],
+      "safety": [
+       "None needed."
+      ],
+      "steps": [
+       "List what you want for a small party: food, drinks, plates and a game.",
+       "Find a price for each item.",
+       "Add up the total.",
+       "If it is more than R200, choose what to leave out or swap for something cheaper.",
+       "Write your final list and the money left over."
+      ],
+      "reflect": [
+       "Listing",
+       "Adding up",
+       "Making choices",
+       "Money left over"
+      ],
+      "badge": "Budget Planner"
+     },
+     {
+      "id": "mb6-stall",
+      "title": "Run a mini stall",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "Something to sell, like lemonade, crafts or popcorn",
+       "A table and a price sign",
+       "A tin for change"
+      ],
+      "safety": [
+       "A grown-up must agree and be nearby.",
+       "Follow food safety rules if you sell food."
+      ],
+      "steps": [
+       "Work out what it costs to make your product.",
+       "Choose a price that is more than the cost.",
+       "Make a clear sign with your price.",
+       "Sell to family, friends or at a school market.",
+       "Count your money at the end.",
+       "Take away your costs. What is left is your profit."
+      ],
+      "reflect": [
+       "Making the product",
+       "Setting a price",
+       "Selling",
+       "Working out profit"
+      ],
+      "badge": "Young Entrepreneur"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "mb7-income",
+      "title": "Income and expenses",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "Paper or a spreadsheet",
+       "A month of pocket money or pretend income"
+      ],
+      "safety": [
+       "None needed."
+      ],
+      "steps": [
+       "Income is money that comes in. Expenses are money that goes out.",
+       "List your income for one month.",
+       "List your expenses: airtime, data, transport and snacks.",
+       "Take expenses away from income.",
+       "If the answer is negative, find one expense to cut.",
+       "Set a saving goal for next month."
+      ],
+      "reflect": [
+       "Listing income",
+       "Listing expenses",
+       "Finding a cut",
+       "Setting a goal"
+      ],
+      "badge": "Money Tracker"
+     },
+     {
+      "id": "mb8-idea",
+      "title": "Test a business idea",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "Five people to ask"
+      ],
+      "safety": [
+       "Ask people you know. Do not collect anyone's personal details."
+      ],
+      "steps": [
+       "Think of a problem people near you have.",
+       "Think of a product or service that solves it.",
+       "Ask five people: would you use this, and what would you pay?",
+       "Write down what they said.",
+       "Change your idea based on what you heard.",
+       "Decide: is this worth trying?"
+      ],
+      "reflect": [
+       "Finding a problem",
+       "Asking people",
+       "Changing the idea",
+       "Deciding"
+      ],
+      "badge": "Idea Tester"
+     },
+     {
+      "id": "mb9-pitch",
+      "title": "Pitch your idea",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Your business idea",
+       "Someone to pitch to"
+      ],
+      "safety": [
+       "None needed."
+      ],
+      "steps": [
+       "Say the problem in one sentence.",
+       "Say your solution in one sentence.",
+       "Say who your customers are.",
+       "Say how you will make money.",
+       "Say what you need to start.",
+       "Practise until your pitch takes one minute, then pitch to someone."
+      ],
+      "reflect": [
+       "The problem",
+       "The solution",
+       "Making money",
+       "Speaking"
+      ],
+      "badge": "Pitch Maker"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "mb10-plan",
+      "title": "Write a one-page business plan",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "Paper or a computer"
+      ],
+      "safety": [
+       "None needed."
+      ],
+      "steps": [
+       "Business name and what you sell.",
+       "Your customers and where you will find them.",
+       "Your competitors and why people will choose you.",
+       "Start-up costs: equipment, stock and permits.",
+       "Monthly costs and your price per item.",
+       "How many sales you need each month to cover your costs."
+      ],
+      "reflect": [
+       "Customers",
+       "Competitors",
+       "Costs",
+       "Break-even sales"
+      ],
+      "badge": "Business Planner"
+     },
+     {
+      "id": "mb11-cashbook",
+      "title": "Keep a cash book",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A notebook or a spreadsheet"
+      ],
+      "safety": [
+       "Keep business money separate from personal money."
+      ],
+      "steps": [
+       "Make columns: date, description, money in, money out and balance.",
+       "Write every sale in money in.",
+       "Write every purchase in money out, and keep the slips.",
+       "Work out the balance after each line.",
+       "At the end of each week, count your cash and check it matches.",
+       "At the end of the month, add up the total in and total out."
+      ],
+      "reflect": [
+       "Recording sales",
+       "Keeping slips",
+       "Balancing",
+       "Monthly totals"
+      ],
+      "badge": "Bookkeeper"
+     },
+     {
+      "id": "mb12-support",
+      "title": "Find support for small businesses",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Internet access, or a visit to a local library or business centre"
+      ],
+      "safety": [
+       "Never pay a fee to apply for a government grant. Check that offers are real."
+      ],
+      "steps": [
+       "Find out how to register a business with the CIPC.",
+       "Find your nearest small business support office, such as SEDA.",
+       "Look for youth programmes, such as those from the National Youth Development Agency.",
+       "Write down what each one offers: training, mentoring or funding.",
+       "Choose one to contact this month.",
+       "Write down the questions you want to ask them."
+      ],
+      "reflect": [
+       "Registering",
+       "Finding support",
+       "Choosing one",
+       "Preparing questions"
+      ],
+      "badge": "Support Finder"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-sport",
+   "name": "Sport and fitness",
+   "icon": "⚽",
+   "domain": "Creativity and Metacognition",
+   "about": "Moving your body, playing fair, staying healthy and working in a team.",
+   "leads": [
+    "Coach",
+    "Fitness instructor",
+    "Sports official or referee",
+    "Recreation and events work"
+   ],
+   "link": "Links to physical education in CAPS Life Skills (Grades R to 6) and Life Orientation (Grades 7 to 12). TVET colleges and sports federations offer coaching and fitness courses.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "sp1-animal",
+      "title": "Animal moves",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "Some space"
+      ],
+      "safety": [
+       "Clear the space so you do not bump into things."
+      ],
+      "steps": [
+       "Hop like a frog.",
+       "Stomp like an elephant.",
+       "Slither like a snake on your tummy.",
+       "Gallop like a horse.",
+       "Stand still like a tree on one leg.",
+       "Lie down and breathe like a sleepy lion."
+      ],
+      "reflect": [
+       "Hopping",
+       "Galloping",
+       "Standing on one leg",
+       "Resting"
+      ],
+      "badge": "Animal Mover"
+     },
+     {
+      "id": "sp2-ball",
+      "title": "Throw and catch",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A soft ball or a rolled-up pair of socks",
+       "A partner"
+      ],
+      "safety": [
+       "Use a soft ball.",
+       "Throw gently."
+      ],
+      "steps": [
+       "Stand close to your partner.",
+       "Hold your hands out ready.",
+       "Your partner throws gently. Watch the ball and catch it.",
+       "Throw it back gently.",
+       "Take one step back and try again.",
+       "Count how many catches you can make."
+      ],
+      "reflect": [
+       "Throwing",
+       "Catching",
+       "Watching the ball",
+       "Counting"
+      ],
+      "badge": "Catcher"
+     },
+     {
+      "id": "sp3-balance",
+      "title": "Balance walk",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "A line on the ground, or a rope"
+      ],
+      "safety": [
+       "Keep the line on the ground, not up high."
+      ],
+      "steps": [
+       "Walk along the line, one foot in front of the other.",
+       "Hold your arms out like an aeroplane.",
+       "Walk backwards along the line.",
+       "Walk along the line on your toes.",
+       "Try with a beanbag on your head."
+      ],
+      "reflect": [
+       "Walking forwards",
+       "Walking backwards",
+       "On my toes",
+       "With a beanbag"
+      ],
+      "badge": "Balancer"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "sp4-warmup",
+      "title": "Warm up and cool down",
+      "time": "15 minutes",
+      "adult": false,
+      "need": [
+       "Some space"
+      ],
+      "safety": [
+       "Move gently. Stretching should not hurt."
+      ],
+      "steps": [
+       "Warming up gets your body ready and helps prevent injury.",
+       "March on the spot for one minute.",
+       "Do ten arm circles forwards and ten backwards.",
+       "Do ten gentle knee lifts on each side.",
+       "After exercise, cool down by walking slowly for two minutes.",
+       "Hold a gentle stretch for each leg for ten seconds."
+      ],
+      "reflect": [
+       "Marching",
+       "Arm circles",
+       "Cooling down",
+       "Stretching"
+      ],
+      "badge": "Warm-up Leader"
+     },
+     {
+      "id": "sp5-rules",
+      "title": "Play fair: make game rules",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "A ball or a skipping rope",
+       "Friends to play with"
+      ],
+      "safety": [
+       "Play on a safe surface away from roads."
+      ],
+      "steps": [
+       "Make up a simple game with a ball or a rope.",
+       "Write three rules that keep it fair.",
+       "Write one rule that keeps it safe.",
+       "Explain the rules to your friends.",
+       "Play, and take turns being the referee.",
+       "Afterwards, decide together if any rule should change."
+      ],
+      "reflect": [
+       "Making rules",
+       "Explaining them",
+       "Being the referee",
+       "Playing fair"
+      ],
+      "badge": "Fair Player"
+     },
+     {
+      "id": "sp6-skip",
+      "title": "Skipping challenge",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "A skipping rope"
+      ],
+      "safety": [
+       "Skip on a flat surface.",
+       "Rest if you feel tired."
+      ],
+      "steps": [
+       "Skip with both feet together for thirty seconds.",
+       "Rest for thirty seconds.",
+       "Count how many skips you can do in thirty seconds.",
+       "Try skipping on one foot, then the other.",
+       "Do the challenge again each day this week.",
+       "Write down your counts and look for improvement."
+      ],
+      "reflect": [
+       "Skipping",
+       "Counting",
+       "Trying again",
+       "Seeing improvement"
+      ],
+      "badge": "Skipper"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "sp7-plan",
+      "title": "Make a two-week fitness plan",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "Paper or a phone"
+      ],
+      "safety": [
+       "Start gently. If you have a health condition, check with a health worker first.",
+       "Stop if you feel pain, dizziness or chest tightness."
+      ],
+      "steps": [
+       "Choose three activities you enjoy, like walking, dancing or soccer.",
+       "Plan at least 30 minutes of activity on five days a week.",
+       "Include a warm-up and a cool-down every time.",
+       "Plan rest days.",
+       "Track what you did each day.",
+       "After two weeks, write what changed and what you will keep doing."
+      ],
+      "reflect": [
+       "Choosing activities",
+       "Planning days",
+       "Tracking",
+       "Reviewing"
+      ],
+      "badge": "Fitness Planner"
+     },
+     {
+      "id": "sp8-team",
+      "title": "Be a good team member",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A team game, such as soccer, netball or volleyball"
+      ],
+      "safety": [
+       "Play on a safe surface with the right equipment."
+      ],
+      "steps": [
+       "Before the game, agree on one team goal.",
+       "During the game, call your teammates by name.",
+       "Encourage a teammate who makes a mistake.",
+       "Shake hands with the other team at the end.",
+       "Afterwards, name one thing your team did well.",
+       "Name one thing to improve next time."
+      ],
+      "reflect": [
+       "Talking to teammates",
+       "Encouraging",
+       "Good sport",
+       "Reflecting"
+      ],
+      "badge": "Team Player"
+     },
+     {
+      "id": "sp9-ref",
+      "title": "Referee a game",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A whistle if you have one",
+       "A game for younger children"
+      ],
+      "safety": [
+       "Stop the game if anyone is hurt and get an adult."
+      ],
+      "steps": [
+       "Learn the main rules of the game.",
+       "Explain the rules to the players before you start.",
+       "Watch closely and make calls calmly.",
+       "Explain your decisions in a few words.",
+       "Treat both teams the same.",
+       "Afterwards, ask the players what went well."
+      ],
+      "reflect": [
+       "Knowing the rules",
+       "Staying calm",
+       "Being fair",
+       "Explaining calls"
+      ],
+      "badge": "Referee"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "sp10-session",
+      "title": "Lead a group exercise session",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A small group of friends or family",
+       "Some space"
+      ],
+      "safety": [
+       "Ask everyone about injuries or health conditions first.",
+       "Offer an easier version of every exercise."
+      ],
+      "steps": [
+       "Plan a 30-minute session: warm-up, main part and cool-down.",
+       "Choose exercises that need no equipment.",
+       "Show each exercise slowly and give an easier option.",
+       "Watch everyone and correct form kindly.",
+       "Keep time and encourage the group.",
+       "Ask for feedback at the end."
+      ],
+      "reflect": [
+       "Planning",
+       "Demonstrating",
+       "Giving easier options",
+       "Getting feedback"
+      ],
+      "badge": "Session Leader"
+     },
+     {
+      "id": "sp11-coach",
+      "title": "Coach a skill to children",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A ball",
+       "A few children with a parent's permission"
+      ],
+      "safety": [
+       "Work in the open where other adults can see.",
+       "Get parents' permission and never be alone with a child."
+      ],
+      "steps": [
+       "Choose one simple skill, like passing a ball.",
+       "Show it, then let the children try.",
+       "Give one tip at a time.",
+       "Praise effort, not only success.",
+       "Make it a game so it stays fun.",
+       "Reflect: what helped the children learn?"
+      ],
+      "reflect": [
+       "Showing the skill",
+       "Giving tips",
+       "Making it fun",
+       "Keeping children safe"
+      ],
+      "badge": "Coach"
+     },
+     {
+      "id": "sp12-career",
+      "title": "Explore work in sport and recreation",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Internet access or a library"
+      ],
+      "safety": [
+       "Check that training providers are accredited before you pay."
+      ],
+      "steps": [
+       "List jobs in sport: coach, fitness instructor, referee, groundsperson, events organiser.",
+       "Choose two that interest you.",
+       "Find out what training each one needs.",
+       "Look for entry-level coaching or first aid courses near you.",
+       "Find a local club or community programme where you could volunteer.",
+       "Write your next step and a date to do it."
+      ],
+      "reflect": [
+       "Listing jobs",
+       "Finding training",
+       "Volunteering",
+       "Next step"
+      ],
+      "badge": "Career Explorer"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-garden",
+   "name": "Growing food",
+   "icon": "🌱",
+   "domain": "Inquiry and Systems Thinking",
+   "about": "Growing vegetables and herbs, caring for soil, and feeding your family from a garden.",
+   "leads": [
+    "Farmer or market gardener",
+    "Nursery worker",
+    "Landscaper",
+    "Running a vegetable business"
+   ],
+   "link": "Links to the Department of Basic Education's occupational subject Agricultural Studies, and to Agricultural Sciences in Grades 10 to 12. TVET colleges and agricultural colleges offer plant production programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "gd1-bean",
+      "title": "Grow a bean in a jar",
+      "time": "10 minutes, then a few minutes each day",
+      "adult": true,
+      "need": [
+       "A clear jar or cup",
+       "Cotton wool or paper towel",
+       "Two or three dry beans",
+       "Water"
+      ],
+      "safety": [
+       "Do not eat raw dry beans. Some can make you sick.",
+       "Wash your hands after touching soil or seeds."
+      ],
+      "steps": [
+       "Fill the jar with damp cotton wool or paper towel.",
+       "Push the beans between the cotton wool and the glass so you can see them.",
+       "Put the jar in a light place, but not in hot sun.",
+       "Add a little water each day to keep it damp.",
+       "Look every day. First the roots grow, then the shoot.",
+       "Tell someone what changed."
+      ],
+      "reflect": [
+       "Planting",
+       "Watering",
+       "Watching it grow",
+       "Telling someone"
+      ],
+      "badge": "Seed Starter"
+     },
+     {
+      "id": "gd2-water",
+      "title": "Water the garden",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A watering can or a bottle with holes in the lid",
+       "Plants to water"
+      ],
+      "safety": [
+       "Stay away from taps that are hard to turn, and from deep water.",
+       "Water early in the morning or late in the afternoon, when it is cooler."
+      ],
+      "steps": [
+       "Fill the watering can or bottle half way, so it is not too heavy.",
+       "Water the soil around the plant, not the leaves.",
+       "Count to five for each plant.",
+       "Feel the soil. Damp is good. Puddles mean too much.",
+       "Put the can back where it belongs."
+      ],
+      "reflect": [
+       "Carrying water",
+       "Counting",
+       "Feeling the soil",
+       "Not sure"
+      ],
+      "badge": "Garden Helper"
+     },
+     {
+      "id": "gd3-minibeasts",
+      "title": "Garden minibeast hunt",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "A garden or park",
+       "A magnifying glass if you have one",
+       "Paper and crayons"
+      ],
+      "safety": [
+       "Look, but do not touch. Some insects sting or bite.",
+       "Do not lift big stones. A grown-up can help."
+      ],
+      "steps": [
+       "Walk slowly and look under leaves and around plants.",
+       "Find an ant, a worm, a ladybird or a snail.",
+       "Count how many legs it has.",
+       "Draw it on your paper.",
+       "Talk about how it helps the garden. Worms make soil better. Ladybirds eat pests."
+      ],
+      "reflect": [
+       "Looking carefully",
+       "Counting legs",
+       "Drawing",
+       "Learning how it helps"
+      ],
+      "badge": "Minibeast Spotter"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "gd4-herbs",
+      "title": "Plant a herb pot",
+      "time": "30 minutes, then watering",
+      "adult": false,
+      "need": [
+       "A pot, a tin or a cut plastic bottle with holes in the bottom",
+       "Potting soil or garden soil with compost",
+       "Herb seeds or a small herb plant, such as parsley, mint or basil",
+       "Water"
+      ],
+      "safety": [
+       "Wear gloves or wash your hands after touching soil.",
+       "A grown-up makes holes in tins with a nail and hammer."
+      ],
+      "steps": [
+       "Make sure the pot has holes for water to drain.",
+       "Fill the pot with soil up to two fingers from the top.",
+       "Plant the seeds as deep as the packet says, or plant the small herb.",
+       "Water gently until water comes out of the bottom.",
+       "Put the pot where it gets morning sun.",
+       "Water when the top of the soil feels dry, and keep a diary of how it grows."
+      ],
+      "reflect": [
+       "Preparing the pot",
+       "Planting",
+       "Watering",
+       "Keeping a diary"
+      ],
+      "badge": "Herb Grower"
+     },
+     {
+      "id": "gd5-compost",
+      "title": "Start a compost heap",
+      "time": "45 minutes",
+      "adult": true,
+      "need": [
+       "A corner of the garden or a large bin with holes",
+       "Green waste: vegetable peels, grass cuttings",
+       "Brown waste: dry leaves, shredded newspaper, cardboard",
+       "A spade or fork"
+      ],
+      "safety": [
+       "Do not add meat, bones, dairy or oily food. They smell and attract animals.",
+       "Wear gloves and wash your hands afterwards."
+      ],
+      "steps": [
+       "Choose a spot that gets some shade.",
+       "Put down a layer of brown waste.",
+       "Add a layer of green waste on top.",
+       "Keep adding layers: brown, green, brown, green.",
+       "Sprinkle with water so it is damp like a sponge.",
+       "Turn the heap with a fork every week. In a few months it becomes dark, crumbly compost."
+      ],
+      "reflect": [
+       "Layering",
+       "Keeping it damp",
+       "Turning it",
+       "Knowing what not to add"
+      ],
+      "badge": "Compost Maker"
+     },
+     {
+      "id": "gd6-plan",
+      "title": "Plan a small vegetable bed",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "Paper, a ruler and a pencil",
+       "Seed packets or information about vegetables that grow in your area"
+      ],
+      "safety": [
+       "Plan with a grown-up so you use a space you are allowed to dig."
+      ],
+      "steps": [
+       "Measure a space, for example 1 metre by 2 metres.",
+       "Draw it on paper. Let one square on the paper be 10 centimetres.",
+       "Choose three vegetables that grow in your season, such as spinach, onions and carrots.",
+       "Read the seed packets to see how far apart to plant them.",
+       "Draw where each vegetable will go.",
+       "Write when you will plant and when you hope to harvest."
+      ],
+      "reflect": [
+       "Measuring",
+       "Drawing to scale",
+       "Choosing vegetables",
+       "Planning dates"
+      ],
+      "badge": "Garden Planner"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "gd7-trench",
+      "title": "Build a trench bed",
+      "time": "One weekend",
+      "adult": true,
+      "need": [
+       "A spade and a garden fork",
+       "Organic material: dry leaves, grass, cardboard, kitchen scraps",
+       "Compost or manure",
+       "Water"
+      ],
+      "safety": [
+       "Lift with your legs, not your back.",
+       "Wear closed shoes and gloves.",
+       "Take breaks and drink water."
+      ],
+      "steps": [
+       "Mark out a bed about 1 metre wide and 2 metres long.",
+       "Dig out the topsoil about 60 centimetres deep and keep it to one side.",
+       "Fill the trench with layers of organic material, watering each layer.",
+       "Put the topsoil back on top, mixed with compost.",
+       "Water well and let it settle for a week.",
+       "Plant your seedlings. The buried material feeds the plants and holds water for months."
+      ],
+      "reflect": [
+       "Digging",
+       "Layering",
+       "Working as a team",
+       "Seeing the result"
+      ],
+      "badge": "Trench Bed Builder"
+     },
+     {
+      "id": "gd8-water",
+      "title": "Save water in the garden",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A garden or vegetable bed",
+       "Mulch: dry grass, leaves or wood chips",
+       "Plastic bottles",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Only use clean grey water from washing up or baths. Do not use water with strong chemicals."
+      ],
+      "steps": [
+       "Spread mulch around your plants, about 5 centimetres thick. It keeps the soil cool and damp.",
+       "Make a drip feeder: poke small holes in a bottle lid, fill the bottle and push it upside down into the soil next to a plant.",
+       "Collect clean grey water in a bucket for the garden.",
+       "Water in the early morning.",
+       "For two weeks, record how often you water. Compare a bed with mulch and one without."
+      ],
+      "reflect": [
+       "Mulching",
+       "Making a drip feeder",
+       "Using grey water",
+       "Comparing results"
+      ],
+      "badge": "Water Saver"
+     },
+     {
+      "id": "gd9-harvest",
+      "title": "Harvest and sell your vegetables",
+      "time": "Over a few weeks",
+      "adult": true,
+      "need": [
+       "Vegetables ready to harvest",
+       "Clean bags or boxes",
+       "A price list",
+       "A small float of coins for change"
+      ],
+      "safety": [
+       "Wash vegetables in clean water.",
+       "Sell with a grown-up's permission, in a safe place."
+      ],
+      "steps": [
+       "Harvest in the morning, when vegetables are fresh.",
+       "Wash and bundle them, for example a bunch of spinach.",
+       "Find out what shops near you charge, and set a fair price.",
+       "Write a price list.",
+       "Sell to neighbours or family, and record every sale.",
+       "Add up your money and work out your profit after the cost of seeds and compost."
+      ],
+      "reflect": [
+       "Harvesting",
+       "Setting prices",
+       "Selling",
+       "Working out profit"
+      ],
+      "badge": "Market Gardener"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "gd10-business",
+      "title": "Plan a food garden business",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "Paper or a spreadsheet",
+       "Prices of seeds, compost, tools and water",
+       "Prices of vegetables at shops and markets near you"
+      ],
+      "safety": [
+       "Check that you are allowed to use the land, and get permission in writing."
+      ],
+      "steps": [
+       "Decide on three crops that sell well near you and grow in your climate.",
+       "Work out how much space each one needs and how long it takes to grow.",
+       "List your start-up costs: seeds, compost, tools, fencing, water.",
+       "Estimate how much you can harvest and sell each month.",
+       "Work out when you will break even, the point where income covers your costs.",
+       "Write a one-page plan with who you will sell to: neighbours, spaza shops, a market or a school."
+      ],
+      "reflect": [
+       "Choosing crops",
+       "Costs",
+       "Break-even point",
+       "Finding buyers"
+      ],
+      "badge": "Garden Business Planner"
+     },
+     {
+      "id": "gd11-seedlings",
+      "title": "Grow seedlings to sell",
+      "time": "6 weeks",
+      "adult": false,
+      "need": [
+       "Seedling trays or egg boxes",
+       "Seedling mix or fine compost",
+       "Seeds such as tomatoes, spinach and peppers",
+       "A sheltered spot",
+       "Labels"
+      ],
+      "safety": [
+       "Keep seed and fertiliser packets away from children and pets."
+      ],
+      "steps": [
+       "Fill the trays with seedling mix and press down lightly.",
+       "Sow two seeds in each space and label each tray with the name and the date.",
+       "Water with a fine spray every day. Keep them out of strong wind.",
+       "Remove the weaker seedling in each space when they are a few centimetres tall.",
+       "After four to six weeks, harden them off by putting them outside for longer each day.",
+       "Sell them in trays, with a care card that you write."
+      ],
+      "reflect": [
+       "Sowing",
+       "Daily care",
+       "Hardening off",
+       "Selling"
+      ],
+      "badge": "Seedling Grower"
+     },
+     {
+      "id": "gd12-pests",
+      "title": "Control pests without poison",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A vegetable garden",
+       "Soap, garlic or chilli, and water",
+       "A spray bottle"
+      ],
+      "safety": [
+       "Keep sprays away from your eyes.",
+       "Label your spray bottle clearly."
+      ],
+      "steps": [
+       "Walk through the garden and look under the leaves for pests such as aphids and caterpillars.",
+       "Remove caterpillars and snails by hand.",
+       "Mix a spray: one teaspoon of dish soap in one litre of water. Test it on one leaf first.",
+       "Plant marigolds, garlic or basil between vegetables to keep some pests away.",
+       "Encourage ladybirds and birds. They eat pests.",
+       "Keep a log of which pests you found and what worked."
+      ],
+      "reflect": [
+       "Spotting pests",
+       "Making a safe spray",
+       "Companion planting",
+       "Keeping a log"
+      ],
+      "badge": "Natural Pest Control"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-sewing",
+   "name": "Sewing",
+   "icon": "🧵",
+   "domain": "Creativity and Metacognition",
+   "about": "Threading, stitching, mending and making things from fabric.",
+   "leads": [
+    "Tailor or dressmaker",
+    "Clothing production",
+    "Fashion design",
+    "Upholstery and soft furnishings"
+   ],
+   "link": "Links to the Department of Basic Education's occupational subject Consumer Clothing, and to Consumer Studies in Grades 10 to 12. TVET colleges offer clothing production programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "sw1-lace",
+      "title": "Lacing card",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A piece of cardboard with holes punched around a shape",
+       "A shoelace or wool with tape wrapped on the end"
+      ],
+      "safety": [
+       "Use a blunt end, not a needle.",
+       "Keep wool away from your neck."
+      ],
+      "steps": [
+       "Look at the holes in the card.",
+       "Push the lace up through the first hole.",
+       "Pull it all the way through.",
+       "Push it down through the next hole.",
+       "Keep going, up and down, all the way round.",
+       "Show someone your shape."
+      ],
+      "reflect": [
+       "Finding the holes",
+       "Up and down",
+       "Pulling through",
+       "Finishing"
+      ],
+      "badge": "Lacing Star"
+     },
+     {
+      "id": "sw2-buttons",
+      "title": "Sort and thread buttons",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A tin of big buttons",
+       "A pipe cleaner or wool with tape on the end"
+      ],
+      "safety": [
+       "Small buttons are a choking danger. Use big buttons and keep them out of your mouth."
+      ],
+      "steps": [
+       "Sort the buttons by colour.",
+       "Sort them again by size.",
+       "Count the buttons with two holes and the ones with four holes.",
+       "Thread buttons onto the pipe cleaner to make a pattern.",
+       "Twist the ends together to make a bracelet."
+      ],
+      "reflect": [
+       "Sorting",
+       "Counting holes",
+       "Making a pattern",
+       "Threading"
+      ],
+      "badge": "Button Sorter"
+     },
+     {
+      "id": "sw3-fabric",
+      "title": "Feel the fabric",
+      "time": "15 minutes",
+      "adult": false,
+      "need": [
+       "Pieces of different fabric: denim, wool, cotton, a towel, silk or satin"
+      ],
+      "safety": [
+       "Only use fabric a grown-up has given you."
+      ],
+      "steps": [
+       "Touch each piece of fabric.",
+       "Find one that is soft and one that is rough.",
+       "Find one that stretches.",
+       "Find one that keeps you warm.",
+       "Match each fabric to clothes you know, like jeans or a jersey."
+      ],
+      "reflect": [
+       "Feeling soft and rough",
+       "Stretching",
+       "Matching to clothes",
+       "Not sure"
+      ],
+      "badge": "Fabric Explorer"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "sw4-thread",
+      "title": "Thread a needle and tie a knot",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "A needle with a big eye",
+       "Thread",
+       "A needle threader if you have one",
+       "A pincushion"
+      ],
+      "safety": [
+       "Needles are sharp. Always put them back in the pincushion.",
+       "Count your needles before and after."
+      ],
+      "steps": [
+       "Cut a piece of thread about as long as your arm.",
+       "Cut the end straight so it goes through easily.",
+       "Push the thread through the eye of the needle, or use the threader.",
+       "Pull the thread so one side is longer.",
+       "Wrap the long end around your finger, roll it off and pull to make a knot.",
+       "Put the needle in the pincushion when you are done."
+      ],
+      "reflect": [
+       "Cutting the thread",
+       "Threading",
+       "Making a knot",
+       "Keeping the needle safe"
+      ],
+      "badge": "Needle Ready"
+     },
+     {
+      "id": "sw5-button",
+      "title": "Sew on a button",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "A threaded needle with a knot",
+       "A button",
+       "A scrap of fabric or a shirt that needs a button"
+      ],
+      "safety": [
+       "Keep your fingers away from the needle point.",
+       "Ask a grown-up to check before you use someone's clothes."
+      ],
+      "steps": [
+       "Mark where the button goes.",
+       "Push the needle up from the back of the fabric through one hole of the button.",
+       "Push it down through the opposite hole and through the fabric.",
+       "Repeat four or five times.",
+       "If the button has four holes, do the other two holes too.",
+       "Finish with a few small stitches at the back and cut the thread."
+      ],
+      "reflect": [
+       "Placing the button",
+       "Stitching",
+       "Finishing off",
+       "Fixing real clothes"
+      ],
+      "badge": "Button Fixer"
+     },
+     {
+      "id": "sw6-bag",
+      "title": "Hand-sew a small bag",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "Two pieces of fabric the same size, about 15 by 20 centimetres",
+       "A threaded needle",
+       "Pins",
+       "A ribbon or string for a handle"
+      ],
+      "safety": [
+       "Count your pins before and after.",
+       "Keep needles and pins in the pincushion."
+      ],
+      "steps": [
+       "Put the two pieces on top of each other, with the pretty sides facing in.",
+       "Pin them together on three sides. Leave the top open.",
+       "Sew a running stitch along the three sides, about 1 centimetre from the edge.",
+       "Take out the pins.",
+       "Turn the bag the right way out.",
+       "Sew on a ribbon or string for a handle."
+      ],
+      "reflect": [
+       "Pinning",
+       "Running stitch",
+       "Turning it out",
+       "Adding a handle"
+      ],
+      "badge": "Bag Maker"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "sw7-mend",
+      "title": "Mend a tear and a hem",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Clothing with a small tear or a loose hem",
+       "Matching thread and a needle",
+       "Pins and scissors"
+      ],
+      "safety": [
+       "Keep scissors closed when you are not cutting.",
+       "Ask permission before you mend someone else's clothes."
+      ],
+      "steps": [
+       "Turn the clothing inside out.",
+       "For a tear, pin the edges together and sew small, close stitches across it.",
+       "For a hem, fold it back to where it was and pin it.",
+       "Sew a slip stitch: pick up one thread of the outside fabric, then go through the fold.",
+       "Keep stitches small so they hardly show on the outside.",
+       "Press it with an iron, with a grown-up's permission."
+      ],
+      "reflect": [
+       "Planning the repair",
+       "Small neat stitches",
+       "Hemming",
+       "Pressing"
+      ],
+      "badge": "Clothes Mender"
+     },
+     {
+      "id": "sw8-machine",
+      "title": "Use a sewing machine safely",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "A sewing machine",
+       "Scrap fabric",
+       "Thread",
+       "Someone who knows the machine"
+      ],
+      "safety": [
+       "Keep fingers away from the needle.",
+       "Switch the machine off before threading or changing anything.",
+       "Tie back long hair and loose sleeves."
+      ],
+      "steps": [
+       "Learn the parts: needle, presser foot, bobbin, foot pedal and hand wheel.",
+       "Watch the machine being threaded, then do it yourself with the power off.",
+       "Sew straight lines on scrap fabric. Go slowly.",
+       "Practise turning a corner: stop with the needle down, lift the foot, turn, lower the foot.",
+       "Sew a reverse stitch at the start and end to lock it.",
+       "Switch off and clean up."
+      ],
+      "reflect": [
+       "Threading",
+       "Straight lines",
+       "Corners",
+       "Working safely"
+      ],
+      "badge": "Machine Ready"
+     },
+     {
+      "id": "sw9-upcycle",
+      "title": "Upcycle old clothes",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "An old T-shirt or pair of jeans",
+       "Scissors, pins, needle and thread or a sewing machine",
+       "A plan on paper"
+      ],
+      "safety": [
+       "Make sure the clothes are no longer needed."
+      ],
+      "steps": [
+       "Choose what to make: a tote bag from a T-shirt, or shorts from jeans.",
+       "Draw a simple plan with measurements.",
+       "Mark cutting lines with chalk.",
+       "Cut carefully along the lines.",
+       "Sew the seams by hand or by machine.",
+       "Show your before and after, and work out how much a new one would cost."
+      ],
+      "reflect": [
+       "Planning",
+       "Measuring and cutting",
+       "Sewing",
+       "Saving money"
+      ],
+      "badge": "Upcycler"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "sw10-measure",
+      "title": "Take body measurements for a customer",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A tape measure",
+       "A notebook",
+       "A willing friend or family member"
+      ],
+      "safety": [
+       "Always ask permission before measuring someone, and explain what you will do.",
+       "Keep customer measurements private."
+      ],
+      "steps": [
+       "Explain each measurement before you take it.",
+       "Measure the bust or chest, waist and hips around the widest part, with the tape level.",
+       "Measure shoulder width, arm length and the length of the garment.",
+       "Write each number clearly with the date and the customer's name.",
+       "Measure twice to check.",
+       "Make a simple measurement card you can use for every customer."
+      ],
+      "reflect": [
+       "Explaining clearly",
+       "Accurate measuring",
+       "Recording",
+       "Respecting the customer"
+      ],
+      "badge": "Measuring Pro"
+     },
+     {
+      "id": "sw11-price",
+      "title": "Price an alterations service",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A list of common jobs: hems, zips, taking in waists",
+       "Prices from tailors near you",
+       "A calculator"
+      ],
+      "safety": [
+       "Agree the price and the collection date with the customer before you start."
+      ],
+      "steps": [
+       "Time yourself doing each job, for example a trouser hem.",
+       "Decide what an hour of your work is worth.",
+       "Add the cost of thread, zips and electricity.",
+       "Work out a price for each job.",
+       "Compare with tailors near you.",
+       "Make a price list and a simple job slip with the customer's name, the job, the price and the date."
+      ],
+      "reflect": [
+       "Timing jobs",
+       "Costing",
+       "Comparing",
+       "Making a price list"
+      ],
+      "badge": "Alterations Pricing"
+     },
+     {
+      "id": "sw12-portfolio",
+      "title": "Build a sewing portfolio",
+      "time": "Ongoing",
+      "adult": false,
+      "need": [
+       "Things you have sewn",
+       "A phone camera",
+       "A folder or a free online album"
+      ],
+      "safety": [
+       "Ask permission before taking photos of other people wearing your work.",
+       "Do not share customers' personal details."
+      ],
+      "steps": [
+       "Photograph each item in good light, from the front and close-up.",
+       "Write what it is, the fabric and how long it took.",
+       "Show before and after photos for repairs.",
+       "Choose your best six pieces.",
+       "Put them in a folder or album you can show.",
+       "Use it when you apply for jobs, courses or customers."
+      ],
+      "reflect": [
+       "Taking photos",
+       "Describing work",
+       "Choosing the best",
+       "Showing it"
+      ],
+      "badge": "Sewing Portfolio"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-build",
+   "name": "Building and fixing",
+   "icon": "🔨",
+   "domain": "Logical and Analytical Thinking",
+   "about": "Measuring, building, using tools safely and fixing things around the home.",
+   "leads": [
+    "Carpenter or joiner",
+    "Bricklayer",
+    "Plumber",
+    "Maintenance worker"
+   ],
+   "link": "Links to Technology in Grades 7 to 9, and to Civil Technology and Engineering Graphics and Design in Grades 10 to 12. TVET colleges offer building, plumbing and civil construction programmes, and apprenticeships lead to trade tests.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "bd1-tower",
+      "title": "Build the tallest tower",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Blocks, boxes or empty containers"
+      ],
+      "safety": [
+       "Build on the floor, away from people's feet.",
+       "Do not build taller than you are."
+      ],
+      "steps": [
+       "Make a wide base at the bottom.",
+       "Stack the next layer on top.",
+       "Keep going and count how many layers.",
+       "If it falls, look at why and try again.",
+       "Measure it against your body: knee, tummy or shoulder?"
+      ],
+      "reflect": [
+       "A wide base",
+       "Trying again",
+       "Counting layers",
+       "Measuring"
+      ],
+      "badge": "Tower Builder"
+     },
+     {
+      "id": "bd2-box",
+      "title": "Make a box house",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "A cardboard box",
+       "Crayons or paint",
+       "Child scissors",
+       "Glue or tape"
+      ],
+      "safety": [
+       "A grown-up cuts thick cardboard."
+      ],
+      "steps": [
+       "Look at the box. Which side is the roof?",
+       "Draw a door and windows.",
+       "A grown-up helps cut the door so it opens.",
+       "Colour or paint your house.",
+       "Put a toy inside. Who lives there?"
+      ],
+      "reflect": [
+       "Planning",
+       "Drawing",
+       "Decorating",
+       "Playing with it"
+      ],
+      "badge": "House Maker"
+     },
+     {
+      "id": "bd3-tools",
+      "title": "Name the tools",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "Some safe tools to look at, or pictures: a hammer, a screwdriver, a tape measure, a spirit level"
+      ],
+      "safety": [
+       "Look, but only touch with a grown-up.",
+       "Tools are not toys."
+      ],
+      "steps": [
+       "Look at each tool.",
+       "Say its name with a grown-up.",
+       "Find out what each one does. A hammer knocks in nails. A tape measure measures.",
+       "Pull out the tape measure and measure a table, with help.",
+       "Help put the tools away."
+      ],
+      "reflect": [
+       "Naming tools",
+       "Learning what they do",
+       "Measuring",
+       "Putting away"
+      ],
+      "badge": "Tool Spotter"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "bd4-bridge",
+      "title": "Build a paper bridge",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "Sheets of paper",
+       "Two piles of books the same height",
+       "Coins to test strength",
+       "Tape"
+      ],
+      "safety": [
+       "Keep the coins away from small children."
+      ],
+      "steps": [
+       "Put the book piles 20 centimetres apart.",
+       "Lay one flat sheet across. Add coins until it falls. Count them.",
+       "Now fold a sheet like a fan, back and forth.",
+       "Test the folded bridge with coins.",
+       "Try rolling sheets into tubes and taping them side by side.",
+       "Which shape held the most coins? Why?"
+      ],
+      "reflect": [
+       "Testing",
+       "Folding for strength",
+       "Comparing",
+       "Explaining why"
+      ],
+      "badge": "Bridge Engineer"
+     },
+     {
+      "id": "bd5-measure",
+      "title": "Measure and mark like a builder",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "A tape measure",
+       "A pencil",
+       "A ruler or a straight piece of wood",
+       "A piece of cardboard or wood"
+      ],
+      "safety": [
+       "Let the tape measure roll back slowly. It can cut fingers."
+      ],
+      "steps": [
+       "Measure a door and a window at home in centimetres. Write them down.",
+       "Measure twice to check.",
+       "On the cardboard, mark a line 30 centimetres long using the ruler.",
+       "Mark a square 10 centimetres by 10 centimetres.",
+       "Check that all four sides are the same.",
+       "Remember the builder's rule: measure twice, cut once."
+      ],
+      "reflect": [
+       "Measuring",
+       "Marking lines",
+       "Checking",
+       "The builder's rule"
+      ],
+      "badge": "Measure Twice"
+     },
+     {
+      "id": "bd6-birdfeeder",
+      "title": "Make a bird feeder",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "An empty plastic bottle or milk carton",
+       "A wooden spoon or stick",
+       "String",
+       "Bird seed",
+       "Scissors"
+      ],
+      "safety": [
+       "A grown-up makes the holes with scissors or a craft knife."
+      ],
+      "steps": [
+       "A grown-up cuts two small holes opposite each other near the bottom.",
+       "Push the spoon or stick through both holes to make a perch.",
+       "Cut a small hole above the perch for the seed to come out.",
+       "Make a hole in the lid and tie the string through.",
+       "Fill with seed, close the lid and hang it from a branch.",
+       "Watch which birds come to visit."
+      ],
+      "reflect": [
+       "Planning",
+       "Making holes safely",
+       "Hanging it",
+       "Watching birds"
+      ],
+      "badge": "Feeder Builder"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "bd7-tap",
+      "title": "Fix a dripping tap",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "A spanner or adjustable wrench",
+       "A new tap washer of the right size",
+       "A screwdriver",
+       "A cloth"
+      ],
+      "safety": [
+       "Turn off the water at the main or under the sink first.",
+       "Work with a grown-up the first time."
+      ],
+      "steps": [
+       "Turn off the water supply to the tap.",
+       "Open the tap to let out any water left in the pipe.",
+       "Put the plug in the sink so small parts do not fall down the drain.",
+       "Unscrew the tap head and remove the old washer.",
+       "Fit the new washer and put the tap back together.",
+       "Turn the water on and check that it has stopped dripping."
+      ],
+      "reflect": [
+       "Turning off the water",
+       "Taking it apart",
+       "Fitting the washer",
+       "Testing"
+      ],
+      "badge": "Tap Fixer"
+     },
+     {
+      "id": "bd8-shelf",
+      "title": "Build a simple shelf",
+      "time": "Half a day",
+      "adult": true,
+      "need": [
+       "A plank of wood",
+       "Two brackets",
+       "Screws and wall plugs",
+       "A drill, a screwdriver, a spirit level and a pencil"
+      ],
+      "safety": [
+       "Wear safety glasses when drilling.",
+       "Check for pipes and wires before drilling a wall. A grown-up must help.",
+       "Keep the drill unplugged when changing bits."
+      ],
+      "steps": [
+       "Decide where the shelf goes and mark the height.",
+       "Hold a bracket in place, use the spirit level, and mark the screw holes.",
+       "Drill the holes and push in the wall plugs.",
+       "Screw on both brackets, checking they are level.",
+       "Screw the plank onto the brackets.",
+       "Test it gently with a few books before loading it."
+      ],
+      "reflect": [
+       "Marking",
+       "Using the level",
+       "Drilling safely",
+       "Testing"
+      ],
+      "badge": "Shelf Builder"
+     },
+     {
+      "id": "bd9-model",
+      "title": "Draw a plan and build a model",
+      "time": "Two sessions",
+      "adult": false,
+      "need": [
+       "Graph paper",
+       "A ruler and a pencil",
+       "Cardboard, glue and a craft knife"
+      ],
+      "safety": [
+       "Cut away from your body on a cutting board.",
+       "A grown-up supervises the craft knife."
+      ],
+      "steps": [
+       "Choose a simple building, such as a one-room house.",
+       "Draw the floor plan to scale: 1 centimetre on paper is 1 metre in real life.",
+       "Draw the front view, showing the door and windows.",
+       "Cut out the walls from cardboard using your plan.",
+       "Glue the walls together and add a roof.",
+       "Check that the model matches your drawings."
+      ],
+      "reflect": [
+       "Drawing to scale",
+       "Different views",
+       "Cutting accurately",
+       "Matching plan to model"
+      ],
+      "badge": "Plan Reader"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "bd10-quote",
+      "title": "Quote for a small repair job",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A real or practice job, such as painting a room",
+       "A tape measure",
+       "Hardware store prices",
+       "A calculator"
+      ],
+      "safety": [
+       "Only promise a job you can do safely. Electrical and gas work need a qualified person by law."
+      ],
+      "steps": [
+       "Measure the job, for example the walls of a room in square metres.",
+       "Work out the materials: how many litres of paint for that area.",
+       "Price the materials.",
+       "Estimate the hours and decide on your rate per hour.",
+       "Add the total and a small amount for surprises.",
+       "Write a quote with your name, the job, the price, the time it will take and how long the quote is valid."
+      ],
+      "reflect": [
+       "Measuring the job",
+       "Materials",
+       "Labour cost",
+       "Writing the quote"
+      ],
+      "badge": "Quote Writer"
+     },
+     {
+      "id": "bd11-ppe",
+      "title": "Health and safety on site",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "Pictures of a building site, or a real one to observe from a safe place"
+      ],
+      "safety": [
+       "Never enter a building site without permission and safety gear."
+      ],
+      "steps": [
+       "List the protective equipment: hard hat, safety boots, gloves, glasses, ear protection, reflective vest.",
+       "Next to each item, write what danger it protects you from.",
+       "List five dangers on a site, such as falling, electricity and heavy loads.",
+       "Write how each danger can be reduced.",
+       "Find out what the Occupational Health and Safety Act says about the employer's and worker's duties.",
+       "Make a daily safety checklist."
+      ],
+      "reflect": [
+       "Protective equipment",
+       "Spotting dangers",
+       "Reducing risk",
+       "Knowing the law"
+      ],
+      "badge": "Site Safety"
+     },
+     {
+      "id": "bd12-trade",
+      "title": "Find a path to a trade",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A phone or computer",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Check that any college or training provider is accredited before you pay."
+      ],
+      "steps": [
+       "Choose a trade: carpentry, bricklaying, plumbing, tiling or electrical work.",
+       "Find TVET colleges near you that offer it.",
+       "Find out about apprenticeships and learnerships. SETAs, such as the construction SETA, list them.",
+       "Find out what a trade test is and where it is done.",
+       "List the entry requirements and costs.",
+       "Write your next three steps with dates."
+      ],
+      "reflect": [
+       "Choosing a trade",
+       "Finding training",
+       "Understanding trade tests",
+       "Next steps"
+      ],
+      "badge": "Trade Pathway"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-art",
+   "name": "Art and design",
+   "icon": "🎨",
+   "domain": "Creativity and Metacognition",
+   "about": "Drawing, painting, making and designing things that people will see and use.",
+   "leads": [
+    "Graphic designer",
+    "Illustrator",
+    "Crafter selling work",
+    "Signwriter or printer"
+   ],
+   "link": "Links to Creative Arts in Grades 4 to 9, and to Visual Arts and Design in Grades 10 to 12. TVET colleges and design schools offer art and design programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "ar1-mix",
+      "title": "Mix new colours",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "Red, yellow and blue paint",
+       "A brush, water and paper",
+       "An apron or old shirt"
+      ],
+      "safety": [
+       "Keep paint away from your mouth and eyes.",
+       "Wash your hands when you finish."
+      ],
+      "steps": [
+       "Paint a red spot, a yellow spot and a blue spot.",
+       "Mix red and yellow. What colour do you get?",
+       "Mix yellow and blue. What colour now?",
+       "Mix red and blue.",
+       "Paint a picture using your new colours.",
+       "Wash your brush in the water."
+      ],
+      "reflect": [
+       "Mixing",
+       "Finding new colours",
+       "Painting",
+       "Cleaning up"
+      ],
+      "badge": "Colour Mixer"
+     },
+     {
+      "id": "ar2-collage",
+      "title": "Make a nature collage",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "Leaves, petals, seeds and sticks from the ground",
+       "Glue",
+       "Paper or cardboard"
+      ],
+      "safety": [
+       "Only pick up things from the ground. Do not pull plants.",
+       "Do not touch berries or mushrooms."
+      ],
+      "steps": [
+       "Collect things that have fallen on the ground.",
+       "Sort them by colour or shape.",
+       "Arrange them on the paper to make a picture.",
+       "Glue them down.",
+       "Give your picture a name."
+      ],
+      "reflect": [
+       "Collecting",
+       "Arranging",
+       "Gluing",
+       "Naming it"
+      ],
+      "badge": "Nature Artist"
+     },
+     {
+      "id": "ar3-print",
+      "title": "Print with shapes",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "Paint on a plate",
+       "Things to print with: a cut potato, bottle tops, a sponge, leaves",
+       "Paper"
+      ],
+      "safety": [
+       "A grown-up cuts the potato."
+      ],
+      "steps": [
+       "Dip a shape into the paint.",
+       "Press it onto the paper and lift it off.",
+       "Try each shape.",
+       "Make a pattern: circle, square, circle, square.",
+       "Let it dry and show someone."
+      ],
+      "reflect": [
+       "Printing",
+       "Making a pattern",
+       "Trying shapes",
+       "Showing it"
+      ],
+      "badge": "Shape Printer"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "ar4-observe",
+      "title": "Draw what you see",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "A pencil and paper",
+       "An object: a shoe, a cup or a plant"
+      ],
+      "safety": [
+       "Sit comfortably with good light so you do not strain your eyes."
+      ],
+      "steps": [
+       "Put the object in front of you.",
+       "Look at it for one whole minute before you draw.",
+       "Draw the big outline shapes lightly first.",
+       "Add the smaller details.",
+       "Look for the dark parts and shade them.",
+       "Write the date. Draw the same object again next week and compare."
+      ],
+      "reflect": [
+       "Looking carefully",
+       "Big shapes first",
+       "Shading",
+       "Comparing over time"
+      ],
+      "badge": "Observer"
+     },
+     {
+      "id": "ar5-poster",
+      "title": "Design a poster with a message",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "Paper, pencils and markers",
+       "A message, such as Save water or Read every day"
+      ],
+      "safety": [
+       "Use markers in a room with fresh air, and put the lids back on."
+      ],
+      "steps": [
+       "Choose your message. Keep it short.",
+       "Sketch three small ideas first.",
+       "Choose the best idea.",
+       "Make the words big enough to read from across the room.",
+       "Use only two or three colours that stand out together.",
+       "Ask someone: what is the poster saying? Did they get it?"
+      ],
+      "reflect": [
+       "Planning ideas",
+       "Big clear words",
+       "Choosing colours",
+       "Testing it on someone"
+      ],
+      "badge": "Poster Designer"
+     },
+     {
+      "id": "ar6-recycled",
+      "title": "Make art from recycled things",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Clean bottle tops, boxes, wire, cans or packets",
+       "Glue, tape and scissors"
+      ],
+      "safety": [
+       "Watch out for sharp edges on cans. A grown-up can help.",
+       "Only use clean recycling."
+      ],
+      "steps": [
+       "Look at South African wire and bead art for ideas.",
+       "Collect clean recycled materials.",
+       "Decide what to make: an animal, a car or a mask.",
+       "Plan how the parts will join.",
+       "Build it and decorate it.",
+       "Write a label with the title and the materials you used."
+      ],
+      "reflect": [
+       "Getting ideas",
+       "Planning joins",
+       "Building",
+       "Labelling"
+      ],
+      "badge": "Upcycle Artist"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "ar7-logo",
+      "title": "Design a logo",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Paper and pencils",
+       "A business or club to design for, real or imagined"
+      ],
+      "safety": [
+       "Do not copy another company's logo. Your design must be your own."
+      ],
+      "steps": [
+       "Find out what the business does and who its customers are.",
+       "Write three words that describe it, such as friendly, fast, local.",
+       "Sketch at least ten small, quick ideas.",
+       "Choose three and draw them bigger.",
+       "Test them: does each one still work very small and in black and white?",
+       "Choose the best one and explain why it fits the three words."
+      ],
+      "reflect": [
+       "Understanding the client",
+       "Sketching many ideas",
+       "Testing",
+       "Explaining my choice"
+      ],
+      "badge": "Logo Designer"
+     },
+     {
+      "id": "ar8-perspective",
+      "title": "Draw a street in perspective",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Paper, a ruler and a pencil"
+      ],
+      "safety": [
+       "Take a short break every 20 minutes to rest your eyes and hand."
+      ],
+      "steps": [
+       "Draw a horizon line across the page.",
+       "Put a dot on it. This is the vanishing point.",
+       "Draw lines from the corners of the page to the dot. These are the edges of the road.",
+       "Draw buildings as rectangles. Join their corners to the dot.",
+       "Add windows that get smaller as they get closer to the dot.",
+       "Add people, trees and cars. Things far away are smaller."
+      ],
+      "reflect": [
+       "Horizon line",
+       "Vanishing point",
+       "Getting smaller",
+       "Adding detail"
+      ],
+      "badge": "Perspective Artist"
+     },
+     {
+      "id": "ar9-sell",
+      "title": "Make and sell cards",
+      "time": "Two sessions",
+      "adult": true,
+      "need": [
+       "Card, paper, pens or paint",
+       "Envelopes",
+       "A price list"
+      ],
+      "safety": [
+       "Sell with a grown-up's permission, in a safe place."
+      ],
+      "steps": [
+       "Design one card for an occasion, such as a birthday.",
+       "Make a sample and ask three people what they think.",
+       "Work out the cost of materials for one card.",
+       "Make a small batch, such as ten cards.",
+       "Set a price that covers costs and your time.",
+       "Sell them and record what sold best."
+      ],
+      "reflect": [
+       "Designing",
+       "Getting feedback",
+       "Costing",
+       "Selling"
+      ],
+      "badge": "Card Maker"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "ar10-brief",
+      "title": "Work from a client brief",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A brief from a real or practice client: what they want, who it is for, the deadline",
+       "Drawing materials or a free design app"
+      ],
+      "safety": [
+       "Agree the price, the number of changes and the deadline in writing before you start."
+      ],
+      "steps": [
+       "Read the brief and write down any questions.",
+       "Ask the client your questions.",
+       "Make three rough ideas and show them.",
+       "Develop the one they choose.",
+       "Make one round of changes from their feedback.",
+       "Deliver the final work on time, in the format they need."
+      ],
+      "reflect": [
+       "Understanding the brief",
+       "Asking questions",
+       "Handling feedback",
+       "Delivering on time"
+      ],
+      "badge": "Client Ready"
+     },
+     {
+      "id": "ar11-portfolio",
+      "title": "Build an art and design portfolio",
+      "time": "Ongoing",
+      "adult": false,
+      "need": [
+       "Your best work",
+       "A phone camera",
+       "A free online portfolio site or a folder"
+      ],
+      "safety": [
+       "Only show work you made yourself. Ask permission before sharing work made for a client."
+      ],
+      "steps": [
+       "Choose eight to twelve of your strongest pieces.",
+       "Photograph each one flat, in daylight, with no shadows.",
+       "Write a short note for each: the brief, the materials and your role.",
+       "Put your best piece first and last.",
+       "Add a short paragraph about yourself and how to contact you.",
+       "Ask someone in the industry to look at it and give feedback."
+      ],
+      "reflect": [
+       "Choosing work",
+       "Photographing",
+       "Writing about my work",
+       "Getting feedback"
+      ],
+      "badge": "Design Portfolio"
+     },
+     {
+      "id": "ar12-price",
+      "title": "Price your creative work",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A list of things you make or services you offer",
+       "A calculator",
+       "Prices from other artists or designers"
+      ],
+      "safety": [
+       "Keep records of every sale for tax purposes."
+      ],
+      "steps": [
+       "Add up the cost of materials for one piece.",
+       "Time how long it takes you.",
+       "Decide on a fair hourly rate.",
+       "Price = materials plus time, plus a little for overheads.",
+       "Compare with others at your level.",
+       "Make a price list and practise saying your prices confidently."
+      ],
+      "reflect": [
+       "Materials cost",
+       "Valuing my time",
+       "Comparing",
+       "Saying my price"
+      ],
+      "badge": "Creative Pricing"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-music",
+   "name": "Music",
+   "icon": "🎵",
+   "domain": "Creativity and Metacognition",
+   "about": "Keeping a beat, singing, playing instruments and making your own music.",
+   "leads": [
+    "Musician or singer",
+    "Music teacher",
+    "Sound engineer",
+    "Events and DJ work"
+   ],
+   "link": "Links to Creative Arts in Grades 4 to 9, and to Music in Grades 10 to 12. TVET colleges and music schools offer music and sound technology programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "mu1-shaker",
+      "title": "Make a shaker",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "An empty plastic bottle with a lid",
+       "Dry rice, beans or small stones",
+       "Tape"
+      ],
+      "safety": [
+       "A grown-up checks the lid is tight and taped.",
+       "Keep small beans away from your mouth."
+      ],
+      "steps": [
+       "Pour a little rice or beans into the bottle.",
+       "Close the lid tightly. A grown-up tapes it.",
+       "Shake it softly, then loudly.",
+       "Shake it slowly, then fast.",
+       "Shake along to a song you know."
+      ],
+      "reflect": [
+       "Making it",
+       "Loud and soft",
+       "Fast and slow",
+       "Playing to a song"
+      ],
+      "badge": "Shaker Maker"
+     },
+     {
+      "id": "mu2-beat",
+      "title": "Clap the beat",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "A song you like",
+       "Your hands and feet"
+      ],
+      "safety": [
+       "Keep the music at a comfortable volume."
+      ],
+      "steps": [
+       "Listen to the song.",
+       "Find the beat, the steady part you can tap your foot to.",
+       "Clap on every beat.",
+       "Now stamp on every beat.",
+       "Clap and stamp: clap, stamp, clap, stamp."
+      ],
+      "reflect": [
+       "Finding the beat",
+       "Clapping",
+       "Stamping",
+       "Mixing them"
+      ],
+      "badge": "Beat Keeper"
+     },
+     {
+      "id": "mu3-song",
+      "title": "Sing an echo song",
+      "time": "10 minutes",
+      "adult": true,
+      "need": [
+       "A grown-up or a friend"
+      ],
+      "safety": [
+       "Sing gently. Shouting can hurt your throat."
+      ],
+      "steps": [
+       "The grown-up sings a short line.",
+       "You sing it back, the same way.",
+       "Try it high and low.",
+       "Try it loud and soft.",
+       "Now you sing a line and the grown-up echoes you."
+      ],
+      "reflect": [
+       "Listening",
+       "Copying",
+       "High and low",
+       "Leading"
+      ],
+      "badge": "Echo Singer"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "mu4-rhythm",
+      "title": "Write a rhythm",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pencil",
+       "A table or a drum to tap"
+      ],
+      "safety": [
+       "Tap gently so you do not hurt your hands."
+      ],
+      "steps": [
+       "Draw 4 boxes. Each box is one beat.",
+       "Put a big dot in a box for a loud tap, a small dot for a soft tap, and leave it empty for a rest.",
+       "Play your rhythm on the table.",
+       "Repeat it four times.",
+       "Teach it to someone else and play it together."
+      ],
+      "reflect": [
+       "Writing it down",
+       "Loud, soft and rests",
+       "Repeating",
+       "Teaching it"
+      ],
+      "badge": "Rhythm Writer"
+     },
+     {
+      "id": "mu5-instrument",
+      "title": "Build a string instrument",
+      "time": "40 minutes",
+      "adult": true,
+      "need": [
+       "A shoebox or a plastic container",
+       "Rubber bands of different thicknesses",
+       "Two pencils"
+      ],
+      "safety": [
+       "Rubber bands can snap. Keep your face away when you stretch them."
+      ],
+      "steps": [
+       "Stretch the rubber bands around the open box.",
+       "Slide a pencil under the bands at each end to lift them.",
+       "Pluck each band. Which sound is highest?",
+       "Thinner, tighter bands make higher notes.",
+       "Order the bands from lowest to highest note.",
+       "Play a simple tune."
+      ],
+      "reflect": [
+       "Building",
+       "Testing sounds",
+       "High and low notes",
+       "Playing a tune"
+      ],
+      "badge": "Instrument Builder"
+     },
+     {
+      "id": "mu6-listen",
+      "title": "Listening journey",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "Three pieces of music from different styles, for example maskandi, amapiano and choral music",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Keep earphones at a safe volume: if others can hear it, it is too loud."
+      ],
+      "steps": [
+       "Listen to the first piece.",
+       "Write the instruments you hear.",
+       "Write whether it is fast or slow, and loud or soft.",
+       "Write how it makes you feel.",
+       "Do the same for the other two pieces.",
+       "Compare: what is the same, and what is different?"
+      ],
+      "reflect": [
+       "Hearing instruments",
+       "Tempo and volume",
+       "Feelings",
+       "Comparing styles"
+      ],
+      "badge": "Active Listener"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "mu7-compose",
+      "title": "Compose a short song",
+      "time": "Two sessions",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "A phone to record, or an instrument if you have one"
+      ],
+      "safety": [
+       "Protect your hearing when recording or using headphones."
+      ],
+      "steps": [
+       "Choose a topic you care about.",
+       "Write a chorus of four lines that repeat.",
+       "Write two verses that tell more of the story.",
+       "Find a beat by tapping or with a free app.",
+       "Sing or rap it over the beat.",
+       "Record it and listen back. Change one thing to make it better."
+      ],
+      "reflect": [
+       "Writing lyrics",
+       "Structure",
+       "Performing",
+       "Improving"
+      ],
+      "badge": "Songwriter"
+     },
+     {
+      "id": "mu8-chords",
+      "title": "Learn three chords",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A guitar, keyboard or a free piano app"
+      ],
+      "safety": [
+       "Take breaks if your fingers get sore."
+      ],
+      "steps": [
+       "Find out what a chord is: three or more notes played together.",
+       "Learn the C major chord.",
+       "Learn the F and G chords.",
+       "Practise switching slowly: C, F, G, C.",
+       "Strum or play four beats on each chord.",
+       "Many popular songs use these three chords. Find one and play along."
+      ],
+      "reflect": [
+       "Learning shapes",
+       "Switching",
+       "Keeping time",
+       "Playing a song"
+      ],
+      "badge": "Three Chords"
+     },
+     {
+      "id": "mu9-gig",
+      "title": "Plan a small performance",
+      "time": "Over a few weeks",
+      "adult": true,
+      "need": [
+       "A venue, such as a school hall or community centre",
+       "Performers",
+       "A simple sound setup, or none"
+      ],
+      "safety": [
+       "Get permission for the venue.",
+       "Keep walkways and exits clear."
+      ],
+      "steps": [
+       "Decide the purpose: a fundraiser, a showcase or a celebration.",
+       "Book the venue and set a date.",
+       "Plan a running order with times for each act.",
+       "Make a poster and share it.",
+       "Rehearse at least once in the venue.",
+       "On the day, keep to time, then thank everyone who helped."
+      ],
+      "reflect": [
+       "Planning",
+       "Running order",
+       "Promoting",
+       "On the day"
+      ],
+      "badge": "Show Organiser"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "mu10-rights",
+      "title": "Protect your music",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Songs you have written",
+       "A computer or phone"
+      ],
+      "safety": [
+       "Read contracts carefully before signing. Ask for help if you are unsure."
+      ],
+      "steps": [
+       "Find out what copyright is: the right to control copies of your work.",
+       "Keep dated records of your songs: lyrics, recordings and notes.",
+       "Find out about collecting societies in South Africa that pay royalties to songwriters and performers.",
+       "Learn the difference between selling a song and licensing it.",
+       "List questions you would ask before signing any music contract.",
+       "Find a free legal clinic or arts organisation that can advise you."
+      ],
+      "reflect": [
+       "Copyright basics",
+       "Keeping records",
+       "Royalties",
+       "Contracts"
+      ],
+      "badge": "Music Rights"
+     },
+     {
+      "id": "mu11-teach",
+      "title": "Teach a music lesson",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A small group of children, with permission from their parents or school",
+       "Simple instruments or body percussion"
+      ],
+      "safety": [
+       "Work in a safe, visible space with another adult present.",
+       "Follow the school or organisation's child safety rules."
+      ],
+      "steps": [
+       "Choose one skill to teach, such as keeping a steady beat.",
+       "Start with a warm-up song.",
+       "Show the skill, then let them try it.",
+       "Play a game that uses the skill.",
+       "End with everyone performing together.",
+       "Write down what worked and what you would change."
+      ],
+      "reflect": [
+       "Planning",
+       "Demonstrating",
+       "Keeping attention",
+       "Reflecting"
+      ],
+      "badge": "Music Teacher"
+     },
+     {
+      "id": "mu12-online",
+      "title": "Release music online",
+      "time": "Two sessions",
+      "adult": false,
+      "need": [
+       "A finished recording",
+       "Cover artwork you made or have permission to use",
+       "A computer or phone"
+      ],
+      "safety": [
+       "Read the terms of any distribution service and check what fees and percentages it takes."
+      ],
+      "steps": [
+       "Make sure the recording is finished and the volume is even.",
+       "Prepare cover art in a square format.",
+       "Compare a few distribution services that put music on streaming platforms.",
+       "Upload with correct song title, artist name and songwriter credits.",
+       "Plan how you will tell people: social media, radio, live shows.",
+       "Track your streams and listeners after a month."
+      ],
+      "reflect": [
+       "Finishing the track",
+       "Choosing a service",
+       "Credits",
+       "Promotion"
+      ],
+      "badge": "Released"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-hair",
+   "name": "Hair and beauty care",
+   "icon": "💇",
+   "domain": "Creativity and Metacognition",
+   "about": "Caring for hair and skin, braiding and styling, and running a safe, clean salon.",
+   "leads": [
+    "Hairdresser or braider",
+    "Barber",
+    "Nail technician",
+    "Salon owner"
+   ],
+   "link": "Links to the Department of Basic Education's occupational subject Hairdressing. TVET colleges and accredited academies offer hairdressing and beauty programmes leading to a trade test.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "hb1-wash",
+      "title": "Wash and brush a doll's hair",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A doll with hair",
+       "A basin of water",
+       "A little shampoo",
+       "A wide comb"
+      ],
+      "safety": [
+       "Keep shampoo away from your eyes.",
+       "Wipe up spills so nobody slips."
+      ],
+      "steps": [
+       "Wet the doll's hair.",
+       "Rub in a tiny bit of shampoo.",
+       "Rinse it well.",
+       "Comb gently from the ends up to the top.",
+       "Let it dry."
+      ],
+      "reflect": [
+       "Washing",
+       "Rinsing",
+       "Combing gently",
+       "Being careful"
+      ],
+      "badge": "Little Stylist"
+     },
+     {
+      "id": "hb2-plait",
+      "title": "Plait three strings",
+      "time": "15 minutes",
+      "adult": false,
+      "need": [
+       "Three pieces of wool or string, tied together at one end"
+      ],
+      "safety": [
+       "Keep wool away from your neck."
+      ],
+      "steps": [
+       "Ask someone to hold the knot, or tape it to a table.",
+       "Spread the three strings apart: left, middle, right.",
+       "Cross the left string over the middle.",
+       "Cross the right string over the new middle.",
+       "Keep going: left over, right over.",
+       "Tie the end."
+      ],
+      "reflect": [
+       "Left over",
+       "Right over",
+       "Keeping it tight",
+       "Finishing"
+      ],
+      "badge": "Plait Maker"
+     },
+     {
+      "id": "hb3-hygiene",
+      "title": "My own comb and towel",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "Your comb or brush",
+       "Your towel"
+      ],
+      "safety": [
+       "Do not share combs, brushes or hats. They can pass on lice."
+      ],
+      "steps": [
+       "Find your own comb and towel.",
+       "Talk about why we do not share them.",
+       "Wash your comb with soap and water.",
+       "Hang your towel up to dry.",
+       "Put your comb back in its place."
+      ],
+      "reflect": [
+       "Not sharing",
+       "Washing my comb",
+       "Drying my towel",
+       "Not sure"
+      ],
+      "badge": "Clean Kit"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "hb4-braid",
+      "title": "Practise cornrows on a model head",
+      "time": "45 minutes",
+      "adult": false,
+      "need": [
+       "A practice head, a doll, or wool braids taped to a cushion",
+       "A comb",
+       "Hair clips"
+      ],
+      "safety": [
+       "On real hair, never pull tight. Tight braids damage the scalp and hair edges."
+      ],
+      "steps": [
+       "Comb the hair and divide a straight row with the comb's tail.",
+       "Clip the rest of the hair away.",
+       "Take three small sections at the front of the row.",
+       "Plait underhand, picking up a little hair from the row each time.",
+       "Keep the row straight and the tension gentle.",
+       "Finish with a plain plait at the end."
+      ],
+      "reflect": [
+       "Parting straight",
+       "Picking up hair",
+       "Gentle tension",
+       "Finishing"
+      ],
+      "badge": "Cornrow Starter"
+     },
+     {
+      "id": "hb5-scalp",
+      "title": "Look after your hair and scalp",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "Your own hair products"
+      ],
+      "safety": [
+       "If you have a rash or very itchy scalp, ask an adult to take you to a clinic."
+      ],
+      "steps": [
+       "Find out your hair type: straight, wavy, curly or coily.",
+       "Read the labels on your products. What are they for?",
+       "Write a simple wash day plan for your hair type.",
+       "Plan how you protect your hair at night, for example a satin scarf.",
+       "Drink water and eat well. Healthy hair starts inside."
+      ],
+      "reflect": [
+       "My hair type",
+       "Reading labels",
+       "Wash day plan",
+       "Night care"
+      ],
+      "badge": "Hair Care Planner"
+     },
+     {
+      "id": "hb6-nails",
+      "title": "Clean and file nails",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "A nail brush, soap and water",
+       "A nail file",
+       "Hand cream"
+      ],
+      "safety": [
+       "Use your own file. Do not share nail tools.",
+       "Do not cut cuticles."
+      ],
+      "steps": [
+       "Wash your hands and scrub under your nails with the brush.",
+       "Dry your hands well.",
+       "File each nail in one direction, not back and forth.",
+       "Shape the nails to follow your fingertips.",
+       "Rub in a little hand cream.",
+       "Clean the file and put it away."
+      ],
+      "reflect": [
+       "Cleaning",
+       "Filing",
+       "Shaping",
+       "Caring for skin"
+      ],
+      "badge": "Neat Nails"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "hb7-salon",
+      "title": "Salon hygiene and safety",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "Paper and a pen",
+       "A visit to a salon if possible"
+      ],
+      "safety": [
+       "Hair chemicals like relaxers and dyes can burn skin and eyes. Only trained adults should use them."
+      ],
+      "steps": [
+       "List the tools that touch clients: combs, clippers, towels.",
+       "Write how each one is cleaned between clients.",
+       "Find out how clippers are disinfected.",
+       "List the chemicals in a salon and their safety warnings.",
+       "Find out why a patch test is done before a hair dye.",
+       "Make a daily hygiene checklist poster."
+      ],
+      "reflect": [
+       "Cleaning tools",
+       "Chemical safety",
+       "Patch tests",
+       "My checklist"
+      ],
+      "badge": "Salon Hygiene"
+     },
+     {
+      "id": "hb8-styles",
+      "title": "Plan and photograph three styles",
+      "time": "Two sessions",
+      "adult": false,
+      "need": [
+       "A willing model, with permission",
+       "Combs, clips and bands",
+       "A phone camera"
+      ],
+      "safety": [
+       "Ask before touching anyone's hair.",
+       "Do not use heat tools or chemicals without training."
+      ],
+      "steps": [
+       "Ask your model what they like and what their hair can handle.",
+       "Sketch three styles: for example a puff, twists and a braided crown.",
+       "Do one style at a time, gently.",
+       "Photograph each style from the front, side and back.",
+       "Ask your model for feedback.",
+       "Choose your best photo for your portfolio."
+      ],
+      "reflect": [
+       "Consulting",
+       "Planning",
+       "Doing the style",
+       "Photographing"
+      ],
+      "badge": "Style Creator"
+     },
+     {
+      "id": "hb9-consult",
+      "title": "Do a client consultation",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "A practice client",
+       "A consultation card you design"
+      ],
+      "safety": [
+       "Keep client information private."
+      ],
+      "steps": [
+       "Greet the client and ask what they want.",
+       "Ask about their hair history: chemicals, allergies, problems.",
+       "Look at the hair and scalp, with permission.",
+       "Explain what is possible, how long it takes and what it costs.",
+       "Agree on the plan before you start.",
+       "Write the details on the consultation card."
+      ],
+      "reflect": [
+       "Listening",
+       "Asking about allergies",
+       "Explaining",
+       "Agreeing a plan"
+      ],
+      "badge": "Consultation Pro"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "hb10-price",
+      "title": "Price your services",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A list of services you offer",
+       "Product prices",
+       "Prices at salons near you",
+       "A calculator"
+      ],
+      "safety": [
+       "Keep records of your income and costs."
+      ],
+      "steps": [
+       "Time each service, for example knotless braids.",
+       "Add the cost of hair extensions and products used.",
+       "Decide what your hour is worth.",
+       "Price = products plus time, plus a share of rent, water and electricity.",
+       "Compare with others nearby.",
+       "Make a clear price list and a deposit policy for bookings."
+      ],
+      "reflect": [
+       "Timing",
+       "Costing products",
+       "Overheads",
+       "Deposit policy"
+      ],
+      "badge": "Salon Pricing"
+     },
+     {
+      "id": "hb11-bookings",
+      "title": "Set up a booking system",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A diary, a free calendar app or a booking app",
+       "A phone"
+      ],
+      "safety": [
+       "Keep clients' phone numbers private and use them only for bookings."
+      ],
+      "steps": [
+       "Decide your working hours and breaks.",
+       "Block out the time each service needs.",
+       "Choose how clients will book: messages, calls or a free booking tool.",
+       "Write a cancellation rule, for example 24 hours' notice.",
+       "Send a reminder the day before each booking.",
+       "Review each week: no-shows, busy days and quiet days."
+      ],
+      "reflect": [
+       "Working hours",
+       "Booking method",
+       "Cancellation rule",
+       "Weekly review"
+      ],
+      "badge": "Booking Pro"
+     },
+     {
+      "id": "hb12-qualify",
+      "title": "Plan your hairdressing qualification",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A phone or computer",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Check that a training provider is accredited before you pay."
+      ],
+      "steps": [
+       "Find out what a hairdressing trade test is.",
+       "Find TVET colleges and accredited academies near you.",
+       "Find out about learnerships, where you earn while you learn in a salon.",
+       "List entry requirements, costs and duration.",
+       "Speak to a qualified hairdresser about their path.",
+       "Write your next three steps with dates."
+      ],
+      "reflect": [
+       "Understanding the trade test",
+       "Finding training",
+       "Learnerships",
+       "Next steps"
+      ],
+      "badge": "Hair Pathway"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-care",
+   "name": "Caring for people",
+   "icon": "🤝",
+   "domain": "Creativity and Metacognition",
+   "about": "Helping, looking after and supporting other people with kindness and skill.",
+   "leads": [
+    "Early childhood practitioner",
+    "Care worker",
+    "Nurse or health worker",
+    "Social or community worker"
+   ],
+   "link": "Links to Life Orientation, and to Life Sciences and Consumer Studies in Grades 10 to 12. TVET colleges offer early childhood development programmes, and nursing and social work can be studied after school.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "cp1-helper",
+      "title": "Be a kindness helper",
+      "time": "All day",
+      "adult": false,
+      "need": [
+       "Your eyes, ears and kind hands"
+      ],
+      "safety": [
+       "Ask a grown-up before you help with anything hot or heavy."
+      ],
+      "steps": [
+       "Look for someone who needs help.",
+       "Ask: can I help you?",
+       "Help carry, tidy or share.",
+       "Say something kind.",
+       "Tell a grown-up about the kind thing you did."
+      ],
+      "reflect": [
+       "Noticing",
+       "Asking",
+       "Helping",
+       "Saying kind words"
+      ],
+      "badge": "Kindness Helper"
+     },
+     {
+      "id": "cp2-feelings",
+      "title": "How is my friend feeling?",
+      "time": "10 minutes",
+      "adult": true,
+      "need": [
+       "Pictures of faces, or a grown-up to make faces"
+      ],
+      "safety": [
+       "If someone looks very upset or hurt, tell a grown-up."
+      ],
+      "steps": [
+       "Look at a face.",
+       "Is it happy, sad, angry or scared?",
+       "What might have happened?",
+       "What could you do to help?",
+       "Try it with another face."
+      ],
+      "reflect": [
+       "Reading faces",
+       "Guessing why",
+       "Thinking of help",
+       "Not sure"
+      ],
+      "badge": "Feelings Detective"
+     },
+     {
+      "id": "cp3-plaster",
+      "title": "Teddy first aid",
+      "time": "15 minutes",
+      "adult": true,
+      "need": [
+       "A teddy or doll",
+       "A plaster or a strip of paper",
+       "Water and a cloth"
+      ],
+      "safety": [
+       "If a real person is hurt, call a grown-up first."
+      ],
+      "steps": [
+       "Teddy has a small scrape. First, call a grown-up.",
+       "Wash your hands.",
+       "Gently clean the scrape with water.",
+       "Put on a plaster.",
+       "Give teddy a kind word."
+      ],
+      "reflect": [
+       "Calling a grown-up",
+       "Cleaning",
+       "Putting on the plaster",
+       "Being kind"
+      ],
+      "badge": "Teddy Medic"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "cp4-read",
+      "title": "Read to a younger child",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "A picture book",
+       "A younger child, with their grown-up's permission"
+      ],
+      "safety": [
+       "Read where a grown-up can see you."
+      ],
+      "steps": [
+       "Choose a book the child will enjoy.",
+       "Sit so they can see the pictures.",
+       "Read slowly and use different voices.",
+       "Stop and ask: what do you think happens next?",
+       "Let them turn the pages.",
+       "Ask what their favourite part was."
+      ],
+      "reflect": [
+       "Choosing a book",
+       "Using voices",
+       "Asking questions",
+       "Listening to them"
+      ],
+      "badge": "Story Buddy"
+     },
+     {
+      "id": "cp5-firstaid",
+      "title": "Basic first aid",
+      "time": "45 minutes",
+      "adult": true,
+      "need": [
+       "A first aid kit to look at",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Always call an adult. In an emergency, call 10177 for an ambulance or 112 from a cellphone.",
+       "Wear gloves if there is blood."
+      ],
+      "steps": [
+       "Learn what is in a first aid kit and what each item is for.",
+       "For a small cut: wash it with clean water, press with a clean cloth, cover with a plaster.",
+       "For a nosebleed: sit up, lean forward, pinch the soft part of the nose for 10 minutes.",
+       "For a minor burn: cool it under cool running water for 20 minutes.",
+       "Learn the emergency numbers: 10177 ambulance, 10111 police, 112 from a cellphone.",
+       "Make a first aid card for your home."
+      ],
+      "reflect": [
+       "The first aid kit",
+       "Cuts and nosebleeds",
+       "Burns",
+       "Emergency numbers"
+      ],
+      "badge": "First Aider"
+     },
+     {
+      "id": "cp6-elder",
+      "title": "Spend time with an older person",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "An older family member or neighbour",
+       "Questions you prepare"
+      ],
+      "safety": [
+       "Go with your family's permission."
+      ],
+      "steps": [
+       "Prepare questions: what was school like? What games did you play?",
+       "Visit and greet them respectfully.",
+       "Ask your questions and listen carefully.",
+       "Offer to help with a small task.",
+       "Write or draw one story they told you.",
+       "Thank them, and visit again."
+      ],
+      "reflect": [
+       "Preparing questions",
+       "Listening",
+       "Helping",
+       "Remembering their story"
+      ],
+      "badge": "Generations Friend"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "cp7-recovery",
+      "title": "The recovery position",
+      "time": "45 minutes",
+      "adult": true,
+      "need": [
+       "A partner to practise on",
+       "A mat or soft floor"
+      ],
+      "safety": [
+       "This is for practice. In a real emergency, call 10177 or 112 first.",
+       "Do not move someone who may have a neck or back injury unless they are in danger."
+      ],
+      "steps": [
+       "Check for danger to yourself first.",
+       "Check if the person responds: speak to them and tap their shoulders.",
+       "If they are breathing but not responding, put them in the recovery position.",
+       "Kneel beside them, place the near arm at a right angle, bring the far hand to their cheek.",
+       "Bend the far knee, then roll them towards you onto their side.",
+       "Tilt the head back gently to keep the airway open, and stay with them until help arrives."
+      ],
+      "reflect": [
+       "Checking for danger",
+       "Checking response",
+       "Positioning",
+       "Staying with them"
+      ],
+      "badge": "Recovery Position"
+     },
+     {
+      "id": "cp8-childcare",
+      "title": "Plan an activity for young children",
+      "time": "1 hour",
+      "adult": true,
+      "need": [
+       "Simple materials: paper, crayons, blocks",
+       "A group of young children with adult supervision"
+      ],
+      "safety": [
+       "Never be alone with children who are not your family. Work with a supervising adult.",
+       "Check materials for choking hazards with under-threes."
+      ],
+      "steps": [
+       "Choose an age group, for example 3 to 5 years.",
+       "Choose a goal: counting, colours or sharing.",
+       "Plan a 15-minute activity with a start, middle and end.",
+       "Prepare the materials.",
+       "Run the activity, giving clear, short instructions.",
+       "Write what the children enjoyed and learned."
+      ],
+      "reflect": [
+       "Planning for an age",
+       "Clear instructions",
+       "Keeping them engaged",
+       "Reflecting"
+      ],
+      "badge": "Little Learners Leader"
+     },
+     {
+      "id": "cp9-listen",
+      "title": "Be a good listener",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "A partner"
+      ],
+      "safety": [
+       "If a friend tells you they are in danger or being hurt, tell a trusted adult. You can also call Childline on 116."
+      ],
+      "steps": [
+       "Your partner talks about something for 2 minutes.",
+       "You listen without interrupting.",
+       "Show you are listening: nod and look at them.",
+       "Repeat back what you heard: so you feel …",
+       "Ask one open question: how did that make you feel?",
+       "Swap roles, then talk about how it felt to be listened to."
+      ],
+      "reflect": [
+       "Not interrupting",
+       "Repeating back",
+       "Open questions",
+       "Knowing when to get help"
+      ],
+      "badge": "Good Listener"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "cp10-careplan",
+      "title": "Write a daily care plan",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A real or practice situation, such as caring for an older relative",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Medicines must be given exactly as a doctor or pharmacist says. Do not change doses.",
+       "Respect the person's privacy and dignity."
+      ],
+      "steps": [
+       "Ask the person what matters most to them.",
+       "List daily needs: meals, medicine times, hygiene, movement, rest.",
+       "Write a simple timetable for the day.",
+       "Note who to call for help, including the clinic and emergency numbers.",
+       "Plan time for things they enjoy.",
+       "Review the plan each week with them."
+      ],
+      "reflect": [
+       "Asking what matters",
+       "Daily needs",
+       "Who to call",
+       "Respecting dignity"
+      ],
+      "badge": "Care Planner"
+     },
+     {
+      "id": "cp11-ecd",
+      "title": "Explore early childhood work",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A phone or computer",
+       "A visit to an early learning centre if possible"
+      ],
+      "safety": [
+       "Working with children in South Africa needs a police clearance and a check against the child protection register."
+      ],
+      "steps": [
+       "Find out what an early childhood development practitioner does.",
+       "Find out the qualifications needed, from short courses to diplomas.",
+       "Visit or call an early learning centre and ask about volunteering.",
+       "Find out about the safety checks needed to work with children.",
+       "List the costs and time for training.",
+       "Write your next three steps."
+      ],
+      "reflect": [
+       "Understanding the role",
+       "Qualifications",
+       "Safety checks",
+       "Next steps"
+      ],
+      "badge": "ECD Pathway"
+     },
+     {
+      "id": "cp12-selfcare",
+      "title": "Care for the carer",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pen"
+      ],
+      "safety": [
+       "If you feel overwhelmed for a long time, speak to a clinic, a counsellor or a helpline."
+      ],
+      "steps": [
+       "List what you do to care for others each week.",
+       "List what you do to care for yourself.",
+       "Choose three small things that restore you: a walk, music, a friend.",
+       "Plan when you will do them this week.",
+       "Name someone who can take over if you need a break.",
+       "Check in with yourself at the end of the week."
+      ],
+      "reflect": [
+       "Noticing my load",
+       "Restoring activities",
+       "Asking for backup",
+       "Checking in"
+      ],
+      "badge": "Carer Care"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-animals",
+   "name": "Caring for animals",
+   "icon": "🐾",
+   "domain": "Inquiry and Systems Thinking",
+   "about": "Looking after pets and farm animals safely, kindly and responsibly.",
+   "leads": [
+    "Animal welfare assistant",
+    "Veterinary nurse",
+    "Livestock farmer",
+    "Pet groomer or dog walker"
+   ],
+   "link": "Links to the Department of Basic Education's occupational subject Agricultural Studies, and to Agricultural Sciences and Life Sciences in Grades 10 to 12. TVET and agricultural colleges offer animal production programmes.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "an1-feed",
+      "title": "Help feed a pet",
+      "time": "10 minutes",
+      "adult": true,
+      "need": [
+       "A pet and its food bowl",
+       "Pet food",
+       "Fresh water"
+      ],
+      "safety": [
+       "Let the animal eat in peace. Do not touch it while it eats.",
+       "Wash your hands afterwards."
+      ],
+      "steps": [
+       "Wash the bowls with a grown-up.",
+       "Fill the water bowl with fresh water.",
+       "Put in the right amount of food. A grown-up shows you how much.",
+       "Put the bowls down and step back.",
+       "Wash your hands."
+      ],
+      "reflect": [
+       "Fresh water",
+       "The right amount",
+       "Stepping back",
+       "Washing hands"
+      ],
+      "badge": "Pet Feeder"
+     },
+     {
+      "id": "an2-gentle",
+      "title": "Gentle hands",
+      "time": "10 minutes",
+      "adult": true,
+      "need": [
+       "A calm pet, or a soft toy to practise"
+      ],
+      "safety": [
+       "Always ask the owner first.",
+       "Stay away from animals you do not know."
+      ],
+      "steps": [
+       "Ask the owner: may I stroke your dog?",
+       "Let the animal sniff your hand first.",
+       "Stroke gently along its back.",
+       "Do not touch the face, tail or ears.",
+       "Stop if the animal moves away."
+      ],
+      "reflect": [
+       "Asking first",
+       "Letting it sniff",
+       "Gentle stroking",
+       "Knowing when to stop"
+      ],
+      "badge": "Gentle Hands"
+     },
+     {
+      "id": "an3-babies",
+      "title": "Animal babies match",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "Pictures or toy animals"
+      ],
+      "safety": [
+       "Only touch real baby animals when the owner says it is okay."
+      ],
+      "steps": [
+       "Find a cow. Its baby is a calf.",
+       "Find a sheep. Its baby is a lamb.",
+       "Find a hen. Its baby is a chick.",
+       "Find a dog. Its baby is a puppy.",
+       "Find a cat. Its baby is a kitten."
+      ],
+      "reflect": [
+       "Matching",
+       "Saying the names",
+       "Favourite baby",
+       "Not sure"
+      ],
+      "badge": "Baby Animal Expert"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "an4-signs",
+      "title": "Read a dog's body language",
+      "time": "20 minutes",
+      "adult": true,
+      "need": [
+       "Pictures of dogs, or a calm dog you know with its owner"
+      ],
+      "safety": [
+       "Never approach a dog that is growling, showing teeth, or has its tail tucked.",
+       "Never run from a dog. Stand still like a tree."
+      ],
+      "steps": [
+       "A relaxed dog has a loose body and a soft, wagging tail.",
+       "A scared dog has its tail tucked, ears back and may turn away.",
+       "An angry dog stares, stiffens, growls or shows its teeth.",
+       "Look at pictures and decide: relaxed, scared or angry?",
+       "Practise standing like a tree: still, arms folded, looking at your feet."
+      ],
+      "reflect": [
+       "Relaxed signs",
+       "Scared signs",
+       "Warning signs",
+       "Standing like a tree"
+      ],
+      "badge": "Dog Reader"
+     },
+     {
+      "id": "an5-chickens",
+      "title": "Look after chickens",
+      "time": "30 minutes a day for a week",
+      "adult": true,
+      "need": [
+       "Chickens with a run and a coop",
+       "Feed and water",
+       "Gloves"
+      ],
+      "safety": [
+       "Wash your hands after touching chickens or eggs."
+      ],
+      "steps": [
+       "Give fresh water every morning.",
+       "Give the right amount of feed.",
+       "Collect the eggs gently.",
+       "Check that each chicken is active and eating.",
+       "Clean out droppings and add fresh bedding.",
+       "Keep a chart: eggs collected each day."
+      ],
+      "reflect": [
+       "Daily water and feed",
+       "Collecting eggs",
+       "Checking health",
+       "Keeping a chart"
+      ],
+      "badge": "Chicken Keeper"
+     },
+     {
+      "id": "an6-welfare",
+      "title": "The five freedoms",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "Paper and a pen"
+      ],
+      "safety": [
+       "If you see an animal being hurt, tell an adult. They can contact the local SPCA."
+      ],
+      "steps": [
+       "Learn the five freedoms animals need.",
+       "Freedom from hunger and thirst.",
+       "Freedom from discomfort, with shelter.",
+       "Freedom from pain, injury and disease.",
+       "Freedom to behave normally, and freedom from fear.",
+       "Check a pet you know against all five and suggest one improvement."
+      ],
+      "reflect": [
+       "Learning the five",
+       "Checking a pet",
+       "Suggesting a change",
+       "Knowing who to tell"
+      ],
+      "badge": "Animal Welfare"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "an7-health",
+      "title": "Do a pet health check",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "A calm pet and its owner"
+      ],
+      "safety": [
+       "Stop if the animal is in pain or upset.",
+       "A sick animal needs a vet or an animal welfare clinic."
+      ],
+      "steps": [
+       "Check the eyes and nose: clear, with no discharge.",
+       "Check the ears: clean, with no bad smell.",
+       "Check the coat and skin for fleas, ticks or sores.",
+       "Check the weight: you should feel the ribs, but not see them.",
+       "Watch the animal walk: is it moving easily?",
+       "Record what you found and tell the owner."
+      ],
+      "reflect": [
+       "Eyes and ears",
+       "Coat and skin",
+       "Weight",
+       "Recording"
+      ],
+      "badge": "Health Checker"
+     },
+     {
+      "id": "an8-vaccine",
+      "title": "Vaccines and parasites",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A phone or computer",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Rabies is deadly. Rabies vaccination for dogs and cats is required by law in South Africa."
+      ],
+      "steps": [
+       "Find out which vaccines dogs and cats need.",
+       "Find out why rabies vaccination is the law.",
+       "Find out how ticks and fleas spread disease.",
+       "Find out how deworming works.",
+       "Find free or low-cost vaccination days near you.",
+       "Make an information poster for your community."
+      ],
+      "reflect": [
+       "Vaccines",
+       "Rabies",
+       "Parasites",
+       "Sharing information"
+      ],
+      "badge": "Pet Health Educator"
+     },
+     {
+      "id": "an9-volunteer",
+      "title": "Volunteer at an animal shelter",
+      "time": "Half a day",
+      "adult": true,
+      "need": [
+       "Permission from your family",
+       "A shelter that takes young volunteers"
+      ],
+      "safety": [
+       "Follow the shelter's rules exactly.",
+       "Wash your hands after handling animals."
+      ],
+      "steps": [
+       "Contact a shelter and ask about volunteering for your age.",
+       "Attend their orientation or safety briefing.",
+       "Help with cleaning, feeding or walking dogs, as they ask.",
+       "Watch how staff handle nervous animals.",
+       "Ask a staff member about their job.",
+       "Write about what you learned."
+      ],
+      "reflect": [
+       "Following rules",
+       "Helping",
+       "Watching staff",
+       "Learning about jobs"
+      ],
+      "badge": "Shelter Volunteer"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "an10-walking",
+      "title": "Start a dog-walking service",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A phone",
+       "A strong lead and poop bags",
+       "A simple client form"
+      ],
+      "safety": [
+       "Walk only dogs you can control. Never walk more dogs than you can safely handle.",
+       "Collect owners' emergency contacts and vet details."
+      ],
+      "steps": [
+       "Decide your area and prices.",
+       "Make a client form: dog's name, needs, vet and emergency contacts.",
+       "Meet each dog with its owner before the first walk.",
+       "Walk each new dog alone first.",
+       "Send owners a short update after each walk.",
+       "Ask happy clients for referrals."
+      ],
+      "reflect": [
+       "Planning",
+       "Client form",
+       "Safe handling",
+       "Communication"
+      ],
+      "badge": "Dog Walker"
+     },
+     {
+      "id": "an11-livestock",
+      "title": "Plan a small livestock project",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "Prices of animals, feed, housing and vet care",
+       "Paper or a spreadsheet"
+      ],
+      "safety": [
+       "Check municipal rules about keeping animals where you live."
+      ],
+      "steps": [
+       "Choose an animal: broiler chickens, layer hens, goats or rabbits.",
+       "Find out the space, housing and feed each one needs.",
+       "List start-up costs and monthly costs.",
+       "Plan how you will prevent disease: cleaning, vaccines and isolation.",
+       "Work out income: eggs, meat or animals sold.",
+       "Calculate whether it makes a profit, and when."
+      ],
+      "reflect": [
+       "Choosing the animal",
+       "Costs",
+       "Disease prevention",
+       "Profit"
+      ],
+      "badge": "Livestock Planner"
+     },
+     {
+      "id": "an12-careers",
+      "title": "Explore animal careers",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A phone or computer",
+       "Paper and a pen"
+      ],
+      "safety": [
+       "Check that any course or college is accredited."
+      ],
+      "steps": [
+       "List careers: vet, veterinary nurse, animal welfare assistant, farm manager, groomer.",
+       "Find the training each one needs and where it is offered.",
+       "Find out about short courses, such as animal welfare assistant courses.",
+       "Look for volunteering or learnership opportunities.",
+       "Speak to someone who works with animals.",
+       "Write your next three steps."
+      ],
+      "reflect": [
+       "Listing careers",
+       "Training routes",
+       "Getting experience",
+       "Next steps"
+      ],
+      "badge": "Animal Career Path"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sk-dance",
+   "name": "Dance",
+   "icon": "💃",
+   "domain": "Creativity and Metacognition",
+   "about": "Moving to music, learning dance styles and creating your own routines.",
+   "leads": [
+    "Dancer or performer",
+    "Choreographer",
+    "Dance or fitness teacher",
+    "Community arts leader"
+   ],
+   "link": "Links to Creative Arts in Grades 4 to 9, and to Dance Studies in Grades 10 to 12. Arts schools, universities and community programmes offer dance training.",
+   "levels": {
+    "3-6": [
+     {
+      "id": "dn1-freeze",
+      "title": "Freeze dance",
+      "time": "10 minutes",
+      "adult": true,
+      "need": [
+       "Music",
+       "A grown-up to stop the music",
+       "Space to move"
+      ],
+      "safety": [
+       "Clear the space so nobody bumps into furniture."
+      ],
+      "steps": [
+       "Dance when the music plays.",
+       "Freeze like a statue when it stops.",
+       "Try freezing in a funny shape.",
+       "Try dancing like an animal.",
+       "Swap: you stop the music for the grown-up."
+      ],
+      "reflect": [
+       "Dancing",
+       "Freezing",
+       "Animal moves",
+       "Being in charge"
+      ],
+      "badge": "Freeze Star"
+     },
+     {
+      "id": "dn2-mirror",
+      "title": "Mirror me",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "A partner"
+      ],
+      "safety": [
+       "Move slowly so your partner can follow."
+      ],
+      "steps": [
+       "Stand facing your partner.",
+       "One person moves slowly.",
+       "The other copies like a mirror.",
+       "Swap who leads.",
+       "Try fast moves, then slow moves."
+      ],
+      "reflect": [
+       "Leading",
+       "Copying",
+       "Moving slowly",
+       "Swapping"
+      ],
+      "badge": "Mirror Mover"
+     },
+     {
+      "id": "dn3-scarf",
+      "title": "Scarf dance",
+      "time": "10 minutes",
+      "adult": false,
+      "need": [
+       "A scarf or a piece of fabric",
+       "Gentle music"
+      ],
+      "safety": [
+       "Keep the scarf away from your neck."
+      ],
+      "steps": [
+       "Hold the scarf in one hand.",
+       "Wave it high, then low.",
+       "Make big circles, then small circles.",
+       "Throw it up and catch it.",
+       "Move your whole body with the music."
+      ],
+      "reflect": [
+       "High and low",
+       "Circles",
+       "Throwing and catching",
+       "Following the music"
+      ],
+      "badge": "Scarf Dancer"
+     }
+    ],
+    "7-12": [
+     {
+      "id": "dn4-counts",
+      "title": "Dance in counts of eight",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "Music with a clear beat",
+       "Space to move"
+      ],
+      "safety": [
+       "Warm up first: march on the spot and roll your shoulders."
+      ],
+      "steps": [
+       "Listen and count the beat: 1 to 8.",
+       "Step right on 1 and 2, left on 3 and 4.",
+       "Clap on 5 and 6.",
+       "Turn around on 7 and 8.",
+       "Repeat four times without stopping.",
+       "Add your own move in place of the clap."
+      ],
+      "reflect": [
+       "Counting",
+       "Stepping on the beat",
+       "Turning",
+       "Adding my move"
+      ],
+      "badge": "Eight Count"
+     },
+     {
+      "id": "dn5-heritage",
+      "title": "Learn a South African dance step",
+      "time": "30 minutes",
+      "adult": true,
+      "need": [
+       "A video or a person who can show you a step, such as gumboot dancing, pantsula or indlamu",
+       "Music"
+      ],
+      "safety": [
+       "Warm up first.",
+       "Land softly with bent knees."
+      ],
+      "steps": [
+       "Watch the step several times.",
+       "Find out where the dance comes from and its history.",
+       "Learn the step slowly, in parts.",
+       "Put the parts together with the music.",
+       "Practise until you can do it four times in a row.",
+       "Teach it to someone at home."
+      ],
+      "reflect": [
+       "Watching",
+       "Learning the history",
+       "Breaking it down",
+       "Teaching it"
+      ],
+      "badge": "Heritage Dancer"
+     },
+     {
+      "id": "dn6-story",
+      "title": "Tell a story with movement",
+      "time": "30 minutes",
+      "adult": false,
+      "need": [
+       "A short story idea, such as a seed growing into a tree",
+       "Music"
+      ],
+      "safety": [
+       "Clear the space."
+      ],
+      "steps": [
+       "Choose a story with a beginning, middle and end.",
+       "Pick a movement for each part: small and curled for a seed.",
+       "Change your speed and level: low, middle, high.",
+       "Join the movements together.",
+       "Perform it for someone.",
+       "Ask them what story they saw."
+      ],
+      "reflect": [
+       "Choosing a story",
+       "Levels and speed",
+       "Joining moves",
+       "Performing"
+      ],
+      "badge": "Movement Storyteller"
+     }
+    ],
+    "13-18": [
+     {
+      "id": "dn7-choreo",
+      "title": "Choreograph a routine",
+      "time": "Two sessions",
+      "adult": false,
+      "need": [
+       "A song of about one minute",
+       "Space",
+       "A phone to record"
+      ],
+      "safety": [
+       "Warm up before and stretch after.",
+       "Stop if you feel pain."
+      ],
+      "steps": [
+       "Listen to the song and mark the sections: intro, verse, chorus.",
+       "Create moves for each section in counts of eight.",
+       "Repeat the chorus moves each time the chorus plays.",
+       "Add one change of level and one change of direction.",
+       "Practise until it flows, then record it.",
+       "Watch the recording and fix one thing."
+      ],
+      "reflect": [
+       "Mapping the music",
+       "Creating moves",
+       "Repetition",
+       "Reviewing the video"
+      ],
+      "badge": "Choreographer"
+     },
+     {
+      "id": "dn8-warmup",
+      "title": "Lead a warm-up",
+      "time": "20 minutes",
+      "adult": false,
+      "need": [
+       "A group",
+       "Music"
+      ],
+      "safety": [
+       "Keep stretches gentle. No bouncing.",
+       "Ask if anyone has an injury before you start."
+      ],
+      "steps": [
+       "Start with gentle movement to raise the heart rate: marching or stepping.",
+       "Mobilise the joints: neck, shoulders, hips, knees, ankles.",
+       "Add bigger movements: arm swings and side steps.",
+       "Give clear instructions and show each move.",
+       "Watch the group and adjust if it is too hard.",
+       "End with slow breathing."
+      ],
+      "reflect": [
+       "Raising the heart rate",
+       "Joints",
+       "Clear instructions",
+       "Adjusting"
+      ],
+      "badge": "Warm-up Leader"
+     },
+     {
+      "id": "dn9-crew",
+      "title": "Form a dance crew",
+      "time": "Over a few weeks",
+      "adult": true,
+      "need": [
+       "Friends who want to dance",
+       "A practice space",
+       "A teacher or adult supporter"
+      ],
+      "safety": [
+       "Practise in a safe, supervised space.",
+       "Respect each person's limits."
+      ],
+      "steps": [
+       "Agree on the crew's name, style and goals.",
+       "Set a regular practice time.",
+       "Share leadership: different people lead different routines.",
+       "Set crew rules about respect, attendance and feedback.",
+       "Prepare one routine for a school or community event.",
+       "After the event, discuss what went well."
+      ],
+      "reflect": [
+       "Setting goals",
+       "Sharing leadership",
+       "Crew rules",
+       "Performing"
+      ],
+      "badge": "Crew Leader"
+     }
+    ],
+    "19-25": [
+     {
+      "id": "dn10-class",
+      "title": "Teach a community dance class",
+      "time": "1 hour",
+      "adult": false,
+      "need": [
+       "A venue",
+       "Music and a speaker",
+       "A simple lesson plan"
+      ],
+      "safety": [
+       "Ask about injuries or health conditions at the start.",
+       "Have water and a first aid kit available."
+      ],
+      "steps": [
+       "Choose a style and level for beginners.",
+       "Plan: warm-up, learning steps, short routine, cool-down.",
+       "Teach each step slowly, then with music.",
+       "Give positive, specific feedback.",
+       "End with the whole group performing the routine.",
+       "Ask for feedback and note what to change."
+      ],
+      "reflect": [
+       "Planning",
+       "Teaching steps",
+       "Feedback",
+       "Reflecting"
+      ],
+      "badge": "Dance Teacher"
+     },
+     {
+      "id": "dn11-audition",
+      "title": "Prepare for an audition",
+      "time": "Over a week",
+      "adult": false,
+      "need": [
+       "Audition information",
+       "A short solo routine",
+       "Comfortable clothes"
+      ],
+      "safety": [
+       "Warm up properly on the day.",
+       "Check that an audition is legitimate. You should never have to pay large fees to audition."
+      ],
+      "steps": [
+       "Read the audition requirements carefully.",
+       "Prepare a short solo that shows your strengths.",
+       "Practise picking up new choreography quickly from videos.",
+       "Prepare a short introduction about yourself.",
+       "Plan your travel, clothes and water the night before.",
+       "After the audition, write down what you learned."
+      ],
+      "reflect": [
+       "Reading requirements",
+       "My solo",
+       "Learning quickly",
+       "Reflecting"
+      ],
+      "badge": "Audition Ready"
+     },
+     {
+      "id": "dn12-events",
+      "title": "Dance for events as a business",
+      "time": "2 hours",
+      "adult": false,
+      "need": [
+       "A phone or computer",
+       "Paper or a spreadsheet"
+      ],
+      "safety": [
+       "Use a simple written agreement with each client: date, time, fee and what is included."
+      ],
+      "steps": [
+       "Decide what you offer: wedding dances, corporate events, kids' parties.",
+       "Film a short showreel of your best work.",
+       "Set prices that cover rehearsal, travel and performance time.",
+       "Write a simple agreement template.",
+       "Share your showreel on social media and with event planners.",
+       "Track each booking: income, costs and client feedback."
+      ],
+      "reflect": [
+       "My offer",
+       "Showreel",
+       "Pricing",
+       "Agreements"
+      ],
+      "badge": "Event Dancer"
+     }
+    ]
+   }
+  }
+ ],
+ "soon": [],
+ "levels": {
+  "3-6": "Play and explore",
+  "7-12": "Try it",
+  "13-18": "Build it",
+  "19-25": "Work-ready"
+ },
+ "how": [
+  "I did it",
+  "I did some of it",
+  "I need more practice"
+ ]
+}

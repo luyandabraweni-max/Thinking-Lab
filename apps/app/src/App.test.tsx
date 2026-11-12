@@ -129,3 +129,40 @@ describe("learners on a shared device", () => {
     expect(await screen.findByText("Sent!")).toBeInTheDocument();
   });
 });
+
+describe("the Thinking Lab", () => {
+  it("lets a learner solve Light the Village, reflect, and saves how they worked", async () => {
+    document.documentElement.dataset.motion = "reduce"; // no waiting for the beam animation
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Thinking Lab" }));
+    await user.click(screen.getByRole("button", { name: /^Light the Village/ }));
+    await user.click(screen.getByRole("button", { name: "Begin" }));
+    // Village 1: one mirror, tilted down to the right
+    await user.click(screen.getByRole("button", { name: "row 1, column 3: empty" }));
+    await user.click(screen.getByRole("button", { name: /row 1, column 3: mirror/ }));
+    await user.click(screen.getByRole("button", { name: /Shine the light/ }));
+    expect(await screen.findByText(/The hut has light! You got it on your first try./)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Next village" }));
+    // Village 2: a miss first, then the plan
+    await user.click(screen.getByRole("button", { name: /Shine the light/ }));
+    expect(await screen.findByText(/The light reached 0 of 2 huts/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "row 3, column 1: empty" }));
+    await user.click(screen.getByRole("button", { name: "row 3, column 4: empty" }));
+    await user.click(screen.getByRole("button", { name: /Shine the light/ }));
+    expect(await screen.findByText(/Every hut has light! You kept going until it worked./)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Finish" }));
+    await user.click(screen.getByRole("button", { name: "I tried, then fixed it" }));
+    expect(await screen.findByText("You tried a different approach when your first idea did not work.")).toBeInTheDocument();
+    const saved = (await store.kv.all("attempts")).map(a => [a.activityId, a.status, a.mode, a.reflection]);
+    expect(saved).toEqual([["light", "alone", "placed mirrors", "I tried, then fixed it"], ["light", "support", "placed mirrors", "I tried, then fixed it"]]);
+    delete document.documentElement.dataset.motion;
+  });
+});

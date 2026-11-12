@@ -4,9 +4,9 @@ name: Platform
 # plus test builds of the Android and iOS apps. Nothing here deploys; the live site's pipeline is ci-cd.yml.
 on:
   push:
-    paths: ["apps/**", "packages/**", "supabase/**", "tools/check-boundaries.mjs", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
+    paths: ["apps/**", "packages/**", "supabase/**", "tools/**", "js/content/**", "css/app.css", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
   pull_request:
-    paths: ["apps/**", "packages/**", "supabase/**", "tools/check-boundaries.mjs", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
+    paths: ["apps/**", "packages/**", "supabase/**", "tools/**", "js/content/**", "css/app.css", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
   workflow_dispatch:
 
 permissions:
@@ -27,6 +27,10 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      - name: Lessons and styles match the live site
+        run: |
+          node tools/export-content.mjs
+          git diff --exit-code -- packages/content/data packages/ui/src || { echo "::error::Run node tools/export-content.mjs and commit the result"; exit 1; }
       - run: npm run platform:types
       - run: npm run platform:lint
       - run: npm run platform:bounds

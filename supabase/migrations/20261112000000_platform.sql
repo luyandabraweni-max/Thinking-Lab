@@ -173,10 +173,12 @@ create table public.attempts (
   flags jsonb,
   reflection text not null default '',
   occurred_at timestamptz not null,
+  received_at timestamptz not null default now(), -- when the server got it: devices can be offline for weeks
   recorded_by uuid not null references public.profiles,
   primary key (id, occurred_at)
 ) partition by range (occurred_at);
 create index attempts_learner on public.attempts (learner_id, occurred_at);
+create index attempts_received on public.attempts (received_at);
 create table public.attempts_default partition of public.attempts default;
 
 -- Creates the monthly partitions from this month on. Run monthly (Supabase: pg_cron) to stay ahead.
@@ -483,6 +485,11 @@ begin
           insert into health.log (id, learner_id, at, by_name, text)
           values ((r ->> 'id')::uuid, (r ->> 'learnerId')::uuid, (r ->> 'at')::timestamptz, r ->> 'by', r ->> 'text')
           on conflict (id) do nothing;
+        when 'attempts' then
+          insert into public.attempts (id, learner_id, activity_id, status, mode, hints, flags, reflection, occurred_at, recorded_by)
+          values ((r ->> 'id')::uuid, (r ->> 'learnerId')::uuid, r ->> 'activityId', r ->> 'status', r ->> 'mode', (r ->> 'hints')::smallint,
+                  nullif(r -> 'flags', 'null'::jsonb), coalesce(r ->> 'reflection', ''), (r ->> 'occurredAt')::timestamptz, me)
+          on conflict (id, occurred_at) do nothing; -- append only
         when 'learners' then -- the device only changes consent; the server decides everything else
           update public.learner_consent set guardian = (r -> 'consent' ->> 'guardian')::boolean, support = (r -> 'consent' ->> 'support')::boolean,
             share = (r -> 'consent' ->> 'share')::boolean, health = (r -> 'consent' ->> 'health')::boolean, updated_by = me
@@ -528,7 +535,11 @@ begin
     'doses', coalesce((select jsonb_agg(jsonb_build_object('id', d.id, 'learnerId', d.learner_id, 'medicationId', d.medication_id, 'givenAt', d.given_at,
         'givenBy', d.given_by, 'note', d.note)) from health.doses d where d.updated_at > s), '[]'),
     'health_log', coalesce((select jsonb_agg(jsonb_build_object('id', h.id, 'learnerId', h.learner_id, 'at', h.at, 'by', h.by_name, 'text', h.text))
-      from health.log h where h.updated_at > s), '[]')));
+      from health.log h where h.updated_at > s), '[]'),
+    -- Attempts never change once made, so only new ones are sent (by when they were recorded on the server).
+    'attempts', coalesce((select jsonb_agg(jsonb_build_object('id', a.id, 'learnerId', a.learner_id, 'activityId', a.activity_id, 'status', a.status,
+        'mode', a.mode, 'hints', a.hints, 'flags', a.flags, 'reflection', a.reflection, 'occurredAt', a.occurred_at))
+      from public.attempts a where a.received_at > s), '[]')));
 end $$;
 
 -- ---------- What the API roles may touch (row-level security narrows it further) ----------

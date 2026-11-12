@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "m4-patterns",
+  "grade": 4,
+  "subject": "Mathematics",
+  "title": "Number patterns and flow diagrams",
+  "topic": "Numeric patterns",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-4"
+ },
+ {
+  "id": "m5-fractions",
+  "grade": 5,
+  "subject": "Mathematics",
+  "title": "Comparing and adding fractions",
+  "topic": "Common fractions",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-5"
+ },
+ {
+  "id": "m6-percent",
+  "grade": 6,
+  "subject": "Mathematics",
+  "title": "Fractions, decimals and percentages",
+  "topic": "Equivalent forms and percentages",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-6"
+ },
+ {
+  "id": "e4-folktale",
+  "grade": 4,
+  "subject": "English Home Language",
+  "title": "Folktale: Why Hare Has Long Ears",
+  "topic": "Folklore, nouns and adjectives",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-4"
+ },
+ {
+  "id": "e5-info",
+  "grade": 5,
+  "subject": "English Home Language",
+  "title": "Information text: African penguins",
+  "topic": "Information text, verbs and tense",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-5"
+ },
+ {
+  "id": "e6-advert",
+  "grade": 6,
+  "subject": "English Home Language",
+  "title": "Persuasive text: advertisements",
+  "topic": "Advertisements, fact and opinion",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-6"
+ },
+ {
+  "id": "n4-living",
+  "grade": 4,
+  "subject": "Natural Sciences and Technology",
+  "title": "Living and non-living things",
+  "topic": "Life and Living",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-4"
+ },
+ {
+  "id": "n5-foodchains",
+  "grade": 5,
+  "subject": "Natural Sciences and Technology",
+  "title": "Food chains",
+  "topic": "Life and Living",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-5"
+ },
+ {
+  "id": "n6-photosynthesis",
+  "grade": 6,
+  "subject": "Natural Sciences and Technology",
+  "title": "How plants make food",
+  "topic": "Photosynthesis",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-6"
+ },
+ {
+  "id": "l4-strengths",
+  "grade": 4,
+  "subject": "Life Skills",
+  "title": "My strengths",
+  "topic": "Personal and Social Well-being: personal strengths",
+  "domain": "Creativity and Metacognition",
+  "category": "Reflection",
+  "pack": "grade-4"
+ },
+ {
+  "id": "l5-emotions",
+  "grade": 5,
+  "subject": "Life Skills",
+  "title": "Coping with emotions",
+  "topic": "Personal and Social Well-being: coping with emotions",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-5"
+ },
+ {
+  "id": "l6-peer",
+  "grade": 6,
+  "subject": "Life Skills",
+  "title": "Peer pressure",
+  "topic": "Personal and Social Well-being: peer pressure",
+  "domain": "Creativity and Metacognition",
+  "category": "Flexible Thinking",
+  "pack": "grade-6"
+ },
+ {
+  "id": "m4-place",
+  "grade": 4,
+  "subject": "Mathematics",
+  "title": "Place value and rounding",
+  "topic": "Whole numbers to 4 digits",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-4"
+ },
+ {
+  "id": "m4-fractions",
+  "grade": 4,
+  "subject": "Mathematics",
+  "title": "Halves, quarters and eighths",
+  "topic": "Common fractions",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-4"
+ },
+ {
+  "id": "m5-bignumbers",
+  "grade": 5,
+  "subject": "Mathematics",
+  "title": "Big numbers and rounding",
+  "topic": "Whole numbers to 6 digits",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-5"
+ },
+ {
+  "id": "m5-factors",
+  "grade": 5,
+  "subject": "Mathematics",
+  "title": "Multiples and factors",
+  "topic": "Multiples and factors to 100",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-5"
+ },
+ {
+  "id": "m6-primes",
+  "grade": 6,
+  "subject": "Mathematics",
+  "title": "Prime numbers and prime factors",
+  "topic": "Properties of whole numbers",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-6"
+ },
+ {
+  "id": "m6-order",
+  "grade": 6,
+  "subject": "Mathematics",
+  "title": "Order of operations",
+  "topic": "Calculations with brackets",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-6"
+ },
+ {
+  "id": "e4-poetry",
+  "grade": 4,
+  "subject": "English Home Language",
+  "title": "Poetry: Rain on the Roof",
+  "topic": "Poetry, rhyme and sound words",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-4"
+ },
+ {
+  "id": "e4-instructions",
+  "grade": 4,
+  "subject": "English Home Language",
+  "title": "Instructions: Grow a bean in a jar",
+  "topic": "Instructional text, command verbs",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-4"
+ },
+ {
+  "id": "e5-news",
+  "grade": 5,
+  "subject": "English Home Language",
+  "title": "Newspaper report: Beach clean-up",
+  "topic": "Newspaper article, the 5 Ws",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-5"
+ },
+ {
+  "id": "e5-similes",
+  "grade": 5,
+  "subject": "English Home Language",
+  "title": "Poetry: My Gogo",
+  "topic": "Poetry and similes",
+  "domain": "Communication and Expression",
+  "category": "Creativity",
+  "pack": "grade-5"
+ },
+ {
+  "id": "e6-drama",
+  "grade": 6,
+  "subject": "English Home Language",
+  "title": "Drama: The Missing Lunchbox",
+  "topic": "Drama, play scripts and stage directions",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-6"
+ },
+ {
+  "id": "e6-metaphor",
+  "grade": 6,
+  "subject": "English Home Language",
+  "title": "Poetry: The City at Night",
+  "topic": "Metaphor and personification",
+  "domain": "Communication and Expression",
+  "category": "Creativity",
+  "pack": "grade-6"
+ },
+ {
+  "id": "n4-habitats",
+  "grade": 4,
+  "subject": "Natural Sciences and Technology",
+  "title": "Habitats of animals",
+  "topic": "Life and Living",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-4"
+ },
+ {
+  "id": "n4-states",
+  "grade": 4,
+  "subject": "Natural Sciences and Technology",
+  "title": "Solids, liquids and gases",
+  "topic": "Matter and Materials",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-4"
+ },
+ {
+  "id": "n5-lifecycles",
+  "grade": 5,
+  "subject": "Natural Sciences and Technology",
+  "title": "Life cycles",
+  "topic": "Life and Living",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-5"
+ },
+ {
+  "id": "n5-metals",
+  "grade": 5,
+  "subject": "Natural Sciences and Technology",
+  "title": "Metals and non-metals",
+  "topic": "Matter and Materials",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-5"
+ },
+ {
+  "id": "n6-nutrients",
+  "grade": 6,
+  "subject": "Natural Sciences and Technology",
+  "title": "Nutrients in food",
+  "topic": "Life and Living",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-6"
+ },
+ {
+  "id": "n6-mixtures",
+  "grade": 6,
+  "subject": "Natural Sciences and Technology",
+  "title": "Mixtures and solutions",
+  "topic": "Matter and Materials",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-6"
+ },
+ {
+  "id": "l4-body",
+  "grade": 4,
+  "subject": "Life Skills",
+  "title": "Respecting my body and others' bodies",
+  "topic": "Personal and Social Well-being: respect for own and others' bodies",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-4"
+ },
+ {
+  "id": "l4-conflict",
+  "grade": 4,
+  "subject": "Life Skills",
+  "title": "Dealing with conflict",
+  "topic": "Personal and Social Well-being: dealing with conflict",
+  "domain": "Creativity and Metacognition",
+  "category": "Problem Solving",
+  "pack": "grade-4"
+ },
+ {
+  "id": "l5-feedback",
+  "grade": 5,
+  "subject": "Life Skills",
+  "title": "Giving and receiving feedback",
+  "topic": "Personal and Social Well-being: giving and receiving feedback",
+  "domain": "Creativity and Metacognition",
+  "category": "Reflection",
+  "pack": "grade-5"
+ },
+ {
+  "id": "l5-relationships",
+  "grade": 5,
+  "subject": "Life Skills",
+  "title": "Safe and healthy relationships",
+  "topic": "Personal and Social Well-being: relationships with peers, older people and strangers",
+  "domain": "Creativity and Metacognition",
+  "category": "Problem Solving",
+  "pack": "grade-5"
+ },
+ {
+  "id": "l6-potential",
+  "grade": 6,
+  "subject": "Life Skills",
+  "title": "My abilities, interests and potential",
+  "topic": "Personal and Social Well-being: abilities, interests and potential",
+  "domain": "Creativity and Metacognition",
+  "category": "Reflection",
+  "pack": "grade-6"
+ },
+ {
+  "id": "l6-mediation",
+  "grade": 6,
+  "subject": "Life Skills",
+  "title": "Solving conflict through mediation",
+  "topic": "Personal and Social Well-being: problem-solving in conflict situations",
+  "domain": "Creativity and Metacognition",
+  "category": "Problem Solving",
+  "pack": "grade-6"
+ },
+ {
+  "id": "ey-wash",
+  "grade": -1,
+  "subject": "Well-being",
+  "title": "Clean hands, healthy me",
+  "topic": "Keeping clean",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "early"
+ },
+ {
+  "id": "ey-safe",
+  "grade": -1,
+  "subject": "Well-being",
+  "title": "Safe or not safe?",
+  "topic": "Staying safe",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "early"
+ },
+ {
+  "id": "ey-me",
+  "grade": -1,
+  "subject": "Identity and Belonging",
+  "title": "All about me",
+  "topic": "Me and what I can do",
+  "domain": "Creativity and Metacognition",
+  "category": "Reflection",
+  "pack": "early"
+ },
+ {
+  "id": "ey-turns",
+  "grade": -1,
+  "subject": "Identity and Belonging",
+  "title": "Taking turns and sharing",
+  "topic": "Playing with others",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "early"
+ },
+ {
+  "id": "ey-sounds",
+  "grade": -1,
+  "subject": "Communication",
+  "title": "Listen to the sounds",
+  "topic": "Listening",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "early"
+ },
+ {
+  "id": "ey-story",
+  "grade": -1,
+  "subject": "Communication",
+  "title": "Pictures tell a story",
+  "topic": "Reading pictures in order",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "early"
+ },
+ {
+  "id": "ey-count",
+  "grade": -1,
+  "subject": "Exploring Mathematics",
+  "title": "Counting to 5",
+  "topic": "Counting",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "early"
+ },
+ {
+  "id": "ey-shapes",
+  "grade": -1,
+  "subject": "Exploring Mathematics",
+  "title": "Circles, squares and triangles",
+  "topic": "Shapes and sorting",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "early"
+ },
+ {
+  "id": "ey-colours",
+  "grade": -1,
+  "subject": "Creativity",
+  "title": "Colours all around",
+  "topic": "Colours and mixing",
+  "domain": "Creativity and Metacognition",
+  "category": "Creativity",
+  "pack": "early"
+ },
+ {
+  "id": "ey-music",
+  "grade": -1,
+  "subject": "Creativity",
+  "title": "Loud and soft, fast and slow",
+  "topic": "Music and movement",
+  "domain": "Creativity and Metacognition",
+  "category": "Creativity",
+  "pack": "early"
+ },
+ {
+  "id": "ey-animals",
+  "grade": -1,
+  "subject": "Knowledge and Understanding of the World",
+  "title": "Animals and their babies",
+  "topic": "Animals",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "early"
+ },
+ {
+  "id": "ey-weather",
+  "grade": -1,
+  "subject": "Knowledge and Understanding of the World",
+  "title": "Sunny, rainy, windy",
+  "topic": "Weather",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "early"
+ },
+ {
+  "id": "gr-count",
+  "grade": 0,
+  "subject": "Mathematics",
+  "title": "Counting to 10",
+  "topic": "Count objects, more and less",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-patterns",
+  "grade": 0,
+  "subject": "Mathematics",
+  "title": "Copy and finish a pattern",
+  "topic": "Simple patterns",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-shapes",
+  "grade": 0,
+  "subject": "Mathematics",
+  "title": "Ball shapes and box shapes",
+  "topic": "3-D objects and position",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-measure",
+  "grade": 0,
+  "subject": "Mathematics",
+  "title": "Long or short, heavy or light",
+  "topic": "Comparing length, mass and capacity",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-rhyme",
+  "grade": 0,
+  "subject": "English Home Language",
+  "title": "Words that rhyme",
+  "topic": "Rhyming words",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-sounds",
+  "grade": 0,
+  "subject": "English Home Language",
+  "title": "First sounds",
+  "topic": "Initial sounds",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-syllables",
+  "grade": 0,
+  "subject": "English Home Language",
+  "title": "Clap the parts of a word",
+  "topic": "Syllables",
+  "domain": "Communication and Expression",
+  "category": "Pattern Thinking",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-story",
+  "grade": 0,
+  "subject": "English Home Language",
+  "title": "Story: Lulu's Lost Hat",
+  "topic": "Listening to a story",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-body",
+  "grade": 0,
+  "subject": "Life Skills",
+  "title": "My body belongs to me",
+  "topic": "My body",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-days",
+  "grade": 0,
+  "subject": "Life Skills",
+  "title": "Days of the week",
+  "topic": "Yesterday, today and tomorrow",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-transport",
+  "grade": 0,
+  "subject": "Life Skills",
+  "title": "Getting around",
+  "topic": "Transport",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-0"
+ },
+ {
+  "id": "gr-wild",
+  "grade": 0,
+  "subject": "Life Skills",
+  "title": "Wild animals",
+  "topic": "Wild animals and where they live",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-0"
+ },
+ {
+  "id": "g1-count",
+  "grade": 1,
+  "subject": "Mathematics",
+  "title": "Counting to 100",
+  "topic": "Count, before and after",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-addsub",
+  "grade": 1,
+  "subject": "Mathematics",
+  "title": "Adding and taking away to 20",
+  "topic": "Addition and subtraction",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-share",
+  "grade": 1,
+  "subject": "Mathematics",
+  "title": "Sharing and grouping",
+  "topic": "Equal sharing, grouping and repeated addition",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-money",
+  "grade": 1,
+  "subject": "Mathematics",
+  "title": "Rands and cents",
+  "topic": "South African coins and notes",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-phonics",
+  "grade": 1,
+  "subject": "English Home Language",
+  "title": "Word families",
+  "topic": "Letter sounds and word families",
+  "domain": "Communication and Expression",
+  "category": "Pattern Thinking",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-sentences",
+  "grade": 1,
+  "subject": "English Home Language",
+  "title": "Writing a sentence",
+  "topic": "Capital letters and full stops",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-story",
+  "grade": 1,
+  "subject": "English Home Language",
+  "title": "Story: Sipho and the Big Seed",
+  "topic": "Beginning, middle and end",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-words",
+  "grade": 1,
+  "subject": "English Home Language",
+  "title": "Naming words and doing words",
+  "topic": "Nouns and verbs",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-healthy",
+  "grade": 1,
+  "subject": "Life Skills",
+  "title": "Healthy habits",
+  "topic": "Sleep, food, washing and exercise",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-homesafe",
+  "grade": 1,
+  "subject": "Life Skills",
+  "title": "Safe at home",
+  "topic": "Dangers at home and emergency numbers",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-plants",
+  "grade": 1,
+  "subject": "Life Skills",
+  "title": "Plants and seeds",
+  "topic": "Plant parts and what plants need",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g1-manners",
+  "grade": 1,
+  "subject": "Life Skills",
+  "title": "Kindness and good manners",
+  "topic": "Manners and responsibilities",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-1"
+ },
+ {
+  "id": "g2-addsub",
+  "grade": 2,
+  "subject": "Mathematics",
+  "title": "Tens and ones, adding and subtracting",
+  "topic": "Place value and calculations to 99",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-times",
+  "grade": 2,
+  "subject": "Mathematics",
+  "title": "Equal groups and times",
+  "topic": "Multiplication by 2, 5 and 10",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-fractions",
+  "grade": 2,
+  "subject": "Mathematics",
+  "title": "Halves, quarters and thirds",
+  "topic": "Fractions of shapes and groups",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-time",
+  "grade": 2,
+  "subject": "Mathematics",
+  "title": "Telling the time",
+  "topic": "O'clock and half past",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-digraphs",
+  "grade": 2,
+  "subject": "English Home Language",
+  "title": "Two letters, one sound",
+  "topic": "Vowel digraphs ee, oo, ai, oa",
+  "domain": "Communication and Expression",
+  "category": "Pattern Thinking",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-punct",
+  "grade": 2,
+  "subject": "English Home Language",
+  "title": "Question marks and exclamation marks",
+  "topic": "Punctuation",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-tense",
+  "grade": 2,
+  "subject": "English Home Language",
+  "title": "Yesterday, today and tomorrow",
+  "topic": "Past, present and future tense",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-poem",
+  "grade": 2,
+  "subject": "English Home Language",
+  "title": "Poem: The Year Goes Round",
+  "topic": "Reading a poem and rhyme",
+  "domain": "Communication and Expression",
+  "category": "Creativity",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-bully",
+  "grade": 2,
+  "subject": "Life Skills",
+  "title": "Friends and bullying",
+  "topic": "Myself and others",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-seasons",
+  "grade": 2,
+  "subject": "Life Skills",
+  "title": "The four seasons",
+  "topic": "Seasons and how they change things",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-animalhomes",
+  "grade": 2,
+  "subject": "Life Skills",
+  "title": "Animal homes",
+  "topic": "Where animals live",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g2-road",
+  "grade": 2,
+  "subject": "Life Skills",
+  "title": "Road safety",
+  "topic": "Crossing the road and road signs",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-2"
+ },
+ {
+  "id": "g3-place",
+  "grade": 3,
+  "subject": "Mathematics",
+  "title": "Hundreds, tens and ones",
+  "topic": "Place value to 999",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-times",
+  "grade": 3,
+  "subject": "Mathematics",
+  "title": "Times tables and dividing",
+  "topic": "Multiplication and division by 2, 3, 4, 5 and 10",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-fractions",
+  "grade": 3,
+  "subject": "Mathematics",
+  "title": "Fractions that are the same",
+  "topic": "Fractions and equivalence",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Flexible Thinking",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-measure",
+  "grade": 3,
+  "subject": "Mathematics",
+  "title": "Metres, kilograms and litres",
+  "topic": "Length, mass and capacity",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-read",
+  "grade": 3,
+  "subject": "English Home Language",
+  "title": "Information text: Amazing Ants",
+  "topic": "Reading for information",
+  "domain": "Communication and Expression",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-conj",
+  "grade": 3,
+  "subject": "English Home Language",
+  "title": "Joining sentences",
+  "topic": "Conjunctions and, but, because",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-synant",
+  "grade": 3,
+  "subject": "English Home Language",
+  "title": "Same and opposite",
+  "topic": "Synonyms and antonyms",
+  "domain": "Communication and Expression",
+  "category": "Flexible Thinking",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-speech",
+  "grade": 3,
+  "subject": "English Home Language",
+  "title": "Talking marks and short words",
+  "topic": "Speech marks and contractions",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-feelings",
+  "grade": 3,
+  "subject": "Life Skills",
+  "title": "Feelings and saying sorry",
+  "topic": "Feelings",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-recycle",
+  "grade": 3,
+  "subject": "Life Skills",
+  "title": "Reduce, re-use, recycle",
+  "topic": "Recycling and waste",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-lifecycle",
+  "grade": 3,
+  "subject": "Life Skills",
+  "title": "Life cycles",
+  "topic": "Frog, butterfly and chicken",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g3-safety",
+  "grade": 3,
+  "subject": "Life Skills",
+  "title": "Danger signs and safe places",
+  "topic": "Public safety",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-3"
+ },
+ {
+  "id": "g7-integers",
+  "grade": 7,
+  "subject": "Mathematics",
+  "title": "Integers: below zero",
+  "topic": "Ordering, adding and subtracting integers",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Flexible Thinking",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-exponents",
+  "grade": 7,
+  "subject": "Mathematics",
+  "title": "Squares, cubes and roots",
+  "topic": "Exponents",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-equations",
+  "grade": 7,
+  "subject": "Mathematics",
+  "title": "Solving simple equations",
+  "topic": "Algebraic equations",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-story",
+  "grade": 7,
+  "subject": "English Home Language",
+  "title": "Short story: The Last Bus",
+  "topic": "Plot, conflict and character",
+  "domain": "Communication and Expression",
+  "category": "Reflection",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-figurative",
+  "grade": 7,
+  "subject": "English Home Language",
+  "title": "Figures of speech",
+  "topic": "Simile, metaphor, personification, hyperbole",
+  "domain": "Communication and Expression",
+  "category": "Creativity",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-reported",
+  "grade": 7,
+  "subject": "English Home Language",
+  "title": "Direct and reported speech",
+  "topic": "Direct and indirect speech",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-biodiversity",
+  "grade": 7,
+  "subject": "Natural Sciences",
+  "title": "Biodiversity and classification",
+  "topic": "Classifying living things",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-separating",
+  "grade": 7,
+  "subject": "Natural Sciences",
+  "title": "Separating mixtures",
+  "topic": "Filtration, evaporation, distillation, chromatography",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-heat",
+  "grade": 7,
+  "subject": "Natural Sciences",
+  "title": "How heat moves",
+  "topic": "Conduction, convection and radiation",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-selfimage",
+  "grade": 7,
+  "subject": "Life Orientation",
+  "title": "Self-image and peer pressure",
+  "topic": "Development of the self",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-rights",
+  "grade": 7,
+  "subject": "Life Orientation",
+  "title": "Rights and responsibilities",
+  "topic": "The Bill of Rights",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g7-study",
+  "grade": 7,
+  "subject": "Life Orientation",
+  "title": "Study skills that work",
+  "topic": "World of work: study skills",
+  "domain": "Creativity and Metacognition",
+  "category": "Planning and Organisation",
+  "pack": "grade-7"
+ },
+ {
+  "id": "g8-algebra",
+  "grade": 8,
+  "subject": "Mathematics",
+  "title": "Algebraic expressions",
+  "topic": "Like terms and expanding brackets",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-pythagoras",
+  "grade": 8,
+  "subject": "Mathematics",
+  "title": "The Theorem of Pythagoras",
+  "topic": "Right-angled triangles",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-interest",
+  "grade": 8,
+  "subject": "Mathematics",
+  "title": "Simple and compound interest",
+  "topic": "Financial mathematics",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-poetry",
+  "grade": 8,
+  "subject": "English Home Language",
+  "title": "Poem: Morning in Our Street",
+  "topic": "Imagery, tone and mood",
+  "domain": "Communication and Expression",
+  "category": "Creativity",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-voice",
+  "grade": 8,
+  "subject": "English Home Language",
+  "title": "Active and passive voice",
+  "topic": "Voice",
+  "domain": "Communication and Expression",
+  "category": "Flexible Thinking",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-persuasive",
+  "grade": 8,
+  "subject": "English Home Language",
+  "title": "Persuasive language",
+  "topic": "Persuasive techniques and bias",
+  "domain": "Communication and Expression",
+  "category": "Reflection",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-photosynthesis",
+  "grade": 8,
+  "subject": "Natural Sciences",
+  "title": "Photosynthesis and respiration",
+  "topic": "How plants and animals use energy",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-atoms",
+  "grade": 8,
+  "subject": "Natural Sciences",
+  "title": "Atoms, elements and compounds",
+  "topic": "The particle model of matter",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-circuits",
+  "grade": 8,
+  "subject": "Natural Sciences",
+  "title": "Electric circuits",
+  "topic": "Energy transfer in electrical systems",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-careers",
+  "grade": 8,
+  "subject": "Life Orientation",
+  "title": "Career fields",
+  "topic": "World of work",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-decisions",
+  "grade": 8,
+  "subject": "Life Orientation",
+  "title": "Making safe decisions",
+  "topic": "Risky situations and decision-making",
+  "domain": "Creativity and Metacognition",
+  "category": "Problem Solving",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g8-diversity",
+  "grade": 8,
+  "subject": "Life Orientation",
+  "title": "Diversity and prejudice",
+  "topic": "Social responsibility",
+  "domain": "Creativity and Metacognition",
+  "category": "Reflection",
+  "pack": "grade-8"
+ },
+ {
+  "id": "g9-factorise",
+  "grade": 9,
+  "subject": "Mathematics",
+  "title": "Factorising expressions",
+  "topic": "Common factors and difference of squares",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-graphs",
+  "grade": 9,
+  "subject": "Mathematics",
+  "title": "Straight-line graphs",
+  "topic": "Linear graphs: gradient and y-intercept",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-probability",
+  "grade": 9,
+  "subject": "Mathematics",
+  "title": "Probability",
+  "topic": "Chance and outcomes",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-argument",
+  "grade": 9,
+  "subject": "English Home Language",
+  "title": "Reading an argument",
+  "topic": "Argumentative texts",
+  "domain": "Communication and Expression",
+  "category": "Reflection",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-summary",
+  "grade": 9,
+  "subject": "English Home Language",
+  "title": "Writing a summary",
+  "topic": "Summary skills",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-concord",
+  "grade": 9,
+  "subject": "English Home Language",
+  "title": "Subject-verb agreement",
+  "topic": "Concord",
+  "domain": "Communication and Expression",
+  "category": "Flexible Thinking",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-cells",
+  "grade": 9,
+  "subject": "Natural Sciences",
+  "title": "Cells, tissues and systems",
+  "topic": "Cells as the basic units of life",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-acids",
+  "grade": 9,
+  "subject": "Natural Sciences",
+  "title": "Acids, bases and pH",
+  "topic": "Acids and bases",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-rocks",
+  "grade": 9,
+  "subject": "Natural Sciences",
+  "title": "The rock cycle and mining",
+  "topic": "The lithosphere",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-subjects",
+  "grade": 9,
+  "subject": "Life Orientation",
+  "title": "Choosing Grade 10 subjects",
+  "topic": "World of work: subject choice",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-goals",
+  "grade": 9,
+  "subject": "Life Orientation",
+  "title": "Setting SMART goals",
+  "topic": "Development of the self: goal setting",
+  "domain": "Creativity and Metacognition",
+  "category": "Planning and Organisation",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g9-community",
+  "grade": 9,
+  "subject": "Life Orientation",
+  "title": "Making a difference in your community",
+  "topic": "Social and environmental responsibility",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-9"
+ },
+ {
+  "id": "g10-exponents",
+  "grade": 10,
+  "subject": "Mathematics",
+  "title": "Laws of exponents",
+  "topic": "Exponents",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-trig",
+  "grade": 10,
+  "subject": "Mathematics",
+  "title": "Trigonometric ratios",
+  "topic": "Sin, cos and tan",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-stats",
+  "grade": 10,
+  "subject": "Mathematics",
+  "title": "Mean, median and spread",
+  "topic": "Statistics",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-poetry",
+  "grade": 10,
+  "subject": "English Home Language",
+  "title": "Poem: Rank",
+  "topic": "Analysing poetry",
+  "domain": "Communication and Expression",
+  "category": "Creativity",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-visual",
+  "grade": 10,
+  "subject": "English Home Language",
+  "title": "Reading visual texts",
+  "topic": "Visual literacy: adverts and cartoons",
+  "domain": "Communication and Expression",
+  "category": "Reflection",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-essay",
+  "grade": 10,
+  "subject": "English Home Language",
+  "title": "Essay types",
+  "topic": "Narrative, descriptive, argumentative and reflective essays",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-mitosis",
+  "grade": 10,
+  "subject": "Life Sciences",
+  "title": "Cell division: mitosis",
+  "topic": "The cell cycle",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-ecosystems",
+  "grade": 10,
+  "subject": "Life Sciences",
+  "title": "Energy flow in ecosystems",
+  "topic": "Biosphere to ecosystems",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-transport",
+  "grade": 10,
+  "subject": "Life Sciences",
+  "title": "Transport in plants",
+  "topic": "Xylem, phloem and transpiration",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-stress",
+  "grade": 10,
+  "subject": "Life Orientation",
+  "title": "Managing stress",
+  "topic": "Development of the self in society",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-rights",
+  "grade": 10,
+  "subject": "Life Orientation",
+  "title": "Human rights in action",
+  "topic": "Democracy and human rights",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-funding",
+  "grade": 10,
+  "subject": "Life Orientation",
+  "title": "Paying for further study",
+  "topic": "Careers and career choices: funding",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g11-quadratics",
+  "grade": 11,
+  "subject": "Mathematics",
+  "title": "Solving quadratic equations",
+  "topic": "Equations and inequalities",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-depreciation",
+  "grade": 11,
+  "subject": "Mathematics",
+  "title": "Growth and decay",
+  "topic": "Finance: depreciation and compound growth",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-circles",
+  "grade": 11,
+  "subject": "Mathematics",
+  "title": "Circle geometry",
+  "topic": "Euclidean geometry: circle theorems",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-drama",
+  "grade": 11,
+  "subject": "English Home Language",
+  "title": "Drama: The Inheritance",
+  "topic": "Dramatic techniques",
+  "domain": "Communication and Expression",
+  "category": "Reflection",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-transactional",
+  "grade": 11,
+  "subject": "English Home Language",
+  "title": "CV and covering letter",
+  "topic": "Transactional writing",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-critical",
+  "grade": 11,
+  "subject": "English Home Language",
+  "title": "Critical language awareness",
+  "topic": "Denotation, connotation and manipulation",
+  "domain": "Communication and Expression",
+  "category": "Flexible Thinking",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-nutrition",
+  "grade": 11,
+  "subject": "Life Sciences",
+  "title": "Human digestion",
+  "topic": "Animal nutrition",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-population",
+  "grade": 11,
+  "subject": "Life Sciences",
+  "title": "Population ecology",
+  "topic": "Population size and interactions",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-impact",
+  "grade": 11,
+  "subject": "Life Sciences",
+  "title": "Human impact on the environment",
+  "topic": "Climate, water and biodiversity",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-media",
+  "grade": 11,
+  "subject": "Life Orientation",
+  "title": "Media and democracy",
+  "topic": "Democracy and human rights: the role of the media",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-apply",
+  "grade": 11,
+  "subject": "Life Orientation",
+  "title": "Applying for study",
+  "topic": "Careers and career choices: admission and applications",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-relationships",
+  "grade": 11,
+  "subject": "Life Orientation",
+  "title": "Healthy relationships",
+  "topic": "Development of the self in society",
+  "domain": "Creativity and Metacognition",
+  "category": "Emotional Readiness",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g12-sequences",
+  "grade": 12,
+  "subject": "Mathematics",
+  "title": "Arithmetic and geometric sequences",
+  "topic": "Number patterns, sequences and series",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-calculus",
+  "grade": 12,
+  "subject": "Mathematics",
+  "title": "Introduction to differentiation",
+  "topic": "Differential calculus",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-annuities",
+  "grade": 12,
+  "subject": "Mathematics",
+  "title": "Loans and savings plans",
+  "topic": "Finance: annuities",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-novel",
+  "grade": 12,
+  "subject": "English Home Language",
+  "title": "Novel extract: The Year of Small Rains",
+  "topic": "Character, symbol and theme",
+  "domain": "Communication and Expression",
+  "category": "Reflection",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-comprehension",
+  "grade": 12,
+  "subject": "English Home Language",
+  "title": "Exam comprehension skills",
+  "topic": "Answering comprehension questions",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-speech",
+  "grade": 12,
+  "subject": "English Home Language",
+  "title": "Formal speech and interviews",
+  "topic": "Listening and speaking",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-dna",
+  "grade": 12,
+  "subject": "Life Sciences",
+  "title": "DNA and protein synthesis",
+  "topic": "DNA: the code of life",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Pattern Thinking",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-genetics",
+  "grade": 12,
+  "subject": "Life Sciences",
+  "title": "Genetics and inheritance",
+  "topic": "Monohybrid crosses",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-evolution",
+  "grade": 12,
+  "subject": "Life Sciences",
+  "title": "Evolution by natural selection",
+  "topic": "Evolution",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-exams",
+  "grade": 12,
+  "subject": "Life Orientation",
+  "title": "Exam writing strategies",
+  "topic": "Study skills: exam preparation",
+  "domain": "Creativity and Metacognition",
+  "category": "Planning and Organisation",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-afterschool",
+  "grade": 12,
+  "subject": "Life Orientation",
+  "title": "Life after school",
+  "topic": "Careers: unemployment, entrepreneurship and change",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Flexible Thinking",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-citizen",
+  "grade": 12,
+  "subject": "Life Orientation",
+  "title": "Responsible citizenship",
+  "topic": "Democracy and human rights: voting and participation",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "pack": "grade-12"
+ },
+ {
+  "id": "ad-forms",
+  "grade": 13,
+  "subject": "English",
+  "title": "Filling in official forms",
+  "topic": "Reading and completing forms",
+  "domain": "Communication and Expression",
+  "category": "Planning and Organisation",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-email",
+  "grade": 13,
+  "subject": "English",
+  "title": "Writing a professional email",
+  "topic": "Workplace writing",
+  "domain": "Communication and Expression",
+  "category": "Communication",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-lease",
+  "grade": 13,
+  "subject": "English",
+  "title": "Reading a lease agreement",
+  "topic": "Reading contracts",
+  "domain": "Communication and Expression",
+  "category": "Problem Solving",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-budget",
+  "grade": 13,
+  "subject": "Mathematics",
+  "title": "Making a monthly budget",
+  "topic": "Personal finance",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Planning and Organisation",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-payslip",
+  "grade": 13,
+  "subject": "Mathematics",
+  "title": "Reading a payslip",
+  "topic": "Gross pay, deductions and net pay",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-bestbuy",
+  "grade": 13,
+  "subject": "Mathematics",
+  "title": "Finding the best buy",
+  "topic": "Unit prices and comparing value",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-scams",
+  "grade": 13,
+  "subject": "Information and Communication Technology",
+  "title": "Staying safe from scams",
+  "topic": "Online safety",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-spreadsheet",
+  "grade": 13,
+  "subject": "Information and Communication Technology",
+  "title": "Spreadsheet basics",
+  "topic": "Using a spreadsheet",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Planning and Organisation",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-jobsearch",
+  "grade": 13,
+  "subject": "Life and work skills",
+  "title": "Finding work",
+  "topic": "Job search",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-workrights",
+  "grade": 13,
+  "subject": "Life and work skills",
+  "title": "Your rights at work",
+  "topic": "Basic Conditions of Employment",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-credit",
+  "grade": 13,
+  "subject": "Life and work skills",
+  "title": "Credit and debt",
+  "topic": "Borrowing wisely",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "pack": "adult"
+ },
+ {
+  "id": "ad-independent",
+  "grade": 13,
+  "subject": "Life and work skills",
+  "title": "Living independently",
+  "topic": "Running a household",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "pack": "adult"
+ }
+]
