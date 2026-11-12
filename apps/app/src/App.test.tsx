@@ -419,3 +419,31 @@ describe("adding a child", () => {
     expect(screen.getByText("NCF, Grade R")).toBeInTheDocument();
   });
 });
+
+describe("rule review", () => {
+  it("lets specialists review each adaptation rule and see colleagues' reviews; families don't review", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: "Review the adaptation rules" }));
+    expect(await screen.findByRole("heading", { name: "Review the adaptation rules" })).toBeInTheDocument();
+    expect(screen.getAllByRole("heading", { level: 2 })).toHaveLength(7);
+    await user.click(screen.getByRole("button", { name: "Save my review of Shorter lessons" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("Choose your view first.");
+    const shorter = within(screen.getByRole("region", { name: "Shorter lessons" }));
+    await user.click(shorter.getByRole("radio", { name: "Needs a change" }));
+    await user.type(shorter.getByLabelText(/What would you change/), "Start with 4 questions, not 3.");
+    await user.click(shorter.getByRole("button", { name: "Save my review of Shorter lessons" }));
+    expect(await screen.findByText('Review of "Shorter lessons" saved. Thank you.')).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signInDemo(user, "Demo therapist");
+    await user.click(await screen.findByRole("button", { name: "Review the adaptation rules" }));
+    const seen = within(await screen.findByRole("region", { name: "Shorter lessons" }));
+    await user.click(seen.getByText("1 other review"));
+    expect(seen.getByText(/Demo Specialist/)).toBeInTheDocument();
+    expect(seen.getByText(/Needs a change\. "Start with 4 questions, not 3\."/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signInDemo(user, "Demo parent");
+    await screen.findByRole("heading", { name: "Your children" });
+    expect(screen.queryByRole("button", { name: "Review the adaptation rules" })).toBeNull();
+  });
+});

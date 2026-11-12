@@ -100,6 +100,9 @@ export interface SessionPlan { steps: PlanStep[]; by: string; at: string }
 /** A learner said they feel unsafe. Sent to the server for the safeguarding lead; never pulled back to devices. */
 export interface ConcernRow { id: string; learnerId: string; at: string; where: "home" | "lesson" | "talk board" | "tell us" | "help" }
 
+/** A specialist's view of one adaptation rule. Id: "<rule>:<user id>", one per rule per person. */
+export interface RuleReview { id: string; rule: string; verdict: "agree" | "change" | "unsure"; comment: string; by: string; byName: string; profession: string; date: string }
+
 export type Tables = {
   accounts: Account;
   learners: Learner;
@@ -113,6 +116,7 @@ export type Tables = {
   observations: Observation;
   notes: Note;
   learner_settings: LearnerSettings;
+  rule_reviews: RuleReview;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings", "rule_reviews"];

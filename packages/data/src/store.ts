@@ -1,6 +1,6 @@
 import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, RuleReview, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -170,6 +170,18 @@ export class Session {
     if (steps && steps.length > 5) throw new Error("A plan has at most 5 steps.");
     const plan = steps?.length ? { steps, by: this.me.name, at: now() } : null;
     return this.changeSettings(learnerId, { plan }, plan ? `Next session planned: ${steps!.map(x => x.label).join(", ")}` : "Next-session plan cleared");
+  }
+
+  // ---------- Specialists review the adaptation rules ----------
+  get canReviewRules() { return this.me.role === "teacher" || this.me.role === "specialist"; }
+  /** Reviews this device has: the adult's own, and their colleagues' (the server sends only those). */
+  async ruleReviews() { return this.canReviewRules ? (await this.kv.all("rule_reviews")).sort((a, b) => a.date.localeCompare(b.date)) : []; }
+  async reviewRule(rule: string, verdict: RuleReview["verdict"], comment: string) {
+    if (!this.canReviewRules) throw new AccessDenied("reviewing the adaptation rules (teachers and specialists only)");
+    const text = comment.trim().slice(0, 800);
+    const r: RuleReview = { id: `${rule}:${this.me.id}`, rule, verdict, comment: text, by: this.me.id, byName: this.me.name, profession: this.me.profession ?? "", date: now().slice(0, 10) };
+    await this.store.write("rule_reviews", r);
+    return r;
   }
 
   // ---------- Support plan: goals, observations and notes ----------

@@ -12,6 +12,17 @@ export const ADAPT = {
 export type Rule = "sooner" | "shorter" | "breaks" | "fewer";
 export const ADAPT_NAMES: Record<Rule, string> = { sooner: "Help is offered sooner", shorter: "Shorter lessons (3 questions)", breaks: `A break is offered every ${ADAPT.breakEvery} questions`, fewer: "Questions start with 2 choices" };
 
+/** The rules as specialists review them (docs/adaptation-rules.md): key, name, and what triggers them. */
+export const RULES_FOR_REVIEW: [key: string, name: string, text: string][] = [
+  ["sooner", "Help sooner", `Help used on ${ADAPT.helpShare * 100}% or more of at least ${ADAPT.minQs} questions in the last ${ADAPT.window} session days: help is offered after 1 wrong answer instead of 2, and after 45 seconds instead of 90.`],
+  ["shorter", "Shorter lessons", `Moved on without an answer ${ADAPT.skips} or more times in the last ${ADAPT.window} session days: lessons have 3 questions. The learner can ask for the full lesson.`],
+  ["fewer", "Fewer choices to start", `Chose "make it easier" on ${ADAPT.easierMin} of the last ${ADAPT.easierOf} questions in one area: questions there start with 2 choices. The learner can show them all.`],
+  ["breaks", "Regular break offers", `Chose a break on ${ADAPT.breakDays} or more recent days: a break is offered every ${ADAPT.breakEvery} questions.`],
+  ["slow", "Take your time", `${ADAPT.quickMin} wrong answers within ${ADAPT.quickMs / 1000} seconds in one session: a one-time gentle reminder to read the question again.`],
+  ["up", "Suggest the next level", `${ADAPT.moreShare * 100}% of the last ${ADAPT.moreQs} questions at a level answered alone, on ${ADAPT.minDays} or more days: an adult is asked whether to move up. Never automatic.`],
+  ["down", "Suggest the level below", `Half of the last ${ADAPT.lessQs} questions at a level not yet shown or made easier, on ${ADAPT.minDays} or more days: an adult is asked. Never automatic.`]
+];
+
 export type Status = "alone" | "support" | "notyet" | "open";
 /** e: chose "make it easier"; a: started with fewer choices; s: moved on without an answer; b: chose a break; q: quick wrong answers. */
 export interface Flags { e?: 1; a?: 1; s?: 1; b?: 1; q?: number }

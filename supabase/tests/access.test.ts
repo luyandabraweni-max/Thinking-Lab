@@ -224,3 +224,17 @@ describe("school admins", () => {
     expect(await as(db, ADMIN, q => q("select id from health.medications"))).toEqual([]);
   });
 });
+
+describe("rule reviews", () => {
+  it("are written by teachers and specialists, one per rule each, and seen by colleagues but not families", async () => {
+    const row = (verdict: string, comment = "") => ({ id: "x", rule: "shorter", verdict, comment });
+    expect((await push(SPECIALIST, [{ id: uuid(70), table: "rule_reviews", row: row("agree") }])).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, [{ id: uuid(71), table: "rule_reviews", row: row("change", "Start with 4") }])).applied).toHaveLength(1); // changes their own
+    expect((await push(PARENT, [{ id: uuid(72), table: "rule_reviews", row: row("agree") }])).rejected).toHaveLength(1);
+    const mine = (await pull(SPECIALIST)).rule_reviews as unknown as { rule: string; verdict: string; comment: string }[];
+    expect(mine).toHaveLength(1);
+    expect(mine[0]).toMatchObject({ rule: "shorter", verdict: "change", comment: "Start with 4" });
+    expect((await pull(PARENT)).rule_reviews).toEqual([]);
+    expect((await pull(STRANGER)).rule_reviews).toEqual([]);
+  });
+});

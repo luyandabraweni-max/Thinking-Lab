@@ -93,7 +93,7 @@ To connect to Supabase:
 **Next**, in the order of the system design's Phase 0:
 1. Port the learner flows still missing: feelings check-in, battery check-in, breaks, talk board, avatar, switch scanning, pointer resting, answering by voice in lessons, and recorded voice clips. Story Weaver's "Me" uses the learner's nickname until the avatar is ported.
 2. Sync My way preferences between devices (today they're saved on the device).
-3. Port the rule review into the team module. Goals, observations, notes, reports, development charts, the next-session plan, level suggestions and the admin screen are done.
+3. Team module ported: rule review, goals, observations, notes, reports, development charts, the next-session plan, level suggestions and the admin screen are done.
 4. Adding staff to an organisation: today staff join a school only when an admin adds their membership in the database.
 5. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.
 6. Accessibility tests (axe) for the new app in every display mode, as the live site has.

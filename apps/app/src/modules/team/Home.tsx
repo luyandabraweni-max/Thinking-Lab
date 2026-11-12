@@ -1,8 +1,9 @@
 import { type Account, type Learner } from "@tl/data";
 import { Button, Card } from "@tl/ui";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { useServices } from "../../platform";
 // The form brings the curriculum lists with it, so it loads when shown.
+const RuleReview = lazy(() => import("./RuleReview").then(m => ({ default: m.RuleReview })));
 const AddChild = lazy(() => import("./AddChild").then(m => ({ default: m.AddChild })));
 import { AdminHome } from "./Admin";
 import { SafeguardingPanel } from "./Safeguarding";
@@ -18,10 +19,13 @@ export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: stri
     return Promise.all(ls.map(async L => ({ L, unread: await s.unread(L.id) })));
   }, [store, me]);
 
+  const [reviewing, setReviewing] = useState(false);
   if (me.role === "org_admin" || me.role === "site_admin") return <AdminHome me={me} />;
+  if (reviewing) return <Suspense fallback={<Card><p>Loading…</p></Card>}><RuleReview me={me} onBack={() => setReviewing(false)} /></Suspense>;
+  const professional = me.role === "specialist" || me.role === "teacher";
 
   return (<>
-    {me.role === "specialist" || me.role === "teacher" ? <SafeguardingPanel me={me} /> : null}
+    {professional ? <SafeguardingPanel me={me} /> : null}
     <Card>
       <h1>{me.role === "guardian" ? "Your children" : "Your learners"}</h1>
       {!rows ? <p>Loading…</p> : rows.length === 0 ? <p className="tl-muted">{me.role === "guardian" ? "No children yet. Add your child below to get started." : "No families have shared a learner with you yet."}</p> :
@@ -33,6 +37,7 @@ export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: stri
               <div className="tl-row"><Button variant="primary" onClick={() => onOpen(L.id)} aria-label={`Open ${L.nickname}${news(unread)}`}>Open{news(unread)}</Button></div>
             </Card></li>))}
         </ul>}
+      {professional ? <div className="tl-row"><Button onClick={() => setReviewing(true)}><span aria-hidden="true">📝</span>Review the adaptation rules</Button></div> : null}
       {me.role === "guardian" && rows ? <Suspense fallback={null}><AddChild me={me} first={rows.length === 0} onAdded={reload} /></Suspense> : null}
     </Card>
   </>);
