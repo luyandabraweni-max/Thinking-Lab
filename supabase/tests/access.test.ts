@@ -160,6 +160,14 @@ describe("learner settings", () => {
     expect((await push(STRANGER, [{ id: uuid(62), table: "learner_settings", row: settings({ adaptAuto: false }) }])).rejected).toHaveLength(1);
     expect((await pull(STRANGER)).learner_settings).toEqual([]);
   });
+  it("carry the next-session plan until the learner takes it, and refuse plans longer than 5 steps", async () => {
+    const step = { key: "x:light", pic: "☀️", label: "Light the Village" }, plan = { steps: [step], by: "Demo Specialist", at: "2026-11-12T08:00:00Z" };
+    expect((await push(SPECIALIST, [{ id: uuid(64), table: "learner_settings", row: settings({ plan }) }])).applied).toHaveLength(1);
+    expect(((await pull(PARENT)).learner_settings as unknown as { plan: unknown }[])[0]!.plan).toEqual(plan);
+    expect((await push(PARENT, [{ id: uuid(65), table: "learner_settings", row: settings({ plan: null, lastPlan: { ...plan, used: "2026-11-13" } }) }])).applied).toHaveLength(1);
+    expect(((await pull(SPECIALIST)).learner_settings as unknown as { plan: unknown; lastPlan: { used: string } }[])[0]).toMatchObject({ plan: null, lastPlan: { used: "2026-11-13" } });
+    expect((await push(SPECIALIST, [{ id: uuid(66), table: "learner_settings", row: settings({ plan: { ...plan, steps: Array(6).fill(step) } }) }])).rejected).toHaveLength(1);
+  });
   it("refuses kinds of data the server doesn't know", async () => {
     expect((await push(PARENT, [{ id: uuid(63), table: "drop table", row: {} }])).rejected[0]!.reason).toMatch(/unknown table/);
   });

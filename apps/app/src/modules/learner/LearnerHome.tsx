@@ -4,10 +4,11 @@ import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 import { useServices, type DeviceLearner } from "../../platform";
 import type { Row } from "@tl/adaptation";
 import type { Unit, WordHelp } from "@tl/content";
-import { defaultSettings, type ConcernRow, type LearnerSettings, type LearnerSpace, type Message } from "@tl/data";
+import { defaultSettings, type ConcernRow, type LearnerSettings, type LearnerSpace, type Message, type PlanStep } from "@tl/data";
 import { CaptionBar, MyWay, usePrefs, useSay } from "../my-way";
 import { UNSAFE, UnsafeDialog } from "../safety";
 import type { GameId, LabRun } from "../thinking-lab";
+import { PLAN_KINDS, PLAN_MAX } from "./plan";
 
 // Lessons and games load when the learner opens them, so the app starts fast on low-end phones.
 const LearnHome = lazy(() => import("../learning").then(m => ({ default: m.LearnHome })));
@@ -31,6 +32,7 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
   const [screen, setScreen] = useState<"home" | "lab" | "learn" | "myway" | GameId>("home");
   const [settings, setSettings] = useState<LearnerSettings>(defaultSettings(learner.learnerId));
   const [lesson, setLesson] = useState<{ unit: Unit; words?: WordHelp; history: Row[] } | null>(null), [unsafe, setUnsafe] = useState(false);
+  const [plan, setPlan] = useState<{ steps: PlanStep[]; by: string | null; at: number } | null>(null);
   const raiseConcern = (where: ConcernRow["where"]) => { setUnsafe(true); void space?.reportConcern(where); };
   const openLesson = async (id: string) => {
     if (!space) return;
@@ -44,6 +46,8 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
       const sp = await store.learnerSpace(adult, learner.learnerId);
       const [box, st] = await Promise.all([sp.inbox(), sp.settings()]);
       setSettings(st); setInbox(box); setSpace(sp); // settings first, so the learner never sees the old levels
+      const made = await sp.takePlan(); // an adult's plan for this session is used once
+      if (made) setPlan({ steps: made.steps, by: made.by, at: 0 });
       await sp.markRead();
     })().catch((e: Error) => setNote(e.message));
   }, [store, learner]);
@@ -57,11 +61,22 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
     if (screen === "lab") return <Suspense fallback={<Loading />}><LabHome W={run.W} onPick={setScreen} onBack={() => setScreen("home")} /></Suspense>;
     return <Suspense fallback={<Loading />}><Exercise key={screen} run={run} onSave={a => space.record(a)} onBack={() => setScreen("lab")} /></Suspense>;
   }
+  const startStep = () => {
+    const k = plan?.steps[plan.at]?.key;
+    if (!plan || !k) return;
+    setPlan({ ...plan, at: plan.at + 1 });
+    if (k === "finish") onDone();
+    else if (k === "lesson") setScreen("learn");
+    else if (k === "lab") setScreen("lab");
+    else if (k.startsWith("x:")) setScreen(k.slice(2) as GameId);
+    else if (k.startsWith("u:")) void openLesson(k.slice(2));
+  };
   const reply = async (body: string) => { if (!space) return; await space.reply(body); setText(""); setInbox(await space.inbox()); setNote("Sent!"); };
   return (
     <Card>
       <h1>Hello, {learner.nickname}</h1>
       <div className="row"><Button variant="primary" onClick={() => setScreen("learn")}>Learn</Button><Button variant="primary" onClick={() => setScreen("lab")}>Thinking Lab</Button><Button onClick={() => setScreen("myway")}><span aria-hidden="true">🎛️</span>My way</Button></div>
+      <MyPlan plan={plan} onStart={startStep} onSave={steps => { setPlan({ steps, by: null, at: 0 }); say(`Your plan: ${steps.map(x => x.label).join(", ")}.`); }} />
       <h2>Messages for you</h2>
       {inbox.length ? <ol className="tl-stack" style={{ listStyle: "none", padding: 0, margin: 0 }}>{inbox.map(m => <li key={m.id}><Card as="article"><p className="tl-muted"><b>{m.fromRole === "learner" ? "You" : m.fromName}</b></p><p>{m.body}</p></Card></li>)}</ol>
         : <p className="tl-muted">No messages yet.</p>}
@@ -74,4 +89,25 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
       <div className="tl-row"><Button onClick={onDone}>I'm done</Button><Button onClick={() => raiseConcern("home")}><span aria-hidden="true">🛟</span>{UNSAFE}</Button></div>
     </Card>
   );
+}
+
+function MyPlan({ plan, onStart, onSave }: { plan: { steps: PlanStep[]; by: string | null; at: number } | null; onStart: () => void; onSave: (steps: PlanStep[]) => void }) {
+  const [making, setMaking] = useState(false), [pick, setPick] = useState<PlanStep[]>([]);
+  if (making) return (
+    <section className="tl-stack" aria-labelledby="mpH"><h2 id="mpH">Make my plan</h2>
+      <p className="tl-muted">Tap the things you want to do, in order. Up to {PLAN_MAX}.</p>
+      <div className="choices">{PLAN_KINDS.map(k => <button key={k.key} className="choice" disabled={pick.length >= PLAN_MAX} onClick={() => setPick([...pick, k])}><span className="em" aria-hidden="true">{k.pic}</span><span className="lbl">{k.label}</span></button>)}</div>
+      <ol className="plan-strip" aria-label="Your plan so far">{pick.length ? pick.map((k, i) => <li key={i}><span className="em" aria-hidden="true">{k.pic}</span><span>{k.label}</span></li>) : <li className="muted">Nothing yet</li>}</ol>
+      <div className="tl-row"><Button variant="primary" disabled={!pick.length} onClick={() => { onSave(pick); setMaking(false); setPick([]); }}>Save my plan</Button>
+        {pick.length ? <Button onClick={() => setPick(pick.slice(0, -1))}>Take the last one off</Button> : null}<Button variant="quiet" onClick={() => setMaking(false)}>Close</Button></div>
+    </section>);
+  if (!plan) return <div className="tl-row"><Button onClick={() => setMaking(true)}><span aria-hidden="true">🗺️</span>Make my plan</Button></div>;
+  const next = plan.steps[plan.at];
+  return (
+    <section className="tl-stack" aria-labelledby="mpH"><h2 id="mpH">My plan today</h2>
+      {plan.by ? <p className="note"><span aria-hidden="true">🧑‍🏫</span> {plan.by} made this plan for you.</p> : null}
+      <ol className="plan-strip" aria-label="My plan today">{plan.steps.map((k, i) => <li key={i} className={i < plan.at ? "done" : i === plan.at ? "now" : ""} aria-current={i === plan.at ? "step" : undefined}>
+        <span className="em" aria-hidden="true">{k.pic}</span><span><span className="tl-visually-hidden">{i < plan.at ? "Done: " : i === plan.at ? "Now: " : "Later: "}</span>{k.label}</span></li>)}</ol>
+      <div className="tl-row">{next ? <Button variant="primary" onClick={onStart}>Start: {next.label}</Button> : <p>You finished your plan.</p>}<Button variant="quiet" onClick={() => setMaking(true)}>Change my plan</Button></div>
+    </section>);
 }

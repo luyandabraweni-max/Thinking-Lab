@@ -8,6 +8,7 @@ import { Goals, Notes } from "./Plan";
 // Reports and adaptation bring the games and lesson catalogue with them, so they load when opened.
 const Adapting = lazy(() => import("./Adapting").then(m => ({ default: m.Adapting })));
 const Progress = lazy(() => import("./Progress").then(m => ({ default: m.Progress })));
+const NextSession = lazy(() => import("./NextSession").then(m => ({ default: m.NextSession })));
 const Report = lazy(() => import("./Report").then(m => ({ default: m.Report })));
 import { Sharing } from "./Sharing";
 import { useLoad } from "./use-load";
@@ -20,7 +21,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
   if (error) return <Card><p className="tl-error">{error}</p><Button onClick={onBack}>Back</Button></Card>;
   if (!learner) return <Card><p>Loading…</p></Card>;
   const team = me.role === "teacher" || me.role === "specialist";
-  const tabs = [{ id: "messages", label: "Messages" }, { id: "goals", label: "Goals" }, ...(team ? [{ id: "notes", label: "Notes" }] : []), { id: "progress", label: "Progress" }, { id: "adapting", label: "Adapting" }, { id: "report", label: "Report" }, { id: "health", label: "Health" }, { id: "sharing", label: team ? "Team" : "Sharing" }];
+  const tabs = [{ id: "messages", label: "Messages" }, { id: "goals", label: "Goals" }, ...(team ? [{ id: "notes", label: "Notes" }] : []), { id: "progress", label: "Progress" }, { id: "next", label: "Next session" }, { id: "adapting", label: "Adapting" }, { id: "report", label: "Report" }, { id: "health", label: "Health" }, { id: "sharing", label: team ? "Team" : "Sharing" }];
   return (
     <Card>
       <div className="tl-row"><Button variant="quiet" onClick={onBack}>All learners</Button></div>
@@ -33,7 +34,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
       </div> : null}
       <Tabs label={`${learner.nickname}'s sections`} tabs={tabs} current={tab} onChange={setTab} />
       <TabPanel id={tab}>
-        {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "goals" ? <Goals me={me} learner={learner} /> : tab === "notes" ? <Notes me={me} learner={learner} /> : tab === "progress" ? <Suspense fallback={<p>Loading…</p>}><Progress me={me} learner={learner} /></Suspense> : tab === "adapting" ? <Suspense fallback={<p>Loading…</p>}><Adapting me={me} learner={learner} /></Suspense> : tab === "report" ? <Suspense fallback={<p>Loading…</p>}><Report me={me} learner={learner} /></Suspense> : tab === "health" ? <Health me={me} learner={learner} /> : <Sharing me={me} learner={learner} onChanged={reload} />}
+        {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "goals" ? <Goals me={me} learner={learner} /> : tab === "notes" ? <Notes me={me} learner={learner} /> : tab === "progress" ? <Suspense fallback={<p>Loading…</p>}><Progress me={me} learner={learner} /></Suspense> : tab === "next" ? <Suspense fallback={<p>Loading…</p>}><NextSession me={me} learner={learner} /></Suspense> : tab === "adapting" ? <Suspense fallback={<p>Loading…</p>}><Adapting me={me} learner={learner} /></Suspense> : tab === "report" ? <Suspense fallback={<p>Loading…</p>}><Report me={me} learner={learner} /></Suspense> : tab === "health" ? <Health me={me} learner={learner} /> : <Sharing me={me} learner={learner} onChanged={reload} />}
       </TabPanel>
     </Card>
   );

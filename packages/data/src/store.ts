@@ -1,6 +1,6 @@
 import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, ConcernRow, Consent, Goal, LearnerSettings, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -62,6 +62,13 @@ export class LearnerSpace {
   }
   /** How the adults around the learner set the adaptation rules and levels. */
   settings() { return settingsOf(this.store.kv, this.learner.id); }
+  /** The plan an adult made for this session, if there is one. Taking it clears it, so it is used once. */
+  async takePlan(): Promise<SessionPlan | null> {
+    const cur = await this.settings();
+    if (!cur.plan?.steps.length) return null;
+    await this.store.write("learner_settings", { ...cur, plan: null, lastPlan: { ...cur.plan, used: now().slice(0, 10) } });
+    return cur.plan;
+  }
   /** Earlier work, oldest first: the history the adaptation rules read. */
   async history() {
     return (await this.store.kv.all("attempts")).filter(a => a.learnerId === this.learner.id).sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
@@ -157,6 +164,12 @@ export class Session {
     const next: LearnerSettings = { ...cur, ...patch, log: [...cur.log, { date: now().slice(0, 10), text: logText, by: this.me.name }] };
     await this.store.write("learner_settings", next);
     return next;
+  }
+  /** Plan the learner's next session: up to 5 steps, or none to clear it. */
+  async setPlan(learnerId: string, steps: PlanStep[] | null) {
+    if (steps && steps.length > 5) throw new Error("A plan has at most 5 steps.");
+    const plan = steps?.length ? { steps, by: this.me.name, at: now() } : null;
+    return this.changeSettings(learnerId, { plan }, plan ? `Next session planned: ${steps!.map(x => x.label).join(", ")}` : "Next-session plan cleared");
   }
 
   // ---------- Support plan: goals, observations and notes ----------

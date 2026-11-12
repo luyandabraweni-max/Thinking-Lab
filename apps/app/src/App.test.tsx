@@ -342,3 +342,47 @@ describe("progress", () => {
     expect(screen.queryByText(/Try the pattern activity again/)).toBeNull();
   });
 });
+
+describe("next-session plan", () => {
+  it("lets the team plan the next session, which the learner sees once as My plan today", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Next session" }));
+    await user.selectOptions(await screen.findByLabelText("Add a step"), "x:light");
+    await user.click(screen.getByRole("button", { name: "Add to the plan" }));
+    await user.selectOptions(screen.getByLabelText("Add a step"), "finish");
+    await user.click(screen.getByRole("button", { name: "Add to the plan" }));
+    expect(await screen.findByRole("list", { name: "Brave Meerkat's plan for next session" })).toHaveTextContent(/Light the Village.*Finish/);
+    // Open the learner's space on this device
+    await user.click(screen.getByRole("tab", { name: "Team" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    expect(await screen.findByRole("heading", { name: "My plan today" })).toBeInTheDocument();
+    expect(screen.getByText(/Demo Specialist made this plan for you/)).toBeInTheDocument();
+    expect((await store.kv.all("learner_settings"))[0]).toMatchObject({ plan: null, lastPlan: { by: "Demo Specialist" } }); // used once
+    await user.click(screen.getByRole("button", { name: "Start: Light the Village" }));
+    expect(await screen.findByRole("heading", { name: "Light the Village" })).toBeInTheDocument();
+  });
+  it("lets the learner make their own plan", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Make my plan" }));
+    const maker = within(screen.getByRole("region", { name: "Make my plan" }));
+    await user.click(maker.getByRole("button", { name: "Thinking Lab" }));
+    await user.click(maker.getByRole("button", { name: "Finish" }));
+    await user.click(screen.getByRole("button", { name: "Save my plan" }));
+    expect(screen.getByRole("list", { name: "My plan today" })).toHaveTextContent(/Thinking Lab.*Finish/);
+    expect(screen.getByRole("button", { name: "Start: Thinking Lab" })).toBeInTheDocument();
+  });
+});

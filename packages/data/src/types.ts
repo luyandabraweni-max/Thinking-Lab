@@ -88,7 +88,14 @@ export interface LearnerSettings {
   levels: Partial<Record<string, number>>; // learning level per area
   decisions: Record<string, { d: "yes" | "no"; at: number }>;
   log: { date: string; text: string; by: string }[];
+  /** The next session's plan, set by an adult; the learner takes it when their next session starts. */
+  plan?: SessionPlan | null;
+  /** The plan the learner last took, and when. */
+  lastPlan?: (SessionPlan & { used: string }) | null;
 }
+/** One step: a kind ("lesson", "lab", "finish"), a game ("x:light") or a lesson ("u:<unit id>"), with what the learner sees. */
+export interface PlanStep { key: string; pic: string; label: string }
+export interface SessionPlan { steps: PlanStep[]; by: string; at: string }
 
 /** A learner said they feel unsafe. Sent to the server for the safeguarding lead; never pulled back to devices. */
 export interface ConcernRow { id: string; learnerId: string; at: string; where: "home" | "lesson" | "talk board" | "tell us" | "help" }
