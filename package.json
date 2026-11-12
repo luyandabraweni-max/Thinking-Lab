@@ -2,7 +2,10 @@
   "name": "thinking-lab",
   "private": true,
   "description": "The live site (repo root) has no build step. The React platform lives in apps/ and packages/ (see docs/architecture/README.md).",
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vitest run",
@@ -12,8 +15,9 @@
     "platform:lint": "eslint apps packages supabase/tests",
     "platform:bounds": "node tools/check-boundaries.mjs",
     "platform:test": "vitest run --config vitest.platform.config.mts",
-    "app:dev": "npm run dev -w @tl/app",
-    "app:build": "npm run build -w @tl/app"
+    "app:dev": "node tools/export-clips.mjs && npm run dev -w @tl/app",
+    "app:build": "node tools/export-clips.mjs && npm run build -w @tl/app",
+    "app:clips": "node tools/export-clips.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

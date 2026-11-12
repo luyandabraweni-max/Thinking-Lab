@@ -1,4 +1,5 @@
 import { Capacitor } from "@capacitor/core";
+import { planSpeech } from "./clips";
 import { SpeechRecognition as NativeSpeech } from "@capacitor-community/speech-recognition";
 
 // One way to listen, whatever the device. In a browser: the Web Speech API (Chrome, Edge and Safari send the sound to
@@ -97,8 +98,31 @@ export async function pickEngine(): Promise<SpeechEngine | null> {
   return (await engine.available()) ? engine : null;
 }
 
-/** Reads text aloud with the device's own voice, where it has one. */
-export function speak(text: string, lang = DEFAULT_LANG, rate = 0.95): Promise<void> {
+/** Reads text aloud: recorded clips where there are some (clips.ts), the device's own voice for the rest. */
+let speaking = 0, audio: HTMLAudioElement | null = null;
+export async function speak(text: string, lang = DEFAULT_LANG, rate = 0.95): Promise<void> {
+  stopSpeaking();
+  const me = ++speaking;
+  for (const part of planSpeech(text)) {
+    if (me !== speaking) return;
+    if (part.clip && (await playClip(part.clip, rate))) continue;
+    if (me !== speaking) return;
+    await deviceVoice(part.text, lang, rate);
+  }
+}
+function playClip(src: string, rate: number): Promise<boolean> {
+  return new Promise(resolve => {
+    try {
+      const a = new Audio(src);
+      a.preservesPitch = true; a.playbackRate = Math.max(0.6, Math.min(1.1, rate * 0.95));
+      a.onended = () => resolve(true); a.onerror = () => resolve(false);
+      audio = a;
+      const p = a.play() as Promise<void> | undefined;
+      p?.catch(() => resolve(false));
+    } catch { resolve(false); }
+  });
+}
+function deviceVoice(text: string, lang: string, rate: number): Promise<void> {
   const synth = (globalThis as { speechSynthesis?: SpeechSynthesis }).speechSynthesis;
   if (!synth || typeof SpeechSynthesisUtterance === "undefined") return Promise.resolve();
   return new Promise(resolve => {
@@ -110,4 +134,8 @@ export function speak(text: string, lang = DEFAULT_LANG, rate = 0.95): Promise<v
   });
 }
 /** Stops anything being read aloud. */
-export function stopSpeaking() { (globalThis as { speechSynthesis?: SpeechSynthesis }).speechSynthesis?.cancel(); }
+export function stopSpeaking() {
+  speaking++;
+  if (audio) { try { audio.pause(); } catch { /* already stopped */ } audio = null; }
+  (globalThis as { speechSynthesis?: SpeechSynthesis }).speechSynthesis?.cancel();
+}

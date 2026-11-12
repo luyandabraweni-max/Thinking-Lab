@@ -1,7 +1,7 @@
 import { ADAPT, adaptLive, toRow, type AdaptSettings, type Row } from "@tl/adaptation";
 import { BreakScreen } from "../wellbeing";
 import { areaOf, levelName, type Question, type Unit, type WordHelp } from "@tl/content";
-import { matchSpoken, spokenNumber } from "@tl/voice";
+import { loadClips, matchSpoken, spokenNumber } from "@tl/voice";
 import { useVoice } from "@tl/voice/react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { SafetyNote } from "../safety";
@@ -60,6 +60,7 @@ export function Lesson(props: LessonProps) {
   const finish = (reflection: string) => { setStep({ at: "done", reflection }); void props.onSave(toAttempts(u.id, recs, reflection)); };
   // Read each screen aloud as it appears (questions read themselves, below).
   const say = props.say;
+  useEffect(() => { void loadClips(u.id); }, [u.id]); // this lesson's recorded voice, if it has one
   useEffect(() => {
     if (!say) return;
     if (step.at === "intro") say(`${u.title}. ${u.intention} Press Begin when you are ready.`);

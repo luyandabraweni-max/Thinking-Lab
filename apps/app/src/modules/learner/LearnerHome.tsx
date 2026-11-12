@@ -1,4 +1,5 @@
 import { Button, Card, motionAllowed, type Prefs } from "@tl/ui";
+import { loadClips } from "@tl/voice";
 import { VoiceField } from "@tl/voice/react";
 import { lazy, Suspense, useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { useServices, type DeviceLearner } from "../../platform";
@@ -26,6 +27,7 @@ const STICKERS = ["Thank you!", "That made me happy", "I'm proud", "Can you help
 export function LearnerHome(props: { learner: DeviceLearner; onDone: () => void }) {
   const { store } = useServices();
   const [prefs, changePrefs] = usePrefs(store.kv, props.learner.learnerId), { say, caption } = useSay(prefs);
+  useEffect(() => { if (prefs.speak) void loadClips("common"); }, [prefs.speak]); // recorded voice for everyday lines
   return <><LearnerScreens {...props} prefs={prefs} changePrefs={changePrefs} say={say} /><CaptionBar text={caption} /></>;
 }
 function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner: DeviceLearner; onDone: () => void; prefs: Prefs; changePrefs: (p: Partial<Prefs>) => void; say: (t: string) => void }) {
