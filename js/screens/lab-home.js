@@ -2,14 +2,14 @@
 
 // ---------- Child: Thinking Lab home ----------
 const EXERCISES = [
-  { id: "pattern", name: "Pattern Detective", cat: "Pattern Thinking", domain: "Logical and Analytical Thinking", ready: true },
-  { id: "vetkoek", name: "Share the Vetkoek", cat: "Problem-Solving", domain: "Logical and Analytical Thinking", ready: true },
-  { id: "comic", name: "Sprout's Comic", cat: "Communication", domain: "Communication and Expression", ready: true },
-  { id: "memory", name: "Memory Match", cat: "Memory and Attention", domain: "Logical and Analytical Thinking", ready: true },
-  { id: "paint", name: "Paint Pots", cat: "Inquiry and Exploration", domain: "Inquiry and Systems Thinking", ready: true },
-  { id: "robot", name: "Robot Rescue", cat: "Planning and Organisation", domain: "Logical and Analytical Thinking", ready: true },
-  { id: "sort", name: "Colour and Shape Sort", cat: "Flexible Thinking", domain: "Logical and Analytical Thinking", ready: true },
-  { id: "kraal", name: "A New Animal for the Kraal", cat: "Creativity", domain: "Creativity and Metacognition", ready: true }
+  { id: "light", name: "Light the Village", pic: "☀️", cat: "Planning", domain: "Logical and Analytical Thinking", ready: true },
+  { id: "rule", name: "The Secret Rule Machine", pic: "⚙️", cat: "Investigation", domain: "Inquiry and Systems Thinking", ready: true },
+  { id: "story", name: "Story Weaver", pic: "📖", cat: "Storytelling", domain: "Communication and Expression", ready: true },
+  { id: "invent", name: "Invention Workshop", pic: "🛠️", cat: "Design and Improvement", domain: "Creativity and Metacognition", ready: true },
+  { id: "literal", name: "The Literal Robot", pic: "🤖", cat: "Sequencing and Debugging", domain: "Logical and Analytical Thinking", ready: true },
+  { id: "veld", name: "Veld Balance", pic: "🌾", cat: "Systems Thinking", domain: "Inquiry and Systems Thinking", ready: true },
+  { id: "describe", name: "Describe It", pic: "💬", cat: "Precise Communication", domain: "Communication and Expression", ready: true },
+  { id: "sure", name: "How Sure Am I?", pic: "🤔", cat: "Knowing What You Know", domain: "Creativity and Metacognition", ready: true }
 ];
 function labHome() {
   S.inExercise = false; activeEx = null; inGame = false;
@@ -25,7 +25,7 @@ function labHome() {
         <div class="grid">
           ${EXERCISES.map(x => `<button class="tile" data-x="${x.id}"${x.ready ? "" : ' aria-disabled="true"'}>
             <span class="pill">${x.ready ? (S.played.includes(x.id) ? W("Played", "Done") : W("Play", "Start")) : "Coming soon"}</span>
-            <span class="t-name">${esc(x.name)}</span><span class="t-cat">${esc(x.cat)}</span><span class="t-dom">${esc(x.domain)}</span></button>`).join("")}
+            <span class="t-pic" aria-hidden="true">${x.pic}</span><span class="t-name">${esc(x.name)}</span><span class="t-cat">${esc(x.cat)}</span><span class="t-dom">${esc(x.domain)}</span></button>`).join("")}
         </div>
         <div class="row"><button class="btn" id="hDone">I'm finished for today</button></div>
       </section>`);

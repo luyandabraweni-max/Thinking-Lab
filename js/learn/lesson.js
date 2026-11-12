@@ -11,7 +11,7 @@ function setSayLines(lines, auto) { currentSayLines = lines.filter(Boolean); cur
 const L = {
   begin: "Press Begin when you are ready.", worked: "Worked example.", yes: "Yes.",
   wrong: "Not quite yet. Have another look, or use a hint.", wrong3: "Not quite yet. That's fine. You can try again, or move on without an answer.",
-  pick: "Choose an answer first.", type: "Type your answer first.", orderAll: "Put all of them in order first.", sortAll: "Sort all of them first."
+  slow: "Take your time. Read the question again, then choose.", pick: "Choose an answer first.", type: "Type your answer first.", orderAll: "Put all of them in order first.", sortAll: "Sort all of them first."
 };
 function introLines(u) { return [u.title + ".", u.intention, L.begin]; }
 function lessonLines(pg) { return [pg.h + ".", pg.say]; }
@@ -57,8 +57,10 @@ function openWordHelp(u) {
 }
 function wireWordHelp(u) { const b = document.getElementById("wordHelp"); if (b) b.onclick = () => openWordHelp(u); }
 
+// Shorter lessons: set by an adult, after a low battery, or by the adaptation layer (then the learner can ask for the full lesson).
+const adaptShort = () => !(S.adaptSkip || {}).shorter && !!adaptLive().shorter;
 function pickQuestions(u) {
-  const qs = u.questions; if (S.lessonLen !== "short" || qs.length <= 3) return qs;
+  const qs = u.questions; if ((S.lessonLen !== "short" && !adaptShort()) || qs.length <= 3) return qs;
   return [0, Math.floor(qs.length / 2), qs.length - 1].map(i => qs[i]);
 }
 const unitClipsLoaded = new Set();
@@ -84,11 +86,13 @@ function unitIntro(u) {
             <li>${icon("🏁")}<span>Then you can choose what to do next.</span></li>
           </ol>
           <p class="muted">Nothing is timed. You can take a break or stop at any time.</p></div>
+        ${S.lessonLen !== "short" && nq < u.questions.length ? `<p class="heads-up">${icon("🪶")} This lesson is shorter today: ${nq} questions. <button class="btn small" id="uFull">Do all ${u.questions.length} questions</button></p>` : ""}
         <p class="note">Curriculum: ${esc(u.caps)}</p>
         <div class="row"><button class="btn primary" id="uBegin" data-focus>Begin</button><button class="btn quiet" id="uBack">Back to Learn</button></div>
       </section>`);
   setSayLines(introLines(u).concat([`First, you will read ${u.lesson.length} short pages.`, "Then you will see a worked example, one step at a time.", `Then you will try ${nq} questions. You can use hints, or move on.`, "Then you will say how it went.", "Then you can choose what to do next."]));
   on("#uBack", learnHome);
+  on("#uFull", () => { S.adaptSkip.shorter = true; unitIntro(u); });
   on("#uBegin", () => { inGame = true; const run = { x: { id: u.id, name: u.title }, acted: false, recs: [], qs: pickQuestions(u), parts: 2 }; THINK[u.id] = u.prompt; thinkRun = run; unitLesson(u, run, 0); });
 }
 function unitLesson(u, run, i) {
@@ -134,6 +138,12 @@ function unitExample(u, run, shown) {
   on("#eNext", () => unitExample(u, run, shown + 1));
   on("#eGo", () => unitQuestion(u, run, 0)); on("#eSkip", () => unitQuestion(u, run, 0));
 }
+// Two choices: the right answer and one other, in a random order.
+function twoChoices(q, shown) {
+  const right = q.type === "mcq" ? q.answer : q.options.findIndex(o => norm(o) === norm(q.answer));
+  const other = shown.find(i => i !== right) ?? q.options.findIndex((o, i) => i !== right);
+  return shuffle([right, other]);
+}
 const norm = v => String(v == null ? "" : v).toLowerCase().replace(/\s+/g, "").replace(/^r/, "").replace(/\./g, ",");
 function unitQuestion(u, run, qi) {
   const QS = run.qs, q = themedQuestion(u, QS[qi]); let wrongs = 0, offered = false, offer = null, easier = false; clearTimeout(idleTimer);
@@ -143,7 +153,13 @@ function unitQuestion(u, run, qi) {
   let hint = 0, fb = "", fbLines = null, picked = null, typed = "", done = false;
   let order = [], sortPick = null; const sortPlace = q.type === "sort" ? q.items.map(() => null) : null;
   const shuffled = q.type === "order" ? shuffle(q.items.map((t, i) => i)) : null;
-  let optsShown = (q.type === "mcq" || (q.type === "num" && !buildMode)) ? (q.fixed ? q.options.map((o, i) => i) : shuffle(q.options.map((o, i) => i))) : [];
+  const allOpts = () => q.fixed ? q.options.map((o, i) => i) : shuffle(q.options.map((o, i) => i));
+  let optsShown = (q.type === "mcq" || (q.type === "num" && !buildMode)) ? allOpts() : [];
+  // Adaptation (js/core/adapt.js): what the learner did earlier shapes how this question starts.
+  const ad = adaptLive(run.recs, u.id), fewerKey = "fewer:" + areaOf(u.subject); let shownAt = Date.now();
+  const qTok = run.curQ = {}, choosing = () => q.type === "mcq" || (q.type === "num" && (!buildMode || easier));
+  if (ad.fewer[areaOf(u.subject)] && !S.adaptSkip[fewerKey] && optsShown.length > 2) { optsShown = twoChoices(q, optsShown); easier = rec.easier = rec.autoEasier = true; }
+  if (ad.breaks && qi > 0 && qi % ADAPT.breakEvery === 0) offer = `You have done ${qi} questions. Would a break help?`;
   const sayQ = questionLines(q, optsShown);
   const say = (lines) => speakSeq(lines, true);
   const draw = () => {
@@ -167,6 +183,7 @@ function unitQuestion(u, run, qi) {
           ${u.passage ? `<details class="passage"><summary>Show the text again</summary>${partsHtml(u, 99)}${plainBox(u)}</details>` : ""}
           <h2>${esc(q.q)}</h2>
           ${q.html || ""}
+          ${rec.autoEasier && !done ? `<p class="note">${icon("🪶")} Two choices to start. <button class="btn small quiet" id="qAll">Show all the choices</button></p>` : ""}
           ${body}
           ${wordsExtra(u)}
           ${thinkPrompt()}
@@ -180,6 +197,7 @@ function unitQuestion(u, run, qi) {
           <div class="row">
             ${done ? `<button class="btn primary" id="qNext" data-focus>${qi + 1 < QS.length ? "Next question" : "Finish"}</button>`
             : `<button class="btn primary" id="qCheck">Check my answer</button>
+                 ${canListen() && (q.type === "mcq" || q.type === "num") ? `<button class="btn" id="qSay">${icon("🎤")}<span>Say my answer</span></button>` : ""}
                  <button class="btn" id="qHint"${hint >= 3 ? " disabled" : ""}>${hint ? "Another hint" : "Use a hint"}</button>
                  <button class="btn quiet" id="qSkip">Move on without an answer</button>`}
             ${wordHelpButton(u)}
@@ -187,7 +205,7 @@ function unitQuestion(u, run, qi) {
         </section>`);
     setSayLines(fbLines || (offer ? [offer, "Take a break.", "Make it easier.", "Show me a hint.", "Keep going."] : sayQ), false);
     clearTimeout(idleTimer);
-    if (!done && !offered) idleTimer = setTimeout(() => { if (!offered && activeUnit === u && document.getElementById("qCheck")) { offered = true; offer = "Take your time. Would anything help?"; draw(); say([offer]); } }, 90000);
+    if (!done && !offered) idleTimer = setTimeout(() => { if (!offered && activeUnit === u && document.getElementById("qCheck")) { offered = true; offer = "Take your time. Would anything help?"; draw(); say([offer]); } }, ad.sooner ? 45000 : 90000);
     $main.querySelectorAll("[data-ci]").forEach(b => b.addEventListener("click", () => {
       const c = b.dataset.ci; rec.adapt = c; S.voice.push({ kind: "chose when stuck", what: { break: "a break", easier: "an easier version", hint: "a hint", keep: "to keep going" }[c], where: u.title + ", question " + (qi + 1), at: new Date() });
       offer = null;
@@ -202,6 +220,15 @@ function unitQuestion(u, run, qi) {
     const inp = document.getElementById("qNum"); if (inp) { inp.addEventListener("input", () => { typed = inp.value; run.acted = true; }); }
     on("[data-ord]", e => { order.push(+e.currentTarget.dataset.ord); fb = ""; draw(); });
     on("#qUndo", () => { order.pop(); draw(); });
+    on("#qSay", () => { fb = "Listening. Say your answer now."; fbLines = null; draw(); listenOnce(heard => {
+      if (run.curQ !== qTok || done || !document.getElementById("qSay")) return;
+      if (!heard) { tell(["I couldn't listen just now. You can tap your answer instead."], false); return; }
+      const said = heard[0] || "", got = choosing() ? matchSpoken(heard, q.options, optsShown) : spokenNumber(said);
+      if (got == null) { tell([said ? `I heard "${said}". Try again, or tap your answer.` : "I didn't hear anything. Try again, or tap your answer."], false); return; }
+      rec.spoke = true; run.acted = true; if (choosing()) picked = got; else typed = got;
+      tell([`I heard "${choosing() ? q.options[got] : got}". Press Check my answer when you are ready.`], false);
+    }); });
+    on("#qAll", () => { S.adaptSkip[fewerKey] = true; optsShown = allOpts(); easier = rec.easier = rec.autoEasier = false; picked = null; draw(); });
     on("[data-si]", e => { sortPick = +e.currentTarget.dataset.si; draw(); });
     on("[data-bin]", e => { if (sortPick === null) return; sortPlace[sortPick] = +e.currentTarget.dataset.bin; sortPick = null; rec.moves = (rec.moves || 0) + 1; fb = ""; draw(); });
     on("[data-back]", e => { sortPlace[+e.currentTarget.dataset.back] = null; draw(); });
@@ -211,9 +238,7 @@ function unitQuestion(u, run, qi) {
     const makeEasier = () => {
       easier = true; rec.easier = true;
       if (q.type === "mcq" || q.type === "num") {
-        const right = q.type === "mcq" ? q.answer : q.options.findIndex(o => norm(o) === norm(q.answer));
-        const other = optsShown.find(i => i !== right) ?? q.options.findIndex((o, i) => i !== right);
-        optsShown = shuffle([right, other]); picked = null; rec.mode = "chose (easier)";
+        optsShown = twoChoices(q, optsShown); picked = null; rec.mode = "chose (easier)";
       } else if (q.type === "order") { order = [0]; }
       else if (q.type === "sort") { let n = 0; q.items.forEach((t, i) => { if (n < 2 && sortPlace[i] === null) { sortPlace[i] = q.answer[i]; n++; } }); }
     };
@@ -226,8 +251,11 @@ function unitQuestion(u, run, qi) {
       else if (q.type === "order") { if (order.length < q.items.length) { tell([L.orderAll], false); return; } ok = order.every((v, k) => v === k); }
       else if (q.type === "sort") { if (sortPlace.some(v => v === null)) { tell([L.sortAll], false); return; } ok = sortPlace.every((v, i) => v === q.answer[i]); }
       rec.checks++; if (rec.firstMatched === null) rec.firstMatched = ok; rec.latestMatched = ok; run.acted = true;
+      const quick = !ok && Date.now() - shownAt < ADAPT.quickMs; shownAt = Date.now();
+      if (quick) rec.quick = (rec.quick || 0) + 1; // a wrong answer within seconds of seeing the question
       if (ok) { clearTimeout(idleTimer); tell([L.yes, q.explain], true); }
-      else { wrongs++; if (wrongs >= 2 && !offered) { offered = true; offer = "This one is tricky. What would help?"; fbLines = null; fb = ""; draw(); say([offer]); } else tell([hint >= 3 ? L.wrong3 : L.wrong], false); }
+      else if (quick && S.adaptAuto && !(S.adaptOff || {}).slow && !run.slowTold && quickToday(run.recs.concat([rec])) >= ADAPT.quickMin) { wrongs++; run.slowTold = true; tell([L.slow], false); }
+      else { wrongs++; if (wrongs >= (ad.sooner ? 1 : 2) && !offered) { offered = true; offer = "This one is tricky. What would help?"; fbLines = null; fb = ""; draw(); say([offer]); } else tell([hint >= 3 ? L.wrong3 : L.wrong], false); }
     });
   };
   const nextQ = () => { if (qi + 1 < QS.length) unitQuestion(u, run, qi + 1); else unitFinish(u, run); };
@@ -251,7 +279,7 @@ function unitFinish(u, run) {
     if (!S.learned.includes(u.id)) S.learned.push(u.id);
     const recs = run.recs;
     const shown = recs.filter(it => statusOf(it) !== "notyet").length, alone = recs.filter(it => statusOf(it) === "alone").length, hinted = recs.filter(it => it.hints > 0).length;
-    const dims = `Knowledge: shown in ${shown} of ${recs.length} questions${S.lessonLen === "short" ? " (shorter lesson)" : ""}. Independence: ${alone} without support. Support used: hints on ${hinted} question(s). Reflection: "${r}".`;
+    const dims = `Knowledge: shown in ${shown} of ${recs.length} questions${run.qs.length < u.questions.length ? " (shorter lesson)" : ""}. Independence: ${alone} without support. Support used: hints on ${hinted} question(s). Reflection: "${r}".`;
     S.obs.push({ id: u.id, unit: true, assisted: S.assisted, level: S.band, ex: u.title, cat: `${u.subject} · ${gradeName(u.grade)}`, domain: u.domain, items: recs, reflection: r, exampleOpened: false, extra: `CAPS: ${u.caps}. ${dims}`, at: new Date() });
     const [fbText, achieve] = matchedFeedback(run, recs);
     S.obs[S.obs.length - 1].feedback = fbText;
@@ -267,7 +295,7 @@ function unitFinish(u, run) {
           <div class="row"><button class="btn primary" id="ufLearn" data-focus>Choose another lesson</button><button class="btn" id="ufHome">Back to home</button>${tellButton()}</div>
         </section>`);
     setSayLines([achieve, fbText, u.done]);
-    planDone("lesson");
+    planDone("lesson", u.id);
     on("#ufLearn", () => needsBattery() ? batteryCheck(learnHome) : learnHome()); on("#ufHome", home); wireTell(); on("#sfUnsafe", () => feelUnsafe("lesson"));
   }
 }

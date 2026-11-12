@@ -6,7 +6,8 @@ function learnerTile(L) {
   return `<button class="tile" data-learner="${esc(L.id)}"><span class="tile-top"><span class="pill">${esc(COHORTS[L.cohort])}</span>${L.avatar ? avatarSvg(L.avatar, 48, "", { decorative: true }) : ""}</span><span class="t-name">${esc(L.nickname)}</span>
       <span class="t-cat">${esc([L.curriculum, L.level].filter(Boolean).join(" · "))}</span>
       <span class="t-cat">${dates.length ? `${dates.length} session${dates.length > 1 ? "s" : ""} · last on ${niceDate(dates[dates.length - 1])}` : "No sessions yet"}</span>
-      ${st ? `<span class="t-dom">${st.level}: ${esc(st.label)}</span>` : ""}</button>`;
+      ${st ? `<span class="t-dom">${st.level}: ${esc(st.label)}</span>` : ""}
+      ${PORTAL.me && unreadFor(L, PORTAL.me) ? `<span class="pill new">${icon("✉️")} ${unreadFor(L, PORTAL.me)} new message${unreadFor(L, PORTAL.me) > 1 ? "s" : ""}</span>` : ""}</button>`;
 }
 function parentHome() {
   const me = PORTAL.me; if (!me || me.role !== "parent") return welcome();
@@ -62,8 +63,12 @@ function parentChild(id, tab) {
         <h2>Screen and sound</h2>
         <p class="note">These start every session on this child's profile. ${esc(L.nickname)} can still change them in My way during a session, and their changes are kept.</p>
         <div class="consents">${PREF_TOGGLES.map(([k, t]) => `<label class="consent" for="pf-${k}"><input type="checkbox" id="pf-${k}"${prefOn(L, k) ? " checked" : ""}><span>${esc(t)}</span></label>`).join("")}</div>
-        <div class="row"><button class="btn" id="pcPrefs">Save screen and sound</button></div>`;
-  } else if (tab === "sharing") {
+        <div class="row"><button class="btn" id="pcPrefs">Save screen and sound</button></div>
+        ${adaptPanelHtml(L)}`;
+  } else if (tab === "development") body = developmentHtml(L, me);
+  else if (tab === "messages") body = messagesHtml(L, me);
+  else if (tab === "health") body = healthHtml(L, me);
+  else if (tab === "sharing") {
     const specs = L.specialists.map(sid => PORTAL.accounts.find(a => a.id === sid)).filter(Boolean);
     body = `
         <h2>Specialists who can see ${esc(L.nickname)}</h2>
@@ -84,7 +89,7 @@ function parentChild(id, tab) {
       <section class="card">
         ${portalHead()}
         <div class="child-head">${L.avatar ? avatarStage(L.avatar, 96, `Wave hello, ${L.avatar.name}`) : ""}<div><p class="eyebrow">My child</p><h1>${esc(L.nickname)}</h1>${describePrefs(L) ? `<p class="note">Settings: ${esc(describePrefs(L))}</p>` : ""}</div></div>
-        ${tabsHtml([["progress", "Progress"], ["support", "Support"], ["sharing", "Sharing and consent"], ["report", "Report"]], tab)}
+        ${tabsHtml([["progress", "Progress"], ["development", "Development"], ["messages", `Messages${unreadFor(L, me) ? ` (${unreadFor(L, me)} new)` : ""}`], ["support", "Support"], ["health", "Health and medication"], ["sharing", "Sharing and consent"], ["report", "Report"]], tab)}
         <div role="tabpanel" aria-labelledby="tab-${tab}" class="tabpanel">${body}</div>
       </section>`);
   wirePortalHead();
@@ -95,6 +100,9 @@ function parentChild(id, tab) {
     avatarBuilder(() => { L.avatar = Object.assign({}, S.avatar); S.avatar = keep; S.avWaveNext = false; parentChild(id, "progress"); flash(`${L.nickname}'s character is saved. Tap it to say hello.`); }); });
   on("#pcPrefs", () => { PREF_TOGGLES.forEach(([k]) => setPref(L, k, document.getElementById("pf-" + k).checked)); parentChild(id, "support"); flash("Saved. These settings start every session."); });
   on("#pcEdit", () => childForm(L, () => parentChild(id, "support")));
+  wireAdaptPanel(L, () => parentChild(id, "support"));
+  if (tab === "messages") wireMessages(L, me, () => parentChild(id, "messages"));
+  wireHealth(L, me, () => parentChild(id, "health"));
   on("#pcCode", () => { L.shareCode = makeShareCode(); L.shareCodeExp = Date.now() + 7 * 864e5; parentChild(id, "sharing"); });
   on("[data-unshare]", e => { L.specialists = L.specialists.filter(s => s !== e.currentTarget.dataset.unshare); parentChild(id, "sharing"); flash("Sharing stopped. They can no longer see this child."); });
   on("#pcDelete", () => {
@@ -108,8 +116,8 @@ function parentChild(id, tab) {
 function makeShareCode() { const a = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; let c = ""; for (let i = 0; i < 6; i++) c += a[Math.floor(Math.random() * a.length)]; return c.slice(0, 3) + "-" + c.slice(3); }
 
 // Screen and sound settings a parent can set for every session (stored on the learner, like My way).
-const PREF_TOGGLES = [["grey", "Grey screen (no colours)"], ["calm", "Calm screen"], ["plain", "Plain words"], ["autoRead", "Read every screen aloud"], ["quiet", "Sound off"], ["motion", "No movement"], ["contrast", "Stronger outlines"], ["large", "Larger text"]];
-const MY_PREFS = ["grey", "calm", "plain"];
+const PREF_TOGGLES = [["grey", "Grey screen (no colours)"], ["calm", "Calm screen"], ["plain", "Plain words"], ["autoRead", "Read every screen aloud"], ["captions", "Show the words when it talks (captions)"], ["quiet", "Sound off"], ["motion", "No movement"], ["contrast", "Stronger outlines"], ["large", "Larger text"]];
+const MY_PREFS = ["grey", "calm", "plain", "captions"];
 function prefOn(L, k) { const m = L.my || {}, d = L.display || {}; return k === "large" ? d.textSize > 1 : MY_PREFS.includes(k) ? !!m[k] : !!d[k]; }
 function setPref(L, k, on) {
   L.my = Object.assign(JSON.parse(JSON.stringify(MY_DEFAULTS)), L.my || {}); L.display = L.display || {};

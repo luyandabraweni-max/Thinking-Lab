@@ -50,7 +50,12 @@ function setup() {
           <label class="row" for="fMotion" style="flex-direction:row"><input type="checkbox" id="fMotion"${S.motion ? " checked" : ""}> No movement</label>
           <label class="row" for="fScan" style="flex-direction:row"><input type="checkbox" id="fScan"${S.my.scan ? " checked" : ""}> Switch scanning (one switch or the space bar)</label>
           <label for="fScanSpeed" style="flex-direction:row;align-items:center;gap:8px">Scanning speed <select id="fScanSpeed"><option value="slow"${S.my.scanSpeed === "slow" ? " selected" : ""}>Slow</option><option value="medium"${S.my.scanSpeed === "medium" ? " selected" : ""}>Medium</option><option value="fast"${S.my.scanSpeed === "fast" ? " selected" : ""}>Fast</option></select></label>
+          <label class="row" for="fDwell" style="flex-direction:row"><input type="checkbox" id="fDwell"${S.my.dwell ? " checked" : ""}> Choose by resting the pointer (eye gaze or head pointer)</label>
+          <label for="fDwellSpeed" style="flex-direction:row;align-items:center;gap:8px">Resting time <select id="fDwellSpeed"><option value="slow"${S.my.dwellSpeed === "slow" ? " selected" : ""}>2 seconds</option><option value="medium"${S.my.dwellSpeed === "medium" ? " selected" : ""}>1.4 seconds</option><option value="fast"${S.my.dwellSpeed === "fast" ? " selected" : ""}>1 second</option></select></label>
+          <label class="row" for="fCaptions" style="flex-direction:row"><input type="checkbox" id="fCaptions"${S.my.captions ? " checked" : ""}> Show the words when it talks (captions)</label>
+          ${Recog ? `<label class="row" for="fVoiceIn" style="flex-direction:row"><input type="checkbox" id="fVoiceIn"${S.my.voiceIn ? " checked" : ""}> Let the learner answer by speaking</label>` : ""}
         </div>
+        ${Recog ? `<p class="note">Answering by speaking uses this browser's speech recognition. Some browsers, such as Chrome, send the sound to Google to turn it into words, and Safari may send it to Apple. 2to.iQ never records or keeps it. Only turn it on if the learner's guardian agrees.</p>` : ""}
         <p class="note">English only in this version. Read-aloud is off unless you tick the box above. The learner can always tap Read aloud on any screen, and tap it again to stop. The voice is a recorded synthetic voice built from the LibriTTS dataset (CC BY 4.0) using Piper. Lines without a recording use this device's voice.</p>
         ${S.portalLearner && S.demoLearner == null ? `<p class="note demo-flag">Portal learner: ${esc(S.code)}. This session will be added to their history when you end it.</p>` : ""}
         ${S.demoLearner != null ? `<p class="note demo-flag">Demo learner: ${esc(S.code)}. This made-up session will be added to their demo history when you end it.</p>` : ""}
@@ -75,6 +80,8 @@ function setup() {
     S.autoRead = document.getElementById("fAuto").checked;
     S.my.how = S.autoRead ? "listen" : (S.my.how === "listen" ? "read" : S.my.how);
     S.my.scan = document.getElementById("fScan").checked; S.my.scanSpeed = document.getElementById("fScanSpeed").value;
+    S.my.dwell = document.getElementById("fDwell").checked; S.my.dwellSpeed = document.getElementById("fDwellSpeed").value; S.my.captions = document.getElementById("fCaptions").checked;
+    const vi = document.getElementById("fVoiceIn"); if (vi) S.my.voiceIn = vi.checked;
     S.contrast = document.getElementById("fContrast").checked;
     S.my.palette = document.getElementById("fPalette").value;
     S.motion = document.getElementById("fMotion").checked;

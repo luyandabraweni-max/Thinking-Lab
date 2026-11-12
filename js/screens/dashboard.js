@@ -3,34 +3,37 @@
 // ---------- Demo dashboard (made-up learners, memory only) ----------
 // Shows how history, strengths and summaries would work. Nothing here is real or saved.
 const HOME_IDEA = {
-  pattern: "Make a pattern with spoons and forks at the table, and ask what comes next.",
-  vetkoek: "Share a snack fairly between family members and talk about how you know it's fair.",
-  comic: "Take three photos of a daily routine, mix them up, and put them back in order together.",
-  memory: "Play a quick pairs game with socks or playing cards.",
-  paint: "Mix a little food colouring in water and guess the colour before you mix.",
-  robot: "Give each other step-by-step directions to find something in the house.",
-  sort: "Sort laundry by colour, then sort it again by who it belongs to.",
-  kraal: "Invent an animal together and ask what it is good at, and why."
+  light: "Shine a torch at a small mirror together and try to make the light land on a spot on the wall.",
+  rule: "Play 'secret rule': sort spoons, socks or toys by a rule you keep secret, and let them work it out.",
+  story: "Tell a story together, taking turns to say what happens next and how someone feels.",
+  invent: "Build something from recycling that carries water from one cup to another, then make it better.",
+  literal: "Ask for exact steps for a simple job, like making toast, and follow them exactly, even when it's funny.",
+  veld: "Talk about a food chain you can see, like birds eating insects. What would happen if one disappeared?",
+  describe: "Hide a small toy and describe it without saying its name. Can they find it? Then swap.",
+  sure: "When someone says 'I'm sure', ask 'How do you know?' and check together."
 };
-const MODE_TEXT = { choose: "choosing from pictures", pair: "choosing from pictures", number: "choosing from pictures", build: "building step by step", place: "building step by step", share: "building step by step", tap: "tapping", "choose parts": "choosing parts", drew: "drawing" };
-const modeGroup = m => ({ pair: "choose", number: "choose", choose: "choose", place: "build", share: "build", build: "build", drew: "draw", "choose parts": "choose" })[m] || null;
+const MODE_TEXT = { choose: "choosing from pictures", build: "building step by step", tap: "tapping", drew: "drawing", "placed mirrors": "placing mirrors", "built a program": "building a program",
+  "tested objects": "testing ideas", predicted: "predicting", experimented: "experimenting", "told a story": "telling a story", described: "describing", listened: "listening",
+  designed: "designing and testing", "named and judged": "judging their own work", "answered then rated": "answering, then rating how sure" };
+const modeGroup = m => ({ choose: "choose", predicted: "choose", listened: "choose", "answered then rated": "choose", "tested objects": "choose", described: "choose",
+  build: "build", "placed mirrors": "build", "built a program": "build", designed: "build", drew: "draw" })[m] || null;
 // Sample rows: [date, activity, status, answer mode, hints, what the learner said helped]
 const DEMO = [
   { code: "Sunny Giraffe", cohort: "3-6", band: "younger", answer: "choose", supports: "Read-aloud on, larger text", rows: [
-    ["2026-10-05", "pattern", "alone", "pair", 0, "Finding the repeating part"], ["2026-10-05", "comic", "support", "tap", 1, "Looked at the pictures"],
-    ["2026-10-07", "pattern", "alone", "pair", 0, "Finding the repeating part"], ["2026-10-07", "kraal", "open", "choose parts", 0, "Mixed animals I know"],
-    ["2026-10-12", "memory", "alone", "tap", 0, "Remembering where they were"], ["2026-10-12", "pattern", "alone", "pair", 0, "Counting"],
-    ["2026-10-14", "sort", "support", "tap", 1, "Took a moment"], ["2026-10-14", "kraal", "open", "drew", 0, "Tried lots of parts"],
-    ["2026-10-19", "pattern", "alone", "pair", 0, "Finding the repeating part"], ["2026-10-19", "memory", "alone", "tap", 0, "Saying the names in my head"],
-    ["2026-10-21", "comic", "support", "tap", 2, "Listened to the words"], ["2026-10-21", "kraal", "open", "drew", 0, "Thought about what it needs to do"]] },
+    ["2026-10-05", "light", "alone", "placed mirrors", 0, "I planned the mirrors first"], ["2026-10-05", "story", "open", "told a story", 0, "The ending"],
+    ["2026-10-07", "rule", "support", "tested objects", 1, "I looked at what lit up"], ["2026-10-07", "describe", "alone", "described", 0, "Telling Bolt"],
+    ["2026-10-12", "light", "alone", "placed mirrors", 0, "I planned the mirrors first"], ["2026-10-12", "sure", "alone", "answered then rated", 0, "My eyes can trick me"],
+    ["2026-10-14", "veld", "support", "predicted", 1, "One change affected everything"], ["2026-10-14", "story", "open", "told a story", 0, "My own words or drawings"],
+    ["2026-10-19", "light", "alone", "placed mirrors", 0, "I planned the mirrors first"], ["2026-10-19", "describe", "alone", "described", 0, "Telling Bolt"],
+    ["2026-10-21", "literal", "support", "built a program", 2, "I found the wrong step and fixed it"], ["2026-10-21", "invent", "open", "named and judged", 0, "I changed one part"]] },
   { code: "Brave Meerkat", cohort: "7-12", band: "older", answer: "build", supports: "Quiet mode, reduced motion", rows: [
-    ["2026-10-06", "robot", "support", "build", 1, "Tried, then fixed it"], ["2026-10-06", "pattern", "notyet", "place", 2, "Not sure"],
-    ["2026-10-08", "paint", "alone", "build", 0, "I guessed first, then checked"], ["2026-10-08", "robot", "support", "build", 2, "One step at a time"],
-    ["2026-10-13", "vetkoek", "support", "share", 1, "Tried and fixed it"], ["2026-10-13", "pattern", "support", "place", 1, "Trying different choices"],
-    ["2026-10-15", "robot", "alone", "build", 0, "Planned all the steps first"], ["2026-10-20", "paint", "alone", "build", 0, "I tried mixing"]] },
+    ["2026-10-06", "literal", "support", "built a program", 1, "I found the wrong step and fixed it"], ["2026-10-06", "rule", "notyet", "tested objects", 2, "I'm not sure"],
+    ["2026-10-08", "invent", "alone", "designed", 0, "I changed one part"], ["2026-10-08", "literal", "support", "built a program", 2, "I started again"],
+    ["2026-10-13", "veld", "support", "predicted", 1, "What happened to the grass"], ["2026-10-13", "rule", "support", "tested objects", 1, "I changed one thing at a time"],
+    ["2026-10-15", "literal", "alone", "built a program", 0, "Bolt got it right first time"], ["2026-10-20", "invent", "alone", "designed", 0, "I changed one part"]] },
   { code: "Calm Heron", cohort: "13-18", band: "older", answer: "choose", supports: "Clear letters font", rows: [
-    ["2026-10-22", "sort", "alone", "tap", 0, "Easy to switch"], ["2026-10-22", "paint", "support", "choose", 1, "I guessed first, then checked"],
-    ["2026-10-27", "comic", "alone", "tap", 0, "Thought about what makes sense"]] }
+    ["2026-10-22", "describe", "alone", "described", 0, "Listening to Bolt"], ["2026-10-22", "invent", "support", "designed", 1, "I changed lots of parts"],
+    ["2026-10-27", "sure", "alone", "answered then rated", 0, "When I'm sure, I'm usually right"]] }
 ];
 const demoDecisions = {}; let demoCurrent = null;
 const exById = id => EXERCISES.find(x => x.id === id) || (u => u && { id: u.id, name: u.title, domain: u.domain, cat: u.subject })(UNITS.find(u => u.id === id));
@@ -145,7 +148,7 @@ function learnerPage(i, tab) {
   on("[data-dis]", e => { demoDecisions[L.code + e.currentTarget.dataset.dis] = "no"; learnerPage(i, tab); });
   on("[data-undo]", e => { delete demoDecisions[L.code + e.currentTarget.dataset.undo]; learnerPage(i, tab); });
   on("#dlStart", () => {
-    Object.assign(S, { code: L.code, cohort: L.cohort, band: L.band, answer: L.answer, demoLearner: i, portalLearner: null });
+    Object.assign(S, { code: L.code, cohort: L.cohort, band: L.band, answer: L.answer, demoLearner: i, portalLearner: null, history: L.rows.slice(), adaptAuto: true, adaptSkip: {} });
     setup();
   });
 }
@@ -155,7 +158,6 @@ function addSessionToDemo() {
   if (S.portalLearner) syncPortalLearner();
   const L = S.portalLearner ? portalLearner(S.portalLearner) : S.demoLearner != null ? DEMO[S.demoLearner] : null;
   if (!L) return 0;
-  const today = new Date().toISOString().slice(0, 10); let n = 0;
-  S.obs.forEach(o => o.items.forEach(it => { L.rows.push([today, o.id, statusOf(it), it.mode || "tap", it.hints || 0, o.reflection]); n++; }));
-  return n;
+  const rows = sessionRows(); L.rows.push(...rows);
+  return rows.length;
 }

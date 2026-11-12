@@ -19,5 +19,6 @@ function drawPad(title, note, done) {
   c.addEventListener("pointermove", e => { if (!down) return; const [x, y] = pos(e); g.lineTo(x, y); g.stroke(); });
   c.addEventListener("pointerup", () => { down = false; });
   on("#dClear", () => g.clearRect(0, 0, c.width, c.height));
-  on("#dDone", () => done(strokes));
+  // The picture comes back too, so a game can show it (for example on a page of a storybook).
+  on("#dDone", () => { let pic = null; try { if (strokes) pic = c.toDataURL("image/png"); } catch (e) {} done(strokes, pic); });
 }

@@ -3,17 +3,17 @@
 // ---------- Curriculum links (Version A, proposed, awaiting specialist confirmation) ----------
 // Ages 3-4: NCF birth to four. Ages 5-18: CAPS (IEB schools also follow CAPS). 19-25: no school curriculum, domains only.
 const CAPS_LINK = {
-  pattern: "Mathematics: Patterns, Functions and Algebra",
-  vetkoek: "Mathematics: Numbers, Operations and Relationships (sharing, early fractions)",
-  comic: "Home Language: listening, speaking, reading and viewing (story sequence); Life Skills: Creative Arts",
-  memory: "No direct content area; supports attention and memory used across subjects",
-  paint: "Life Skills: Beginning Knowledge and Creative Arts; Natural Sciences and Technology: Matter and Materials (to confirm)",
-  robot: "Mathematics: Space and Shape (position and direction)",
-  sort: "Mathematics: Space and Shape (2D shapes) and Data Handling (sorting and classifying)",
-  kraal: "Life Skills: Creative Arts and Beginning Knowledge (animals); Home Language: speaking"
+  light: "Mathematics: Space and Shape (position and direction); Natural Sciences and Technology: Energy and Change (light travels in straight lines and reflects)",
+  rule: "Mathematics: Data Handling (sorting and classifying by properties); Natural Sciences: the scientific process (fair tests)",
+  story: "Home Language: listening and speaking, and writing and presenting (stories); Life Skills: Personal and Social Well-being (feelings)",
+  invent: "Technology: the design process (investigate, design, make, evaluate) and Systems and Control; Natural Sciences: Matter and Materials",
+  literal: "Mathematics: Patterns, Functions and Algebra (following and writing steps); Technology: algorithms and coding (to confirm)",
+  veld: "Natural Sciences and Technology: Life and Living (food chains and ecosystems); Social Sciences Geography: weather and climate",
+  describe: "Home Language: listening and speaking (describing, and following a description); Mathematics: properties of shapes",
+  sure: "No direct content area: thinking about thinking, used across subjects; Mathematics: number patterns and comparing lengths"
 };
-const NCF_LINK = { pattern: "Exploring mathematics", vetkoek: "Exploring mathematics", comic: "Communication; Creativity", memory: "Well-being (attention), to confirm",
-  paint: "Knowledge and understanding of the world; Creativity", robot: "Exploring mathematics", sort: "Exploring mathematics", kraal: "Creativity; Communication" };
+const NCF_LINK = { light: "Exploring mathematics; Knowledge and understanding of the world", rule: "Exploring mathematics; Knowledge and understanding of the world", story: "Communication; Creativity; Identity and belonging",
+  invent: "Knowledge and understanding of the world; Creativity", literal: "Communication; Exploring mathematics", veld: "Knowledge and understanding of the world", describe: "Communication", sure: "Well-being; Exploring mathematics" };
 function curriculumLink(id, cohort) {
   const unit = typeof UNITS !== "undefined" && UNITS.find(u => u.id === id); if (unit) return unit.caps + ".";
   if (!CAPS_LINK[id]) return "";
@@ -24,8 +24,8 @@ function curriculumLink(id, cohort) {
 }
 
 // ---------- Thinking prompts and educational feedback (Content Library, sections 3, 6 and 8) ----------
-const THINK = { pattern: "What did you notice first?", vetkoek: "How did you decide?", comic: "What caught your attention?", memory: "What helped you solve it?",
-  paint: "What would happen if you tried something different?", robot: "What could you try next?", sort: "What looks different?", kraal: "Can you think of a different idea?" };
+const THINK = { light: "Where does the light need to turn?", rule: "What do all the YES things have in common?", story: "How would you feel if you were in the story?", invent: "What could make it even better?",
+  literal: "What will Bolt do with that step?", veld: "What changes first, and what does that change next?", describe: "What makes yours different from the others?", sure: "How do you know?" };
 let thinkRun = null;
 function thinkPrompt() {
   if (!thinkRun || !thinkRun.acted || !THINK[thinkRun.x.id]) return "";
@@ -44,7 +44,7 @@ function matchedFeedback(run, items) {
   if (its.some(i => i.hints > 0 && i.latestMatched)) return ["You stayed with the challenge.", "Strong persistence."];
   if (its.some(i => i.checks > 1 && i.latestMatched)) return ["You tried a different approach when your first idea did not work.", "New strategy discovered."];
   if (its.some(i => i.movedOn)) return ["You kept trying.", "Learning continued."];
-  return ["You looked carefully before deciding.", run.x.id === "pattern" ? "Pattern recognised." : "Careful observation."];
+  return ["You looked carefully before deciding.", "Careful observation."];
 }
 const WELCOME = ["Welcome back.", "We're glad you're here.", "Let's discover something new together.", "Today is another opportunity to explore.", "There are many ways to think.",
   "Your ideas matter here.", "Every learner thinks differently, and that is something to celebrate.", "Learning begins with curiosity.", "Let's see what you discover today."];

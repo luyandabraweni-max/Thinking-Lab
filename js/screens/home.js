@@ -31,6 +31,7 @@ function home() {
             ${nextLab ? `<button class="tile" data-route="lab:${nextLab.id}"><span class="pill">Thinking Lab</span><span class="t-name">${esc(nextLab.name)}</span><span class="t-cat">${esc(nextLab.cat)}</span></button>` : ""}
           </div>
         </div>
+        ${inboxHtml()}
         <div class="card"><h2>My plan today</h2>${planHtml()}</div>
         <div class="grid">
           <button class="tile" id="hLearn"><span class="pill">${S.learned.length} done</span><span class="t-name">Learn</span><span class="t-cat">${esc([...new Set(myUnits().map(u => u.subject))].slice(0, 4).join(", "))}</span><span class="t-dom">${esc([...new Set(myUnits().map(u => u.grade))].sort((a, b) => a - b).map(gradeName).join(", "))}</span></button>
@@ -51,6 +52,7 @@ function home() {
   }
   on("#hLearn", () => needsBattery() ? batteryCheck(learnHome) : learnHome()); on("#hLab", () => needsBattery() ? batteryCheck(labHome) : labHome()); on("#hSkills", () => needsBattery() ? batteryCheck(skillsHome) : skillsHome()); on("#hWork", myWork); on("#hPass", passportStart); wirePlan();
   on("#hDone", goodbye);
+  wireInbox(home);
   on("[data-route]", e => { const [k, id] = e.currentTarget.dataset.route.split(":"); if (k === "unit") unitIntro(UNITS.find(u => u.id === id)); else startExercise(EXERCISES.find(x => x.id === id)); });
 }
 function myWork() {

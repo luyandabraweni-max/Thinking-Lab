@@ -9,7 +9,7 @@ const PROFESSIONS = ["Teacher", "Special-needs educator", "Occupational therapis
 const COUNTRIES = [["ZA", "South Africa"], ["AT", "Austria"], ["BE", "Belgium"], ["BG", "Bulgaria"], ["HR", "Croatia"], ["CY", "Cyprus"], ["CZ", "Czechia"], ["DK", "Denmark"], ["EE", "Estonia"], ["FI", "Finland"], ["FR", "France"], ["DE", "Germany"], ["GR", "Greece"], ["HU", "Hungary"], ["IE", "Ireland"], ["IT", "Italy"], ["LV", "Latvia"], ["LT", "Lithuania"], ["LU", "Luxembourg"], ["MT", "Malta"], ["NL", "Netherlands"], ["PL", "Poland"], ["PT", "Portugal"], ["RO", "Romania"], ["SK", "Slovakia"], ["SI", "Slovenia"], ["ES", "Spain"], ["SE", "Sweden"]];
 const lawFor = c => c === "ZA" ? "POPIA (South Africa)" : "GDPR (European Union)";
 
-const PORTAL = { accounts: [], learners: [], me: null, seq: 0 };
+const PORTAL = { accounts: [], learners: [], me: null, seq: 0, ruleReviews: [] };
 const ROLE_NAMES = { parent: "Parent portal", specialist: "Specialist portal", admin: "School admin" };
 // Demo accounts, also restored into older saved demo data that doesn't have them yet.
 const SEED_ACCOUNTS = [
@@ -19,16 +19,26 @@ const SEED_ACCOUNTS = [
   { id: "demo-admin", role: "admin", name: "Demo School Admin", email: "admin@example.org", country: "ZA", profession: "School administrator", org: "Demo Special School", demo: true, created: "2026-10-01", consents: { terms: true, confidential: true, safeguarding: true, honest: true } }];
 const newId = p => `${p}${++PORTAL.seq}`;
 // Demo accounts and learners, built on the demo dashboard's made-up learners so their histories are shared.
+// Made-up messages and health records for the demo child Brave Meerkat, so every part of the team view has something to show.
+const DEMO_TEAM = {
+  messages: [
+    { id: "dm1", date: "2026-10-15T15:10:00Z", fromId: "demo-specialist", fromName: "Demo Specialist", fromRole: "specialist", to: "team", text: "Brave Meerkat planned every step in the robot game today before pressing Run. A big step towards the planning goal.", readBy: ["demo-specialist"] },
+    { id: "dm2", date: "2026-10-15T18:40:00Z", fromId: "demo-parent", fromName: "Demo Parent", fromRole: "parent", to: "team", text: "Thank you! We tried the 'exact steps' game at home with making toast. Lots of laughing.", readBy: ["demo-parent", "demo-specialist"] },
+    { id: "dm3", date: "2026-10-20T09:05:00Z", fromId: "demo-specialist", fromName: "Demo Specialist", fromRole: "specialist", to: "learner", text: "Well done for fixing Bolt's instructions all by yourself!", readBy: ["demo-specialist", "learner", "demo-parent"] },
+    { id: "dm4", date: "2026-10-20T10:30:00Z", fromId: "learner", fromName: "Brave Meerkat", fromRole: "learner", to: "team", text: "That made me happy", sticker: "❤️", readBy: ["learner", "demo-specialist"] }],
+  meds: [{ id: "med1", name: "Example medicine (made up)", dose: "10 mg", when: "Mornings, with breakfast", reason: "Attention, prescribed by the paediatrician", start: "2026-10-12", stop: null }],
+  doses: [], healthLog: [{ date: "2026-10-12", text: "Started Example medicine (made up), 10 mg, mornings" }]
+};
 (function seedPortal() {
   PORTAL.accounts.push(...JSON.parse(JSON.stringify(SEED_ACCOUNTS)));
   const extra = [
     { curriculum: "NCF", level: "Grade R", guardianId: "demo-parent", supportNeeds: "" },
     { curriculum: "D-CAPS", level: "Foundation level", guardianId: "demo-parent", supportNeeds: "Needs extra time to process spoken instructions. Prefers building answers step by step.",
-      goals: [{ id: "g1", text: "Follows a 3-step plan without reminders", area: "Logical and Analytical Thinking", status: "doing", target: "2026-12-05" }, { id: "g2", text: "Asks for help using the talk board", area: "Communication and Expression", status: "done", target: "2026-11-14" }],
+      goals: [{ id: "g1", text: "Follows a 3-step plan without reminders", area: "Logical and Analytical Thinking", status: "doing", target: "2026-12-05" , created: "2026-10-06", obs: [{ date: "2026-10-08", level: "notyet", text: "Needed reminders after step 1.", by: "Demo Specialist" }, { date: "2026-10-15", level: "support", text: "Followed the plan with one picture prompt.", by: "Demo Specialist" }, { date: "2026-10-22", level: "alone", text: "Planned and followed all 3 steps in Literal Robot.", by: "Demo Specialist" }] }, { id: "g2", text: "Asks for help using the talk board", area: "Communication and Expression", status: "done", target: "2026-11-14" , created: "2026-10-06", obs: [{ date: "2026-10-13", level: "support", text: "Used the talk board when prompted.", by: "Demo Specialist" }] }],
       notes: [{ date: "2026-10-15", by: "Demo Specialist", byId: "demo-specialist", text: "Planned all Robot Rescue steps before starting today. A big step.", shareFamily: true }, { date: "2026-10-20", by: "Demo Specialist", byId: "demo-specialist", text: "Try the pattern activity again with building, not picture choice.", shareFamily: false }] },
     { curriculum: "CAPS", level: "Grade 9", guardianId: null, supportNeeds: "" }];
   DEMO.forEach((D, i) => PORTAL.learners.push(Object.assign({ id: "demo-l" + i, nickname: D.code, cohort: D.cohort, band: D.band, answer: D.answer, supports: D.supports, rows: D.rows, demoIndex: i, specialists: ["demo-specialist"], shareCode: null, goals: [], notes: [],
-    consent: { guardian: true, support: i === 1, share: true, date: "2026-10-01", law: lawFor("ZA"), schoolHeld: i === 2 } }, extra[i])));
+    consent: { guardian: true, support: i === 1, share: true, health: i === 1, date: "2026-10-01", law: lawFor("ZA"), schoolHeld: i === 2 } }, extra[i], i === 1 ? DEMO_TEAM : {})));
 })();
 const portalLearner = id => PORTAL.learners.find(l => l.id === id);
 // Access rules: guardians see their own children; specialists see learners shared with them; school admins see no learner records.
@@ -72,7 +82,7 @@ function welcome() {
     document.getElementById("cdNo").onclick = closeLayer;
     document.getElementById("cdYes").onclick = () => { try { localStorage.removeItem(PORTAL_KEY); } catch (e) {} location.reload(); };
   });
-  on("#wTry", () => { S.portalLearner = null; S.demoLearner = null; setup(); });
+  on("#wTry", () => { Object.assign(S, { portalLearner: null, demoLearner: null, history: [], adaptAuto: true, adaptSkip: {} }); setup(); });
   on("#wDemoParent", () => { PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-parent"); parentHome(); });
   on("#wDemoSpec", () => { PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-specialist"); specialistHome(); });
   on("#wDemoAdmin", () => { PORTAL.me = PORTAL.accounts.find(a => a.id === "demo-admin"); adminHome(); });
@@ -317,7 +327,9 @@ function startPortalSession(L) {
   Object.assign(S, { code: L.nickname, cohort: L.cohort, band: L.band, answer: L.answer, demoLearner: L.demoIndex != null ? L.demoIndex : null, portalLearner: L.id,
     avatar: L.avatar ? Object.assign({}, L.avatar) : null, my: Object.assign(JSON.parse(JSON.stringify(MY_DEFAULTS)), L.my || {}), passport: L.passport ? JSON.parse(JSON.stringify(L.passport)) : null,
     started: new Date(), need: null, played: [], learned: [], badges: [], obs: [], voice: [], battery: [], concerns: [], plan: null, planStep: 0, welcome: null,
-    grade: L.learnGrade != null ? L.learnGrade : S.grade, levels: Object.assign({}, L.learnLevels || {}) }, L.display || {});
+    grade: L.learnGrade != null ? L.learnGrade : S.grade, levels: Object.assign({}, L.learnLevels || {}), history: (L.rows || []).slice(), adaptAuto: L.adaptAuto !== false, adaptOff: Object.assign({}, L.adaptOff || {}), adaptSkip: {} }, L.display || {});
+  // A plan from a specialist is for this session only; it stays on record as the last plan used.
+  if (L.nextPlan && L.nextPlan.length) { S.plan = L.nextPlan.slice(); S.planBy = L.nextPlanBy || null; L.lastPlan = { steps: L.nextPlan, by: L.nextPlanBy, used: todayIsoDate() }; L.nextPlan = null; } else S.planBy = null;
   applySettings(); assent();
 }
 function portalAfterSession(id, added) {
@@ -343,7 +355,7 @@ function syncPortalLearner() {
 function describePrefs(L) {
   const m = L.my || {}, d = L.display || {}, out = [];
   if (m.grey) out.push("grey screen"); if (m.palette && m.palette !== "standard") out.push(PALETTES[m.palette].toLowerCase()); if (m.calm) out.push("calm screen"); if (m.plain) out.push("plain words"); if (m.spacing) out.push("extra letter spacing"); if (m.ruler) out.push("reading ruler");
-  if (m.how === "listen" || d.autoRead) out.push("read aloud"); if (m.how === "pictures") out.push("pictures"); if (m.scan) out.push("switch scanning");
+  if (m.how === "listen" || d.autoRead) out.push("read aloud"); if (m.how === "pictures") out.push("pictures"); if (m.scan) out.push("switch scanning"); if (m.dwell) out.push("choose by resting the pointer"); if (m.captions) out.push("captions"); if (m.voiceIn) out.push("answers by speaking");
   if (d.motion) out.push("no movement"); if (d.contrast) out.push("stronger outlines"); if (d.textSize > 1) out.push("larger text"); if (d.quiet) out.push("sound off"); if (d.theme === "dark") out.push("dark screen");
   return out.join(", ");
 }
@@ -353,14 +365,16 @@ function describePrefs(L) {
 // Sign-in is not kept: after a reload everyone starts signed out, so a child can't open an adult's portal.
 const PORTAL_KEY = "tl-demo-portal-v1";
 function savePortal() {
-  try { localStorage.setItem(PORTAL_KEY, JSON.stringify({ v: 1, seq: PORTAL.seq, accounts: PORTAL.accounts, learners: PORTAL.learners })); } catch (e) {}
+  try { localStorage.setItem(PORTAL_KEY, JSON.stringify({ v: 1, seq: PORTAL.seq, accounts: PORTAL.accounts, learners: PORTAL.learners, ruleReviews: PORTAL.ruleReviews || [] })); } catch (e) {}
 }
 function loadPortal() {
   try {
     const d = JSON.parse(localStorage.getItem(PORTAL_KEY) || "null");
     if (!d || d.v !== 1 || !Array.isArray(d.accounts) || !Array.isArray(d.learners)) return;
-    PORTAL.accounts = d.accounts; PORTAL.learners = d.learners; PORTAL.seq = d.seq || 0;
+    PORTAL.accounts = d.accounts; PORTAL.learners = d.learners; PORTAL.seq = d.seq || 0; PORTAL.ruleReviews = d.ruleReviews || [];
     SEED_ACCOUNTS.forEach(a => { if (!PORTAL.accounts.some(x => x.id === a.id)) PORTAL.accounts.push(JSON.parse(JSON.stringify(a))); });
+    // Records of activities that no longer exist (the first Thinking Lab games) are dropped; demo learners get the new sample history.
+    PORTAL.learners.forEach(L => { const kept = (L.rows || []).filter(r => exById(r[1])); if (kept.length < (L.rows || []).length && L.demoIndex != null && DEMO[L.demoIndex]) L.rows = DEMO[L.demoIndex].rows.concat(kept.filter(r => !DEMO[L.demoIndex].rows.includes(r))); else L.rows = kept; });
     PORTAL.learners.forEach(L => { if (L.demoIndex != null && DEMO[L.demoIndex]) DEMO[L.demoIndex].rows = L.rows; }); // the demo dashboard shares these histories
   } catch (e) {}
 }

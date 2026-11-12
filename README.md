@@ -17,16 +17,19 @@ Then open http://localhost:8000. The service worker (offline mode) only register
 ```
 index.html          Page shell: loads the stylesheet and scripts in order
 css/app.css         All styles
-js/core/            State, speech, learner profile, UI helpers, motion, install prompt
+js/core/            State, speech (with captions), learner profile, adaptation rules, UI helpers, motion, install prompt
 js/screens/         Setup, check-in, home, avatar, dashboard, skills, adult view
-js/activities/      Thinking Lab games (pattern, vetkoek, comic, memory, paint, robot, sort, kraal)
+js/activities/      Thinking Lab games: Light the Village, The Literal Robot, The Secret Rule Machine, Veld Balance,
+                    Story Weaver, Describe It, Invention Workshop, How Sure Am I? (shared pieces in lab-kit.js)
 js/learn/           Lesson flow, themed word problems, lesson visuals
 js/content/         Lesson and skills content: one file per grade or age group
 js/content/all-units.js   Combines every grade's units into UNITS (keep it after the content files)
-js/support/         My way (incl. greyscale), talk board, switch scanning, reading ruler, breaks, Support Passport,
+js/support/         My way (incl. greyscale), talk board, switch scanning, choose by resting the pointer, answer by
+                    speaking, reading ruler, breaks, Support Passport,
                     safeguarding ("I feel unsafe", helplines, concern records)
 js/reports/         Report model, plus PDF and Word (.docx) writers that run on the device
-js/portal/          Front door, registration, sign-in, parent, specialist and school admin portals, progress chart
+js/portal/          Front door, registration, sign-in, parent, specialist and school admin portals, progress chart,
+                    team.js (messages, goal observations, development, health and medication, plans, rule review)
 js/main.js          Starts the app and registers the service worker
 clips.js, clips/    Recorded voice clips (shared lines, and one file per Grade 4 to 6 lesson)
 sw.js               Offline cache
@@ -60,12 +63,25 @@ Locally the browser tests use the installed Microsoft Edge (set `PW_CHANNEL=chro
 
 The unit tests also write sample PDF and Word reports when `REPORT_DIR` is set; `python3 .github/scripts/check_reports.py <folder>` checks they are valid files. CI does both.
 
+## Thinking Lab games
+
+There are eight games, two in each of the four domains. Each one records *how* the learner works (tests, changes, predictions, confidence), not only the answer. They are described for specialist review in [docs/thinking-lab-games.md](docs/thinking-lab-games.md).
+
+## Adaptation
+
+The platform adapts to each learner from what they do in sessions, not from a label. It can offer help sooner, shorten lessons, start questions with fewer choices in a hard area, offer regular breaks, and say "take your time" after very quick wrong answers. The learner can undo each change on the spot. Level changes are only suggested to adults in the portal, and adults can turn automatic changes off. The rules are in `js/core/adapt.js` (thresholds in the `ADAPT` table) and explained for specialists in [docs/adaptation-rules.md](docs/adaptation-rules.md). They are provisional until specialists review them.
+
+Access options beyond My way: captions for everything the voice says, choosing by resting the pointer (eye gaze, head pointer), switch scanning, and answering by speaking (off by default, because some browsers send the sound to Google or Apple). Sign language videos play beside the captions once clips are added: set `window.__SIGNS = { "<exact spoken line>": "assets/signs/<file>.mp4" }` in a script loaded before `js/core/speech.js`.
+
 ## Portal (demo)
 
 Parents and specialists can register, sign in with an emailed code (shown on screen in the demo), and use their portal. Accounts are pretend: they stay in the browser, sign-in is never kept between visits, and "Clear demo data" on the welcome screen removes them. Demo accounts: `parent@example.org`, `specialist@example.org` (also the safeguarding lead), `therapist@example.org` and `admin@example.org` (school admin).
 
 - **Parents** see their children's progress (with a weekly chart), supports, sharing and reports.
 - **Specialists** see learners shared with them: progress, goals, notes and reports.
+- **Parents and specialists** both see how the platform adapts for a learner, and accept or set aside suggested level changes.
+- **Working together**: the family and specialists share a message thread about each learner, and adults can send the learner a message for their next session (the family can always read it). Specialists record observations against support plan goals, see development over time, set supports, switch automatic changes on or off one by one, plan the next session, and review the adaptation rules.
+- **Health and medication**: only the family enters medicines and daily doses. Specialists see them only when the family turns on sharing. They never appear in reports or to school admins.
 - **School admins** see their school's staff and totals, and choose the safeguarding lead. They never see an individual learner's records. Real accounts wait for the legal sign-off in the system design.
 
 ## Characters

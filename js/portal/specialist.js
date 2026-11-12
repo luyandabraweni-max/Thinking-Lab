@@ -17,6 +17,9 @@ function specialistHome() {
         </div>
         <p class="field-error" id="spErr" role="alert"></p>
         <div class="row"><button class="btn primary" id="spAdd">${icon("🔑")}<span>Add with code</span></button><button class="btn" id="spSchool">${icon("🏫")}<span>Add a learner my school has consent for</span></button></div>
+        <h2>Help shape the platform</h2>
+        <p class="note">The rules that decide how the platform adapts to each learner are waiting for specialist review.</p>
+        <div class="row"><button class="btn" id="spRules">${icon("⚖️")}<span>Review the adaptation rules</span></button></div>
       </section>`);
   wirePortalHead();
   on("[data-learner]", e => specialistLearner(e.currentTarget.dataset.learner, "overview"));
@@ -32,6 +35,7 @@ function specialistHome() {
   on("#spAdd", add);
   document.getElementById("spCode").addEventListener("keydown", e => { if (e.key === "Enter") add(); });
   on("#spSchool", schoolLearnerForm);
+  on("#spRules", ruleReview);
 }
 // Schools often hold signed consent forms themselves; the specialist confirms this before adding the learner.
 function schoolLearnerForm() {
@@ -77,17 +81,18 @@ function specialistLearner(id, tab) {
         <h2>Strengths and preferences</h2>
         <p class="note">Observations of activities, not a diagnosis or proof of mastery. Each one shows its evidence.</p>
         <div class="obs">${ss.map(s => `<div class="obs-item"><span class="status lvl-${s.level.toLowerCase()}">${s.level}</span> <b>${esc(s.label)}</b><div class="note">Evidence: ${esc(s.evidence)}.${s.level === "Early" ? "" : ` Suggestion: ${esc(s.suggestion)}.`}</div></div>`).join("") || '<p class="muted">No observations yet. Start a session to begin.</p>'}</div>
+        ${adaptPanelHtml(L)}
         <h2>Activities each week</h2>
         ${progressChart(L)}
         <h2>Activities by thinking domain</h2>
         <div class="dombars">${REPORT_DOMAINS.map(d => `<div class="dombar"><span>${esc(d)}</span><span class="track"><span class="fill" style="width:${dc(d) / max * 100}%"></span></span><span>${dc(d)}</span></div>`).join("")}</div>
-        ${rows.length ? `<h2>Recent sessions</h2><div class="tablewrap" tabindex="0" role="region" aria-label="Recent sessions"><table class="hist"><thead><tr><th scope="col">Date</th><th scope="col">Activity</th><th scope="col">Observed</th><th scope="col">Hints</th></tr></thead>
-          <tbody>${rows.slice(-6).reverse().map(r => `<tr><td>${niceDate(r[0])}</td><td>${esc(exById(r[1]).name)}</td><td><span class="status st-${r[2]}">${STATUS_TEXT[r[2]]}</span></td><td>${r[4]}</td></tr>`).join("")}</tbody></table></div>` : ""}
+        ${rows.length ? `<h2>Recent sessions</h2><div class="tablewrap" tabindex="0" role="region" aria-label="Recent sessions"><table class="hist"><thead><tr><th scope="col">Date</th><th scope="col">Activity</th><th scope="col">Observed</th><th scope="col">Support used</th></tr></thead>
+          <tbody>${rows.slice(-6).reverse().map(r => `<tr><td>${niceDate(r[0])}</td><td>${esc(exById(r[1]).name)}</td><td><span class="status st-${r[2]}">${STATUS_TEXT[r[2]]}</span></td><td>${esc(supportText(r))}</td></tr>`).join("")}</tbody></table></div>` : ""}
         <div class="row"><button class="btn" id="slStart">${icon("▶️")}<span>Start a session on this device as ${esc(L.nickname)}</span></button></div>`;
   } else if (tab === "goals") {
     body = `
         <p class="note">Goals from the learner's Individual Support Plan (ISP). Families can see goals and their status.</p>
-        ${L.goals.length ? `<ul class="goal-list">${L.goals.map(g => `<li class="goal-item"><div><b>${esc(g.text)}</b><div class="note">${esc(g.area)}${g.target ? ` · target ${fullDate(g.target)}` : ""}</div></div>
+        ${L.goals.length ? `<ul class="goal-list">${L.goals.map(g => `<li class="goal-item"><div><b>${esc(g.text)}</b><div class="note">${esc(g.area)}${g.target ? ` · target ${fullDate(g.target)}` : ""}</div>${goalObsHtml(g, true)}</div>
             <label class="sr" for="gs-${esc(g.id)}">Status of: ${esc(g.text)}</label><select id="gs-${esc(g.id)}" data-gstatus="${esc(g.id)}">${options(Object.entries(GOAL_STATUS), g.status)}</select>
             <button class="btn small quiet" data-gdel="${esc(g.id)}">Remove</button></li>`).join("")}</ul>` : `<p class="muted">No goals yet.</p>`}
         <h2>Add a goal</h2>
@@ -106,7 +111,11 @@ function specialistLearner(id, tab) {
         <div class="row"><button class="btn primary" id="nAdd">${icon("📝")}<span>Save note</span></button></div>
         <p class="note">Write facts and observations. Don't record anything you wouldn't want the family to read: they can ask to see everything held about their child.</p>
         ${visible.map(n => `<div class="obs-item"><b>${esc(n.by)}</b> · ${niceDate(n.date)} · ${n.shareFamily ? "shared with family" : "specialists only"}<div>${esc(n.text)}</div></div>`).join("") || '<p class="muted">No notes yet.</p>'}`;
-  } else if (tab === "profile") {
+  } else if (tab === "development") body = developmentHtml(L, me);
+  else if (tab === "messages") body = messagesHtml(L, me);
+  else if (tab === "supports") body = supportsHtml(L);
+  else if (tab === "health") body = healthHtml(L, me);
+  else if (tab === "profile") {
     body = `
         <table class="hist"><tbody>
           <tr><th scope="row">Age group</th><td>${esc(COHORTS[L.cohort])}</td></tr>
@@ -130,11 +139,16 @@ function specialistLearner(id, tab) {
         <h1>${esc(L.nickname)}</h1>
         <p class="note">${esc(COHORTS[L.cohort])} · ${esc([L.curriculum, L.level].filter(Boolean).join(", "))}</p>
         ${concernPanelHtml(L)}
-        ${tabsHtml([["overview", "Overview"], ["goals", "Support goals"], ["notes", "Notes"], ["profile", "Profile"], ["report", "Report"]], tab)}
+        ${tabsHtml([["overview", "Overview"], ["goals", "Support goals"], ["development", "Development"], ["messages", `Messages${unreadFor(L, me) ? ` (${unreadFor(L, me)} new)` : ""}`], ["supports", "Supports and plan"], ["health", "Health"], ["notes", "Notes"], ["profile", "Profile"], ["report", "Report"]], tab)}
         <div role="tabpanel" aria-labelledby="tab-${tab}" class="tabpanel">${body}</div>
       </section>`);
   wirePortalHead();
   on("[data-tab]", e => { const t = e.currentTarget.dataset.tab; if (t === "report") reportScreen(L, me, () => specialistLearner(id, "overview")); else specialistLearner(id, t); });
+  wireAdaptPanel(L, () => specialistLearner(id, "overview"));
+  wireGoalObs(L, me, () => specialistLearner(id, "goals"));
+  if (tab === "messages") wireMessages(L, me, () => specialistLearner(id, "messages"));
+  wireSupports(L, () => specialistLearner(id, "supports"));
+  wireHealth(L, me, () => specialistLearner(id, "health"));
   on("#slStart", () => startPortalSession(L));
   $main.querySelectorAll("[data-cdone]").forEach(b => b.addEventListener("click", () => {
     const c = (L.concerns || []).find(x => x.id === b.dataset.cdone), note = document.getElementById("ca-" + c.id).value.trim();
@@ -146,7 +160,7 @@ function specialistLearner(id, tab) {
   on("#gAdd", () => {
     const text = document.getElementById("gText").value.trim();
     if (!showErrors(text ? {} : { gText: "Write the goal first." })) return;
-    L.goals.push({ id: newId("g"), text, area: document.getElementById("gArea").value, status: "todo", target: document.getElementById("gTarget").value || "" });
+    L.goals.push({ id: newId("g"), text, area: document.getElementById("gArea").value, status: "todo", target: document.getElementById("gTarget").value || "", created: todayIso(), obs: [] });
     specialistLearner(id, "goals"); flash("Goal added.");
   });
   on("#nAdd", () => {

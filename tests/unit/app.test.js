@@ -31,24 +31,17 @@ describe("age and learning level are separate", () => {
 });
 
 describe("colour is never the only cue", () => {
-  it("gives every base paint and mix its own texture combination", () => {
-    const combos = app.run(`Object.keys(PAINT).concat(Object.values(MIXES).map(m => m[0])).map(n => paintTex(n).slice().sort().join("+"))`);
-    expect(new Set(combos).size).toBe(combos.length);
+  it("gives each Rule Machine pattern its own texture", () => {
+    const tok = f => app.run(`rmToken({ shape: "square", fill: "${f}", size: "big" }, 40)`);
+    expect(tok("striped")).toContain("<pattern"); expect(tok("dotted")).toContain("<circle cx=\"3.5\""); expect(tok("solid")).not.toContain("<pattern");
   });
-  it("draws textures on Paint Pots", () => {
-    app.run(`gamePaint({})`);
-    expect(app.main()).toContain("url(#tx");
+  it("draws each veld population with its own line style and marker", () => {
+    const h = app.run(`veldCharts(veldRun(VELD_START, 1, 3), 4)`);
+    expect(h).toContain('stroke-dasharray="6 3"'); expect(h).toContain('stroke-dasharray="2 3"'); expect(h).toContain("<rect"); expect(h).toContain("<circle");
   });
-  it("turns the Sort colour rule into a pattern rule in greyscale", () => {
-    app.run(`S.my.grey = true; S.band = "older"; gameSort({})`);
-    const h = app.main();
-    expect(h).toContain("Sort by pattern");
-    expect(h).toContain("striped");
-    expect(h).not.toContain("Sort by colour");
-  });
-  it("keeps colour words in Sort when greyscale is off", () => {
-    app.run(`gameSort({})`);
-    expect(app.main()).toContain("Sort by colour");
+  it("says in words when a hut is lit, not only with colour", () => {
+    app.run(`S.motion = true; startExercise(EXERCISES.find(x => x.id === "light")); document.getElementById("xBegin").click()`);
+    expect(app.main()).toContain("lamp not lit");
   });
 });
 

@@ -12,8 +12,8 @@ test("works offline after the first visit", async ({ page, context }) => {
   await expect(page.getByRole("heading", { name: "Welcome" })).toBeVisible();
 
   // A game and a lesson still open offline
-  await page.evaluate(`window.__SKIP_BATTERY__ = true; gamePaint({})`);
-  await expect(page.locator("#main")).toContainText("Paint Pots");
+  await page.evaluate(`window.__SKIP_BATTERY__ = true; startExercise(EXERCISES.find(x => x.id === "rule")); document.getElementById("xBegin").click()`);
+  await expect(page.locator("#main")).toContainText("The Secret Rule Machine");
   await page.evaluate(`learnHome()`);
   await expect(page.getByRole("heading", { name: "Choose a lesson" })).toBeVisible();
 });

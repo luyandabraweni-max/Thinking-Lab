@@ -1,3 +1,3 @@
 "use strict";
 
-const GAMES = { pattern: gamePattern, vetkoek: gameVetkoek, comic: gameComic, memory: gameMemory, paint: gamePaint, robot: gameRobot, sort: gameSort, kraal: gameKraal };
+const GAMES = { light: gameLight, rule: gameRule, story: gameStory, invent: gameInvent, literal: gameLiteral, veld: gameVeld, describe: gameDescribe, sure: gameSure };
