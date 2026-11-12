@@ -33,9 +33,25 @@ describe("signing in", () => {
     await user.type(screen.getByLabelText(/Code from the email/), DEMO_CODE);
     await user.click(screen.getByRole("button", { name: "Sign in" }));
     await user.type(await screen.findByLabelText(/Your name/), "Thandi");
+    await user.type(screen.getByLabelText(/Create a password/), "short");
+    await user.click(screen.getByRole("button", { name: "Continue" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("at least 8 characters");
+    await user.type(screen.getByLabelText(/Create a password/), " but now long enough");
     await user.click(screen.getByRole("button", { name: "Continue" }));
     expect(await screen.findByRole("heading", { name: "Your children" })).toBeInTheDocument();
     expect(screen.getByText("No children yet. Add your child below to get started.")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Set a password" })).toBeNull(); // made one already
+    // Next time: email and password, no email needed
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getAllByRole("button", { name: "Sign in or register" })[0]!);
+    await user.type(screen.getByLabelText(/Email address/), "someone.new@example.org");
+    await user.type(screen.getByLabelText(/^Password/), "wrong password");
+    await user.click(screen.getByRole("button", { name: "Sign in" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("That email and password don't match");
+    await user.clear(screen.getByLabelText(/^Password/));
+    await user.type(screen.getByLabelText(/^Password/), "short but now long enough");
+    await user.click(screen.getByRole("button", { name: "Sign in" }));
+    expect(await screen.findByRole("heading", { name: "Your children" })).toBeInTheDocument();
   });
   it("shows a school admin totals and staff, never learner records, and lets them choose the safeguarding lead", async () => {
     const user = start();

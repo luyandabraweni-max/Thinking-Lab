@@ -22,6 +22,7 @@ export interface NewLearner { nickname: string; cohort: Learner["cohort"]; curri
 export async function createServices(env: ImportMetaEnv = import.meta.env, store = new LocalStore(new IdbKv())): Promise<Services> {
   const url = env.VITE_SUPABASE_URL, key = env.VITE_SUPABASE_ANON_KEY;
   if (url && key) {
+    const link = linkError();
     // Loaded only when connected, so demo and offline try-outs don't download the server library.
     const [{ createClient }, { SupabaseTransport, SupabaseSafeguarding, SupabaseOrgAdmin }, { SupabaseAuth }] = await Promise.all([import("@supabase/supabase-js"), import("@tl/data/supabase"), import("./supabase-auth")]);
     const client = createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
@@ -32,7 +33,7 @@ export async function createServices(env: ImportMetaEnv = import.meta.env, store
       if (error) throw new Error(navigator.onLine ? error.message : "Adding a child needs an internet connection. Please try again when you're online.");
       await syncNow();
     };
-    return { mode: "supabase", store, auth: new SupabaseAuth(client, store, syncNow), syncNow, safeguarding: () => new SupabaseSafeguarding(client), admin: me => new SupabaseOrgAdmin(client, me.orgId ?? ""), registerLearner };
+    return { mode: "supabase", store, auth: new SupabaseAuth(client, store, syncNow, link), syncNow, safeguarding: () => new SupabaseSafeguarding(client), admin: me => new SupabaseOrgAdmin(client, me.orgId ?? ""), registerLearner };
   }
   if (!(await store.accounts()).length) await seedDemo(store);
   const registerLearner = async (me: Account, c: NewLearner) => {
@@ -40,6 +41,17 @@ export async function createServices(env: ImportMetaEnv = import.meta.env, store
       consent: { guardian: true, support: false, share: false, health: false, law: "POPIA", updatedAt: new Date().toISOString() } }]);
   };
   return { mode: "demo", store, auth: new DemoAuth(store), syncNow: async () => null, safeguarding: me => new LocalSafeguarding(store, me), admin: me => new LocalOrgAdmin(store, me), registerLearner };
+}
+
+/** An email link that didn't work comes back with the reason in the address. Read it, then tidy the address. */
+function linkError(): string | null {
+  if (typeof location === "undefined") return null;
+  const q = new URLSearchParams(location.hash.slice(1) + "&" + location.search.slice(1));
+  if (!q.get("error") && !q.get("error_code")) return null;
+  history.replaceState(null, "", location.pathname);
+  return q.get("error_code") === "otp_expired" || /expired|invalid/i.test(q.get("error_description") ?? "")
+    ? "That sign-in link has already been used or has expired. Each link works once, within an hour. Sign in with your password, or ask for a new link and open the newest email."
+    : `Signing in didn't work: ${q.get("error_description") ?? q.get("error")}. Please try again.`;
 }
 
 const ServicesContext = createContext<Services | null>(null);

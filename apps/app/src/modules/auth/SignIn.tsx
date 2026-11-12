@@ -1,7 +1,7 @@
 import { DEMO, type Account } from "@tl/data";
 import { Button, Card, Field, Notice } from "@tl/ui";
 import { useEffect, useState } from "react";
-import { checkPictures, DEMO_CODE, deviceLearners, PICTURES, useServices, type DeviceLearner } from "../../platform";
+import { checkPassword, checkPictures, DEMO_CODE, deviceLearners, PASSWORD_RULE, PICTURES, useServices, type DeviceLearner } from "../../platform";
 
 type Door = "guardian" | "specialist";
 type Step = { at: "doors" } | { at: "adult"; door: Door } | { at: "code"; door: Door; email: string } | { at: "register"; door: Door | null } | { at: "learners" } | { at: "pictures"; learner: DeviceLearner };
@@ -69,7 +69,7 @@ function DemoAccounts({ onAdult }: { onAdult: (a: Account) => void }) {
 
 function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "adult" | "code" }>; setStep: (s: Step) => void; onAdult: (a: Account) => void }) {
   const { auth, mode } = useServices();
-  const [email, setEmail] = useState(step.at === "code" ? step.email : ""), [code, setCode] = useState(""), [error, setError] = useState(""), [busy, setBusy] = useState(false);
+  const [email, setEmail] = useState(step.at === "code" ? step.email : ""), [password, setPassword] = useState(""), [code, setCode] = useState(""), [error, setError] = useState(""), [busy, setBusy] = useState(false);
   const attempt = async (fn: () => Promise<void>) => { setBusy(true); setError(""); try { await fn(); } catch (e) { setError((e as Error).message); } finally { setBusy(false); } };
   return (
     <Card>
@@ -78,13 +78,18 @@ function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "ad
         <Button variant="primary" disabled={busy} onClick={() => void attempt(() => auth.signInWithGoogle())}>Continue with Google</Button>
         <p className="tl-muted">Google shares only your name and email address with Thinking Lab.</p>
         <p><b>Or use your email</b></p></> : null}
-      {step.at === "adult" ? <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { await auth.sendEmailCode(email.trim()); setStep({ at: "code", door: step.door, email: email.trim() }); }); }}>
-        <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required hint="We'll email you a sign-in link. No password to remember." />
-        <div className="tl-row"><Button type="submit" variant={auth.methods.google ? undefined : "primary"} disabled={busy || !email.trim()}>Email me a sign-in link</Button></div>
-      </form> : <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.verifyEmailCode(step.email, code); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
+      {step.at === "adult" ? <div className="tl-stack">
+        <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.signInWithPassword(email, password); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
+          <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required />
+          {auth.methods.password ? <Field label="Password" type="password" value={password} onChange={setPassword} autoComplete="current-password" /> : null}
+          {auth.methods.password ? <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !email.trim() || !password}>Sign in</Button></div> : null}
+        </form>
+        <p><b>{auth.methods.password ? "New here, or forgot your password?" : "Sign in with your email"}</b> We'll email you a link that signs you in. You can then set a password, so you won't need emails after that.</p>
+        <div className="tl-row"><Button disabled={busy || !email.trim()} onClick={() => void attempt(async () => { await auth.sendEmailCode(email.trim()); setStep({ at: "code", door: step.door, email: email.trim() }); })}>Email me a sign-in link</Button></div>
+      </div> : <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.verifyEmailCode(step.email, code); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
         {mode === "demo" ? <Notice>Demo mode: no email is sent. The code is <b>{DEMO_CODE}</b>.</Notice>
-          : <><p>We sent an email to <b>{step.email}</b>. <b>Tap the sign-in link in it</b> on this device, or type the code if the email shows one.</p>
-            <p className="tl-muted">Can't find it? Check your spam folder. The email comes from Supabase, the service that keeps Thinking Lab accounts.</p></>}
+          : <><p>We sent an email to <b>{step.email}</b>. Open it <b>on this device, in this browser</b>, and tap the sign-in link. Use the newest email: each link works once, within an hour.</p>
+            <p className="tl-muted">Can't find it? Check your spam folder. The email comes from Supabase, the service that keeps Thinking Lab accounts. You can close this page; the link opens Thinking Lab for you.</p></>}
         <Field label="Code from the email (if it shows one)" value={code} onChange={setCode} autoComplete="one-time-code" required />
         <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !code.trim()}>Sign in</Button></div>
       </form>}
@@ -106,15 +111,22 @@ function Register({ door: given, onDone, onBack }: { door: Door | null; onDone: 
 }
 function RegisterAs({ door, onDone, onBack }: { door: Door; onDone: (a: Account) => void; onBack: () => void }) {
   const { auth } = useServices();
-  const [name, setName] = useState(""), [profession, setProfession] = useState(PROFESSIONS[0]!), [error, setError] = useState("");
+  const [name, setName] = useState(""), [profession, setProfession] = useState(PROFESSIONS[0]!), [password, setPassword] = useState(""), [error, setError] = useState("");
+  const save = async () => {
+    checkPassword(password); // before anything is saved, so a short password doesn't leave a half-made account
+    const me = await auth.register(name, door === "guardian" ? "guardian" : profession === "Teacher" ? "teacher" : "specialist", door === "guardian" ? undefined : profession);
+    await auth.setPassword(password);
+    return me;
+  };
   return (
     <Card>
       <h1>Welcome! Tell us who you are</h1>
-      <form className="tl-stack" onSubmit={e => { e.preventDefault(); auth.register(name, door === "guardian" ? "guardian" : profession === "Teacher" ? "teacher" : "specialist", door === "guardian" ? undefined : profession).then(onDone, (err: Error) => setError(err.message)); }}>
+      <form className="tl-stack" onSubmit={e => { e.preventDefault(); save().then(onDone, (err: Error) => setError(err.message)); }}>
         <Field label="Your name" value={name} onChange={setName} autoComplete="name" required />
         {door === "specialist" ? <div className="tl-field"><label htmlFor="prof">Your work</label>
           <select id="prof" value={profession} onChange={e => setProfession(e.target.value)}>{PROFESSIONS.map(p => <option key={p}>{p}</option>)}</select></div> : null}
-        <div className="tl-row"><Button type="submit" variant="primary" disabled={!name.trim()}>Continue</Button><Button variant="quiet" onClick={onBack}>Back</Button></div>
+        {auth.methods.password ? <Field label="Create a password" type="password" value={password} onChange={setPassword} autoComplete="new-password" hint={`${PASSWORD_RULE} Next time, sign in with your email and this password: no email needed.`} /> : null}
+        <div className="tl-row"><Button type="submit" variant="primary" disabled={!name.trim() || (auth.methods.password && !password)}>Continue</Button><Button variant="quiet" onClick={onBack}>Back</Button></div>
       </form>
       {error ? <p className="tl-error" role="alert">{error}</p> : null}
     </Card>
@@ -143,4 +155,20 @@ function PicturePassword({ learner, onOk, onBack }: { learner: DeviceLearner; on
       <div className="tl-row"><Button variant="quiet" onClick={onBack}>Back</Button></div>
     </Card>
   );
+}
+
+/** For adults who signed in by email and have no password yet, or want to change it. */
+export function SetPassword({ onDone, change }: { onDone: () => void; change?: boolean }) {
+  const { auth } = useServices();
+  const [password, setPassword] = useState(""), [error, setError] = useState(""), [busy, setBusy] = useState(false);
+  return (
+    <Card as="section">
+      <h2>{change ? "Change your password" : "Set a password"}</h2>
+      {change ? null : <p>Next time, sign in with your email and password. No waiting for emails.</p>}
+      <form className="tl-stack" onSubmit={e => { e.preventDefault(); setBusy(true); auth.setPassword(password).then(onDone, (err: Error) => setError(err.message)).finally(() => setBusy(false)); }}>
+        <Field label={change ? "New password" : "Create a password"} type="password" value={password} onChange={setPassword} autoComplete="new-password" hint={PASSWORD_RULE} />
+        <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !password}>Save password</Button><Button variant="quiet" onClick={onDone}>{change ? "Cancel" : "Not now"}</Button></div>
+      </form>
+      {error ? <p className="tl-error" role="alert">{error}</p> : null}
+    </Card>);
 }

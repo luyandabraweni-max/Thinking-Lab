@@ -25,12 +25,13 @@ export interface FieldProps {
   multiline?: boolean;
   required?: boolean;
   autoComplete?: string;
+  type?: "text" | "password" | "email";
   /** Shown next to the input, for example a microphone button. Gets the input's id. */
   extra?: (inputId: string) => ReactNode;
   /** Shown under the input, for example "Listening" or what was heard. */
   status?: ReactNode;
 }
-export function Field({ label, value, onChange, hint, error, multiline, required, autoComplete, extra, status }: FieldProps) {
+export function Field({ label, value, onChange, hint, error, multiline, required, autoComplete, type = "text", extra, status }: FieldProps) {
   const id = useId(), hintId = `${id}-hint`, errId = `${id}-err`;
   const described = [hint && hintId, error && errId].filter(Boolean).join(" ") || undefined;
   const common = { id, value, required, "aria-invalid": error ? true : undefined, "aria-describedby": described,
@@ -40,7 +41,7 @@ export function Field({ label, value, onChange, hint, error, multiline, required
       <label htmlFor={id}>{label}{required ? <span className="tl-muted"> (needed)</span> : null}</label>
       {hint ? <p className="tl-hint" id={hintId}>{hint}</p> : null}
       <div className="tl-field-input">
-        {multiline ? <textarea {...common} /> : <input type="text" autoComplete={autoComplete} {...common} />}
+        {multiline ? <textarea {...common} /> : <input type={type} autoComplete={autoComplete} {...common} />}
         {extra?.(id)}
       </div>
       {status}
