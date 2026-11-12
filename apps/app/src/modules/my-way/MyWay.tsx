@@ -2,6 +2,7 @@ import type { Kv } from "@tl/data";
 import { applyPrefs, DEFAULT_PREFS, type Prefs } from "@tl/ui";
 import { speak, stopSpeaking } from "@tl/voice";
 import { useCallback, useEffect, useState } from "react";
+import { startDwell, startScanning } from "./access";
 
 // My way (ported from js/support/my-way.js): how the learner wants things to look and sound. Saved on the device for
 // each learner. Age never sets these: the learner, or an adult with them, chooses.
@@ -17,6 +18,8 @@ export function usePrefs(kv: Kv, learnerId: string) {
   useEffect(() => { void loadPrefs(kv, learnerId).then(setPrefs); }, [kv, learnerId]);
   useEffect(() => { applyPrefs(prefs); }, [prefs]);
   useEffect(() => () => applyPrefs(DEFAULT_PREFS), []); // the next person on a shared device starts fresh
+  useEffect(() => (prefs.scan ? startScanning(prefs.scanSpeed) : undefined), [prefs.scan, prefs.scanSpeed]);
+  useEffect(() => (prefs.dwell ? startDwell(prefs.dwellSpeed) : undefined), [prefs.dwell, prefs.dwellSpeed]);
   const change = (patch: Partial<Prefs>) => setPrefs(p => { const n = { ...p, ...patch }; void kv.setMeta(key(learnerId), JSON.stringify(n)); return n; });
   return [prefs, change] as const;
 }
@@ -73,6 +76,12 @@ export function MyWay({ prefs, change, onDone }: { prefs: Prefs; change: (p: Par
       <h2>Understanding</h2>
       <Toggle k="plain" label="Plain words for tricky phrases" {...t} />
       <Toggle k="pictures" label="Pictures with key words" {...t} />
+      <h2>Choosing</h2>
+      <Toggle k="scan" label="Switch scanning: the highlight moves by itself, and I press my switch to choose" {...t} />
+      {prefs.scan ? <Group label="Scanning speed" k="scanSpeed" options={[["slow", "Slow"], ["medium", "Medium"], ["fast", "Fast"]]} {...t} /> : null}
+      <Toggle k="dwell" label="Choose by resting the pointer (for eye-gaze and head pointers)" {...t} />
+      {prefs.dwell ? <Group label="How long to rest" k="dwellSpeed" options={[["slow", "Longer"], ["medium", "Medium"], ["fast", "Shorter"]]} {...t} /> : null}
+      <p className="note">A switch that sends Space or Enter works with scanning. Touch screens aren't affected by resting: a tap still chooses.</p>
       <div className="row"><button className="btn primary" autoFocus onClick={onDone}>Done</button></div>
     </section>
   );
