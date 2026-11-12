@@ -1,0 +1,7 @@
+{
+  "appId": "africa.pholoso.thinkinglab",
+  "appName": "Thinking Lab",
+  "webDir": "dist",
+  "backgroundColor": "#EEF2F0",
+  "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": false }
+}

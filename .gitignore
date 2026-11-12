@@ -45,3 +45,5 @@ build/
 native/www/
 native/android/
 native/ios/
+apps/app/android/
+apps/app/ios/

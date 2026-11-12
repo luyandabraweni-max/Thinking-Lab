@@ -112,3 +112,7 @@ The same web app is wrapped as a native app with [Capacitor](https://capacitorjs
 - Pull requests into either branch run the checks only.
 
 See `.github/workflows/ci-cd.yml`. Deploys need the `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` repository secrets.
+
+## The React platform (in progress)
+
+The next version of the app is being built as a React + TypeScript modular monolith in `apps/` and `packages/`, with the database in `supabase/`. It doesn't affect this site. See [docs/architecture/README.md](docs/architecture/README.md) and the [2,500-user capacity plan](docs/architecture/capacity.md).

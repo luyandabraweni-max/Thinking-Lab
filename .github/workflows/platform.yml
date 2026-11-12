@@ -1,0 +1,74 @@
+name: Platform
+
+# The React platform (apps/, packages/, supabase/): checks on every push and pull request that touches it,
+# plus test builds of the Android and iOS apps. Nothing here deploys; the live site's pipeline is ci-cd.yml.
+on:
+  push:
+    paths: ["apps/**", "packages/**", "supabase/**", "tools/check-boundaries.mjs", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
+  pull_request:
+    paths: ["apps/**", "packages/**", "supabase/**", "tools/check-boundaries.mjs", "package*.json", "tsconfig.platform.json", "vitest.platform.config.mts", "eslint.config.mjs", ".github/workflows/platform.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Types, lint, module boundaries, tests (database rules included), build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run platform:types
+      - run: npm run platform:lint
+      - run: npm run platform:bounds
+      - run: npm run platform:test
+      - name: Build, and check the download stays small for low-end phones
+        run: |
+          npm run app:build
+          size=$(cat apps/app/dist/assets/index-*.js | gzip -c | wc -c)
+          echo "Main bundle: $((size / 1024)) KB gzipped" >> "$GITHUB_STEP_SUMMARY"
+          [ "$size" -lt 150000 ] || { echo "::error::Main bundle is $((size / 1024)) KB gzipped; the budget is 150 KB"; exit 1; }
+
+  android:
+    name: Android app (test build)
+    needs: checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - run: npm ci
+      - run: apps/app/native/build.sh android
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thinking-lab-platform-android
+          path: apps/app/android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
+
+  ios:
+    name: iOS app (simulator build)
+    needs: checks
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: apps/app/native/build.sh ios
