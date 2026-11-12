@@ -77,7 +77,9 @@ jobs:
         run: |
           [ -n "$NETLIFY_AUTH_TOKEN" ] || { echo "::error::NETLIFY_AUTH_TOKEN isn't available to this job. Add it as a repository secret (Settings > Secrets and variables > Actions > Secrets)"; exit 1; }
           [ -n "$NETLIFY_SITE_ID" ] || { echo "::error::NETLIFY_SITE_ID isn't available to this job. Add it as a repository secret or variable"; exit 1; }
-          npx --yes netlify-cli@17.38.1 deploy --dir=apps/app/dist --alias=app \
+          # Deploy from a folder outside the repo: inside it, Netlify's tool sees the workspaces and asks which to use.
+          cp -R apps/app/dist "$RUNNER_TEMP/site" && cd "$RUNNER_TEMP"
+          npx --yes netlify-cli@17.38.1 deploy --dir=site --alias=app \
             --message="platform @ ${GITHUB_SHA::7}" --json > deploy.json
           url=$(python3 -c "import json; d=json.load(open('deploy.json')); print(d.get('deploy_url') or d['url'])")
           echo "url=$url" >> "$GITHUB_OUTPUT"
