@@ -2,4 +2,4 @@
 export { GAMES, GAME_LIST, type GameId } from "./catalogue";
 export { Exercise } from "./Exercise";
 export { LabHome } from "./LabHome";
-export type { Band, LabRun } from "./kit";
+export { DrawPad, matchedFeedback, newRec, toAttempts, type Band, type GameItem, type LabRun } from "./kit";

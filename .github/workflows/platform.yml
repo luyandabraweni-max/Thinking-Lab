@@ -68,6 +68,10 @@ jobs:
     name: iOS app (simulator build)
     needs: checks
     runs-on: macos-15
+    # GitHub's Mac runners are sometimes unavailable ("not acquired by Runner"). That says nothing about our code, so
+    # it doesn't fail the run; check this job's own result, and use "Re-run jobs" when Macs are free again.
+    continue-on-error: true
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

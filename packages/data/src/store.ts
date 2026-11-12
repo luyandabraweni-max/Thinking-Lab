@@ -54,12 +54,22 @@ export class LearnerSpace {
   async record(entries: Omit<Attempt, "id" | "learnerId">[]) {
     for (const e of entries) await this.store.write("attempts", { ...e, id: newId(), learnerId: this.learner.id });
   }
+  /**
+   * The learner said they feel unsafe. Kept on this device for the adult who opens the learner's space.
+   * TODO before real learners: a server record with access for the safeguarding lead only (docs/system-design.md, section 13).
+   */
+  async reportConcern(where: string) {
+    const key = `concerns:${this.learner.id}`, list = JSON.parse((await this.store.kv.getMeta(key)) ?? "[]") as Concern[];
+    list.push({ at: now(), where });
+    await this.store.kv.setMeta(key, JSON.stringify(list));
+  }
   /** Earlier work, oldest first: the history the adaptation rules read. */
   async history() {
     return (await this.store.kv.all("attempts")).filter(a => a.learnerId === this.learner.id).sort((a, b) => a.occurredAt.localeCompare(b.occurredAt));
   }
 }
 
+export interface Concern { at: string; where: string }
 export interface NewMedication { name: string; dose: string; schedule: string; reason: string }
 
 export class Session {
@@ -131,6 +141,12 @@ export class Session {
   async setHealthAccess(learnerId: string, userId: string, on: boolean) {
     const L = await this.learnerFor(learnerId, canChangeConsent, "changing who sees health records (only the family can)");
     await this.store.write("learners", { ...L, team: L.team.map(t => (t.userId === userId ? { ...t, healthAccess: on } : t)) });
+  }
+
+  /** Concerns the learner raised on this device (see LearnerSpace.reportConcern). */
+  async concernsOnDevice(learnerId: string): Promise<Concern[]> {
+    await this.learner(learnerId);
+    return JSON.parse((await this.kv.getMeta(`concerns:${learnerId}`)) ?? "[]") as Concern[];
   }
 
   // ---------- Consent ----------

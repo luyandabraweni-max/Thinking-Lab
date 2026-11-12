@@ -108,7 +108,7 @@ export function matchedFeedback(items: GameItem[]): [string, string] {
 }
 
 /** What gets saved: one attempt per round, in the format the adaptation rules read. */
-export const toAttempts = (id: GameId, items: GameItem[], reflection: string, at = new Date().toISOString()): Omit<Attempt, "id" | "learnerId">[] =>
+export const toAttempts = (id: GameId | string, items: GameItem[], reflection: string, at = new Date().toISOString()): Omit<Attempt, "id" | "learnerId">[] =>
   items.map(it => { const [, , status, mode, hints, refl, flags] = toRow(it, id, reflection, at.slice(0, 10)); return { activityId: id, status, mode, hints, reflection: refl, flags: flags ?? null, occurredAt: at }; });
 
 /** A canvas to draw on, for reflections and stories. Returns the picture (or null if left blank). */

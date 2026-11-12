@@ -166,3 +166,27 @@ describe("the Thinking Lab", () => {
     delete document.documentElement.dataset.motion;
   });
 });
+
+describe("safeguarding", () => {
+  it("answers a learner who feels unsafe kindly, and alerts the adult on that device", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: /I feel unsafe/ }));
+    expect(await screen.findByRole("alertdialog", { name: "Thank you for telling us" })).toHaveTextContent("you are not in trouble");
+    expect(screen.getByText("116")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /Show a grown-up/ }));
+    expect(screen.getByRole("heading", { name: "I feel unsafe. I need to talk to someone." })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Done" }));
+    await user.click(await screen.findByRole("button", { name: "I'm done" }));
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("Safeguarding: Brave Meerkat said they feel unsafe");
+  });
+});
