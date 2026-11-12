@@ -50,7 +50,8 @@ jobs:
     if: github.event_name == 'push' && github.ref_name == 'platform'
     runs-on: ubuntu-latest
     environment:
-      name: platform-preview
+      # The same environment as the live site's dev preview, so it gets the same Netlify secrets.
+      name: development
       url: ${{ steps.deploy.outputs.url }}
     steps:
       - uses: actions/checkout@v4
@@ -74,6 +75,8 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID || vars.NETLIFY_SITE_ID }}
         run: |
+          [ -n "$NETLIFY_AUTH_TOKEN" ] || { echo "::error::NETLIFY_AUTH_TOKEN isn't available to this job. Add it as a repository secret (Settings > Secrets and variables > Actions > Secrets)"; exit 1; }
+          [ -n "$NETLIFY_SITE_ID" ] || { echo "::error::NETLIFY_SITE_ID isn't available to this job. Add it as a repository secret or variable"; exit 1; }
           npx --yes netlify-cli@17.38.1 deploy --dir=apps/app/dist --alias=app \
             --message="platform @ ${GITHUB_SHA::7}" --json > deploy.json
           url=$(python3 -c "import json; d=json.load(open('deploy.json')); print(d.get('deploy_url') or d['url'])")
