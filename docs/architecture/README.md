@@ -90,7 +90,7 @@ To connect to Supabase:
 - all 8 Thinking Lab games, played start to finish in tests
 - attempts saved and synced for the adaptation history
 
-**Next**, in the order of the system design's Phase 0:
+**Next:**
 The port has reached parity with the live site: every learner, family, team and admin feature is in the new app,
 with sync, offline use, voice, reports and accessibility checks. What's left:
 
