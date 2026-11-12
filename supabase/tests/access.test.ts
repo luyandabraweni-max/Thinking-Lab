@@ -238,3 +238,38 @@ describe("rule reviews", () => {
     expect((await pull(STRANGER)).rule_reviews).toEqual([]);
   });
 });
+
+describe("adding staff", () => {
+  it("adds people with an account at once, invites the rest until they register, and only admins can", async () => {
+    const ADM = "00000000-0000-4000-8000-000000000011", LATER = "00000000-0000-4000-8000-000000000012", NOW = "00000000-0000-4000-8000-000000000013";
+    await adult(db, ADM, "Staff Admin");
+    await adult(db, NOW, "Has Account");
+    const org = (await db.query<{ id: string }>("insert into public.organisations (name, kind) values ('Sunrise School', 'school') returning id")).rows[0]!.id;
+    await db.query("insert into public.memberships (user_id, org_id, role) values ($1, $2, 'org_admin')", [ADM, org]);
+    const call = (who: string, sql: string, args: unknown[]) => as(db, who, q => q<{ r: string }>(sql, args)).then(r => r[0]?.r);
+    expect(await call(ADM, "select public.invite_staff($1, $2, 'teacher') as r", [org, `${NOW}@example.org`])).toBe("added");
+    expect(await call(ADM, "select public.invite_staff($1, $2, 'specialist') as r", [org, " Later.Person@Example.org "])).toBe("invited");
+    await expect(call(ADM, "select public.invite_staff($1, $2, 'org_admin') as r", [org, "x@example.org"])).rejects.toThrow(/teachers or specialists/);
+    await expect(call(ADM, "select public.invite_staff($1, $2, 'teacher') as r", [org, "not an email"])).rejects.toThrow(/check the email/);
+    await expect(call(SPECIALIST, "select public.invite_staff($1, $2, 'teacher') as r", [org, "x@example.org"])).rejects.toThrow(/Only the organisation's admin/);
+    const overview = async () => (await as(db, ADM, q => q<{ o: { staff: { name: string }[]; invites: { email: string; role: string }[] } }>("select public.org_overview($1) as o", [org])))[0]!.o;
+    expect((await overview()).staff.map(s => s.name)).toEqual(["Has Account"]);
+    expect((await overview()).invites).toMatchObject([{ email: "later.person@example.org", role: "specialist" }]);
+    // The invited person registers (even as a parent): they join the school as invited, and the invitation is used up
+    await db.query("insert into auth.users (id, email) values ($1, 'later.person@example.org')", [LATER]);
+    await as(db, LATER, q => q("select public.register_adult('Later Person', 'specialist', 'Occupational therapist')"));
+    expect((await db.query("select org_id, role from public.memberships where user_id = $1", [LATER])).rows).toEqual([{ org_id: org, role: "specialist" }]);
+    expect((await overview()).invites).toEqual([]);
+    expect((await overview()).staff.map(s => s.name)).toEqual(["Has Account", "Later Person"]);
+    // Removing someone ends their staff role and lead role there
+    await as(db, ADM, q => q("select public.set_safeguarding_lead($1, $2, true)", [org, LATER]));
+    await as(db, ADM, q => q("select public.remove_staff($1, $2)", [org, LATER]));
+    expect((await overview()).staff.map(s => s.name)).toEqual(["Has Account"]);
+    expect((await db.query("select 1 from safeguarding.leads where user_id = $1", [LATER])).rows).toEqual([]);
+    await expect(as(db, ADM, q => q("select public.remove_staff($1, $2)", [org, ADM]))).rejects.toThrow(/remove yourself/);
+    // Cancelling an invitation
+    await call(ADM, "select public.invite_staff($1, $2, 'teacher') as r", [org, "maybe@example.org"]);
+    await as(db, ADM, q => q("select public.cancel_staff_invite($1, $2)", [org, "MAYBE@example.org"]));
+    expect((await overview()).invites).toEqual([]);
+  });
+});

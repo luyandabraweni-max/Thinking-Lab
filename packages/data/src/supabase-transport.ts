@@ -49,4 +49,17 @@ export class SupabaseOrgAdmin implements OrgAdmin {
     const { error } = await this.client.rpc("set_safeguarding_lead", { p_org: this.orgId, p_user: userId, p_on: on });
     if (error) throw new Error(error.message);
   }
+  async addStaff(email: string, role: "teacher" | "specialist") {
+    const { data, error } = await this.client.rpc("invite_staff", { p_org: this.orgId, p_email: email, p_role: role });
+    if (error) throw new Error(error.message);
+    return data as "added" | "invited";
+  }
+  async cancelInvite(email: string) {
+    const { error } = await this.client.rpc("cancel_staff_invite", { p_org: this.orgId, p_email: email });
+    if (error) throw new Error(error.message);
+  }
+  async removeStaff(userId: string) {
+    const { error } = await this.client.rpc("remove_staff", { p_org: this.orgId, p_user: userId });
+    if (error) throw new Error(error.code === "PGRST202" ? "Removing staff isn't switched on yet. The project owner needs to approve one database change (supabase/migrations/20261112082000_remove_staff.sql)." : error.message);
+  }
 }

@@ -2,7 +2,7 @@ import { DEMO, LocalStore, MemoryKv } from "@tl/data";
 import type { SpeechEngine } from "@tl/voice";
 import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { beforeEach, describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { App } from "./App";
 import { createServices, DEMO_CODE, type Services } from "./platform";
 
@@ -445,5 +445,28 @@ describe("rule review", () => {
     await signInDemo(user, "Demo parent");
     await screen.findByRole("heading", { name: "Your children" });
     expect(screen.queryByRole("button", { name: "Review the adaptation rules" })).toBeNull();
+  });
+});
+
+describe("adding staff", () => {
+  it("lets a school admin add a colleague who has an account, invite one who hasn't, and remove staff", async () => {
+    const user = start();
+    await signInDemo(user, "Demo school admin");
+    await user.type(await screen.findByLabelText(/Their email address/), "parent@example.org");
+    await user.selectOptions(screen.getByLabelText("Their role"), "teacher");
+    await user.click(screen.getByRole("button", { name: /^Add to / }));
+    expect(await screen.findByText(/parent@example\.org already had an account and is now staff/)).toBeInTheDocument();
+    expect(screen.getByRole("rowheader", { name: /Demo Parent/ })).toBeInTheDocument();
+    await user.type(screen.getByLabelText(/Their email address/), "New.Teacher@School.org");
+    await user.click(screen.getByRole("button", { name: /^Add to / }));
+    expect(await screen.findByText(/Invitation saved for new\.teacher@school\.org/)).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Waiting to register" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Cancel the invitation for new.teacher@school.org" }));
+    expect(await screen.findByText("Invitation for new.teacher@school.org cancelled.")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Waiting to register" })).toBeNull();
+    vi.spyOn(window, "confirm").mockReturnValue(true);
+    await user.click(screen.getByRole("button", { name: /^Remove Demo Therapist from / }));
+    expect(await screen.findByText(/Demo Therapist is no longer staff/)).toBeInTheDocument();
+    expect(screen.queryByRole("rowheader", { name: /Demo Therapist/ })).toBeNull();
   });
 });

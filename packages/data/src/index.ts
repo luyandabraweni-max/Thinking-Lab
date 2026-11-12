@@ -6,4 +6,4 @@ export { defaultSettings, LearnerSpace, LocalStore, Session, type NewMedication 
 export { LocalSafeguarding, type ConcernRecord, type Safeguarding } from "./safeguarding";
 export { sync, type Changes, type SyncResult, type Transport } from "./sync";
 export { DEMO, DEMO_ACCOUNTS, DEMO_LEARNERS, seedDemo } from "./demo";
-export { LocalOrgAdmin, type OrgAdmin, type OrgOverview, type StaffRow } from "./admin";
+export { LocalOrgAdmin, type OrgAdmin, type OrgOverview, type StaffInvite, type StaffRow } from "./admin";
