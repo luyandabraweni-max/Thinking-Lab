@@ -61,14 +61,14 @@ The tests show the swap works: they run the same migrations on PGlite with a 10-
 
 ```bash
 npm ci
-npm run app:dev          # http://localhost:5173, demo mode (data stays in the browser)
+npm run app:dev          # http://localhost:3000, demo mode (or connected, with apps/app/.env.local) (data stays in the browser)
 npm run platform:check   # types, lint, module boundaries, all platform tests
 ```
 
 To connect to Supabase:
 1. Copy `apps/app/.env.example` to `apps/app/.env.local` and fill in the project URL and anon key.
 2. Apply the migrations with the Supabase CLI: `supabase db push`.
-3. In Supabase Auth, turn on Google sign-in and email OTP. **Before launch, configure custom SMTP.** The built-in email service only sends a few emails an hour.
+3. Sign-in works with Supabase's standard emails: the link brings people back to `http://localhost:3000`, Supabase's default Site URL. When the app gets its real address, add it under Authentication → URL Configuration. **Before launch, configure custom SMTP**: the built-in email service only sends a few emails an hour. Google sign-in needs a Google Cloud OAuth client.
 
 ## Status and next steps
 

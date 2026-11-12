@@ -6,6 +6,8 @@ export interface AuthAdapter {
   readonly methods: { google: boolean; emailCode: boolean; demo: boolean };
   /** The adult already signed in on this device, if any. */
   current(): Promise<Account | null>;
+  /** On opening the app: signed in (for example from an email link), signed in but not yet registered ("new"), or not. */
+  session(): Promise<Account | "new" | null>;
   signInWithGoogle(): Promise<void>;
   sendEmailCode(email: string): Promise<void>;
   verifyEmailCode(email: string, code: string): Promise<Account | "new">;
@@ -22,6 +24,7 @@ export class DemoAuth implements AuthAdapter {
   private me: Account | null = null;
   constructor(private store: LocalStore) {}
   async current() { return this.me; }
+  async session() { return this.me; }
   async signInWithGoogle() { throw new Error("Google sign-in works once the app is connected to its server."); }
   async sendEmailCode(email: string) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error("Please check the email address.");

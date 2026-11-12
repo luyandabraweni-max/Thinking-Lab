@@ -14,12 +14,18 @@ export class SupabaseAuth implements AuthAdapter {
     return (await this.store.account(data.user.id)) ?? null;
   }
   async current() { return this.account(); }
+  async session() {
+    const { data } = await this.client.auth.getSession();
+    if (!data.session) return null;
+    await this.afterSignIn().catch(() => {}); // fetch the account; offline, the copy on the device is used
+    return (await this.account()) ?? "new";
+  }
   async signInWithGoogle() {
     const { error } = await this.client.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname, scopes: "openid email profile" } });
     if (error) throw new Error(error.message);
   }
   async sendEmailCode(email: string) {
-    const { error } = await this.client.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+    const { error } = await this.client.auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: location.origin + location.pathname } });
     if (error) throw new Error(error.message);
   }
   async verifyEmailCode(email: string, code: string) {

@@ -1,6 +1,6 @@
 import { DEMO, LocalStore, MemoryKv } from "@tl/data";
 import type { SpeechEngine } from "@tl/voice";
-import { cleanup, render, screen, within } from "@testing-library/react";
+import { cleanup, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it } from "vitest";
 import { App } from "./App";
@@ -25,7 +25,7 @@ describe("signing in", () => {
     const user = start();
     await user.click(screen.getAllByRole("button", { name: "Sign in or register" })[0]!);
     await user.type(screen.getByLabelText(/Email address/), "someone.new@example.org");
-    await user.click(screen.getByRole("button", { name: "Send me a code" }));
+    await user.click(screen.getByRole("button", { name: "Email me a sign-in link" }));
     await user.type(screen.getByLabelText(/Code from the email/), "000000");
     await user.click(screen.getByRole("button", { name: "Sign in" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("That code isn't right");
@@ -234,6 +234,6 @@ describe("My way", () => {
     const again = start(); void again;
     await enter();
     await screen.findByRole("button", { name: /My way/ });
-    expect(root.dataset.theme).toBe("dark"); // remembered for this learner
+    await waitFor(() => expect(root.dataset.theme).toBe("dark")); // remembered for this learner (loads just after the screen)
   });
 });

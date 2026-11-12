@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 import { checkPictures, DEMO_CODE, deviceLearners, PICTURES, useServices, type DeviceLearner } from "../../platform";
 
 type Door = "guardian" | "specialist";
-type Step = { at: "doors" } | { at: "adult"; door: Door } | { at: "code"; door: Door; email: string } | { at: "register"; door: Door } | { at: "learners" } | { at: "pictures"; learner: DeviceLearner };
+type Step = { at: "doors" } | { at: "adult"; door: Door } | { at: "code"; door: Door; email: string } | { at: "register"; door: Door | null } | { at: "learners" } | { at: "pictures"; learner: DeviceLearner };
 
 const DOOR_TEXT: Record<Door, [string, string]> = {
   guardian: ["Parents and guardians", "See how your child is doing, talk with their teachers and therapists, and keep track of medicines."],
   specialist: ["Specialists and teachers", "Follow your learners, set support goals, keep notes and talk with families."]
 };
 
-export function SignIn({ onAdult, onLearner }: { onAdult: (a: Account) => void; onLearner: (l: DeviceLearner) => void }) {
+export function SignIn({ onAdult, onLearner, registering }: { onAdult: (a: Account) => void; onLearner: (l: DeviceLearner) => void; registering?: boolean }) {
   const { mode, store } = useServices();
-  const [step, setStep] = useState<Step>({ at: "doors" });
+  const [step, setStep] = useState<Step>(registering ? { at: "register", door: null } : { at: "doors" });
   const [learners, setLearners] = useState<DeviceLearner[]>([]);
   useEffect(() => { void deviceLearners(store.kv).then(setLearners); }, [store, step]);
 
@@ -79,12 +79,13 @@ function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "ad
         <p className="tl-muted">Google shares only your name and email address with Thinking Lab.</p>
         <p><b>Or use your email</b></p></> : null}
       {step.at === "adult" ? <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { await auth.sendEmailCode(email.trim()); setStep({ at: "code", door: step.door, email: email.trim() }); }); }}>
-        <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required hint="We'll send you a one-time code. No password to remember." />
-        <div className="tl-row"><Button type="submit" variant={auth.methods.google ? undefined : "primary"} disabled={busy || !email.trim()}>Send me a code</Button></div>
+        <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required hint="We'll email you a sign-in link. No password to remember." />
+        <div className="tl-row"><Button type="submit" variant={auth.methods.google ? undefined : "primary"} disabled={busy || !email.trim()}>Email me a sign-in link</Button></div>
       </form> : <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.verifyEmailCode(step.email, code); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
-        <p>We sent a code to <b>{step.email}</b>.</p>
-        {mode === "demo" ? <Notice>Demo mode: no email is sent. The code is <b>{DEMO_CODE}</b>.</Notice> : null}
-        <Field label="Code from the email" value={code} onChange={setCode} autoComplete="one-time-code" required />
+        {mode === "demo" ? <Notice>Demo mode: no email is sent. The code is <b>{DEMO_CODE}</b>.</Notice>
+          : <><p>We sent an email to <b>{step.email}</b>. <b>Tap the sign-in link in it</b> on this device, or type the code if the email shows one.</p>
+            <p className="tl-muted">Can't find it? Check your spam folder. The email comes from Supabase, the service that keeps Thinking Lab accounts.</p></>}
+        <Field label="Code from the email (if it shows one)" value={code} onChange={setCode} autoComplete="one-time-code" required />
         <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !code.trim()}>Sign in</Button></div>
       </form>}
       {error ? <p className="tl-error" role="alert">{error}</p> : null}
@@ -94,7 +95,16 @@ function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "ad
 }
 
 const PROFESSIONS = ["Teacher", "Special-needs educator", "Occupational therapist", "Speech-language therapist", "Educational psychologist", "Physiotherapist", "Care worker", "Other"];
-function Register({ door, onDone, onBack }: { door: Door; onDone: (a: Account) => void; onBack: () => void }) {
+function Register({ door: given, onDone, onBack }: { door: Door | null; onDone: (a: Account) => void; onBack: () => void }) {
+  const [door, setDoor] = useState<Door | null>(given);
+  if (!door) return (
+    <Card>
+      <h1>Welcome! Who are you?</h1>
+      <div className="tl-row">{(Object.keys(DOOR_TEXT) as Door[]).map(d => <Button key={d} variant="primary" onClick={() => setDoor(d)}>{DOOR_TEXT[d][0]}</Button>)}</div>
+    </Card>);
+  return <RegisterAs door={door} onDone={onDone} onBack={onBack} />;
+}
+function RegisterAs({ door, onDone, onBack }: { door: Door; onDone: (a: Account) => void; onBack: () => void }) {
   const { auth } = useServices();
   const [name, setName] = useState(""), [profession, setProfession] = useState(PROFESSIONS[0]!), [error, setError] = useState("");
   return (
