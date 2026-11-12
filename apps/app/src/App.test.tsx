@@ -573,3 +573,24 @@ describe("my character", () => {
     expect((await store.kv.outbox()).some(e => e.table === "learner_settings")).toBe(true); // goes to the server for the family and team
   });
 });
+
+describe("My way on every device", () => {
+  it("sends the learner's choices for their other devices, and applies choices made elsewhere", async () => {
+    const user = start();
+    await store.receive("learner_settings", [{ id: DEMO.kid, adaptAuto: true, adaptOff: {}, levels: {}, decisions: {}, log: [], prefs: { size: "larger", grey: true } }]);
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await user.click(screen.getByRole("button", { name: "I'm a learner" }));
+    await user.click(await screen.findByRole("button", { name: "Brave Meerkat" }));
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    await user.click(await screen.findByRole("button", { name: "Skip" }));
+    await waitFor(() => expect(document.documentElement.hasAttribute("data-grey")).toBe(true)); // chosen on another device
+    await user.click(screen.getByRole("button", { name: /My way/ }));
+    await user.click(screen.getByRole("checkbox", { name: "Calm mode: fewer things on the screen" }));
+    const sent = (await store.kv.outbox()).filter(e => e.table === "learner_settings").pop()!;
+    expect(sent.row).toEqual({ id: DEMO.kid, prefs: expect.objectContaining({ calm: true, grey: true, size: "larger" }) }); // only what changed
+  });
+});

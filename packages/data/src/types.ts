@@ -92,6 +92,8 @@ export interface LearnerSettings {
   plan?: SessionPlan | null;
   /** The character the learner made (shown on their home, and to their family and team). */
   avatar?: AvatarLook | null;
+  /** The learner's My way choices (screen, sound, ways of choosing), following them between devices. */
+  prefs?: Record<string, unknown> | null;
   /** The plan the learner last took, and when. */
   lastPlan?: (SessionPlan & { used: string }) | null;
 }

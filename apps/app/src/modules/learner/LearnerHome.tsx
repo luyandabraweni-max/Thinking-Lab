@@ -60,10 +60,12 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
       const sp = await store.learnerSpace(adult, learner.learnerId);
       const [box, st] = await Promise.all([sp.inbox(), sp.settings()]);
       setSettings(st); setInbox(box); setSpace(sp); // settings first, so the learner never sees the old levels
+      if (st.prefs) changePrefs(st.prefs as Partial<Prefs>); // My way, as chosen on another device
       const made = await sp.takePlan(); // an adult's plan for this session is used once
       if (made) setPlan({ steps: made.steps, by: made.by, at: 0 });
       await sp.markRead();
     })().catch((e: Error) => setNote(e.message));
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- once per learner; changePrefs only applies the saved choices
   }, [store, learner]);
   const older = space ? space.learner.cohort === "teen" || space.learner.cohort === "adult" : false;
   const [talk, setTalk] = useState(false), talkBtn = useRef<HTMLButtonElement>(null);
@@ -76,7 +78,7 @@ function LearnerScreens({ learner, onDone, prefs, changePrefs, say }: { learner:
     if (check === "help") return <HelpCard say={say} onDone={() => setCheck(null)} />;
     if (space && screen === "avatar") return <AvatarBuilder initial={settings.avatar} older={older} calm={prefs.calm} say={say} onBack={() => setScreen("home")}
       onSave={look => { setSettings(st => ({ ...st, avatar: look })); void space.setAvatar(look); setScreen("home"); }} />;
-    if (screen === "myway") return <MyWay prefs={prefs} change={changePrefs} onDone={() => setScreen("home")} />;
+    if (screen === "myway") return <MyWay prefs={prefs} change={p => { changePrefs(p); void space?.setPrefs({ ...prefs, ...p }); }} onDone={() => setScreen("home")} />;
     if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} say={say} adapt={{ auto: settings.adaptAuto, off: settings.adaptOff }} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} short={short} voiceAnswers={prefs.voiceIn} onBack={() => { setLesson(null); setShort(false); }} /></Suspense>;
     if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} levels={settings.levels} onPick={id => begin(() => void openLesson(id))} onBack={() => setScreen("home")} /></Suspense>;
     if (space && screen !== "home") {

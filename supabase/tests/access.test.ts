@@ -174,6 +174,14 @@ describe("learner settings", () => {
     expect((await push(SPECIALIST, [{ id: uuid(68), table: "learner_settings", row: settings({ adaptAuto: false }) }])).applied).toHaveLength(1);
     expect(((await pull(SPECIALIST)).learner_settings as unknown as { avatar: unknown }[])[0]!.avatar).toEqual(look);
   });
+  it("change only the fields a device sent, so an older copy elsewhere never undoes a newer change", async () => {
+    expect((await push(SPECIALIST, [{ id: uuid(80), table: "learner_settings", row: { id: kid, levels: { maths: 7 }, log: [{ date: "2026-11-12", text: "Maths level set to Grade 7", by: "Demo Specialist" }] } }])).applied).toHaveLength(1);
+    expect((await push(PARENT, [{ id: uuid(81), table: "learner_settings", row: { id: kid, prefs: { size: "large", scan: true } } }])).applied).toHaveLength(1);
+    const now = ((await pull(PARENT)).learner_settings as unknown as { levels: object; prefs: object; avatar: unknown }[])[0]!;
+    expect(now.levels).toEqual({ maths: 7 }); // the learner's device didn't send levels, so the specialist's change stands
+    expect(now.prefs).toEqual({ size: "large", scan: true });
+    expect(now.avatar).not.toBeNull(); // still the character from before
+  });
   it("refuses kinds of data the server doesn't know", async () => {
     expect((await push(PARENT, [{ id: uuid(63), table: "drop table", row: {} }])).rejected[0]!.reason).toMatch(/unknown table/);
   });

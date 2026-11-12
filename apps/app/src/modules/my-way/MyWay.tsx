@@ -2,7 +2,7 @@ import type { Kv } from "@tl/data";
 import { applyPrefs, DEFAULT_PREFS, type Prefs } from "@tl/ui";
 import { speak, stopSpeaking } from "@tl/voice";
 import { useVoice } from "@tl/voice/react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { startDwell, startScanning } from "./access";
 
 // My way (ported from js/support/my-way.js): how the learner wants things to look and sound. Saved on the device for
@@ -16,12 +16,16 @@ export async function loadPrefs(kv: Kv, learnerId: string): Promise<Prefs> {
 /** The learner's preferences: loaded, applied to the page, saved on change, and put back when they leave. */
 export function usePrefs(kv: Kv, learnerId: string) {
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
-  useEffect(() => { void loadPrefs(kv, learnerId).then(setPrefs); }, [kv, learnerId]);
+  const early = useRef<Partial<Prefs>>({}); // changes made before this device's saved choices finished loading win
+  useEffect(() => { void loadPrefs(kv, learnerId).then(p => setPrefs({ ...p, ...early.current })); }, [kv, learnerId]);
   useEffect(() => { applyPrefs(prefs); }, [prefs]);
   useEffect(() => () => applyPrefs(DEFAULT_PREFS), []); // the next person on a shared device starts fresh
   useEffect(() => (prefs.scan ? startScanning(prefs.scanSpeed) : undefined), [prefs.scan, prefs.scanSpeed]);
   useEffect(() => (prefs.dwell ? startDwell(prefs.dwellSpeed) : undefined), [prefs.dwell, prefs.dwellSpeed]);
-  const change = (patch: Partial<Prefs>) => setPrefs(p => { const n = { ...p, ...patch }; void kv.setMeta(key(learnerId), JSON.stringify(n)); return n; });
+  const change = (patch: Partial<Prefs>) => {
+    early.current = { ...early.current, ...patch };
+    setPrefs(p => { const n = { ...p, ...patch }; void kv.setMeta(key(learnerId), JSON.stringify(n)); return n; });
+  };
   return [prefs, change] as const;
 }
 

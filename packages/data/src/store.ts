@@ -18,6 +18,11 @@ export class LocalStore {
     await this.kv.put(table, row);
     await this.kv.enqueue({ id: newId(), table, row, at: now() });
   }
+  /** Save a whole row locally, but send only the fields that changed: an older copy on this device never undoes newer changes. */
+  async writeChanges<T extends TableName>(table: T, row: Tables[T], changed: Partial<Tables[T]>) {
+    await this.kv.put(table, row);
+    await this.kv.enqueue({ id: newId(), table, row: { ...changed, id: row.id } as Tables[T], at: now() });
+  }
   /** Rows that came from the server: saved locally, never queued again. */
   async receive<T extends TableName>(table: T, rows: Tables[T][]) { for (const r of rows) await this.kv.put(table, r); }
 
@@ -65,13 +70,19 @@ export class LearnerSpace {
   /** Save the character the learner made. Their family and team see it. */
   async setAvatar(look: AvatarLook) {
     const cur = await this.settings();
-    await this.store.write("learner_settings", { ...cur, avatar: look });
+    await this.store.writeChanges("learner_settings", { ...cur, avatar: look }, { avatar: look });
+  }
+  /** The learner's My way choices, so they follow the learner to the family's and the team's devices. */
+  async setPrefs(prefs: Record<string, unknown>) {
+    const cur = await this.settings();
+    await this.store.writeChanges("learner_settings", { ...cur, prefs }, { prefs });
   }
   /** The plan an adult made for this session, if there is one. Taking it clears it, so it is used once. */
   async takePlan(): Promise<SessionPlan | null> {
     const cur = await this.settings();
     if (!cur.plan?.steps.length) return null;
-    await this.store.write("learner_settings", { ...cur, plan: null, lastPlan: { ...cur.plan, used: now().slice(0, 10) } });
+    const lastPlan = { ...cur.plan, used: now().slice(0, 10) };
+    await this.store.writeChanges("learner_settings", { ...cur, plan: null, lastPlan }, { plan: null, lastPlan });
     return cur.plan;
   }
   /** Earlier work, oldest first: the history the adaptation rules read. */
@@ -166,8 +177,9 @@ export class Session {
     const L = await this.learner(learnerId);
     if (!(canChangeConsent(this.me, L) || isTeamMember(this.me, L))) throw new AccessDenied("changing how the platform adapts");
     const cur = await settingsOf(this.kv, learnerId);
-    const next: LearnerSettings = { ...cur, ...patch, log: [...cur.log, { date: now().slice(0, 10), text: logText, by: this.me.name }] };
-    await this.store.write("learner_settings", next);
+    const entry = { date: now().slice(0, 10), text: logText, by: this.me.name };
+    const next: LearnerSettings = { ...cur, ...patch, log: [...cur.log, entry] };
+    await this.store.writeChanges("learner_settings", next, { ...patch, log: [entry] }); // the server keeps every log entry
     return next;
   }
   /** Plan the learner's next session: up to 5 steps, or none to clear it. */
