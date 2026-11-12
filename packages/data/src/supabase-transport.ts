@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { OutboxEntry } from "./kv";
+import type { OrgAdmin, OrgOverview } from "./admin";
 import type { ConcernRecord, Safeguarding } from "./safeguarding";
 import type { Changes, Transport } from "./sync";
 
@@ -32,6 +33,20 @@ export class SupabaseSafeguarding implements Safeguarding {
   }
   async followUp(id: string, action: string) {
     const { error } = await this.client.rpc("follow_up_concern", { p_id: id, p_action: action });
+    if (error) throw new Error(error.message);
+  }
+}
+
+/** The organisation admin's totals and staff, from a function that only answers that organisation's admins. */
+export class SupabaseOrgAdmin implements OrgAdmin {
+  constructor(private client: SupabaseClient, private orgId: string) {}
+  async overview() {
+    const { data, error } = await this.client.rpc("org_overview", { p_org: this.orgId });
+    if (error) throw new Error(error.message);
+    return data as OrgOverview;
+  }
+  async setLead(userId: string, on: boolean) {
+    const { error } = await this.client.rpc("set_safeguarding_lead", { p_org: this.orgId, p_user: userId, p_on: on });
     if (error) throw new Error(error.message);
   }
 }

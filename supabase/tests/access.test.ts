@@ -171,6 +171,25 @@ describe("registering", () => {
   });
 });
 
+describe("organisation admins", () => {
+  it("see totals and staff, appoint a safeguarding lead, and nobody else can", async () => {
+    const ADM = "00000000-0000-4000-8000-000000000009";
+    await adult(db, ADM, "Org Admin");
+    const org = (await db.query<{ org_id: string }>("select org_id from public.memberships where user_id = $1 and role = 'specialist'", [SPECIALIST])).rows[0]!.org_id;
+    await db.query("insert into public.memberships (user_id, org_id, role) values ($1, $2, 'org_admin')", [ADM, org]);
+    const overview = async () => (await as(db, ADM, q => q<{ o: { learners: number; staff: { name: string; lead: boolean }[] } }>("select public.org_overview($1) as o", [org])))[0]!.o;
+    const before = await overview();
+    expect(before.learners).toBe(1);
+    expect(before.staff.map(x => x.name)).toEqual(["Demo Specialist"]);
+    expect(JSON.stringify(before)).not.toContain("Brave Meerkat"); // totals only, never learner names
+    await as(db, ADM, q => q("select public.set_safeguarding_lead($1, $2, false)", [org, SPECIALIST]));
+    expect((await overview()).staff[0]!.lead).toBe(false);
+    await as(db, ADM, q => q("select public.set_safeguarding_lead($1, $2, true)", [org, SPECIALIST]));
+    expect((await overview()).staff[0]!.lead).toBe(true);
+    await expect(as(db, SPECIALIST, q => q("select public.org_overview($1)", [org]))).rejects.toThrow(/Only the organisation's admin/);
+  });
+});
+
 describe("school admins", () => {
   it("see no learner records", async () => {
     const ADMIN = "00000000-0000-4000-8000-000000000005";

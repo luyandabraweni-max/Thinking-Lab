@@ -1,6 +1,7 @@
 import { type Account, type Learner } from "@tl/data";
-import { Button, Card, Notice } from "@tl/ui";
+import { Button, Card } from "@tl/ui";
 import { useServices } from "../../platform";
+import { AdminHome } from "./Admin";
 import { SafeguardingPanel } from "./Safeguarding";
 import { useLoad } from "./use-load";
 
@@ -14,11 +15,7 @@ export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: stri
     return Promise.all(ls.map(async L => ({ L, unread: await s.unread(L.id) })));
   }, [store, me]);
 
-  if (me.role === "org_admin" || me.role === "site_admin") return (
-    <Card>
-      <h1>School admin</h1>
-      <Notice>School admins don't see individual learners' records. Reports for your organisation will show totals only.</Notice>
-    </Card>);
+  if (me.role === "org_admin" || me.role === "site_admin") return <AdminHome me={me} />;
 
   return (<>
     {me.role === "specialist" || me.role === "teacher" ? <SafeguardingPanel me={me} /> : null}

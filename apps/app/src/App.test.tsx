@@ -37,10 +37,18 @@ describe("signing in", () => {
     expect(await screen.findByRole("heading", { name: "Your children" })).toBeInTheDocument();
     expect(screen.getByText("No children registered yet.")).toBeInTheDocument();
   });
-  it("shows a school admin no learner records", async () => {
+  it("shows a school admin totals and staff, never learner records, and lets them choose the safeguarding lead", async () => {
     const user = start();
     await signInDemo(user, "Demo school admin");
-    expect(await screen.findByText(/don't see individual learners' records/)).toBeInTheDocument();
+    expect(await screen.findByText(/you don't see learners' names, progress or notes/)).toBeInTheDocument();
+    expect(screen.queryByText(/Brave Meerkat/)).toBeNull();
+    const lead = screen.getByRole("checkbox", { name: "Demo Specialist is a safeguarding lead" });
+    expect(lead).toBeChecked();
+    await user.click(lead);
+    expect(await screen.findByRole("heading", { name: /No safeguarding lead/ })).toBeInTheDocument();
+    await user.click(screen.getByRole("checkbox", { name: "Demo Therapist is a safeguarding lead" }));
+    expect(await screen.findByText("Demo Therapist is now a safeguarding lead and receives concerns.")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /No safeguarding lead/ })).toBeNull();
   });
 });
 
@@ -251,7 +259,7 @@ describe("the support plan", () => {
     await user.click(within(item).getByText("Add an observation"));
     await user.click(within(item).getByLabelText(/On their own/));
     await user.click(within(item).getByRole("button", { name: "Save observation" }));
-    expect(await within(item).findByText(/Working on it/)).toBeInTheDocument(); // seen done alone
+    expect(await within(item).findByText("Working on it", { selector: ".status" })).toBeInTheDocument(); // seen done alone
     expect(within(item).getByRole("img", { name: /On their own/ })).toBeInTheDocument();
     await user.click(screen.getByRole("tab", { name: "Notes" }));
     await user.type(await screen.findByLabelText("New note"), "Talked about turn-taking with the class.");
