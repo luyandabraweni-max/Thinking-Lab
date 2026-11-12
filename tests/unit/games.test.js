@@ -122,7 +122,9 @@ describe("Describe It", () => {
         const label = app.run(`document.querySelector(".di-blip.mine").getAttribute("aria-label")`);
         const want = [label.includes("a round") ? "is round" : "is tall", /one eye/.test(label) ? "has one eye" : /two eyes/.test(label) ? "has two eyes" : "has three eyes",
           /no hat/.test(label) ? "has no hat" : "wears a hat", /spots/.test(label) ? "has spots" : /stripes/.test(label) ? "has stripes" : "has no pattern"];
-        app.run(`[...document.querySelectorAll("[data-cl]")].filter(b => ${JSON.stringify(want)}.some(w => b.textContent.trim() === "It " + w)).forEach(b => b.click())`);
+        // Each click redraws the screen, so find each clue button afresh before clicking it.
+        const picks = app.run(`[...document.querySelectorAll("[data-cl]")].filter(b => ${JSON.stringify(want)}.some(w => b.textContent.trim() === "It " + w)).map(b => b.dataset.cl)`);
+        for (const i of picks) click(`[data-cl="${i}"]`);
         click("#diTell");
         expect(app.main()).toContain("Found it!");
       } else {
