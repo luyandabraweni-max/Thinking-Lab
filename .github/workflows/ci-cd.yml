@@ -92,7 +92,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Stage site files
         run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='node_modules' --exclude='native' --exclude='tests' --exclude='docs' --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='test-results' --exclude='playwright-report' ./ _site/
