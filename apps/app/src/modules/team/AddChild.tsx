@@ -3,6 +3,7 @@ import type { Account, Learner } from "@tl/data";
 import { Button, Card, Field } from "@tl/ui";
 import { useState } from "react";
 import { useServices } from "../../platform";
+import { PrivacyNotice } from "../privacy";
 
 // A parent or guardian adds their child (the server links them as guardian and records their consent).
 // Children are known by a nickname: no real name, birthday or school is asked for.
@@ -37,8 +38,9 @@ export function AddChild({ me, first, onAdded }: { me: Account; first: boolean; 
           <p className="tl-muted">You, or your child's teachers, can change this later. Lessons also suggest moving up or down.</p></div>
         <div className="tl-field"><label htmlFor="acCurr">Curriculum</label>
           <select id="acCurr" value={curriculum} onChange={e => setCurriculum(e.target.value)}>{CURRICULA.map(c => <option key={c}>{c}</option>)}</select></div>
+        <details className="privacy-box"><summary>How we look after your child's information (please read)</summary><PrivacyNotice /></details>
         <label className="consent"><input type="checkbox" checked={agree} onChange={e => setAgree(e.target.checked)} />
-          <span>I am this child's parent or guardian, and I agree to Thinking Lab keeping their learning records. Only I can see them until I choose to share them with a teacher or therapist.</span></label>
+          <span>I am this child's parent or guardian. I have read how Thinking Lab looks after their information, and I agree to it keeping their learning records. Only I can see them until I choose to share them with a teacher or therapist.</span></label>
         {error && nickname.trim() ? <p className="tl-error" role="alert">{error}</p> : null}
         <div className="tl-row"><Button type="submit" variant="primary" disabled={busy}>{busy ? "Adding…" : "Add child"}</Button>{first ? null : <Button variant="quiet" onClick={() => setOpen(false)}>Cancel</Button>}</div>
       </form>

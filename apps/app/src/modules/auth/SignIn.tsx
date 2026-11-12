@@ -1,6 +1,7 @@
 import { DEMO, type Account } from "@tl/data";
 import { Button, Card, Field, Notice } from "@tl/ui";
 import { useEffect, useState } from "react";
+import { PrivacyNotice } from "../privacy";
 import { checkPassword, checkPictures, DEMO_CODE, deviceLearners, PASSWORD_RULE, PICTURES, useServices, type DeviceLearner } from "../../platform";
 
 type Door = "guardian" | "specialist";
@@ -46,6 +47,7 @@ export function SignIn({ onAdult, onLearner, registering }: { onAdult: (a: Accou
       </div>
       {mode === "demo" ? <DemoAccounts onAdult={onAdult} /> : null}
       <p className="tl-muted">School and organisation admins: your account is set up with us when your organisation joins.</p>
+      <details className="privacy-box"><summary>Privacy: how we look after your information</summary><PrivacyNotice /></details>
     </Card>
   );
 }

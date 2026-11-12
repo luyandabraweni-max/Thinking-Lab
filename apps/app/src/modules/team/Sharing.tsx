@@ -11,7 +11,7 @@ const CONSENTS: [keyof Pick<Learner["consent"], "share" | "support" | "health">,
 ];
 
 /** Consent and who sees what: the family decides. Team members see who else is on the team. */
-export function Sharing({ me, learner, onChanged }: { me: Account; learner: Learner; onChanged: () => void }) {
+export function Sharing({ me, learner, onChanged, onDeleted }: { me: Account; learner: Learner; onChanged: () => void; onDeleted?: () => void }) {
   const { store, syncNow } = useServices();
   const s = store.as(me), family = canChangeConsent(me, learner);
   const [people] = useLoad(async () => Promise.all(learner.team.map(async t => ({ t, a: await store.account(t.userId) }))), [store, learner]);
@@ -33,8 +33,30 @@ export function Sharing({ me, learner, onChanged }: { me: Account; learner: Lear
         </Card>))}
       {people && !people.length ? <p className="tl-muted">Nobody else on the team yet.</p> : null}
       <OpenOnDevice me={me} learner={learner} />
+      {family && onDeleted ? <DeleteProfile me={me} learner={learner} onDeleted={onDeleted} /> : null}
     </div>
   );
+}
+
+/** The family deletes the child's profile and everything about them (POPIA: the right to deletion). */
+function DeleteProfile({ me, learner, onDeleted }: { me: Account; learner: Learner; onDeleted: () => void }) {
+  const { deleteLearner } = useServices();
+  const [open, setOpen] = useState(false), [typed, setTyped] = useState(""), [error, setError] = useState(""), [busy, setBusy] = useState(false);
+  const name = learner.nickname;
+  if (!open) return <div className="tl-row"><Button variant="quiet" onClick={() => setOpen(true)}>Delete {name}'s profile</Button></div>;
+  return (
+    <Card as="section">
+      <h2>Delete {name}'s profile?</h2>
+      <p>This deletes everything about {name} from Thinking Lab: their progress, goals, notes, messages, reports, settings, character and health records. Teachers and therapists lose access. <b>It can't be undone.</b></p>
+      <div className="tl-field"><label htmlFor="delName">To confirm, type {name}</label>
+        <input id="delName" autoComplete="off" value={typed} onChange={e => setTyped(e.target.value)} /></div>
+      {error ? <p className="tl-error" role="alert">{error}</p> : null}
+      <div className="tl-row">
+        <Button variant="primary" disabled={busy || typed.trim().toLowerCase() !== name.toLowerCase()}
+          onClick={() => { setBusy(true); setError(""); deleteLearner(me, learner.id).then(onDeleted, (e: Error) => setError(e.message)).finally(() => setBusy(false)); }}>Delete for ever</Button>
+        <Button variant="quiet" onClick={() => { setOpen(false); setTyped(""); }}>Keep {name}'s profile</Button>
+      </div>
+    </Card>);
 }
 
 /** An adult sets up this device for the learner, with a picture password the learner will remember. */

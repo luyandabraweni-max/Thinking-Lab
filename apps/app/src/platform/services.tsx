@@ -1,6 +1,7 @@
-import { IdbKv, LocalOrgAdmin, LocalSafeguarding, LocalStore, seedDemo, sync, type Account, type Learner, type OrgAdmin, type Safeguarding, type SyncResult } from "@tl/data";
+import { IdbKv, LocalOrgAdmin, LocalSafeguarding, LocalStore, prune, seedDemo, sync, type Account, type Learner, type OrgAdmin, type Safeguarding, type SyncResult } from "@tl/data";
 import { createContext, useContext, type ReactNode } from "react";
 import { DemoAuth, type AuthAdapter } from "./auth";
+import { removeDeviceLearner } from "./learner-lock";
 
 // The composition root: the only place that decides between demo mode (no server, data on this device) and the
 // real backend. Modules get everything through useServices(), so they never know which one is in use.
@@ -16,6 +17,8 @@ export interface Services {
   admin(me: Account): OrgAdmin;
   /** A parent or guardian adds their child. Needs the server (it decides the learner's id and links the guardian). */
   registerLearner(me: Account, child: NewLearner): Promise<void>;
+  /** A parent or guardian deletes their child's profile and everything about them. Needs the server. */
+  deleteLearner(me: Account, learnerId: string): Promise<void>;
 }
 export interface NewLearner { nickname: string; cohort: Learner["cohort"]; curriculum: string; level: string }
 
@@ -33,14 +36,26 @@ export async function createServices(env: ImportMetaEnv = import.meta.env, store
       if (error) throw new Error(navigator.onLine ? error.message : "Adding a child needs an internet connection. Please try again when you're online.");
       await syncNow();
     };
-    return { mode: "supabase", store, auth: new SupabaseAuth(client, store, syncNow, link), syncNow, safeguarding: () => new SupabaseSafeguarding(client), admin: me => new SupabaseOrgAdmin(client, me.orgId ?? ""), registerLearner };
+    const deleteLearner = async (_me: Account, id: string) => {
+      const { error } = await client.rpc("delete_learner", { p_learner: id });
+      if (error) throw new Error(error.code === "PGRST202" ? "Deleting a profile isn't switched on yet. The project owner needs to apply one database change (supabase/migrations/20261112120000_delete_learner.sql)."
+        : navigator.onLine ? error.message : "Deleting a profile needs an internet connection. Please try again when you're online.");
+      await forget(store, id);
+      await syncNow();
+    };
+    return { mode: "supabase", store, auth: new SupabaseAuth(client, store, syncNow, link), syncNow, safeguarding: () => new SupabaseSafeguarding(client), admin: me => new SupabaseOrgAdmin(client, me.orgId ?? ""), registerLearner, deleteLearner };
   }
   if (!(await store.accounts()).length) await seedDemo(store);
   const registerLearner = async (me: Account, c: NewLearner) => {
     await store.receive("learners", [{ id: crypto.randomUUID(), orgId: me.orgId ?? "", ...c, guardianIds: [me.id], team: [],
       consent: { guardian: true, support: false, share: false, health: false, law: "POPIA", updatedAt: new Date().toISOString() } }]);
   };
-  return { mode: "demo", store, auth: new DemoAuth(store), syncNow: async () => null, safeguarding: me => new LocalSafeguarding(store, me), admin: me => new LocalOrgAdmin(store, me), registerLearner };
+  const deleteLearner = async (me: Account, id: string) => {
+    const L = (await store.kv.all("learners")).find(x => x.id === id);
+    if (!L || !L.guardianIds.includes(me.id)) throw new Error("Only the child's parent or guardian can delete their profile");
+    await forget(store, id);
+  };
+  return { mode: "demo", store, auth: new DemoAuth(store), syncNow: async () => null, safeguarding: me => new LocalSafeguarding(store, me), admin: me => new LocalOrgAdmin(store, me), registerLearner, deleteLearner };
 }
 
 /** An email link that didn't work comes back with the reason in the address. Read it, then tidy the address. */
@@ -52,6 +67,13 @@ function linkError(): string | null {
   return q.get("error_code") === "otp_expired" || /expired|invalid/i.test(q.get("error_description") ?? "")
     ? "That sign-in link has already been used or has expired. Each link works once, within an hour. Sign in with your password, or ask for a new link and open the newest email."
     : `Signing in didn't work: ${q.get("error_description") ?? q.get("error")}. Please try again.`;
+}
+
+/** Removes a learner from this device: their records, and their picture password here. */
+async function forget(store: LocalStore, id: string) {
+  const learners = (await store.kv.all("learners")).map(l => l.id).filter(x => x !== id);
+  await prune(store, { learners, health: learners }); // everyone else's records, health included, stay as they are
+  await removeDeviceLearner(store.kv, id);
 }
 
 const ServicesContext = createContext<Services | null>(null);

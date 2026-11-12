@@ -39,7 +39,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
       </div> : null}
       <Tabs label={`${learner.nickname}'s sections`} tabs={tabs} current={tab} onChange={setTab} />
       <TabPanel id={tab}>
-        {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "goals" ? <Goals me={me} learner={learner} /> : tab === "notes" ? <Notes me={me} learner={learner} /> : tab === "progress" ? <Suspense fallback={<p>Loading…</p>}><Progress me={me} learner={learner} /></Suspense> : tab === "next" ? <Suspense fallback={<p>Loading…</p>}><NextSession me={me} learner={learner} /></Suspense> : tab === "adapting" ? <Suspense fallback={<p>Loading…</p>}><Adapting me={me} learner={learner} /></Suspense> : tab === "report" ? <Suspense fallback={<p>Loading…</p>}><Report me={me} learner={learner} /></Suspense> : tab === "health" ? <Health me={me} learner={learner} /> : <Sharing me={me} learner={learner} onChanged={reload} />}
+        {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "goals" ? <Goals me={me} learner={learner} /> : tab === "notes" ? <Notes me={me} learner={learner} /> : tab === "progress" ? <Suspense fallback={<p>Loading…</p>}><Progress me={me} learner={learner} /></Suspense> : tab === "next" ? <Suspense fallback={<p>Loading…</p>}><NextSession me={me} learner={learner} /></Suspense> : tab === "adapting" ? <Suspense fallback={<p>Loading…</p>}><Adapting me={me} learner={learner} /></Suspense> : tab === "report" ? <Suspense fallback={<p>Loading…</p>}><Report me={me} learner={learner} /></Suspense> : tab === "health" ? <Health me={me} learner={learner} /> : <Sharing me={me} learner={learner} onChanged={reload} onDeleted={onBack} />}
       </TabPanel>
     </Card>
   );

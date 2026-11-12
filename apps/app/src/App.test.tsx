@@ -594,3 +594,31 @@ describe("My way on every device", () => {
     expect(sent.row).toEqual({ id: DEMO.kid, prefs: expect.objectContaining({ calm: true, grey: true, size: "larger" }) }); // only what changed
   });
 });
+
+describe("privacy and deleting a profile", () => {
+  it("shows the privacy notice before a child is added, and lets the family delete their child's profile", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: "Add a child" }));
+    await user.click(await screen.findByText(/How we look after your child's information/));
+    expect(screen.getByText(/Paris, France/)).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: /I have read how Thinking Lab looks after their information/ })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /^Open Quiet River/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    await user.click(screen.getByRole("button", { name: "Delete Quiet River's profile" }));
+    const confirm = screen.getByRole("button", { name: "Delete for ever" });
+    expect(confirm).toBeDisabled();
+    await user.type(screen.getByLabelText("To confirm, type Quiet River"), "quiet river");
+    await user.click(confirm);
+    expect(await screen.findByRole("heading", { name: "Your children" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /^Open Quiet River/ })).toBeNull();
+    expect((await store.kv.all("learners")).map(l => l.nickname)).toEqual(["Brave Meerkat"]);
+  });
+  it("doesn't offer deleting to the team", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Team" }));
+    expect(screen.queryByRole("button", { name: /Delete .* profile/ })).toBeNull();
+  });
+});

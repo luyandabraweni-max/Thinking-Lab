@@ -299,3 +299,18 @@ describe("what each person may still see", () => {
     expect((await visible(SPECIALIST)).health).not.toContain(kid);
   });
 });
+
+describe("deleting a child's profile", () => {
+  it("only a guardian can, not while a safeguarding concern is open, and everything about the child goes", async () => {
+    const child = (await as(db, PARENT, q => q<{ id: string }>("select public.register_learner('To Delete', 'child', 'CAPS', 'Grade 4') as id")))[0]!.id;
+    await as(db, PARENT, q => q("select public.sync_push($1::jsonb)", [JSON.stringify([{ id: uuid(90), table: "messages", row: { id: uuid(91), learnerId: child, fromRole: "", audience: "team", body: "Hello", createdAt: new Date().toISOString(), readBy: [] } }])]));
+    await expect(as(db, SPECIALIST, q => q("select public.delete_learner($1)", [child]))).rejects.toThrow(/Only the child's parent or guardian/);
+    await db.query("insert into safeguarding.concerns (id, learner_id, raised_at, raised_from, recorded_by) values ($1, $2, now(), 'home', $3)", [uuid(92), child, PARENT]);
+    await expect(as(db, PARENT, q => q("select public.delete_learner($1)", [child]))).rejects.toThrow(/safeguarding concern/);
+    await db.query("update safeguarding.concerns set status = 'followed up' where learner_id = $1", [child]);
+    await as(db, PARENT, q => q("select public.delete_learner($1)", [child]));
+    expect((await db.query("select 1 from public.learners where id = $1", [child])).rows).toEqual([]);
+    expect((await db.query("select 1 from public.messages where learner_id = $1", [child])).rows).toEqual([]);
+    expect((await db.query("select 1 from safeguarding.concerns where learner_id = $1", [child])).rows).toEqual([]);
+  });
+});
