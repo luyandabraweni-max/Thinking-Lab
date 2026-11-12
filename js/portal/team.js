@@ -62,7 +62,7 @@ function wireInbox(redraw) {
 // ----- Goals: observations against the Individual Support Plan -----
 function goalObsHtml(g, editable) {
   const obs = g.obs || [];
-  return `<div class="goal-obs">${obs.length ? `<span class="goal-marks" aria-label="Observations: ${obs.map(o => `${niceDate(o.date)} ${LEVEL_TEXT[o.level]}`).join(", ")}">${obs.map(o => `<span class="gm gm-${o.level}" aria-hidden="true">${LEVEL_MARK[o.level]}</span>`).join("")}</span>
+  return `<div class="goal-obs">${obs.length ? `<span class="goal-marks" role="img" aria-label="Observations: ${obs.map(o => `${niceDate(o.date)} ${LEVEL_TEXT[o.level]}`).join(", ")}">${obs.map(o => `<span class="gm gm-${o.level}" aria-hidden="true">${LEVEL_MARK[o.level]}</span>`).join("")}</span>
       <span class="note">Latest, ${niceDate(obs[obs.length - 1].date)}: ${LEVEL_TEXT[obs[obs.length - 1].level]}${obs[obs.length - 1].text ? `: ${esc(obs[obs.length - 1].text)}` : ""}</span>` : `<span class="note">No observations yet.</span>`}</div>
     ${editable ? `<details class="goal-add"><summary>Add an observation</summary>
       <fieldset><legend>How did it go?</legend>${Object.entries(LEVEL_TEXT).map(([k, t]) => `<label class="consent" for="go-${esc(g.id)}-${k}"><input type="radio" name="go-${esc(g.id)}" id="go-${esc(g.id)}-${k}" value="${k}"${k === "support" ? " checked" : ""}><span>${LEVEL_MARK[k]} ${t}</span></label>`).join("")}</fieldset>

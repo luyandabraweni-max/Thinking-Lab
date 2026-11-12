@@ -676,3 +676,7 @@ button.di-blip { cursor: pointer; }
 :root[data-anim] .inbox { animation: pop 0.6s ease-out; }
 .pill.new { background: var(--gold-soft); color: var(--ink); }
 .rule-rev h2 { margin-top: 0; font-size: 1.15rem; }
+/* Long option text (lesson titles) must not widen a form past a phone screen */
+.fields > *, .fields label { min-width: 0; }
+.fields select, .fields input, .fields textarea { max-width: 100%; min-width: 0; box-sizing: border-box; }
+#npAdd { width: 100%; }
