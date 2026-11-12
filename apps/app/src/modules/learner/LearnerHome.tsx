@@ -4,7 +4,7 @@ import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 import { useServices, type DeviceLearner } from "../../platform";
 import type { Row } from "@tl/adaptation";
 import type { Unit, WordHelp } from "@tl/content";
-import type { LearnerSpace, Message } from "@tl/data";
+import type { ConcernRow, LearnerSpace, Message } from "@tl/data";
 import { UNSAFE, UnsafeDialog } from "../safety";
 import type { GameId, LabRun } from "../thinking-lab";
 
@@ -25,7 +25,7 @@ export function LearnerHome({ learner, onDone }: { learner: DeviceLearner; onDon
   const [space, setSpace] = useState<LearnerSpace>(), [inbox, setInbox] = useState<Message[]>([]), [text, setText] = useState(""), [note, setNote] = useState<ReactNode>("");
   const [screen, setScreen] = useState<"home" | "lab" | "learn" | GameId>("home");
   const [lesson, setLesson] = useState<{ unit: Unit; words?: WordHelp; history: Row[] } | null>(null), [unsafe, setUnsafe] = useState(false);
-  const raiseConcern = (where: string) => { setUnsafe(true); void space?.reportConcern(where); };
+  const raiseConcern = (where: ConcernRow["where"]) => { setUnsafe(true); void space?.reportConcern(where); };
   const openLesson = async (id: string) => {
     if (!space) return;
     const [{ unit, words }, past] = await Promise.all([import("@tl/content").then(c => c.loadUnit(id)), space.history()]);
@@ -41,7 +41,7 @@ export function LearnerHome({ learner, onDone }: { learner: DeviceLearner; onDon
   }, [store, learner]);
   const older = space ? space.learner.cohort === "teen" || space.learner.cohort === "adult" : false;
   if (unsafe) return <UnsafeDialog older={older} country={null} onClose={() => setUnsafe(false)} />;
-  if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} older={older} country={null} onSave={a => space.record(a)} onUnsafe={raiseConcern} onBack={() => setLesson(null)} /></Suspense>;
+  if (space && lesson) return <Suspense fallback={<Loading />}><Lesson key={lesson.unit.id} {...lesson} older={older} country={null} onSave={a => space.record(a)} onUnsafe={() => raiseConcern("lesson")} onBack={() => setLesson(null)} /></Suspense>;
   if (space && screen === "learn") return <Suspense fallback={<Loading />}><LearnHome learner={space.learner} onPick={id => void openLesson(id)} onBack={() => setScreen("home")} /></Suspense>;
   if (space && screen !== "home") {
     const run: LabRun = { id: screen === "lab" ? "light" : (screen as GameId), band: older ? "older" : "younger", learnerName: space.learner.nickname, W: (kid, grown) => (older ? grown : kid), reduceMotion: reducedMotion(), say: () => {} };

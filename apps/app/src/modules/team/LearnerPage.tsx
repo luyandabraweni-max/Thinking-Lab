@@ -22,7 +22,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
       <p className="tl-muted">{learner.curriculum}, {learner.level}</p>
       {concerns?.length ? <div className="safety-alert" role="alert">
         <h2><span aria-hidden="true">🛟</span> Safeguarding: {learner.nickname} said they feel unsafe</h2>
-        <ul className="plain">{concerns.map(c => <li key={c.at}>{new Date(c.at).toLocaleString("en-ZA", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · from the {c.where}</li>)}</ul>
+        <ul className="plain">{concerns.map(c => <li key={c.id}>{new Date(c.at).toLocaleString("en-ZA", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · from the {c.where}</li>)}</ul>
         <p>Stay calm and listen. Don't ask leading questions or promise to keep a secret. Follow your organisation's child protection policy and tell its designated safeguarding lead today.</p>
       </div> : null}
       <Tabs label={`${learner.nickname}'s sections`} tabs={tabs} current={tab} onChange={setTab} />

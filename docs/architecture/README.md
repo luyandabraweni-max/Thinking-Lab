@@ -90,6 +90,7 @@ To connect to Supabase:
 1. Port the lesson player (`js/learn/lesson.js`), with the adaptation rules applied during lessons.
 2. Port the learner flows (check-in, breaks, My way, avatar), the display settings and read-aloud. Story Weaver's "Me" uses the learner's nickname until the avatar is ported.
 3. Port goals, observations, notes, reports, level suggestions and the rule review into the team module. The database tables already exist.
-4. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.
-5. Accessibility tests (axe) for the new app in every display mode, as the live site has.
-6. Replace the live site once the port reaches parity.
+4. Admin screens: appoint safeguarding leads (the database function exists), and warn when an organisation has none.
+5. Tell devices when access is withdrawn, so they remove that learner's data (section 9). Today the pull only sends what someone can see, not what they lost.
+6. Accessibility tests (axe) for the new app in every display mode, as the live site has.
+7. Replace the live site once the port reaches parity.

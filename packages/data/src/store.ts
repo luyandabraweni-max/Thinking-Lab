@@ -1,6 +1,6 @@
 import { AccessDenied, canChangeConsent, canEditHealth, canSeeHealth, canSeeLearner } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, Consent, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, ConcernRow, Consent, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -54,14 +54,9 @@ export class LearnerSpace {
   async record(entries: Omit<Attempt, "id" | "learnerId">[]) {
     for (const e of entries) await this.store.write("attempts", { ...e, id: newId(), learnerId: this.learner.id });
   }
-  /**
-   * The learner said they feel unsafe. Kept on this device for the adult who opens the learner's space.
-   * TODO before real learners: a server record with access for the safeguarding lead only (docs/system-design.md, section 13).
-   */
-  async reportConcern(where: string) {
-    const key = `concerns:${this.learner.id}`, list = JSON.parse((await this.store.kv.getMeta(key)) ?? "[]") as Concern[];
-    list.push({ at: now(), where });
-    await this.store.kv.setMeta(key, JSON.stringify(list));
+  /** The learner said they feel unsafe: kept on this device for the adult here, and sent to the safeguarding lead. */
+  async reportConcern(where: ConcernRow["where"]) {
+    await this.store.write("concerns", { id: newId(), learnerId: this.learner.id, at: now(), where });
   }
   /** Earlier work, oldest first: the history the adaptation rules read. */
   async history() {
@@ -69,7 +64,6 @@ export class LearnerSpace {
   }
 }
 
-export interface Concern { at: string; where: string }
 export interface NewMedication { name: string; dose: string; schedule: string; reason: string }
 
 export class Session {
@@ -144,9 +138,9 @@ export class Session {
   }
 
   /** Concerns the learner raised on this device (see LearnerSpace.reportConcern). */
-  async concernsOnDevice(learnerId: string): Promise<Concern[]> {
+  async concernsOnDevice(learnerId: string): Promise<ConcernRow[]> {
     await this.learner(learnerId);
-    return JSON.parse((await this.kv.getMeta(`concerns:${learnerId}`)) ?? "[]") as Concern[];
+    return (await this.kv.all("concerns")).filter(c => c.learnerId === learnerId);
   }
 
   // ---------- Consent ----------

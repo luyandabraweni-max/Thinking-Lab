@@ -1,6 +1,7 @@
 import { type Account, type Learner } from "@tl/data";
 import { Button, Card, Notice } from "@tl/ui";
 import { useServices } from "../../platform";
+import { SafeguardingPanel } from "./Safeguarding";
 import { useLoad } from "./use-load";
 
 const news = (n: number) => (n ? ` (${n} new message${n > 1 ? "s" : ""})` : "");
@@ -19,7 +20,8 @@ export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: stri
       <Notice>School admins don't see individual learners' records. Reports for your organisation will show totals only.</Notice>
     </Card>);
 
-  return (
+  return (<>
+    {me.role === "specialist" || me.role === "teacher" ? <SafeguardingPanel me={me} /> : null}
     <Card>
       <h1>{me.role === "guardian" ? "Your children" : "Your learners"}</h1>
       {!rows ? <p>Loading…</p> : rows.length === 0 ? <p className="tl-muted">{me.role === "guardian" ? "No children registered yet." : "No families have shared a learner with you yet."}</p> :
@@ -32,5 +34,5 @@ export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: stri
             </Card></li>))}
         </ul>}
     </Card>
-  );
+  </>);
 }

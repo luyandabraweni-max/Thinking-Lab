@@ -96,6 +96,39 @@ describe("attempts", () => {
   });
 });
 
+describe("safeguarding concerns", () => {
+  const concern = () => ({ id: uuid(30), learnerId: kid, at: "2026-11-12T09:00:00Z", where: "lesson" });
+  const concernsFor = (who: string) => as(db, who, q => q<{ nickname: string; status: string; raised_from: string }>("select nickname, status, raised_from from public.safeguarding_concerns()"));
+  it("are recorded from the learner's device, but nobody reads them directly", async () => {
+    expect((await push(PARENT, [{ id: uuid(31), table: "concerns", row: concern() }])).applied).toEqual([uuid(31)]);
+    expect((await push(PARENT, [{ id: uuid(32), table: "concerns", row: concern() }])).applied).toEqual([uuid(32)]); // sent twice, saved once
+    expect((await push(STRANGER, [{ id: uuid(33), table: "concerns", row: { ...concern(), id: uuid(34) } }])).rejected).toHaveLength(1);
+    await expect(as(db, PARENT, q => q("select * from safeguarding.concerns"))).rejects.toThrow(/permission denied/);
+    await expect(as(db, SPECIALIST, q => q("select * from safeguarding.concerns"))).rejects.toThrow(/permission denied/);
+  });
+  it("reach only a designated safeguarding lead, not other team members or the family", async () => {
+    expect(await concernsFor(SPECIALIST)).toEqual([]);
+    expect(await concernsFor(PARENT)).toEqual([]);
+    const org = (await db.query<{ org_id: string }>("select org_id from public.memberships where user_id = $1", [SPECIALIST])).rows[0];
+    const specOrg = org?.org_id ?? (await db.query<{ id: string }>("insert into public.organisations (name, kind) values ('Demo Special School', 'school') returning id")).rows[0]!.id;
+    if (!org) await db.query("insert into public.memberships (user_id, org_id, role) values ($1, $2, 'specialist')", [SPECIALIST, specOrg]);
+    await db.query("insert into safeguarding.leads (org_id, user_id, appointed_by) values ($1, $2, $2)", [specOrg, SPECIALIST]);
+    expect(await concernsFor(SPECIALIST)).toEqual([{ nickname: "Brave Meerkat", status: "open", raised_from: "lesson" }]);
+    expect(await concernsFor(STRANGER)).toEqual([]);
+  });
+  it("log every read, and let the lead record what they did", async () => {
+    const reads = await db.query<{ n: number }>("select count(*)::int as n from public.audit_log where action = 'read' and table_name = 'safeguarding.concerns'");
+    expect(reads.rows[0]!.n).toBeGreaterThanOrEqual(1);
+    await as(db, SPECIALIST, q => q("select public.follow_up_concern($1, 'Spoke with the learner and the class teacher; followed the school policy.')", [uuid(30)]));
+    expect(await concernsFor(SPECIALIST)).toEqual([{ nickname: "Brave Meerkat", status: "followed up", raised_from: "lesson" }]);
+    await expect(as(db, PARENT, q => q("select public.follow_up_concern($1, 'x')", [uuid(30)]))).rejects.toThrow(/Not allowed/);
+  });
+  it("leads are appointed only by the organisation's admin", async () => {
+    const org = (await db.query<{ org_id: string }>("select org_id from public.memberships where user_id = $1", [SPECIALIST])).rows[0]!.org_id;
+    await expect(as(db, PARENT, q => q("select public.set_safeguarding_lead($1, $2, true)", [org, PARENT]))).rejects.toThrow(/Only the organisation's admin/);
+  });
+});
+
 describe("sync pull", () => {
   it("returns only what the caller may see", async () => {
     const mine = await pull(PARENT), theirs = await pull(OTHER_PARENT), stranger = await pull(STRANGER);

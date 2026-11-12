@@ -8,7 +8,7 @@ export const DEMO = { parent: id(1), specialist: id(3), therapist: id(4), admin:
 
 export const DEMO_ACCOUNTS: Account[] = [
   { id: DEMO.parent, role: "guardian", name: "Demo Parent", email: "parent@example.org", orgId: DEMO.org },
-  { id: DEMO.specialist, role: "specialist", name: "Demo Specialist", email: "specialist@example.org", orgId: DEMO.org, profession: "Special-needs educator" },
+  { id: DEMO.specialist, role: "specialist", name: "Demo Specialist", email: "specialist@example.org", orgId: DEMO.org, profession: "Special-needs educator", safeguardingLead: true },
   { id: DEMO.therapist, role: "specialist", name: "Demo Therapist", email: "therapist@example.org", orgId: DEMO.org, profession: "Occupational therapist" },
   { id: DEMO.admin, role: "org_admin", name: "Demo School Admin", email: "admin@example.org", orgId: DEMO.org, profession: "School administrator" }
 ];

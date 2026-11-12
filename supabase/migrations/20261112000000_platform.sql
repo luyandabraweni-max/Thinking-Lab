@@ -485,6 +485,8 @@ begin
           insert into health.log (id, learner_id, at, by_name, text)
           values ((r ->> 'id')::uuid, (r ->> 'learnerId')::uuid, (r ->> 'at')::timestamptz, r ->> 'by', r ->> 'text')
           on conflict (id) do nothing;
+        when 'concerns' then
+          perform public.sync_push_concern(r); -- safeguarding (20261112010000_safeguarding.sql)
         when 'attempts' then
           insert into public.attempts (id, learner_id, activity_id, status, mode, hints, flags, reflection, occurred_at, recorded_by)
           values ((r ->> 'id')::uuid, (r ->> 'learnerId')::uuid, r ->> 'activityId', r ->> 'status', r ->> 'mode', (r ->> 'hints')::smallint,

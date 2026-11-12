@@ -11,6 +11,8 @@ export interface Account {
   email: string;
   orgId: string | null;
   profession?: string;
+  /** A designated safeguarding lead (appointed by their organisation's admin). */
+  safeguardingLead?: boolean;
 }
 
 /** A member of a learner's team: a teacher or specialist the family has shared the learner with. */
@@ -71,6 +73,9 @@ export interface Attempt {
   flags: { e?: 1; a?: 1; s?: 1; b?: 1; q?: number } | null; reflection: string; occurredAt: string;
 }
 
+/** A learner said they feel unsafe. Sent to the server for the safeguarding lead; never pulled back to devices. */
+export interface ConcernRow { id: string; learnerId: string; at: string; where: "home" | "lesson" | "talk board" | "tell us" | "help" }
+
 export type Tables = {
   accounts: Account;
   learners: Learner;
@@ -79,6 +84,7 @@ export type Tables = {
   doses: Dose;
   health_log: HealthEntry;
   attempts: Attempt;
+  concerns: ConcernRow;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns"];

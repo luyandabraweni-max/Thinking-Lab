@@ -188,5 +188,17 @@ describe("safeguarding", () => {
     await signInDemo(user, "Demo parent");
     await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
     expect(await screen.findByRole("alert")).toHaveTextContent("Safeguarding: Brave Meerkat said they feel unsafe");
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    // A team member who isn't the safeguarding lead sees nothing; the lead sees it first and records what they did.
+    await signInDemo(user, "Demo therapist");
+    await screen.findByRole("heading", { name: "Your learners" });
+    expect(screen.queryByText(/concern/)).toBeNull();
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signInDemo(user, "Demo specialist");
+    expect(await screen.findByRole("heading", { name: /Safeguarding: 1 concern to follow up/ })).toBeInTheDocument();
+    await user.type(screen.getByLabelText("What you did"), "Spoke with the learner and the class teacher.");
+    await user.click(screen.getByRole("button", { name: "Mark as followed up" }));
+    expect(await screen.findByRole("heading", { name: /Safeguarding: nothing open/ })).toBeInTheDocument();
+    expect((await store.kv.outbox()).filter(e => e.table === "concerns")).toHaveLength(1); // queued for the server
   });
 });
