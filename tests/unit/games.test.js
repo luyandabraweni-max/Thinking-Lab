@@ -66,9 +66,9 @@ describe("The Secret Rule Machine", () => {
     click('[data-k="shape"][data-v="circle"]'); click("#rmTest"); await tick();
     click('[data-k="size"][data-v="small"]'); click("#rmTest"); await tick(); // one change from the last test: a fair test
     for (let round = 0; round < 2; round++) {
-      // Options are shuffled each time, so try them by name until the right one.
+      // Each guess shows the right rule and 3 of the other 4, shuffled, so trying every rule by name takes at most 5 guesses.
       const tried = [];
-      while (!app.main().includes("Prove it") && tried.length < 4) {
+      while (!app.main().includes("Prove it") && tried.length < 5) {
         click("#rmGuess");
         tried.push(app.run(`(() => { const b = [...document.querySelectorAll("[data-g]")].find(b => !${JSON.stringify(tried)}.includes(b.textContent.trim())); b.click(); return b.textContent.trim(); })()`));
       }
