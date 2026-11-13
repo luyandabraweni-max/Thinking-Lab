@@ -1675,6 +1675,829 @@
    "done": "Test yourself, spread study out, and make it visual."
   },
   {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam7-integers",
+   "grade": 7,
+   "title": "Negative numbers",
+   "topic": "Number: integers",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 7: Number (adding, subtracting, multiplying and dividing integers)",
+   "intention": "Today I am calculating with negative numbers.",
+   "prompt": "Where do you see negative numbers in real life?",
+   "lesson": [
+    {
+     "h": "The number line",
+     "say": "Negative numbers are less than zero. On a number line they are to the left of zero. Minus 5 is colder than minus 2.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">−5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">−2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">0</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3</span></div>"
+    },
+    {
+     "h": "Adding and subtracting",
+     "say": "Adding a negative number is the same as subtracting. Subtracting a negative number is the same as adding. 4 minus minus 3 is 4 plus 3, which is 7.",
+     "html": "<p>4 + (−3) = 1 · 4 − (−3) = <b>7</b></p>"
+    },
+    {
+     "h": "Multiplying and dividing",
+     "say": "When multiplying or dividing, two signs the same give a positive answer. Two different signs give a negative answer.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">+ × + = +</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">− × − = +</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">+ × − = −</span></div>"
+    }
+   ],
+   "example": {
+    "q": "The temperature is −4 °C and rises by 9 degrees. What is the new temperature?",
+    "steps": [
+     "Start at −4.",
+     "Rise by 9: −4 + 9.",
+     "= 5 °C."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Work out −6 + 10.",
+     "answer": "4",
+     "options": [
+      "4",
+      "−16",
+      "16",
+      "−4"
+     ],
+     "hints": [
+      "Start at −6.",
+      "Move 10 to the right.",
+      "4."
+     ],
+     "explain": "−6 + 10 = 4."
+    },
+    {
+     "type": "num",
+     "q": "Work out 5 − (−2).",
+     "answer": "7",
+     "options": [
+      "7",
+      "3",
+      "−7",
+      "−3"
+     ],
+     "hints": [
+      "Subtracting a negative is adding.",
+      "5 + 2.",
+      "7."
+     ],
+     "explain": "5 − (−2) = 5 + 2 = 7."
+    },
+    {
+     "type": "num",
+     "q": "Work out −3 × −4.",
+     "answer": "12",
+     "options": [
+      "12",
+      "−12",
+      "−7",
+      "7"
+     ],
+     "hints": [
+      "Same signs give positive.",
+      "3 × 4 = 12.",
+      "Positive 12."
+     ],
+     "explain": "Two negatives multiply to a positive: 12."
+    },
+    {
+     "type": "num",
+     "q": "Work out −20 ÷ 5.",
+     "answer": "−4",
+     "options": [
+      "−4",
+      "4",
+      "−15",
+      "−100"
+     ],
+     "hints": [
+      "Different signs give negative.",
+      "20 ÷ 5 = 4.",
+      "−4."
+     ],
+     "explain": "Different signs give a negative: −4."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the coldest temperature?",
+     "options": [
+      "−8 °C",
+      "−3 °C",
+      "0 °C",
+      "2 °C"
+     ],
+     "answer": 0,
+     "hints": [
+      "Coldest is lowest.",
+      "Furthest left on the number line.",
+      "−8."
+     ],
+     "explain": "−8 is the lowest temperature."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The number line",
+     "The sign rules",
+     "Thinking about temperature",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child calculated with negative numbers.",
+   "teacher": "Shows ordering integers and applying the four operations with negative numbers.",
+   "done": "Subtracting a negative adds. Same signs multiply to positive."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam7-expressions",
+   "grade": 7,
+   "title": "Expressions and substitution",
+   "topic": "Algebra",
+   "category": "Problem Solving",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 7: Algebra (writing expressions; collecting like terms; substitution)",
+   "intention": "Today I am writing and simplifying expressions.",
+   "prompt": "How would you write 'three more than a number' in maths?",
+   "lesson": [
+    {
+     "h": "Letters for numbers",
+     "say": "In algebra, a letter stands for an unknown number. 'Three more than n' is n plus 3. 'Double n' is 2n.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">n + 3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2n</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">n − 5</span></div>"
+    },
+    {
+     "h": "Collecting like terms",
+     "say": "Like terms have the same letter. 3a plus 2a is 5a. But 3a plus 2b can't be simplified, because the letters are different.",
+     "html": "<p>3a + 2a + 4b = <b>5a + 4b</b></p>"
+    },
+    {
+     "h": "Substitution",
+     "say": "To substitute, replace the letter with its value. If n is 4, then 2n plus 3 is 2 times 4 plus 3, which is 11.",
+     "html": "<p>n = 4: 2n + 3 = <b>11</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Simplify 5x + 3 + 2x − 1, then find its value when x = 2.",
+    "steps": [
+     "Collect x terms: 5x + 2x = 7x. Numbers: 3 − 1 = 2.",
+     "7x + 2.",
+     "When x = 2: 7 × 2 + 2 = 16."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which expression means 'five less than y'?",
+     "options": [
+      "y − 5",
+      "5 − y",
+      "5y",
+      "y + 5"
+     ],
+     "answer": 0,
+     "hints": [
+      "Start with y.",
+      "Take 5 away.",
+      "y − 5."
+     ],
+     "explain": "Five less than y is y − 5."
+    },
+    {
+     "type": "mcq",
+     "q": "Simplify 4a + 3a.",
+     "options": [
+      "7a",
+      "12a",
+      "7a²",
+      "4a3a"
+     ],
+     "answer": 0,
+     "hints": [
+      "Like terms.",
+      "4 + 3.",
+      "7a."
+     ],
+     "explain": "4a + 3a = 7a."
+    },
+    {
+     "type": "mcq",
+     "q": "Simplify 2x + 5y + 3x.",
+     "options": [
+      "5x + 5y",
+      "10xy",
+      "5x + 8y",
+      "10x"
+     ],
+     "answer": 0,
+     "hints": [
+      "Collect the x terms.",
+      "2x + 3x = 5x.",
+      "Keep 5y."
+     ],
+     "explain": "5x + 5y."
+    },
+    {
+     "type": "num",
+     "q": "Find 3n − 2 when n = 5.",
+     "answer": "13",
+     "options": [
+      "13",
+      "15",
+      "17",
+      "11"
+     ],
+     "hints": [
+      "Replace n with 5.",
+      "3 × 5 − 2.",
+      "13."
+     ],
+     "explain": "15 − 2 = 13."
+    },
+    {
+     "type": "num",
+     "q": "Find a + b when a = 7 and b = −3.",
+     "answer": "4",
+     "options": [
+      "4",
+      "10",
+      "−4",
+      "−10"
+     ],
+     "hints": [
+      "7 + (−3).",
+      "7 − 3.",
+      "4."
+     ],
+     "explain": "7 + (−3) = 4."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing words as algebra",
+     "Collecting like terms",
+     "Substituting carefully",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child wrote, simplified and evaluated algebraic expressions.",
+   "teacher": "Shows forming expressions from words, collecting like terms and substituting integer values.",
+   "done": "Collect like terms, then substitute to find the value."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam7-eng-inference",
+   "grade": 7,
+   "title": "Reading between the lines",
+   "topic": "Reading: inference",
+   "category": "Communication",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 7: Reading (inferring meaning and character from clues)",
+   "intention": "Today I am working out what a writer suggests without saying.",
+   "prompt": "How can you tell what someone is thinking without asking them?",
+   "passage": "<div class=\"passage-text\"><p><b>The Gate</b> <span class=\"muted\">(a 2to.iQ story opening)</span></p>\n<p>Ayanda had walked past the old gate every day for a year, and every day it had been locked. Today it stood open, just a little, the padlock hanging from the chain like a loose tooth. She checked the street behind her. Empty. Her hand was already on the cold metal before she had decided anything at all.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>The Gate</b> <span class=\"muted\">(a 2to.iQ story opening)</span></p>\n<p>Ayanda had walked past the old gate every day for a year, and every day it had been locked. Today it stood open, just a little, the padlock hanging from the chain like a loose tooth. She checked the street behind her. Empty. Her hand was already on the cold metal before she had decided anything at all.</p></div>"
+    },
+    {
+     "h": "Clues and inferences",
+     "say": "An inference is a sensible conclusion from clues. Ayanda checks the empty street, which suggests she feels she might be doing something she shouldn't.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Clue</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">What it suggests</span></div>"
+    },
+    {
+     "h": "Explaining your inference",
+     "say": "Always say which words led you to your inference. 'Her hand was already on the cold metal before she had decided' suggests curiosity is stronger than caution.",
+     "html": "<p>Inference + <b>quotation</b> + explanation</p>"
+    }
+   ],
+   "example": {
+    "q": "What does 'every day it had been locked' tell us about Ayanda?",
+    "steps": [
+     "She noticed the gate every single day.",
+     "That suggests she has wondered about it for a long time.",
+     "She is curious about what is behind it."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why does Ayanda check the street behind her?",
+     "options": [
+      "She doesn't want to be seen",
+      "She is lost",
+      "She is waiting for a taxi",
+      "She hears music"
+     ],
+     "answer": 0,
+     "hints": [
+      "The street is empty.",
+      "Why would that matter?",
+      "She doesn't want to be seen."
+     ],
+     "explain": "Checking for watchers suggests she feels it might not be allowed."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the simile 'like a loose tooth' suggest about the padlock?",
+     "options": [
+      "It is about to come off",
+      "It is new and strong",
+      "It is made of teeth",
+      "It is painful"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens to a loose tooth?",
+      "It falls out soon.",
+      "About to come off."
+     ],
+     "explain": "A loose tooth will soon fall out, like the padlock."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'before she had decided anything at all' suggest?",
+     "options": [
+      "Her curiosity acts before her caution",
+      "She is very careful",
+      "She doesn't want to go in",
+      "She is asleep"
+     ],
+     "answer": 0,
+     "hints": [
+      "Her hand moves first.",
+      "Thinking comes later.",
+      "Curiosity wins."
+     ],
+     "explain": "She acts on curiosity before thinking it through."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is an inference rather than a fact from the text?",
+     "options": [
+      "Ayanda is curious about the gate",
+      "The gate was open",
+      "The padlock hung from the chain",
+      "The street was empty"
+     ],
+     "answer": 0,
+     "hints": [
+      "Three are stated.",
+      "One is worked out from clues.",
+      "Her curiosity."
+     ],
+     "explain": "Her curiosity is inferred; the others are stated."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the best way to support an inference?",
+     "options": [
+      "Quote the words that led to it",
+      "Say 'I just know'",
+      "Retell the whole story",
+      "Use a dictionary"
+     ],
+     "answer": 0,
+     "hints": [
+      "Use evidence.",
+      "From the text.",
+      "Quote it."
+     ],
+     "explain": "Quoting the clue shows how you reached your inference."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding clues",
+     "Quoting the words",
+     "Explaining what they suggest",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out what a story suggests about a character, using clues.",
+   "teacher": "Shows making and justifying inferences about character and situation with reference to the text.",
+   "done": "Find the clue, quote it, and explain what it suggests."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam7-eng-paragraphs",
+   "grade": 7,
+   "title": "Paragraphs that flow",
+   "topic": "Writing: cohesion",
+   "category": "Planning and Organisation",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 7: Writing (organising paragraphs; topic sentences; connectives for cohesion)",
+   "intention": "Today I am organising my writing into clear, linked paragraphs.",
+   "prompt": "How do you know when to start a new paragraph?",
+   "lesson": [
+    {
+     "h": "One idea per paragraph",
+     "say": "Start a new paragraph for a new idea, a new time, a new place or a new speaker. Each paragraph should have one main idea.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">New idea</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">New time</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">New place</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">New speaker</span></div>"
+    },
+    {
+     "h": "Topic sentences",
+     "say": "A topic sentence tells the reader what the paragraph is about. It usually comes first.",
+     "html": "<p><b>Topic sentence:</b> Our school garden has changed the way we eat.</p>"
+    },
+    {
+     "h": "Connectives",
+     "say": "Connectives link ideas. Use firstly and next for order, however for contrast, and as a result for cause and effect.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Firstly</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">However</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">As a result</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Finally</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Write a topic sentence for a paragraph about why exercise helps learning.",
+    "steps": [
+     "Decide the main idea: exercise helps learning.",
+     "Make it a clear, general sentence.",
+     "'Regular exercise can help learners concentrate in class.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "When should you start a new paragraph?",
+     "options": [
+      "When you move to a new idea",
+      "After every sentence",
+      "Only at the end",
+      "When the page is full"
+     ],
+     "answer": 0,
+     "hints": [
+      "Paragraphs group ideas.",
+      "A new idea needs…",
+      "…a new paragraph."
+     ],
+     "explain": "A new idea, time, place or speaker starts a new paragraph."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a topic sentence do?",
+     "options": [
+      "Tells the reader what the paragraph is about",
+      "Ends the story",
+      "Asks a question",
+      "Lists every detail"
+     ],
+     "answer": 0,
+     "hints": [
+      "It introduces.",
+      "The main idea.",
+      "Usually first."
+     ],
+     "explain": "It states the paragraph's main idea."
+    },
+    {
+     "type": "mcq",
+     "q": "Which connective shows contrast?",
+     "options": [
+      "However",
+      "Firstly",
+      "As a result",
+      "Next"
+     ],
+     "answer": 0,
+     "hints": [
+      "Contrast means a difference.",
+      "Not order or cause.",
+      "However."
+     ],
+     "explain": "'However' introduces a contrasting idea."
+    },
+    {
+     "type": "mcq",
+     "q": "Which connective shows cause and effect?",
+     "options": [
+      "As a result",
+      "However",
+      "Firstly",
+      "Meanwhile"
+     ],
+     "answer": 0,
+     "hints": [
+      "Something happens because of something else.",
+      "Result.",
+      "As a result."
+     ],
+     "explain": "'As a result' links a cause to its effect."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best topic sentence for a paragraph about the dangers of litter?",
+     "options": [
+      "Litter harms animals, rivers and our health.",
+      "I saw a packet.",
+      "Litter.",
+      "Have you ever wondered?"
+     ],
+     "answer": 0,
+     "hints": [
+      "Clear and general.",
+      "Sets up the paragraph.",
+      "The first."
+     ],
+     "explain": "It clearly states the paragraph's main idea."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "One idea per paragraph",
+     "Writing the topic sentence first",
+     "Choosing connectives",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child organised writing into clear paragraphs with topic sentences and connectives.",
+   "teacher": "Shows paragraphing by idea, writing topic sentences and using connectives for cohesion.",
+   "done": "One idea per paragraph, a clear topic sentence, linked by connectives."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam7-sci-specialised-cells",
+   "grade": 7,
+   "title": "Specialised cells",
+   "topic": "Biology: cells",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 7: Biology (cell structure; specialised cells and their functions)",
+   "intention": "Today I am finding out how cells are shaped for their jobs.",
+   "prompt": "Why do you think nerve cells are so long?",
+   "lesson": [
+    {
+     "h": "Cells have jobs",
+     "say": "All living things are made of cells. Many cells are specialised: their shape and structure suit a particular job.",
+     "html": "<p>Structure fits <b>function</b>.</p>"
+    },
+    {
+     "h": "Examples",
+     "say": "Red blood cells have no nucleus and a dimpled shape, so they carry more oxygen. Root hair cells have long extensions to take in water. Nerve cells are long, to carry messages around the body.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Red blood cell: carries oxygen</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Root hair cell: absorbs water</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Nerve cell: carries messages</span></div>"
+    },
+    {
+     "h": "Cells, tissues, organs",
+     "say": "Similar cells working together form a tissue. Tissues form organs, like the heart. Organs work together in organ systems.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tissue</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Organ</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Organ system</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Explain how a root hair cell is adapted to its job.",
+    "steps": [
+     "Its job is to absorb water from the soil.",
+     "It has a long, thin extension.",
+     "This gives a large surface area for absorbing water."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the job of a red blood cell?",
+     "options": [
+      "Carrying oxygen",
+      "Absorbing water",
+      "Carrying messages",
+      "Making food"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is in the blood.",
+      "It contains haemoglobin.",
+      "Oxygen."
+     ],
+     "explain": "Red blood cells carry oxygen."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are nerve cells long?",
+     "options": [
+      "To carry messages over long distances in the body",
+      "To store fat",
+      "To absorb water",
+      "To make the body taller"
+     ],
+     "answer": 0,
+     "hints": [
+      "They connect parts of the body.",
+      "Messages travel along them.",
+      "Long distances."
+     ],
+     "explain": "Their length lets them carry signals across the body."
+    },
+    {
+     "type": "mcq",
+     "q": "What is formed when similar cells work together?",
+     "options": [
+      "A tissue",
+      "An organ system",
+      "An organism",
+      "A nucleus"
+     ],
+     "answer": 0,
+     "hints": [
+      "The next level up from cells.",
+      "Before organs.",
+      "A tissue."
+     ],
+     "explain": "Groups of similar cells form tissues."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does a root hair cell have a large surface area?",
+     "options": [
+      "To absorb more water",
+      "To look nice",
+      "To make it heavier",
+      "To photosynthesise"
+     ],
+     "answer": 0,
+     "hints": [
+      "More surface…",
+      "…more contact with the soil.",
+      "More water absorbed."
+     ],
+     "explain": "A larger surface absorbs more water."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the correct order, from smallest?",
+     "options": [
+      "Cell, tissue, organ, organ system",
+      "Organ, cell, tissue, system",
+      "Tissue, cell, organ, system",
+      "System, organ, tissue, cell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Start with the smallest unit.",
+      "Cells form tissues.",
+      "Then organs, then systems."
+     ],
+     "explain": "Cell → tissue → organ → organ system."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Linking shape to job",
+     "The examples",
+     "The levels of organisation",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how cells are specially shaped for their jobs.",
+   "teacher": "Shows relating the structure of specialised cells to function and describing levels of organisation.",
+   "done": "A cell's shape suits its job. Cells → tissues → organs → systems."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam7-sci-dissolving",
+   "grade": 7,
+   "title": "Dissolving and solutions",
+   "topic": "Chemistry: the particle model",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 7: Chemistry (dissolving; solutions; solubility; the particle model)",
+   "intention": "Today I am explaining dissolving using particles.",
+   "prompt": "Where does the sugar go when you stir it into tea?",
+   "lesson": [
+    {
+     "h": "Solute, solvent, solution",
+     "say": "When sugar dissolves in water, sugar is the solute, water is the solvent, and the mixture is a solution.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solute (sugar)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solvent (water)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solution</span></div>"
+    },
+    {
+     "h": "What particles do",
+     "say": "The sugar particles spread out between the water particles. They are too small to see, but they are still there. The mass is conserved.",
+     "html": "<p>Mass of solution = mass of solute + mass of solvent</p>"
+    },
+    {
+     "h": "Dissolving faster",
+     "say": "Sugar dissolves faster in warm water, when stirred, and when the particles are smaller, like caster sugar.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Heat</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Stir</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Smaller pieces</span></div>"
+    }
+   ],
+   "example": {
+    "q": "10 g of salt dissolves in 100 g of water. What is the mass of the solution?",
+    "steps": [
+     "Mass is conserved when dissolving.",
+     "10 g + 100 g.",
+     "110 g."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "In salty water, what is the solvent?",
+     "options": [
+      "Water",
+      "Salt",
+      "Salty water",
+      "Air"
+     ],
+     "answer": 0,
+     "hints": [
+      "The solvent does the dissolving.",
+      "The liquid.",
+      "Water."
+     ],
+     "explain": "Water is the solvent."
+    },
+    {
+     "type": "num",
+     "q": "5 g of sugar dissolves in 200 g of water. What is the mass of the solution, in grams?",
+     "answer": "205",
+     "options": [
+      "205",
+      "200",
+      "195",
+      "5"
+     ],
+     "hints": [
+      "Mass is conserved.",
+      "5 + 200.",
+      "205."
+     ],
+     "explain": "5 + 200 = 205 g."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does sugar go when it dissolves?",
+     "options": [
+      "Its particles spread between the water particles",
+      "It disappears completely",
+      "It turns into water",
+      "It sinks and hides"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is still there.",
+      "Too small to see.",
+      "Spread out."
+     ],
+     "explain": "The particles spread out among the water particles."
+    },
+    {
+     "type": "mcq",
+     "q": "Which makes sugar dissolve faster?",
+     "options": [
+      "Stirring",
+      "Using cold water",
+      "Using bigger lumps",
+      "Waiting without stirring"
+     ],
+     "answer": 0,
+     "hints": [
+      "Movement helps.",
+      "It mixes the particles.",
+      "Stirring."
+     ],
+     "explain": "Stirring helps the particles spread out faster."
+    },
+    {
+     "type": "mcq",
+     "q": "A substance that does not dissolve is…",
+     "options": [
+      "insoluble",
+      "a solvent",
+      "a solution",
+      "soluble"
+     ],
+     "answer": 0,
+     "hints": [
+      "Soluble means it dissolves.",
+      "The opposite…",
+      "…insoluble."
+     ],
+     "explain": "Insoluble substances don't dissolve."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Picturing the particles",
+     "Solute, solvent, solution",
+     "Mass is conserved",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explained dissolving using particles.",
+   "teacher": "Shows using solute, solvent and solution correctly, explaining dissolving with the particle model and applying conservation of mass.",
+   "done": "Dissolved particles spread out, and the total mass stays the same."
+  },
+  {
    "curriculum": "CAPS-SID",
    "domain": "Inquiry and Systems Thinking",
    "category": "Planning and Organisation",

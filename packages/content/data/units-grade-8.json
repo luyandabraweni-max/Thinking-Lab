@@ -1678,6 +1678,830 @@
    "parent": "Your child explored diversity, stereotypes, prejudice and ways to be inclusive.",
    "teacher": "Shows distinguishing stereotype, prejudice and discrimination, and strategies to challenge them.",
    "done": "Every person is an individual. Question stereotypes and include others."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam8-equations",
+   "grade": 8,
+   "title": "Solving linear equations",
+   "topic": "Algebra: equations",
+   "category": "Problem Solving",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 8: Algebra (solving linear equations, including with brackets and unknowns on both sides)",
+   "intention": "Today I am solving equations with unknowns on both sides.",
+   "prompt": "How is an equation like a balance scale?",
+   "lesson": [
+    {
+     "h": "Keep it balanced",
+     "say": "An equation is like a balance. Whatever you do to one side, you must do to the other.",
+     "html": "<p>Do the <b>same</b> to both sides.</p>"
+    },
+    {
+     "h": "Brackets first",
+     "say": "Expand brackets first. 3 times x plus 2 equals 21 becomes 3x plus 6 equals 21. Then 3x equals 15, so x equals 5.",
+     "html": "<p>3(x + 2) = 21 → 3x + 6 = 21 → 3x = 15 → <b>x = 5</b></p>"
+    },
+    {
+     "h": "Unknowns on both sides",
+     "say": "Collect the x terms on one side. 5x plus 3 equals 2x plus 12. Subtract 2x: 3x plus 3 equals 12. So 3x equals 9 and x equals 3.",
+     "html": "<p>5x + 3 = 2x + 12 → 3x = 9 → <b>x = 3</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Solve 4x − 7 = 2x + 5.",
+    "steps": [
+     "Subtract 2x from both sides: 2x − 7 = 5.",
+     "Add 7: 2x = 12.",
+     "Divide by 2: x = 6."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Solve 2x + 5 = 17.",
+     "answer": "6",
+     "options": [
+      "6",
+      "11",
+      "12",
+      "8.5"
+     ],
+     "hints": [
+      "Subtract 5.",
+      "2x = 12.",
+      "x = 6."
+     ],
+     "explain": "2x = 12, so x = 6."
+    },
+    {
+     "type": "num",
+     "q": "Solve 4(x − 1) = 20.",
+     "answer": "6",
+     "options": [
+      "6",
+      "5",
+      "4",
+      "21"
+     ],
+     "hints": [
+      "Expand: 4x − 4 = 20.",
+      "4x = 24.",
+      "x = 6."
+     ],
+     "explain": "4x = 24, so x = 6."
+    },
+    {
+     "type": "num",
+     "q": "Solve 7x + 2 = 3x + 18.",
+     "answer": "4",
+     "options": [
+      "4",
+      "5",
+      "2",
+      "20"
+     ],
+     "hints": [
+      "Subtract 3x: 4x + 2 = 18.",
+      "4x = 16.",
+      "x = 4."
+     ],
+     "explain": "4x = 16, so x = 4."
+    },
+    {
+     "type": "num",
+     "q": "Solve x ÷ 3 = 9.",
+     "answer": "27",
+     "options": [
+      "27",
+      "3",
+      "12",
+      "6"
+     ],
+     "hints": [
+      "Undo dividing by 3.",
+      "Multiply by 3.",
+      "27."
+     ],
+     "explain": "x = 9 × 3 = 27."
+    },
+    {
+     "type": "mcq",
+     "q": "Check: is x = 5 a solution of 3x − 4 = 11?",
+     "options": [
+      "Yes, because 15 − 4 = 11",
+      "No",
+      "Only if x is negative",
+      "You can't check"
+     ],
+     "answer": 0,
+     "hints": [
+      "Substitute x = 5.",
+      "3 × 5 − 4.",
+      "11."
+     ],
+     "explain": "3(5) − 4 = 11, so yes."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Doing the same to both sides",
+     "Expanding brackets first",
+     "Checking my answer",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child solved equations with brackets and unknowns on both sides.",
+   "teacher": "Shows solving linear equations involving brackets and unknowns on both sides, and verifying solutions.",
+   "done": "Expand, collect the unknowns on one side, solve, then check."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam8-percentage-change",
+   "grade": 8,
+   "title": "Percentage increase and decrease",
+   "topic": "Number: percentages",
+   "category": "Problem Solving",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 8: Number (percentage increase and decrease; using multipliers)",
+   "intention": "Today I am working out percentage increases and decreases.",
+   "prompt": "How do you know if a sale is really a bargain?",
+   "lesson": [
+    {
+     "h": "Percentage of an amount",
+     "say": "To find 20 percent of 50, divide by 100 and multiply by 20, or multiply by 0.2. 20 percent of 50 is 10.",
+     "html": "<p>20% of 50 = 0.2 × 50 = <b>10</b></p>"
+    },
+    {
+     "h": "Using multipliers",
+     "say": "To increase by 20 percent, multiply by 1.2. To decrease by 20 percent, multiply by 0.8.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">+20%: × 1.2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">−20%: × 0.8</span></div>"
+    },
+    {
+     "h": "Percentage change",
+     "say": "Percentage change is the change divided by the original amount, times 100. A price rising from 40 to 50 dollars is a 25 percent increase.",
+     "html": "<p>(50 − 40) ÷ 40 × 100 = <b>25%</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A $60 jacket is reduced by 15%. What is the new price?",
+    "steps": [
+     "Multiplier for a 15% decrease: 0.85.",
+     "60 × 0.85.",
+     "= $51."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find 30% of 80.",
+     "answer": "24",
+     "options": [
+      "24",
+      "30",
+      "50",
+      "2.4"
+     ],
+     "hints": [
+      "0.3 × 80.",
+      "Or 10% is 8.",
+      "3 × 8."
+     ],
+     "explain": "0.3 × 80 = 24."
+    },
+    {
+     "type": "mcq",
+     "q": "Which multiplier increases an amount by 5%?",
+     "options": [
+      "1.05",
+      "0.95",
+      "1.5",
+      "5"
+     ],
+     "answer": 0,
+     "hints": [
+      "100% + 5% = 105%.",
+      "As a decimal…",
+      "1.05."
+     ],
+     "explain": "105% = 1.05."
+    },
+    {
+     "type": "num",
+     "q": "A $200 bike is reduced by 25%. What is the new price, in dollars?",
+     "answer": "150",
+     "options": [
+      "150",
+      "175",
+      "50",
+      "225"
+     ],
+     "hints": [
+      "Multiplier 0.75.",
+      "200 × 0.75.",
+      "150."
+     ],
+     "explain": "200 × 0.75 = $150."
+    },
+    {
+     "type": "num",
+     "q": "A price rises from $40 to $46. What is the percentage increase? (Type the number only.)",
+     "answer": "15",
+     "options": [
+      "15",
+      "6",
+      "13",
+      "46"
+     ],
+     "hints": [
+      "Change: 6.",
+      "6 ÷ 40 = 0.15.",
+      "15%."
+     ],
+     "explain": "6 ÷ 40 × 100 = 15%."
+    },
+    {
+     "type": "mcq",
+     "q": "A price goes up 10%, then down 10%. Is it back to the original?",
+     "options": [
+      "No, it is 1% lower",
+      "Yes",
+      "No, it is 1% higher",
+      "It doubles"
+     ],
+     "answer": 0,
+     "hints": [
+      "Try $100.",
+      "100 → 110 → 99.",
+      "Lower."
+     ],
+     "explain": "1.1 × 0.9 = 0.99, so it ends 1% lower."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Using multipliers",
+     "Change ÷ original",
+     "Trying with $100",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out percentage increases, decreases and changes.",
+   "teacher": "Shows calculating percentages of amounts, using multipliers for increase and decrease, and finding percentage change.",
+   "done": "Use a multiplier, and for change: (new − old) ÷ old × 100."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam8-eng-character",
+   "grade": 8,
+   "title": "Character and setting",
+   "topic": "Reading: fiction",
+   "category": "Creativity",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 8: Reading (how writers present character and setting through language and detail)",
+   "intention": "Today I am analysing how a writer reveals a character.",
+   "prompt": "How can you tell someone is worried without them saying so?",
+   "passage": "<div class=\"passage-text\"><p><b>The Harbour at Dawn</b> <span class=\"muted\">(a 2to.iQ story extract)</span></p>\n<p>The fishing boats came in one by one, low in the water. Uncle Sizwe stood on the wall with his arms folded, counting them the way other men count money. When the last boat rounded the point, his shoulders dropped. He laughed then, too loudly, and clapped the nearest stranger on the back.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>The Harbour at Dawn</b> <span class=\"muted\">(a 2to.iQ story extract)</span></p>\n<p>The fishing boats came in one by one, low in the water. Uncle Sizwe stood on the wall with his arms folded, counting them the way other men count money. When the last boat rounded the point, his shoulders dropped. He laughed then, too loudly, and clapped the nearest stranger on the back.</p></div>"
+    },
+    {
+     "h": "Show through action",
+     "say": "Writers reveal character through what people do, not only what they say. Uncle Sizwe counts the boats and his shoulders drop when the last one returns.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Action</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Body language</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">What it reveals</span></div>"
+    },
+    {
+     "h": "Setting creates mood",
+     "say": "The harbour at dawn, with boats low in the water, creates a quiet, tense mood. Setting can reflect how characters feel.",
+     "html": "<p>Setting shapes <b>mood</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "What does 'his shoulders dropped' reveal?",
+    "steps": [
+     "Dropping shoulders show tension leaving the body.",
+     "It happens when the last boat returns.",
+     "He had been worried, and now he is relieved."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why does Uncle Sizwe count the boats?",
+     "options": [
+      "He is worried that one might not return",
+      "He is selling them",
+      "He is bored",
+      "He is learning to count"
+     ],
+     "answer": 0,
+     "hints": [
+      "Watch his reaction.",
+      "Relief when the last one arrives.",
+      "Worry."
+     ],
+     "explain": "He is anxious until every boat is safely back."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'the way other men count money' suggest?",
+     "options": [
+      "The boats are as precious to him as money",
+      "He is greedy",
+      "He is a banker",
+      "The boats are cheap"
+     ],
+     "answer": 0,
+     "hints": [
+      "People count money carefully.",
+      "It matters to them.",
+      "Precious."
+     ],
+     "explain": "The comparison shows how much the boats matter."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does he laugh 'too loudly'?",
+     "options": [
+      "His relief bursts out after the tension",
+      "Something is funny",
+      "He is angry",
+      "He can't hear"
+     ],
+     "answer": 0,
+     "hints": [
+      "When does he laugh?",
+      "After the last boat.",
+      "Relief."
+     ],
+     "explain": "The loud laugh releases his built-up worry."
+    },
+    {
+     "type": "mcq",
+     "q": "What mood does the setting create at the start?",
+     "options": [
+      "Quiet and tense",
+      "Loud and joyful",
+      "Frightening and violent",
+      "Bored"
+     ],
+     "answer": 0,
+     "hints": [
+      "Dawn, boats low in the water.",
+      "Waiting.",
+      "Quiet tension."
+     ],
+     "explain": "The quiet harbour and waiting create tension."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best analysis?",
+     "options": [
+      "The writer shows Uncle Sizwe's worry through his folded arms and careful counting.",
+      "Uncle Sizwe is a man.",
+      "There are boats.",
+      "I like the story."
+     ],
+     "answer": 0,
+     "hints": [
+      "Analysis explains how.",
+      "Refer to details.",
+      "The first."
+     ],
+     "explain": "It links details to what they reveal."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Watching actions",
+     "Body language",
+     "Linking setting to mood",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how a writer reveals a character's feelings through actions and setting.",
+   "teacher": "Shows analysing characterisation through action and body language and the effect of setting on mood.",
+   "done": "Actions reveal feelings; setting creates mood."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam8-eng-balanced",
+   "grade": 8,
+   "title": "A balanced argument",
+   "topic": "Reading and writing: discursive",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 8: Reading and writing (balanced, discursive texts; presenting both sides; reaching a conclusion)",
+   "intention": "Today I am reading and planning a balanced argument.",
+   "prompt": "Is it ever hard to decide which side you're on?",
+   "passage": "<div class=\"passage-text\"><p><b>Should our town ban plastic bags?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Plastic bags are cheap, light and useful, which is exactly the problem: we use them for minutes and throw them away. In our town, volunteers removed more than 3 000 bags from the river last year.</p>\n<p>However, a ban is not simple. Some small shop owners say paper bags cost them five times as much, and some families reuse plastic bags as bin liners.</p>\n<p>A charge for each bag may be a fairer first step. Where shops have charged for bags, many shoppers have switched to bags they can reuse.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Should our town ban plastic bags?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Plastic bags are cheap, light and useful, which is exactly the problem: we use them for minutes and throw them away. In our town, volunteers removed more than 3 000 bags from the river last year.</p>\n<p>However, a ban is not simple. Some small shop owners say paper bags cost them five times as much, and some families reuse plastic bags as bin liners.</p>\n<p>A charge for each bag may be a fairer first step. Where shops have charged for bags, many shoppers have switched to bags they can reuse.</p></div>"
+    },
+    {
+     "h": "Both sides",
+     "say": "A balanced argument presents both sides fairly before reaching a conclusion. This article gives reasons for a ban, then reasons against.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">For</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Against</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Conclusion</span></div>"
+    },
+    {
+     "h": "Signal words",
+     "say": "Writers use signal words to move between sides: however, on the other hand, despite this. The conclusion weighs the evidence.",
+     "html": "<p><b>However</b>, <b>on the other hand</b>, <b>despite this</b></p>"
+    }
+   ],
+   "example": {
+    "q": "What does the writer conclude, and why?",
+    "steps": [
+     "The writer suggests a charge for each bag.",
+     "This avoids the problems of a full ban.",
+     "It still encourages reusable bags, as other places have shown."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is an argument FOR a ban?",
+     "options": [
+      "Volunteers removed over 3 000 bags from the river",
+      "Paper bags cost shops more",
+      "Families reuse bags as bin liners",
+      "Bags are light"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which shows harm from bags?",
+      "The river.",
+      "3 000 bags."
+     ],
+     "explain": "The river pollution supports a ban."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is an argument AGAINST a ban?",
+     "options": [
+      "Paper bags cost small shops five times as much",
+      "Bags pollute rivers",
+      "Bags are used for minutes",
+      "Bags are thrown away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who would be harmed by a ban?",
+      "Small shops.",
+      "Cost."
+     ],
+     "explain": "The cost to small shops argues against a ban."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word signals the move to the other side?",
+     "options": [
+      "However",
+      "Plastic",
+      "Volunteers",
+      "Exactly"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the start of paragraph 2.",
+      "A contrast word.",
+      "However."
+     ],
+     "explain": "'However' introduces the opposing view."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the writer's conclusion?",
+     "options": [
+      "A charge for each bag may be a fairer first step",
+      "Ban all plastic immediately",
+      "Do nothing",
+      "Ban paper bags"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the last paragraph.",
+      "A middle way.",
+      "A charge."
+     ],
+     "explain": "The writer suggests charging for bags."
+    },
+    {
+     "type": "mcq",
+     "q": "What makes the argument balanced?",
+     "options": [
+      "It fairly presents both sides before concluding",
+      "It is very short",
+      "It uses only one side",
+      "It has a title"
+     ],
+     "answer": 0,
+     "hints": [
+      "Balance means fairness.",
+      "Both sides.",
+      "Then a conclusion."
+     ],
+     "explain": "It gives both sides fairly."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Sorting for and against",
+     "Signal words",
+     "Weighing up the conclusion",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored how a balanced argument presents both sides.",
+   "teacher": "Shows identifying arguments for and against, recognising discursive signal words and evaluating a reasoned conclusion.",
+   "done": "Present both sides fairly, signal the switch, and weigh them in the conclusion."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam8-sci-digestion",
+   "grade": 8,
+   "title": "The digestive system",
+   "topic": "Biology: digestion",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 8: Biology (the human digestive system; the role of enzymes; absorption)",
+   "intention": "Today I am following food through the digestive system.",
+   "prompt": "What happens to your lunch after you swallow it?",
+   "lesson": [
+    {
+     "h": "The journey",
+     "say": "Food travels from the mouth, down the oesophagus, to the stomach, then the small intestine and the large intestine.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mouth</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Oesophagus</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Stomach</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Small intestine</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Large intestine</span></div>"
+    },
+    {
+     "h": "Breaking food down",
+     "say": "Teeth break food into smaller pieces. Enzymes break large molecules into small ones the body can absorb. The stomach's acid helps enzymes there and kills bacteria.",
+     "html": "<p>Physical: <b>teeth</b>. Chemical: <b>enzymes</b>.</p>"
+    },
+    {
+     "h": "Absorption",
+     "say": "Small food molecules pass through the wall of the small intestine into the blood. The large intestine absorbs water.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Small intestine: nutrients into the blood</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Large intestine: water</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Why must large food molecules be broken down?",
+    "steps": [
+     "Large molecules are too big to pass through the gut wall.",
+     "Enzymes break them into small, soluble molecules.",
+     "These can be absorbed into the blood."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Where does food go after the mouth?",
+     "options": [
+      "The oesophagus",
+      "The large intestine",
+      "The lungs",
+      "The heart"
+     ],
+     "answer": 0,
+     "hints": [
+      "The tube you swallow into.",
+      "It leads to the stomach.",
+      "Oesophagus."
+     ],
+     "explain": "Food is swallowed down the oesophagus."
+    },
+    {
+     "type": "mcq",
+     "q": "Where are most nutrients absorbed into the blood?",
+     "options": [
+      "Small intestine",
+      "Stomach",
+      "Mouth",
+      "Large intestine"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is long and folded.",
+      "Close to the blood.",
+      "Small intestine."
+     ],
+     "explain": "Most absorption happens in the small intestine."
+    },
+    {
+     "type": "mcq",
+     "q": "What do digestive enzymes do?",
+     "options": [
+      "Break large molecules into small ones",
+      "Make food bigger",
+      "Carry oxygen",
+      "Absorb water"
+     ],
+     "answer": 0,
+     "hints": [
+      "They are chemical helpers.",
+      "Large to small.",
+      "Break down."
+     ],
+     "explain": "Enzymes break large molecules into smaller ones."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the main job of the large intestine?",
+     "options": [
+      "Absorbing water",
+      "Chewing",
+      "Making acid",
+      "Absorbing oxygen"
+     ],
+     "answer": 0,
+     "hints": [
+      "Near the end of the gut.",
+      "It takes back something important.",
+      "Water."
+     ],
+     "explain": "The large intestine absorbs water."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the stomach contain acid?",
+     "options": [
+      "It kills bacteria and helps stomach enzymes work",
+      "To dissolve teeth",
+      "To make food colder",
+      "To absorb water"
+     ],
+     "answer": 0,
+     "hints": [
+      "It protects us.",
+      "And helps digestion.",
+      "Two jobs."
+     ],
+     "explain": "Acid kills bacteria and provides the right pH for stomach enzymes."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following the journey",
+     "Physical versus chemical digestion",
+     "Where absorption happens",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child followed food through the digestive system.",
+   "teacher": "Shows describing the pathway of digestion, the role of enzymes and acid, and the sites of absorption.",
+   "done": "Teeth and enzymes break food down; the small intestine absorbs it."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam8-sci-light",
+   "grade": 8,
+   "title": "Reflection and refraction",
+   "topic": "Physics: light",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 8: Physics (reflection and the law of reflection; refraction of light)",
+   "intention": "Today I am explaining how light reflects and bends.",
+   "prompt": "Why does a straw look bent in a glass of water?",
+   "lesson": [
+    {
+     "h": "Light travels in straight lines",
+     "say": "Light travels in straight lines called rays. We see objects when light from them enters our eyes.",
+     "html": "<p>Light → object → <b>eye</b></p>"
+    },
+    {
+     "h": "Reflection",
+     "say": "When light hits a mirror, it reflects. The angle of incidence equals the angle of reflection, both measured from the normal, a line at right angles to the mirror.",
+     "html": "<p>Angle of incidence = <b>angle of reflection</b></p>"
+    },
+    {
+     "h": "Refraction",
+     "say": "Light changes speed when it moves from one material to another, for example from water into air. This makes it change direction, or refract. That is why a straw looks bent.",
+     "html": "<p>Change of speed → change of <b>direction</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A ray hits a mirror at 35° to the normal. What is the angle of reflection?",
+    "steps": [
+     "The angle of incidence is 35°.",
+     "The angle of reflection equals the angle of incidence.",
+     "35°."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "The angle of incidence is 50°. What is the angle of reflection, in degrees?",
+     "answer": "50",
+     "options": [
+      "50",
+      "40",
+      "100",
+      "130"
+     ],
+     "hints": [
+      "They are equal.",
+      "The law of reflection.",
+      "50."
+     ],
+     "explain": "The angles are equal: 50°."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the normal?",
+     "options": [
+      "A line at right angles to the surface",
+      "The mirror itself",
+      "The reflected ray",
+      "A type of light"
+     ],
+     "answer": 0,
+     "hints": [
+      "Angles are measured from it.",
+      "It is perpendicular.",
+      "At 90°."
+     ],
+     "explain": "The normal is perpendicular to the surface."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does a straw look bent in water?",
+     "options": [
+      "Light refracts as it passes from water into air",
+      "The straw really bends",
+      "Water is a mirror",
+      "Light stops in water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Light changes material.",
+      "It changes speed.",
+      "Refraction."
+     ],
+     "explain": "Light changes direction as it leaves the water."
+    },
+    {
+     "type": "mcq",
+     "q": "What causes refraction?",
+     "options": [
+      "Light changing speed between materials",
+      "Light getting brighter",
+      "A mirror",
+      "Sound waves"
+     ],
+     "answer": 0,
+     "hints": [
+      "Speed changes.",
+      "Between materials.",
+      "That bends the ray."
+     ],
+     "explain": "Changing speed causes a change in direction."
+    },
+    {
+     "type": "mcq",
+     "q": "How do we see a book on a table?",
+     "options": [
+      "Light reflected from the book enters our eyes",
+      "Our eyes send out light",
+      "The book makes its own light",
+      "Sound bounces off it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Books don't glow.",
+      "Light bounces off them.",
+      "Into our eyes."
+     ],
+     "explain": "Light from a source reflects off the book into our eyes."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Drawing ray diagrams",
+     "Measuring from the normal",
+     "The straw example",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explained how light reflects off mirrors and bends in water.",
+   "teacher": "Shows applying the law of reflection with reference to the normal and explaining refraction in terms of change of speed.",
+   "done": "Reflection: angles equal. Refraction: speed changes, so direction changes."
   }
  ],
  "words": {

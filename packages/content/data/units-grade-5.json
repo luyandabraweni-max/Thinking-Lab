@@ -1802,6 +1802,368 @@
    "parent": "Your child learnt to recognise safe and unsafe relationships, online safety and stranger safety. Please talk about trusted adults at home.",
    "teacher": "Protective, scenario-based content. If a learner discloses anything, follow your school's safeguarding procedure.",
    "done": "Safe people respect you. You can always ask for help."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp5-fdp",
+   "grade": 5,
+   "title": "Fractions, decimals and percentages",
+   "topic": "Number: equivalence",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 5: Number (equivalence of simple fractions, decimals and percentages)",
+   "intention": "Today I am matching fractions, decimals and percentages.",
+   "prompt": "What does 50% off mean in a shop?",
+   "lesson": [
+    {
+     "h": "Three ways to say it",
+     "say": "One half can be written as a fraction, a half, as a decimal, 0.5, or as a percentage, 50 percent. They all mean the same amount.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1/2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">0.5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">50%</span></div>"
+    },
+    {
+     "h": "Key facts",
+     "say": "A quarter is 0.25, or 25 percent. Three quarters is 0.75, or 75 percent. One tenth is 0.1, or 10 percent.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1/4 = 0.25 = 25%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3/4 = 0.75 = 75%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1/10 = 0.1 = 10%</span></div>"
+    },
+    {
+     "h": "Per cent means out of 100",
+     "say": "Per cent means out of 100. 30 percent means 30 out of 100, which is 0.3.",
+     "html": "<p>30% = 30/100 = <b>0.3</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Write 2/5 as a percentage.",
+    "steps": [
+     "Make the bottom 100: multiply top and bottom by 20.",
+     "2/5 = 40/100.",
+     "40/100 = 40%."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is the same as 1/2?",
+     "options": [
+      "50%",
+      "25%",
+      "12%",
+      "0.2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Half of 100.",
+      "50.",
+      "50%."
+     ],
+     "explain": "1/2 = 50%."
+    },
+    {
+     "type": "mcq",
+     "q": "Write 0.25 as a fraction.",
+     "options": [
+      "1/4",
+      "1/2",
+      "2/5",
+      "1/25"
+     ],
+     "answer": 0,
+     "hints": [
+      "0.25 is 25 hundredths.",
+      "25 out of 100.",
+      "1/4."
+     ],
+     "explain": "0.25 = 25/100 = 1/4."
+    },
+    {
+     "type": "num",
+     "q": "Write 70% as a decimal.",
+     "answer": "0.7",
+     "options": [
+      "0.7",
+      "7",
+      "0.07",
+      "70"
+     ],
+     "hints": [
+      "70 out of 100.",
+      "70 ÷ 100.",
+      "0.7."
+     ],
+     "explain": "70 ÷ 100 = 0.7."
+    },
+    {
+     "type": "num",
+     "q": "Write 3/10 as a percentage. (Type the number only.)",
+     "answer": "30",
+     "options": [
+      "30",
+      "3",
+      "10",
+      "0.3"
+     ],
+     "hints": [
+      "Multiply top and bottom by 10.",
+      "30/100.",
+      "30%."
+     ],
+     "explain": "3/10 = 30/100 = 30%."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Remembering key facts",
+     "Thinking 'out of 100'",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child matched fractions, decimals and percentages.",
+   "teacher": "Shows recognising equivalent fractions, decimals and percentages, including tenths, quarters and halves.",
+   "done": "Per cent means out of 100: 1/2 = 0.5 = 50%."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp5-fact-opinion",
+   "grade": 5,
+   "title": "Fact and opinion",
+   "topic": "Reading: non-fiction",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge Primary English (0058), Stage 5: Reading (distinguishing between fact and opinion)",
+   "intention": "Today I am telling facts from opinions.",
+   "prompt": "Is 'pizza is the best food' a fact?",
+   "lesson": [
+    {
+     "h": "Facts",
+     "say": "A fact can be checked and proved true. For example: the Orange River is the longest river in South Africa.",
+     "html": "<p>Fact: <b>can be proved</b>.</p>"
+    },
+    {
+     "h": "Opinions",
+     "say": "An opinion is what someone thinks or feels. People can disagree. For example: the Orange River is the most beautiful river.",
+     "html": "<p>Opinion: <b>what someone thinks</b>.</p>"
+    },
+    {
+     "h": "Clue words",
+     "say": "Opinion words include best, worst, beautiful, I think and should.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">best</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">worst</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">I think</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">should</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Fact or opinion: 'Cheetahs can run faster than lions.'",
+    "steps": [
+     "Can it be checked?",
+     "Yes, by measuring their speeds.",
+     "It is a fact."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "'There are seven days in a week.' Is this a fact or an opinion?",
+     "options": [
+      "Fact",
+      "Opinion"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can it be checked?",
+      "Yes, on a calendar.",
+      "Fact."
+     ],
+     "explain": "It can be checked, so it is a fact."
+    },
+    {
+     "type": "mcq",
+     "q": "'Saturday is the best day of the week.' Is this a fact or an opinion?",
+     "options": [
+      "Opinion",
+      "Fact"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for 'best'.",
+      "People could disagree.",
+      "Opinion."
+     ],
+     "explain": "'Best' shows an opinion."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word often signals an opinion?",
+     "options": [
+      "beautiful",
+      "seven",
+      "river",
+      "measured"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a judgement.",
+      "People see it differently.",
+      "Beautiful."
+     ],
+     "explain": "'Beautiful' is a judgement."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the sentences.",
+     "items": [
+      "Water boils at 100 °C.",
+      "Maths is boring.",
+      "Durban is in KwaZulu-Natal.",
+      "Cats are better than dogs."
+     ],
+     "bins": [
+      "Fact",
+      "Opinion"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Can it be checked?",
+      "Boiling point and Durban can be checked.",
+      "The others are feelings."
+     ],
+     "explain": "The boiling point and Durban's location are facts; the others are opinions."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking 'can it be checked?'",
+     "Spotting opinion words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt to tell facts from opinions.",
+   "teacher": "Shows distinguishing fact from opinion and recognising evaluative language.",
+   "done": "A fact can be checked. An opinion is what someone thinks."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp5-sound",
+   "grade": 5,
+   "title": "Sound and vibrations",
+   "topic": "Physics: sound",
+   "caps": "Cambridge Primary Science (0097), Stage 5: Physics (sound is made by vibrations; pitch and loudness)",
+   "intention": "Today I am finding out how sounds are made and changed.",
+   "prompt": "Put your hand on your throat and hum. What do you feel?",
+   "lesson": [
+    {
+     "h": "Vibrations",
+     "say": "Sound is made when something vibrates, moving quickly back and forth. When you hum, your vocal cords vibrate.",
+     "html": "<p>Sound comes from <b>vibrations</b>.</p>"
+    },
+    {
+     "h": "Loudness",
+     "say": "Bigger vibrations make louder sounds. Hitting a drum harder makes it louder.",
+     "html": "<p>Bigger vibrations → <b>louder</b></p>"
+    },
+    {
+     "h": "Pitch",
+     "say": "Pitch is how high or low a sound is. Faster vibrations make a higher pitch. A short, tight string gives a higher note than a long, loose one.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fast vibration: high pitch</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slow vibration: low pitch</span></div>"
+    }
+   ],
+   "example": {
+    "q": "How can you make a guitar string play a higher note?",
+    "steps": [
+     "A higher note needs faster vibrations.",
+     "Shorten the string by pressing it, or tighten it.",
+     "The string vibrates faster, so the pitch is higher."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What makes a sound?",
+     "options": [
+      "Vibrations",
+      "Light",
+      "Colours",
+      "Smells"
+     ],
+     "answer": 0,
+     "hints": [
+      "Feel your throat when you hum.",
+      "It shakes.",
+      "Vibrations."
+     ],
+     "explain": "Sounds come from vibrations."
+    },
+    {
+     "type": "mcq",
+     "q": "How do you make a drum louder?",
+     "options": [
+      "Hit it harder",
+      "Hit it softer",
+      "Paint it",
+      "Make it smaller"
+     ],
+     "answer": 0,
+     "hints": [
+      "Bigger vibrations.",
+      "More force.",
+      "Harder."
+     ],
+     "explain": "Hitting harder makes bigger vibrations."
+    },
+    {
+     "type": "mcq",
+     "q": "Which string makes the higher note?",
+     "options": [
+      "A short, tight string",
+      "A long, loose string",
+      "They are the same",
+      "Neither makes a sound"
+     ],
+     "answer": 0,
+     "hints": [
+      "Higher pitch = faster vibration.",
+      "Short and tight vibrate faster.",
+      "Short, tight."
+     ],
+     "explain": "Short, tight strings vibrate faster: higher pitch."
+    },
+    {
+     "type": "mcq",
+     "q": "What is pitch?",
+     "options": [
+      "How high or low a sound is",
+      "How loud a sound is",
+      "How far sound goes",
+      "The colour of sound"
+     ],
+     "answer": 0,
+     "hints": [
+      "Not loudness.",
+      "High or low.",
+      "Pitch."
+     ],
+     "explain": "Pitch is how high or low a sound is."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Feeling the vibration",
+     "Loudness versus pitch",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how sounds are made and how pitch and loudness change.",
+   "teacher": "Shows explaining sound as vibration and relating vibration size and speed to loudness and pitch.",
+   "done": "Bigger vibrations: louder. Faster vibrations: higher pitch."
   }
  ],
  "words": {

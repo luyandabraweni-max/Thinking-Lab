@@ -1644,6 +1644,829 @@
    "done": "Spot a need, plan carefully, act, and measure your impact."
   },
   {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam9-pythagoras",
+   "grade": 9,
+   "title": "Pythagoras' theorem",
+   "topic": "Geometry: right-angled triangles",
+   "category": "Problem Solving",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 9: Geometry and measure (Pythagoras' theorem in two dimensions)",
+   "intention": "Today I am using Pythagoras' theorem to find missing sides.",
+   "prompt": "How long is the diagonal of a soccer field?",
+   "lesson": [
+    {
+     "h": "The theorem",
+     "say": "In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides. The hypotenuse is the longest side, opposite the right angle.",
+     "html": "<p>a² + b² = <b>c²</b></p>"
+    },
+    {
+     "h": "Finding the hypotenuse",
+     "say": "If the two shorter sides are 3 and 4, then c squared is 9 plus 16, which is 25. So c is 5.",
+     "html": "<p>3² + 4² = 25 → c = <b>5</b></p>"
+    },
+    {
+     "h": "Finding a shorter side",
+     "say": "To find a shorter side, subtract. If c is 13 and a is 5, then b squared is 169 minus 25, which is 144, so b is 12.",
+     "html": "<p>13² − 5² = 144 → b = <b>12</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A ladder 10 m long leans against a wall with its foot 6 m from the wall. How high up the wall does it reach?",
+    "steps": [
+     "The ladder is the hypotenuse: 10 m.",
+     "h² = 10² − 6² = 100 − 36 = 64.",
+     "h = 8 m."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "The two shorter sides are 6 and 8. Find the hypotenuse.",
+     "answer": "10",
+     "options": [
+      "10",
+      "14",
+      "100",
+      "48"
+     ],
+     "hints": [
+      "36 + 64.",
+      "= 100.",
+      "√100."
+     ],
+     "explain": "√100 = 10."
+    },
+    {
+     "type": "num",
+     "q": "The hypotenuse is 13 and one side is 12. Find the other side.",
+     "answer": "5",
+     "options": [
+      "5",
+      "25",
+      "1",
+      "17.7"
+     ],
+     "hints": [
+      "Subtract the squares.",
+      "169 − 144 = 25.",
+      "√25."
+     ],
+     "explain": "√25 = 5."
+    },
+    {
+     "type": "mcq",
+     "q": "Which side is the hypotenuse?",
+     "options": [
+      "The longest side, opposite the right angle",
+      "The shortest side",
+      "Any side",
+      "The bottom side"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find the right angle.",
+      "Look across from it.",
+      "Longest."
+     ],
+     "explain": "It is opposite the right angle and is the longest side."
+    },
+    {
+     "type": "mcq",
+     "q": "Do the sides 5, 12 and 13 make a right-angled triangle?",
+     "options": [
+      "Yes, because 25 + 144 = 169",
+      "No",
+      "Only if it is drawn",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check a² + b² = c².",
+      "25 + 144.",
+      "169 = 13²."
+     ],
+     "explain": "25 + 144 = 169 = 13², so yes."
+    },
+    {
+     "type": "num",
+     "q": "A rectangle is 9 cm by 12 cm. How long is its diagonal, in cm?",
+     "answer": "15",
+     "options": [
+      "15",
+      "21",
+      "225",
+      "10.5"
+     ],
+     "hints": [
+      "The diagonal is the hypotenuse.",
+      "81 + 144 = 225.",
+      "√225."
+     ],
+     "explain": "√225 = 15 cm."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Spotting the hypotenuse",
+     "Adding or subtracting squares",
+     "Drawing the triangle",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used Pythagoras' theorem to find missing sides.",
+   "teacher": "Shows applying Pythagoras' theorem to find the hypotenuse and shorter sides, and testing for right angles.",
+   "done": "a² + b² = c²: add to find the hypotenuse, subtract to find a shorter side."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam9-expected-frequency",
+   "grade": 9,
+   "title": "Probability and expected frequency",
+   "topic": "Statistics and probability",
+   "category": "Inquiry and Exploration",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 9: Statistics and probability (relative frequency; expected frequency; comparing with theoretical probability)",
+   "intention": "Today I am predicting how often an event should happen.",
+   "prompt": "If you toss a coin 100 times, will you get exactly 50 heads?",
+   "lesson": [
+    {
+     "h": "Expected frequency",
+     "say": "Expected frequency is the probability times the number of trials. Rolling a dice 60 times, you expect a 6 about 1 sixth of 60, which is 10 times.",
+     "html": "<p>Expected frequency = P(event) × number of trials</p>"
+    },
+    {
+     "h": "Relative frequency",
+     "say": "Relative frequency is how often something actually happened, divided by the number of trials. If you got 12 sixes in 60 rolls, the relative frequency is 12 over 60, or 0.2.",
+     "html": "<p>Relative frequency = times it happened ÷ trials</p>"
+    },
+    {
+     "h": "Is it fair?",
+     "say": "With many trials, relative frequency should be close to the theoretical probability. A big difference after many trials may suggest the dice is biased.",
+     "html": "<p>More trials → more <b>reliable</b> estimate</p>"
+    }
+   ],
+   "example": {
+    "q": "A spinner has P(red) = 0.25. It is spun 200 times. How many reds do you expect?",
+    "steps": [
+     "Expected = P × trials.",
+     "0.25 × 200.",
+     "= 50 reds."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A coin is tossed 80 times. How many heads do you expect?",
+     "answer": "40",
+     "options": [
+      "40",
+      "80",
+      "20",
+      "50"
+     ],
+     "hints": [
+      "P(heads) = 0.5.",
+      "0.5 × 80.",
+      "40."
+     ],
+     "explain": "0.5 × 80 = 40."
+    },
+    {
+     "type": "num",
+     "q": "A dice is rolled 120 times. How many 3s do you expect?",
+     "answer": "20",
+     "options": [
+      "20",
+      "40",
+      "3",
+      "60"
+     ],
+     "hints": [
+      "P(3) = 1/6.",
+      "120 ÷ 6.",
+      "20."
+     ],
+     "explain": "1/6 × 120 = 20."
+    },
+    {
+     "type": "num",
+     "q": "A drawing pin lands point-up 30 times in 50 throws. What is the relative frequency of point-up?",
+     "answer": "0.6",
+     "options": [
+      "0.6",
+      "30",
+      "0.3",
+      "1.6"
+     ],
+     "hints": [
+      "Times ÷ trials.",
+      "30 ÷ 50.",
+      "0.6."
+     ],
+     "explain": "30 ÷ 50 = 0.6."
+    },
+    {
+     "type": "mcq",
+     "q": "A dice lands on 6 in 300 of 600 rolls. What might this suggest?",
+     "options": [
+      "The dice may be biased",
+      "The dice is fair",
+      "Nothing at all",
+      "Sixes are impossible"
+     ],
+     "answer": 0,
+     "hints": [
+      "Expected about 100.",
+      "300 is far more.",
+      "Possibly biased."
+     ],
+     "explain": "300 is far more than the expected 100, so it may be biased."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is a relative frequency from 1 000 trials more reliable than from 10?",
+     "options": [
+      "More trials give a better estimate of the true probability",
+      "Bigger numbers are always right",
+      "10 trials are illegal",
+      "It isn't more reliable"
+     ],
+     "answer": 0,
+     "hints": [
+      "Small samples vary a lot.",
+      "Large samples settle down.",
+      "Better estimate."
+     ],
+     "explain": "With more trials, results get closer to the true probability."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "P × trials",
+     "Times ÷ trials",
+     "Comparing with theory",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child predicted results using probability and compared them with experiments.",
+   "teacher": "Shows calculating expected and relative frequency and interpreting differences from theoretical probability.",
+   "done": "Expected = P × trials. Relative frequency = times ÷ trials."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam9-eng-structure",
+   "grade": 9,
+   "title": "How texts are structured",
+   "topic": "Reading: structure",
+   "category": "Planning and Organisation",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 9: Reading (how writers structure non-fiction texts for effect)",
+   "intention": "Today I am analysing how a writer structures a text.",
+   "prompt": "Why do news reports put the most important facts first?",
+   "passage": "<div class=\"passage-text\"><p><b>Should our town ban plastic bags?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Plastic bags are cheap, light and useful, which is exactly the problem: we use them for minutes and throw them away. In our town, volunteers removed more than 3 000 bags from the river last year.</p>\n<p>However, a ban is not simple. Some small shop owners say paper bags cost them five times as much, and some families reuse plastic bags as bin liners.</p>\n<p>A charge for each bag may be a fairer first step. Where shops have charged for bags, many shoppers have switched to bags they can reuse.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Should our town ban plastic bags?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Plastic bags are cheap, light and useful, which is exactly the problem: we use them for minutes and throw them away. In our town, volunteers removed more than 3 000 bags from the river last year.</p>\n<p>However, a ban is not simple. Some small shop owners say paper bags cost them five times as much, and some families reuse plastic bags as bin liners.</p>\n<p>A charge for each bag may be a fairer first step. Where shops have charged for bags, many shoppers have switched to bags they can reuse.</p></div>"
+    },
+    {
+     "h": "Structure is a choice",
+     "say": "Writers decide what goes first, in the middle and last. This article opens with the problem, then gives the other side, and ends with a solution.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Problem</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Complication</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solution</span></div>"
+    },
+    {
+     "h": "Openings and endings",
+     "say": "The opening hooks the reader with a surprising idea: plastic bags are useful, and that is exactly the problem. The ending leaves the reader with a possible way forward.",
+     "html": "<p>Opening: <b>hook</b>. Ending: <b>resolution</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Why does the writer put the river statistic in the first paragraph?",
+    "steps": [
+     "It gives evidence of the problem early.",
+     "A concrete number makes the problem real.",
+     "It hooks the reader before the complications."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How does the article begin?",
+     "options": [
+      "With a surprising statement about why bags are a problem",
+      "With the solution",
+      "With a story about a shop",
+      "With a question"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the first sentence.",
+      "'Which is exactly the problem.'",
+      "A surprising statement."
+     ],
+     "explain": "It opens by turning the bags' usefulness into the problem."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the purpose of the second paragraph?",
+     "options": [
+      "To present complications with a ban",
+      "To repeat the first paragraph",
+      "To end the article",
+      "To tell a joke"
+     ],
+     "answer": 0,
+     "hints": [
+      "It starts with 'However'.",
+      "The other side.",
+      "Complications."
+     ],
+     "explain": "It shows why a ban is not simple."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the writer end with a possible solution?",
+     "options": [
+      "To leave the reader with a way forward",
+      "Because they ran out of words",
+      "To confuse the reader",
+      "To start a new topic"
+     ],
+     "answer": 0,
+     "hints": [
+      "After problem and complication…",
+      "…comes a resolution.",
+      "A way forward."
+     ],
+     "explain": "It resolves the tension the article built up."
+    },
+    {
+     "type": "mcq",
+     "q": "Which structure does the article follow?",
+     "options": [
+      "Problem, complication, solution",
+      "Solution, problem, question",
+      "Story, list, poem",
+      "Question, answer, question"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at each paragraph's job.",
+      "Problem first.",
+      "Then complication, then solution."
+     ],
+     "explain": "Problem → complication → solution."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best comment on structure?",
+     "options": [
+      "By moving from problem to complication to solution, the writer guides the reader towards the bag charge.",
+      "The article has three paragraphs.",
+      "The article is about bags.",
+      "It is well written."
+     ],
+     "answer": 0,
+     "hints": [
+      "Explain the effect.",
+      "On the reader.",
+      "The first."
+     ],
+     "explain": "It explains how the structure guides the reader."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding each paragraph's job",
+     "Looking at the opening and ending",
+     "Explaining the effect",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how the structure of an article guides the reader.",
+   "teacher": "Shows analysing the function of paragraphs and the effect of structural choices in non-fiction.",
+   "done": "Ask what each part does, and how the order guides the reader."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam9-eng-speech",
+   "grade": 9,
+   "title": "Writing a speech",
+   "topic": "Writing and speaking: persuasion",
+   "category": "Communication",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 9: Writing and speaking (writing and delivering a persuasive speech for an audience)",
+   "intention": "Today I am writing a speech that persuades an audience.",
+   "prompt": "What makes a speaker worth listening to?",
+   "lesson": [
+    {
+     "h": "Speeches are heard",
+     "say": "A speech is written to be heard, so use short sentences, direct address with you and we, and clear signposts like firstly and finally.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Short sentences</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">You and we</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Signposts</span></div>"
+    },
+    {
+     "h": "Rhetorical devices",
+     "say": "Speakers use the rule of three, rhetorical questions and repetition to make ideas memorable. For example: we can recycle, we can reuse, we can refuse.",
+     "html": "<p><b>We can</b> recycle. <b>We can</b> reuse. <b>We can</b> refuse.</p>"
+    },
+    {
+     "h": "A strong ending",
+     "say": "End with a call to action that tells the audience exactly what to do next.",
+     "html": "<p>'Bring one reusable bag tomorrow. That's all it takes to start.'</p>"
+    }
+   ],
+   "example": {
+    "q": "Write an opening line for a speech about saving water.",
+    "steps": [
+     "Hook the audience directly.",
+     "Use a question or a striking fact.",
+     "'What would you do if you turned on the tap tomorrow and nothing came out?'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why do speeches use 'you' and 'we'?",
+     "options": [
+      "To involve the audience directly",
+      "To make them longer",
+      "Because it is formal",
+      "To avoid facts"
+     ],
+     "answer": 0,
+     "hints": [
+      "Speeches talk to people.",
+      "Direct address.",
+      "Involves them."
+     ],
+     "explain": "Direct address makes the audience feel involved."
+    },
+    {
+     "type": "mcq",
+     "q": "'We can recycle, we can reuse, we can refuse' uses…",
+     "options": [
+      "the rule of three and repetition",
+      "a statistic",
+      "a simile",
+      "a counter-argument"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the ideas.",
+      "Notice what repeats.",
+      "Three, repeated."
+     ],
+     "explain": "Three parallel ideas with a repeated phrase."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a rhetorical question?",
+     "options": [
+      "'Do we really want our children to inherit a dirty river?'",
+      "'What time is it?'",
+      "'The river is dirty.'",
+      "'Recycle now.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "It doesn't expect an answer.",
+      "It makes a point.",
+      "The first."
+     ],
+     "explain": "It makes a point rather than asking for information."
+    },
+    {
+     "type": "mcq",
+     "q": "Which ending is a clear call to action?",
+     "options": [
+      "'Bring one reusable bag tomorrow.'",
+      "'Thank you.'",
+      "'That's my speech.'",
+      "'Bags exist.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "What should the audience do?",
+      "Something specific.",
+      "Bring a bag."
+     ],
+     "explain": "It tells the audience exactly what to do."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are short sentences useful in a speech?",
+     "options": [
+      "They are easier for listeners to follow",
+      "They are required by law",
+      "They hide the meaning",
+      "They make the speech longer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Listeners can't re-read.",
+      "Keep it clear.",
+      "Easy to follow."
+     ],
+     "explain": "Listeners follow short sentences more easily."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing for the ear",
+     "Rule of three",
+     "The call to action",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised writing a persuasive speech.",
+   "teacher": "Shows adapting writing for spoken delivery, using rhetorical devices and crafting a call to action.",
+   "done": "Write for the ear: short, direct, memorable, with a clear call to action."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam9-sci-reactivity",
+   "grade": 9,
+   "title": "The reactivity of metals",
+   "topic": "Chemistry: metals",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 9: Chemistry (the reactivity series; displacement reactions)",
+   "intention": "Today I am ordering metals by how reactive they are.",
+   "prompt": "Why do iron gates rust but gold rings don't?",
+   "lesson": [
+    {
+     "h": "The reactivity series",
+     "say": "Metals can be put in order of how readily they react. Potassium and sodium are very reactive. Gold and silver hardly react at all.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Potassium</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sodium</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Magnesium</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Zinc</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Iron</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Copper</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gold</span></div><p>Most reactive → least reactive</p>"
+    },
+    {
+     "h": "Reactions with acid and water",
+     "say": "More reactive metals react faster with acids and water, giving off hydrogen gas. Magnesium fizzes quickly in acid; copper doesn't react with dilute acid.",
+     "html": "<p>metal + acid → salt + <b>hydrogen</b></p>"
+    },
+    {
+     "h": "Displacement",
+     "say": "A more reactive metal displaces a less reactive metal from a solution of its compound. Iron placed in copper sulfate becomes coated in copper.",
+     "html": "<p>iron + copper sulfate → iron sulfate + <b>copper</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Will zinc displace copper from copper sulfate solution?",
+    "steps": [
+     "Zinc is above copper in the reactivity series.",
+     "A more reactive metal displaces a less reactive one.",
+     "Yes: zinc sulfate and copper are formed."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which metal is most reactive?",
+     "options": [
+      "Potassium",
+      "Iron",
+      "Copper",
+      "Gold"
+     ],
+     "answer": 0,
+     "hints": [
+      "The top of the series.",
+      "It reacts violently with water.",
+      "Potassium."
+     ],
+     "explain": "Potassium is at the top of the series."
+    },
+    {
+     "type": "mcq",
+     "q": "What gas is given off when magnesium reacts with acid?",
+     "options": [
+      "Hydrogen",
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen"
+     ],
+     "answer": 0,
+     "hints": [
+      "Metal + acid → salt + …",
+      "It makes a squeaky pop.",
+      "Hydrogen."
+     ],
+     "explain": "Metals and acids produce hydrogen."
+    },
+    {
+     "type": "mcq",
+     "q": "Will copper displace iron from iron sulfate?",
+     "options": [
+      "No, copper is less reactive than iron",
+      "Yes",
+      "Only when hot",
+      "Only in water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Compare their positions.",
+      "Copper is below iron.",
+      "No."
+     ],
+     "explain": "A less reactive metal can't displace a more reactive one."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is gold used for jewellery?",
+     "options": [
+      "It is very unreactive, so it doesn't tarnish",
+      "It is very reactive",
+      "It is cheap",
+      "It fizzes in water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Gold rings stay shiny.",
+      "It hardly reacts.",
+      "Unreactive."
+     ],
+     "explain": "Gold's low reactivity keeps it shiny."
+    },
+    {
+     "type": "mcq",
+     "q": "Iron is placed in copper sulfate solution. What do you see?",
+     "options": [
+      "Copper forms on the iron",
+      "Nothing happens",
+      "The iron turns to gold",
+      "The solution freezes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Iron is more reactive.",
+      "It displaces copper.",
+      "Copper appears."
+     ],
+     "explain": "Iron displaces copper, which coats the iron."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Learning the series",
+     "Comparing positions",
+     "Predicting displacement",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child ordered metals by reactivity and predicted reactions.",
+   "teacher": "Shows using the reactivity series to predict reactions with acids and displacement reactions.",
+   "done": "Higher in the series means more reactive, and it can displace metals below it."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam9-sci-carbon-cycle",
+   "grade": 9,
+   "title": "The carbon cycle and climate",
+   "topic": "Earth and space: climate",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 9: Earth and space (the carbon cycle; the greenhouse effect; human impact on climate)",
+   "intention": "Today I am tracing carbon through the carbon cycle.",
+   "prompt": "Where does the carbon in a burning log go?",
+   "lesson": [
+    {
+     "h": "Carbon moves around",
+     "say": "Carbon moves between the air, living things, the oceans and rocks. Plants take in carbon dioxide for photosynthesis. Respiration, decay and burning release it.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Photosynthesis: takes CO₂ in</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Respiration, decay, burning: give CO₂ out</span></div>"
+    },
+    {
+     "h": "The greenhouse effect",
+     "say": "Carbon dioxide and some other gases trap heat in the atmosphere, keeping Earth warm enough for life. More of these gases trap more heat.",
+     "html": "<p>More greenhouse gases → more heat <b>trapped</b></p>"
+    },
+    {
+     "h": "Human impact",
+     "say": "Burning fossil fuels and cutting down forests add carbon dioxide to the air faster than it is removed. This is causing global temperatures to rise.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Burning fossil fuels</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Deforestation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">More CO₂</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Warming</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Explain how cutting down forests increases carbon dioxide in the air.",
+    "steps": [
+     "Trees remove carbon dioxide by photosynthesis.",
+     "Fewer trees means less carbon dioxide is removed.",
+     "If the trees are burnt, their stored carbon is released too."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which process removes carbon dioxide from the air?",
+     "options": [
+      "Photosynthesis",
+      "Respiration",
+      "Burning",
+      "Decay"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plants do it.",
+      "They use CO₂ to make glucose.",
+      "Photosynthesis."
+     ],
+     "explain": "Photosynthesis takes carbon dioxide in."
+    },
+    {
+     "type": "mcq",
+     "q": "Which process releases carbon dioxide?",
+     "options": [
+      "Burning fuels",
+      "Photosynthesis",
+      "Dissolving in rain only",
+      "Freezing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Combustion.",
+      "Fossil fuels.",
+      "Burning."
+     ],
+     "explain": "Burning releases carbon dioxide."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the greenhouse effect do?",
+     "options": [
+      "Traps heat in the atmosphere",
+      "Cools the Earth down",
+      "Removes all CO₂",
+      "Makes plants grow faster only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Like a blanket.",
+      "Heat stays in.",
+      "Traps heat."
+     ],
+     "explain": "Greenhouse gases trap heat."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is the greenhouse effect needed for life?",
+     "options": [
+      "Without it, Earth would be too cold",
+      "It makes oxygen",
+      "It stops rain",
+      "It isn't needed"
+     ],
+     "answer": 0,
+     "hints": [
+      "Earth needs some warmth.",
+      "Without any trapped heat…",
+      "…too cold."
+     ],
+     "explain": "Some trapped heat keeps Earth warm enough for life."
+    },
+    {
+     "type": "mcq",
+     "q": "Which action would reduce carbon dioxide in the air?",
+     "options": [
+      "Planting trees",
+      "Burning more coal",
+      "Cutting down forests",
+      "Driving more"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which removes CO₂?",
+      "Photosynthesis.",
+      "Plant trees."
+     ],
+     "explain": "More trees remove more carbon dioxide."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following carbon around the cycle",
+     "In and out processes",
+     "Linking to climate",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child traced carbon through the carbon cycle and linked it to climate change.",
+   "teacher": "Shows describing processes in the carbon cycle, explaining the greenhouse effect and evaluating human impact.",
+   "done": "Photosynthesis takes carbon dioxide in; respiration, decay and burning release it."
+  },
+  {
    "curriculum": "IB",
    "subject": "Mathematics",
    "domain": "Logical and Analytical Thinking",

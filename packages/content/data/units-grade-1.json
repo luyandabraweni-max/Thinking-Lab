@@ -1743,6 +1743,400 @@
    "done": "Kind words and actions help everyone feel good."
   },
   {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp1-bonds",
+   "grade": 1,
+   "title": "Number bonds to 10",
+   "topic": "Number: addition",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 1: Number (pairs of numbers that make 10)",
+   "intention": "Today I am finding pairs of numbers that make 10.",
+   "prompt": "How many fingers do you have altogether?",
+   "lesson": [
+    {
+     "h": "Ten fingers",
+     "say": "You have ten fingers. If you hold up 7 fingers, 3 are down. 7 and 3 make 10.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🖐️🖐️</p><p>7 + 3 = 10</p>"
+    },
+    {
+     "h": "All the pairs",
+     "say": "These pairs all make 10: 1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 + 9</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 + 8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3 + 7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4 + 6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">5 + 5</span></div>"
+    },
+    {
+     "h": "Missing numbers",
+     "say": "If 6 plus something makes 10, count on from 6 to 10: 7, 8, 9, 10. That is 4.",
+     "html": "<p>6 + <b>4</b> = 10</p>"
+    }
+   ],
+   "example": {
+    "q": "8 + ? = 10",
+    "steps": [
+     "Start at 8.",
+     "Count on: 9, 10.",
+     "That is 2 more. 8 + 2 = 10."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "3 + ? = 10",
+     "pics": [
+      "7️⃣",
+      "6️⃣",
+      "3️⃣"
+     ],
+     "options": [
+      "7",
+      "6",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count on from 3.",
+      "4, 5, 6, 7, 8, 9, 10.",
+      "7."
+     ],
+     "explain": "3 + 7 = 10."
+    },
+    {
+     "type": "mcq",
+     "q": "Which pair makes 10?",
+     "options": [
+      "4 and 6",
+      "4 and 5",
+      "3 and 3",
+      "2 and 9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add each pair.",
+      "4 + 6.",
+      "10."
+     ],
+     "explain": "4 + 6 = 10."
+    },
+    {
+     "type": "num",
+     "q": "5 + ? = 10",
+     "answer": "5",
+     "options": [
+      "5",
+      "4",
+      "6",
+      "10"
+     ],
+     "hints": [
+      "Double 5.",
+      "5 and 5.",
+      "5."
+     ],
+     "explain": "5 + 5 = 10."
+    },
+    {
+     "type": "num",
+     "q": "1 + ? = 10",
+     "answer": "9",
+     "options": [
+      "9",
+      "8",
+      "10",
+      "1"
+     ],
+     "hints": [
+      "Count on from 1.",
+      "Nine more steps.",
+      "9."
+     ],
+     "explain": "1 + 9 = 10."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Using my fingers",
+     "Counting on",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found pairs of numbers that make 10.",
+   "teacher": "Shows recalling number bonds to 10 and finding missing addends by counting on.",
+   "done": "Pairs that make 10: 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp1-rhymes",
+   "grade": 1,
+   "title": "Rhyming words",
+   "topic": "Phonics: rhyme",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary English (0058), Stage 1: Reading (hearing and making rhymes)",
+   "intention": "Today I am finding words that rhyme.",
+   "prompt": "Do you know a song with rhyming words?",
+   "lesson": [
+    {
+     "h": "What is a rhyme?",
+     "say": "Words rhyme when they end with the same sound. Cat and hat rhyme. Dog and log rhyme.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🐱 🎩</p><p>c<b>at</b>, h<b>at</b></p>"
+    },
+    {
+     "h": "Listen for the end",
+     "say": "Say the words aloud and listen to the end. Sun, run, fun. They all end in un.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sun</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">run</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">fun</span></div>"
+    },
+    {
+     "h": "Make your own",
+     "say": "Change the first sound to make a new rhyme. From bed you can make red and fed.",
+     "html": "<p>b<b>ed</b> → r<b>ed</b> → f<b>ed</b></p>"
+    }
+   ],
+   "example": {
+    "q": "What rhymes with 'pig'?",
+    "steps": [
+     "Pig ends with 'ig'.",
+     "Change the first sound.",
+     "Big, dig and wig all rhyme with pig."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'cat'?",
+     "pics": [
+      "🎩",
+      "🐶",
+      "☀️"
+     ],
+     "options": [
+      "hat",
+      "dog",
+      "sun"
+     ],
+     "answer": 0,
+     "hints": [
+      "Listen to the end sound.",
+      "c-at.",
+      "h-at."
+     ],
+     "explain": "Cat and hat both end in 'at'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'sun'?",
+     "pics": [
+      "🏃",
+      "🌙",
+      "🐟"
+     ],
+     "options": [
+      "run",
+      "moon",
+      "fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "s-un.",
+      "Which ends in 'un'?",
+      "Run."
+     ],
+     "explain": "Sun and run both end in 'un'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'log'?",
+     "pics": [
+      "🐸",
+      "🐄",
+      "🚗"
+     ],
+     "options": [
+      "frog",
+      "cow",
+      "car"
+     ],
+     "answer": 0,
+     "hints": [
+      "l-og.",
+      "Which ends in 'og'?",
+      "Frog."
+     ],
+     "explain": "Log and frog both end in 'og'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which two words rhyme?",
+     "options": [
+      "bed and red",
+      "bed and bat",
+      "red and run",
+      "sun and sit"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the ends.",
+      "Same ending sound.",
+      "-ed."
+     ],
+     "explain": "Bed and red both end in 'ed'."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Saying the words aloud",
+     "Looking at the pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found and made rhyming words.",
+   "teacher": "Shows recognising and generating rhymes by identifying shared word endings.",
+   "done": "Rhyming words end with the same sound."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp1-living",
+   "grade": 1,
+   "title": "Living and not living",
+   "topic": "Biology: living things",
+   "caps": "Cambridge Primary Science (0097), Stage 1: Biology (sorting living and non-living things)",
+   "intention": "Today I am sorting things into living and not living.",
+   "prompt": "Is a tree alive? How do you know?",
+   "lesson": [
+    {
+     "h": "Living things",
+     "say": "Living things grow, need food and water, and can make new living things. Plants, animals and people are living.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🌳 🐕 👧</p>"
+    },
+    {
+     "h": "Not living",
+     "say": "Things that are not living do not grow, eat or breathe. A rock, a chair and a ball are not living.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🪨 🪑 ⚽</p>"
+    },
+    {
+     "h": "Was once alive",
+     "say": "Some things were alive once, like a wooden table that came from a tree, or a dry leaf.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍂 🪵</p>"
+    }
+   ],
+   "example": {
+    "q": "Is a dog living or not living?",
+    "steps": [
+     "A dog eats and drinks.",
+     "A dog grows and can have puppies.",
+     "A dog is living."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one is living?",
+     "pics": [
+      "🌻",
+      "🪨",
+      "🧸"
+     ],
+     "options": [
+      "A sunflower",
+      "A rock",
+      "A teddy"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one grows?",
+      "It needs water.",
+      "The sunflower."
+     ],
+     "explain": "A sunflower grows and needs water."
+    },
+    {
+     "type": "mcq",
+     "q": "Which one is NOT living?",
+     "pics": [
+      "🚗",
+      "🐦",
+      "🐟"
+     ],
+     "options": [
+      "A car",
+      "A bird",
+      "A fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one doesn't eat?",
+      "It doesn't grow.",
+      "The car."
+     ],
+     "explain": "A car doesn't grow, eat or breathe."
+    },
+    {
+     "type": "mcq",
+     "q": "What do all living things need?",
+     "pics": [
+      "💧",
+      "📺",
+      "🎮"
+     ],
+     "options": [
+      "Water",
+      "A TV",
+      "Games"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plants and animals both need it.",
+      "We drink it.",
+      "Water."
+     ],
+     "explain": "All living things need water."
+    },
+    {
+     "type": "sort",
+     "q": "Sort them.",
+     "items": [
+      "Tree",
+      "Ball",
+      "Cat",
+      "Chair"
+     ],
+     "bins": [
+      "Living",
+      "Not living"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which ones grow?",
+      "Tree and cat grow.",
+      "Ball and chair don't."
+     ],
+     "explain": "The tree and cat are living; the ball and chair are not."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking 'does it grow?'",
+     "The pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child sorted things into living and not living.",
+   "teacher": "Shows identifying characteristics of living things and classifying objects.",
+   "done": "Living things grow, need food and water, and make new living things."
+  },
+  {
    "curriculum": "CAPS-SID",
    "domain": "Communication and Expression",
    "category": "Communication",

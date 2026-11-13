@@ -22,7 +22,7 @@ describe("content", () => {
       const pack = await loadPack(packOf(g));
       expect(pack.units.map(u => u.id)).toEqual(CATALOGUE.filter(u => u.grade === g).map(u => u.id));
     }
-    expect(CATALOGUE).toHaveLength(280);
+    expect(CATALOGUE).toHaveLength(316);
   });
   it("has complete, answerable questions in every lesson", async () => {
     const bad: string[] = [];
@@ -48,9 +48,13 @@ describe("content", () => {
     expect(caps.units.some(u => u.curriculum)).toBe(false); // Cambridge lessons stay with Cambridge learners
     expect(ids(caps)).toEqual(expect.arrayContaining(["g10-exponents", "g10-ml-budget"]));
     expect(ids(lessonsIn(CATALOGUE, "maths", 10, { curriculum: "IEB", maths: "lit" }))).not.toContain("g10-exponents");
-    const early = lessonsIn(CATALOGUE, "maths", 9, { curriculum: "Cambridge" }); // no Cambridge Grade 9 lessons yet
-    expect(early.standIn).toBe(true);
-    expect(early.units.length).toBeGreaterThan(0);
+    // Cambridge now has its own Maths, English and Science from Stage 1 to IGCSE; CAPS stands in only for other areas.
+    for (let g = 1; g <= 11; g++) for (const a of ["maths", "language", "science"] as const) {
+      const r = lessonsIn(CATALOGUE, a, g, { curriculum: "Cambridge" });
+      expect(r.standIn, `Cambridge ${a} at Grade ${g}`).toBe(false);
+      expect(r.units.length, `Cambridge ${a} at Grade ${g}`).toBeGreaterThan(0);
+    }
+    expect(lessonsIn(CATALOGUE, "life", 5, { curriculum: "Cambridge" }).standIn).toBe(true);
   });
   it("gives IB and CAPS for SID learners their own lessons, and work-readiness lessons at every teen level", () => {
     expect(lessonsIn(CATALOGUE, "science", 9, { curriculum: "IB" }).units.map(u => u.id)).toEqual(["ib9-sci-fair-test", "ib9-sci-ecosystems"]);

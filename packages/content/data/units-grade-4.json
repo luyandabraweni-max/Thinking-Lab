@@ -1816,6 +1816,381 @@
    "parent": "Your child practised calm ways to sort out disagreements, like I statements and taking turns.",
    "teacher": "Scenario-based. Shows knowledge of conflict-resolution steps, assertive language and the difference between helpful and harmful responses.",
    "done": "Calm words solve more problems than angry ones."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp4-arrays",
+   "grade": 4,
+   "title": "Multiplication with arrays",
+   "topic": "Number: multiplication",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 4: Number (multiplication facts; arrays; commutativity)",
+   "intention": "Today I am using arrays to understand multiplication.",
+   "prompt": "How could you count the eggs in a tray quickly?",
+   "lesson": [
+    {
+     "h": "Arrays",
+     "say": "An array is objects in rows and columns. 3 rows of 4 is 3 times 4, which is 12.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍎🍎🍎🍎<br>🍎🍎🍎🍎<br>🍎🍎🍎🍎</p><p>3 × 4 = <b>12</b></p>"
+    },
+    {
+     "h": "Turn it around",
+     "say": "Turn the array on its side: 4 rows of 3. It is still 12. Multiplication works in any order.",
+     "html": "<p>3 × 4 = 4 × 3 = 12</p>"
+    },
+    {
+     "h": "Using facts you know",
+     "say": "If you know 5 times 6 is 30, then 6 times 6 is one more 6: 36.",
+     "html": "<p>5 × 6 = 30 → 6 × 6 = 30 + 6 = <b>36</b></p>"
+    }
+   ],
+   "example": {
+    "q": "An egg tray has 5 rows of 6 eggs. How many eggs?",
+    "steps": [
+     "5 rows of 6.",
+     "5 × 6.",
+     "30 eggs."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "4 rows of 5 chairs. How many chairs?",
+     "answer": "20",
+     "options": [
+      "20",
+      "9",
+      "45",
+      "25"
+     ],
+     "hints": [
+      "4 × 5.",
+      "Count in fives four times.",
+      "20."
+     ],
+     "explain": "4 × 5 = 20."
+    },
+    {
+     "type": "num",
+     "q": "What is 7 × 3?",
+     "answer": "21",
+     "options": [
+      "21",
+      "10",
+      "24",
+      "18"
+     ],
+     "hints": [
+      "Count in threes seven times.",
+      "3, 6, 9, 12, 15, 18, 21.",
+      "21."
+     ],
+     "explain": "7 × 3 = 21."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the same as 6 × 8?",
+     "options": [
+      "8 × 6",
+      "6 + 8",
+      "68",
+      "6 × 6"
+     ],
+     "answer": 0,
+     "hints": [
+      "Turn the array around.",
+      "Same answer.",
+      "8 × 6."
+     ],
+     "explain": "Multiplication works in any order."
+    },
+    {
+     "type": "num",
+     "q": "You know 10 × 7 = 70. What is 9 × 7?",
+     "answer": "63",
+     "options": [
+      "63",
+      "77",
+      "70",
+      "16"
+     ],
+     "hints": [
+      "9 × 7 is one 7 less.",
+      "70 − 7.",
+      "63."
+     ],
+     "explain": "70 − 7 = 63."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Drawing arrays",
+     "Turning them around",
+     "Using facts I know",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used arrays to multiply and to work out new facts.",
+   "teacher": "Shows representing multiplication as arrays, using commutativity and deriving facts from known facts.",
+   "done": "Rows × columns. Turn it around: same answer."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp4-instructions",
+   "grade": 4,
+   "title": "Writing instructions",
+   "topic": "Writing: non-fiction",
+   "category": "Planning and Organisation",
+   "caps": "Cambridge Primary English (0058), Stage 4: Writing (instructional texts: imperative verbs, numbered steps and sequencing words)",
+   "intention": "Today I am writing clear instructions.",
+   "prompt": "Could you explain how to make a sandwich?",
+   "lesson": [
+    {
+     "h": "What instructions need",
+     "say": "Instructions have a title, a list of what you need, and numbered steps in order.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Title</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">You will need</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Numbered steps</span></div>"
+    },
+    {
+     "h": "Bossy verbs",
+     "say": "Each step starts with a command verb, sometimes called a bossy verb: cut, mix, pour, spread.",
+     "html": "<p><b>Spread</b> the butter. <b>Add</b> the cheese.</p>"
+    },
+    {
+     "h": "Order words",
+     "say": "Order words help the reader follow along: first, next, then, finally.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">First</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Next</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Then</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Finally</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Write the first step for making tea.",
+    "steps": [
+     "Think about what happens first.",
+     "Start with a command verb.",
+     "'1. Boil the water.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a command verb?",
+     "options": [
+      "Mix",
+      "Happy",
+      "Kitchen",
+      "Slowly"
+     ],
+     "answer": 0,
+     "hints": [
+      "It tells you to do something.",
+      "An action.",
+      "Mix."
+     ],
+     "explain": "'Mix' tells the reader what to do."
+    },
+    {
+     "type": "mcq",
+     "q": "Which instruction is clearest?",
+     "options": [
+      "Pour the milk into the glass.",
+      "The milk is nice.",
+      "Milk.",
+      "I like milk in glasses."
+     ],
+     "answer": 0,
+     "hints": [
+      "It tells you exactly what to do.",
+      "Starts with a command verb.",
+      "The first."
+     ],
+     "explain": "It is a clear command."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps for a sandwich in order.",
+     "items": [
+      "Take two slices of bread",
+      "Spread the butter",
+      "Add the filling",
+      "Put the slices together"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start with the bread.",
+      "Butter before filling.",
+      "Close it last."
+     ],
+     "explain": "Bread, butter, filling, close."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are instruction steps numbered?",
+     "options": [
+      "So the reader follows the right order",
+      "To make them longer",
+      "Because numbers are pretty",
+      "So you can skip steps"
+     ],
+     "answer": 0,
+     "hints": [
+      "Order matters.",
+      "Step 1, then step 2.",
+      "The right order."
+     ],
+     "explain": "Numbers show the order to follow."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Starting with a command verb",
+     "Putting steps in order",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child wrote clear, step-by-step instructions.",
+   "teacher": "Shows structuring instructional texts with imperative verbs, numbered steps and sequencing connectives.",
+   "done": "Title, what you need, then numbered steps starting with command verbs."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp4-states",
+   "grade": 4,
+   "title": "Solids, liquids and gases",
+   "topic": "Chemistry: states of matter",
+   "caps": "Cambridge Primary Science (0097), Stage 4: Chemistry (solids, liquids and gases; melting and freezing)",
+   "intention": "Today I am sorting things into solids, liquids and gases.",
+   "prompt": "What happens to an ice block on a hot day?",
+   "lesson": [
+    {
+     "h": "Solids",
+     "say": "Solids keep their shape. A stone, a book and ice are solids.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🪨 📕 🧊</p>"
+    },
+    {
+     "h": "Liquids and gases",
+     "say": "Liquids flow and take the shape of their container, like water and juice. Gases spread out to fill any space, like the air in a balloon.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Liquid: flows</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gas: spreads out</span></div>"
+    },
+    {
+     "h": "Changing state",
+     "say": "Heating can melt a solid into a liquid. Cooling can freeze a liquid into a solid. Ice melts into water; water freezes into ice.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Ice</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">melts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Water</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">freezes</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Ice</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Is honey a solid, a liquid or a gas?",
+    "steps": [
+     "Honey flows, slowly.",
+     "It takes the shape of the jar.",
+     "Honey is a liquid."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a solid?",
+     "pics": [
+      "🪨",
+      "💧",
+      "💨"
+     ],
+     "options": [
+      "A stone",
+      "Water",
+      "Air"
+     ],
+     "answer": 0,
+     "hints": [
+      "It keeps its shape.",
+      "You can hold it.",
+      "A stone."
+     ],
+     "explain": "A stone keeps its shape."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a gas?",
+     "pics": [
+      "🎈",
+      "🧃",
+      "🧊"
+     ],
+     "options": [
+      "Air in a balloon",
+      "Juice",
+      "Ice"
+     ],
+     "answer": 0,
+     "hints": [
+      "It spreads out.",
+      "You can't see it.",
+      "Air."
+     ],
+     "explain": "Air is a gas."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens to ice when it is heated?",
+     "options": [
+      "It melts",
+      "It freezes",
+      "It becomes a stone",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of a hot day.",
+      "It turns into water.",
+      "Melts."
+     ],
+     "explain": "Heat melts ice into water."
+    },
+    {
+     "type": "sort",
+     "q": "Sort them.",
+     "items": [
+      "Milk",
+      "Brick",
+      "Juice",
+      "Spoon"
+     ],
+     "bins": [
+      "Solid",
+      "Liquid"
+     ],
+     "answer": [
+      1,
+      0,
+      1,
+      0
+     ],
+     "hints": [
+      "Does it flow?",
+      "Milk and juice flow.",
+      "Brick and spoon keep their shape."
+     ],
+     "explain": "Milk and juice are liquids; the brick and spoon are solids."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking 'does it flow?'",
+     "Thinking about ice",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child sorted materials into solids, liquids and gases.",
+   "teacher": "Shows classifying materials by state and describing melting and freezing.",
+   "done": "Solids keep their shape, liquids flow, gases spread out."
   }
  ],
  "words": {

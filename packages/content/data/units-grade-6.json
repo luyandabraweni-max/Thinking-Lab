@@ -1807,6 +1807,365 @@
    "parent": "Your child learnt how mediation helps people solve conflicts fairly.",
    "teacher": "Scenario-based. Shows understanding of the mediator's neutral role, the mediation process, peacekeeping skills and when to escalate to an adult.",
    "done": "Fair solutions help everyone feel respected."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp6-ratio",
+   "grade": 6,
+   "title": "Ratio and proportion",
+   "topic": "Number: ratio",
+   "category": "Problem Solving",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 6: Number (simple ratio and direct proportion)",
+   "intention": "Today I am using ratios to share and scale.",
+   "prompt": "How would you mix juice so it tastes the same in a bigger jug?",
+   "lesson": [
+    {
+     "h": "What a ratio is",
+     "say": "A ratio compares amounts. If a juice uses 1 cup of concentrate to 4 cups of water, the ratio is 1 to 4.",
+     "html": "<p>concentrate : water = <b>1 : 4</b></p>"
+    },
+    {
+     "h": "Scaling up",
+     "say": "To make more, multiply both parts by the same number. 1 to 4 becomes 3 to 12 for three times as much.",
+     "html": "<p>1 : 4 → × 3 → <b>3 : 12</b></p>"
+    },
+    {
+     "h": "Sharing in a ratio",
+     "say": "To share 20 sweets in the ratio 2 to 3, add the parts: 5. Each part is 20 divided by 5, which is 4. So 8 and 12.",
+     "html": "<p>2 + 3 = 5 parts → 20 ÷ 5 = 4 → <b>8 and 12</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A recipe uses 2 eggs for 6 pancakes. How many eggs for 18 pancakes?",
+    "steps": [
+     "18 is 3 times 6.",
+     "Multiply the eggs by 3.",
+     "2 × 3 = 6 eggs."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Juice is 1 cup of concentrate to 4 cups of water. How many cups of water for 2 cups of concentrate?",
+     "answer": "8",
+     "options": [
+      "8",
+      "6",
+      "5",
+      "4"
+     ],
+     "hints": [
+      "Double the ratio.",
+      "2 : 8.",
+      "8."
+     ],
+     "explain": "1 : 4 doubled is 2 : 8."
+    },
+    {
+     "type": "num",
+     "q": "Share 30 marbles in the ratio 1 : 2. How many are in the bigger share?",
+     "answer": "20",
+     "options": [
+      "20",
+      "10",
+      "15",
+      "60"
+     ],
+     "hints": [
+      "1 + 2 = 3 parts.",
+      "30 ÷ 3 = 10.",
+      "2 × 10."
+     ],
+     "explain": "Shares are 10 and 20."
+    },
+    {
+     "type": "num",
+     "q": "3 pens cost $6. How much do 5 pens cost, in dollars?",
+     "answer": "10",
+     "options": [
+      "10",
+      "11",
+      "15",
+      "8"
+     ],
+     "hints": [
+      "Find one pen first.",
+      "$6 ÷ 3 = $2.",
+      "5 × $2."
+     ],
+     "explain": "One pen is $2, so 5 cost $10."
+    },
+    {
+     "type": "mcq",
+     "q": "Which ratio is the same as 2 : 3?",
+     "options": [
+      "4 : 6",
+      "3 : 2",
+      "2 : 5",
+      "4 : 5"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply both parts by the same number.",
+      "× 2.",
+      "4 : 6."
+     ],
+     "explain": "2 : 3 × 2 = 4 : 6."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Adding the parts",
+     "Finding one part first",
+     "Scaling both sides",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used ratios to share amounts and scale recipes.",
+   "teacher": "Shows using ratio notation, scaling ratios, sharing in a given ratio and solving direct proportion problems.",
+   "done": "Scale both parts equally. To share, add the parts and find one part first."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp6-formal",
+   "grade": 6,
+   "title": "Formal and informal language",
+   "topic": "Writing: register",
+   "category": "Communication",
+   "caps": "Cambridge Primary English (0058), Stage 6: Writing (choosing formal or informal language for audience and purpose)",
+   "intention": "Today I am choosing formal or informal language.",
+   "prompt": "Would you talk to your principal the way you talk to your friends?",
+   "lesson": [
+    {
+     "h": "Informal language",
+     "say": "Informal language is relaxed, for friends and family. It can use short forms like can't and everyday words.",
+     "html": "<p>'Hey! Can't wait to see you on Saturday!'</p>"
+    },
+    {
+     "h": "Formal language",
+     "say": "Formal language is polite and careful, for people we don't know well or for official purposes. It avoids slang and uses full forms.",
+     "html": "<p>'Dear Mrs Mokoena, I am writing to ask whether…'</p>"
+    },
+    {
+     "h": "Choosing",
+     "say": "Ask: who is reading, and why? A letter to a newspaper needs formal language; a text to your cousin can be informal.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Who is reading?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Why?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Formal or informal?</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Make this formal: 'Hey, can we get more books for the library?'",
+    "steps": [
+     "Use a polite greeting.",
+     "Avoid 'hey' and short forms.",
+     "'Dear Principal, I would like to ask whether the library could have more books.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is formal?",
+     "options": [
+      "Thank you for your letter.",
+      "Thanks, mate!",
+      "Cheers for that!",
+      "Cool, got it."
+     ],
+     "answer": 0,
+     "hints": [
+      "Polite and full.",
+      "No slang.",
+      "The first."
+     ],
+     "explain": "'Thank you for your letter' is formal."
+    },
+    {
+     "type": "mcq",
+     "q": "Which situation needs formal language?",
+     "options": [
+      "A letter to the mayor",
+      "A message to your brother",
+      "A chat with friends",
+      "A birthday card to your best friend"
+     ],
+     "answer": 0,
+     "hints": [
+      "Someone you don't know well.",
+      "Official.",
+      "The mayor."
+     ],
+     "explain": "Writing to the mayor needs formal language."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is informal?",
+     "options": [
+      "awesome",
+      "sincerely",
+      "request",
+      "therefore"
+     ],
+     "answer": 0,
+     "hints": [
+      "Everyday or slang?",
+      "Friends say it.",
+      "Awesome."
+     ],
+     "explain": "'Awesome' is informal."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the formal version of 'can't'?",
+     "options": [
+      "cannot",
+      "cant",
+      "can'tt",
+      "can not't"
+     ],
+     "answer": 0,
+     "hints": [
+      "Write the full form.",
+      "No apostrophe.",
+      "Cannot."
+     ],
+     "explain": "'Cannot' is the full, formal form."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Thinking about the reader",
+     "Spotting slang and short forms",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised choosing formal or informal language.",
+   "teacher": "Shows adapting register to audience and purpose, using formal vocabulary and full forms where appropriate.",
+   "done": "Think about who is reading: formal for official, informal for friends."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp6-circuits",
+   "grade": 6,
+   "title": "Circuits, conductors and insulators",
+   "topic": "Physics: electricity",
+   "caps": "Cambridge Primary Science (0097), Stage 6: Physics (simple circuits; conductors and insulators; switches)",
+   "intention": "Today I am building circuits and testing materials.",
+   "prompt": "Why are electrical wires covered in plastic?",
+   "lesson": [
+    {
+     "h": "A complete circuit",
+     "say": "A bulb lights when there is a complete loop from the cell, through the wires and bulb, and back to the cell. A gap stops the current.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bulb</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">back to cell</span></div>"
+    },
+    {
+     "h": "Switches",
+     "say": "A switch makes or breaks the circuit. When it is open, there is a gap and the bulb goes off.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Switch closed: bulb on</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Switch open: bulb off</span></div>"
+    },
+    {
+     "h": "Conductors and insulators",
+     "say": "Conductors let electricity flow, like metals. Insulators don't, like plastic, rubber and wood. Wires are metal inside and plastic outside, to keep us safe.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Conductors: copper, steel</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Insulators: plastic, rubber, wood</span></div>"
+    }
+   ],
+   "example": {
+    "q": "A bulb doesn't light. One wire isn't touching the cell. Why?",
+    "steps": [
+     "The circuit has a gap.",
+     "Electricity can't flow around a broken loop.",
+     "Connect the wire to complete the circuit."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does a bulb need to light up?",
+     "options": [
+      "A complete circuit",
+      "A gap in the circuit",
+      "Only one wire",
+      "Water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Electricity flows in a loop.",
+      "No gaps.",
+      "Complete."
+     ],
+     "explain": "The circuit must be a complete loop."
+    },
+    {
+     "type": "mcq",
+     "q": "Which material is a conductor?",
+     "options": [
+      "Copper",
+      "Plastic",
+      "Rubber",
+      "Wood"
+     ],
+     "answer": 0,
+     "hints": [
+      "Metals conduct.",
+      "Wires are made of it.",
+      "Copper."
+     ],
+     "explain": "Copper is a metal conductor."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are wires covered in plastic?",
+     "options": [
+      "Plastic is an insulator, so it keeps us safe",
+      "Plastic makes the bulb brighter",
+      "Plastic is a conductor",
+      "For decoration only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plastic doesn't let electricity through.",
+      "It protects us.",
+      "Insulator."
+     ],
+     "explain": "The plastic insulates, so we don't get a shock."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens when you open a switch?",
+     "options": [
+      "The bulb goes off",
+      "The bulb gets brighter",
+      "Nothing",
+      "The cell charges"
+     ],
+     "answer": 0,
+     "hints": [
+      "Open means a gap.",
+      "The circuit breaks.",
+      "Off."
+     ],
+     "explain": "An open switch breaks the circuit."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Tracing the loop",
+     "Testing materials",
+     "How switches work",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child built circuits in theory and sorted conductors from insulators.",
+   "teacher": "Shows identifying complete circuits, explaining switches and classifying conductors and insulators.",
+   "done": "A complete loop lights the bulb. Metals conduct; plastic insulates."
   }
  ],
  "words": {

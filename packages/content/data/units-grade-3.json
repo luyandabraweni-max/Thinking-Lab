@@ -1660,6 +1660,376 @@
    "done": "Know the warning signs and play in safe places."
   },
   {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp3-time",
+   "grade": 3,
+   "title": "Telling the time",
+   "topic": "Measure: time",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 3: Geometry and measure (reading time to the quarter hour and five minutes)",
+   "intention": "Today I am reading the time on a clock.",
+   "prompt": "What time do you go to school?",
+   "lesson": [
+    {
+     "h": "The two hands",
+     "say": "A clock has a short hand for the hours and a long hand for the minutes. When the long hand points to 12, it is o'clock.",
+     "html": "<p>Long hand on 12, short hand on 3: <b>3 o'clock</b></p>"
+    },
+    {
+     "h": "Half past and quarters",
+     "say": "When the long hand points to 6, it is half past. On the 3, it is quarter past. On the 9, it is quarter to the next hour.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">On 3: quarter past</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">On 6: half past</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">On 9: quarter to</span></div>"
+    },
+    {
+     "h": "Five-minute steps",
+     "say": "Each number on the clock is 5 minutes for the long hand. Pointing to 4 means 20 minutes past.",
+     "html": "<p>Long hand on 4: 4 × 5 = <b>20 minutes past</b></p>"
+    }
+   ],
+   "example": {
+    "q": "The short hand is just past 7 and the long hand is on 6. What time is it?",
+    "steps": [
+     "The long hand on 6 means half past.",
+     "The short hand has passed 7.",
+     "It is half past 7."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "The long hand is on 12 and the short hand is on 5. What time is it?",
+     "options": [
+      "5 o'clock",
+      "12 o'clock",
+      "Half past 5",
+      "Quarter past 12"
+     ],
+     "answer": 0,
+     "hints": [
+      "Long hand on 12 means o'clock.",
+      "The short hand shows the hour.",
+      "5 o'clock."
+     ],
+     "explain": "It is 5 o'clock."
+    },
+    {
+     "type": "mcq",
+     "q": "Where is the long hand at half past?",
+     "options": [
+      "On 6",
+      "On 12",
+      "On 3",
+      "On 9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Half way round.",
+      "Opposite the 12.",
+      "On 6."
+     ],
+     "explain": "At half past, the long hand points to 6."
+    },
+    {
+     "type": "mcq",
+     "q": "The long hand is on 3. What does that mean?",
+     "options": [
+      "Quarter past",
+      "Quarter to",
+      "Half past",
+      "O'clock"
+     ],
+     "answer": 0,
+     "hints": [
+      "A quarter of the way round.",
+      "Past the hour.",
+      "Quarter past."
+     ],
+     "explain": "On 3, it is quarter past."
+    },
+    {
+     "type": "num",
+     "q": "The long hand points to 4. How many minutes past the hour is it?",
+     "answer": "20",
+     "options": [
+      "20",
+      "4",
+      "40",
+      "15"
+     ],
+     "hints": [
+      "Each number is 5 minutes.",
+      "4 × 5.",
+      "20."
+     ],
+     "explain": "4 × 5 = 20 minutes past."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Knowing which hand is which",
+     "Counting in fives",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read the time on a clock to the quarter hour and five minutes.",
+   "teacher": "Shows reading analogue time to o'clock, half past, quarter past and to, and in five-minute intervals.",
+   "done": "Long hand for minutes (count in fives); short hand for hours."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp3-word-classes",
+   "grade": 3,
+   "title": "Nouns, verbs and adjectives",
+   "topic": "Grammar: word classes",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary English (0058), Stage 3: Writing (identifying and using nouns, verbs and adjectives)",
+   "intention": "Today I am finding nouns, verbs and adjectives.",
+   "prompt": "Can you describe your favourite animal in three words?",
+   "lesson": [
+    {
+     "h": "Nouns",
+     "say": "A noun is a naming word for a person, place or thing. Teacher, school and ball are nouns.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">teacher</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">school</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">ball</span></div>"
+    },
+    {
+     "h": "Verbs",
+     "say": "A verb is a doing word. Run, eat and sing are verbs.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">run</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">eat</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sing</span></div>"
+    },
+    {
+     "h": "Adjectives",
+     "say": "An adjective describes a noun. In the big red bus, big and red are adjectives.",
+     "html": "<p>the <b>big</b>, <b>red</b> bus</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the noun, verb and adjective in 'The happy dog barked.'",
+    "steps": [
+     "Noun (a thing): dog.",
+     "Verb (doing word): barked.",
+     "Adjective (describes the dog): happy."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word is a noun?",
+     "options": [
+      "table",
+      "jump",
+      "quickly",
+      "blue"
+     ],
+     "answer": 0,
+     "hints": [
+      "A naming word.",
+      "A thing.",
+      "Table."
+     ],
+     "explain": "Table names a thing."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is a verb?",
+     "options": [
+      "swim",
+      "fish",
+      "wet",
+      "pond"
+     ],
+     "answer": 0,
+     "hints": [
+      "A doing word.",
+      "Something you do.",
+      "Swim."
+     ],
+     "explain": "Swim is something you do."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is an adjective in 'a tall tree'?",
+     "options": [
+      "tall",
+      "tree",
+      "a",
+      "none"
+     ],
+     "answer": 0,
+     "hints": [
+      "It describes the tree.",
+      "What kind of tree?",
+      "Tall."
+     ],
+     "explain": "Tall describes the tree."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the words.",
+     "items": [
+      "cat",
+      "run",
+      "school",
+      "eat"
+     ],
+     "bins": [
+      "Noun",
+      "Verb"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Naming or doing?",
+      "Cat and school are things.",
+      "Run and eat are actions."
+     ],
+     "explain": "Cat and school are nouns; run and eat are verbs."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking 'is it a thing or an action?'",
+     "Finding describing words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found nouns, verbs and adjectives in sentences.",
+   "teacher": "Shows identifying and classifying nouns, verbs and adjectives in context.",
+   "done": "Nouns name, verbs do, adjectives describe."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp3-forces",
+   "grade": 3,
+   "title": "Pushes and pulls",
+   "topic": "Physics: forces",
+   "caps": "Cambridge Primary Science (0097), Stage 3: Physics (forces as pushes and pulls; how forces change movement)",
+   "intention": "Today I am finding out how pushes and pulls make things move.",
+   "prompt": "How do you open a door?",
+   "lesson": [
+    {
+     "h": "Forces",
+     "say": "A force is a push or a pull. You push a trolley. You pull a door handle.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Push: a trolley</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pull: a door</span></div>"
+    },
+    {
+     "h": "What forces do",
+     "say": "Forces can make things start moving, stop, speed up, slow down or change direction. A kick makes a ball move.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Start</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Stop</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Speed up</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slow down</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Change direction</span></div>"
+    },
+    {
+     "h": "Bigger force",
+     "say": "A bigger force makes a bigger change. A hard kick sends the ball further than a gentle kick.",
+     "html": "<p>Bigger push → <b>bigger change</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Is opening a drawer a push or a pull?",
+    "steps": [
+     "You hold the handle.",
+     "You move it towards you.",
+     "It is a pull."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Kicking a ball is a…",
+     "pics": [
+      "👉",
+      "👈"
+     ],
+     "options": [
+      "Push",
+      "Pull"
+     ],
+     "answer": 0,
+     "hints": [
+      "Your foot moves the ball away.",
+      "Away from you.",
+      "Push."
+     ],
+     "explain": "Kicking pushes the ball away."
+    },
+    {
+     "type": "mcq",
+     "q": "Opening a drawer is a…",
+     "pics": [
+      "👈",
+      "👉"
+     ],
+     "options": [
+      "Pull",
+      "Push"
+     ],
+     "answer": 0,
+     "hints": [
+      "You move it towards you.",
+      "Towards you.",
+      "Pull."
+     ],
+     "explain": "You pull a drawer towards you."
+    },
+    {
+     "type": "mcq",
+     "q": "What can a force do?",
+     "options": [
+      "Make something stop",
+      "Make something invisible",
+      "Change its colour",
+      "Make it sing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Forces change movement.",
+      "Start, stop…",
+      "Stop."
+     ],
+     "explain": "Forces can start, stop or change movement."
+    },
+    {
+     "type": "mcq",
+     "q": "Which kick sends the ball furthest?",
+     "options": [
+      "A hard kick",
+      "A gentle kick",
+      "No kick",
+      "They are all the same"
+     ],
+     "answer": 0,
+     "hints": [
+      "More force…",
+      "…bigger change.",
+      "Hard kick."
+     ],
+     "explain": "A bigger force makes a bigger change."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Acting out pushes and pulls",
+     "Thinking about kicks",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how pushes and pulls make things move.",
+   "teacher": "Shows identifying forces as pushes and pulls and describing their effects on movement.",
+   "done": "A force is a push or a pull. Bigger forces make bigger changes."
+  },
+  {
    "curriculum": "CAPS-SID",
    "domain": "Communication and Expression",
    "category": "Communication",
