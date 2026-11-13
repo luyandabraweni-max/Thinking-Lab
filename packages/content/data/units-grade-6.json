@@ -2166,6 +2166,364 @@
    "parent": "Your child built circuits in theory and sorted conductors from insulators.",
    "teacher": "Shows identifying complete circuits, explaining switches and classifying conductors and insulators.",
    "done": "A complete loop lights the bulb. Metals conduct; plastic insulates."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp6-averages",
+   "grade": 6,
+   "title": "Averages",
+   "topic": "Data handling",
+   "category": "Inquiry and Exploration",
+   "caps": "IB PYP Mathematics: data handling (mean, median, mode and range)",
+   "intention": "Today I am finding averages to describe data.",
+   "prompt": "How would you describe the 'typical' learner in your class?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Averages help us describe and compare groups of data. Key concept: Perspective. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Averages help us describe and compare groups of data.</p><p>Key concept: <b>Perspective</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Three averages",
+     "say": "The mean adds all the values and divides by how many. The median is the middle value when they are in order. The mode is the most common value.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mean: add ÷ count</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Median: middle</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mode: most common</span></div>"
+    },
+    {
+     "h": "Range",
+     "say": "The range shows how spread out the data is: the highest minus the lowest.",
+     "html": "<p>Range = highest − lowest</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the mean of 4, 6, 8.",
+    "steps": [
+     "Add: 4 + 6 + 8 = 18.",
+     "There are 3 values.",
+     "18 ÷ 3 = 6."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the mean of 2, 4, 6, 8.",
+     "answer": "5",
+     "options": [
+      "5",
+      "20",
+      "4",
+      "6"
+     ],
+     "hints": [
+      "Add: 20.",
+      "4 values.",
+      "20 ÷ 4."
+     ],
+     "explain": "20 ÷ 4 = 5."
+    },
+    {
+     "type": "num",
+     "q": "Find the median of 3, 9, 5.",
+     "answer": "5",
+     "options": [
+      "5",
+      "9",
+      "3",
+      "17"
+     ],
+     "hints": [
+      "Put them in order: 3, 5, 9.",
+      "The middle value.",
+      "5."
+     ],
+     "explain": "In order: 3, 5, 9. The median is 5."
+    },
+    {
+     "type": "num",
+     "q": "Find the mode of 2, 3, 3, 7, 3, 5.",
+     "answer": "3",
+     "options": [
+      "3",
+      "2",
+      "7",
+      "5"
+     ],
+     "hints": [
+      "Most common.",
+      "3 appears three times.",
+      "3."
+     ],
+     "explain": "3 appears most often."
+    },
+    {
+     "type": "num",
+     "q": "Find the range of 12, 4, 9, 15.",
+     "answer": "11",
+     "options": [
+      "11",
+      "15",
+      "4",
+      "40"
+     ],
+     "hints": [
+      "Highest − lowest.",
+      "15 − 4.",
+      "11."
+     ],
+     "explain": "15 − 4 = 11."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Putting data in order",
+     "Knowing which average is which",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found the mean, median, mode and range of data.",
+   "teacher": "Shows calculating and interpreting mean, median, mode and range (thinker).",
+   "done": "Mean, median and mode describe the centre; range describes the spread."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp6-perspectives",
+   "grade": 6,
+   "title": "One event, two perspectives",
+   "topic": "Reading and writing: perspective",
+   "category": "Flexible Thinking",
+   "caps": "IB PYP Language: reading and writing (perspective and point of view; writing as a character)",
+   "intention": "Today I am retelling an event from a different perspective.",
+   "prompt": "Have you ever disagreed with a friend about what happened?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: The same event can be seen in different ways, depending on who tells it. Key concept: Perspective. Today we are open-minded.",
+     "html": "<p><b>Central idea:</b> The same event can be seen in different ways, depending on who tells it.</p><p>Key concept: <b>Perspective</b> · Learner profile: <b>Open-minded</b></p>"
+    },
+    {
+     "h": "Two tellings",
+     "say": "Zola says: I kicked the ball and accidentally broke the window. I felt terrible. Mr Pillay says: A ball came crashing through my window while I was reading. I got such a fright!",
+     "html": "<p><b>Zola:</b> I felt terrible.</p><p><b>Mr Pillay:</b> I got such a fright!</p>"
+    },
+    {
+     "h": "Why they differ",
+     "say": "Each person knows different things and feels differently. Zola knows it was an accident. Mr Pillay only sees a broken window.",
+     "html": "<p>Different knowledge → different <b>perspective</b></p>"
+    }
+   ],
+   "example": {
+    "q": "How might the window repairer tell the story?",
+    "steps": [
+     "Think about what they see and care about.",
+     "A job to do; glass to measure.",
+     "'I was called to fix a window broken by a soccer ball. It took an hour.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How does Zola feel?",
+     "options": [
+      "Sorry",
+      "Proud",
+      "Bored",
+      "Excited"
+     ],
+     "answer": 0,
+     "hints": [
+      "'I felt terrible.'",
+      "It was an accident.",
+      "Sorry."
+     ],
+     "explain": "Zola feels terrible and sorry."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does Mr Pillay get a fright?",
+     "options": [
+      "He didn't know a ball was coming",
+      "He dislikes soccer",
+      "He saw Zola kick it",
+      "He was expecting it"
+     ],
+     "answer": 0,
+     "hints": [
+      "He was reading.",
+      "It was sudden.",
+      "A surprise."
+     ],
+     "explain": "He didn't expect it, so it frightened him."
+    },
+    {
+     "type": "mcq",
+     "q": "What does Zola know that Mr Pillay doesn't?",
+     "options": [
+      "It was an accident",
+      "The window is broken",
+      "It is a ball",
+      "It is Saturday"
+     ],
+     "answer": 0,
+     "hints": [
+      "Mr Pillay only sees the result.",
+      "Zola knows the cause.",
+      "An accident."
+     ],
+     "explain": "Zola knows it wasn't on purpose."
+    },
+    {
+     "type": "mcq",
+     "q": "Which shows being open-minded?",
+     "options": [
+      "Listening to both sides before deciding",
+      "Only believing your friend",
+      "Refusing to listen",
+      "Deciding straight away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Open-minded means considering others.",
+      "Both sides.",
+      "Listen first."
+     ],
+     "explain": "Hearing both perspectives is open-minded."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two tellings",
+     "Thinking about what each person knows",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child retold an event from different people's points of view.",
+   "teacher": "Shows recognising how perspective shapes a recount and writing from another character's point of view (open-minded).",
+   "done": "Who tells the story changes what we know and feel."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Science",
+   "id": "pyp6-water",
+   "grade": 6,
+   "title": "Water: who gets it?",
+   "topic": "Sharing the planet",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "IB PYP Science and social studies, transdisciplinary theme 'Sharing the planet': access to clean water; the water cycle; conservation and fairness",
+   "intention": "Today I am inquiring into how we share water fairly.",
+   "prompt": "How much water do you think your family uses each day?",
+   "lesson": [
+    {
+     "h": "Theme: Sharing the planet",
+     "say": "Our theme is Sharing the planet. Central idea: Water is a shared resource, and how we use it affects other people and living things. Key concept: Responsibility. Today we are caring.",
+     "html": "<p><b>Central idea:</b> Water is a shared resource, and how we use it affects other people and living things.</p><p>Key concept: <b>Responsibility</b> · Learner profile: <b>Caring</b></p>"
+    },
+    {
+     "h": "The water cycle",
+     "say": "The sun heats water, which evaporates. It cools into clouds, falls as rain, and flows back to rivers and the sea. The same water goes round and round.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Evaporation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Condensation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rain</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rivers and sea</span></div>"
+    },
+    {
+     "h": "Not everyone has enough",
+     "say": "Some communities have taps at home; others walk far to fetch water. During droughts, everyone must save water so there is enough to share.",
+     "html": "<p>Save water: short showers, fix leaks, collect rainwater.</p>"
+    }
+   ],
+   "example": {
+    "q": "A leaking tap wastes 20 litres a day. How much is that in a week?",
+    "steps": [
+     "7 days in a week.",
+     "20 × 7.",
+     "140 litres wasted."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What happens during evaporation?",
+     "options": [
+      "Water is heated and turns into vapour",
+      "Rain falls",
+      "Water freezes",
+      "Clouds disappear"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sun heats water.",
+      "It rises.",
+      "Vapour."
+     ],
+     "explain": "Heated water evaporates into vapour."
+    },
+    {
+     "type": "num",
+     "q": "A leaking tap wastes 15 litres a day. How much in 4 days, in litres?",
+     "answer": "60",
+     "options": [
+      "60",
+      "19",
+      "11",
+      "45"
+     ],
+     "hints": [
+      "15 × 4.",
+      "Count in fifteens.",
+      "60."
+     ],
+     "explain": "15 × 4 = 60 litres."
+    },
+    {
+     "type": "mcq",
+     "q": "Which action saves water?",
+     "options": [
+      "Fixing a leaking tap",
+      "Leaving the tap running",
+      "Washing the car every day",
+      "Long showers"
+     ],
+     "answer": 0,
+     "hints": [
+      "Stop the waste.",
+      "Leaks waste water.",
+      "Fix it."
+     ],
+     "explain": "Fixing leaks stops water being wasted."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should we save water even if we have plenty at home?",
+     "options": [
+      "Water is shared, so our use affects others",
+      "Water is free",
+      "Saving is boring",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Rivers and dams are shared.",
+      "Other people need it.",
+      "Shared."
+     ],
+     "explain": "Water comes from shared sources, so our choices affect others."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following the water cycle",
+     "Calculating water waste",
+     "Thinking about others",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child inquired into how water is shared and how to save it.",
+   "teacher": "Sharing the planet: shows describing the water cycle, calculating waste and reasoning about fair access (caring).",
+   "done": "Water is shared. Our choices affect other people and living things."
   }
  ],
  "words": {

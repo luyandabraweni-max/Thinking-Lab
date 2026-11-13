@@ -11,13 +11,14 @@ export const packOf = (g: number) => (g === -1 ? "early" : g === 13 ? "adult" : 
 export const curriculumName = (g: number) => (g === -1 ? "NCF aligned" : g === 13 ? "GETCA and life and work skills" : "CAPS aligned");
 
 // Learning areas group subject names that change between phases, so a learner can work at a different level in each.
-export type Area = "maths" | "language" | "life" | "science" | "creative";
+export type Area = "maths" | "language" | "life" | "science" | "creative" | "inquiry";
 export const AREAS: Record<Area, [string, string[]]> = {
-  maths: ["Maths", ["Mathematics", "Mathematical Literacy", "Advanced Programme Mathematics", "Exploring Mathematics"]],
-  language: ["Language", ["English Home Language", "English", "Language and Literature", "Communication"]],
-  life: ["Life skills", ["Life Skills", "Life Orientation", "Life and work skills", "Identity and Belonging", "Well-being"]],
-  science: ["Science and technology", ["Natural Sciences and Technology", "Natural Sciences", "Life Sciences", "Combined Science", "Sciences", "Science", "Knowledge and Understanding of the World", "Information and Communication Technology"]],
-  creative: ["Creativity", ["Creativity"]]
+  maths: ["Maths", ["Mathematics", "Mathematical Literacy", "Advanced Programme Mathematics", "Mathematics: Analysis and Approaches", "Mathematics: Applications and Interpretation", "Exploring Mathematics"]],
+  language: ["Language", ["English Home Language", "English", "Language and Literature", "Language", "Language A: Language and Literature", "Communication"]],
+  life: ["Life skills", ["Life Skills", "Life Orientation", "Life and work skills", "Identity and Belonging", "Well-being", "Personal, Social and Physical Education", "Social Studies"]],
+  science: ["Science and technology", ["Natural Sciences and Technology", "Natural Sciences", "Life Sciences", "Combined Science", "Sciences", "Science", "Biology", "Chemistry", "Physics", "Knowledge and Understanding of the World", "Information and Communication Technology"]],
+  creative: ["Creativity", ["Creativity", "Arts"]],
+  inquiry: ["Thinking and inquiry", ["Theory of Knowledge", "Extended Essay"]]
 };
 export const areaOf = (subject: string): Area => (Object.keys(AREAS) as Area[]).find(a => AREAS[a][1].includes(subject)) ?? "life";
 /** The platform stores age groups as words; the curriculum model uses ranges. */

@@ -2191,6 +2191,368 @@
    "parent": "Your child sorted materials into solids, liquids and gases.",
    "teacher": "Shows classifying materials by state and describing melting and freezing.",
    "done": "Solids keep their shape, liquids flow, gases spread out."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp4-fractions",
+   "grade": 4,
+   "title": "Fractions of a whole",
+   "topic": "Number: fractions",
+   "category": "Pattern Thinking",
+   "caps": "IB PYP Mathematics: number (fractions as equal parts of a whole and of a set)",
+   "intention": "Today I am finding fractions of shapes and groups.",
+   "prompt": "How would you share a pizza fairly among four friends?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Fractions help us share things fairly. Key concept: Function. Today we are principled.",
+     "html": "<p><b>Central idea:</b> Fractions help us share things fairly.</p><p>Key concept: <b>Function</b> · Learner profile: <b>Principled</b></p>"
+    },
+    {
+     "h": "Equal parts",
+     "say": "A fraction is part of a whole that is split into equal parts. A pizza cut into 4 equal slices: each slice is one quarter.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍕</p><p>4 equal parts: each is <b>1/4</b></p>"
+    },
+    {
+     "h": "Fractions of a group",
+     "say": "To find a fraction of a group, divide by the bottom number. One third of 12 sweets is 12 divided by 3, which is 4.",
+     "html": "<p>1/3 of 12 = 12 ÷ 3 = <b>4</b></p>"
+    }
+   ],
+   "example": {
+    "q": "What is 2/5 of 20?",
+    "steps": [
+     "Find 1/5: 20 ÷ 5 = 4.",
+     "2/5 is two of those.",
+     "2 × 4 = 8."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "A cake is cut into 8 equal pieces. What fraction is one piece?",
+     "options": [
+      "1/8",
+      "1/4",
+      "8",
+      "1/2"
+     ],
+     "answer": 0,
+     "hints": [
+      "8 equal parts.",
+      "One of them.",
+      "1/8."
+     ],
+     "explain": "One of 8 equal parts is 1/8."
+    },
+    {
+     "type": "num",
+     "q": "What is 1/4 of 16?",
+     "answer": "4",
+     "options": [
+      "4",
+      "12",
+      "8",
+      "64"
+     ],
+     "hints": [
+      "Divide by 4.",
+      "16 ÷ 4.",
+      "4."
+     ],
+     "explain": "16 ÷ 4 = 4."
+    },
+    {
+     "type": "num",
+     "q": "What is 3/4 of 12?",
+     "answer": "9",
+     "options": [
+      "9",
+      "3",
+      "4",
+      "16"
+     ],
+     "hints": [
+      "1/4 of 12 = 3.",
+      "Three of those.",
+      "3 × 3."
+     ],
+     "explain": "3 × 3 = 9."
+    },
+    {
+     "type": "mcq",
+     "q": "Why must the parts be equal?",
+     "options": [
+      "So the sharing is fair",
+      "To make more pieces",
+      "Because it looks nice",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Fractions mean equal parts.",
+      "Fair shares.",
+      "Fairness."
+     ],
+     "explain": "Fractions only work when the parts are equal."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Drawing equal parts",
+     "Dividing by the bottom number",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found fractions of shapes and groups.",
+   "teacher": "Shows understanding fractions as equal parts and finding unit and non-unit fractions of sets (principled: fair sharing).",
+   "done": "Fractions are equal parts. Divide by the bottom number, multiply by the top."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp4-persuade",
+   "grade": 4,
+   "title": "Persuasive posters",
+   "topic": "Writing: persuasion",
+   "category": "Communication",
+   "caps": "IB PYP Language: writing and visual language (persuasive posters: slogans, images and reasons)",
+   "intention": "Today I am designing a poster that persuades.",
+   "prompt": "Which poster has made you want to do something?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: We can use words and images to persuade others to act. Key concept: Causation. Today we are communicators.",
+     "html": "<p><b>Central idea:</b> We can use words and images to persuade others to act.</p><p>Key concept: <b>Causation</b> · Learner profile: <b>Communicators</b></p>"
+    },
+    {
+     "h": "A strong slogan",
+     "say": "A slogan is short and catchy: Turn it off! Save power!",
+     "html": "<p><b>Turn it off! Save power!</b></p>"
+    },
+    {
+     "h": "Images and reasons",
+     "say": "A good poster has a clear picture, a reason, and tells people exactly what to do.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slogan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Picture</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reason</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">What to do</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Write a slogan for a poster about picking up litter.",
+    "steps": [
+     "Keep it short.",
+     "Make it catchy.",
+     "'Bin it, don't drop it!'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is the best slogan?",
+     "options": [
+      "Bin it, don't drop it!",
+      "Litter exists in many places around the school grounds.",
+      "Hello.",
+      "Rubbish."
+     ],
+     "answer": 0,
+     "hints": [
+      "Short and catchy.",
+      "Tells you what to do.",
+      "The first."
+     ],
+     "explain": "It is short, catchy and tells people what to do."
+    },
+    {
+     "type": "mcq",
+     "q": "What should a persuasive poster tell people?",
+     "options": [
+      "Exactly what to do",
+      "A long story",
+      "Nothing",
+      "Only the date"
+     ],
+     "answer": 0,
+     "hints": [
+      "Persuade means get them to act.",
+      "An action.",
+      "What to do."
+     ],
+     "explain": "It should give a clear action."
+    },
+    {
+     "type": "mcq",
+     "q": "Why add a picture?",
+     "options": [
+      "To catch people's attention quickly",
+      "To fill space",
+      "Because words are banned",
+      "To confuse people"
+     ],
+     "answer": 0,
+     "hints": [
+      "People walk past posters.",
+      "Pictures are quick to see.",
+      "Attention."
+     ],
+     "explain": "Pictures catch attention fast."
+    },
+    {
+     "type": "mcq",
+     "q": "Which reason best persuades people to save water?",
+     "options": [
+      "'Every drop we save helps our town in a drought.'",
+      "'Water is wet.'",
+      "'I like water.'",
+      "'Taps are metal.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "It explains why it matters.",
+      "A real reason.",
+      "The first."
+     ],
+     "explain": "It gives a real reason that matters."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Making a catchy slogan",
+     "Choosing a picture",
+     "Giving a reason",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child designed a persuasive poster with a slogan, image and reason.",
+   "teacher": "Shows combining slogans, images and reasons to persuade an audience to act (communicator).",
+   "done": "Catchy slogan, clear picture, a reason, and what to do."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Science",
+   "id": "pyp4-machines",
+   "grade": 4,
+   "title": "Simple machines",
+   "topic": "How the world works",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "IB PYP Science, transdisciplinary theme 'How the world works': simple machines (levers, wheels, ramps) make work easier",
+   "intention": "Today I am finding out how simple machines make work easier.",
+   "prompt": "How would you lift something too heavy to carry?",
+   "lesson": [
+    {
+     "h": "Theme: How the world works",
+     "say": "Our theme is How the world works. Central idea: People use simple machines to make work easier. Key concept: Function. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> People use simple machines to make work easier.</p><p>Key concept: <b>Function</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Levers",
+     "say": "A lever is a bar that turns on a point called a fulcrum. A see-saw and a bottle opener are levers.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">See-saw</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bottle opener</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wheelbarrow</span></div>"
+    },
+    {
+     "h": "Ramps and wheels",
+     "say": "A ramp lets you push something up gradually instead of lifting it straight up. Wheels make it easier to move heavy loads.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Ramp: less effort</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wheel: rolls the load</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Why is a wheelbarrow easier than carrying bricks?",
+    "steps": [
+     "The wheel rolls, so you don't drag the load.",
+     "The handles act as a lever.",
+     "Together they make the load feel lighter to move."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a lever?",
+     "pics": [
+      "🎢",
+      "🪜",
+      "🧱"
+     ],
+     "options": [
+      "A see-saw",
+      "A ladder",
+      "A brick"
+     ],
+     "answer": 0,
+     "hints": [
+      "It turns on a point.",
+      "Up and down.",
+      "See-saw."
+     ],
+     "explain": "A see-saw turns on a fulcrum."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a fulcrum?",
+     "options": [
+      "The point a lever turns on",
+      "A type of wheel",
+      "A heavy load",
+      "A ramp"
+     ],
+     "answer": 0,
+     "hints": [
+      "The middle of a see-saw.",
+      "Where it balances.",
+      "The turning point."
+     ],
+     "explain": "The fulcrum is the turning point of a lever."
+    },
+    {
+     "type": "mcq",
+     "q": "Why use a ramp to load a heavy box onto a truck?",
+     "options": [
+      "It takes less effort than lifting straight up",
+      "It is faster to climb",
+      "Boxes like ramps",
+      "It makes the box lighter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Push gradually.",
+      "Instead of lifting.",
+      "Less effort."
+     ],
+     "explain": "A ramp spreads the effort over a longer distance."
+    },
+    {
+     "type": "mcq",
+     "q": "What do wheels help with?",
+     "options": [
+      "Moving heavy loads more easily",
+      "Making things heavier",
+      "Stopping things",
+      "Lifting straight up"
+     ],
+     "answer": 0,
+     "hints": [
+      "They roll.",
+      "Less dragging.",
+      "Moving loads."
+     ],
+     "explain": "Wheels roll, making loads easier to move."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding machines at home",
+     "Thinking about effort",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored how levers, ramps and wheels make work easier.",
+   "teacher": "How the world works: shows identifying simple machines and explaining how they reduce effort (thinker).",
+   "done": "Levers, ramps and wheels make work easier."
   }
  ],
  "words": {

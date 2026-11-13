@@ -2164,6 +2164,370 @@
    "parent": "Your child learnt how sounds are made and how pitch and loudness change.",
    "teacher": "Shows explaining sound as vibration and relating vibration size and speed to loudness and pitch.",
    "done": "Bigger vibrations: louder. Faster vibrations: higher pitch."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp5-area-perimeter",
+   "grade": 5,
+   "title": "Area and perimeter",
+   "topic": "Measurement",
+   "category": "Problem Solving",
+   "caps": "IB PYP Mathematics: measurement (perimeter and area of rectangles)",
+   "intention": "Today I am finding the perimeter and area of rectangles.",
+   "prompt": "How much fencing would a school garden need?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Measuring space helps us plan and build. Key concept: Function. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Measuring space helps us plan and build.</p><p>Key concept: <b>Function</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Perimeter",
+     "say": "Perimeter is the distance all the way around a shape. Add up all the sides. A rectangle 5 metres by 3 metres has a perimeter of 16 metres.",
+     "html": "<p>5 + 3 + 5 + 3 = <b>16 m</b></p>"
+    },
+    {
+     "h": "Area",
+     "say": "Area is the space inside a shape, measured in squares. Multiply length by width: 5 times 3 is 15 square metres.",
+     "html": "<p>5 × 3 = <b>15 m²</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A garden bed is 6 m long and 2 m wide. Find the perimeter and area.",
+    "steps": [
+     "Perimeter: 6 + 2 + 6 + 2 = 16 m.",
+     "Area: 6 × 2 = 12 m².",
+     "Fencing needs 16 m; soil covers 12 m²."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the perimeter of a rectangle 4 m by 2 m, in metres.",
+     "answer": "12",
+     "options": [
+      "12",
+      "8",
+      "6",
+      "16"
+     ],
+     "hints": [
+      "Add all four sides.",
+      "4 + 2 + 4 + 2.",
+      "12."
+     ],
+     "explain": "4 + 2 + 4 + 2 = 12 m."
+    },
+    {
+     "type": "num",
+     "q": "Find the area of a rectangle 7 cm by 3 cm, in cm².",
+     "answer": "21",
+     "options": [
+      "21",
+      "20",
+      "10",
+      "14"
+     ],
+     "hints": [
+      "Length × width.",
+      "7 × 3.",
+      "21."
+     ],
+     "explain": "7 × 3 = 21 cm²."
+    },
+    {
+     "type": "mcq",
+     "q": "You want to put a fence around a field. What do you need?",
+     "options": [
+      "The perimeter",
+      "The area",
+      "The weight",
+      "The height"
+     ],
+     "answer": 0,
+     "hints": [
+      "A fence goes around.",
+      "Distance around.",
+      "Perimeter."
+     ],
+     "explain": "A fence goes around, so you need the perimeter."
+    },
+    {
+     "type": "mcq",
+     "q": "You want to cover a floor with tiles. What do you need?",
+     "options": [
+      "The area",
+      "The perimeter",
+      "The temperature",
+      "The time"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tiles cover the inside.",
+      "Space inside.",
+      "Area."
+     ],
+     "explain": "Tiles cover the space inside: the area."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Around or inside?",
+     "Adding sides",
+     "Multiplying length by width",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out the perimeter and area of rectangles.",
+   "teacher": "Shows calculating perimeter and area of rectangles and choosing the right measure for a task (thinker).",
+   "done": "Perimeter: around. Area: inside (length × width)."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp5-news",
+   "grade": 5,
+   "title": "Writing a news report",
+   "topic": "Writing: recounts",
+   "category": "Planning and Organisation",
+   "caps": "IB PYP Language: writing (news reports: headline, the five Ws, and order of importance)",
+   "intention": "Today I am writing a news report.",
+   "prompt": "What news happened at school this week?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: News reports tell people what happened, clearly and fairly. Key concept: Responsibility. Today we are principled.",
+     "html": "<p><b>Central idea:</b> News reports tell people what happened, clearly and fairly.</p><p>Key concept: <b>Responsibility</b> · Learner profile: <b>Principled</b></p>"
+    },
+    {
+     "h": "The five Ws",
+     "say": "A news report answers who, what, where, when and why in the first paragraph.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Who?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">What?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Where?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">When?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Why?</span></div>"
+    },
+    {
+     "h": "Headline and order",
+     "say": "A headline is short and grabs attention. The most important facts come first, then the details. A good reporter checks facts and stays fair.",
+     "html": "<p><b>Learners Clean Up Riverbank</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Write a first sentence for a report about a school clean-up.",
+    "steps": [
+     "Who: Grade 5 learners. What: cleaned the river. Where: Mngeni River.",
+     "When: on Friday. Why: to protect wildlife.",
+     "'On Friday, Grade 5 learners cleaned the banks of the Mngeni River to protect wildlife.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is a headline?",
+     "options": [
+      "A short title that grabs attention",
+      "The last sentence",
+      "A picture",
+      "The writer's name"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is at the top.",
+      "Short and bold.",
+      "A title."
+     ],
+     "explain": "A headline is a short, attention-grabbing title."
+    },
+    {
+     "type": "mcq",
+     "q": "Which question is NOT one of the five Ws?",
+     "options": [
+      "Which colour?",
+      "Who?",
+      "Where?",
+      "Why?"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who, what, where, when, why.",
+      "Which one is missing?",
+      "Which colour?"
+     ],
+     "explain": "The five Ws are who, what, where, when and why."
+    },
+    {
+     "type": "mcq",
+     "q": "What comes first in a news report?",
+     "options": [
+      "The most important facts",
+      "The smallest details",
+      "The writer's opinion",
+      "A joke"
+     ],
+     "answer": 0,
+     "hints": [
+      "Readers may stop early.",
+      "Give them the key facts.",
+      "Most important."
+     ],
+     "explain": "The most important facts come first."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should a reporter check their facts?",
+     "options": [
+      "So the report is true and fair",
+      "To make it longer",
+      "Because it is fun",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "People trust the news.",
+      "It must be true.",
+      "True and fair."
+     ],
+     "explain": "Reporters are responsible for telling the truth."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The five Ws",
+     "Writing a headline",
+     "Checking facts",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child wrote a news report answering who, what, where, when and why.",
+   "teacher": "Shows structuring a news report with headline and five Ws, and recognising the responsibility to report accurately (principled).",
+   "done": "Headline, the five Ws first, then details. Check your facts."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Social Studies",
+   "id": "pyp5-trade",
+   "grade": 5,
+   "title": "How communities share and trade",
+   "topic": "How we organise ourselves",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "IB PYP Social studies, transdisciplinary theme 'How we organise ourselves': how communities organise trade, money and services",
+   "intention": "Today I am finding out how communities trade and share.",
+   "prompt": "Where does the bread in your shop come from?",
+   "lesson": [
+    {
+     "h": "Theme: How we organise ourselves",
+     "say": "Our theme is How we organise ourselves. Central idea: Communities organise trade and services so people can meet their needs. Key concept: Connection. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Communities organise trade and services so people can meet their needs.</p><p>Key concept: <b>Connection</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Needs and wants",
+     "say": "Needs are things we must have, like food, water and shelter. Wants are things we would like, like toys.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Needs: food, water, shelter</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wants: toys, games</span></div>"
+    },
+    {
+     "h": "Swapping and money",
+     "say": "Long ago, people swapped goods, called bartering. Today we usually use money, which makes trade easier. Shops, farms and transport are connected.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Farm grows wheat</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bakery makes bread</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Truck delivers</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Shop sells</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Why is money easier than swapping?",
+    "steps": [
+     "Swapping only works if both people want what the other has.",
+     "Money can be used to buy anything.",
+     "So money makes trade easier."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a need?",
+     "pics": [
+      "💧",
+      "🎮",
+      "🧸"
+     ],
+     "options": [
+      "Water",
+      "A game",
+      "A teddy"
+     ],
+     "answer": 0,
+     "hints": [
+      "We can't live without it.",
+      "We drink it.",
+      "Water."
+     ],
+     "explain": "Water is a need."
+    },
+    {
+     "type": "mcq",
+     "q": "What is bartering?",
+     "options": [
+      "Swapping goods without money",
+      "Saving money",
+      "Building a shop",
+      "Growing food"
+     ],
+     "answer": 0,
+     "hints": [
+      "Long ago.",
+      "Swapping.",
+      "Without money."
+     ],
+     "explain": "Bartering is swapping goods directly."
+    },
+    {
+     "type": "order",
+     "q": "Put bread's journey in order.",
+     "items": [
+      "Farm grows wheat",
+      "Bakery makes bread",
+      "Truck delivers it",
+      "Shop sells it"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Wheat comes first.",
+      "Bread is made from wheat.",
+      "It is sold last."
+     ],
+     "explain": "Farm, bakery, truck, shop."
+    },
+    {
+     "type": "mcq",
+     "q": "What would happen if the trucks stopped running?",
+     "options": [
+      "Shops would run out of bread",
+      "Nothing",
+      "Farms would close at once",
+      "Bread would be cheaper"
+     ],
+     "answer": 0,
+     "hints": [
+      "The bread can't reach the shop.",
+      "Everything is connected.",
+      "Empty shelves."
+     ],
+     "explain": "Without delivery, shops can't get bread."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Needs and wants",
+     "Following the bread's journey",
+     "Seeing connections",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored how communities trade and how goods reach shops.",
+   "teacher": "How we organise ourselves: shows distinguishing needs and wants and explaining connections in a supply chain (thinker).",
+   "done": "Communities are connected: farms, bakeries, transport and shops."
   }
  ],
  "words": {

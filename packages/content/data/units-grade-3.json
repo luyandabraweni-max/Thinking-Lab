@@ -2272,6 +2272,373 @@
    "parent": "Your child put the parts of the day and daily routines in order.",
    "teacher": "Shows sequencing daily routines and using morning, afternoon and night (time, functional numeracy).",
    "done": "Morning, afternoon, night: my day has an order."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp3-shapes",
+   "grade": 3,
+   "title": "2D shapes around us",
+   "topic": "Shape and space",
+   "category": "Pattern Thinking",
+   "caps": "IB PYP Mathematics: shape and space (properties of 2D shapes; sides and corners)",
+   "intention": "Today I am describing shapes by their sides and corners.",
+   "prompt": "What shapes can you see in your classroom?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Shapes have properties that help us describe and use them. Key concept: Form. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Shapes have properties that help us describe and use them.</p><p>Key concept: <b>Form</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Sides and corners",
+     "say": "A triangle has 3 sides and 3 corners. A square has 4 equal sides and 4 corners. A circle has no corners.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">△ 3 sides</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">□ 4 sides</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">○ 0 corners</span></div>"
+    },
+    {
+     "h": "Shapes in our world",
+     "say": "Shapes are everywhere. A road sign might be a triangle. A window might be a rectangle. A clock is a circle.",
+     "html": "<p style=\"font-size:2rem;margin:0\">⚠️ 🪟 🕐</p>"
+    }
+   ],
+   "example": {
+    "q": "A shape has 5 sides. What is it called?",
+    "steps": [
+     "Count the sides: 5.",
+     "A 5-sided shape is a pentagon.",
+     "It also has 5 corners."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "How many sides does a triangle have?",
+     "answer": "3",
+     "options": [
+      "3",
+      "4",
+      "5",
+      "0"
+     ],
+     "hints": [
+      "Tri means three.",
+      "Count them.",
+      "3."
+     ],
+     "explain": "A triangle has 3 sides."
+    },
+    {
+     "type": "mcq",
+     "q": "Which shape has no corners?",
+     "pics": [
+      "⭕",
+      "🔺",
+      "⬛"
+     ],
+     "options": [
+      "Circle",
+      "Triangle",
+      "Square"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is round.",
+      "No points.",
+      "Circle."
+     ],
+     "explain": "A circle has no corners."
+    },
+    {
+     "type": "num",
+     "q": "How many sides does a hexagon have?",
+     "answer": "6",
+     "options": [
+      "6",
+      "5",
+      "8",
+      "4"
+     ],
+     "hints": [
+      "Like a honeycomb cell.",
+      "Hex means six.",
+      "6."
+     ],
+     "explain": "A hexagon has 6 sides."
+    },
+    {
+     "type": "mcq",
+     "q": "What makes a square different from other rectangles?",
+     "options": [
+      "All 4 sides are equal",
+      "It has 3 sides",
+      "It is round",
+      "It has no corners"
+     ],
+     "answer": 0,
+     "hints": [
+      "Both have 4 sides.",
+      "A square's sides are…",
+      "…all equal."
+     ],
+     "explain": "A square has 4 equal sides."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Counting sides and corners",
+     "Finding shapes around me",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child described shapes by their sides and corners.",
+   "teacher": "Shows identifying and describing 2D shapes by their properties (thinker).",
+   "done": "Describe shapes by counting their sides and corners."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp3-poem",
+   "grade": 3,
+   "title": "Patterns in poems",
+   "topic": "Reading: poetry",
+   "category": "Creativity",
+   "caps": "IB PYP Language: reading and writing poetry (rhythm, repetition and rhyme)",
+   "intention": "Today I am finding patterns in a poem.",
+   "prompt": "Do you know a song you can clap along to?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Poets use patterns of sound to express ideas and feelings. Key concept: Form. Today we are communicators.",
+     "html": "<p><b>Central idea:</b> Poets use patterns of sound to express ideas and feelings.</p><p>Key concept: <b>Form</b> · Learner profile: <b>Communicators</b></p>"
+    },
+    {
+     "h": "A poem",
+     "say": "Rain on the roof, tap tap tap. Rain on the road, slap slap slap. Rain on my nose, I laugh, I clap!",
+     "html": "<p>Rain on the roof, tap tap tap.<br>Rain on the road, slap slap slap.<br>Rain on my nose, I laugh, I clap!</p>"
+    },
+    {
+     "h": "Repetition and rhyme",
+     "say": "The poem repeats 'Rain on the'. Tap, slap and clap rhyme. Patterns make poems fun to say aloud.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Repetition: Rain on the…</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rhyme: tap, slap, clap</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Which words rhyme in the poem?",
+    "steps": [
+     "Look at the ends of the lines.",
+     "Tap, slap, clap.",
+     "They all end in 'ap'."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which words are repeated at the start of each line?",
+     "options": [
+      "Rain on the",
+      "I laugh",
+      "Tap tap",
+      "My nose"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at how each line starts.",
+      "The same three words.",
+      "Rain on the."
+     ],
+     "explain": "Each line begins with 'Rain on the'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'tap'?",
+     "options": [
+      "clap",
+      "rain",
+      "roof",
+      "nose"
+     ],
+     "answer": 0,
+     "hints": [
+      "Same ending sound.",
+      "-ap.",
+      "Clap."
+     ],
+     "explain": "Tap and clap both end in 'ap'."
+    },
+    {
+     "type": "mcq",
+     "q": "What sound does the rain make on the roof?",
+     "options": [
+      "tap tap tap",
+      "slap slap slap",
+      "boom",
+      "whoosh"
+     ],
+     "answer": 0,
+     "hints": [
+      "Read the first line.",
+      "On the roof.",
+      "Tap tap tap."
+     ],
+     "explain": "On the roof it goes tap tap tap."
+    },
+    {
+     "type": "mcq",
+     "q": "How does the speaker feel at the end?",
+     "options": [
+      "Happy",
+      "Scared",
+      "Angry",
+      "Bored"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the last line.",
+      "I laugh, I clap.",
+      "Happy."
+     ],
+     "explain": "Laughing and clapping show happiness."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Saying it aloud",
+     "Clapping the rhythm",
+     "Finding the rhymes",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found repetition and rhyme in a poem.",
+   "teacher": "Shows identifying repetition, rhyme and onomatopoeia in poetry and inferring mood (communicator).",
+   "done": "Poems use patterns: repetition, rhythm and rhyme."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Arts",
+   "id": "pyp3-symbols",
+   "grade": 3,
+   "title": "Patterns and symbols in art",
+   "topic": "How we express ourselves",
+   "domain": "Creativity and Metacognition",
+   "category": "Creativity",
+   "caps": "IB PYP Arts, transdisciplinary theme 'How we express ourselves': how cultures express ideas through patterns, colours and symbols",
+   "intention": "Today I am exploring how patterns and symbols share meaning.",
+   "prompt": "Which patterns or colours are special in your family?",
+   "lesson": [
+    {
+     "h": "Theme: How we express ourselves",
+     "say": "Our theme is How we express ourselves. Central idea: People use patterns, colours and symbols to express who they are. Key concept: Perspective. Today we are open-minded.",
+     "html": "<p><b>Central idea:</b> People use patterns, colours and symbols to express who they are.</p><p>Key concept: <b>Perspective</b> · Learner profile: <b>Open-minded</b></p>"
+    },
+    {
+     "h": "Patterns with meaning",
+     "say": "Many cultures paint or bead patterns that carry meaning. Ndebele house paintings use bold shapes and colours, and beadwork colours can share messages.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🔺🔷🔺🔷</p><p>Bold repeating shapes and colours</p>"
+    },
+    {
+     "h": "Making my own",
+     "say": "You can design a pattern that says something about you: a colour you love, a shape that is special to you, repeated in a pattern.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Choose colours</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Choose shapes</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Repeat</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Continue the pattern: red, blue, red, blue, …",
+    "steps": [
+     "Look at what repeats.",
+     "Red, then blue.",
+     "The next colour is red."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What comes next? 🔺🔷🔺🔷",
+     "pics": [
+      "🔺",
+      "🔷",
+      "⭐"
+     ],
+     "options": [
+      "Triangle",
+      "Diamond",
+      "Star"
+     ],
+     "answer": 0,
+     "hints": [
+      "Triangle, diamond, triangle, diamond…",
+      "It repeats.",
+      "Triangle."
+     ],
+     "explain": "The pattern repeats triangle, diamond."
+    },
+    {
+     "type": "mcq",
+     "q": "Why might people use special colours in beadwork?",
+     "options": [
+      "To share messages and show who they are",
+      "Because they ran out of other colours",
+      "To make it heavier",
+      "For no reason"
+     ],
+     "answer": 0,
+     "hints": [
+      "Colours can have meaning.",
+      "They express identity.",
+      "Messages."
+     ],
+     "explain": "Colours and patterns can carry meaning."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a pattern?",
+     "options": [
+      "Something that repeats in a regular way",
+      "A single dot",
+      "A messy scribble",
+      "A blank page"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for repeating.",
+      "In order.",
+      "Repeats regularly."
+     ],
+     "explain": "A pattern repeats in a regular way."
+    },
+    {
+     "type": "mcq",
+     "q": "Which shows being open-minded about art from another culture?",
+     "options": [
+      "Asking what the patterns mean",
+      "Saying it is strange",
+      "Ignoring it",
+      "Laughing at it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Open-minded means curious and respectful.",
+      "Ask questions.",
+      "The first."
+     ],
+     "explain": "Asking about meaning shows respect and curiosity."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Continuing patterns",
+     "Learning what symbols mean",
+     "Designing my own",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored how patterns and colours in art share meaning.",
+   "teacher": "How we express ourselves: shows recognising patterns and symbols in cultural art forms and creating a personal pattern (open-minded).",
+   "done": "Patterns, colours and symbols can say who we are."
   }
  ],
  "words": {

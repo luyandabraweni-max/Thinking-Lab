@@ -2354,6 +2354,388 @@
    "parent": "Your child learnt when and how to brush their teeth.",
    "teacher": "Shows sequencing a personal hygiene routine (personal and social well-being).",
    "done": "Brush in the morning and at night, every tooth."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp1-measure",
+   "grade": 1,
+   "title": "Longer and shorter",
+   "topic": "Measurement",
+   "category": "Pattern Thinking",
+   "caps": "IB PYP Mathematics: measurement (comparing and ordering lengths; non-standard units)",
+   "intention": "Today I am comparing how long things are.",
+   "prompt": "Who is the tallest person in your family?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: We compare and measure things to describe our world. Key concept: Form. Today we are inquirers.",
+     "html": "<p><b>Central idea:</b> We compare and measure things to describe our world.</p><p>Key concept: <b>Form</b> · Learner profile: <b>Inquirers</b></p>"
+    },
+    {
+     "h": "Longer and shorter",
+     "say": "Put two things side by side, starting at the same line. The one that goes further is longer.",
+     "html": "<p style=\"font-size:2rem;margin:0\">✏️<br>🖍️</p><p>The pencil is <b>longer</b> than the crayon.</p>"
+    },
+    {
+     "h": "Measuring with hands",
+     "say": "We can measure with hand spans or paper clips. The table is 6 hand spans long.",
+     "html": "<p>Table: 🖐️🖐️🖐️🖐️🖐️🖐️ = <b>6 hand spans</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A book is 4 paper clips long. A pencil is 6 paper clips long. Which is longer?",
+    "steps": [
+     "Compare the numbers: 4 and 6.",
+     "6 is more than 4.",
+     "The pencil is longer."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is longer?",
+     "pics": [
+      "🐍",
+      "🐛"
+     ],
+     "options": [
+      "The snake",
+      "The caterpillar"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which stretches further?",
+      "Snakes are long.",
+      "The snake."
+     ],
+     "explain": "The snake is longer."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do we line things up at the same start?",
+     "options": [
+      "So the comparison is fair",
+      "To make them look nice",
+      "Because it is faster",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "If one starts further ahead…",
+      "…it might look longer.",
+      "Fair."
+     ],
+     "explain": "Starting at the same line makes the comparison fair."
+    },
+    {
+     "type": "num",
+     "q": "A desk is 5 hand spans. A rug is 9 hand spans. How many more hand spans is the rug?",
+     "answer": "4",
+     "options": [
+      "4",
+      "14",
+      "5",
+      "9"
+     ],
+     "hints": [
+      "Find the difference.",
+      "9 − 5.",
+      "4."
+     ],
+     "explain": "9 − 5 = 4 hand spans."
+    },
+    {
+     "type": "order",
+     "q": "Put them in order, shortest first.",
+     "items": [
+      "Ant",
+      "Cat",
+      "Giraffe"
+     ],
+     "orderLabel": "shortest to longest",
+     "hints": [
+      "Which is tiny?",
+      "Which is in the middle?",
+      "Which is very tall?"
+     ],
+     "explain": "Ant, cat, giraffe."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Lining things up",
+     "Counting hand spans",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared and measured lengths using hands and paper clips.",
+   "teacher": "Shows comparing and ordering lengths and measuring with non-standard units (inquirer).",
+   "done": "Line things up to compare. Count units to measure."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp1-story",
+   "grade": 1,
+   "title": "Beginning, middle and end",
+   "topic": "Reading and storytelling",
+   "category": "Creativity",
+   "caps": "IB PYP Language: reading and oral language (story structure: beginning, middle and end)",
+   "intention": "Today I am finding the beginning, middle and end of a story.",
+   "prompt": "What is your favourite story?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Stories help us share ideas and feelings. Key concept: Form. Today we are communicators.",
+     "html": "<p><b>Central idea:</b> Stories help us share ideas and feelings.</p><p>Key concept: <b>Form</b> · Learner profile: <b>Communicators</b></p>"
+    },
+    {
+     "h": "Every story has three parts",
+     "say": "The beginning tells us who and where. The middle has a problem. The end tells us how it was solved.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Beginning: who and where</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Middle: a problem</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">End: solved</span></div>"
+    },
+    {
+     "h": "A little story",
+     "say": "Lindi planted a seed. The seed did not grow because there was no rain. Lindi watered it every day, and it grew into a sunflower.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🌱 🌧️ 🌻</p>"
+    }
+   ],
+   "example": {
+    "q": "What is the problem in Lindi's story?",
+    "steps": [
+     "Look at the middle.",
+     "The seed did not grow.",
+     "There was no rain."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How does Lindi's story begin?",
+     "pics": [
+      "🌱",
+      "🌻",
+      "🌧️"
+     ],
+     "options": [
+      "Lindi plants a seed",
+      "A sunflower grows",
+      "It rains"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens first?",
+      "Before the problem.",
+      "She plants a seed."
+     ],
+     "explain": "The story begins when Lindi plants a seed."
+    },
+    {
+     "type": "mcq",
+     "q": "How does the story end?",
+     "pics": [
+      "🌻",
+      "🌱",
+      "☀️"
+     ],
+     "options": [
+      "It grows into a sunflower",
+      "She plants a seed",
+      "The sun shines"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens last?",
+      "After she waters it.",
+      "A sunflower."
+     ],
+     "explain": "It ends when the seed grows into a sunflower."
+    },
+    {
+     "type": "order",
+     "q": "Put the story in order.",
+     "items": [
+      "Lindi planted a seed",
+      "It did not grow",
+      "She watered it every day",
+      "It grew into a sunflower"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start with planting.",
+      "Then the problem.",
+      "Watering comes before growing."
+     ],
+     "explain": "Plant, problem, water, grow."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the middle of a story usually have?",
+     "options": [
+      "A problem",
+      "The title",
+      "The end",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Something goes wrong.",
+      "In the middle.",
+      "A problem."
+     ],
+     "explain": "The middle usually has a problem."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pictures",
+     "Retelling the story",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found the beginning, middle and end of a story.",
+   "teacher": "Shows identifying story structure and sequencing events (communicator).",
+   "done": "Beginning, middle with a problem, and an end that solves it."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Personal, Social and Physical Education",
+   "id": "pyp1-healthy",
+   "grade": 1,
+   "title": "Keeping my body healthy",
+   "topic": "Who we are: health",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "IB PYP PSPE, transdisciplinary theme 'Who we are': healthy choices: food, sleep, exercise and hygiene",
+   "intention": "Today I am finding out what my body needs to be healthy.",
+   "prompt": "What do you do to feel strong and well?",
+   "lesson": [
+    {
+     "h": "Theme: Who we are",
+     "say": "Our theme is Who we are. Central idea: The choices we make help our bodies stay healthy. Key concept: Responsibility. Today we are balanced.",
+     "html": "<p><b>Central idea:</b> The choices we make help our bodies stay healthy.</p><p>Key concept: <b>Responsibility</b> · Learner profile: <b>Balanced</b></p>"
+    },
+    {
+     "h": "What my body needs",
+     "say": "My body needs healthy food, water, sleep and exercise to grow strong.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍎 💧 😴 🏃</p>"
+    },
+    {
+     "h": "Every day",
+     "say": "Playing outside, eating fruit and vegetables, and washing my hands help me stay healthy.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Play</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Eat well</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wash hands</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sleep</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Is an apple or a packet of sweets a healthier snack?",
+    "steps": [
+     "An apple has vitamins and fibre.",
+     "Sweets have lots of sugar.",
+     "The apple is healthier."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a healthy snack?",
+     "pics": [
+      "🍌",
+      "🍭",
+      "🍟"
+     ],
+     "options": [
+      "A banana",
+      "A lollipop",
+      "Chips"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which grows on a plant?",
+      "Fruit.",
+      "A banana."
+     ],
+     "explain": "Fruit is a healthy snack."
+    },
+    {
+     "type": "mcq",
+     "q": "What does your body need every night?",
+     "pics": [
+      "😴",
+      "📱",
+      "🍬"
+     ],
+     "options": [
+      "Sleep",
+      "A phone",
+      "Sweets"
+     ],
+     "answer": 0,
+     "hints": [
+      "At night we…",
+      "…rest.",
+      "Sleep."
+     ],
+     "explain": "Sleep helps your body grow and rest."
+    },
+    {
+     "type": "mcq",
+     "q": "Which keeps your body strong?",
+     "pics": [
+      "🏃",
+      "📺",
+      "🛋️"
+     ],
+     "options": [
+      "Running and playing",
+      "Watching TV all day",
+      "Sitting all day"
+     ],
+     "answer": 0,
+     "hints": [
+      "Move your body.",
+      "Exercise.",
+      "Running."
+     ],
+     "explain": "Exercise keeps you strong."
+    },
+    {
+     "type": "mcq",
+     "q": "What should you drink most?",
+     "pics": [
+      "💧",
+      "🥤",
+      "🧋"
+     ],
+     "options": [
+      "Water",
+      "Fizzy drinks",
+      "Sweet tea"
+     ],
+     "answer": 0,
+     "hints": [
+      "It has no sugar.",
+      "From the tap.",
+      "Water."
+     ],
+     "explain": "Water is the best drink."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pictures",
+     "Thinking about my day",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored food, sleep and exercise choices that keep them healthy.",
+   "teacher": "Who we are: shows identifying healthy choices and taking responsibility for wellbeing (balanced).",
+   "done": "Healthy food, water, sleep and play keep me strong."
   }
  ],
  "words": {

@@ -22,7 +22,7 @@ describe("content", () => {
       const pack = await loadPack(packOf(g));
       expect(pack.units.map(u => u.id)).toEqual(CATALOGUE.filter(u => u.grade === g).map(u => u.id));
     }
-    expect(CATALOGUE).toHaveLength(316);
+    expect(CATALOGUE).toHaveLength(346);
   });
   it("has complete, answerable questions in every lesson", async () => {
     const bad: string[] = [];
@@ -58,6 +58,12 @@ describe("content", () => {
   });
   it("gives IB and CAPS for SID learners their own lessons, and work-readiness lessons at every teen level", () => {
     expect(lessonsIn(CATALOGUE, "science", 9, { curriculum: "IB" }).units.map(u => u.id)).toEqual(["ib9-sci-fair-test", "ib9-sci-ecosystems"]);
+    // PYP (Grades 1 to 6) and DP (Grades 11 and 12): every subject lands in a real area, never the catch-all
+    for (const u of CATALOGUE.filter(x => x.id.startsWith("pyp") || x.id.startsWith("dp")))
+      expect(areaOf(u.subject) !== "life" || /Social|Personal/.test(u.subject), u.id).toBe(true);
+    expect(lessonsIn(CATALOGUE, "inquiry", 11, { curriculum: "IB" }).units.map(u => u.id)).toEqual(["dp11-tok-questions", "dp11-ee-question"]);
+    expect(lessonsIn(CATALOGUE, "creative", 3, { curriculum: "IB" }).units.map(u => u.id)).toEqual(["pyp3-symbols"]);
+    expect(lessonsIn(CATALOGUE, "maths", 12, { curriculum: "IB" }).units.map(u => u.id)).toEqual(["dp12-aa-binomial", "dp12-ai-chi-squared"]);
     expect(lessonsIn(CATALOGUE, "language", 10, { curriculum: "IB" }).units.every(u => u.curriculum === "IB")).toBe(true);
     for (const g of [7, 9, 12]) {
       const life = lessonsIn(CATALOGUE, "life", g, { curriculum: "CAPS-SID" });

@@ -4383,6 +4383,849 @@
    "done": "Waves carry energy. v = f × λ."
   },
   {
+   "curriculum": "IB",
+   "subject": "Mathematics: Analysis and Approaches",
+   "domain": "Logical and Analytical Thinking",
+   "id": "dp11-aa-sequences",
+   "grade": 11,
+   "title": "Arithmetic and geometric sequences",
+   "topic": "Number and algebra",
+   "category": "Pattern Thinking",
+   "caps": "IB Diploma Programme Mathematics: Analysis and Approaches (SL/HL): Topic 1, number and algebra (arithmetic and geometric sequences and series; sum to infinity)",
+   "intention": "Today I am working with arithmetic and geometric sequences and series.",
+   "prompt": "Which grows faster: adding 10 each time, or doubling each time?",
+   "lesson": [
+    {
+     "h": "Arithmetic sequences",
+     "say": "An arithmetic sequence adds the same common difference d each time. The nth term is u1 plus n minus 1 times d.",
+     "html": "<p>uₙ = u₁ + (n − 1)d · Sₙ = n/2 (2u₁ + (n − 1)d)</p>"
+    },
+    {
+     "h": "Geometric sequences",
+     "say": "A geometric sequence multiplies by the same common ratio r each time. The nth term is u1 times r to the power n minus 1.",
+     "html": "<p>uₙ = u₁ rⁿ⁻¹ · Sₙ = u₁(1 − rⁿ) ÷ (1 − r)</p>"
+    },
+    {
+     "h": "Sum to infinity",
+     "say": "If the absolute value of r is less than 1, the terms shrink and the series has a finite sum: u1 over 1 minus r.",
+     "html": "<p>S∞ = u₁ ÷ (1 − r), when |r| < 1</p>"
+    },
+    {
+     "h": "TOK link",
+     "say": "Theory of Knowledge link: Is a sum of infinitely many terms that is finite discovered or invented?",
+     "html": "<p><b>TOK link:</b> Is a sum of infinitely many terms that is finite discovered or invented?</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the sum to infinity of 8 + 4 + 2 + 1 + …",
+    "steps": [
+     "u₁ = 8 and r = 1/2.",
+     "|r| < 1, so the sum exists.",
+     "S∞ = 8 ÷ (1 − 1/2) = 16."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "An arithmetic sequence has u₁ = 3 and d = 5. Find u₁₀.",
+     "answer": "48",
+     "options": [
+      "48",
+      "53",
+      "50",
+      "45"
+     ],
+     "hints": [
+      "u₁₀ = 3 + 9 × 5.",
+      "9 × 5 = 45.",
+      "48."
+     ],
+     "explain": "3 + 45 = 48."
+    },
+    {
+     "type": "num",
+     "q": "Find the sum of the first 10 terms of 3, 8, 13, …",
+     "answer": "255",
+     "options": [
+      "255",
+      "240",
+      "48",
+      "510"
+     ],
+     "hints": [
+      "S₁₀ = 10/2 (6 + 9 × 5).",
+      "5 × 51.",
+      "255."
+     ],
+     "explain": "5 × (6 + 45) = 255."
+    },
+    {
+     "type": "num",
+     "q": "A geometric sequence has u₁ = 2 and r = 3. Find u₄.",
+     "answer": "54",
+     "options": [
+      "54",
+      "18",
+      "162",
+      "11"
+     ],
+     "hints": [
+      "u₄ = 2 × 3³.",
+      "3³ = 27.",
+      "54."
+     ],
+     "explain": "2 × 27 = 54."
+    },
+    {
+     "type": "num",
+     "q": "Find the sum to infinity of 9 + 3 + 1 + …",
+     "answer": "13.5",
+     "options": [
+      "13.5",
+      "13",
+      "27",
+      "12"
+     ],
+     "hints": [
+      "r = 1/3.",
+      "9 ÷ (2/3).",
+      "13.5."
+     ],
+     "explain": "9 ÷ (1 − 1/3) = 13.5."
+    },
+    {
+     "type": "mcq",
+     "q": "When does a geometric series have a sum to infinity?",
+     "options": [
+      "When |r| < 1",
+      "When r > 1",
+      "Always",
+      "When r = 1"
+     ],
+     "answer": 0,
+     "hints": [
+      "The terms must shrink.",
+      "The ratio must be small.",
+      "|r| < 1."
+     ],
+     "explain": "Only shrinking terms (|r| < 1) give a finite sum."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Spotting d or r",
+     "Choosing the right formula",
+     "The TOK link",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked with sequences that grow by adding and by multiplying, and with infinite sums.",
+   "teacher": "Shows applying formulae for arithmetic and geometric sequences and series and the condition for a sum to infinity.",
+   "done": "Arithmetic adds d; geometric multiplies by r; S∞ needs |r| < 1."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics: Applications and Interpretation",
+   "domain": "Logical and Analytical Thinking",
+   "id": "dp11-ai-regression",
+   "grade": 11,
+   "title": "Correlation and regression",
+   "topic": "Statistics and probability",
+   "category": "Inquiry and Exploration",
+   "caps": "IB Diploma Programme Mathematics: Applications and Interpretation (SL/HL): Topic 4, statistics (scatter diagrams; Pearson's correlation coefficient; regression lines; interpolation and extrapolation)",
+   "intention": "Today I am modelling relationships between two variables.",
+   "prompt": "Do taller people always have bigger feet?",
+   "lesson": [
+    {
+     "h": "Scatter diagrams and r",
+     "say": "A scatter diagram shows two variables together. Pearson's r measures linear correlation, from minus 1 to 1. Close to 1 is strong positive; close to 0 is weak.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">r ≈ 1: strong positive</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">r ≈ 0: little linear correlation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">r ≈ −1: strong negative</span></div>"
+    },
+    {
+     "h": "The regression line",
+     "say": "The regression line of y on x, y equals a x plus b, is used to predict y from x. Your calculator finds a and b.",
+     "html": "<p>ŷ = ax + b</p>"
+    },
+    {
+     "h": "Use with care",
+     "say": "Predicting inside the data range is interpolation and is usually reliable. Predicting outside it is extrapolation and may be unreliable. Correlation does not prove causation.",
+     "html": "<p>Correlation ≠ <b>causation</b></p>"
+    },
+    {
+     "h": "TOK link",
+     "say": "Theory of Knowledge link: If two variables are strongly correlated, what further knowledge do we need to claim that one causes the other?",
+     "html": "<p><b>TOK link:</b> If two variables are strongly correlated, what further knowledge do we need to claim that one causes the other?</p>"
+    }
+   ],
+   "example": {
+    "q": "The regression line for revision hours (x) and test score (y) is y = 4x + 40, for 2 to 10 hours. Predict the score for 6 hours.",
+    "steps": [
+     "6 is inside the data range, so this is interpolation.",
+     "y = 4(6) + 40.",
+     "y = 64."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which value of r shows the strongest correlation?",
+     "options": [
+      "−0.95",
+      "0.3",
+      "0.6",
+      "0"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the size, not the sign.",
+      "Closest to 1 or −1.",
+      "−0.95."
+     ],
+     "explain": "|−0.95| is closest to 1."
+    },
+    {
+     "type": "num",
+     "q": "Using y = 4x + 40, predict y when x = 5.",
+     "answer": "60",
+     "options": [
+      "60",
+      "45",
+      "20",
+      "200"
+     ],
+     "hints": [
+      "Substitute x = 5.",
+      "4 × 5 + 40.",
+      "60."
+     ],
+     "explain": "20 + 40 = 60."
+    },
+    {
+     "type": "mcq",
+     "q": "Data runs from x = 2 to x = 10. Predicting at x = 25 is…",
+     "options": [
+      "extrapolation, which may be unreliable",
+      "interpolation",
+      "always accurate",
+      "impossible to calculate"
+     ],
+     "answer": 0,
+     "hints": [
+      "25 is outside the range.",
+      "Outside = extrapolation.",
+      "Unreliable."
+     ],
+     "explain": "Predicting outside the data range is extrapolation."
+    },
+    {
+     "type": "mcq",
+     "q": "Ice-cream sales and drownings are strongly correlated. Why doesn't ice cream cause drowning?",
+     "options": [
+      "A third factor, hot weather, increases both",
+      "The data is wrong",
+      "Correlation always proves causation",
+      "Ice cream is safe to swim with"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens in summer?",
+      "More swimming and more ice cream.",
+      "A hidden variable."
+     ],
+     "explain": "Hot weather drives both; correlation isn't causation."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a value of r close to 0 suggest?",
+     "options": [
+      "Little or no linear relationship",
+      "A perfect relationship",
+      "A strong negative relationship",
+      "The line is vertical"
+     ],
+     "answer": 0,
+     "hints": [
+      "r measures linear correlation.",
+      "Near 0…",
+      "…weak."
+     ],
+     "explain": "r near 0 means little linear correlation."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Reading r",
+     "Interpolation versus extrapolation",
+     "Correlation versus causation",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child modelled relationships between two sets of data and learnt the limits of predictions.",
+   "teacher": "Shows interpreting Pearson's r, using a regression line to predict, and distinguishing interpolation, extrapolation and causation.",
+   "done": "Use r for strength, the line to predict inside the data, and never confuse correlation with causation."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language A: Language and Literature",
+   "domain": "Communication and Expression",
+   "id": "dp11-ll-paper1",
+   "grade": 11,
+   "title": "Guided analysis of a non-literary text",
+   "topic": "Paper 1 skills",
+   "category": "Reflection",
+   "caps": "IB Diploma Programme Language A: Language and Literature (SL/HL): Paper 1 (guided textual analysis of an unseen non-literary text)",
+   "intention": "Today I am analysing how a non-literary text creates meaning.",
+   "prompt": "Which poster or advert has stayed in your mind?",
+   "passage": "<div class=\"passage-text\"><p><b>Source: a public-service poster</b> <span class=\"muted\">(described; a 2to.iQ text)</span></p>\n<p>A black-and-white photograph shows an empty school desk in a classroom. On the desk lies a single cellphone, screen cracked. Across the top, in small white letters: <i>\"She was only replying to 'ok'.\"</i> At the bottom, in bold red: <b>\"DON'T TEXT AND DRIVE.\"</b></p></div>",
+   "lesson": [
+    {
+     "h": "Read the source",
+     "say": "Read the source, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Source: a public-service poster</b> <span class=\"muted\">(described; a 2to.iQ text)</span></p>\n<p>A black-and-white photograph shows an empty school desk in a classroom. On the desk lies a single cellphone, screen cracked. Across the top, in small white letters: <i>\"She was only replying to 'ok'.\"</i> At the bottom, in bold red: <b>\"DON'T TEXT AND DRIVE.\"</b></p></div>"
+    },
+    {
+     "h": "Text type, audience, purpose",
+     "say": "Start with the text type, its audience and its purpose. This is a public-service poster aimed at young drivers, warning against texting while driving.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Text type</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Audience</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Purpose</span></div>"
+    },
+    {
+     "h": "Analysing techniques",
+     "say": "Look at visual and verbal choices and their effects. The empty desk implies a young person has died. The small quote is quiet and devastating; the bold red command is urgent.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Empty desk: absence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cracked phone: cause</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Red command: urgency</span></div>"
+    },
+    {
+     "h": "TOK link",
+     "say": "Theory of Knowledge link: How do images make knowledge claims differently from words?",
+     "html": "<p><b>TOK link:</b> How do images make knowledge claims differently from words?</p>"
+    }
+   ],
+   "example": {
+    "q": "Analyse the effect of 'She was only replying to ‘ok’.'",
+    "steps": [
+     "'Only' and the tiny reply 'ok' stress how trivial the message was.",
+     "Set against the empty desk, the contrast is shocking.",
+     "The reader realises a life was lost for nothing, which makes the warning powerful."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Who is the most likely target audience?",
+     "options": [
+      "Young people who drive or will soon drive",
+      "Young children",
+      "Car manufacturers",
+      "Teachers only"
+     ],
+     "answer": 0,
+     "hints": [
+      "The setting is a school.",
+      "A young person.",
+      "Young drivers."
+     ],
+     "explain": "The school desk links to young drivers."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the empty desk suggest?",
+     "options": [
+      "A learner has died and is missing",
+      "The class is on holiday",
+      "The desk is broken",
+      "Learners are late"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who should be sitting there?",
+      "She isn't there.",
+      "Loss."
+     ],
+     "explain": "The empty desk symbolises a lost life."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is the main message in bold red?",
+     "options": [
+      "Red suggests danger and urgency",
+      "Red is the only colour",
+      "To match the phone",
+      "It is decoration"
+     ],
+     "answer": 0,
+     "hints": [
+      "The rest is black and white.",
+      "Red stands out.",
+      "Danger."
+     ],
+     "explain": "Red signals danger and draws the eye."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the effect of the black-and-white photograph?",
+     "options": [
+      "A sombre, mournful mood",
+      "A cheerful mood",
+      "It makes the poster cheaper",
+      "It shows it is old"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of mourning.",
+      "Colour drains away.",
+      "Sombre."
+     ],
+     "explain": "Black and white creates a sad, serious mood."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the strongest analytical sentence?",
+     "options": [
+      "The contrast between the trivial 'ok' and the empty desk shocks readers into seeing how small choices have fatal consequences.",
+      "The poster is about phones.",
+      "There is a desk and a phone.",
+      "I think it is a good poster."
+     ],
+     "answer": 0,
+     "hints": [
+      "Analysis names a technique.",
+      "And explains its effect.",
+      "The first."
+     ],
+     "explain": "It identifies a technique and explains its effect on the audience."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Audience and purpose first",
+     "Linking techniques to effects",
+     "The TOK link",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how a poster uses images and words to persuade.",
+   "teacher": "Paper 1: shows identifying text type, audience and purpose and analysing visual and verbal techniques and their effects.",
+   "done": "Text type, audience, purpose, then technique and effect."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Biology",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "dp11-bio-membranes",
+   "grade": 11,
+   "title": "Membrane transport",
+   "topic": "Cell biology",
+   "caps": "IB Diploma Programme Biology (SL/HL): membranes and membrane transport (diffusion, facilitated diffusion, osmosis, active transport)",
+   "intention": "Today I am comparing the ways substances cross cell membranes.",
+   "prompt": "How does a cell let in what it needs and keep out what it doesn't?",
+   "lesson": [
+    {
+     "h": "The membrane",
+     "say": "The cell membrane is a phospholipid bilayer with proteins embedded in it. It is partially permeable: small non-polar molecules pass easily; ions and large molecules need help.",
+     "html": "<p>Phospholipid bilayer + proteins = <b>partially permeable</b></p>"
+    },
+    {
+     "h": "Passive transport",
+     "say": "Simple diffusion, facilitated diffusion through channel proteins, and osmosis all move substances down a concentration gradient, without using energy from ATP.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Simple diffusion</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Facilitated diffusion</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Osmosis</span></div><p>Down the gradient · <b>no ATP</b></p>"
+    },
+    {
+     "h": "Active transport",
+     "say": "Active transport uses ATP and pump proteins to move substances against their concentration gradient, such as the sodium–potassium pump in nerve cells.",
+     "html": "<p>Against the gradient · <b>uses ATP</b></p>"
+    },
+    {
+     "h": "TOK link",
+     "say": "Theory of Knowledge link: The fluid mosaic model replaced earlier models. What makes scientists accept a new model?",
+     "html": "<p><b>TOK link:</b> The fluid mosaic model replaced earlier models. What makes scientists accept a new model?</p>"
+    }
+   ],
+   "example": {
+    "q": "Root hair cells absorb mineral ions from soil where the ions are less concentrated. Which process is needed?",
+    "steps": [
+     "The ions move from low to high concentration.",
+     "That is against the gradient.",
+     "So active transport, using ATP, is needed."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which process uses ATP?",
+     "options": [
+      "Active transport",
+      "Simple diffusion",
+      "Osmosis",
+      "Facilitated diffusion"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which goes against the gradient?",
+      "It needs energy.",
+      "Active transport."
+     ],
+     "explain": "Active transport uses ATP."
+    },
+    {
+     "type": "mcq",
+     "q": "Facilitated diffusion uses…",
+     "options": [
+      "channel or carrier proteins, without ATP",
+      "ATP and pumps",
+      "no proteins at all",
+      "vesicles only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Facilitated means helped.",
+      "By proteins.",
+      "Still passive."
+     ],
+     "explain": "Proteins help, but no ATP is used."
+    },
+    {
+     "type": "mcq",
+     "q": "Osmosis is the movement of…",
+     "options": [
+      "water across a partially permeable membrane",
+      "ions against a gradient",
+      "glucose using ATP",
+      "proteins out of the cell"
+     ],
+     "answer": 0,
+     "hints": [
+      "One particular substance.",
+      "Through the membrane.",
+      "Water."
+     ],
+     "explain": "Osmosis is water moving across a partially permeable membrane."
+    },
+    {
+     "type": "mcq",
+     "q": "Why can oxygen diffuse straight through the bilayer?",
+     "options": [
+      "It is small and non-polar",
+      "It is large and charged",
+      "It uses a pump",
+      "It is a protein"
+     ],
+     "answer": 0,
+     "hints": [
+      "The bilayer's core is non-polar.",
+      "Small molecules slip through.",
+      "Small and non-polar."
+     ],
+     "explain": "Small non-polar molecules pass through the lipid bilayer."
+    },
+    {
+     "type": "mcq",
+     "q": "Which describes the sodium–potassium pump?",
+     "options": [
+      "Active transport against concentration gradients",
+      "Simple diffusion",
+      "Osmosis",
+      "Passive movement down a gradient"
+     ],
+     "answer": 0,
+     "hints": [
+      "A pump.",
+      "Uses ATP.",
+      "Active transport."
+     ],
+     "explain": "It actively pumps ions against their gradients."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Passive versus active",
+     "Down or against the gradient",
+     "The TOK link",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared the ways substances move into and out of cells.",
+   "teacher": "Shows describing membrane structure and distinguishing diffusion, facilitated diffusion, osmosis and active transport.",
+   "done": "Passive: down the gradient, no ATP. Active: against it, using ATP."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Theory of Knowledge",
+   "domain": "Creativity and Metacognition",
+   "category": "Reflection",
+   "id": "dp11-tok-questions",
+   "grade": 11,
+   "title": "Knowledge questions",
+   "topic": "TOK: thinking about knowledge",
+   "caps": "IB Diploma Programme Theory of Knowledge: knowledge questions; the knower; areas of knowledge",
+   "intention": "Today I am asking questions about knowledge itself.",
+   "prompt": "How do you know that what you learnt in history is true?",
+   "lesson": [
+    {
+     "h": "Questions about knowledge",
+     "say": "TOK asks how we know what we claim to know. A knowledge question is about knowledge itself, is open to debate, and uses TOK concepts such as evidence, certainty, truth and interpretation.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">About knowledge</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Contestable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Uses TOK concepts</span></div>"
+    },
+    {
+     "h": "Subject question or knowledge question?",
+     "say": "When did apartheid end is a history question. How can historians decide which sources to trust is a knowledge question.",
+     "html": "<p><b>Subject:</b> When did apartheid end?</p><p><b>Knowledge:</b> How do historians decide which sources to trust?</p>"
+    },
+    {
+     "h": "Areas of knowledge",
+     "say": "TOK compares how knowledge is made in different areas: mathematics, the natural sciences, the human sciences, history and the arts.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mathematics</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Natural sciences</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Human sciences</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">History</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The arts</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Turn 'Is climate change real?' into a knowledge question.",
+    "steps": [
+     "Move from the topic to how we know.",
+     "Use TOK concepts: evidence, certainty, consensus.",
+     "'How much certainty is needed before scientific knowledge should guide action?'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a knowledge question?",
+     "options": [
+      "To what extent can we trust eyewitness accounts?",
+      "What year did Mandela become president?",
+      "How many bones are in the body?",
+      "What is the capital of Kenya?"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is about how we know.",
+      "It is debatable.",
+      "The first."
+     ],
+     "explain": "It asks about the reliability of a way of knowing."
+    },
+    {
+     "type": "mcq",
+     "q": "What makes a question 'contestable'?",
+     "options": [
+      "Reasonable people could disagree about the answer",
+      "It has one correct answer",
+      "It is about maths",
+      "It is very short"
+     ],
+     "answer": 0,
+     "hints": [
+      "Open to debate.",
+      "More than one view.",
+      "Disagreement."
+     ],
+     "explain": "Contestable questions allow reasonable disagreement."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a TOK concept?",
+     "options": [
+      "Evidence",
+      "Photosynthesis",
+      "Algebra",
+      "Grammar"
+     ],
+     "answer": 0,
+     "hints": [
+      "It applies to all knowledge.",
+      "Not a subject topic.",
+      "Evidence."
+     ],
+     "explain": "Evidence is a concept used across all areas of knowledge."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is an area of knowledge in TOK?",
+     "options": [
+      "The arts",
+      "Sport",
+      "Cooking",
+      "Social media"
+     ],
+     "answer": 0,
+     "hints": [
+      "Five areas.",
+      "Maths, sciences, history…",
+      "The arts."
+     ],
+     "explain": "The arts are one of the TOK areas of knowledge."
+    },
+    {
+     "type": "mcq",
+     "q": "Why compare areas of knowledge?",
+     "options": [
+      "Different areas produce and test knowledge in different ways",
+      "To decide which subject is best",
+      "To memorise more facts",
+      "It isn't useful"
+     ],
+     "answer": 0,
+     "hints": [
+      "Maths uses proof.",
+      "Science uses experiments.",
+      "Different methods."
+     ],
+     "explain": "Comparing methods helps us understand the nature of knowledge."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Moving from topic to 'how do we know?'",
+     "Using TOK concepts",
+     "Comparing areas of knowledge",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored questions about how we know what we know.",
+   "teacher": "TOK: shows distinguishing subject-specific from knowledge questions and using TOK concepts across areas of knowledge.",
+   "done": "Ask how we know, not just what we know."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Extended Essay",
+   "domain": "Creativity and Metacognition",
+   "category": "Planning and Organisation",
+   "id": "dp11-ee-question",
+   "grade": 11,
+   "title": "A strong research question",
+   "topic": "Extended Essay: getting started",
+   "caps": "IB Diploma Programme Extended Essay: choosing a topic and writing a focused, researchable research question (4 000 words)",
+   "intention": "Today I am shaping a focused research question for the Extended Essay.",
+   "prompt": "What topic could you happily research for months?",
+   "lesson": [
+    {
+     "h": "What the EE is",
+     "say": "The Extended Essay is an independent research paper of up to 4 000 words, in one subject, guided by a supervisor.",
+     "html": "<p>Up to <b>4 000 words</b> · one subject · a supervisor</p>"
+    },
+    {
+     "h": "Narrow the topic",
+     "say": "Start broad, then narrow. Water becomes water in South Africa, then the effect of the 2018 Cape Town drought restrictions on household water use.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Water</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Water in South Africa</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cape Town 2018 restrictions and household use</span></div>"
+    },
+    {
+     "h": "A good research question",
+     "say": "A good research question is focused, researchable with the time and sources you have, arguable, and clearly linked to one subject.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Focused</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Researchable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Arguable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Subject-specific</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Improve: 'Is pollution bad?'",
+    "steps": [
+     "It is too broad and has an obvious answer.",
+     "Narrow it: a place, a pollutant, a measurable effect.",
+     "'To what extent did the 2020 lockdown reduce nitrogen dioxide levels in Johannesburg?'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is the best research question?",
+     "options": [
+      "To what extent did load-shedding affect small businesses in Soweto in 2023?",
+      "What is electricity?",
+      "Is load-shedding bad?",
+      "Electricity in Africa."
+     ],
+     "answer": 0,
+     "hints": [
+      "Focused.",
+      "Arguable.",
+      "The first."
+     ],
+     "explain": "It is focused, researchable and arguable."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is 'Is pollution bad?' a weak question?",
+     "options": [
+      "It is too broad and has an obvious answer",
+      "It is too specific",
+      "It is too long",
+      "It uses a question mark"
+     ],
+     "answer": 0,
+     "hints": [
+      "Could anyone disagree?",
+      "Is it focused?",
+      "Broad and obvious."
+     ],
+     "explain": "It is too broad and not really arguable."
+    },
+    {
+     "type": "num",
+     "q": "What is the maximum length of the Extended Essay, in words?",
+     "answer": "4 000",
+     "options": [
+      "4 000",
+      "2 000",
+      "10 000",
+      "1 500"
+     ],
+     "hints": [
+      "Four thousand.",
+      "A long essay.",
+      "4 000."
+     ],
+     "explain": "The EE is up to 4 000 words."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'researchable' mean?",
+     "options": [
+      "You can find enough evidence in the time you have",
+      "It has never been studied",
+      "It needs a laboratory",
+      "It is easy"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can you actually answer it?",
+      "With available sources.",
+      "Enough evidence."
+     ],
+     "explain": "A researchable question can be answered with accessible evidence."
+    },
+    {
+     "type": "mcq",
+     "q": "Who guides you during the Extended Essay?",
+     "options": [
+      "A supervisor",
+      "Nobody",
+      "Your classmates",
+      "The IB examiner directly"
+     ],
+     "answer": 0,
+     "hints": [
+      "A teacher at your school.",
+      "They meet with you.",
+      "Supervisor."
+     ],
+     "explain": "A supervisor at school guides the EE."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Narrowing the topic",
+     "Checking the four qualities",
+     "Rewriting a weak question",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how to shape a focused research question for the Extended Essay.",
+   "teacher": "Extended Essay: shows narrowing a topic and evaluating research questions for focus, feasibility, arguability and subject fit.",
+   "done": "Narrow the topic until the question is focused, researchable and arguable."
+  },
+  {
    "curriculum": "IEB",
    "subject": "Mathematics",
    "domain": "Logical and Analytical Thinking",
