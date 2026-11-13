@@ -14,6 +14,9 @@ export const CURRICULUM_NAME: Record<string, string> = {
 };
 /** Curricula with lessons of their own (the rest use the shared set). */
 const OWN = new Set(["Cambridge", "IB", "CAPS-SID"]);
+/** Curricula taught at a functional level rather than by grade: the learner sees all of its lessons up to their level, and
+ * CAPS lessons never stand in (CAPS for SID: a Grade 6 learner still works on the Foundation Phase lessons). */
+const FUNCTIONAL = new Set(["CAPS-SID"]);
 /** Whether a curriculum has lessons of its own (Mathematical Literacy is a choice only in the CAPS-aligned set). */
 export const hasOwnLessons = (curriculum?: string | null) => !!curriculum && OWN.has(curriculum);
 /** A short name for sentences: "CAPS for SID lessons are on their way". */
@@ -25,7 +28,10 @@ const takesMaths = (u: CatalogueEntry, maths?: "maths" | "lit" | null) =>
 
 /** The lessons for one learning area at one level, and whether they are CAPS lessons standing in for the learner's own. */
 export function lessonsIn(all: CatalogueEntry[], area: Area, grade: number, c: LessonChoice): { units: CatalogueEntry[]; standIn: boolean } {
-  const here = all.filter(u => areaOf(u.subject) === area && (u.grade === grade || (u.upTo !== undefined && grade >= u.grade && grade <= u.upTo)));
+  const inBand = (u: CatalogueEntry) => u.upTo !== undefined && grade >= u.grade && grade <= u.upTo;
+  if (c.curriculum && FUNCTIONAL.has(c.curriculum))
+    return { units: all.filter(u => u.curriculum === c.curriculum && areaOf(u.subject) === area && (u.upTo !== undefined ? inBand(u) : u.grade <= grade)), standIn: false };
+  const here = all.filter(u => areaOf(u.subject) === area && (u.grade === grade || inBand(u)));
   const shared = here.filter(u => !u.curriculum);
   if (hasOwnLessons(c.curriculum)) {
     const own = here.filter(u => u.curriculum === c.curriculum);

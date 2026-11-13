@@ -60,7 +60,12 @@ describe("content", () => {
       expect(life.standIn).toBe(false);
       expect(life.units.map(u => u.id)).toContain("sidw-taxi");
     }
-    expect(lessonsIn(CATALOGUE, "maths", 2, { curriculum: "CAPS-SID" }).units.map(u => u.id)).toEqual(["sid2-coins"]);
+    expect(lessonsIn(CATALOGUE, "maths", 2, { curriculum: "CAPS-SID" }).units.map(u => u.id)).toEqual(["sid0-count", "sid2-coins"]);
+    // A SID learner at Grade 6 works on the SID lessons, never on CAPS Grade 6; areas with no SID lessons stay empty.
+    const g6 = lessonsIn(CATALOGUE, "maths", 6, { curriculum: "CAPS-SID" });
+    expect(g6.standIn).toBe(false);
+    expect(g6.units.map(u => u.id)).toEqual(["sid0-count", "sid2-coins", "sid3-day"]);
+    expect(lessonsIn(CATALOGUE, "science", 6, { curriculum: "CAPS-SID" }).units).toEqual([]);
     expect(lessonsIn(CATALOGUE, "life", 9, { curriculum: "CAPS" }).units.some(u => u.curriculum)).toBe(false);
   });
 });
