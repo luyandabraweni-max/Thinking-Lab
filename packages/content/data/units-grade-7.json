@@ -1673,6 +1673,978 @@
    "parent": "Your child learned study methods such as testing yourself, spacing practice and mind maps.",
    "teacher": "Shows knowledge of evidence-based study strategies and planning study time.",
    "done": "Test yourself, spread study out, and make it visual."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-taxi",
+   "title": "Taking a taxi safely",
+   "topic": "Getting around",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (independence: travelling safely by minibus taxi)",
+   "intention": "Today I am learning to take a taxi safely.",
+   "prompt": "Where would you like to travel on your own?",
+   "lesson": [
+    {
+     "h": "Before you go",
+     "say": "Know where you are going. Have the right money ready. Tell someone at home where you are going.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Know the place</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Money ready</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tell someone</span></div>"
+    },
+    {
+     "h": "In the taxi",
+     "say": "Pass your money to the front. Tell the driver where you want to get off. Keep your bag on your lap.",
+     "html": "<p>When you want to get off, say: <b>Short left, please.</b></p>"
+    },
+    {
+     "h": "Staying safe",
+     "say": "Sit near other people. If you feel unsafe, get off at a busy place and phone someone you trust.",
+     "html": "<p>Feel unsafe? Get off somewhere <b>busy</b> and phone home.</p>"
+    }
+   ],
+   "example": {
+    "q": "You want to get off at the next corner. What do you say?",
+    "steps": [
+     "The driver needs to know.",
+     "Use the taxi words.",
+     "Say: Short left, please."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What should you have ready before the taxi comes?",
+     "pics": [
+      "💰",
+      "🍦",
+      "🎮"
+     ],
+     "options": [
+      "The right money",
+      "An ice cream",
+      "A game"
+     ],
+     "answer": 0,
+     "hints": [
+      "You must pay.",
+      "Have it in your hand.",
+      "The right money."
+     ],
+     "explain": "Have the right money ready to pay."
+    },
+    {
+     "type": "mcq",
+     "q": "How do you tell the driver you want to get off?",
+     "pics": [
+      "🗣️",
+      "🤫",
+      "😴"
+     ],
+     "options": [
+      "Say 'Short left, please'",
+      "Say nothing",
+      "Fall asleep"
+     ],
+     "answer": 0,
+     "hints": [
+      "The driver must hear you.",
+      "Use the taxi words.",
+      "Short left."
+     ],
+     "explain": "Say 'Short left, please' before your stop."
+    },
+    {
+     "type": "mcq",
+     "q": "You feel unsafe in a taxi. What do you do?",
+     "pics": [
+      "📞",
+      "🙈",
+      "🏃"
+     ],
+     "options": [
+      "Get off at a busy place and phone someone",
+      "Close your eyes",
+      "Jump out while it moves"
+     ],
+     "answer": 0,
+     "hints": [
+      "Choose the safe way.",
+      "Somewhere with people.",
+      "Then phone someone."
+     ],
+     "explain": "Get off safely where there are people, and phone someone you trust."
+    },
+    {
+     "type": "order",
+     "q": "Put the trip in order.",
+     "items": [
+      "Tell someone where you are going",
+      "Get the right money ready",
+      "Pay the driver",
+      "Say 'Short left' at your stop"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start at home.",
+      "Money before paying.",
+      "Getting off is last."
+     ],
+     "explain": "Tell someone, get money ready, pay, then say 'Short left'."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Practising the words",
+     "Planning before I go",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised planning and taking a taxi safely.",
+   "teacher": "Shows planning a journey, using taxi etiquette and applying personal safety strategies (independence and community access).",
+   "done": "Plan, have money ready, say 'Short left', and stay safe."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-budget",
+   "title": "Shopping with R50",
+   "topic": "Money",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (functional numeracy: shopping within a budget and checking change)",
+   "intention": "Today I am shopping with a budget.",
+   "prompt": "What do you buy at the shop most often?",
+   "lesson": [
+    {
+     "h": "Make a list",
+     "say": "Before shopping, write or draw a list of what you need.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍞 🥛 🍌</p><p>bread · milk · bananas</p>"
+    },
+    {
+     "h": "Add the prices",
+     "say": "Look at the price of each thing. Add them up. Make sure the total is not more than your money.",
+     "html": "<p>Bread R18 + milk R20 = <b>R38</b></p>"
+    },
+    {
+     "h": "Check your change",
+     "say": "If you pay with R50 and spend R38, you get R12 change. Count your change before you leave.",
+     "html": "<p>R50 − R38 = <b>R12</b> change</p>"
+    }
+   ],
+   "example": {
+    "q": "You have R50. Bread is R18 and milk is R20. Can you buy both?",
+    "steps": [
+     "Add: R18 + R20 = R38.",
+     "R38 is less than R50.",
+     "Yes. You get R12 change."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Bread costs R18 and milk costs R20. What is the total, in rand?",
+     "answer": "38",
+     "options": [
+      "38",
+      "28",
+      "48",
+      "2"
+     ],
+     "hints": [
+      "Add the prices.",
+      "18 + 20.",
+      "38."
+     ],
+     "explain": "R18 + R20 = R38."
+    },
+    {
+     "type": "mcq",
+     "q": "You have R50. Can you buy things that cost R38 in total?",
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "answer": 0,
+     "hints": [
+      "Is R38 more or less than R50?",
+      "Less.",
+      "Yes."
+     ],
+     "explain": "R38 is less than R50, so yes."
+    },
+    {
+     "type": "num",
+     "q": "You pay R50 for things that cost R38. How much change do you get, in rand?",
+     "answer": "12",
+     "options": [
+      "12",
+      "22",
+      "38",
+      "88"
+     ],
+     "hints": [
+      "Change = money paid − cost.",
+      "50 − 38.",
+      "12."
+     ],
+     "explain": "R50 − R38 = R12."
+    },
+    {
+     "type": "mcq",
+     "q": "What should you do before you leave the till?",
+     "pics": [
+      "🪙",
+      "🏃",
+      "📱"
+     ],
+     "options": [
+      "Count your change",
+      "Run out",
+      "Play on your phone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check your money.",
+      "Is the change right?",
+      "Count it."
+     ],
+     "explain": "Count your change to check it is right."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Making a list",
+     "Adding the prices",
+     "Checking my change",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised shopping with R50: adding prices and checking change.",
+   "teacher": "Shows planning purchases, adding prices, staying within a budget and checking change (functional numeracy: money).",
+   "done": "Make a list, add the prices, and check your change."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-instructions",
+   "title": "Following instructions at work",
+   "topic": "Work readiness",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (work readiness: following multi-step instructions)",
+   "intention": "Today I am learning to follow instructions at work.",
+   "prompt": "What is hard about following instructions?",
+   "lesson": [
+    {
+     "h": "Listen carefully",
+     "say": "At work, your supervisor gives instructions. Look at them, listen to all the words, and wait until they finish.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Look</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Listen</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wait</span></div>"
+    },
+    {
+     "h": "One step at a time",
+     "say": "Do the steps in order. If there are many steps, ask for them one at a time, or ask for a picture list.",
+     "html": "<p>Ask: <b>Can you show me, please?</b></p>"
+    },
+    {
+     "h": "Check and ask",
+     "say": "If you are not sure, ask. It is good to ask. When you finish, say: I am done. What next?",
+     "html": "<p>Say: <b>I am done. What next?</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Your supervisor says: 'Fold the towels, then put them on the shelf.' What do you do first?",
+    "steps": [
+     "There are two steps.",
+     "The first step is to fold the towels.",
+     "Fold the towels first, then put them on the shelf."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Your supervisor is talking. What do you do?",
+     "pics": [
+      "👀",
+      "📱",
+      "🚶"
+     ],
+     "options": [
+      "Look and listen",
+      "Play on your phone",
+      "Walk away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Pay attention.",
+      "Eyes and ears.",
+      "Look and listen."
+     ],
+     "explain": "Look at your supervisor and listen to every word."
+    },
+    {
+     "type": "mcq",
+     "q": "You do not understand the instruction. What do you do?",
+     "pics": [
+      "🙋",
+      "🤷",
+      "😴"
+     ],
+     "options": [
+      "Ask a question",
+      "Guess",
+      "Go to sleep"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is good to ask.",
+      "Don't guess.",
+      "Ask."
+     ],
+     "explain": "Ask, so you do the job right."
+    },
+    {
+     "type": "order",
+     "q": "'Sweep the floor, then empty the bin, then wash your hands.' Put the steps in order.",
+     "items": [
+      "Sweep the floor",
+      "Empty the bin",
+      "Wash your hands"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Listen to the order.",
+      "Sweep comes first.",
+      "Wash your hands last."
+     ],
+     "explain": "Sweep, empty the bin, wash your hands."
+    },
+    {
+     "type": "mcq",
+     "q": "You have finished your task. What do you say?",
+     "pics": [
+      "🗣️",
+      "🤐",
+      "🏠"
+     ],
+     "options": [
+      "'I am done. What next?'",
+      "Nothing",
+      "Go home without telling anyone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Your supervisor needs to know.",
+      "Tell them.",
+      "What next?"
+     ],
+     "explain": "Tell your supervisor and ask what is next."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Doing one step at a time",
+     "Asking questions",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised listening to and following instructions at work.",
+   "teacher": "Shows attending to, sequencing and clarifying multi-step workplace instructions (work readiness).",
+   "done": "Look, listen, do it in order, and ask when you're not sure."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-customers",
+   "title": "Greeting customers",
+   "topic": "Work readiness: customer service",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (work readiness: communicating politely with customers)",
+   "intention": "Today I am learning to greet and help customers.",
+   "prompt": "How do you like to be greeted in a shop?",
+   "lesson": [
+    {
+     "h": "First impressions",
+     "say": "When a customer comes in, look at them, smile and greet them. Say: Good morning, how can I help you?",
+     "html": "<p><b>Good morning, how can I help you?</b></p>"
+    },
+    {
+     "h": "Being polite",
+     "say": "Use please and thank you. Speak clearly, not too loud and not too soft.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Please</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Thank you</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Clear voice</span></div>"
+    },
+    {
+     "h": "When you can't help",
+     "say": "If you don't know the answer, say: Let me call someone to help you. Then find your supervisor.",
+     "html": "<p><b>Let me call someone to help you.</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A customer asks where the bread is, but you don't know. What do you say?",
+    "steps": [
+     "You don't know the answer.",
+     "Don't guess or ignore them.",
+     "Say: Let me call someone to help you."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "A customer walks in. What do you do first?",
+     "pics": [
+      "😊",
+      "🙈",
+      "📱"
+     ],
+     "options": [
+      "Smile and greet them",
+      "Hide",
+      "Look at your phone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Make them feel welcome.",
+      "Look and smile.",
+      "Greet them."
+     ],
+     "explain": "Smile and greet the customer."
+    },
+    {
+     "type": "mcq",
+     "q": "Which greeting is best at nine o'clock in the morning?",
+     "options": [
+      "'Good morning, how can I help you?'",
+      "'Good night!'",
+      "'What do you want?'"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is morning.",
+      "Be polite.",
+      "Good morning."
+     ],
+     "explain": "'Good morning, how can I help you?' is polite and right for the time."
+    },
+    {
+     "type": "mcq",
+     "q": "You can't answer a customer's question. What do you say?",
+     "options": [
+      "'Let me call someone to help you.'",
+      "'I don't know. Go away.'",
+      "Say nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Stay polite.",
+      "Find someone who knows.",
+      "Call someone."
+     ],
+     "explain": "Politely get someone who can help."
+    },
+    {
+     "type": "mcq",
+     "q": "A customer says thank you. What do you say?",
+     "pics": [
+      "😊",
+      "😠",
+      "🤐"
+     ],
+     "options": [
+      "'You're welcome.'",
+      "'Whatever.'",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Be polite back.",
+      "A friendly answer.",
+      "You're welcome."
+     ],
+     "explain": "Say 'You're welcome.'"
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Practising the words",
+     "Role-playing with someone",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised greeting and helping customers politely.",
+   "teacher": "Shows using polite greetings, appropriate volume and help-seeking scripts in customer service (work readiness: communication).",
+   "done": "Smile, greet, be polite, and call someone if you can't help."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-safety",
+   "title": "Safety signs at work",
+   "topic": "Work readiness: health and safety",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (work readiness: safety signs, protective clothing and reporting hazards)",
+   "intention": "Today I am learning to stay safe at work.",
+   "prompt": "What safety signs have you seen?",
+   "lesson": [
+    {
+     "h": "Safety colours",
+     "say": "At work, signs use colours. Red means stop or fire. Yellow means be careful. Green means safe, like the way out. Blue means you must do something, like wear gloves.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🔴 stop or fire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🟡 be careful</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🟢 safe</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🔵 must do</span></div>"
+    },
+    {
+     "h": "Protective clothing",
+     "say": "Some jobs need gloves, a mask or safety shoes. They protect your body. Always wear them when the sign says so.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🧤 😷 🥾</p><p>gloves · mask · safety shoes</p>"
+    },
+    {
+     "h": "If something goes wrong",
+     "say": "If you see a spill, a fire or someone hurt, do not try to fix it alone. Tell your supervisor straight away.",
+     "html": "<p><b>Tell your supervisor straight away.</b></p>"
+    }
+   ],
+   "example": {
+    "q": "You see a blue sign with gloves on it. What does it mean?",
+    "steps": [
+     "Blue signs tell you what you must do.",
+     "The picture shows gloves.",
+     "You must wear gloves here."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which colour means safe, like the way out?",
+     "pics": [
+      "🟢",
+      "🔴",
+      "🟡"
+     ],
+     "options": [
+      "Green",
+      "Red",
+      "Yellow"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of the exit sign.",
+      "It is like 'go'.",
+      "Green."
+     ],
+     "explain": "Green means safe."
+    },
+    {
+     "type": "mcq",
+     "q": "A sign shows a mask. What must you do?",
+     "pics": [
+      "😷",
+      "🍔",
+      "🎧"
+     ],
+     "options": [
+      "Wear a mask",
+      "Eat lunch",
+      "Listen to music"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sign shows what to wear.",
+      "A mask.",
+      "Wear it."
+     ],
+     "explain": "Wear a mask where the sign says so."
+    },
+    {
+     "type": "mcq",
+     "q": "You see water spilled on the floor. What do you do?",
+     "pics": [
+      "🗣️",
+      "🏃",
+      "🙈"
+     ],
+     "options": [
+      "Tell your supervisor",
+      "Run through it",
+      "Ignore it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Someone could slip.",
+      "Don't ignore it.",
+      "Tell someone."
+     ],
+     "explain": "Tell your supervisor so nobody slips."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a yellow sign usually mean?",
+     "pics": [
+      "🟡",
+      "🟢",
+      "🔵"
+     ],
+     "options": [
+      "Be careful",
+      "The safe way out",
+      "Free food"
+     ],
+     "answer": 0,
+     "hints": [
+      "Yellow is a warning colour.",
+      "Watch out.",
+      "Be careful."
+     ],
+     "explain": "Yellow signs warn you to be careful."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Learning the colours",
+     "Knowing who to tell",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt safety sign colours and what to do if something goes wrong at work.",
+   "teacher": "Shows interpreting safety sign colours and symbols, using protective equipment and reporting hazards (work readiness: health and safety).",
+   "done": "Know the colours, wear your protection, and report problems."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-cleaning",
+   "title": "Cleaning a workspace",
+   "topic": "Work readiness: practical skills",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (work readiness: following a cleaning routine safely)",
+   "intention": "Today I am learning to clean a workspace in the right order.",
+   "prompt": "What jobs do you do at home?",
+   "lesson": [
+    {
+     "h": "Get ready",
+     "say": "Before cleaning, put on gloves and get your cloth, spray and bin bag.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gloves</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cloth</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spray</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bin bag</span></div>"
+    },
+    {
+     "h": "Top to bottom",
+     "say": "Clean from the top to the bottom, so dirt falls down to the floor. Wipe the tables before you sweep the floor.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Shelves</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tables</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Floor</span></div>"
+    },
+    {
+     "h": "Finish well",
+     "say": "Put rubbish in the bin, put the cleaning things away, take off your gloves, and wash your hands.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rubbish in the bin</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pack away</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wash hands</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Should you sweep the floor before or after wiping the table?",
+    "steps": [
+     "Crumbs from the table fall on the floor.",
+     "If you sweep first, the floor gets dirty again.",
+     "Wipe the table first, then sweep."
+    ]
+   },
+   "questions": [
+    {
+     "type": "order",
+     "q": "Put the cleaning steps in order.",
+     "items": [
+      "Put on gloves",
+      "Wipe the table",
+      "Sweep the floor",
+      "Wash your hands"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Gloves go on first.",
+      "Top to bottom.",
+      "Wash your hands last."
+     ],
+     "explain": "Gloves, table, floor, wash hands."
+    },
+    {
+     "type": "mcq",
+     "q": "What do you put on before using cleaning spray?",
+     "pics": [
+      "🧤",
+      "🧢",
+      "🕶️"
+     ],
+     "options": [
+      "Gloves",
+      "A cap",
+      "Sunglasses"
+     ],
+     "answer": 0,
+     "hints": [
+      "Protect your hands.",
+      "Spray can hurt skin.",
+      "Gloves."
+     ],
+     "explain": "Gloves protect your hands from the spray."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do we clean from top to bottom?",
+     "options": [
+      "Dirt falls down, so we clean the floor last",
+      "It is faster to climb",
+      "The floor is always clean",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Where does dirt go?",
+      "It falls down.",
+      "Floor last."
+     ],
+     "explain": "Dirt falls, so the floor is cleaned last."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Doing it top to bottom",
+     "Remembering the gloves",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt a cleaning routine done safely and in the right order.",
+   "teacher": "Shows sequencing a cleaning routine, using protective equipment and applying top-to-bottom logic (work readiness: practical skills).",
+   "done": "Gloves on, top to bottom, pack away and wash your hands."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-help",
+   "title": "Asking for help",
+   "topic": "Self-advocacy",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (self-advocacy: asking for help at work and at home)",
+   "intention": "Today I am learning how to ask for help.",
+   "prompt": "Who do you ask when you need help?",
+   "lesson": [
+    {
+     "h": "Everyone needs help",
+     "say": "Asking for help is a strength. Workers ask for help every day.",
+     "html": "<p>Asking for help is <b>smart</b>.</p>"
+    },
+    {
+     "h": "Who to ask",
+     "say": "At work, ask your supervisor or a colleague you trust. At home, ask a family member.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Supervisor</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Colleague</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Family</span></div>"
+    },
+    {
+     "h": "What to say",
+     "say": "Say what you need clearly: Excuse me, can you help me, please? I don't know how to do this.",
+     "html": "<p><b>Excuse me, can you help me, please?</b></p>"
+    }
+   ],
+   "example": {
+    "q": "The printer is jammed and you don't know how to fix it. What do you do?",
+    "steps": [
+     "You don't know how to fix it.",
+     "Don't force it or leave it.",
+     "Say: Excuse me, can you help me with the printer, please?"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "You are stuck on a task. What do you do?",
+     "pics": [
+      "🙋",
+      "😤",
+      "🚪"
+     ],
+     "options": [
+      "Ask for help",
+      "Get angry",
+      "Leave"
+     ],
+     "answer": 0,
+     "hints": [
+      "Asking is smart.",
+      "Find someone.",
+      "Ask for help."
+     ],
+     "explain": "Ask for help."
+    },
+    {
+     "type": "mcq",
+     "q": "Who can you ask for help at work?",
+     "pics": [
+      "👷",
+      "🐶",
+      "📺"
+     ],
+     "options": [
+      "Your supervisor",
+      "A dog",
+      "The TV"
+     ],
+     "answer": 0,
+     "hints": [
+      "A person at work.",
+      "The one in charge.",
+      "Your supervisor."
+     ],
+     "explain": "Ask your supervisor or a colleague."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best way to ask?",
+     "options": [
+      "'Excuse me, can you help me, please?'",
+      "'Do this for me!'",
+      "Shout 'help' loudly"
+     ],
+     "answer": 0,
+     "hints": [
+      "Be polite.",
+      "Say please.",
+      "The first one."
+     ],
+     "explain": "A polite, clear question works best."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Knowing who to ask",
+     "Practising the words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised asking for help clearly and politely.",
+   "teacher": "Shows recognising when help is needed, identifying appropriate people and using a polite help-seeking script (self-advocacy).",
+   "done": "It is smart to ask: 'Excuse me, can you help me, please?'"
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Planning and Organisation",
+   "subject": "Life and work skills",
+   "grade": 7,
+   "upTo": 12,
+   "id": "sidw-time",
+   "title": "Being on time",
+   "topic": "Work readiness: time",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life and work skills (work readiness: reading digital time and planning to arrive on time)",
+   "intention": "Today I am learning to plan so I arrive on time.",
+   "prompt": "What makes it hard to be on time?",
+   "lesson": [
+    {
+     "h": "Why time matters",
+     "say": "At work, you must arrive on time. If you are late, other people have to wait.",
+     "html": "<p>Work starts at <b>8:00</b>.</p>"
+    },
+    {
+     "h": "Reading the clock",
+     "say": "On a digital clock, the first number is the hour. 7:30 means half past seven.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">7:00 seven o'clock</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">7:30 half past seven</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8:00 eight o'clock</span></div>"
+    },
+    {
+     "h": "Planning to arrive",
+     "say": "Find out how long the trip takes, then leave early. If the trip takes 30 minutes and work starts at 8:00, leave by 7:30 or a bit earlier. If you will be late, phone your supervisor.",
+     "html": "<p>Start 8:00 − trip 30 minutes = leave by <b>7:30</b></p><p>Running late? <b>Phone your supervisor.</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Work starts at 9:00. The taxi takes 30 minutes. When should you leave?",
+    "steps": [
+     "Work starts at 9:00.",
+     "The trip takes 30 minutes.",
+     "Leave by 8:30, or a bit earlier to be safe."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What time does 7:30 show?",
+     "options": [
+      "Half past seven",
+      "Seven o'clock",
+      "Three o'clock",
+      "Half past three"
+     ],
+     "answer": 0,
+     "hints": [
+      "The first number is the hour: 7.",
+      "30 minutes is half an hour.",
+      "Half past seven."
+     ],
+     "explain": "7:30 is half past seven."
+    },
+    {
+     "type": "mcq",
+     "q": "Work starts at 8:00. The trip takes 30 minutes. When should you leave?",
+     "options": [
+      "By 7:30",
+      "At 8:00",
+      "At 8:30",
+      "At 9:00"
+     ],
+     "answer": 0,
+     "hints": [
+      "Leave before work starts.",
+      "30 minutes before 8:00.",
+      "7:30."
+     ],
+     "explain": "30 minutes before 8:00 is 7:30."
+    },
+    {
+     "type": "mcq",
+     "q": "The taxi is late and you will be late for work. What do you do?",
+     "pics": [
+      "📞",
+      "🙈",
+      "🏠"
+     ],
+     "options": [
+      "Phone your supervisor",
+      "Say nothing",
+      "Go home"
+     ],
+     "answer": 0,
+     "hints": [
+      "Your supervisor should know.",
+      "Tell them.",
+      "Phone them."
+     ],
+     "explain": "Phone your supervisor to tell them."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Reading the clock",
+     "Working out when to leave",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised reading the time and planning to arrive at work on time.",
+   "teacher": "Shows reading digital time, calculating departure times and communicating lateness (work readiness: time management).",
+   "done": "Know the start time, leave early, and phone if you'll be late."
   }
  ],
  "words": {

@@ -1,18 +1,23 @@
 import { areaOf, type Area } from "./curriculum";
 import type { CatalogueEntry } from "./types";
 
-// Which lessons a learner sees. Most lessons are the shared CAPS-aligned set. Some curricula (Cambridge) have their own
+// Which lessons a learner sees. Most lessons are the shared CAPS-aligned set. Some curricula (Cambridge, IB, CAPS for SID) have their own
 // lessons: where those exist for an area and level, the learner sees only them; until they are written, the CAPS
 // lessons for that grade stand in. From Grade 10, CAPS and IEB learners take Mathematics or Mathematical Literacy.
 
 /** The curricula a family can choose. Stored as these names. */
-export const CURRICULA = ["CAPS", "IEB", "Cambridge", "D-CAPS", "NCF", "Other"] as const;
+export const CURRICULA = ["CAPS", "IEB", "Cambridge", "IB", "CAPS-SID", "D-CAPS", "NCF", "Other"] as const;
 export const CURRICULUM_NAME: Record<string, string> = {
   CAPS: "CAPS (public schools)", IEB: "IEB (independent schools)", Cambridge: "Cambridge (IGCSE and international)",
+  IB: "IB (International Baccalaureate)", "CAPS-SID": "CAPS for SID (severe intellectual disability)",
   "D-CAPS": "D-CAPS (differentiated)", NCF: "NCF (early years)", Other: "Other or not sure"
 };
 /** Curricula with lessons of their own (the rest use the shared set). */
-const OWN = new Set(["Cambridge"]);
+const OWN = new Set(["Cambridge", "IB", "CAPS-SID"]);
+/** Whether a curriculum has lessons of its own (Mathematical Literacy is a choice only in the CAPS-aligned set). */
+export const hasOwnLessons = (curriculum?: string | null) => !!curriculum && OWN.has(curriculum);
+/** A short name for sentences: "CAPS for SID lessons are on their way". */
+export const curriculumShort = (curriculum: string) => (curriculum === "CAPS-SID" ? "CAPS for SID" : curriculum);
 
 export interface LessonChoice { curriculum?: string | null; maths?: "maths" | "lit" | null }
 const takesMaths = (u: CatalogueEntry, maths?: "maths" | "lit" | null) =>
@@ -20,9 +25,9 @@ const takesMaths = (u: CatalogueEntry, maths?: "maths" | "lit" | null) =>
 
 /** The lessons for one learning area at one level, and whether they are CAPS lessons standing in for the learner's own. */
 export function lessonsIn(all: CatalogueEntry[], area: Area, grade: number, c: LessonChoice): { units: CatalogueEntry[]; standIn: boolean } {
-  const here = all.filter(u => areaOf(u.subject) === area && u.grade === grade);
+  const here = all.filter(u => areaOf(u.subject) === area && (u.grade === grade || (u.upTo !== undefined && grade >= u.grade && grade <= u.upTo)));
   const shared = here.filter(u => !u.curriculum);
-  if (c.curriculum && OWN.has(c.curriculum)) {
+  if (hasOwnLessons(c.curriculum)) {
     const own = here.filter(u => u.curriculum === c.curriculum);
     return own.length ? { units: own, standIn: false } : { units: shared, standIn: shared.length > 0 };
   }

@@ -1,4 +1,4 @@
-import { AREAS, CATALOGUE, DEFAULT_LEVEL, lessonsIn, levelName, type Area, type Cohort } from "@tl/content";
+import { AREAS, CATALOGUE, curriculumShort, DEFAULT_LEVEL, lessonsIn, levelName, type Area, type Cohort } from "@tl/content";
 import type { Learner } from "@tl/data";
 import { levelFromName } from "./logic";
 
@@ -20,7 +20,7 @@ export function LearnHome({ learner, levels = {}, mathsSubject, curriculum, onPi
       {areas.length ? areas.map(a => (
         <div key={a} className="tl-stack">
           <h2>{AREAS[a][0]}{levelOf(a) !== level ? <span className="tl-muted"> · {levelName(levelOf(a))}</span> : null}</h2>
-          {found(a).standIn ? <p className="tl-muted">{choice.curriculum} lessons for this are on their way. Until then, these are the CAPS lessons for the same grade.</p> : null}
+          {found(a).standIn ? <p className="tl-muted">{curriculumShort(choice.curriculum)} lessons for this are on their way. Until then, these are the CAPS lessons for the same grade.</p> : null}
           <div className="grid">{unitsIn(a).map(u =>
             <button key={u.id} className="tile" onClick={() => onPick(u.id)}><span className="tile-t">{u.title}</span><span className="muted">{u.topic}</span></button>)}</div>
         </div>)) : <p className="muted">No lessons at this level yet.</p>}

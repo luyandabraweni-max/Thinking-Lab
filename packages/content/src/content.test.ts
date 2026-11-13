@@ -22,7 +22,7 @@ describe("content", () => {
       const pack = await loadPack(packOf(g));
       expect(pack.units.map(u => u.id)).toEqual(CATALOGUE.filter(u => u.grade === g).map(u => u.id));
     }
-    expect(CATALOGUE).toHaveLength(225);
+    expect(CATALOGUE).toHaveLength(256);
   });
   it("has complete, answerable questions in every lesson", async () => {
     const bad: string[] = [];
@@ -51,5 +51,16 @@ describe("content", () => {
     const early = lessonsIn(CATALOGUE, "maths", 9, { curriculum: "Cambridge" }); // no Cambridge Grade 9 lessons yet
     expect(early.standIn).toBe(true);
     expect(early.units.length).toBeGreaterThan(0);
+  });
+  it("gives IB and CAPS for SID learners their own lessons, and work-readiness lessons at every teen level", () => {
+    expect(lessonsIn(CATALOGUE, "science", 9, { curriculum: "IB" }).units.map(u => u.id)).toEqual(["ib9-sci-fair-test", "ib9-sci-ecosystems"]);
+    expect(lessonsIn(CATALOGUE, "language", 10, { curriculum: "IB" }).units.every(u => u.curriculum === "IB")).toBe(true);
+    for (const g of [7, 9, 12]) {
+      const life = lessonsIn(CATALOGUE, "life", g, { curriculum: "CAPS-SID" });
+      expect(life.standIn).toBe(false);
+      expect(life.units.map(u => u.id)).toContain("sidw-taxi");
+    }
+    expect(lessonsIn(CATALOGUE, "maths", 2, { curriculum: "CAPS-SID" }).units.map(u => u.id)).toEqual(["sid2-coins"]);
+    expect(lessonsIn(CATALOGUE, "life", 9, { curriculum: "CAPS" }).units.some(u => u.curriculum)).toBe(false);
   });
 });

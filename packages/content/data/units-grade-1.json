@@ -1741,6 +1741,225 @@
    "parent": "Your child learned about kind words, listening, taking turns and being honest.",
    "teacher": "Shows understanding of manners, turn-taking, honesty and respectful behaviour.",
    "done": "Kind words and actions help everyone feel good."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "id": "sid1-hello",
+   "grade": 1,
+   "subject": "English Home Language",
+   "title": "Saying hello",
+   "topic": "Listening and speaking: greetings",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Home Language (listening and speaking: greetings in everyday situations)",
+   "intention": "Today I am learning to say hello and goodbye.",
+   "prompt": "Who do you say hello to every day?",
+   "lesson": [
+    {
+     "h": "Hello and goodbye",
+     "say": "When we meet someone, we say hello. When we leave, we say goodbye.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">👋 Hello</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">👋 Goodbye</span></div>"
+    },
+    {
+     "h": "Look and smile",
+     "say": "When you say hello, look at the person and smile. You can wave too.",
+     "html": "<p style=\"font-size:2rem;margin:0\">😊 👋</p>"
+    },
+    {
+     "h": "My name",
+     "say": "You can say: Hello, my name is. Then say your name.",
+     "html": "<p><b>Hello, my name is ___.</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Gogo comes to visit. What do you say?",
+    "steps": [
+     "Gogo has just arrived.",
+     "We are meeting her.",
+     "We say: Hello, Gogo!"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Your teacher arrives in the morning. What do you say?",
+     "pics": [
+      "👋",
+      "😴",
+      "🍎"
+     ],
+     "options": [
+      "Hello",
+      "Goodnight",
+      "Apple"
+     ],
+     "answer": 0,
+     "hints": [
+      "You are meeting your teacher.",
+      "We greet people we meet.",
+      "Hello."
+     ],
+     "explain": "We say hello when we meet someone."
+    },
+    {
+     "type": "mcq",
+     "q": "Your friend is going home. What do you say?",
+     "pics": [
+      "👋",
+      "🎂",
+      "🐶"
+     ],
+     "options": [
+      "Goodbye",
+      "Happy birthday",
+      "Dog"
+     ],
+     "answer": 0,
+     "hints": [
+      "Your friend is leaving.",
+      "What do we say when someone leaves?",
+      "Goodbye."
+     ],
+     "explain": "We say goodbye when someone leaves."
+    },
+    {
+     "type": "order",
+     "q": "Put it in order.",
+     "items": [
+      "Look at the person",
+      "Smile",
+      "Say hello"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "First we look.",
+      "Then we smile.",
+      "Then we say hello."
+     ],
+     "explain": "Look, smile, say hello."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Practising with someone",
+     "The pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised greeting people: hello, goodbye and saying their name.",
+   "teacher": "Shows using greetings in context with eye contact and gesture (functional listening and speaking).",
+   "done": "Look, smile, and say hello."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "id": "sid1-teeth",
+   "grade": 1,
+   "subject": "Life Skills",
+   "title": "Brushing my teeth",
+   "topic": "Personal and social well-being: hygiene",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life Skills (personal and social well-being: personal hygiene routines)",
+   "intention": "Today I am learning how to brush my teeth.",
+   "prompt": "When do you brush your teeth?",
+   "lesson": [
+    {
+     "h": "Why we brush",
+     "say": "We brush our teeth to keep them clean and strong. We brush in the morning and at night.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">☀️ morning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🌙 night</span></div>"
+    },
+    {
+     "h": "What I need",
+     "say": "You need a toothbrush, toothpaste and water. Use a little toothpaste, the size of a pea.",
+     "html": "<p>Toothbrush · toothpaste · 💧 water</p>"
+    },
+    {
+     "h": "How to brush",
+     "say": "Wet the brush. Put on toothpaste. Brush every tooth, front and back. Spit and rinse.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wet</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Toothpaste</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Brush</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spit</span></div>"
+    }
+   ],
+   "example": {
+    "q": "It is bedtime. What do you do before you sleep?",
+    "steps": [
+     "It is night.",
+     "We brush our teeth at night.",
+     "Brush your teeth, then sleep."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "When do we brush our teeth?",
+     "pics": [
+      "🌙",
+      "🏫",
+      "⚽"
+     ],
+     "options": [
+      "At night, before bed",
+      "Only at school",
+      "When playing soccer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Morning and…",
+      "…night.",
+      "Before bed."
+     ],
+     "explain": "We brush in the morning and at night."
+    },
+    {
+     "type": "mcq",
+     "q": "What do we brush our teeth with?",
+     "pics": [
+      "🪥",
+      "🍴",
+      "🖍️"
+     ],
+     "options": [
+      "A toothbrush",
+      "A fork",
+      "A crayon"
+     ],
+     "answer": 0,
+     "hints": [
+      "It has soft bristles.",
+      "Not for eating or drawing.",
+      "A toothbrush."
+     ],
+     "explain": "We use a toothbrush."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps in order.",
+     "items": [
+      "Wet the brush",
+      "Put on toothpaste",
+      "Brush every tooth",
+      "Spit and rinse"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "First we wet the brush.",
+      "Toothpaste comes next.",
+      "Spit and rinse comes last."
+     ],
+     "explain": "Wet, toothpaste, brush, spit and rinse."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Doing the steps in order",
+     "Practising at home",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt when and how to brush their teeth.",
+   "teacher": "Shows sequencing a personal hygiene routine (personal and social well-being).",
+   "done": "Brush in the morning and at night, every tooth."
   }
  ],
  "words": {

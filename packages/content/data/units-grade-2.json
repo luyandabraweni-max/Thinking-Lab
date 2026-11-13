@@ -1706,6 +1706,219 @@
    "parent": "Your child learned how to cross the road safely and to wear a seatbelt. Practise on your next walk together.",
    "teacher": "Shows knowledge of pedestrian rules, traffic light signals and passenger safety.",
    "done": "Stop, look and listen before you cross the road."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "id": "sid2-coins",
+   "grade": 2,
+   "subject": "Mathematics",
+   "title": "Coins I can use",
+   "topic": "Money",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Mathematics (functional numeracy: recognising rand coins and paying)",
+   "intention": "Today I am learning R1, R2 and R5 coins.",
+   "prompt": "What would you like to buy at the shop?",
+   "lesson": [
+    {
+     "h": "Rand coins",
+     "say": "In South Africa we use rand. These are coins: one rand, two rand and five rand.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R5</span></div>"
+    },
+    {
+     "h": "Which is worth more?",
+     "say": "Five rand is worth more than two rand. Two rand is worth more than one rand.",
+     "html": "<p><b>R5</b> buys the most.</p>"
+    },
+    {
+     "h": "Paying",
+     "say": "To pay two rand, you can give one R2 coin, or two R1 coins.",
+     "html": "<p>R1 + R1 = <b>R2</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A sweet costs R2. You have R1 and R1. Can you buy it?",
+    "steps": [
+     "Count your money: R1 and R1.",
+     "R1 + R1 = R2.",
+     "Yes, you can buy the sweet."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which coin is worth the most?",
+     "options": [
+      "R5",
+      "R2",
+      "R1"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the numbers.",
+      "Which number is biggest?",
+      "5."
+     ],
+     "explain": "R5 is worth the most."
+    },
+    {
+     "type": "mcq",
+     "q": "Two R1 coins make…",
+     "options": [
+      "R2",
+      "R5",
+      "R1"
+     ],
+     "answer": 0,
+     "hints": [
+      "R1 and R1.",
+      "1 + 1.",
+      "R2."
+     ],
+     "explain": "R1 + R1 = R2."
+    },
+    {
+     "type": "mcq",
+     "q": "An apple costs R5. Which coin pays for it?",
+     "options": [
+      "One R5 coin",
+      "One R1 coin",
+      "One R2 coin"
+     ],
+     "answer": 0,
+     "hints": [
+      "The apple costs R5.",
+      "Which coin is R5?",
+      "The R5 coin."
+     ],
+     "explain": "One R5 coin pays R5."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Looking at the numbers on coins",
+     "Adding coins together",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child recognised R1, R2 and R5 and used them to pay.",
+   "teacher": "Shows recognising South African coins, comparing their value and making simple amounts (functional numeracy: money).",
+   "done": "R5 is worth the most. R1 + R1 = R2."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "id": "sid2-feelings",
+   "grade": 2,
+   "subject": "Life Skills",
+   "title": "How I feel",
+   "topic": "Personal and social well-being: feelings",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life Skills (personal and social well-being: naming and managing feelings)",
+   "intention": "Today I am naming my feelings.",
+   "prompt": "How do you feel today?",
+   "lesson": [
+    {
+     "h": "Feelings",
+     "say": "Everyone has feelings. We can feel happy, sad, angry or scared.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">😊 happy</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">😢 sad</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">😠 angry</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">😨 scared</span></div>"
+    },
+    {
+     "h": "My body tells me",
+     "say": "When I am angry, my face gets hot and my hands make fists. When I am sad, I might cry.",
+     "html": "<p>Notice your <b>body</b>.</p>"
+    },
+    {
+     "h": "What I can do",
+     "say": "When I have a big feeling, I can breathe slowly, ask for a hug, or tell a grown-up.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Breathe slowly</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Ask for a hug</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tell a grown-up</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Sipho's tower fell down. His hands are fists and his face is red. How does he feel?",
+    "steps": [
+     "Look at the clues: fists and a red face.",
+     "These are clues for angry.",
+     "Sipho feels angry. He can breathe slowly."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which face is happy?",
+     "pics": [
+      "😊",
+      "😢",
+      "😠"
+     ],
+     "options": [
+      "Happy",
+      "Sad",
+      "Angry"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for a smile.",
+      "Happy faces smile.",
+      "The first one."
+     ],
+     "explain": "😊 is happy."
+    },
+    {
+     "type": "mcq",
+     "q": "Thandi lost her toy and is crying. How does she feel?",
+     "pics": [
+      "😢",
+      "😊",
+      "😴"
+     ],
+     "options": [
+      "Sad",
+      "Happy",
+      "Sleepy"
+     ],
+     "answer": 0,
+     "hints": [
+      "She is crying.",
+      "Crying can mean…",
+      "…sad."
+     ],
+     "explain": "Thandi feels sad."
+    },
+    {
+     "type": "mcq",
+     "q": "You feel very angry. What can you do?",
+     "pics": [
+      "🌬️",
+      "👊",
+      "🏃"
+     ],
+     "options": [
+      "Breathe slowly",
+      "Hit someone",
+      "Run away from everyone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Choose something safe.",
+      "Something that calms you.",
+      "Breathe slowly."
+     ],
+     "explain": "Breathing slowly helps the angry feeling get smaller."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The faces",
+     "Thinking about my body",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child named feelings and practised a safe way to calm down.",
+   "teacher": "Shows naming four basic emotions, recognising body cues and choosing a calming strategy (personal and social well-being).",
+   "done": "I can name my feelings and ask for help."
   }
  ],
  "words": {

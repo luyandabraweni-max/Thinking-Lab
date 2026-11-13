@@ -24,7 +24,7 @@ const byLevel = new Map();
 for (const u of units) { const k = levelKey(u.grade); if (!byLevel.has(k)) byLevel.set(k, []); byLevel.get(k).push(u); }
 for (const [k, us] of byLevel) write(`units-${k}.json`, { level: k, units: us, words: Object.fromEntries(us.filter(u => words[u.id]).map(u => [u.id, words[u.id]])) });
 // The catalogue: every lesson's summary, small enough to ship with the app.
-write("catalogue.json", units.map(u => ({ id: u.id, grade: u.grade, subject: u.subject, title: u.title, topic: u.topic, domain: u.domain, category: u.category, caps: u.caps, ...(u.curriculum ? { curriculum: u.curriculum } : {}), pack: levelKey(u.grade) })));
+write("catalogue.json", units.map(u => ({ id: u.id, grade: u.grade, subject: u.subject, title: u.title, topic: u.topic, domain: u.domain, category: u.category, caps: u.caps, ...(u.curriculum ? { curriculum: u.curriculum } : {}), ...(u.upTo !== undefined ? { upTo: u.upTo } : {}), pack: levelKey(u.grade) })));
 write("skills.json", skills);
 // The live stylesheet (games, lessons, display modes) and its fonts, for the platform's design system. Its tokens
 // (lines 8 to 82) already live in packages/ui/src/tokens.css, so only the font faces and the rules after them are copied.

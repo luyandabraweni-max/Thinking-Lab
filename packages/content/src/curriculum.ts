@@ -14,9 +14,9 @@ export const curriculumName = (g: number) => (g === -1 ? "NCF aligned" : g === 1
 export type Area = "maths" | "language" | "life" | "science" | "creative";
 export const AREAS: Record<Area, [string, string[]]> = {
   maths: ["Maths", ["Mathematics", "Mathematical Literacy", "Exploring Mathematics"]],
-  language: ["Language", ["English Home Language", "English", "Communication"]],
+  language: ["Language", ["English Home Language", "English", "Language and Literature", "Communication"]],
   life: ["Life skills", ["Life Skills", "Life Orientation", "Life and work skills", "Identity and Belonging", "Well-being"]],
-  science: ["Science and technology", ["Natural Sciences and Technology", "Natural Sciences", "Life Sciences", "Combined Science", "Knowledge and Understanding of the World", "Information and Communication Technology"]],
+  science: ["Science and technology", ["Natural Sciences and Technology", "Natural Sciences", "Life Sciences", "Combined Science", "Sciences", "Knowledge and Understanding of the World", "Information and Communication Technology"]],
   creative: ["Creativity", ["Creativity"]]
 };
 export const areaOf = (subject: string): Area => (Object.keys(AREAS) as Area[]).find(a => AREAS[a][1].includes(subject)) ?? "life";

@@ -30,7 +30,9 @@ export interface Unit {
   passage?: string;
   /** Lessons written for one curriculum only, such as Cambridge IGCSE. No tag: the shared CAPS-aligned set. */
   curriculum?: string;
+  /** Lessons for an age band rather than one grade (CAPS for SID work readiness): shown from `grade` up to this level. */
+  upTo?: number;
 }
-export type CatalogueEntry = Pick<Unit, "id" | "grade" | "subject" | "title" | "topic" | "domain" | "category" | "caps" | "curriculum"> & { pack: string };
+export type CatalogueEntry = Pick<Unit, "id" | "grade" | "subject" | "title" | "topic" | "domain" | "category" | "caps" | "curriculum" | "upTo"> & { pack: string };
 export interface WordHelp { words?: [string, string, string][]; phrases?: [string, string][] }
 export interface Pack { level: string; units: Unit[]; words: Record<string, WordHelp> }

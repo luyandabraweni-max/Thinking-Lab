@@ -1658,6 +1658,250 @@
    "parent": "Your child learned about dangerous places to play, electricity and warning signs.",
    "teacher": "Shows identification of unsafe play areas, electricity dangers and common hazard symbols.",
    "done": "Know the warning signs and play in safe places."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "id": "sid3-signs",
+   "grade": 3,
+   "subject": "English Home Language",
+   "title": "Signs I need to know",
+   "topic": "Reading: functional signs",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Home Language (functional reading: everyday sign words and symbols)",
+   "intention": "Today I am reading important signs.",
+   "prompt": "What signs do you see on the way to school?",
+   "lesson": [
+    {
+     "h": "Signs help us",
+     "say": "Signs tell us important things. Some signs have words. Some signs have pictures.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🚻 🛑 🚪</p>"
+    },
+    {
+     "h": "Important words",
+     "say": "Stop means do not go. Toilet shows where the bathroom is. Exit shows the way out.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">STOP</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">TOILET</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">EXIT</span></div>"
+    },
+    {
+     "h": "Danger",
+     "say": "Danger means stay away. If you see a danger sign, do not touch, and tell a grown-up.",
+     "html": "<p>⚠️ <b>DANGER</b>: stay away.</p>"
+    }
+   ],
+   "example": {
+    "q": "You need the bathroom at the shops. Which sign do you look for?",
+    "steps": [
+     "You need the bathroom.",
+     "The bathroom sign says TOILET.",
+     "Look for the TOILET sign 🚻."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does STOP mean?",
+     "pics": [
+      "🛑",
+      "🏃",
+      "🎉"
+     ],
+     "options": [
+      "Do not go",
+      "Run fast",
+      "Party"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sign is red.",
+      "It tells you not to move.",
+      "Do not go."
+     ],
+     "explain": "STOP means do not go."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sign shows the way out?",
+     "pics": [
+      "🚪",
+      "🍔",
+      "🛏️"
+     ],
+     "options": [
+      "EXIT",
+      "FOOD",
+      "BED"
+     ],
+     "answer": 0,
+     "hints": [
+      "Out of a building.",
+      "Through a door.",
+      "EXIT."
+     ],
+     "explain": "EXIT shows the way out."
+    },
+    {
+     "type": "mcq",
+     "q": "You see a ⚠️ DANGER sign. What do you do?",
+     "pics": [
+      "🙅",
+      "👉",
+      "🧗"
+     ],
+     "options": [
+      "Stay away and tell a grown-up",
+      "Touch it",
+      "Climb on it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Danger means it can hurt you.",
+      "Stay away.",
+      "Tell a grown-up."
+     ],
+     "explain": "Stay away and tell a grown-up."
+    },
+    {
+     "type": "mcq",
+     "q": "Where is the bathroom?",
+     "pics": [
+      "🚻",
+      "🛑",
+      "⚠️"
+     ],
+     "options": [
+      "TOILET",
+      "STOP",
+      "DANGER"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which sign is for the bathroom?",
+      "It shows people.",
+      "TOILET."
+     ],
+     "explain": "The TOILET sign shows the bathroom."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pictures on the signs",
+     "Saying the words aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read signs that keep them safe: STOP, TOILET, EXIT and DANGER.",
+   "teacher": "Shows reading and responding to common functional sign words and symbols (functional reading).",
+   "done": "STOP, TOILET, EXIT and DANGER keep me safe."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "id": "sid3-day",
+   "grade": 3,
+   "subject": "Mathematics",
+   "title": "Morning, afternoon and night",
+   "topic": "Time: my day",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Mathematics (functional numeracy: time and daily routines)",
+   "intention": "Today I am putting my day in order.",
+   "prompt": "What do you do every morning?",
+   "lesson": [
+    {
+     "h": "Parts of the day",
+     "say": "A day has a morning, an afternoon and a night. The sun comes up in the morning. It is dark at night.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🌅 morning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">☀️ afternoon</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🌙 night</span></div>"
+    },
+    {
+     "h": "What I do",
+     "say": "In the morning I wake up and eat breakfast. In the afternoon I play. At night I sleep.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Breakfast</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Play</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sleep</span></div>"
+    },
+    {
+     "h": "Before and after",
+     "say": "Breakfast comes before lunch. Supper comes after lunch.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Breakfast</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Lunch</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Supper</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Do you eat breakfast in the morning or at night?",
+    "steps": [
+     "Breakfast is the first meal.",
+     "We eat it when we wake up.",
+     "Breakfast is in the morning."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "When do we sleep?",
+     "pics": [
+      "🌙",
+      "🌅",
+      "☀️"
+     ],
+     "options": [
+      "At night",
+      "In the morning",
+      "In the afternoon"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is dark.",
+      "The moon is out.",
+      "Night."
+     ],
+     "explain": "We sleep at night."
+    },
+    {
+     "type": "mcq",
+     "q": "When do we eat breakfast?",
+     "pics": [
+      "🌅",
+      "🌙",
+      "☀️"
+     ],
+     "options": [
+      "In the morning",
+      "At night",
+      "In the afternoon"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is the first meal.",
+      "After we wake up.",
+      "Morning."
+     ],
+     "explain": "Breakfast is in the morning."
+    },
+    {
+     "type": "order",
+     "q": "Put the meals in order.",
+     "items": [
+      "Breakfast",
+      "Lunch",
+      "Supper"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Which meal is first?",
+      "Breakfast, then…",
+      "…lunch, then supper."
+     ],
+     "explain": "Breakfast, lunch, supper."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Thinking about my own day",
+     "The pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child put the parts of the day and daily routines in order.",
+   "teacher": "Shows sequencing daily routines and using morning, afternoon and night (time, functional numeracy).",
+   "done": "Morning, afternoon, night: my day has an order."
   }
  ],
  "words": {

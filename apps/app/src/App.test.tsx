@@ -215,7 +215,7 @@ describe("Mathematical Literacy", () => {
     const { LearnHome } = await import("./modules/learning");
     const teen = { ...(await store.as((await store.account(DEMO.parent))!).learner(DEMO.teen)), level: "Grade 9" };
     const r = render(<LearnHome learner={teen} mathsSubject="lit" onPick={() => {}} onBack={() => {}} />);
-    const g9 = (await import("@tl/content")).CATALOGUE.filter(u => u.grade === 9 && u.subject === "Mathematics");
+    const g9 = (await import("@tl/content")).CATALOGUE.filter(u => u.grade === 9 && u.subject === "Mathematics" && !u.curriculum);
     for (const u of g9) expect(within(r.container).getByText(u.title)).toBeInTheDocument();
   });
 });

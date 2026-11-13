@@ -1,4 +1,4 @@
-import { CURRICULA, CURRICULUM_NAME } from "@tl/content";
+import { CURRICULA, CURRICULUM_NAME, hasOwnLessons } from "@tl/content";
 import type { Account, Learner } from "@tl/data";
 import { useServices } from "../../platform";
 import { useLoad } from "./use-load";
@@ -25,7 +25,7 @@ export function School({ me, learner, onChanged }: { me: Account; learner: Learn
           {CURRICULA.map(c => <option key={c} value={c}>{CURRICULUM_NAME[c]}</option>)}
         </select>
       </div>
-      {learner.cohort === "teen" && known !== "Cambridge" ? <div className="tl-field">
+      {learner.cohort === "teen" && !hasOwnLessons(known) ? <div className="tl-field">
         <label htmlFor="mathsAt">Maths at school (Grades 10 to 12)</label>
         <select id="mathsAt" value={settings.mathsSubject ?? ""} onChange={e => change({ mathsSubject: (e.target.value as Maths) || null }, `Maths at school: ${MATHS_NAME[e.target.value as Maths]}`)}>
           {MATHS.map(([v, t]) => <option key={v} value={v}>{t}</option>)}
