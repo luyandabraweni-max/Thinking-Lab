@@ -1,0 +1,31 @@
+{
+  "name": "@tl/app",
+  "private": true,
+  "description": "Thinking Lab app for learners, families and specialists: web, iOS and Android from one React codebase.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor-community/speech-recognition": "7.0.1",
+    "@capacitor/core": "7.6.10",
+    "@supabase/supabase-js": "2.118.0",
+    "@tl/adaptation": "*",
+    "@tl/content": "*",
+    "@tl/data": "*",
+    "@tl/reports": "*",
+    "@tl/ui": "*",
+    "@tl/voice": "*",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@capacitor/android": "7.6.10",
+    "@capacitor/cli": "7.6.10",
+    "@capacitor/ios": "7.6.10",
+    "@vitejs/plugin-react": "6.1.2",
+    "vite": "8.3.5"
+  }
+}

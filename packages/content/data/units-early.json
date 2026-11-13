@@ -1,0 +1,2042 @@
+{
+ "level": "early",
+ "units": [
+  {
+   "id": "ey-wash",
+   "grade": -1,
+   "subject": "Well-being",
+   "title": "Clean hands, healthy me",
+   "topic": "Keeping clean",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 1: Well-being (children are healthy and have a sense of good hygiene)",
+   "intention": "Today I am learning how to keep my hands clean.",
+   "prompt": "What do you do first?",
+   "lesson": [
+    {
+     "h": "Germs are tiny",
+     "say": "Germs are so tiny that we cannot see them. Germs on our hands can make us sick.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Germs and hands\">🦠 👐</p><p><b>Germs</b> are so tiny that we cannot see them. Germs on our hands can make us sick.</p>"
+    },
+    {
+     "h": "Wash with soap and water",
+     "say": "Wet your hands. Rub them with soap. Rinse them with water. Dry them on a clean towel.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Water, soap, rinse, towel\">💧 🧼 🚿 🧻</p><ol class=\"plain\"><li>Wet your hands.</li><li>Rub them with <b>soap</b>.</li><li>Rinse with water.</li><li>Dry them on a clean towel.</li></ol>"
+    },
+    {
+     "h": "When do we wash?",
+     "say": "We wash our hands before we eat, after we use the toilet, and after we play outside.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Eating, toilet, playing\">🍽️ 🚽 ⚽</p><p>We wash our hands <b>before we eat</b>, <b>after the toilet</b> and <b>after playing outside</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Thando played in the sand. Now it is time to eat. What must he do first?",
+    "steps": [
+     "Thando's hands touched the sand.",
+     "There may be germs on his hands.",
+     "He must wash his hands before he eats."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What do we use to wash our hands?",
+     "pics": [
+      "🧼",
+      "🖍️",
+      "🧸"
+     ],
+     "options": [
+      "Soap and water",
+      "Crayons",
+      "A teddy"
+     ],
+     "answer": 0,
+     "hints": [
+      "It makes bubbles.",
+      "We use it in the bathroom.",
+      "Soap and water wash germs away."
+     ],
+     "explain": "Soap and water wash the germs off our hands."
+    },
+    {
+     "type": "mcq",
+     "q": "When must we wash our hands?",
+     "pics": [
+      "🚽",
+      "😴",
+      "📺"
+     ],
+     "options": [
+      "After the toilet",
+      "When we sleep",
+      "When we watch TV"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about the bathroom.",
+      "Germs come from the toilet.",
+      "We always wash after the toilet."
+     ],
+     "explain": "We wash our hands after the toilet, so we do not spread germs."
+    },
+    {
+     "type": "order",
+     "q": "Put the hand washing steps in order.",
+     "items": [
+      "Wet your hands",
+      "Rub with soap",
+      "Rinse with water",
+      "Dry your hands"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What do you do first?",
+      "The soap comes after the water.",
+      "Drying comes last."
+     ],
+     "explain": "Wet, soap, rinse, dry."
+    },
+    {
+     "type": "mcq",
+     "q": "Lebo is going to eat an apple. What should she do first?",
+     "pics": [
+      "👐",
+      "🏃",
+      "🐶"
+     ],
+     "options": [
+      "Wash her hands",
+      "Run outside",
+      "Pat the dog"
+     ],
+     "answer": 0,
+     "hints": [
+      "She is going to eat.",
+      "Before eating, we make our hands clean.",
+      "Washing comes before eating."
+     ],
+     "explain": "Lebo washes her hands before she eats."
+    },
+    {
+     "type": "mcq",
+     "q": "Can we see germs?",
+     "pics": [
+      "🙈",
+      "👀"
+     ],
+     "options": [
+      "No, they are too tiny",
+      "Yes, they are big"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Germs are very, very small.",
+      "Can you see them on your hands?",
+      "They are too small to see."
+     ],
+     "explain": "Germs are too tiny to see. That is why we wash even when our hands look clean."
+    }
+   ],
+   "reflect": {
+    "q": "What will you remember?",
+    "options": [
+     "Use soap",
+     "Wash before eating",
+     "Wash after the toilet",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned the steps for washing hands and when to wash them.",
+   "teacher": "Shows whether the child can sequence a familiar self-care routine and link it to everyday moments.",
+   "done": "Clean hands help everyone stay healthy."
+  },
+  {
+   "id": "ey-safe",
+   "grade": -1,
+   "subject": "Well-being",
+   "title": "Safe or not safe?",
+   "topic": "Staying safe",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 1: Well-being (children build a sense of safety and security; identify dangerous objects and situations)",
+   "intention": "Today I am learning which things are safe to touch.",
+   "prompt": "How do you know it is not safe?",
+   "lesson": [
+    {
+     "h": "Some things can hurt us",
+     "say": "Some things can hurt us. Hot things, sharp things and medicine are not for playing.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Fire, knife, medicine\">🔥 🔪 💊</p><p>Some things can <b>hurt</b> us: hot things, sharp things and medicine. They are <b>not for playing</b>.</p>"
+    },
+    {
+     "h": "Ask a grown-up",
+     "say": "If you see something that is not safe, do not touch it. Tell a grown-up.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Stop hand and a grown-up\">✋ 🧑</p><p>If you see something that is not safe, <b>stop</b>. Do not touch it. <b>Tell a grown-up</b>.</p>"
+    },
+    {
+     "h": "Know your name",
+     "say": "If you get lost, stay where you are and tell a safe grown-up your name.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Child talking to a police officer\">🧒 💬 👮</p><p>If you get lost, <b>stay where you are</b>. Tell a safe grown-up, like a police officer or a teacher, <b>your name</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Sipho sees a box of matches on the table. What should he do?",
+    "steps": [
+     "Matches can make fire.",
+     "Fire is hot and can hurt.",
+     "Sipho should not touch them. He should tell a grown-up."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one is safe to play with?",
+     "pics": [
+      "⚽",
+      "🔪",
+      "🔥"
+     ],
+     "options": [
+      "A ball",
+      "A knife",
+      "Fire"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one can hurt you?",
+      "Knives are sharp and fire is hot.",
+      "We play with a ball."
+     ],
+     "explain": "A ball is safe to play with. Knives and fire can hurt us."
+    },
+    {
+     "type": "mcq",
+     "q": "You see pills on the floor. What do you do?",
+     "pics": [
+      "🧑",
+      "👄",
+      "🙈"
+     ],
+     "options": [
+      "Tell a grown-up",
+      "Eat them",
+      "Hide them"
+     ],
+     "answer": 0,
+     "hints": [
+      "Pills are medicine.",
+      "Medicine can make us sick if it is not for us.",
+      "A grown-up will know what to do."
+     ],
+     "explain": "Medicine is only for grown-ups to give. Tell a grown-up."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these into safe and not safe to touch.",
+     "items": [
+      "Teddy",
+      "Hot pot",
+      "Book",
+      "Scissors"
+     ],
+     "bins": [
+      "Safe",
+      "Not safe"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Can it hurt you?",
+      "A hot pot burns and scissors are sharp.",
+      "Teddy and book are safe."
+     ],
+     "explain": "A teddy and a book are safe. A hot pot and scissors can hurt us."
+    },
+    {
+     "type": "mcq",
+     "q": "You are lost at the shops. What should you do?",
+     "pics": [
+      "🧍",
+      "🏃",
+      "🚗"
+     ],
+     "options": [
+      "Stay and tell a safe grown-up",
+      "Run away",
+      "Get into a car"
+     ],
+     "answer": 0,
+     "hints": [
+      "Running makes it harder to find you.",
+      "Who can help you?",
+      "Stay where you are and ask a shop worker or police officer."
+     ],
+     "explain": "Stay where you are and tell a safe grown-up your name."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do we not touch the stove?",
+     "pics": [
+      "🔥",
+      "🧊"
+     ],
+     "options": [
+      "It is hot",
+      "It is cold"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "We cook food on the stove.",
+      "Cooking needs heat.",
+      "It is hot and can burn."
+     ],
+     "explain": "The stove is hot. It can burn us."
+    }
+   ],
+   "reflect": {
+    "q": "What helps you stay safe?",
+    "options": [
+     "Stop and do not touch",
+     "Tell a grown-up",
+     "Know my name",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child talked about dangerous objects and what to do when lost. You could practise saying their full name and your phone number together.",
+   "teacher": "Shows whether the child can tell safe from unsafe objects and names a help-seeking action.",
+   "done": "When something is not safe, stop and tell a grown-up."
+  },
+  {
+   "id": "ey-me",
+   "grade": -1,
+   "subject": "Identity and Belonging",
+   "title": "All about me",
+   "topic": "Me and what I can do",
+   "domain": "Creativity and Metacognition",
+   "category": "Reflection",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 2: Identity and Belonging (children are aware of themselves as capable and confident learners; celebrating differences)",
+   "intention": "Today I am thinking about me and the things I can do.",
+   "prompt": "What can you do now that you could not do before?",
+   "lesson": [
+    {
+     "h": "I am special",
+     "say": "There is only one you. Your name, your face and the things you like make you special.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"A child and a star\">🧒 ⭐</p><p>There is only <b>one you</b>. Your name, your face and the things you like make you <b>special</b>.</p>"
+    },
+    {
+     "h": "I can do things",
+     "say": "You can do so many things. You can jump, sing, draw and help.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Jump, sing, draw, help\">🦘 🎤 🖍️ 🤝</p><p>You <b>can</b> do so many things: jump, sing, draw and help. Every day you learn something new.</p>"
+    },
+    {
+     "h": "We are all different",
+     "say": "People are different. Some are tall, some are short. We all belong.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Different people\">🧍🏾 🧍🏻 🧑🏽‍🦽 🧍🏿</p><p>People are <b>different</b>. Some are tall and some are short. Some walk and some use a wheelchair. <b>We all belong.</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Amahle says, \"I can put on my shoes by myself!\" How does she feel?",
+    "steps": [
+     "Amahle learned to do something new.",
+     "She did it by herself.",
+     "She feels proud."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one is something you can do with your feet?",
+     "pics": [
+      "🦘",
+      "👏",
+      "👂"
+     ],
+     "options": [
+      "Jump",
+      "Clap",
+      "Listen"
+     ],
+     "answer": 0,
+     "hints": [
+      "Feet are at the bottom of your legs.",
+      "We clap with hands and listen with ears.",
+      "We jump with our feet."
+     ],
+     "explain": "We jump with our feet."
+    },
+    {
+     "type": "mcq",
+     "q": "Zola wears glasses and Ben does not. What is true?",
+     "pics": [
+      "🤝",
+      "🚫"
+     ],
+     "options": [
+      "They can both be friends",
+      "They cannot play together"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Being different is fine.",
+      "Glasses help Zola to see.",
+      "Different people can be friends."
+     ],
+     "explain": "People can be different and still be friends."
+    },
+    {
+     "type": "mcq",
+     "q": "You learned to ride a bike. How might you feel?",
+     "pics": [
+      "😊",
+      "😢",
+      "😠"
+     ],
+     "options": [
+      "Proud",
+      "Sad",
+      "Cross"
+     ],
+     "answer": 0,
+     "hints": [
+      "You learned something new.",
+      "It was hard, but you did it.",
+      "Doing something hard feels good."
+     ],
+     "explain": "We feel proud when we learn to do something new."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the same for all children?",
+     "pics": [
+      "❤️",
+      "👟",
+      "🎨"
+     ],
+     "options": [
+      "We all have feelings",
+      "We all wear the same shoes",
+      "We all like the same colour"
+     ],
+     "answer": 0,
+     "hints": [
+      "Shoes and colours are different for different people.",
+      "Everyone feels happy or sad sometimes.",
+      "All people have feelings."
+     ],
+     "explain": "Everyone has feelings, even though we like different things."
+    },
+    {
+     "type": "mcq",
+     "q": "What makes you special?",
+     "pics": [
+      "🌟",
+      "🌑"
+     ],
+     "options": [
+      "There is only one me",
+      "Nothing"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Think about your name and face.",
+      "Is there another child exactly like you?",
+      "There is only one you."
+     ],
+     "explain": "There is only one you. That makes you special."
+    }
+   ],
+   "reflect": {
+    "q": "What do you like most about you?",
+    "options": [
+     "What I can do",
+     "What I like",
+     "How I help",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child talked about what makes them special and how people are different. Ask them what new thing they learned to do this week.",
+   "teacher": "Shows whether the child names their own abilities and accepts differences between people.",
+   "done": "You are special, and so is everyone else."
+  },
+  {
+   "id": "ey-turns",
+   "grade": -1,
+   "subject": "Identity and Belonging",
+   "title": "Taking turns and sharing",
+   "topic": "Playing with others",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 2: Identity and Belonging (children build strong relationships; take turns, share and follow simple rules)",
+   "intention": "Today I am learning how to take turns and share.",
+   "prompt": "How did you feel when you waited?",
+   "lesson": [
+    {
+     "h": "Taking turns",
+     "say": "Taking turns means one person goes, then the next person goes. Everyone gets a chance.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"One child, then another\">🧒 ➡️ 👧 ➡️ 🧒</p><p><b>Taking turns</b> means one person goes, then the next. <b>Everyone</b> gets a chance.</p>"
+    },
+    {
+     "h": "Sharing",
+     "say": "Sharing means letting others use things too. We can share toys, crayons and snacks.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Toys, crayons, snacks\">🧸 🖍️ 🍊</p><p><b>Sharing</b> means letting others use things too.</p>"
+    },
+    {
+     "h": "Waiting is hard",
+     "say": "Waiting can be hard. You can take a deep breath and count to five while you wait.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Breathe and count to five\">😮‍💨 1 2 3 4 5</p><p>Waiting can be <b>hard</b>. Take a deep breath and count to five.</p>"
+    }
+   ],
+   "example": {
+    "q": "Two children want the same swing. What can they do?",
+    "steps": [
+     "There is only one swing.",
+     "They can take turns.",
+     "One child swings first. Then the other child has a turn."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Your friend has no crayons. What can you do?",
+     "pics": [
+      "🖍️",
+      "🙅",
+      "🏃"
+     ],
+     "options": [
+      "Share your crayons",
+      "Say no",
+      "Run away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Your friend wants to draw too.",
+      "You have crayons.",
+      "You can let your friend use some."
+     ],
+     "explain": "Sharing your crayons means you can both draw."
+    },
+    {
+     "type": "mcq",
+     "q": "It is not your turn on the slide. What do you do?",
+     "pics": [
+      "🧍",
+      "👊",
+      "😭"
+     ],
+     "options": [
+      "Wait in the line",
+      "Push",
+      "Cry and shout"
+     ],
+     "answer": 0,
+     "hints": [
+      "Everyone gets a turn.",
+      "Pushing can hurt someone.",
+      "Your turn will come if you wait."
+     ],
+     "explain": "We wait in the line. Our turn will come."
+    },
+    {
+     "type": "mcq",
+     "q": "What can help you while you wait?",
+     "pics": [
+      "😮‍💨",
+      "🦶"
+     ],
+     "options": [
+      "Breathe and count",
+      "Stamp your feet"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Something that helps you feel calm.",
+      "Breathing slowly calms our body.",
+      "Breathe and count to five."
+     ],
+     "explain": "Breathing and counting help us feel calm while we wait."
+    },
+    {
+     "type": "mcq",
+     "q": "Nomsa shared her orange with you. What do you say?",
+     "pics": [
+      "🙏",
+      "🤐"
+     ],
+     "options": [
+      "Thank you",
+      "Nothing"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Nomsa was kind.",
+      "What do we say when someone is kind?",
+      "We say thank you."
+     ],
+     "explain": "We say thank you when someone shares with us."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do we take turns?",
+     "pics": [
+      "😊",
+      "😞"
+     ],
+     "options": [
+      "So everyone gets a chance",
+      "So only I can play"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Think about your friends.",
+      "Would it be fair if only one child played?",
+      "Taking turns is fair."
+     ],
+     "explain": "Taking turns is fair. Everyone gets a chance to play."
+    }
+   ],
+   "reflect": {
+    "q": "What is easy for you?",
+    "options": [
+     "Sharing",
+     "Taking turns",
+     "Waiting",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised ideas about sharing, taking turns and waiting calmly.",
+   "teacher": "Shows whether the child can choose prosocial responses and a calming strategy for waiting.",
+   "done": "When we share and take turns, everyone can play."
+  },
+  {
+   "id": "ey-sounds",
+   "grade": -1,
+   "subject": "Communication",
+   "title": "Listen to the sounds",
+   "topic": "Listening",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 3: Communication (children listen to sounds and speech; identify a wide range of sounds; enjoy songs and rhymes)",
+   "intention": "Today I am learning to listen carefully.",
+   "prompt": "What sound did you hear?",
+   "lesson": [
+    {
+     "h": "Our ears hear sounds",
+     "say": "We hear sounds with our ears. Some sounds are loud and some are soft.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Ears, loud and soft\">👂 🔊 🔈</p><p>We hear sounds with our <b>ears</b>. Some sounds are <b>loud</b> and some are <b>soft</b>.</p>"
+    },
+    {
+     "h": "Animal sounds",
+     "say": "A cow says moo. A dog says woof. A cat says meow. A duck says quack.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Cow, dog, cat, duck\">🐄 🐕 🐈 🦆</p><p>A cow says <b>moo</b>. A dog says <b>woof</b>. A cat says <b>meow</b>. A duck says <b>quack</b>.</p>"
+    },
+    {
+     "h": "Sounds around us",
+     "say": "Listen. Can you hear a car, a bird or people talking?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Car, bird, people talking\">🚗 🐦 🗣️</p><p>Close your eyes and listen. What sounds can you hear around you?</p>"
+    }
+   ],
+   "example": {
+    "q": "What says moo?",
+    "steps": [
+     "Think of the animal sounds.",
+     "A dog says woof and a cat says meow.",
+     "A cow says moo."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which animal says woof?",
+     "pics": [
+      "🐕",
+      "🐄",
+      "🦆"
+     ],
+     "options": [
+      "Dog",
+      "Cow",
+      "Duck"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a pet.",
+      "It barks.",
+      "A dog says woof."
+     ],
+     "explain": "A dog says woof."
+    },
+    {
+     "type": "mcq",
+     "q": "Which animal says quack?",
+     "pics": [
+      "🦆",
+      "🐈",
+      "🐑"
+     ],
+     "options": [
+      "Duck",
+      "Cat",
+      "Sheep"
+     ],
+     "answer": 0,
+     "hints": [
+      "It swims on a pond.",
+      "It has a flat beak.",
+      "A duck says quack."
+     ],
+     "explain": "A duck says quack."
+    },
+    {
+     "type": "mcq",
+     "q": "Which one makes a loud sound?",
+     "pics": [
+      "🥁",
+      "🪶"
+     ],
+     "options": [
+      "Drum",
+      "Feather"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Which one do you bang?",
+      "A feather is very quiet.",
+      "A drum is loud."
+     ],
+     "explain": "A drum makes a loud sound. A feather is very quiet."
+    },
+    {
+     "type": "mcq",
+     "q": "What do we hear with?",
+     "pics": [
+      "👂",
+      "👃",
+      "👄"
+     ],
+     "options": [
+      "Ears",
+      "Nose",
+      "Mouth"
+     ],
+     "answer": 0,
+     "hints": [
+      "We smell with our nose.",
+      "We eat with our mouth.",
+      "We hear with our ears."
+     ],
+     "explain": "We hear with our ears."
+    },
+    {
+     "type": "mcq",
+     "q": "A baby is sleeping. How should we talk?",
+     "pics": [
+      "🤫",
+      "📢"
+     ],
+     "options": [
+      "Softly",
+      "Loudly"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "We do not want to wake the baby.",
+      "Loud sounds wake people up.",
+      "We talk softly."
+     ],
+     "explain": "We talk softly so the baby can sleep."
+    }
+   ],
+   "reflect": {
+    "q": "Which sound do you like?",
+    "options": [
+     "Animal sounds",
+     "Music",
+     "Quiet sounds",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child listened for animal sounds and loud and soft sounds. Try a listening walk together.",
+   "teacher": "Shows whether the child matches sounds to sources and distinguishes loud from soft.",
+   "done": "Good listeners hear so many sounds."
+  },
+  {
+   "id": "ey-story",
+   "grade": -1,
+   "subject": "Communication",
+   "title": "Pictures tell a story",
+   "topic": "Reading pictures in order",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 3: Communication (children make meaning by \"reading\" what they see; arrange pictures to form a story)",
+   "intention": "Today I am learning to tell a story from pictures.",
+   "prompt": "What happened first?",
+   "lesson": [
+    {
+     "h": "Stories have an order",
+     "say": "A story has a beginning, a middle and an end. First, next, last.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"First, next, last\">1️⃣ 2️⃣ 3️⃣</p><p>A story happens in <b>order</b>: <b>first</b>, <b>next</b>, <b>last</b>.</p>"
+    },
+    {
+     "h": "A seed grows",
+     "say": "First, we plant a seed. Next, it gets water and sun. Last, a flower grows.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Seed, water and sun, flower\">🌰 ➡️ 💧☀️ ➡️ 🌻</p><p><b>First</b> we plant a seed. <b>Next</b> it gets water and sun. <b>Last</b> a flower grows.</p>"
+    },
+    {
+     "h": "Look at the pictures",
+     "say": "Pictures can tell us what is happening, even before we can read words.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"A book and eyes\">📖 👀</p><p>Pictures can tell us what is happening, even before we can read the words.</p>"
+    }
+   ],
+   "example": {
+    "q": "A boy is getting ready for bed. What comes first: brushing teeth or sleeping?",
+    "steps": [
+     "Think about bedtime.",
+     "We brush our teeth before we get into bed.",
+     "First we brush our teeth. Last we sleep."
+    ]
+   },
+   "questions": [
+    {
+     "type": "order",
+     "q": "Put the seed story in order.",
+     "items": [
+      "Plant a seed",
+      "Water it",
+      "A flower grows"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What do we do first?",
+      "The seed needs water to grow.",
+      "The flower comes last."
+     ],
+     "explain": "Plant, water, then a flower grows."
+    },
+    {
+     "type": "order",
+     "q": "Put the egg story in order.",
+     "items": [
+      "An egg",
+      "The egg cracks",
+      "A chick comes out"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What comes before the chick?",
+      "The egg must crack first.",
+      "The chick comes out last."
+     ],
+     "explain": "First an egg, next it cracks, last a chick comes out."
+    },
+    {
+     "type": "mcq",
+     "q": "What comes last when we eat a banana?",
+     "pics": [
+      "🗑️",
+      "🍌"
+     ],
+     "options": [
+      "Put the peel in the bin",
+      "Peel the banana"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "We peel it first.",
+      "Then we eat it.",
+      "The peel goes in the bin last."
+     ],
+     "explain": "We peel, eat, and last we put the peel in the bin."
+    },
+    {
+     "type": "order",
+     "q": "Put the morning in order.",
+     "items": [
+      "Wake up",
+      "Get dressed",
+      "Go to school"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What happens when you are still in bed?",
+      "You get dressed before you go out.",
+      "School comes last."
+     ],
+     "explain": "Wake up, get dressed, then go to school."
+    },
+    {
+     "type": "mcq",
+     "q": "What helps us know what a story is about?",
+     "pics": [
+      "🖼️",
+      "🙉"
+     ],
+     "options": [
+      "Looking at the pictures",
+      "Closing the book"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Books have pictures.",
+      "Pictures show what is happening.",
+      "Look at the pictures."
+     ],
+     "explain": "Pictures help us know what is happening in a story."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you put things in order?",
+    "options": [
+     "Thinking what comes first",
+     "Looking at pictures",
+     "Things I do every day",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child put picture stories in order using first, next and last. Ask them to tell you about their day in order.",
+   "teacher": "Shows whether the child sequences familiar events and uses first, next and last.",
+   "done": "First, next, last. Now you can tell a story."
+  },
+  {
+   "id": "ey-count",
+   "grade": -1,
+   "subject": "Exploring Mathematics",
+   "title": "Counting to 5",
+   "topic": "Counting",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 4: Exploring Mathematics (children count and use number names in play)",
+   "intention": "Today I am learning to count to 5.",
+   "prompt": "How did you keep count?",
+   "lesson": [
+    {
+     "h": "Counting",
+     "say": "One, two, three, four, five. We say one number for each thing we count.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Numbers one to five\">1 2 3 4 5</p><p><b>One, two, three, four, five.</b> We say <b>one number for each thing</b>.</p>"
+    },
+    {
+     "h": "Touch and count",
+     "say": "Touch each apple as you count. One, two, three. There are 3 apples.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"3 apples\">🍎 🍎 🍎</p><p>Touch each apple as you count: one, two, <b>three</b>. There are <b>3</b> apples.</p>"
+    },
+    {
+     "h": "The last number tells how many",
+     "say": "When we count 4 ducks, the last number we say is 4. So there are 4 ducks.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"4 ducks\">🦆 🦆 🦆 🦆</p><p>The <b>last number</b> we say tells us <b>how many</b>. There are <b>4</b> ducks.</p>"
+    }
+   ],
+   "example": {
+    "q": "There are two balls on the grass. How many balls?",
+    "steps": [
+     "Touch the first ball and say one.",
+     "Touch the next ball and say two.",
+     "There are 2 balls."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many stars?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"3 stars\">⭐ ⭐ ⭐</p>",
+     "options": [
+      "3",
+      "2",
+      "5"
+     ],
+     "answer": 0,
+     "hints": [
+      "Touch each star.",
+      "One, two, …",
+      "One, two, three."
+     ],
+     "explain": "One, two, three. There are 3 stars."
+    },
+    {
+     "type": "mcq",
+     "q": "How many fish?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"5 fish\">🐟 🐟 🐟 🐟 🐟</p>",
+     "options": [
+      "5",
+      "4",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count slowly.",
+      "Say one number for each fish.",
+      "One, two, three, four, five."
+     ],
+     "explain": "There are 5 fish."
+    },
+    {
+     "type": "mcq",
+     "q": "How many cars?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"1 car\">🚗</p>",
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look carefully.",
+      "Is there more than one?",
+      "There is just one."
+     ],
+     "explain": "There is 1 car."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number comes after 3?",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">?</span></div>",
+     "options": [
+      "4",
+      "5",
+      "2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count: one, two, three, …",
+      "What do you say next?",
+      "After three comes four."
+     ],
+     "explain": "One, two, three, four. 4 comes after 3."
+    },
+    {
+     "type": "mcq",
+     "q": "Which has more?",
+     "pics": [
+      "🍪 🍪 🍪 🍪",
+      "🍪 🍪"
+     ],
+     "options": [
+      "4 biscuits",
+      "2 biscuits"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Count each group.",
+      "Which number is bigger?",
+      "4 is more than 2."
+     ],
+     "explain": "4 biscuits is more than 2 biscuits."
+    }
+   ],
+   "reflect": {
+    "q": "How did you count?",
+    "options": [
+     "Touching each one",
+     "Saying the numbers",
+     "Looking carefully",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child counted groups up to 5. Count stairs, spoons or shoes together at home.",
+   "teacher": "Shows one-to-one correspondence and whether the child knows the last count gives the total.",
+   "done": "You can count to 5. Count things all around you!"
+  },
+  {
+   "id": "ey-shapes",
+   "grade": -1,
+   "subject": "Exploring Mathematics",
+   "title": "Circles, squares and triangles",
+   "topic": "Shapes and sorting",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 4: Exploring Mathematics (shapes and space; sorting by colour, size and shape)",
+   "intention": "Today I am learning the names of shapes.",
+   "prompt": "How did you know which shape it was?",
+   "lesson": [
+    {
+     "h": "Circle",
+     "say": "A circle is round. It has no corners. A plate and a wheel are circles.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Circle, plate, wheel\">⚪ 🍽️ 🛞</p><p>A <b>circle</b> is round. It has <b>no corners</b>.</p>"
+    },
+    {
+     "h": "Square and triangle",
+     "say": "A square has 4 sides that are all the same. A triangle has 3 sides and 3 corners.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Square and triangle\">🟥 🔺</p><p>A <b>square</b> has <b>4</b> sides, all the same. A <b>triangle</b> has <b>3</b> sides and 3 corners.</p>"
+    },
+    {
+     "h": "Sorting",
+     "say": "We can sort things into groups. We can sort by shape, by colour or by size.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Red group and blue group\">🔴🔴 🔵🔵</p><p>We can <b>sort</b> things into groups by <b>shape</b>, <b>colour</b> or <b>size</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A slice of watermelon has 3 sides. What shape is it like?",
+    "steps": [
+     "Count the sides: 3.",
+     "Which shape has 3 sides?",
+     "A triangle has 3 sides."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which shape is round?",
+     "pics": [
+      "⚪",
+      "🟥",
+      "🔺"
+     ],
+     "options": [
+      "Circle",
+      "Square",
+      "Triangle"
+     ],
+     "answer": 0,
+     "hints": [
+      "Round means no corners.",
+      "A square and a triangle have corners.",
+      "A circle is round."
+     ],
+     "explain": "A circle is round with no corners."
+    },
+    {
+     "type": "mcq",
+     "q": "How many sides does a triangle have?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"A triangle\">🔺</p>",
+     "options": [
+      "3",
+      "4",
+      "0"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the sides.",
+      "Tri means three.",
+      "A triangle has 3 sides."
+     ],
+     "explain": "A triangle has 3 sides."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is shaped like a circle?",
+     "pics": [
+      "🛞",
+      "📘",
+      "⛺"
+     ],
+     "options": [
+      "A wheel",
+      "A book",
+      "A tent"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is round?",
+      "Wheels roll.",
+      "A wheel is a circle."
+     ],
+     "explain": "A wheel is round like a circle."
+    },
+    {
+     "type": "sort",
+     "q": "Sort by colour.",
+     "items": [
+      "Red ball",
+      "Blue car",
+      "Red apple",
+      "Blue cup"
+     ],
+     "bins": [
+      "Red",
+      "Blue"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Look at the colour word.",
+      "Ball and apple are red.",
+      "Car and cup are blue."
+     ],
+     "explain": "Red ball and red apple go together. Blue car and blue cup go together."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is bigger?",
+     "pics": [
+      "🐘",
+      "🐭"
+     ],
+     "options": [
+      "Elephant",
+      "Mouse"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Think about how big they are.",
+      "A mouse is tiny.",
+      "An elephant is huge."
+     ],
+     "explain": "An elephant is much bigger than a mouse."
+    }
+   ],
+   "reflect": {
+    "q": "Which shape do you like?",
+    "options": [
+     "Circle",
+     "Square",
+     "Triangle",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child named circles, squares and triangles and sorted by colour. Go on a shape hunt in your home.",
+   "teacher": "Shows whether the child names basic 2-D shapes by features and sorts by one attribute.",
+   "done": "Shapes are everywhere. Look for circles, squares and triangles!"
+  },
+  {
+   "id": "ey-colours",
+   "grade": -1,
+   "subject": "Creativity",
+   "title": "Colours all around",
+   "topic": "Colours and mixing",
+   "domain": "Creativity and Metacognition",
+   "category": "Creativity",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 5: Creativity (children explore art materials, colour and making things)",
+   "intention": "Today I am learning about colours.",
+   "prompt": "What colour would you make?",
+   "lesson": [
+    {
+     "h": "Colours we know",
+     "say": "Red, yellow, blue and green. Colours are all around us.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Red, yellow, blue, green\">🟥 🟨 🟦 🟩</p><p><b>Red, yellow, blue</b> and <b>green</b>. Colours are all around us.</p>"
+    },
+    {
+     "h": "Mixing colours",
+     "say": "When we mix yellow and blue paint, we get green. Red and yellow make orange.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Yellow and blue make green\">🟨 + 🟦 = 🟩</p><p class=\"pics\" role=\"img\" aria-label=\"Red and yellow make orange\">🟥 + 🟨 = 🟧</p><p>Mixing paint makes <b>new colours</b>.</p>"
+    },
+    {
+     "h": "Colours in nature",
+     "say": "The sky is blue. Grass is green. The sun looks yellow.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Sky, grass, orange\">🌤️ 🌿 🍊</p><p>The sky is <b>blue</b>. Grass is <b>green</b>. An orange is <b>orange</b>!</p>"
+    }
+   ],
+   "example": {
+    "q": "Lindiwe mixes red and yellow paint. What colour does she get?",
+    "steps": [
+     "She has red and yellow.",
+     "Red and yellow mix together.",
+     "She gets orange."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What colour is grass?",
+     "pics": [
+      "🟩",
+      "🟥",
+      "🟦"
+     ],
+     "options": [
+      "Green",
+      "Red",
+      "Blue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look outside.",
+      "Leaves are the same colour.",
+      "Grass is green."
+     ],
+     "explain": "Grass is green."
+    },
+    {
+     "type": "mcq",
+     "q": "Yellow and blue make…",
+     "pics": [
+      "🟩",
+      "🟧",
+      "🟪"
+     ],
+     "options": [
+      "Green",
+      "Orange",
+      "Purple"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the mixing picture.",
+      "Blue and yellow together.",
+      "They make green."
+     ],
+     "explain": "Yellow and blue make green."
+    },
+    {
+     "type": "mcq",
+     "q": "What colour is a banana?",
+     "pics": [
+      "🟨",
+      "🟦",
+      "⬛"
+     ],
+     "options": [
+      "Yellow",
+      "Blue",
+      "Black"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of a ripe banana.",
+      "It is the same colour as the sun in pictures.",
+      "A banana is yellow."
+     ],
+     "explain": "A ripe banana is yellow."
+    },
+    {
+     "type": "mcq",
+     "q": "Red and yellow make…",
+     "pics": [
+      "🟧",
+      "🟩"
+     ],
+     "options": [
+      "Orange",
+      "Green"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Like the colour of an orange.",
+      "Red and yellow together.",
+      "They make orange."
+     ],
+     "explain": "Red and yellow make orange."
+    },
+    {
+     "type": "mcq",
+     "q": "What colour is the sky on a sunny day?",
+     "pics": [
+      "🟦",
+      "🟫"
+     ],
+     "options": [
+      "Blue",
+      "Brown"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Look up on a sunny day.",
+      "It is not the colour of soil.",
+      "The sky is blue."
+     ],
+     "explain": "On a sunny day the sky is blue."
+    }
+   ],
+   "reflect": {
+    "q": "What would you like to paint?",
+    "options": [
+     "Animals",
+     "My family",
+     "The sky",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child named colours and learned that mixing colours makes new ones.",
+   "teacher": "Shows colour naming and early understanding of colour mixing.",
+   "done": "You can make new colours by mixing!"
+  },
+  {
+   "id": "ey-music",
+   "grade": -1,
+   "subject": "Creativity",
+   "title": "Loud and soft, fast and slow",
+   "topic": "Music and movement",
+   "domain": "Creativity and Metacognition",
+   "category": "Creativity",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 5: Creativity (children explore music, rhythm and movement)",
+   "intention": "Today I am learning about music and moving.",
+   "prompt": "How does the music make you want to move?",
+   "lesson": [
+    {
+     "h": "Loud and soft",
+     "say": "Music can be loud, like a big drum. Music can be soft, like a whisper.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Loud drum, soft whisper\">🥁 🔊  🤫 🔈</p><p>Music can be <b>loud</b> or <b>soft</b>.</p>"
+    },
+    {
+     "h": "Fast and slow",
+     "say": "Music can be fast, like a running cheetah, or slow, like a tortoise.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Fast cheetah, slow tortoise\">🐆 💨  🐢</p><p>Music can be <b>fast</b> or <b>slow</b>.</p>"
+    },
+    {
+     "h": "Move to the music",
+     "say": "When music is fast, we can move fast. When music is slow, we can move slowly.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Dancing\">💃 🕺</p><p>We can <b>move</b> our bodies to music: fast, slow, big and small.</p>"
+    }
+   ],
+   "example": {
+    "q": "The music is slow and soft. How can you move?",
+    "steps": [
+     "Slow means not fast.",
+     "Soft means gentle.",
+     "You can sway slowly, like a tree in a soft wind."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which animal is fast?",
+     "pics": [
+      "🐆",
+      "🐢",
+      "🐌"
+     ],
+     "options": [
+      "Cheetah",
+      "Tortoise",
+      "Snail"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one runs?",
+      "Tortoises and snails move slowly.",
+      "A cheetah is very fast."
+     ],
+     "explain": "A cheetah is fast."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sound is soft?",
+     "pics": [
+      "🤫",
+      "📢",
+      "🥁"
+     ],
+     "options": [
+      "A whisper",
+      "A shout",
+      "A big drum"
+     ],
+     "answer": 0,
+     "hints": [
+      "Soft means quiet.",
+      "Shouts and drums are loud.",
+      "A whisper is soft."
+     ],
+     "explain": "A whisper is soft."
+    },
+    {
+     "type": "mcq",
+     "q": "The music is fast. How do you move?",
+     "pics": [
+      "🏃",
+      "🧘"
+     ],
+     "options": [
+      "Quickly",
+      "Very slowly"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Match your body to the music.",
+      "Fast music, fast feet.",
+      "Move quickly."
+     ],
+     "explain": "Fast music, fast moves!"
+    },
+    {
+     "type": "mcq",
+     "q": "Which can make music?",
+     "pics": [
+      "🥁",
+      "🧦",
+      "🥄"
+     ],
+     "options": [
+      "A drum",
+      "A sock",
+      "A pillow"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one makes a sound when you tap it?",
+      "A sock is soft and quiet.",
+      "You bang a drum."
+     ],
+     "explain": "A drum makes music when you tap it."
+    },
+    {
+     "type": "mcq",
+     "q": "A tortoise is…",
+     "pics": [
+      "🐢",
+      "⚡"
+     ],
+     "options": [
+      "Slow",
+      "Fast"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Think of how a tortoise walks.",
+      "It carries a heavy shell.",
+      "A tortoise is slow."
+     ],
+     "explain": "A tortoise is slow."
+    }
+   ],
+   "reflect": {
+    "q": "What music do you like?",
+    "options": [
+     "Fast music",
+     "Slow music",
+     "Loud music",
+     "Soft music"
+    ]
+   },
+   "parent": "Your child explored loud and soft, fast and slow in music. Dance together to different songs.",
+   "teacher": "Shows whether the child distinguishes dynamics and tempo and links them to movement.",
+   "done": "Music can be loud, soft, fast or slow. Keep moving!"
+  },
+  {
+   "id": "ey-animals",
+   "grade": -1,
+   "subject": "Knowledge and Understanding of the World",
+   "title": "Animals and their babies",
+   "topic": "Animals",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 6: Knowledge and Understanding of the World (children explore living things around them)",
+   "intention": "Today I am learning about animals and their babies.",
+   "prompt": "What did you notice about the baby animals?",
+   "lesson": [
+    {
+     "h": "Baby animals",
+     "say": "Animals have babies. A baby cat is a kitten. A baby dog is a puppy.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Cat and kitten, dog and puppy\">🐈 🐱  🐕 🐶</p><p>A baby cat is a <b>kitten</b>. A baby dog is a <b>puppy</b>.</p>"
+    },
+    {
+     "h": "More baby animals",
+     "say": "A baby cow is a calf. A baby sheep is a lamb. A baby chicken is a chick.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Cow, sheep, chicken, chick\">🐄 🐑 🐔 🐣</p><p>A baby cow is a <b>calf</b>. A baby sheep is a <b>lamb</b>. A baby chicken is a <b>chick</b>.</p>"
+    },
+    {
+     "h": "Animals need care",
+     "say": "Animals need food, water and a safe place, just like we do.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Food, water, home\">🥣 💧 🏠</p><p>Animals need <b>food</b>, <b>water</b> and a <b>safe place</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "What is a baby chicken called?",
+    "steps": [
+     "Chickens lay eggs.",
+     "A baby comes out of the egg.",
+     "It is called a chick."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is a baby dog called?",
+     "pics": [
+      "🐶",
+      "🐱",
+      "🐣"
+     ],
+     "options": [
+      "Puppy",
+      "Kitten",
+      "Chick"
+     ],
+     "answer": 0,
+     "hints": [
+      "It barks.",
+      "A kitten is a baby cat.",
+      "A baby dog is a puppy."
+     ],
+     "explain": "A baby dog is a puppy."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a baby cat called?",
+     "pics": [
+      "🐱",
+      "🐑",
+      "🐄"
+     ],
+     "options": [
+      "Kitten",
+      "Lamb",
+      "Calf"
+     ],
+     "answer": 0,
+     "hints": [
+      "It says meow.",
+      "A lamb is a baby sheep.",
+      "A baby cat is a kitten."
+     ],
+     "explain": "A baby cat is a kitten."
+    },
+    {
+     "type": "mcq",
+     "q": "Who is the lamb's mother?",
+     "pics": [
+      "🐑",
+      "🐄",
+      "🐔"
+     ],
+     "options": [
+      "Sheep",
+      "Cow",
+      "Chicken"
+     ],
+     "answer": 0,
+     "hints": [
+      "A lamb has woolly hair.",
+      "Which grown-up animal has wool?",
+      "A lamb's mother is a sheep."
+     ],
+     "explain": "A lamb is a baby sheep."
+    },
+    {
+     "type": "mcq",
+     "q": "What do all animals need?",
+     "pics": [
+      "💧",
+      "📱"
+     ],
+     "options": [
+      "Water",
+      "A phone"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Something living things drink.",
+      "Animals do not use phones.",
+      "All animals need water."
+     ],
+     "explain": "All animals need water to live."
+    },
+    {
+     "type": "mcq",
+     "q": "What comes out of an egg?",
+     "pics": [
+      "🐣",
+      "🐶"
+     ],
+     "options": [
+      "A chick",
+      "A puppy"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Chickens lay eggs.",
+      "Puppies are born from their mother dog.",
+      "A chick comes out of an egg."
+     ],
+     "explain": "A chick hatches out of an egg."
+    }
+   ],
+   "reflect": {
+    "q": "Which baby animal do you like?",
+    "options": [
+     "Puppy",
+     "Kitten",
+     "Chick",
+     "Lamb"
+    ]
+   },
+   "parent": "Your child matched animals to their babies and talked about what animals need.",
+   "teacher": "Shows vocabulary for young animals and awareness of basic needs of living things.",
+   "done": "Baby animals grow up, just like you."
+  },
+  {
+   "id": "ey-weather",
+   "grade": -1,
+   "subject": "Knowledge and Understanding of the World",
+   "title": "Sunny, rainy, windy",
+   "topic": "Weather",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "National Curriculum Framework for Children from Birth to Four (2015), Early Learning and Development Area 6: Knowledge and Understanding of the World (children explore the weather and their environment)",
+   "intention": "Today I am learning about the weather.",
+   "prompt": "What is the weather like today?",
+   "lesson": [
+    {
+     "h": "Kinds of weather",
+     "say": "The weather can be sunny, rainy, windy or cold.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Sunny, rainy, windy, cold\">☀️ 🌧️ 💨 ❄️</p><p>The weather can be <b>sunny</b>, <b>rainy</b>, <b>windy</b> or <b>cold</b>.</p>"
+    },
+    {
+     "h": "What to wear",
+     "say": "When it is sunny, we wear a hat. When it rains, we wear a raincoat. When it is cold, we wear a jersey.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Hat, raincoat, jersey\">👒 🧥 🧶</p><p>Sunny: a <b>hat</b>. Rainy: a <b>raincoat</b>. Cold: a warm <b>jersey</b>.</p>"
+    },
+    {
+     "h": "Look at the sky",
+     "say": "Grey clouds can bring rain. A blue sky means it may be sunny.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Grey clouds and a sunny sky\">☁️ 🌧️  🌤️</p><p><b>Grey clouds</b> can bring rain. A <b>blue sky</b> may mean sun.</p>"
+    }
+   ],
+   "example": {
+    "q": "It is raining. What should Kabelo take outside?",
+    "steps": [
+     "Rain makes us wet.",
+     "What keeps us dry?",
+     "An umbrella or a raincoat."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "It is sunny and hot. What do you wear?",
+     "pics": [
+      "👒",
+      "🧣",
+      "🧤"
+     ],
+     "options": [
+      "A sun hat",
+      "A scarf",
+      "Gloves"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sun is hot.",
+      "Scarves and gloves keep us warm.",
+      "A hat keeps the sun off your face."
+     ],
+     "explain": "A sun hat protects us from the sun."
+    },
+    {
+     "type": "mcq",
+     "q": "What keeps you dry in the rain?",
+     "pics": [
+      "☂️",
+      "🕶️",
+      "🩳"
+     ],
+     "options": [
+      "An umbrella",
+      "Sunglasses",
+      "Shorts"
+     ],
+     "answer": 0,
+     "hints": [
+      "Rain falls from the sky.",
+      "What do you hold above your head?",
+      "An umbrella."
+     ],
+     "explain": "An umbrella keeps the rain off."
+    },
+    {
+     "type": "mcq",
+     "q": "The trees are moving and a hat blows away. What weather is it?",
+     "pics": [
+      "💨",
+      "☀️",
+      "❄️"
+     ],
+     "options": [
+      "Windy",
+      "Sunny",
+      "Snowy"
+     ],
+     "answer": 0,
+     "hints": [
+      "Something is pushing the trees.",
+      "We cannot see it, but we feel it.",
+      "It is windy."
+     ],
+     "explain": "The wind moves the trees and blows hats away."
+    },
+    {
+     "type": "mcq",
+     "q": "It is very cold. What do you wear?",
+     "pics": [
+      "🧶",
+      "👙"
+     ],
+     "options": [
+      "A warm jersey",
+      "A swimming costume"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Cold means we need to be warm.",
+      "A costume is for swimming on hot days.",
+      "A jersey keeps us warm."
+     ],
+     "explain": "A warm jersey keeps us warm on a cold day."
+    },
+    {
+     "type": "mcq",
+     "q": "What can grey clouds bring?",
+     "pics": [
+      "🌧️",
+      "🌈"
+     ],
+     "options": [
+      "Rain",
+      "Nothing ever"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Look at the sky before it rains.",
+      "The clouds go dark and grey.",
+      "Grey clouds can bring rain."
+     ],
+     "explain": "Grey clouds often bring rain."
+    }
+   ],
+   "reflect": {
+    "q": "Which weather do you like?",
+    "options": [
+     "Sunny",
+     "Rainy",
+     "Windy",
+     "Cold"
+    ]
+   },
+   "parent": "Your child talked about weather and what to wear. Look at the sky together each morning.",
+   "teacher": "Shows weather vocabulary and the link between weather and clothing choices.",
+   "done": "Look at the sky every day to see the weather."
+  }
+ ],
+ "words": {
+  "ey-wash": {
+   "words": [
+    [
+     "🦠",
+     "Germs",
+     "tiny living things that can make us sick"
+    ],
+    [
+     "🧼",
+     "Soap",
+     "helps wash germs away"
+    ]
+   ]
+  },
+  "ey-safe": {
+   "words": [
+    [
+     "🔥",
+     "Hot",
+     "very warm. It can burn you"
+    ],
+    [
+     "🧑",
+     "Grown-up",
+     "an adult who looks after you"
+    ],
+    [
+     "✅",
+     "Safe",
+     "nothing here can hurt you"
+    ]
+   ]
+  },
+  "ey-me": {
+   "words": [
+    [
+     "⭐",
+     "Special",
+     "there is only one you"
+    ],
+    [
+     "💪",
+     "I can",
+     "I am able to do it"
+    ],
+    [
+     "🌈",
+     "Different",
+     "not the same"
+    ]
+   ]
+  },
+  "ey-turns": {
+   "words": [
+    [
+     "🔁",
+     "Take turns",
+     "one goes, then the next"
+    ],
+    [
+     "🤲",
+     "Share",
+     "let others use it too"
+    ]
+   ]
+  },
+  "ey-sounds": {
+   "words": [
+    [
+     "👂",
+     "Ear",
+     "the part of your body that hears"
+    ],
+    [
+     "🔊",
+     "Sound",
+     "what you hear"
+    ],
+    [
+     "🤫",
+     "Quiet",
+     "with very little sound"
+    ]
+   ]
+  },
+  "ey-story": {
+   "words": [
+    [
+     "1️⃣",
+     "First",
+     "the one at the start"
+    ],
+    [
+     "🔚",
+     "Last",
+     "the one at the end"
+    ]
+   ]
+  },
+  "ey-count": {
+   "words": [
+    [
+     "👆",
+     "Count",
+     "say one number for each thing"
+    ],
+    [
+     "🔢",
+     "How many",
+     "the last number you say when you count"
+    ]
+   ]
+  },
+  "ey-shapes": {
+   "words": [
+    [
+     "⚪",
+     "Circle",
+     "a round shape with no corners"
+    ],
+    [
+     "🟥",
+     "Square",
+     "four sides, all the same length"
+    ],
+    [
+     "🔺",
+     "Triangle",
+     "a shape with three sides"
+    ]
+   ]
+  },
+  "ey-colours": {
+   "words": [
+    [
+     "🎨",
+     "Colour",
+     "red, blue, yellow and more"
+    ],
+    [
+     "🔀",
+     "Mix",
+     "put together to make something new"
+    ],
+    [
+     "🌿",
+     "Nature",
+     "plants, animals, sky and sea"
+    ]
+   ]
+  },
+  "ey-music": {
+   "words": [
+    [
+     "🔊",
+     "Loud",
+     "a big sound"
+    ],
+    [
+     "🔈",
+     "Soft",
+     "a small, quiet sound"
+    ],
+    [
+     "🐇",
+     "Fast",
+     "quick"
+    ],
+    [
+     "🐢",
+     "Slow",
+     "not quick"
+    ]
+   ]
+  },
+  "ey-animals": {
+   "words": [
+    [
+     "🐣",
+     "Baby animal",
+     "a very young animal"
+    ],
+    [
+     "🐄",
+     "Calf",
+     "a baby cow"
+    ],
+    [
+     "🤲",
+     "Care",
+     "look after"
+    ]
+   ]
+  },
+  "ey-weather": {
+   "words": [
+    [
+     "☀️",
+     "Sunny",
+     "the sun is shining"
+    ],
+    [
+     "🌧️",
+     "Rainy",
+     "water falls from the clouds"
+    ],
+    [
+     "💨",
+     "Windy",
+     "the air moves strongly"
+    ]
+   ]
+  }
+ }
+}

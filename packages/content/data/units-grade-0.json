@@ -1,0 +1,2290 @@
+{
+ "level": "grade-0",
+ "units": [
+  {
+   "id": "gr-count",
+   "grade": 0,
+   "subject": "Mathematics",
+   "title": "Counting to 10",
+   "topic": "Count objects, more and less",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade R Mathematics: Numbers, Operations and Relationships (count objects to 10; number symbols 0 to 10; more than, less than, equal to)",
+   "intention": "Today I am practising counting to 10 and finding which group has more.",
+   "prompt": "How did you know which group had more?",
+   "lesson": [
+    {
+     "h": "Count to 10",
+     "say": "One, two, three, four, five, six, seven, eight, nine, ten.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">9</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10</span></div><p>Say one number for each thing you count.</p>"
+    },
+    {
+     "h": "Zero means none",
+     "say": "Zero means there is nothing. If the plate is empty, there are zero biscuits.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"An empty plate\">🍽️</p><p><b>0</b> means <b>none</b>. The plate is empty, so there are <b>zero</b> biscuits.</p>"
+    },
+    {
+     "h": "More, less and the same",
+     "say": "Six sweets is more than four sweets. Four is less than six. Three and three are the same.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"6 sweets\">🍬 🍬 🍬 🍬 🍬 🍬</p><p class=\"pics\" role=\"img\" aria-label=\"4 sweets\">🍬 🍬 🍬 🍬</p><p>6 is <b>more than</b> 4. 4 is <b>less than</b> 6. 3 and 3 are <b>equal</b>, the same.</p>"
+    }
+   ],
+   "example": {
+    "q": "Seven birds sit on a wire. Count them.",
+    "steps": [
+     "Touch each bird and say a number.",
+     "One, two, three, four, five, six, seven.",
+     "There are 7 birds."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many apples?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"6 apples\">🍎 🍎 🍎 🍎 🍎 🍎</p>",
+     "options": [
+      "6",
+      "5",
+      "8"
+     ],
+     "answer": 0,
+     "hints": [
+      "Touch each apple.",
+      "Count slowly.",
+      "1, 2, 3, 4, 5, 6."
+     ],
+     "explain": "There are 6 apples."
+    },
+    {
+     "type": "mcq",
+     "q": "How many balloons?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"9 balloons\">🎈 🎈 🎈 🎈 🎈 🎈 🎈 🎈 🎈</p>",
+     "options": [
+      "9",
+      "10",
+      "7"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count each balloon once.",
+      "Do not skip any.",
+      "1, 2, 3, 4, 5, 6, 7, 8, 9."
+     ],
+     "explain": "There are 9 balloons."
+    },
+    {
+     "type": "mcq",
+     "q": "What number comes after 7?",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">?</span></div>",
+     "options": [
+      "8",
+      "6",
+      "9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count on from 7.",
+      "Seven, …",
+      "Seven, eight."
+     ],
+     "explain": "8 comes after 7."
+    },
+    {
+     "type": "mcq",
+     "q": "Which group has more?",
+     "pics": [
+      "🐞 🐞 🐞 🐞 🐞 🐞 🐞 🐞",
+      "🐞 🐞 🐞 🐞 🐞"
+     ],
+     "options": [
+      "8 ladybirds",
+      "5 ladybirds"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Count each group.",
+      "Which number is bigger?",
+      "8 is more than 5."
+     ],
+     "explain": "8 is more than 5."
+    },
+    {
+     "type": "mcq",
+     "q": "How many cats are on the empty mat?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"An empty mat\">🟫</p>",
+     "options": [
+      "0",
+      "1",
+      "10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look carefully at the mat.",
+      "Is there any cat?",
+      "None means zero."
+     ],
+     "explain": "There are no cats, so the answer is 0."
+    },
+    {
+     "type": "order",
+     "q": "Put the numbers in order, smallest first.",
+     "items": [
+      "2",
+      "5",
+      "9"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "Which number do you say first when you count?",
+      "2 comes before 5.",
+      "9 is the biggest."
+     ],
+     "explain": "2, 5, 9."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you count?",
+    "options": [
+     "Touching each one",
+     "Saying numbers in order",
+     "Comparing groups",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child counted to 10, learned that zero means none, and compared groups.",
+   "teacher": "Shows counting to 10, recognising 0, and comparing quantities with more, less and equal.",
+   "done": "You can count to 10 and tell which group has more."
+  },
+  {
+   "id": "gr-patterns",
+   "grade": 0,
+   "subject": "Mathematics",
+   "title": "Copy and finish a pattern",
+   "topic": "Simple patterns",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade R Mathematics: Patterns, Functions and Algebra (copy and extend simple patterns using objects and drawings, such as colours and shapes)",
+   "intention": "Today I am practising finding what comes next in a pattern.",
+   "prompt": "What keeps repeating?",
+   "lesson": [
+    {
+     "h": "A pattern repeats",
+     "say": "A pattern is something that repeats. Red, blue, red, blue. Red and blue repeat.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Red, blue, red, blue, red, blue\">🔴 🔵 🔴 🔵 🔴 🔵</p><p>A <b>pattern</b> repeats again and again.</p>"
+    },
+    {
+     "h": "Find the part that repeats",
+     "say": "In star, moon, moon, star, moon, moon, the part that repeats is star, moon, moon.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Star, moon, moon, star, moon, moon\">⭐ 🌙 🌙 ⭐ 🌙 🌙</p><p>Find the <b>part that repeats</b>: ⭐ 🌙 🌙.</p>"
+    },
+    {
+     "h": "Patterns we hear",
+     "say": "We can make patterns with sounds too. Clap, stamp, clap, stamp.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Clap, stamp, clap, stamp\">👏 🦶 👏 🦶</p><p>Patterns can be <b>sounds</b> and <b>movements</b> too.</p>"
+    }
+   ],
+   "example": {
+    "q": "What comes next? Apple, banana, apple, banana, apple, …",
+    "steps": [
+     "The part that repeats is apple, banana.",
+     "After apple comes banana.",
+     "Next is banana."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What comes next?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Red, yellow, red, yellow, red, what next\">🔴 🟡 🔴 🟡 🔴 ?</p>",
+     "pics": [
+      "🟡",
+      "🔴",
+      "🔵"
+     ],
+     "options": [
+      "Yellow",
+      "Red",
+      "Blue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Red, yellow repeats.",
+      "After red comes…",
+      "Yellow."
+     ],
+     "explain": "Red, yellow, red, yellow, red, yellow."
+    },
+    {
+     "type": "mcq",
+     "q": "What comes next?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Dog, cat, cat, dog, cat, cat, dog, what next\">🐶 🐱 🐱 🐶 🐱 🐱 🐶 ?</p>",
+     "pics": [
+      "🐱",
+      "🐶"
+     ],
+     "options": [
+      "Cat",
+      "Dog"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "The part is dog, cat, cat.",
+      "After dog comes…",
+      "Cat."
+     ],
+     "explain": "Dog, cat, cat repeats, so cat comes next."
+    },
+    {
+     "type": "mcq",
+     "q": "What is missing?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Black, white, black, missing, black, white\">⬛ ⬜ ⬛ ? ⬛ ⬜</p>",
+     "pics": [
+      "⬜",
+      "⬛"
+     ],
+     "options": [
+      "White",
+      "Black"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Black and white take turns.",
+      "What comes after black?",
+      "White."
+     ],
+     "explain": "Black, white, black, white."
+    },
+    {
+     "type": "mcq",
+     "q": "Clap, stamp, clap, stamp, clap … what next?",
+     "pics": [
+      "🦶",
+      "👏"
+     ],
+     "options": [
+      "Stamp",
+      "Clap"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Clap and stamp take turns.",
+      "The last one was clap.",
+      "Stamp comes next."
+     ],
+     "explain": "After clap comes stamp."
+    },
+    {
+     "type": "mcq",
+     "q": "Which one is a pattern?",
+     "pics": [
+      "🔺🔵🔺🔵🔺🔵",
+      "🔺🔵🔵🟩🔺⭐"
+     ],
+     "options": [
+      "Triangle, circle, triangle, circle",
+      "Mixed up shapes"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "A pattern repeats.",
+      "Does the same part come again?",
+      "Triangle, circle repeats."
+     ],
+     "explain": "Triangle, circle, triangle, circle repeats, so it is a pattern."
+    }
+   ],
+   "reflect": {
+    "q": "How did you find the pattern?",
+    "options": [
+     "Saying it out loud",
+     "Finding the part that repeats",
+     "Clapping it",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child copied and continued colour, shape and sound patterns.",
+   "teacher": "Shows whether the child identifies the repeating unit and extends AB and ABB patterns.",
+   "done": "Patterns repeat. You can find them in clothes, songs and beads."
+  },
+  {
+   "id": "gr-shapes",
+   "grade": 0,
+   "subject": "Mathematics",
+   "title": "Ball shapes and box shapes",
+   "topic": "3-D objects and position",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade R Mathematics: Space and Shape (recognise and name ball shapes and box shapes; sort by whether they roll or slide; position: on top of, under, behind, next to)",
+   "intention": "Today I am practising which shapes roll and which shapes slide.",
+   "prompt": "How did you know if it would roll?",
+   "lesson": [
+    {
+     "h": "Ball shapes roll",
+     "say": "A ball shape is round all over. It rolls. An orange and a soccer ball are ball shapes.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Soccer ball, orange, basketball\">⚽ 🍊 🏀</p><p>A <b>ball shape</b> is round all over. It <b>rolls</b>.</p>"
+    },
+    {
+     "h": "Box shapes slide",
+     "say": "A box shape has flat sides. It slides but does not roll. A cereal box is a box shape.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Box, ice cube, gift box\">📦 🧊 🎁</p><p>A <b>box shape</b> has <b>flat sides</b>. It <b>slides</b>.</p>"
+    },
+    {
+     "h": "Where is it?",
+     "say": "The cat is on top of the box. The ball is under the table. The dog is next to the tree.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Cat on top of box, ball under\">🐈⬆️📦  ⚽⬇️</p><p><b>On top of, under, behind, in front of, next to.</b> These words tell us where things are.</p>"
+    }
+   ],
+   "example": {
+    "q": "Will a tin of beans roll?",
+    "steps": [
+     "A tin has a round side.",
+     "Round sides can roll.",
+     "Yes. If it lies on its side, it rolls."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one rolls?",
+     "pics": [
+      "⚽",
+      "📦",
+      "📘"
+     ],
+     "options": [
+      "Ball",
+      "Box",
+      "Book"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is round all over?",
+      "Boxes and books have flat sides.",
+      "A ball rolls."
+     ],
+     "explain": "A ball is round, so it rolls."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a box shape?",
+     "pics": [
+      "📦",
+      "🍊",
+      "🌍"
+     ],
+     "options": [
+      "Gift box",
+      "Orange",
+      "Globe"
+     ],
+     "answer": 0,
+     "hints": [
+      "Box shapes have flat sides.",
+      "An orange and a globe are round.",
+      "The gift box is a box shape."
+     ],
+     "explain": "A gift box has flat sides."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these into roll and slide.",
+     "items": [
+      "Ball",
+      "Box",
+      "Orange",
+      "Brick"
+     ],
+     "bins": [
+      "Rolls",
+      "Slides"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Round things roll.",
+      "Things with flat sides slide.",
+      "Ball and orange roll."
+     ],
+     "explain": "Ball and orange roll. Box and brick slide."
+    },
+    {
+     "type": "mcq",
+     "q": "The bird is above the tree. Where is the bird?",
+     "pics": [
+      "⬆️",
+      "⬇️"
+     ],
+     "options": [
+      "Above the tree",
+      "Under the tree"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Listen to the question.",
+      "Above means higher up.",
+      "Above the tree."
+     ],
+     "explain": "The bird is above the tree."
+    },
+    {
+     "type": "mcq",
+     "q": "You put your shoes under the bed. Where are they?",
+     "pics": [
+      "🛏️⬇️👟",
+      "🛏️⬆️👟"
+     ],
+     "options": [
+      "Under the bed",
+      "On top of the bed"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Under means below.",
+      "They are on the floor, lower than the bed.",
+      "Under the bed."
+     ],
+     "explain": "The shoes are under the bed."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Thinking about round sides",
+     "Thinking about flat sides",
+     "The position words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child sorted ball shapes and box shapes and used words like on top of and under.",
+   "teacher": "Shows recognition of ball and box shapes by rolling and sliding, and use of position language.",
+   "done": "Ball shapes roll and box shapes slide."
+  },
+  {
+   "id": "gr-measure",
+   "grade": 0,
+   "subject": "Mathematics",
+   "title": "Long or short, heavy or light",
+   "topic": "Comparing length, mass and capacity",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade R Mathematics: Measurement (informal comparison of length, mass and capacity: taller and shorter, heavy and light, full and empty)",
+   "intention": "Today I am practising comparing things by size, weight and how full they are.",
+   "prompt": "How did you compare them?",
+   "lesson": [
+    {
+     "h": "Tall and short",
+     "say": "A giraffe is tall. A tortoise is short. Line them up to compare.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Giraffe and tortoise\">🦒 🐢</p><p>A giraffe is <b>taller</b>. A tortoise is <b>shorter</b>.</p>"
+    },
+    {
+     "h": "Heavy and light",
+     "say": "An elephant is heavy. A feather is light. Heavy things are hard to lift.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Elephant and feather\">🐘 🪶</p><p>An elephant is <b>heavy</b>. A feather is <b>light</b>.</p>"
+    },
+    {
+     "h": "Full and empty",
+     "say": "A full cup has lots of water. An empty cup has no water.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Full glass and empty glass\">🥛 🥃</p><p>A <b>full</b> cup holds lots of water. An <b>empty</b> cup has none.</p>"
+    }
+   ],
+   "example": {
+    "q": "Which is heavier, a watermelon or a grape?",
+    "steps": [
+     "Imagine holding each one.",
+     "A watermelon is big and hard to lift.",
+     "The watermelon is heavier."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is taller?",
+     "pics": [
+      "🦒",
+      "🐁"
+     ],
+     "options": [
+      "Giraffe",
+      "Mouse"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Which one reaches up high?",
+      "A mouse is tiny.",
+      "A giraffe is very tall."
+     ],
+     "explain": "A giraffe is taller than a mouse."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is lighter?",
+     "pics": [
+      "🪶",
+      "🧱"
+     ],
+     "options": [
+      "Feather",
+      "Brick"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Lighter means easier to lift.",
+      "A brick is heavy.",
+      "A feather is light."
+     ],
+     "explain": "A feather is lighter than a brick."
+    },
+    {
+     "type": "mcq",
+     "q": "Which bottle holds no water?",
+     "pics": [
+      "🫙",
+      "🍶"
+     ],
+     "options": [
+      "The empty one",
+      "The full one"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "No water means…",
+      "Empty.",
+      "The empty one."
+     ],
+     "explain": "An empty bottle has no water."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is longer?",
+     "pics": [
+      "🐍",
+      "🐛"
+     ],
+     "options": [
+      "Snake",
+      "Caterpillar"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Imagine them lying side by side.",
+      "A caterpillar is small.",
+      "A snake is longer."
+     ],
+     "explain": "A snake is longer than a caterpillar."
+    },
+    {
+     "type": "order",
+     "q": "Put these in order from shortest to tallest.",
+     "items": [
+      "Ant",
+      "Dog",
+      "Giraffe"
+     ],
+     "orderLabel": "shortest to tallest",
+     "hints": [
+      "Which is the tiniest?",
+      "A dog is in the middle.",
+      "A giraffe is the tallest."
+     ],
+     "explain": "Ant, dog, giraffe."
+    }
+   ],
+   "reflect": {
+    "q": "How did you compare?",
+    "options": [
+     "Looking at size",
+     "Imagining lifting",
+     "Thinking about water",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared tall and short, heavy and light, full and empty. Compare things at home while cooking or tidying.",
+   "teacher": "Shows use of comparative language for length, mass and capacity without units.",
+   "done": "Taller, heavier, fuller: you can compare things!"
+  },
+  {
+   "id": "gr-rhyme",
+   "grade": 0,
+   "subject": "English Home Language",
+   "title": "Words that rhyme",
+   "topic": "Rhyming words",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade R English Home Language: Phonological awareness (identify rhyming words; repeat rhymes and songs)",
+   "intention": "Today I am practising hearing words that rhyme.",
+   "prompt": "How did the words sound the same?",
+   "lesson": [
+    {
+     "h": "Rhymes sound the same at the end",
+     "say": "Words that rhyme sound the same at the end. Cat and hat rhyme. They both end in at.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Cat and hat\">🐈 🎩</p><p><b>Cat</b> and <b>hat</b> rhyme. They both end in <b>-at</b>.</p>"
+    },
+    {
+     "h": "More rhymes",
+     "say": "Bee and tree rhyme. Frog and log rhyme. Sun and bun rhyme.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Bee and tree, frog and log, sun and bun\">🐝 🌳  🐸 🪵  ☀️ 🍞</p><p>Bee, tree. Frog, log. Sun, bun.</p>"
+    },
+    {
+     "h": "Say it out loud",
+     "say": "Say the words out loud. Listen to the end of each word.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Say and listen\">🗣️ 👂</p><p>Say the words out loud. <b>Listen to the end</b> of each word.</p>"
+    }
+   ],
+   "example": {
+    "q": "Does dog rhyme with frog?",
+    "steps": [
+     "Say dog. Say frog.",
+     "Both end with og.",
+     "Yes, dog and frog rhyme."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with cat?",
+     "pics": [
+      "🎩",
+      "🐕",
+      "🍎"
+     ],
+     "options": [
+      "Hat",
+      "Dog",
+      "Apple"
+     ],
+     "answer": 0,
+     "hints": [
+      "Cat ends with at.",
+      "Which one ends with at too?",
+      "Hat."
+     ],
+     "explain": "Cat and hat rhyme."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with bee?",
+     "pics": [
+      "🌳",
+      "🐄",
+      "🚗"
+     ],
+     "options": [
+      "Tree",
+      "Cow",
+      "Car"
+     ],
+     "answer": 0,
+     "hints": [
+      "Bee ends with ee.",
+      "Say each word.",
+      "Tree ends with ee."
+     ],
+     "explain": "Bee and tree rhyme."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with sun?",
+     "pics": [
+      "🍞",
+      "🌙",
+      "⭐"
+     ],
+     "options": [
+      "Bun",
+      "Moon",
+      "Star"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sun ends with un.",
+      "Which one ends with un?",
+      "Bun."
+     ],
+     "explain": "Sun and bun rhyme."
+    },
+    {
+     "type": "mcq",
+     "q": "Do fish and dish rhyme?",
+     "pics": [
+      "👍",
+      "👎"
+     ],
+     "options": [
+      "Yes",
+      "No"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Say fish. Say dish.",
+      "Both end with ish.",
+      "They rhyme."
+     ],
+     "explain": "Fish and dish both end in -ish, so they rhyme."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word does not rhyme with log?",
+     "pics": [
+      "🐸",
+      "🐕",
+      "🐈"
+     ],
+     "options": [
+      "Frog",
+      "Dog",
+      "Cat"
+     ],
+     "answer": 2,
+     "hints": [
+      "Log ends with og.",
+      "Frog and dog end with og.",
+      "Cat ends with at."
+     ],
+     "explain": "Cat does not rhyme with log. Frog and dog do."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you hear rhymes?",
+    "options": [
+     "Saying it out loud",
+     "Listening to the end",
+     "The pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child listened for rhyming words. Play a rhyming game: \"What rhymes with bed?\"",
+   "teacher": "Shows whether the child identifies rhyme by matching word endings.",
+   "done": "Rhyming words sound the same at the end."
+  },
+  {
+   "id": "gr-sounds",
+   "grade": 0,
+   "subject": "English Home Language",
+   "title": "First sounds",
+   "topic": "Initial sounds",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade R English Home Language: Phonics (recognise some initial consonants and vowels; recognise own name)",
+   "intention": "Today I am practising hearing the first sound in a word.",
+   "prompt": "Which sound did you hear first?",
+   "lesson": [
+    {
+     "h": "Words start with a sound",
+     "say": "Every word starts with a sound. Ball starts with b. Sun starts with s.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Ball and sun\">⚽ ☀️</p><p><b>B</b>all starts with <b>b</b>. <b>S</b>un starts with <b>s</b>.</p>"
+    },
+    {
+     "h": "Same first sound",
+     "say": "Mouse, moon and milk all start with m.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Mouse, moon, milk\">🐭 🌙 🥛</p><p><b>M</b>ouse, <b>m</b>oon and <b>m</b>ilk all start with <b>m</b>.</p>"
+    },
+    {
+     "h": "Your name has a first sound",
+     "say": "Your name starts with a sound too. Thabo starts with t. Ayanda starts with a.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"A child and letters\">🧒 🔤</p><p>Your name starts with a sound too.</p>"
+    }
+   ],
+   "example": {
+    "q": "What sound does dog start with?",
+    "steps": [
+     "Say dog slowly: d … og.",
+     "The first sound is d.",
+     "Dog starts with d."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which starts with the same sound as sun?",
+     "pics": [
+      "🧦",
+      "🐕",
+      "🍎"
+     ],
+     "options": [
+      "Sock",
+      "Dog",
+      "Apple"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sun starts with s.",
+      "Say each word slowly.",
+      "Sock starts with s."
+     ],
+     "explain": "Sun and sock both start with s."
+    },
+    {
+     "type": "mcq",
+     "q": "Which starts with b?",
+     "pics": [
+      "⚽",
+      "🐈",
+      "🐟"
+     ],
+     "options": [
+      "Ball",
+      "Cat",
+      "Fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "b, b, b.",
+      "Say ball, cat, fish.",
+      "Ball starts with b."
+     ],
+     "explain": "Ball starts with b."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the first sound in milk?",
+     "pics": [
+      "Ⓜ️",
+      "🅿️"
+     ],
+     "options": [
+      "m",
+      "p"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Say milk slowly.",
+      "m … ilk.",
+      "The first sound is m."
+     ],
+     "explain": "Milk starts with m."
+    },
+    {
+     "type": "mcq",
+     "q": "Which starts with the same sound as fish?",
+     "pics": [
+      "🐸",
+      "🐄",
+      "🦁"
+     ],
+     "options": [
+      "Frog",
+      "Cow",
+      "Lion"
+     ],
+     "answer": 0,
+     "hints": [
+      "Fish starts with f.",
+      "Say each word.",
+      "Frog starts with f."
+     ],
+     "explain": "Fish and frog both start with f."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word starts with a?",
+     "pics": [
+      "🍎",
+      "🍌",
+      "🍊"
+     ],
+     "options": [
+      "Apple",
+      "Banana",
+      "Orange"
+     ],
+     "answer": 0,
+     "hints": [
+      "a, a, a.",
+      "Say each fruit name slowly.",
+      "Apple starts with a."
+     ],
+     "explain": "Apple starts with a."
+    }
+   ],
+   "reflect": {
+    "q": "How did you find the first sound?",
+    "options": [
+     "Saying it slowly",
+     "Looking at the picture",
+     "Thinking of other words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child listened for first sounds in words. Play \"I spy something that starts with…\"",
+   "teacher": "Shows awareness of initial phonemes, a foundation for Grade 1 letter-sound work.",
+   "done": "Every word starts with a sound. Listen for it!"
+  },
+  {
+   "id": "gr-syllables",
+   "grade": 0,
+   "subject": "English Home Language",
+   "title": "Clap the parts of a word",
+   "topic": "Syllables",
+   "domain": "Communication and Expression",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade R English Home Language: Phonological awareness (divide multisyllabic words into syllables, for example by clapping)",
+   "intention": "Today I am practising clapping the parts of words.",
+   "prompt": "How many claps did you hear?",
+   "lesson": [
+    {
+     "h": "Words have parts",
+     "say": "Words have parts called syllables. We clap once for each part. Cat has one clap.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"One clap\">👏</p><p>Words have parts called <b>syllables</b>. <b>Cat</b> has one clap.</p>"
+    },
+    {
+     "h": "Two and three claps",
+     "say": "Mon-key has two claps. E-le-phant has three claps.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Monkey two claps, elephant three claps\">🐒 👏👏  🐘 👏👏👏</p><p><b>Mon-key</b>: 2 claps. <b>El-e-phant</b>: 3 claps.</p>"
+    },
+    {
+     "h": "Clap your name",
+     "say": "Clap your name. Si-pho has two claps. Nom-thu-li has three claps.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Clap your name\">🧒 👏</p><p>Clap your name! <b>Si-pho</b>: 2. <b>Nom-thu-li</b>: 3.</p>"
+    }
+   ],
+   "example": {
+    "q": "How many claps in banana?",
+    "steps": [
+     "Say it slowly: ba-na-na.",
+     "Clap for each part.",
+     "Ba-na-na has 3 claps."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many claps in dog?",
+     "pics": [
+      "👏",
+      "👏👏",
+      "👏👏👏"
+     ],
+     "options": [
+      "1",
+      "2",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say dog slowly.",
+      "Is it one part or more?",
+      "Dog has one part."
+     ],
+     "explain": "Dog has 1 syllable."
+    },
+    {
+     "type": "mcq",
+     "q": "How many claps in tiger?",
+     "pics": [
+      "👏👏",
+      "👏",
+      "👏👏👏"
+     ],
+     "options": [
+      "2",
+      "1",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say ti-ger.",
+      "Clap each part.",
+      "Ti-ger: 2."
+     ],
+     "explain": "Ti-ger has 2 syllables."
+    },
+    {
+     "type": "mcq",
+     "q": "How many claps in butterfly?",
+     "pics": [
+      "👏👏👏",
+      "👏👏",
+      "👏"
+     ],
+     "options": [
+      "3",
+      "2",
+      "1"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say but-ter-fly.",
+      "Clap each part.",
+      "But-ter-fly: 3."
+     ],
+     "explain": "But-ter-fly has 3 syllables."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word has 2 claps?",
+     "pics": [
+      "🐒",
+      "🐈",
+      "🐘"
+     ],
+     "options": [
+      "Monkey",
+      "Cat",
+      "Elephant"
+     ],
+     "answer": 0,
+     "hints": [
+      "Clap each word.",
+      "Cat is 1 and elephant is 3.",
+      "Mon-key is 2."
+     ],
+     "explain": "Mon-key has 2 claps."
+    },
+    {
+     "type": "order",
+     "q": "Put these in order: fewest claps first.",
+     "items": [
+      "Sun",
+      "Pencil",
+      "Banana"
+     ],
+     "orderLabel": "fewest to most claps",
+     "hints": [
+      "Clap each word.",
+      "Sun is 1, pen-cil is 2.",
+      "Ba-na-na is 3."
+     ],
+     "explain": "Sun (1), pen-cil (2), ba-na-na (3)."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you count the parts?",
+    "options": [
+     "Clapping",
+     "Saying it slowly",
+     "Touching my chin",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child clapped the syllables in words. Clap family names together.",
+   "teacher": "Shows whether the child segments words into syllables, a phonological awareness skill.",
+   "done": "Clap, clap! Words have parts."
+  },
+  {
+   "id": "gr-story",
+   "grade": 0,
+   "subject": "English Home Language",
+   "title": "Story: Lulu's Lost Hat",
+   "topic": "Listening to a story",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade R English Home Language: Listening and speaking, and shared reading (listen to a story; answer simple questions; talk about the beginning, middle and end)",
+   "intention": "Today I am practising listening to a story and remembering what happened.",
+   "prompt": "What was your favourite part?",
+   "passage": "<div class=\"passage-text\"><p><b>Lulu's Lost Hat</b> <span class=\"muted\">(a 2to.iQ story)</span></p>\n<p>Lulu had a red hat. She wore it every day.</p>\n<p>One windy morning, the wind blew her hat away! It flew over the fence and into the garden.</p>\n<p>Lulu looked under the bench. No hat. She looked behind the tree. No hat.</p>\n<p>Then she heard a little bark. Her puppy, Kofi, ran to her with the red hat in his mouth.</p>\n<p>\"Thank you, Kofi!\" said Lulu, and she gave him a big hug.</p></div>",
+   "lesson": [
+    {
+     "h": "Listen to the story",
+     "say": "Listen to the story. You can press Read aloud to hear it.",
+     "html": "<div class=\"passage-text\"><p><b>Lulu's Lost Hat</b> <span class=\"muted\">(a 2to.iQ story)</span></p>\n<p>Lulu had a red hat. She wore it every day.</p>\n<p>One windy morning, the wind blew her hat away! It flew over the fence and into the garden.</p>\n<p>Lulu looked under the bench. No hat. She looked behind the tree. No hat.</p>\n<p>Then she heard a little bark. Her puppy, Kofi, ran to her with the red hat in his mouth.</p>\n<p>\"Thank you, Kofi!\" said Lulu, and she gave him a big hug.</p></div>"
+    },
+    {
+     "h": "Beginning, middle, end",
+     "say": "Stories have a beginning, a middle and an end. At the beginning we meet the characters.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Beginning, middle, end\">1️⃣ 2️⃣ 3️⃣</p><p>A story has a <b>beginning</b>, a <b>middle</b> and an <b>end</b>.</p>"
+    },
+    {
+     "h": "Who is in the story?",
+     "say": "The people and animals in a story are called characters. Lulu and Kofi are the characters.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Lulu and Kofi\">👧 🐶</p><p>The people and animals in a story are the <b>characters</b>: Lulu and Kofi.</p>"
+    }
+   ],
+   "example": {
+    "q": "What colour was Lulu's hat?",
+    "steps": [
+     "Think back to the beginning of the story.",
+     "Lulu had a hat that she wore every day.",
+     "Her hat was red."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What made Lulu's hat fly away?",
+     "pics": [
+      "💨",
+      "🌧️",
+      "🐶"
+     ],
+     "options": [
+      "The wind",
+      "The rain",
+      "The puppy"
+     ],
+     "answer": 0,
+     "hints": [
+      "It was a windy morning.",
+      "Something blew the hat.",
+      "The wind."
+     ],
+     "explain": "The wind blew Lulu's hat away."
+    },
+    {
+     "type": "mcq",
+     "q": "Who found the hat?",
+     "pics": [
+      "🐶",
+      "👩",
+      "🐈"
+     ],
+     "options": [
+      "Kofi the puppy",
+      "Mum",
+      "A cat"
+     ],
+     "answer": 0,
+     "hints": [
+      "Lulu heard a bark.",
+      "Who barks?",
+      "Kofi the puppy."
+     ],
+     "explain": "Kofi the puppy found the hat."
+    },
+    {
+     "type": "order",
+     "q": "Put the story in order.",
+     "items": [
+      "The wind blew the hat away",
+      "Lulu looked for the hat",
+      "Kofi brought the hat back"
+     ],
+     "orderLabel": "beginning to end",
+     "hints": [
+      "What happened first?",
+      "Then Lulu searched.",
+      "Kofi found it at the end."
+     ],
+     "explain": "The hat blew away, Lulu looked, then Kofi brought it back."
+    },
+    {
+     "type": "mcq",
+     "q": "Where did Lulu look first?",
+     "pics": [
+      "🪑",
+      "🌳"
+     ],
+     "options": [
+      "Under the bench",
+      "Behind the tree"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Listen to the middle of the story again.",
+      "She looked in two places.",
+      "She looked under the bench first."
+     ],
+     "explain": "She looked under the bench first, then behind the tree."
+    },
+    {
+     "type": "mcq",
+     "q": "How did Lulu feel at the end?",
+     "pics": [
+      "😊",
+      "😢"
+     ],
+     "options": [
+      "Happy",
+      "Sad"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "She got her hat back.",
+      "She gave Kofi a hug.",
+      "She felt happy."
+     ],
+     "explain": "Lulu was happy. She hugged Kofi and said thank you."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you remember?",
+    "options": [
+     "The pictures in my head",
+     "Listening again",
+     "Thinking about order",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child listened to a story and retold what happened. Ask them to tell it back to you.",
+   "teacher": "Shows listening comprehension, recall of detail and sequencing of story events.",
+   "done": "Good listeners remember stories. Well done!"
+  },
+  {
+   "id": "gr-body",
+   "grade": 0,
+   "subject": "Life Skills",
+   "title": "My body belongs to me",
+   "topic": "My body",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "CAPS Grade R Life Skills (Personal and Social Well-being), Term 1: My body (body parts and what they do; who may touch my body; keeping my body healthy)",
+   "intention": "Today I am learning about my body and keeping it safe.",
+   "prompt": "Who are your trusted grown-ups?",
+   "lesson": [
+    {
+     "h": "Parts of my body",
+     "say": "I have a head, two arms, two hands, two legs and two feet.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Head, arm, hand, leg, foot\">🙂 💪 ✋ 🦵 🦶</p><p>I have a <b>head</b>, two <b>arms</b>, two <b>hands</b>, two <b>legs</b> and two <b>feet</b>.</p>"
+    },
+    {
+     "h": "What my body does",
+     "say": "I see with my eyes. I hear with my ears. I smell with my nose. I taste with my tongue. I feel with my skin.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Eyes, ears, nose, tongue, hand\">👀 👂 👃 👅 ✋</p><p>I <b>see</b>, <b>hear</b>, <b>smell</b>, <b>taste</b> and <b>feel</b>.</p>"
+    },
+    {
+     "h": "My body is mine",
+     "say": "My body belongs to me. The parts my swimming costume covers are private. If a touch feels wrong, I say no, I go away and I tell a trusted grown-up.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Say no, go away, tell\">🙅 🏃 🗣️</p><p>My body <b>belongs to me</b>. Private parts are the parts my swimming costume covers.</p><p>If a touch feels wrong: <b>say no</b>, <b>go away</b>, <b>tell a trusted grown-up</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "What do we use to smell a flower?",
+    "steps": [
+     "Think about the parts of your face.",
+     "We see with eyes and hear with ears.",
+     "We smell with our nose."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What do we see with?",
+     "pics": [
+      "👀",
+      "👂",
+      "👃"
+     ],
+     "options": [
+      "Eyes",
+      "Ears",
+      "Nose"
+     ],
+     "answer": 0,
+     "hints": [
+      "Close them and you cannot see.",
+      "Ears are for hearing.",
+      "Eyes."
+     ],
+     "explain": "We see with our eyes."
+    },
+    {
+     "type": "mcq",
+     "q": "How many hands do you have?",
+     "pics": [
+      "✋✋",
+      "✋",
+      "✋✋✋"
+     ],
+     "options": [
+      "2",
+      "1",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Hold them up.",
+      "Count them.",
+      "One, two."
+     ],
+     "explain": "We have 2 hands."
+    },
+    {
+     "type": "mcq",
+     "q": "Who does your body belong to?",
+     "pics": [
+      "🙋",
+      "👥"
+     ],
+     "options": [
+      "Me",
+      "Everyone"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "It is your body.",
+      "You choose who hugs you.",
+      "It belongs to you."
+     ],
+     "explain": "Your body belongs to you."
+    },
+    {
+     "type": "mcq",
+     "q": "A touch feels wrong. What do you do?",
+     "pics": [
+      "🗣️",
+      "🤐"
+     ],
+     "options": [
+      "Say no and tell a trusted grown-up",
+      "Keep it a secret"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "You can always tell.",
+      "Trusted grown-ups help keep you safe.",
+      "Say no, go away and tell."
+     ],
+     "explain": "Say no, go away and tell a trusted grown-up. It is never your fault."
+    },
+    {
+     "type": "mcq",
+     "q": "What keeps your body healthy?",
+     "pics": [
+      "🥕",
+      "🍭"
+     ],
+     "options": [
+      "Fruit and vegetables",
+      "Only sweets"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Some food helps us grow.",
+      "Sweets are for sometimes.",
+      "Fruit and vegetables."
+     ],
+     "explain": "Fruit and vegetables help our bodies stay healthy."
+    }
+   ],
+   "reflect": {
+    "q": "Who could you tell if something worries you?",
+    "options": [
+     "A parent or caregiver",
+     "A teacher",
+     "Another trusted grown-up",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned body parts and the senses, and that their body belongs to them. Talk together about who their trusted grown-ups are.",
+   "teacher": "Covers body parts, senses and body safety (say no, go away, tell). Follow your school's safeguarding procedure if a child discloses anything.",
+   "done": "My body is mine. I can say no and tell a trusted grown-up."
+  },
+  {
+   "id": "gr-days",
+   "grade": 0,
+   "subject": "Life Skills",
+   "title": "Days of the week",
+   "topic": "Yesterday, today and tomorrow",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade R Life Skills (Beginning Knowledge), Term 1: Days of the week (names of the days; activities on different days; yesterday, today and tomorrow)",
+   "intention": "Today I am learning the days of the week.",
+   "prompt": "What day is today?",
+   "lesson": [
+    {
+     "h": "Seven days",
+     "say": "There are seven days in a week. Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mon</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tue</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wed</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Thu</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fri</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sat</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sun</span></div><p>There are <b>7 days</b> in a week.</p>"
+    },
+    {
+     "h": "School days and weekend",
+     "say": "Monday to Friday are school days. Saturday and Sunday are the weekend.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Five school days and two home days\">🏫 🏫 🏫 🏫 🏫  🏡 🏡</p><p><b>Monday to Friday</b>: school days. <b>Saturday and Sunday</b>: the weekend.</p>"
+    },
+    {
+     "h": "Yesterday, today, tomorrow",
+     "say": "Yesterday was the day before today. Tomorrow is the day after today.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Yesterday</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Today</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tomorrow</span></div><p>If today is <b>Tuesday</b>, yesterday was <b>Monday</b> and tomorrow is <b>Wednesday</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Today is Thursday. What day is tomorrow?",
+    "steps": [
+     "Say the days in order.",
+     "Monday, Tuesday, Wednesday, Thursday, …",
+     "Tomorrow is Friday."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many days are in a week?",
+     "options": [
+      "7",
+      "5",
+      "10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the days.",
+      "Monday, Tuesday, Wednesday, …",
+      "There are seven."
+     ],
+     "explain": "There are 7 days in a week."
+    },
+    {
+     "type": "mcq",
+     "q": "Which day comes after Monday?",
+     "options": [
+      "Tuesday",
+      "Sunday",
+      "Friday"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say the days in order.",
+      "Monday, …",
+      "Monday, Tuesday."
+     ],
+     "explain": "Tuesday comes after Monday."
+    },
+    {
+     "type": "mcq",
+     "q": "Which days are the weekend?",
+     "options": [
+      "Saturday and Sunday",
+      "Monday and Tuesday",
+      "Wednesday and Thursday"
+     ],
+     "answer": 0,
+     "hints": [
+      "Most children do not go to school then.",
+      "They are the last two days.",
+      "Saturday and Sunday."
+     ],
+     "explain": "Saturday and Sunday are the weekend."
+    },
+    {
+     "type": "mcq",
+     "q": "Today is Wednesday. What was yesterday?",
+     "options": [
+      "Tuesday",
+      "Thursday",
+      "Saturday"
+     ],
+     "answer": 0,
+     "hints": [
+      "Yesterday is the day before.",
+      "What comes before Wednesday?",
+      "Tuesday."
+     ],
+     "explain": "Yesterday was Tuesday."
+    },
+    {
+     "type": "order",
+     "q": "Put these days in order.",
+     "items": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "The school week starts on Monday.",
+      "Then Tuesday.",
+      "Then Wednesday."
+     ],
+     "explain": "Monday, Tuesday, Wednesday."
+    }
+   ],
+   "reflect": {
+    "q": "Which day do you like best?",
+    "options": [
+     "A school day",
+     "Saturday",
+     "Sunday",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned the days of the week and the words yesterday, today and tomorrow. Say the day together each morning.",
+   "teacher": "Shows recall of the day sequence and understanding of yesterday, today and tomorrow.",
+   "done": "Seven days make a week. What will you do tomorrow?"
+  },
+  {
+   "id": "gr-transport",
+   "grade": 0,
+   "subject": "Life Skills",
+   "title": "Getting around",
+   "topic": "Transport",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade R Life Skills (Beginning Knowledge), Term 3: Transport (how we get to school; kinds of transport on land, water and in the air; transport long ago)",
+   "intention": "Today I am learning how people and things get from place to place.",
+   "prompt": "How do you get to school?",
+   "lesson": [
+    {
+     "h": "Land transport",
+     "say": "On land we travel by car, taxi, bus, train or bicycle. We can also walk.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Car, taxi, bus, train, bicycle, walking\">🚗 🚐 🚌 🚆 🚲 🚶</p><p>On <b>land</b>: car, taxi, bus, train, bicycle, or walking.</p>"
+    },
+    {
+     "h": "Water and air",
+     "say": "Boats and ships travel on water. Aeroplanes and helicopters fly in the air.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Boat, ship, aeroplane, helicopter\">⛵ 🚢  ✈️ 🚁</p><p>On <b>water</b>: boats and ships. In the <b>air</b>: aeroplanes and helicopters.</p>"
+    },
+    {
+     "h": "Long ago",
+     "say": "Long ago, people walked, rode horses or used carts pulled by oxen.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Horse, ox, wheel\">🐎 🐂 🛞</p><p><b>Long ago</b> people walked, rode horses or used ox-wagons.</p>"
+    }
+   ],
+   "example": {
+    "q": "How can you cross the sea?",
+    "steps": [
+     "The sea is water.",
+     "Which transport goes on water?",
+     "A ship or a boat. An aeroplane can also fly over it."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one flies?",
+     "pics": [
+      "✈️",
+      "🚌",
+      "⛵"
+     ],
+     "options": [
+      "Aeroplane",
+      "Bus",
+      "Boat"
+     ],
+     "answer": 0,
+     "hints": [
+      "It goes up in the sky.",
+      "A bus drives and a boat floats.",
+      "An aeroplane flies."
+     ],
+     "explain": "An aeroplane flies in the air."
+    },
+    {
+     "type": "mcq",
+     "q": "Which one travels on water?",
+     "pics": [
+      "🚢",
+      "🚗",
+      "🚁"
+     ],
+     "options": [
+      "Ship",
+      "Car",
+      "Helicopter"
+     ],
+     "answer": 0,
+     "hints": [
+      "It floats.",
+      "Cars drive on roads.",
+      "A ship sails on water."
+     ],
+     "explain": "A ship travels on water."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into land and water.",
+     "items": [
+      "Train",
+      "Boat",
+      "Bicycle",
+      "Ship"
+     ],
+     "bins": [
+      "Land",
+      "Water"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which ones need roads or tracks?",
+      "Boats and ships float.",
+      "Train and bicycle go on land."
+     ],
+     "explain": "Train and bicycle travel on land. Boat and ship travel on water."
+    },
+    {
+     "type": "mcq",
+     "q": "How did people travel long ago?",
+     "pics": [
+      "🐎",
+      "✈️"
+     ],
+     "options": [
+      "On horses",
+      "By aeroplane"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Long ago there were no aeroplanes.",
+      "People used animals.",
+      "On horses."
+     ],
+     "explain": "Long ago people rode horses or used ox-wagons."
+    },
+    {
+     "type": "mcq",
+     "q": "What should you wear in a car?",
+     "pics": [
+      "🔒",
+      "🕶️"
+     ],
+     "options": [
+      "A seat belt",
+      "Sunglasses"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "It keeps you safe if the car stops fast.",
+      "It clicks.",
+      "A seat belt."
+     ],
+     "explain": "A seat belt keeps us safe in a car."
+    }
+   ],
+   "reflect": {
+    "q": "Which transport would you like to try?",
+    "options": [
+     "Train",
+     "Aeroplane",
+     "Boat",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned about transport on land, water and in the air, and long ago.",
+   "teacher": "Shows classification of transport by medium and simple past and present comparison.",
+   "done": "Cars, boats and planes: people get around in many ways."
+  },
+  {
+   "id": "gr-wild",
+   "grade": 0,
+   "subject": "Life Skills",
+   "title": "Wild animals",
+   "topic": "Wild animals and where they live",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade R Life Skills (Beginning Knowledge), Term 4: Wild animals (what a wild animal is; kinds of wild animals; where they live; finding out about one wild animal)",
+   "intention": "Today I am learning about wild animals.",
+   "prompt": "What would you like to find out about a wild animal?",
+   "lesson": [
+    {
+     "h": "Wild or tame?",
+     "say": "Wild animals look after themselves. Tame animals, like pets and farm animals, are looked after by people.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Lion, elephant, dog, cow\">🦁 🐘  🐕 🐄</p><p><b>Wild</b> animals look after themselves. <b>Tame</b> animals are looked after by people.</p>"
+    },
+    {
+     "h": "Where they live",
+     "say": "Lions live on the grassland. Monkeys live in trees. Hippos live in rivers.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Lion on grass, monkey in tree, hippo in river\">🦁🌾 🐒🌳 🦛🏞️</p><p>A lion lives on the <b>grassland</b>. A monkey lives in <b>trees</b>. A hippo lives in a <b>river</b>.</p>"
+    },
+    {
+     "h": "The elephant",
+     "say": "An elephant is the biggest land animal. It eats grass, leaves and fruit. It uses its trunk to drink and to pick up food.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Elephant\">🐘</p><p>The <b>elephant</b> is the biggest land animal. It eats plants and uses its <b>trunk</b> to drink and pick up food.</p>"
+    }
+   ],
+   "example": {
+    "q": "Is a zebra wild or tame?",
+    "steps": [
+     "Who looks after a zebra?",
+     "Zebras live in the wild and find their own food.",
+     "A zebra is a wild animal."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a wild animal?",
+     "pics": [
+      "🦁",
+      "🐕",
+      "🐔"
+     ],
+     "options": [
+      "Lion",
+      "Dog",
+      "Chicken"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is not a pet or farm animal?",
+      "Dogs and chickens live with people.",
+      "A lion is wild."
+     ],
+     "explain": "A lion is a wild animal."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does a hippo live?",
+     "pics": [
+      "🏞️",
+      "🌳",
+      "🏜️"
+     ],
+     "options": [
+      "In a river",
+      "In a tree",
+      "In a desert"
+     ],
+     "answer": 0,
+     "hints": [
+      "Hippos like water.",
+      "They are too heavy for trees.",
+      "In a river."
+     ],
+     "explain": "Hippos live in rivers and lakes."
+    },
+    {
+     "type": "mcq",
+     "q": "What does an elephant use to drink?",
+     "pics": [
+      "🐘",
+      "🦶"
+     ],
+     "options": [
+      "Its trunk",
+      "Its feet"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "It has a long nose.",
+      "It sucks up water.",
+      "Its trunk."
+     ],
+     "explain": "An elephant drinks with its trunk."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into wild and tame.",
+     "items": [
+      "Zebra",
+      "Cat",
+      "Giraffe",
+      "Sheep"
+     ],
+     "bins": [
+      "Wild",
+      "Tame"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Who looks after the animal?",
+      "Cats and sheep are looked after by people.",
+      "Zebra and giraffe are wild."
+     ],
+     "explain": "Zebra and giraffe are wild. Cat and sheep are tame."
+    },
+    {
+     "type": "mcq",
+     "q": "Where do monkeys like to live?",
+     "pics": [
+      "🌳",
+      "🌊"
+     ],
+     "options": [
+      "In trees",
+      "In the sea"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Monkeys climb.",
+      "They do not swim in the sea.",
+      "In trees."
+     ],
+     "explain": "Monkeys live in trees."
+    }
+   ],
+   "reflect": {
+    "q": "Which wild animal do you like?",
+    "options": [
+     "Elephant",
+     "Lion",
+     "Monkey",
+     "Hippo"
+    ]
+   },
+   "parent": "Your child learned the difference between wild and tame animals and where some animals live.",
+   "teacher": "Shows classification of wild and tame animals and simple habitat knowledge.",
+   "done": "Wild animals look after themselves in their own homes."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "id": "sid0-count",
+   "grade": 0,
+   "subject": "Mathematics",
+   "title": "Counting to 3",
+   "topic": "Counting",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Mathematics (functional numeracy: counting objects to 3)",
+   "intention": "Today I am counting to 3.",
+   "prompt": "What can you count at home?",
+   "lesson": [
+    {
+     "h": "One, two, three",
+     "say": "Let's count. One. Two. Three.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍎 🍎 🍎</p><p>1, 2, 3</p>"
+    },
+    {
+     "h": "Touch and count",
+     "say": "Touch each thing once as you count. One apple. Two apples. Three apples.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🍎 1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🍎 2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🍎 3</span></div>"
+    },
+    {
+     "h": "How many?",
+     "say": "The last number you say tells you how many. Three apples.",
+     "html": "<p>The last number tells <b>how many</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "How many balls? ⚽ ⚽",
+    "steps": [
+     "Touch the first ball: one.",
+     "Touch the next ball: two.",
+     "There are 2 balls."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many stars? ⭐ ⭐ ⭐",
+     "pics": [
+      "3️⃣",
+      "1️⃣",
+      "2️⃣"
+     ],
+     "options": [
+      "3",
+      "1",
+      "2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Touch each star.",
+      "One, two, three.",
+      "3."
+     ],
+     "explain": "There are 3 stars."
+    },
+    {
+     "type": "mcq",
+     "q": "How many cups? ☕",
+     "pics": [
+      "1️⃣",
+      "3️⃣",
+      "2️⃣"
+     ],
+     "options": [
+      "1",
+      "3",
+      "2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Touch the cup.",
+      "One.",
+      "1."
+     ],
+     "explain": "There is 1 cup."
+    },
+    {
+     "type": "mcq",
+     "q": "Which picture shows 2 dogs?",
+     "pics": [
+      "🐶🐶",
+      "🐶",
+      "🐶🐶🐶"
+     ],
+     "options": [
+      "Two dogs",
+      "One dog",
+      "Three dogs"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the dogs in each picture.",
+      "One, two.",
+      "Two dogs."
+     ],
+     "explain": "🐶🐶 shows 2 dogs."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Touching each one",
+     "Saying the numbers aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child counted up to 3 things, touching each one.",
+   "teacher": "Shows one-to-one correspondence and counting to 3 with concrete pictures (functional numeracy).",
+   "done": "Touch each one and count. The last number tells how many."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "id": "sid0-colours",
+   "grade": 0,
+   "subject": "Life Skills",
+   "title": "My colours",
+   "topic": "Beginning knowledge: colours",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life Skills (beginning knowledge: recognising and matching colours)",
+   "intention": "Today I am finding red, yellow and blue.",
+   "prompt": "What is your favourite colour?",
+   "lesson": [
+    {
+     "h": "Red, yellow, blue",
+     "say": "This is red, like a tomato. This is yellow, like the sun. This is blue, like the sky.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🔴 🟡 🔵</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">red</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">yellow</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">blue</span></div>"
+    },
+    {
+     "h": "Colours around me",
+     "say": "Look around you. Can you find something red? Something yellow? Something blue?",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍅 🍌 💧</p>"
+    },
+    {
+     "h": "The same colour",
+     "say": "Things can be the same colour. A tomato and a fire engine are both red.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍅 🚒</p><p>Both are <b>red</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "What colour is the sun? ☀️",
+    "steps": [
+     "Look at the sun.",
+     "It is bright.",
+     "The sun is yellow."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one is red?",
+     "pics": [
+      "🔴",
+      "🟡",
+      "🔵"
+     ],
+     "options": [
+      "Red",
+      "Yellow",
+      "Blue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Red is like a tomato.",
+      "🍅",
+      "The first one."
+     ],
+     "explain": "🔴 is red."
+    },
+    {
+     "type": "mcq",
+     "q": "What colour is a banana? 🍌",
+     "pics": [
+      "🟡",
+      "🔴",
+      "🔵"
+     ],
+     "options": [
+      "Yellow",
+      "Red",
+      "Blue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the banana.",
+      "Like the sun.",
+      "Yellow."
+     ],
+     "explain": "A banana is yellow."
+    },
+    {
+     "type": "mcq",
+     "q": "Which colour is the sky?",
+     "pics": [
+      "🔵",
+      "🔴",
+      "🟡"
+     ],
+     "options": [
+      "Blue",
+      "Red",
+      "Yellow"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look up outside.",
+      "Like water.",
+      "Blue."
+     ],
+     "explain": "The sky is blue."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Looking at the pictures",
+     "Finding colours around me",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child named and matched red, yellow and blue.",
+   "teacher": "Shows recognising, naming and matching three colours (Life Skills: beginning knowledge).",
+   "done": "Red, yellow and blue are all around us."
+  }
+ ],
+ "words": {
+  "gr-count": {
+   "words": [
+    [
+     "0️⃣",
+     "Zero",
+     "none, nothing"
+    ],
+    [
+     "➕",
+     "More",
+     "a bigger amount"
+    ],
+    [
+     "➖",
+     "Less",
+     "a smaller amount"
+    ]
+   ]
+  },
+  "gr-patterns": {
+   "words": [
+    [
+     "🔁",
+     "Pattern",
+     "something that repeats"
+    ]
+   ]
+  },
+  "gr-shapes": {
+   "words": [
+    [
+     "⚽",
+     "Roll",
+     "turn over and over while moving"
+    ],
+    [
+     "📦",
+     "Slide",
+     "move along without turning over"
+    ],
+    [
+     "📍",
+     "Position",
+     "where something is"
+    ]
+   ]
+  },
+  "gr-measure": {
+   "words": [
+    [
+     "📏",
+     "Tall",
+     "high from bottom to top"
+    ],
+    [
+     "🪨",
+     "Heavy",
+     "hard to lift"
+    ],
+    [
+     "🪶",
+     "Light",
+     "easy to lift"
+    ],
+    [
+     "🥛",
+     "Full",
+     "there is no space for more"
+    ]
+   ]
+  },
+  "gr-rhyme": {
+   "words": [
+    [
+     "🎵",
+     "Rhyme",
+     "words that sound the same at the end"
+    ]
+   ]
+  },
+  "gr-sounds": {
+   "words": [
+    [
+     "🔤",
+     "Sound",
+     "what you hear when you say a letter"
+    ],
+    [
+     "🥇",
+     "First sound",
+     "the sound at the start of a word"
+    ]
+   ]
+  },
+  "gr-syllables": {
+   "words": [
+    [
+     "👏",
+     "Syllable",
+     "one part of a word, one clap"
+    ]
+   ]
+  },
+  "gr-story": {
+   "words": [
+    [
+     "👧",
+     "Character",
+     "a person or animal in a story"
+    ]
+   ]
+  },
+  "gr-body": {
+   "words": [
+    [
+     "🔒",
+     "Private",
+     "just for you"
+    ],
+    [
+     "🧑‍🏫",
+     "Trusted grown-up",
+     "a grown-up who keeps you safe and listens"
+    ]
+   ]
+  },
+  "gr-days": {
+   "words": [
+    [
+     "📅",
+     "Week",
+     "seven days"
+    ],
+    [
+     "🏠",
+     "Weekend",
+     "Saturday and Sunday"
+    ],
+    [
+     "⬅️",
+     "Yesterday",
+     "the day before today"
+    ],
+    [
+     "➡️",
+     "Tomorrow",
+     "the day after today"
+    ]
+   ]
+  },
+  "gr-transport": {
+   "words": [
+    [
+     "🚌",
+     "Transport",
+     "ways to move people and things"
+    ],
+    [
+     "🚢",
+     "Ship",
+     "a big boat"
+    ],
+    [
+     "✈️",
+     "Aeroplane",
+     "a machine that flies"
+    ],
+    [
+     "🕰️",
+     "Long ago",
+     "a long time before now"
+    ]
+   ]
+  },
+  "gr-wild": {
+   "words": [
+    [
+     "🦁",
+     "Wild",
+     "looks after itself"
+    ],
+    [
+     "🐕",
+     "Tame",
+     "looked after by people"
+    ]
+   ]
+  },
+  "sid0-count": {
+   "words": [
+    [
+     "👆",
+     "Count",
+     "say one number for each thing"
+    ],
+    [
+     "🔢",
+     "How many",
+     "the number of things"
+    ]
+   ]
+  },
+  "sid0-colours": {
+   "words": [
+    [
+     "🔴",
+     "Red",
+     "the colour of a tomato"
+    ],
+    [
+     "🟡",
+     "Yellow",
+     "the colour of the sun"
+    ],
+    [
+     "🔵",
+     "Blue",
+     "the colour of the sky"
+    ],
+    [
+     "🟰",
+     "Same",
+     "just like the other one"
+    ]
+   ]
+  }
+ }
+}

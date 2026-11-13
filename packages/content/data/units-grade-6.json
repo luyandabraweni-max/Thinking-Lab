@@ -1,0 +1,2960 @@
+{
+ "level": "grade-6",
+ "units": [
+  {
+   "id": "m6-percent",
+   "grade": 6,
+   "subject": "Mathematics",
+   "title": "Fractions, decimals and percentages",
+   "topic": "Equivalent forms and percentages",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 6 Mathematics: Common fractions, decimal fractions and percentages (tenths and hundredths, equivalent forms, percentages of whole numbers)",
+   "intention": "Today I am practising showing the same amount as a fraction, a decimal and a percentage.",
+   "prompt": "Can you show it another way?",
+   "lesson": [
+    {
+     "h": "Tenths and hundredths",
+     "say": "Three tenths is written 0,3. Twenty-seven hundredths is written 0,27. In South Africa we write a decimal comma.",
+     "html": "<p><b>3/10 = 0,3</b> and <b>27/100 = 0,27</b>. In South Africa we write a decimal <b>comma</b>.</p><svg width=\"100%\" style=\"max-width:200px\" viewBox=\"0 0 202 202\" role=\"img\" aria-label=\"27 out of 100 squares shaded\"><rect x=\"1\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"1\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"21\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"41\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"61\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"81\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"101\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"121\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"141\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"161\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"1\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"21\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"41\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"61\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"81\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"101\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"121\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"141\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"161\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/><rect x=\"181\" y=\"181\" width=\"18\" height=\"18\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.3\"/></svg><p>27 out of 100 squares are shaded: 27/100 = 0,27.</p>"
+    },
+    {
+     "h": "Percent means out of 100",
+     "say": "Percent means out of 100. So 27 hundredths is 0,27, which is 27 percent.",
+     "html": "<p><b>Percent (%)</b> means <b>out of 100</b>. So 27/100 = 0,27 = 27%.</p><p>Useful ones to know: 1/2 = 50%, 1/4 = 25%, 3/4 = 75%, 1/10 = 10%, 1/5 = 20%.</p>"
+    },
+    {
+     "h": "Finding a percentage of a number",
+     "say": "To find 25 percent of 80, find a quarter of 80, which is 20. Ten percent means divide by 10.",
+     "html": "<p>Change the percentage into a fraction you know: <b>25% of 80</b> = 1/4 of 80 = <b>20</b>.</p><p><b>10%</b> means 1/10, so divide by 10: 10% of 350 = 35. Then 20% = 2 × 10%, 30% = 3 × 10%, and so on.</p>"
+    }
+   ],
+   "example": {
+    "q": "Find 30% of R250.",
+    "steps": [
+     "30% = 30/100 = 3/10.",
+     "1/10 of R250 = R250 ÷ 10 = R25.",
+     "3/10 = 3 × R25 = R75. So 30% of R250 is R75."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which decimal is the same as 7/10?",
+     "options": [
+      "0,7",
+      "7,0",
+      "0,07",
+      "0,17"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tenths are the first place after the comma.",
+      "You need 7 tenths.",
+      "Write 7 in the tenths place."
+     ],
+     "explain": "7/10 = 0,7."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the same as 0,45?",
+     "options": [
+      "45%",
+      "4,5%",
+      "0,45%",
+      "450%"
+     ],
+     "answer": 0,
+     "hints": [
+      "Percent means out of 100.",
+      "0,45 is 45 hundredths.",
+      "45/100 = ?%"
+     ],
+     "explain": "0,45 = 45/100 = 45%."
+    },
+    {
+     "type": "mcq",
+     "q": "Which fraction is the same as 75%?",
+     "options": [
+      "3/4",
+      "7/5",
+      "1/75",
+      "3/5"
+     ],
+     "answer": 0,
+     "hints": [
+      "75% means 75 out of 100.",
+      "Think about quarters of 100.",
+      "100 ÷ 4 = 25, and 3 × 25 = 75."
+     ],
+     "explain": "75% = 75/100 = 3/4."
+    },
+    {
+     "type": "num",
+     "q": "What is 10% of 360?",
+     "answer": "36",
+     "options": [
+      "36",
+      "3,6",
+      "350",
+      "46"
+     ],
+     "hints": [
+      "10% is the same as 1/10.",
+      "Divide by 10.",
+      "360 ÷ 10 = ?"
+     ],
+     "explain": "10% of 360 = 360 ÷ 10 = 36."
+    },
+    {
+     "type": "num",
+     "q": "What is 25% of R120?",
+     "unitLabel": "in rand",
+     "answer": "30",
+     "accept": [
+      "R30",
+      "30,00"
+     ],
+     "options": [
+      "R30",
+      "R25",
+      "R95",
+      "R60"
+     ],
+     "hints": [
+      "25% is the same as 1/4.",
+      "Find a quarter of 120.",
+      "120 ÷ 4 = ?"
+     ],
+     "explain": "25% of R120 = R120 ÷ 4 = R30."
+    },
+    {
+     "type": "order",
+     "q": "Put these in order from smallest to biggest.",
+     "items": [
+      "1/2",
+      "0,6",
+      "65%"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "Change them all into the same form.",
+      "1/2 = 0,5 and 65% = 0,65.",
+      "Compare 0,5, 0,6 and 0,65."
+     ],
+     "explain": "1/2 = 0,5, then 0,6, then 65% = 0,65."
+    },
+    {
+     "type": "mcq",
+     "q": "A shop takes 20% off a T-shirt that costs R80. How much money do you save?",
+     "options": [
+      "R16",
+      "R20",
+      "R60",
+      "R64"
+     ],
+     "answer": 0,
+     "hints": [
+      "20% is 2 × 10%.",
+      "10% of R80 = R8.",
+      "2 × R8 = ?"
+     ],
+     "explain": "10% of R80 is R8, so 20% is R16. The T-shirt now costs R64."
+    }
+   ],
+   "reflect": {
+    "q": "Which way of thinking helped you?",
+    "options": [
+     "Changing to hundredths",
+     "Using 10%",
+     "Using fractions I know",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child changed between fractions, decimals and percentages, and worked out percentages of amounts of money.",
+   "teacher": "Shows whether the learner converts flexibly between forms and uses benchmark percentages (10%, 25%, 50%) as strategies.",
+   "done": "Percentages are used in sales, marks, data and the news."
+  },
+  {
+   "id": "e6-advert",
+   "grade": 6,
+   "subject": "English Home Language",
+   "title": "Persuasive text: advertisements",
+   "topic": "Advertisements, fact and opinion",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 6 English Home Language, Term 1: Persuasive text (advertisement), reading and viewing critically; language structures: degrees of comparison, imperatives",
+   "intention": "Today I am practising noticing how advertisements try to persuade me.",
+   "prompt": "How is this advertisement trying to make you feel?",
+   "passage": "<div class=\"passage-text ad\"><p class=\"ad-big\">NEW! Sunrise Oat Rusks</p>\n<p><b>The best start to every school day!</b></p>\n<p>Packed with crunchy oats and golden honey.</p>\n<p>9 out of 10 children say they love the crunch!*</p>\n<p>Only R34,99 for a box of 12.</p>\n<p><b>Hurry! This special price ends on Friday.</b></p>\n<p>Be a Sunrise champion. Start your day the Sunrise way!</p>\n<p class=\"muted\" style=\"font-size:0.8rem\">*Based on a taste test with 20 children. Sunrise Oat Rusks is a made-up product for this lesson.</p></div>",
+   "lesson": [
+    {
+     "h": "Advertisements persuade",
+     "say": "An advertisement tries to persuade you to buy or do something. Advertisers choose words and pictures very carefully.",
+     "html": "<p>An <b>advertisement</b> tries to <b>persuade</b> you to buy something or do something. Advertisers use:</p><ul class=\"plain\"><li><b>powerful words</b>: best, new, champion</li><li><b>claims</b> that sound like facts: \"9 out of 10…\"</li><li><b>urgency</b>: Hurry! Offer ends Friday!</li><li><b>commands</b> (imperative verbs): <i>Start</i> your day…</li></ul>"
+    },
+    {
+     "h": "Read the advertisement",
+     "say": "Read the advertisement for Sunrise Oat Rusks. It is a made-up product.",
+     "html": "<div class=\"passage-text ad\"><p class=\"ad-big\">NEW! Sunrise Oat Rusks</p>\n<p><b>The best start to every school day!</b></p>\n<p>Packed with crunchy oats and golden honey.</p>\n<p>9 out of 10 children say they love the crunch!*</p>\n<p>Only R34,99 for a box of 12.</p>\n<p><b>Hurry! This special price ends on Friday.</b></p>\n<p>Be a Sunrise champion. Start your day the Sunrise way!</p>\n<p class=\"muted\" style=\"font-size:0.8rem\">*Based on a taste test with 20 children. Sunrise Oat Rusks is a made-up product for this lesson.</p></div>"
+    },
+    {
+     "h": "Fact or opinion?",
+     "say": "A fact can be checked and proved. An opinion is what someone thinks or feels. Words like best and good often show an opinion.",
+     "html": "<p>A <b>fact</b> can be checked: <i>A box has 12 rusks.</i></p><p>An <b>opinion</b> is what someone thinks or feels: <i>The best start to every school day.</i></p><p><b>Degrees of comparison:</b> good → better → <b>best</b>. Adverts often use the highest degree (the superlative) to make a product sound special.</p>"
+    }
+   ],
+   "example": {
+    "q": "Is \"Packed with crunchy oats and golden honey\" a fact or an opinion?",
+    "steps": [
+     "Ask: could we check it?",
+     "We could read the ingredients to check for oats and honey, so that part is a fact.",
+     "\"Crunchy\" and \"golden\" are describing words chosen to make it sound tasty. So it mixes fact with persuasive language."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the main purpose of this advertisement?",
+     "options": [
+      "To persuade people to buy the rusks",
+      "To teach people how to bake",
+      "To tell a story about a champion",
+      "To give a weather report"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about why companies make adverts.",
+      "What does the advert want you to do?",
+      "It wants you to spend money on something."
+     ],
+     "explain": "The advert wants people to buy Sunrise Oat Rusks."
+    },
+    {
+     "type": "mcq",
+     "q": "Who is the advertisement mainly aimed at?",
+     "options": [
+      "Families with school children",
+      "Farmers",
+      "Taxi drivers",
+      "Babies"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for clues about who uses the product.",
+      "Find the words \"school day\" and \"children\".",
+      "Who buys breakfast for school children?"
+     ],
+     "explain": "It mentions school days and children, so it is aimed at families with school children."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these into facts and opinions.",
+     "items": [
+      "Only R34,99 for a box of 12",
+      "The best start to every school day",
+      "This special price ends on Friday",
+      "Be a Sunrise champion"
+     ],
+     "bins": [
+      "Fact",
+      "Opinion"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A fact can be checked.",
+      "Could you check the price and the date?",
+      "\"Best\" and \"champion\" are what the advertiser wants you to believe."
+     ],
+     "explain": "The price and the end date can be checked, so they are facts. \"Best start\" and \"champion\" are opinions."
+    },
+    {
+     "type": "mcq",
+     "q": "Which words create a feeling that you must buy quickly?",
+     "options": [
+      "Hurry! This special price ends on Friday.",
+      "Packed with crunchy oats",
+      "Sunrise Oat Rusks",
+      "A box of 12"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for words about time.",
+      "Which sentence tells you the offer will end?",
+      "\"Hurry\" is a command about time."
+     ],
+     "explain": "\"Hurry!\" and \"ends on Friday\" create urgency."
+    },
+    {
+     "type": "mcq",
+     "q": "\"9 out of 10 children say they love the crunch!\" Read the small print. Why should a reader be careful?",
+     "options": [
+      "Only 20 children were asked",
+      "It is a lie",
+      "Children don't like rusks",
+      "There is no price"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find the * mark and read the small print.",
+      "How many children were in the taste test?",
+      "Is 20 children a lot of people?"
+     ],
+     "explain": "Only 20 children were asked. A claim about a small group may not be true for everyone."
+    },
+    {
+     "type": "mcq",
+     "q": "Choose the correct word: \"Sunrise rusks are good, but these are even ___.\"",
+     "options": [
+      "better",
+      "best",
+      "gooder",
+      "more good"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sentence compares two things.",
+      "good → ? → best",
+      "When comparing two things, use the comparative."
+     ],
+     "explain": "good, better, best. When comparing two things we use \"better\"."
+    }
+   ],
+   "reflect": {
+    "q": "What will you look for in the next advert you see?",
+    "options": [
+     "Facts I can check",
+     "Words that make me hurry",
+     "The small print",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read an advertisement critically, told facts from opinions, and noticed how adverts try to persuade.",
+   "teacher": "Shows critical reading: identifying purpose and audience, distinguishing fact from opinion, spotting urgency and questioning statistical claims; also degrees of comparison.",
+   "done": "Thinking critically about adverts helps you make your own decisions."
+  },
+  {
+   "id": "n6-photosynthesis",
+   "grade": 6,
+   "subject": "Natural Sciences and Technology",
+   "title": "How plants make food",
+   "topic": "Photosynthesis",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 6 Natural Sciences and Technology, Term 1, Life and Living: Photosynthesis (plants make their own food)",
+   "intention": "Today I am practising explaining how plants make their own food.",
+   "prompt": "What would happen if you changed one thing?",
+   "lesson": [
+    {
+     "h": "Plants make their own food",
+     "say": "Green plants make their own food in their leaves. This is called photosynthesis.",
+     "html": "<p>Green plants make their own food in their <b>leaves</b>. This process is called <b>photosynthesis</b>. Leaves are green because they contain <b>chlorophyll</b>, which traps light.</p>"
+    },
+    {
+     "h": "What goes in and what comes out",
+     "say": "Plants use sunlight, water from the soil and carbon dioxide from the air. They make sugar, which they store as starch, and they give off oxygen.",
+     "html": "<p><b>Needs:</b> sunlight (energy), water (taken up by the roots) and carbon dioxide (taken in from the air).</p><p><b>Makes:</b> sugar (glucose), which the plant uses for energy or stores as <b>starch</b>, and <b>oxygen</b>, which goes into the air.</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sunlight + water + carbon dioxide</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sugar (starch) + oxygen</span></div>"
+    },
+    {
+     "h": "Why it matters to us",
+     "say": "Nearly all food chains start with photosynthesis, and the oxygen we breathe comes from plants and algae.",
+     "html": "<p>Almost every food chain starts with a plant making food. The <b>oxygen</b> we breathe comes from plants and algae. Without photosynthesis, animals and people could not live.</p>"
+    }
+   ],
+   "example": {
+    "q": "A plant's leaves are covered with foil for two days. What will happen in those leaves?",
+    "steps": [
+     "Photosynthesis needs light.",
+     "The foil blocks the light, so those leaves cannot make food.",
+     "So the covered leaves will make little or no starch, and may turn pale."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these: what a plant needs, and what it makes, in photosynthesis.",
+     "items": [
+      "sunlight",
+      "oxygen",
+      "water",
+      "starch",
+      "carbon dioxide"
+     ],
+     "bins": [
+      "Needs",
+      "Makes"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0
+     ],
+     "hints": [
+      "The plant takes some things in and gives others out.",
+      "Which gas do we breathe in, which plants give out?",
+      "Plants store the food they make as starch."
+     ],
+     "explain": "Plants need sunlight, water and carbon dioxide. They make starch and oxygen."
+    },
+    {
+     "type": "mcq",
+     "q": "In which part of the plant does most photosynthesis happen?",
+     "options": [
+      "The leaves",
+      "The roots",
+      "The flowers",
+      "The bark"
+     ],
+     "answer": 0,
+     "hints": [
+      "It needs light and chlorophyll.",
+      "Which part is green and spread out to catch sunlight?",
+      "The flat green parts."
+     ],
+     "explain": "Most photosynthesis happens in the green leaves."
+    },
+    {
+     "type": "mcq",
+     "q": "How does water get to the leaves?",
+     "options": [
+      "It is taken up by the roots and carried up the stem",
+      "It falls on the leaves as rain only",
+      "It comes from the air",
+      "Animals bring it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which part of the plant is in the soil?",
+      "The stem acts like a pipe.",
+      "From the roots, up the stem, to the leaves."
+     ],
+     "explain": "Roots take up water from the soil, and the stem carries it to the leaves."
+    },
+    {
+     "type": "mcq",
+     "q": "Which gas do plants give off that we need to breathe?",
+     "options": [
+      "Oxygen",
+      "Carbon dioxide",
+      "Smoke",
+      "Steam"
+     ],
+     "answer": 0,
+     "hints": [
+      "We breathe this gas in.",
+      "Plants take in carbon dioxide and give out ...",
+      "It starts with O."
+     ],
+     "explain": "Plants give off oxygen during photosynthesis."
+    },
+    {
+     "type": "mcq",
+     "q": "Lindiwe puts a plant in a dark cupboard for a week. What do you predict?",
+     "options": [
+      "It will make less food and become pale and weak",
+      "It will grow faster",
+      "It will make more oxygen",
+      "Nothing will change"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does photosynthesis need?",
+      "Is there light in the cupboard?",
+      "No light means no food being made."
+     ],
+     "explain": "Without light, the plant cannot photosynthesise, so it becomes pale and weak."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do almost all food chains depend on photosynthesis?",
+     "options": [
+      "Plants make the food that the first consumers eat",
+      "Animals make their own food",
+      "Rocks give animals energy",
+      "The moon feeds plants"
+     ],
+     "answer": 0,
+     "hints": [
+      "What starts every food chain?",
+      "How do producers get their food?",
+      "Herbivores eat what plants have made."
+     ],
+     "explain": "Producers make food by photosynthesis, and that food passes along every food chain."
+    }
+   ],
+   "reflect": {
+    "q": "How would you explain photosynthesis to a friend?",
+    "options": [
+     "With the inputs and outputs",
+     "With the cupboard experiment",
+     "With a food chain",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how plants make food using sunlight, water and carbon dioxide, and why this matters for all life.",
+   "teacher": "Shows understanding of the inputs and outputs of photosynthesis, the plant structures involved, prediction from a controlled change, and links to food chains.",
+   "done": "The food you eat today started with sunlight landing on a leaf."
+  },
+  {
+   "id": "l6-peer",
+   "grade": 6,
+   "subject": "Life Skills",
+   "title": "Peer pressure",
+   "topic": "Personal and Social Well-being: peer pressure",
+   "domain": "Creativity and Metacognition",
+   "category": "Flexible Thinking",
+   "caps": "CAPS Grade 6 Life Skills, Term 1, Personal and Social Well-being: Peer pressure (examples, and appropriate responses)",
+   "intention": "Today I am practising recognising peer pressure and choosing how to respond.",
+   "prompt": "What else could you say or do?",
+   "lesson": [
+    {
+     "h": "What is peer pressure?",
+     "say": "Peer pressure is when people your age try to make you do something. It can be positive or negative.",
+     "html": "<p><b>Peer pressure</b> is when people your own age try to get you to do something.</p><p><b>Positive</b> peer pressure: friends encourage you to join a club or study for a test.</p><p><b>Negative</b> peer pressure: friends push you to do something unkind, unsafe or against the rules.</p>"
+    },
+    {
+     "h": "Ways to respond",
+     "say": "You can say no clearly, suggest something else, walk away, or talk to a trusted adult.",
+     "html": "<ul class=\"plain\"><li><b>Say no clearly</b>: \"No, I don't want to.\"</li><li><b>Suggest something else</b>: \"Let's play soccer instead.\"</li><li><b>Walk away</b></li><li><b>Stick with friends</b> who respect your choices</li><li><b>Talk to a trusted adult</b></li></ul>"
+    },
+    {
+     "h": "You can choose",
+     "say": "Real friends respect your choices. Saying no to something wrong is a strength, not a weakness.",
+     "html": "<p>Real friends <b>respect</b> your choices. Saying no to something wrong takes courage. It is a strength, not a weakness.</p>"
+    }
+   ],
+   "example": {
+    "q": "Some learners dare Kagiso to climb onto the school roof. What could he do?",
+    "steps": [
+     "Recognise it: this is negative peer pressure, and it is unsafe.",
+     "Say no clearly: \"No, that's dangerous.\"",
+     "Suggest something else or walk away, and tell a teacher if they keep pushing."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these: positive or negative peer pressure.",
+     "items": [
+      "Friends invite you to join the chess club",
+      "Friends tell you to tease a new learner",
+      "A friend says, \"Let's study together\"",
+      "Friends dare you to take sweets from a shop"
+     ],
+     "bins": [
+      "Positive",
+      "Negative"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Positive pressure helps you grow.",
+      "Negative pressure is unkind, unsafe or against the rules.",
+      "Teasing and taking things are negative."
+     ],
+     "explain": "Joining a club and studying are positive. Teasing and stealing are negative."
+    },
+    {
+     "type": "mcq",
+     "q": "A friend says, \"Copy my homework, nobody will know.\" What is a strong response?",
+     "options": [
+      "\"No thanks, I'll try it myself.\"",
+      "Copy it quickly",
+      "Tell everyone to copy",
+      "Rip up the homework"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which answer says no clearly?",
+      "It is polite but firm.",
+      "It also shows you can do it yourself."
+     ],
+     "explain": "Saying no politely and firmly is a strong, respectful response."
+    },
+    {
+     "type": "mcq",
+     "q": "Why might it be hard to say no to friends?",
+     "options": [
+      "You want to fit in",
+      "Saying no is against the rules",
+      "Friends are always right",
+      "It is never hard"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about how it feels to be left out.",
+      "People want to belong.",
+      "Wanting to fit in is a normal feeling."
+     ],
+     "explain": "Wanting to fit in can make saying no feel hard. Knowing this helps you prepare."
+    },
+    {
+     "type": "mcq",
+     "q": "Your group is pressuring you to leave someone out of a game. What could you suggest instead?",
+     "options": [
+      "\"Let's all play together.\"",
+      "\"Okay, leave them out.\"",
+      "Walk away and say nothing ever",
+      "Join in the teasing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Suggesting something else is a good strategy.",
+      "Which answer includes everyone?",
+      "It is kind and changes the plan."
+     ],
+     "explain": "Suggesting that everyone plays together changes the plan in a kind way."
+    },
+    {
+     "type": "mcq",
+     "q": "If someone keeps pressuring you to do something unsafe, what should you do?",
+     "options": [
+      "Tell a trusted adult",
+      "Keep it a secret",
+      "Do it once so they stop",
+      "Pressure someone else"
+     ],
+     "answer": 0,
+     "hints": [
+      "Unsafe situations need help from a grown-up.",
+      "Secrets about unsafe things should be shared.",
+      "Who can help keep you safe?"
+     ],
+     "explain": "A trusted adult can help keep you safe. Telling is not \"snitching\" when safety is involved."
+    }
+   ],
+   "reflect": {
+    "q": "Which response would you feel most confident using?",
+    "options": [
+     "Saying no clearly",
+     "Suggesting something else",
+     "Walking away",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored positive and negative peer pressure using made-up scenarios, and practised ways to respond.",
+   "teacher": "Scenario-based. Shows recognition of positive and negative pressure and a range of assertive responses. No personal experiences are requested or recorded.",
+   "done": "You can choose what is right for you, even when it is hard."
+  },
+  {
+   "id": "m6-primes",
+   "grade": 6,
+   "subject": "Mathematics",
+   "title": "Prime numbers and prime factors",
+   "topic": "Properties of whole numbers",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 6 Mathematics: Whole numbers, properties of numbers (prime numbers to at least 100; prime factors of numbers to at least 100)",
+   "intention": "Today I am practising recognising prime numbers and breaking numbers into prime factors.",
+   "prompt": "How did you check?",
+   "lesson": [
+    {
+     "h": "Prime numbers",
+     "say": "A prime number has exactly two factors: 1 and itself. 7 is prime. 9 is not, because 3 is also a factor.",
+     "html": "<p>A <b>prime number</b> has exactly <b>two</b> factors: 1 and itself. 7 is prime.</p><p>A <b>composite</b> number has more than two factors. 9 is composite, because 1, 3 and 9 are factors.</p><p><b>1 is not prime</b>, because it has only one factor. The primes below 30 are: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.</p>"
+    },
+    {
+     "h": "Prime factors",
+     "say": "Every composite number can be written as prime numbers multiplied together. 12 is 2 times 2 times 3.",
+     "html": "<p>Every composite number can be written as primes multiplied together. Use a <b>factor tree</b>:</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">12</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 × 6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 × 2 × 3</span></div><p>So the prime factors of 12 are <b>2 × 2 × 3</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Write 30 as a product of prime factors.",
+    "steps": [
+     "30 is even, so start with 2: 30 = 2 × 15.",
+     "15 is not prime: 15 = 3 × 5.",
+     "2, 3 and 5 are all prime, so 30 = 2 × 3 × 5."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these into prime and composite numbers.",
+     "items": [
+      "7",
+      "9",
+      "11",
+      "15",
+      "2",
+      "21"
+     ],
+     "bins": [
+      "Prime",
+      "Composite"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A prime has only the factors 1 and itself.",
+      "Check: can 9, 15 or 21 be divided by 3?",
+      "9 = 3 × 3, 15 = 3 × 5, 21 = 3 × 7."
+     ],
+     "explain": "7, 11 and 2 are prime. 9, 15 and 21 are composite."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is 1 not a prime number?",
+     "options": [
+      "It has only one factor",
+      "It is odd",
+      "It is too small to divide",
+      "It has many factors"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many factors must a prime have?",
+      "Exactly two.",
+      "What are the factors of 1?"
+     ],
+     "explain": "A prime has exactly two factors. 1 has only one factor, itself."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the only even prime number?",
+     "options": [
+      "2",
+      "4",
+      "0",
+      "10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Every even number can be divided by 2.",
+      "So any even number bigger than 2 has 2 as an extra factor.",
+      "Which even number has only 1 and itself as factors?"
+     ],
+     "explain": "2 is the only even prime. Every other even number has 2 as a factor."
+    },
+    {
+     "type": "mcq",
+     "q": "What is 20 written as a product of prime factors?",
+     "options": [
+      "2 × 2 × 5",
+      "4 × 5",
+      "2 × 10",
+      "1 × 20"
+     ],
+     "answer": 0,
+     "hints": [
+      "Every number in the answer must be prime.",
+      "Is 4 prime? Is 10 prime?",
+      "20 = 2 × 10 = 2 × 2 × 5."
+     ],
+     "explain": "20 = 2 × 2 × 5, and 2 and 5 are both prime."
+    },
+    {
+     "type": "num",
+     "q": "How many prime numbers are there between 20 and 30?",
+     "answer": "2",
+     "options": [
+      "2",
+      "3",
+      "1",
+      "4"
+     ],
+     "hints": [
+      "Check 21 to 29 one at a time.",
+      "Even numbers and multiples of 3 or 5 are out.",
+      "23 and 29 are left."
+     ],
+     "explain": "23 and 29 are the only primes between 20 and 30."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number has the prime factors 2 × 3 × 3?",
+     "options": [
+      "18",
+      "15",
+      "12",
+      "27"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply the factors.",
+      "2 × 3 = 6.",
+      "6 × 3 = ?"
+     ],
+     "explain": "2 × 3 × 3 = 18."
+    }
+   ],
+   "reflect": {
+    "q": "How did you test if a number is prime?",
+    "options": [
+     "Tried dividing by small numbers",
+     "Used a factor tree",
+     "Remembered the list",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt what prime numbers are and how to break numbers into prime factors.",
+   "teacher": "Shows understanding of prime and composite, the status of 1 and 2, and prime factorisation using factor trees.",
+   "done": "Prime numbers are the building blocks of all whole numbers."
+  },
+  {
+   "id": "m6-order",
+   "grade": 6,
+   "subject": "Mathematics",
+   "title": "Order of operations",
+   "topic": "Calculations with brackets",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 6 Mathematics: Whole numbers, calculations with multiple operations (including brackets)",
+   "intention": "Today I am practising doing calculations in the right order.",
+   "prompt": "What did you do first, and why?",
+   "lesson": [
+    {
+     "h": "The order matters",
+     "say": "3 plus 4 times 2 is 11, not 14. We multiply before we add.",
+     "html": "<p>Look at <b>3 + 4 × 2</b>. If we add first, we get 14. If we multiply first, we get 11. Mathematicians agree on one order, so everyone gets the same answer: <b>11</b>.</p>"
+    },
+    {
+     "h": "The rules",
+     "say": "First do brackets. Then multiply and divide from left to right. Then add and subtract from left to right.",
+     "html": "<ol class=\"steps\"><li><b>Brackets</b> first</li><li>Then <b>× and ÷</b>, from left to right</li><li>Then <b>+ and −</b>, from left to right</li></ol><p>(3 + 4) × 2 = 7 × 2 = <b>14</b>. The brackets change the answer.</p>"
+    }
+   ],
+   "example": {
+    "q": "Work out 20 − (6 + 2) × 2.",
+    "steps": [
+     "Brackets first: 6 + 2 = 8. Now we have 20 − 8 × 2.",
+     "Multiply next: 8 × 2 = 16. Now we have 20 − 16.",
+     "Subtract last: 20 − 16 = 4."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "5 + 3 × 4 = ?",
+     "answer": "17",
+     "options": [
+      "17",
+      "32",
+      "20",
+      "12"
+     ],
+     "hints": [
+      "There are no brackets.",
+      "Multiply before you add.",
+      "3 × 4 = 12, then 5 + 12."
+     ],
+     "explain": "3 × 4 = 12, then 5 + 12 = 17."
+    },
+    {
+     "type": "num",
+     "q": "(5 + 3) × 4 = ?",
+     "answer": "32",
+     "options": [
+      "32",
+      "17",
+      "20",
+      "35"
+     ],
+     "hints": [
+      "Brackets come first.",
+      "5 + 3 = 8.",
+      "8 × 4 = ?"
+     ],
+     "explain": "(5 + 3) = 8, and 8 × 4 = 32."
+    },
+    {
+     "type": "num",
+     "q": "36 ÷ (4 + 2) = ?",
+     "answer": "6",
+     "options": [
+      "6",
+      "11",
+      "9",
+      "15"
+     ],
+     "hints": [
+      "Brackets first.",
+      "4 + 2 = 6.",
+      "36 ÷ 6 = ?"
+     ],
+     "explain": "4 + 2 = 6, and 36 ÷ 6 = 6."
+    },
+    {
+     "type": "num",
+     "q": "50 − 4 × 6 + 2 = ?",
+     "answer": "28",
+     "options": [
+      "28",
+      "24",
+      "278",
+      "32"
+     ],
+     "hints": [
+      "Multiply first.",
+      "4 × 6 = 24. Now it is 50 − 24 + 2.",
+      "Work left to right: 50 − 24 = 26, then 26 + 2."
+     ],
+     "explain": "4 × 6 = 24, then 50 − 24 = 26, then 26 + 2 = 28."
+    },
+    {
+     "type": "mcq",
+     "q": "Where do the brackets go to make 2 + 6 × 5 = 40?",
+     "options": [
+      "(2 + 6) × 5",
+      "2 + (6 × 5)",
+      "2 + 6 × (5)",
+      "No brackets are needed"
+     ],
+     "answer": 0,
+     "hints": [
+      "Without brackets, the answer is 2 + 30 = 32.",
+      "To get 40, you need 8 × 5.",
+      "Which brackets make 2 + 6 happen first?"
+     ],
+     "explain": "(2 + 6) × 5 = 8 × 5 = 40."
+    },
+    {
+     "type": "mcq",
+     "q": "Thembi buys 3 pens at R12 each and pays with R50. Which calculation gives her change?",
+     "options": [
+      "50 − 3 × 12",
+      "(50 − 3) × 12",
+      "50 − 3 + 12",
+      "3 × (50 − 12)"
+     ],
+     "answer": 0,
+     "hints": [
+      "First find the total cost of the pens.",
+      "3 × 12 = 36.",
+      "Then take that away from R50."
+     ],
+     "explain": "50 − 3 × 12 = 50 − 36 = R14 change."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you keep the right order?",
+    "options": [
+     "Doing brackets first",
+     "Writing each step",
+     "Saying the rule aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised doing calculations in the correct order, including with brackets.",
+   "teacher": "Shows application of the order of operations, left-to-right convention, use of brackets to change meaning, and translating a word problem.",
+   "done": "Doing steps in the right order is how calculators and computers work too."
+  },
+  {
+   "id": "e6-drama",
+   "grade": 6,
+   "subject": "English Home Language",
+   "title": "Drama: The Missing Lunchbox",
+   "topic": "Drama, play scripts and stage directions",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 6 English Home Language, Term 1: Drama (reading and viewing); features of a play script",
+   "intention": "Today I am practising reading a play script and understanding how it is performed.",
+   "prompt": "How would you say that line?",
+   "passage": "<div class=\"passage-text\"><p><b>The Missing Lunchbox</b> <span class=\"muted\">(a short 2to.iQ play)</span></p>\n<p><i>Characters: THANDO, a Grade 6 learner. NADIA, his friend. MR KHUMALO, their teacher.</i></p>\n<p><i>(A classroom at break time. THANDO is searching under the desks.)</i></p>\n<p><b>THANDO:</b> <i>(worried)</i> It was right here. My blue lunchbox has disappeared!</p>\n<p><b>NADIA:</b> Calm down. Think. Where did you last have it?</p>\n<p><b>THANDO:</b> <i>(scratching his head)</i> At the science lab… I put it down to look at the plants.</p>\n<p><b>MR KHUMALO:</b> <i>(entering, holding up a blue lunchbox)</i> Is anyone missing something? I found this next to the bean jars.</p>\n<p><b>THANDO:</b> <i>(relieved, grinning)</i> Yes! Thank you, sir.</p>\n<p><b>NADIA:</b> <i>(laughing)</i> Next time, maybe write your name on it!</p>\n<p><i>(They all laugh. The bell rings.)</i></p></div>",
+   "lesson": [
+    {
+     "h": "Features of a play script",
+     "say": "A play script lists the characters, uses stage directions in brackets, and writes the name of each speaker before their words, without quotation marks.",
+     "html": "<ul class=\"plain\"><li><b>Characters</b> are listed at the start</li><li><b>Stage directions</b>, in brackets and italics, tell actors where to be, what to do and how to speak</li><li>Each <b>speaker's name</b> comes before their words</li><li>No quotation marks are needed for <b>dialogue</b></li></ul>"
+    },
+    {
+     "h": "Read the play",
+     "say": "Read the short play. Try reading it aloud with different voices.",
+     "html": "<div class=\"passage-text\"><p><b>The Missing Lunchbox</b> <span class=\"muted\">(a short 2to.iQ play)</span></p>\n<p><i>Characters: THANDO, a Grade 6 learner. NADIA, his friend. MR KHUMALO, their teacher.</i></p>\n<p><i>(A classroom at break time. THANDO is searching under the desks.)</i></p>\n<p><b>THANDO:</b> <i>(worried)</i> It was right here. My blue lunchbox has disappeared!</p>\n<p><b>NADIA:</b> Calm down. Think. Where did you last have it?</p>\n<p><b>THANDO:</b> <i>(scratching his head)</i> At the science lab… I put it down to look at the plants.</p>\n<p><b>MR KHUMALO:</b> <i>(entering, holding up a blue lunchbox)</i> Is anyone missing something? I found this next to the bean jars.</p>\n<p><b>THANDO:</b> <i>(relieved, grinning)</i> Yes! Thank you, sir.</p>\n<p><b>NADIA:</b> <i>(laughing)</i> Next time, maybe write your name on it!</p>\n<p><i>(They all laugh. The bell rings.)</i></p></div>"
+    }
+   ],
+   "example": {
+    "q": "What does \"(scratching his head)\" tell the actor?",
+    "steps": [
+     "It is in brackets and italics, so it is a stage direction.",
+     "It is not spoken.",
+     "It tells Thando's actor what to do, to show he is trying to remember."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Where does the play take place?",
+     "options": [
+      "In a classroom at break time",
+      "In the science lab",
+      "At home",
+      "On the playground"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the first stage direction.",
+      "It describes the setting.",
+      "It mentions break time."
+     ],
+     "explain": "The first stage direction says it is a classroom at break time."
+    },
+    {
+     "type": "mcq",
+     "q": "What are stage directions for?",
+     "options": [
+      "To tell actors what to do and how to speak",
+      "To be read aloud by the actors",
+      "To list the prices of tickets",
+      "To give the title"
+     ],
+     "answer": 0,
+     "hints": [
+      "They are in brackets.",
+      "Actors do not say them.",
+      "They describe actions and feelings."
+     ],
+     "explain": "Stage directions tell actors what to do and how to say their lines."
+    },
+    {
+     "type": "mcq",
+     "q": "How should Thando say \"Yes! Thank you, sir.\"?",
+     "options": [
+      "Relieved and happy",
+      "Angry",
+      "Bored",
+      "Sad"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the stage direction just before it.",
+      "It says how he feels.",
+      "\"Relieved, grinning.\""
+     ],
+     "explain": "The stage direction says he is relieved and grinning."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the problem in the play, and how is it solved?",
+     "options": [
+      "Thando loses his lunchbox, and Mr Khumalo finds it",
+      "Nadia is late, and the bell rings",
+      "The plants die, and Thando waters them",
+      "Mr Khumalo is lost, and Nadia helps him"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is Thando searching for?",
+      "Who brings it back?",
+      "Problem first, then solution."
+     ],
+     "explain": "Thando's lunchbox is missing, and Mr Khumalo found it in the science lab."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are there no quotation marks in a play script?",
+     "options": [
+      "The speaker's name already shows who is talking",
+      "Quotation marks are not allowed in English",
+      "The writer forgot",
+      "Plays have no dialogue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at how each line starts.",
+      "THANDO: …, NADIA: …",
+      "The name tells us who speaks."
+     ],
+     "explain": "Each speaker's name comes before their words, so quotation marks are not needed."
+    }
+   ],
+   "reflect": {
+    "q": "How did you understand the play best?",
+    "options": [
+     "Reading the stage directions",
+     "Imagining the actors",
+     "Reading it aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a short play and learnt how scripts and stage directions work.",
+   "teacher": "Shows knowledge of drama conventions, inference about tone from stage directions, and identification of conflict and resolution.",
+   "done": "A play script is a plan for a performance."
+  },
+  {
+   "id": "e6-metaphor",
+   "grade": 6,
+   "subject": "English Home Language",
+   "title": "Poetry: The City at Night",
+   "topic": "Metaphor and personification",
+   "domain": "Communication and Expression",
+   "category": "Creativity",
+   "caps": "CAPS Grade 6 English Home Language, Term 1: Poetry (reading and viewing); figurative language: metaphor and personification",
+   "intention": "Today I am practising understanding metaphors and personification in a poem.",
+   "prompt": "What is the poet really describing?",
+   "passage": "<div class=\"passage-text\"><p><b>The City at Night</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>The city is a sleeping giant,<br>Its streetlights blink their tired eyes.<br>The wind whispers down the empty roads,<br>And the moon keeps watch across the skies.</p>\n<p>The taxis rest their weary wheels,<br>The tall towers stand guard in rows,<br>And morning is a golden blanket<br>That wakes the city as it grows.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the poem",
+     "say": "Read the poem about a city at night.",
+     "html": "<div class=\"passage-text\"><p><b>The City at Night</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>The city is a sleeping giant,<br>Its streetlights blink their tired eyes.<br>The wind whispers down the empty roads,<br>And the moon keeps watch across the skies.</p>\n<p>The taxis rest their weary wheels,<br>The tall towers stand guard in rows,<br>And morning is a golden blanket<br>That wakes the city as it grows.</p></div>"
+    },
+    {
+     "h": "Metaphor and personification",
+     "say": "A metaphor says one thing is another. Personification gives human actions or feelings to something that is not human.",
+     "html": "<p>A <b>metaphor</b> says one thing <b>is</b> another, without \"like\" or \"as\": <i>The city <b>is</b> a sleeping giant.</i></p><p><b>Personification</b> gives human actions or feelings to something that is not human: <i>The wind <b>whispers</b>.</i></p><p>A simile says something is <i>like</i> something else. A metaphor says it <i>is</i> that thing.</p>"
+    }
+   ],
+   "example": {
+    "q": "Is \"Its streetlights blink their tired eyes\" a metaphor, personification, or both?",
+    "steps": [
+     "Streetlights are compared to eyes, without \"like\" or \"as\". That is a metaphor.",
+     "\"Tired\" and \"blink\" are human things. That is personification.",
+     "So it is both."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "\"The city is a sleeping giant.\" What kind of language is this?",
+     "options": [
+      "Metaphor",
+      "Simile",
+      "Rhyme",
+      "A fact"
+     ],
+     "answer": 0,
+     "hints": [
+      "Does it use \"like\" or \"as\"?",
+      "It says the city IS a giant.",
+      "Saying one thing is another is a…"
+     ],
+     "explain": "It says the city is a giant, without \"like\" or \"as\", so it is a metaphor."
+    },
+    {
+     "type": "mcq",
+     "q": "Which line uses personification?",
+     "options": [
+      "The wind whispers down the empty roads",
+      "The city at night",
+      "In rows",
+      "Across the skies"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for something that is not human doing a human action.",
+      "Can wind really whisper?",
+      "Whispering is something people do."
+     ],
+     "explain": "The wind is given a human action: whispering."
+    },
+    {
+     "type": "mcq",
+     "q": "What does \"morning is a golden blanket\" suggest?",
+     "options": [
+      "Warm sunlight spreading over the city",
+      "Someone bought a gold blanket",
+      "It is cold in the morning",
+      "The city is asleep forever"
+     ],
+     "answer": 0,
+     "hints": [
+      "What colour is early sunlight?",
+      "A blanket covers and warms.",
+      "Think of sunlight covering the buildings."
+     ],
+     "explain": "Golden sunlight spreads over the city like a warm blanket."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these lines: metaphor or personification?",
+     "items": [
+      "The city is a sleeping giant",
+      "The moon keeps watch",
+      "Morning is a golden blanket",
+      "The taxis rest their weary wheels"
+     ],
+     "bins": [
+      "Metaphor",
+      "Personification"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A metaphor says something IS something else.",
+      "Personification gives human actions to things.",
+      "Can a moon keep watch? Can taxis feel weary?"
+     ],
+     "explain": "The giant and the blanket are metaphors. The moon keeping watch and weary taxis are personification."
+    },
+    {
+     "type": "mcq",
+     "q": "What mood does the poem create?",
+     "options": [
+      "Calm and peaceful",
+      "Angry and loud",
+      "Scary and dangerous",
+      "Rushed and busy"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about the words: sleeping, tired, whispers, rest.",
+      "Is the city busy or quiet at night?",
+      "The night city is resting."
+     ],
+     "explain": "Words like sleeping, whispers and rest create a calm, peaceful mood."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Picturing the city",
+     "Asking \"is it really…?\"",
+     "Comparing with similes",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a poem about a city at night and learnt about metaphors and personification.",
+   "teacher": "Shows distinction between simile, metaphor and personification, interpretation of imagery and recognition of mood.",
+   "done": "Poets use figurative language to help us see ordinary things in new ways."
+  },
+  {
+   "id": "n6-nutrients",
+   "grade": 6,
+   "subject": "Natural Sciences and Technology",
+   "title": "Nutrients in food",
+   "topic": "Life and Living",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 6 Natural Sciences and Technology, Term 1, Life and Living: Nutrients in food; nutrition (check against the Grade 6 ATP)",
+   "intention": "Today I am practising explaining what different nutrients do for the body.",
+   "prompt": "What job does that food do in your body?",
+   "lesson": [
+    {
+     "h": "Five kinds of nutrients",
+     "say": "Carbohydrates give energy. Proteins help the body grow and repair. Fats store energy. Vitamins and minerals keep the body healthy.",
+     "html": "<table class=\"hist\"><thead><tr><th>Nutrient</th><th>What it does</th><th>Found in</th></tr></thead><tbody>\n          <tr><td>Carbohydrates</td><td>Give energy</td><td>pap, bread, rice, potatoes</td></tr>\n          <tr><td>Proteins</td><td>Help the body grow and repair</td><td>beans, eggs, fish, meat, milk</td></tr>\n          <tr><td>Fats</td><td>Store energy and keep us warm</td><td>cooking oil, butter, nuts</td></tr>\n          <tr><td>Vitamins and minerals</td><td>Keep the body healthy</td><td>fruit, vegetables, milk</td></tr></tbody></table><p>We also need <b>water</b> and <b>fibre</b>, which helps digestion.</p>"
+    },
+    {
+     "h": "A balanced diet",
+     "say": "A balanced diet has the right amounts of each nutrient. No single food gives us everything.",
+     "html": "<p>A <b>balanced diet</b> includes a variety of foods, so we get all the nutrients we need. No single food gives us everything. Too much fat or sugar is unhealthy.</p>"
+    }
+   ],
+   "example": {
+    "q": "A meal of pap, chicken and spinach. Which nutrients does it give?",
+    "steps": [
+     "Pap gives carbohydrates for energy.",
+     "Chicken gives protein for growth and repair.",
+     "Spinach gives vitamins, minerals and fibre. So this meal is quite balanced."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these foods by their main nutrient.",
+     "items": [
+      "rice",
+      "eggs",
+      "oranges",
+      "bread",
+      "beans",
+      "carrots"
+     ],
+     "bins": [
+      "Carbohydrates",
+      "Proteins",
+      "Vitamins and minerals"
+     ],
+     "answer": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+     ],
+     "hints": [
+      "Starchy foods give carbohydrates.",
+      "Beans and eggs help muscles grow.",
+      "Fruit and vegetables give vitamins."
+     ],
+     "explain": "Rice and bread are carbohydrates, eggs and beans are proteins, oranges and carrots give vitamins and minerals."
+    },
+    {
+     "type": "mcq",
+     "q": "Which nutrient helps your body grow and repair itself?",
+     "options": [
+      "Protein",
+      "Fat",
+      "Carbohydrate",
+      "Sugar"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of what helps muscles and skin heal.",
+      "Found in beans, eggs and fish.",
+      "It starts with P."
+     ],
+     "explain": "Proteins help the body grow and repair itself."
+    },
+    {
+     "type": "mcq",
+     "q": "An athlete eats pasta before a race. Why?",
+     "options": [
+      "For carbohydrates, which give energy",
+      "For vitamins, which stop colds",
+      "For fat, which keeps them warm",
+      "For water"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does a runner need most during a race?",
+      "Pasta is a starchy food.",
+      "Starchy foods give energy."
+     ],
+     "explain": "Pasta is rich in carbohydrates, which give the body energy."
+    },
+    {
+     "type": "mcq",
+     "q": "Which lunch is the most balanced?",
+     "options": [
+      "Brown bread, egg, an apple and water",
+      "Chips and a fizzy drink",
+      "Only sweets",
+      "Only an apple"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for a carbohydrate, a protein and a fruit or vegetable.",
+      "Which lunch has variety?",
+      "Avoid too much sugar and fat."
+     ],
+     "explain": "Bread, egg and an apple give carbohydrates, protein, vitamins and fibre, with water."
+    },
+    {
+     "type": "mcq",
+     "q": "Why can't we live on one food only?",
+     "options": [
+      "No single food has all the nutrients we need",
+      "We would get bored",
+      "It costs too much",
+      "Foods go off"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the nutrient table.",
+      "Does any one food give everything?",
+      "We need variety."
+     ],
+     "explain": "Different foods give different nutrients, so we need a variety."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The nutrient table",
+     "Thinking about my own meals",
+     "The athlete example",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt what different nutrients do and how to choose a balanced meal.",
+   "teacher": "Shows classification of foods by main nutrient, functions of nutrients, and evaluation of a balanced meal. No personal eating information is recorded.",
+   "done": "Eating a variety of foods helps your body and brain work well."
+  },
+  {
+   "id": "n6-mixtures",
+   "grade": 6,
+   "subject": "Natural Sciences and Technology",
+   "title": "Mixtures and solutions",
+   "topic": "Matter and Materials",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 6 Natural Sciences and Technology, Term 2, Matter and Materials: Mixtures; solutions as special mixtures; dissolving (check against the Grade 6 ATP)",
+   "intention": "Today I am practising investigating mixtures and how to separate them.",
+   "prompt": "How could you test that?",
+   "lesson": [
+    {
+     "h": "Mixtures",
+     "say": "A mixture is two or more materials mixed together. Usually you can separate them again.",
+     "html": "<p>A <b>mixture</b> is two or more materials mixed together, like sand and stones, or beans and rice. Usually the materials can be <b>separated</b> again.</p>"
+    },
+    {
+     "h": "Solutions",
+     "say": "When salt is stirred into water, it dissolves. Salt water is a solution. The salt is the solute and the water is the solvent.",
+     "html": "<p>When salt is stirred into water, it <b>dissolves</b> and seems to disappear. Salt water is a <b>solution</b>.</p><ul class=\"plain\"><li><b>Solute</b>: what dissolves (salt, sugar)</li><li><b>Solvent</b>: what it dissolves in (water)</li><li><b>Soluble</b>: can dissolve (sugar). <b>Insoluble</b>: cannot dissolve (sand)</li></ul>"
+    },
+    {
+     "h": "Separating mixtures",
+     "say": "We can separate mixtures by sieving, filtering, using a magnet, or evaporating the water.",
+     "html": "<ul class=\"plain\"><li><b>Sieving</b>: big pieces from small ones (stones from sand)</li><li><b>Filtering</b>: an insoluble solid from a liquid (sand from water)</li><li><b>Magnet</b>: iron from other materials</li><li><b>Evaporation</b>: heating to remove the water and leave the dissolved solid (salt from salt water)</li></ul>"
+    }
+   ],
+   "example": {
+    "q": "How could you get the salt back from salt water?",
+    "steps": [
+     "Salt is dissolved, so a sieve or filter will not catch it.",
+     "If the water evaporates, the salt is left behind.",
+     "Leave the salt water in a shallow dish in the sun, or heat it gently, and salt crystals remain."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these: soluble or insoluble in water?",
+     "items": [
+      "sugar",
+      "sand",
+      "salt",
+      "stones",
+      "instant coffee",
+      "cooking oil"
+     ],
+     "bins": [
+      "Soluble",
+      "Insoluble"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Soluble things seem to disappear when stirred into water.",
+      "Sand and stones sink to the bottom.",
+      "Oil floats on top and does not mix."
+     ],
+     "explain": "Sugar, salt and instant coffee dissolve. Sand, stones and oil do not."
+    },
+    {
+     "type": "mcq",
+     "q": "In salt water, what is the solvent?",
+     "options": [
+      "Water",
+      "Salt",
+      "The spoon",
+      "Air"
+     ],
+     "answer": 0,
+     "hints": [
+      "The solvent does the dissolving.",
+      "The solute is what dissolves.",
+      "Salt dissolves in…"
+     ],
+     "explain": "Water is the solvent. Salt is the solute."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best way to separate sand from water?",
+     "options": [
+      "Filtering",
+      "Using a magnet",
+      "Stirring",
+      "Adding more water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sand does not dissolve.",
+      "You need something that lets water through but catches sand.",
+      "Like filter paper or a cloth."
+     ],
+     "explain": "Filtering catches the insoluble sand and lets the water through."
+    },
+    {
+     "type": "mcq",
+     "q": "Iron filings are mixed with sand. How can you separate them?",
+     "options": [
+      "Use a magnet",
+      "Add water and stir",
+      "Evaporate it",
+      "Shake it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Iron has a special property.",
+      "What attracts iron?",
+      "Sand is not magnetic."
+     ],
+     "explain": "A magnet attracts the iron filings and leaves the sand behind."
+    },
+    {
+     "type": "mcq",
+     "q": "Lerato wants to test if sugar dissolves faster in hot or cold water. What must she keep the same?",
+     "options": [
+      "The amount of sugar and water, and the stirring",
+      "Nothing",
+      "Only the cup colour",
+      "The temperature"
+     ],
+     "answer": 0,
+     "hints": [
+      "In a fair test, only one thing changes.",
+      "What is she testing?",
+      "Temperature is what changes, so everything else stays the same."
+     ],
+     "explain": "Only the temperature should change. The sugar, water and stirring must stay the same."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you choose a method?",
+    "options": [
+     "Asking if it dissolves",
+     "Thinking about the size of the pieces",
+     "Kitchen experience",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt about mixtures and solutions and chose ways to separate them.",
+   "teacher": "Shows use of solute, solvent and solubility vocabulary, selection of separation methods by property, and fair-test design.",
+   "done": "Scientists separate mixtures every day, from cleaning water to making medicines."
+  },
+  {
+   "id": "l6-potential",
+   "grade": 6,
+   "subject": "Life Skills",
+   "title": "My abilities, interests and potential",
+   "topic": "Personal and Social Well-being: abilities, interests and potential",
+   "domain": "Creativity and Metacognition",
+   "category": "Reflection",
+   "caps": "CAPS Grade 6 Life Skills, Term 1, Personal and Social Well-being: Abilities, interests and potential (how they link; an action plan)",
+   "intention": "Today I am practising linking what I enjoy and what I can do to a plan for growing.",
+   "prompt": "What is one small step you could take?",
+   "lesson": [
+    {
+     "h": "Three ideas",
+     "say": "An ability is something you can do. An interest is something you enjoy. Your potential is what you could become with effort and support.",
+     "html": "<ul class=\"plain\"><li><b>Ability</b>: something you can do, like drawing or solving puzzles</li><li><b>Interest</b>: something you enjoy, like animals or music</li><li><b>Potential</b>: what you could become with effort and support</li></ul><p>When abilities and interests meet, potential can grow. Someone who enjoys animals and is good at science might become a vet or a game ranger.</p>"
+    },
+    {
+     "h": "An action plan",
+     "say": "An action plan sets a goal and small steps to reach it, with a time and a way to check progress.",
+     "html": "<p>An <b>action plan</b> turns potential into steps:</p><ol class=\"steps\"><li>A clear <b>goal</b>: \"Read one chapter book a month\"</li><li>Small <b>steps</b>: join the library, read 10 minutes a day</li><li>A <b>time</b>: by the end of the term</li><li>A way to <b>check</b>: keep a reading list</li></ol>"
+    }
+   ],
+   "example": {
+    "q": "Kabelo loves soccer and is a fast runner. What could his action plan look like?",
+    "steps": [
+     "Goal: join the school team this year.",
+     "Steps: practise passing three times a week, ask the coach for tips, go to trials.",
+     "Check: keep a practice diary and review it each month."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these: abilities or interests?",
+     "items": [
+      "I can swim well",
+      "I enjoy space and stars",
+      "I can speak two languages",
+      "I love cooking shows"
+     ],
+     "bins": [
+      "Ability",
+      "Interest"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "An ability is something you CAN do.",
+      "An interest is something you ENJOY.",
+      "Look for \"can\" and \"enjoy\" or \"love\"."
+     ],
+     "explain": "Swimming well and speaking two languages are abilities. Enjoying space and cooking shows are interests."
+    },
+    {
+     "type": "mcq",
+     "q": "What is \"potential\"?",
+     "options": [
+      "What you could become with effort and support",
+      "What you are already perfect at",
+      "Something you are born with that never changes",
+      "Your marks"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is about the future.",
+      "It can grow.",
+      "Effort and support help it grow."
+     ],
+     "explain": "Potential is what you could become with effort and support."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best goal for an action plan?",
+     "options": [
+      "\"Practise guitar 15 minutes a day for a month\"",
+      "\"Be good at stuff\"",
+      "\"Be famous\"",
+      "\"Try harder\""
+     ],
+     "answer": 0,
+     "hints": [
+      "A good goal is clear and specific.",
+      "Can you check if you did it?",
+      "It has an amount and a time."
+     ],
+     "explain": "It is specific, has a time and can be checked."
+    },
+    {
+     "type": "order",
+     "q": "Put the parts of an action plan in order.",
+     "items": [
+      "Choose a clear goal",
+      "List small steps",
+      "Set a time",
+      "Check your progress"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start with what you want to achieve.",
+      "Then plan how.",
+      "Checking comes last."
+     ],
+     "explain": "Goal, steps, time, then check progress."
+    },
+    {
+     "type": "mcq",
+     "q": "Pick an interest you would like to grow. There is no wrong answer.",
+     "options": [
+      "Science and nature",
+      "Art and design",
+      "Sport and movement",
+      "Music or languages"
+     ],
+     "answer": -1,
+     "open": true,
+     "hints": [
+      "Think about what you enjoy.",
+      "What do you do in your free time?",
+      "Any choice is right."
+     ],
+     "explain": "That's a great area to grow in. You could make a small action plan for it."
+    }
+   ],
+   "reflect": {
+    "q": "How did it feel to plan ahead?",
+    "options": [
+     "Exciting",
+     "A bit hard",
+     "Useful",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored their abilities, interests and potential and learnt how to make an action plan.",
+   "teacher": "Shows distinction between ability, interest and potential, and knowledge of the parts of an action plan. The final choice is the learner's own and is not marked.",
+   "done": "Small steps, taken often, build big things."
+  },
+  {
+   "id": "l6-mediation",
+   "grade": 6,
+   "subject": "Life Skills",
+   "title": "Solving conflict through mediation",
+   "topic": "Personal and Social Well-being: problem-solving in conflict situations",
+   "domain": "Creativity and Metacognition",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 6 Life Skills, Term 1, Personal and Social Well-being: Problem-solving in conflict situations (mediation and peacekeeping skills)",
+   "intention": "Today I am practising how a mediator helps people solve a conflict fairly.",
+   "prompt": "Is that solution fair to both people?",
+   "lesson": [
+    {
+     "h": "What is mediation?",
+     "say": "Mediation is when a calm, fair person helps two people solve their conflict. The mediator does not take sides.",
+     "html": "<p><b>Mediation</b> is when a calm, fair person, the <b>mediator</b>, helps two people solve a conflict. The mediator does <b>not take sides</b> and does not decide for them.</p>"
+    },
+    {
+     "h": "The steps",
+     "say": "Agree to the rules. Each person tells their side without interrupting. The mediator repeats what they heard. Together they brainstorm solutions and agree on a fair one.",
+     "html": "<ol class=\"steps\"><li>Agree to the rules: no interrupting, no name-calling, tell the truth</li><li>Each person tells their side</li><li>The mediator repeats what they heard, to check</li><li>Brainstorm possible solutions together</li><li>Agree on a solution that is fair to both</li></ol><p>Peacekeeping skills: <b>respect</b>, <b>listening</b>, <b>co-operation</b> and <b>taking responsibility</b>. If anyone is unsafe, get an adult straight away.</p>"
+    }
+   ],
+   "example": {
+    "q": "Lerato and Musa both claim the class computer at break. How would a mediator help?",
+    "steps": [
+     "Set the rules, then let Lerato and then Musa explain without interrupting.",
+     "Repeat back: \"You both want the computer at break.\"",
+     "Brainstorm: share time, take turns on different days, or work together. They agree on Lerato Monday, Musa Tuesday."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does a good mediator do?",
+     "options": [
+      "Listens to both sides without taking sides",
+      "Decides who is right",
+      "Takes their friend's side",
+      "Tells them both to go away"
+     ],
+     "answer": 0,
+     "hints": [
+      "A mediator is fair.",
+      "They help people solve it themselves.",
+      "They don't pick a winner."
+     ],
+     "explain": "A mediator listens to both sides fairly and helps them find their own solution."
+    },
+    {
+     "type": "order",
+     "q": "Put the mediation steps in order.",
+     "items": [
+      "Agree to the rules",
+      "Each person tells their side",
+      "Brainstorm solutions",
+      "Agree on a fair solution"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Rules come first so everyone feels safe.",
+      "Then each person speaks.",
+      "Ideas come before the final agreement."
+     ],
+     "explain": "Rules, each side, brainstorm, then agree."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these: peacekeeping skills or not?",
+     "items": [
+      "Listening carefully",
+      "Interrupting",
+      "Taking responsibility",
+      "Blaming",
+      "Co-operating",
+      "Name-calling"
+     ],
+     "bins": [
+      "Peacekeeping skill",
+      "Not helpful"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Peacekeeping skills help people agree.",
+      "Which ones make people feel respected?",
+      "Interrupting, blaming and name-calling make conflict worse."
+     ],
+     "explain": "Listening, taking responsibility and co-operating are peacekeeping skills."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the mediator repeat what each person said?",
+     "options": [
+      "To check they understood correctly",
+      "To embarrass them",
+      "To waste time",
+      "To take sides"
+     ],
+     "answer": 0,
+     "hints": [
+      "Misunderstandings cause conflict.",
+      "Repeating shows you listened.",
+      "It checks that you got it right."
+     ],
+     "explain": "Repeating back checks understanding and shows each person they were heard."
+    },
+    {
+     "type": "mcq",
+     "q": "During a mediation, one learner threatens to hurt the other. What should the mediator do?",
+     "options": [
+      "Stop and get an adult straight away",
+      "Carry on as if nothing happened",
+      "Choose a side",
+      "Leave them alone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Is anyone unsafe?",
+      "Some problems need adult help.",
+      "Safety comes first."
+     ],
+     "explain": "Safety comes first. The mediator should stop and get an adult straight away."
+    }
+   ],
+   "reflect": {
+    "q": "Which peacekeeping skill is your strongest?",
+    "options": [
+     "Listening",
+     "Staying fair",
+     "Finding solutions",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how mediation helps people solve conflicts fairly.",
+   "teacher": "Scenario-based. Shows understanding of the mediator's neutral role, the mediation process, peacekeeping skills and when to escalate to an adult.",
+   "done": "Fair solutions help everyone feel respected."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp6-ratio",
+   "grade": 6,
+   "title": "Ratio and proportion",
+   "topic": "Number: ratio",
+   "category": "Problem Solving",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 6: Number (simple ratio and direct proportion)",
+   "intention": "Today I am using ratios to share and scale.",
+   "prompt": "How would you mix juice so it tastes the same in a bigger jug?",
+   "lesson": [
+    {
+     "h": "What a ratio is",
+     "say": "A ratio compares amounts. If a juice uses 1 cup of concentrate to 4 cups of water, the ratio is 1 to 4.",
+     "html": "<p>concentrate : water = <b>1 : 4</b></p>"
+    },
+    {
+     "h": "Scaling up",
+     "say": "To make more, multiply both parts by the same number. 1 to 4 becomes 3 to 12 for three times as much.",
+     "html": "<p>1 : 4 → × 3 → <b>3 : 12</b></p>"
+    },
+    {
+     "h": "Sharing in a ratio",
+     "say": "To share 20 sweets in the ratio 2 to 3, add the parts: 5. Each part is 20 divided by 5, which is 4. So 8 and 12.",
+     "html": "<p>2 + 3 = 5 parts → 20 ÷ 5 = 4 → <b>8 and 12</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A recipe uses 2 eggs for 6 pancakes. How many eggs for 18 pancakes?",
+    "steps": [
+     "18 is 3 times 6.",
+     "Multiply the eggs by 3.",
+     "2 × 3 = 6 eggs."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Juice is 1 cup of concentrate to 4 cups of water. How many cups of water for 2 cups of concentrate?",
+     "answer": "8",
+     "options": [
+      "8",
+      "6",
+      "5",
+      "4"
+     ],
+     "hints": [
+      "Double the ratio.",
+      "2 : 8.",
+      "8."
+     ],
+     "explain": "1 : 4 doubled is 2 : 8."
+    },
+    {
+     "type": "num",
+     "q": "Share 30 marbles in the ratio 1 : 2. How many are in the bigger share?",
+     "answer": "20",
+     "options": [
+      "20",
+      "10",
+      "15",
+      "60"
+     ],
+     "hints": [
+      "1 + 2 = 3 parts.",
+      "30 ÷ 3 = 10.",
+      "2 × 10."
+     ],
+     "explain": "Shares are 10 and 20."
+    },
+    {
+     "type": "num",
+     "q": "3 pens cost $6. How much do 5 pens cost, in dollars?",
+     "answer": "10",
+     "options": [
+      "10",
+      "11",
+      "15",
+      "8"
+     ],
+     "hints": [
+      "Find one pen first.",
+      "$6 ÷ 3 = $2.",
+      "5 × $2."
+     ],
+     "explain": "One pen is $2, so 5 cost $10."
+    },
+    {
+     "type": "mcq",
+     "q": "Which ratio is the same as 2 : 3?",
+     "options": [
+      "4 : 6",
+      "3 : 2",
+      "2 : 5",
+      "4 : 5"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply both parts by the same number.",
+      "× 2.",
+      "4 : 6."
+     ],
+     "explain": "2 : 3 × 2 = 4 : 6."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Adding the parts",
+     "Finding one part first",
+     "Scaling both sides",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used ratios to share amounts and scale recipes.",
+   "teacher": "Shows using ratio notation, scaling ratios, sharing in a given ratio and solving direct proportion problems.",
+   "done": "Scale both parts equally. To share, add the parts and find one part first."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp6-formal",
+   "grade": 6,
+   "title": "Formal and informal language",
+   "topic": "Writing: register",
+   "category": "Communication",
+   "caps": "Cambridge Primary English (0058), Stage 6: Writing (choosing formal or informal language for audience and purpose)",
+   "intention": "Today I am choosing formal or informal language.",
+   "prompt": "Would you talk to your principal the way you talk to your friends?",
+   "lesson": [
+    {
+     "h": "Informal language",
+     "say": "Informal language is relaxed, for friends and family. It can use short forms like can't and everyday words.",
+     "html": "<p>'Hey! Can't wait to see you on Saturday!'</p>"
+    },
+    {
+     "h": "Formal language",
+     "say": "Formal language is polite and careful, for people we don't know well or for official purposes. It avoids slang and uses full forms.",
+     "html": "<p>'Dear Mrs Mokoena, I am writing to ask whether…'</p>"
+    },
+    {
+     "h": "Choosing",
+     "say": "Ask: who is reading, and why? A letter to a newspaper needs formal language; a text to your cousin can be informal.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Who is reading?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Why?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Formal or informal?</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Make this formal: 'Hey, can we get more books for the library?'",
+    "steps": [
+     "Use a polite greeting.",
+     "Avoid 'hey' and short forms.",
+     "'Dear Principal, I would like to ask whether the library could have more books.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is formal?",
+     "options": [
+      "Thank you for your letter.",
+      "Thanks, mate!",
+      "Cheers for that!",
+      "Cool, got it."
+     ],
+     "answer": 0,
+     "hints": [
+      "Polite and full.",
+      "No slang.",
+      "The first."
+     ],
+     "explain": "'Thank you for your letter' is formal."
+    },
+    {
+     "type": "mcq",
+     "q": "Which situation needs formal language?",
+     "options": [
+      "A letter to the mayor",
+      "A message to your brother",
+      "A chat with friends",
+      "A birthday card to your best friend"
+     ],
+     "answer": 0,
+     "hints": [
+      "Someone you don't know well.",
+      "Official.",
+      "The mayor."
+     ],
+     "explain": "Writing to the mayor needs formal language."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is informal?",
+     "options": [
+      "awesome",
+      "sincerely",
+      "request",
+      "therefore"
+     ],
+     "answer": 0,
+     "hints": [
+      "Everyday or slang?",
+      "Friends say it.",
+      "Awesome."
+     ],
+     "explain": "'Awesome' is informal."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the formal version of 'can't'?",
+     "options": [
+      "cannot",
+      "cant",
+      "can'tt",
+      "can not't"
+     ],
+     "answer": 0,
+     "hints": [
+      "Write the full form.",
+      "No apostrophe.",
+      "Cannot."
+     ],
+     "explain": "'Cannot' is the full, formal form."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Thinking about the reader",
+     "Spotting slang and short forms",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised choosing formal or informal language.",
+   "teacher": "Shows adapting register to audience and purpose, using formal vocabulary and full forms where appropriate.",
+   "done": "Think about who is reading: formal for official, informal for friends."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp6-circuits",
+   "grade": 6,
+   "title": "Circuits, conductors and insulators",
+   "topic": "Physics: electricity",
+   "caps": "Cambridge Primary Science (0097), Stage 6: Physics (simple circuits; conductors and insulators; switches)",
+   "intention": "Today I am building circuits and testing materials.",
+   "prompt": "Why are electrical wires covered in plastic?",
+   "lesson": [
+    {
+     "h": "A complete circuit",
+     "say": "A bulb lights when there is a complete loop. The loop goes from the cell, through the wires and bulb, and back to the cell. A gap stops the current.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bulb</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">back to cell</span></div>"
+    },
+    {
+     "h": "Switches",
+     "say": "A switch makes or breaks the circuit. When it is open, there is a gap and the bulb goes off.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Switch closed: bulb on</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Switch open: bulb off</span></div>"
+    },
+    {
+     "h": "Conductors and insulators",
+     "say": "Conductors let electricity flow, like metals. Insulators don't, like plastic, rubber and wood. Wires are metal inside and plastic outside, to keep us safe.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Conductors: copper, steel</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Insulators: plastic, rubber, wood</span></div>"
+    }
+   ],
+   "example": {
+    "q": "A bulb doesn't light. One wire isn't touching the cell. Why?",
+    "steps": [
+     "The circuit has a gap.",
+     "Electricity can't flow around a broken loop.",
+     "Connect the wire to complete the circuit."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does a bulb need to light up?",
+     "options": [
+      "A complete circuit",
+      "A gap in the circuit",
+      "Only one wire",
+      "Water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Electricity flows in a loop.",
+      "No gaps.",
+      "Complete."
+     ],
+     "explain": "The circuit must be a complete loop."
+    },
+    {
+     "type": "mcq",
+     "q": "Which material is a conductor?",
+     "options": [
+      "Copper",
+      "Plastic",
+      "Rubber",
+      "Wood"
+     ],
+     "answer": 0,
+     "hints": [
+      "Metals conduct.",
+      "Wires are made of it.",
+      "Copper."
+     ],
+     "explain": "Copper is a metal conductor."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are wires covered in plastic?",
+     "options": [
+      "Plastic is an insulator, so it keeps us safe",
+      "Plastic makes the bulb brighter",
+      "Plastic is a conductor",
+      "For decoration only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plastic doesn't let electricity through.",
+      "It protects us.",
+      "Insulator."
+     ],
+     "explain": "The plastic insulates, so we don't get a shock."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens when you open a switch?",
+     "options": [
+      "The bulb goes off",
+      "The bulb gets brighter",
+      "Nothing",
+      "The cell charges"
+     ],
+     "answer": 0,
+     "hints": [
+      "Open means a gap.",
+      "The circuit breaks.",
+      "Off."
+     ],
+     "explain": "An open switch breaks the circuit."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Tracing the loop",
+     "Testing materials",
+     "How switches work",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child built circuits in theory and sorted conductors from insulators.",
+   "teacher": "Shows identifying complete circuits, explaining switches and classifying conductors and insulators.",
+   "done": "A complete loop lights the bulb. Metals conduct; plastic insulates."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp6-averages",
+   "grade": 6,
+   "title": "Averages",
+   "topic": "Data handling",
+   "category": "Inquiry and Exploration",
+   "caps": "IB PYP Mathematics: data handling (mean, median, mode and range)",
+   "intention": "Today I am finding averages to describe data.",
+   "prompt": "How would you describe the 'typical' learner in your class?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Averages help us describe and compare groups of data. Key concept: Perspective. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Averages help us describe and compare groups of data.</p><p>Key concept: <b>Perspective</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Three averages",
+     "say": "The mean adds all the values and divides by how many. The median is the middle value when they are in order. The mode is the most common value.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mean: add ÷ count</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Median: middle</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mode: most common</span></div>"
+    },
+    {
+     "h": "Range",
+     "say": "The range shows how spread out the data is: the highest minus the lowest.",
+     "html": "<p>Range = highest − lowest</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the mean of 4, 6, 8.",
+    "steps": [
+     "Add: 4 + 6 + 8 = 18.",
+     "There are 3 values.",
+     "18 ÷ 3 = 6."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the mean of 2, 4, 6, 8.",
+     "answer": "5",
+     "options": [
+      "5",
+      "20",
+      "4",
+      "6"
+     ],
+     "hints": [
+      "Add: 20.",
+      "4 values.",
+      "20 ÷ 4."
+     ],
+     "explain": "20 ÷ 4 = 5."
+    },
+    {
+     "type": "num",
+     "q": "Find the median of 3, 9, 5.",
+     "answer": "5",
+     "options": [
+      "5",
+      "9",
+      "3",
+      "17"
+     ],
+     "hints": [
+      "Put them in order: 3, 5, 9.",
+      "The middle value.",
+      "5."
+     ],
+     "explain": "In order: 3, 5, 9. The median is 5."
+    },
+    {
+     "type": "num",
+     "q": "Find the mode of 2, 3, 3, 7, 3, 5.",
+     "answer": "3",
+     "options": [
+      "3",
+      "2",
+      "7",
+      "5"
+     ],
+     "hints": [
+      "Most common.",
+      "3 appears three times.",
+      "3."
+     ],
+     "explain": "3 appears most often."
+    },
+    {
+     "type": "num",
+     "q": "Find the range of 12, 4, 9, 15.",
+     "answer": "11",
+     "options": [
+      "11",
+      "15",
+      "4",
+      "40"
+     ],
+     "hints": [
+      "Highest − lowest.",
+      "15 − 4.",
+      "11."
+     ],
+     "explain": "15 − 4 = 11."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Putting data in order",
+     "Knowing which average is which",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found the mean, median, mode and range of data.",
+   "teacher": "Shows calculating and interpreting mean, median, mode and range (thinker).",
+   "done": "Mean, median and mode describe the centre; range describes the spread."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp6-perspectives",
+   "grade": 6,
+   "title": "One event, two perspectives",
+   "topic": "Reading and writing: perspective",
+   "category": "Flexible Thinking",
+   "caps": "IB PYP Language: reading and writing (perspective and point of view; writing as a character)",
+   "intention": "Today I am retelling an event from a different perspective.",
+   "prompt": "Have you ever disagreed with a friend about what happened?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: The same event can be seen in different ways, depending on who tells it. Key concept: Perspective. Today we are open-minded.",
+     "html": "<p><b>Central idea:</b> The same event can be seen in different ways, depending on who tells it.</p><p>Key concept: <b>Perspective</b> · Learner profile: <b>Open-minded</b></p>"
+    },
+    {
+     "h": "Two tellings",
+     "say": "Zola says: I kicked the ball and accidentally broke the window. I felt terrible. Mr Pillay says: A ball came crashing through my window while I was reading. I got such a fright!",
+     "html": "<p><b>Zola:</b> I felt terrible.</p><p><b>Mr Pillay:</b> I got such a fright!</p>"
+    },
+    {
+     "h": "Why they differ",
+     "say": "Each person knows different things and feels differently. Zola knows it was an accident. Mr Pillay only sees a broken window.",
+     "html": "<p>Different knowledge → different <b>perspective</b></p>"
+    }
+   ],
+   "example": {
+    "q": "How might the window repairer tell the story?",
+    "steps": [
+     "Think about what they see and care about.",
+     "A job to do; glass to measure.",
+     "'I was called to fix a window broken by a soccer ball. It took an hour.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How does Zola feel?",
+     "options": [
+      "Sorry",
+      "Proud",
+      "Bored",
+      "Excited"
+     ],
+     "answer": 0,
+     "hints": [
+      "'I felt terrible.'",
+      "It was an accident.",
+      "Sorry."
+     ],
+     "explain": "Zola feels terrible and sorry."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does Mr Pillay get a fright?",
+     "options": [
+      "He didn't know a ball was coming",
+      "He dislikes soccer",
+      "He saw Zola kick it",
+      "He was expecting it"
+     ],
+     "answer": 0,
+     "hints": [
+      "He was reading.",
+      "It was sudden.",
+      "A surprise."
+     ],
+     "explain": "He didn't expect it, so it frightened him."
+    },
+    {
+     "type": "mcq",
+     "q": "What does Zola know that Mr Pillay doesn't?",
+     "options": [
+      "It was an accident",
+      "The window is broken",
+      "It is a ball",
+      "It is Saturday"
+     ],
+     "answer": 0,
+     "hints": [
+      "Mr Pillay only sees the result.",
+      "Zola knows the cause.",
+      "An accident."
+     ],
+     "explain": "Zola knows it wasn't on purpose."
+    },
+    {
+     "type": "mcq",
+     "q": "Which shows being open-minded?",
+     "options": [
+      "Listening to both sides before deciding",
+      "Only believing your friend",
+      "Refusing to listen",
+      "Deciding straight away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Open-minded means considering others.",
+      "Both sides.",
+      "Listen first."
+     ],
+     "explain": "Hearing both perspectives is open-minded."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two tellings",
+     "Thinking about what each person knows",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child retold an event from different people's points of view.",
+   "teacher": "Shows recognising how perspective shapes a recount and writing from another character's point of view (open-minded).",
+   "done": "Who tells the story changes what we know and feel."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Science",
+   "id": "pyp6-water",
+   "grade": 6,
+   "title": "Water: who gets it?",
+   "topic": "Sharing the planet",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "IB PYP Science and social studies, transdisciplinary theme 'Sharing the planet': access to clean water; the water cycle; conservation and fairness",
+   "intention": "Today I am inquiring into how we share water fairly.",
+   "prompt": "How much water do you think your family uses each day?",
+   "lesson": [
+    {
+     "h": "Theme: Sharing the planet",
+     "say": "Our theme is Sharing the planet. Central idea: Water is a shared resource, and how we use it affects other people and living things. Key concept: Responsibility. Today we are caring.",
+     "html": "<p><b>Central idea:</b> Water is a shared resource, and how we use it affects other people and living things.</p><p>Key concept: <b>Responsibility</b> · Learner profile: <b>Caring</b></p>"
+    },
+    {
+     "h": "The water cycle",
+     "say": "The sun heats water, which evaporates. It cools into clouds, falls as rain, and flows back to rivers and the sea. The same water goes round and round.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Evaporation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Condensation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rain</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rivers and sea</span></div>"
+    },
+    {
+     "h": "Not everyone has enough",
+     "say": "Some communities have taps at home; others walk far to fetch water. During droughts, everyone must save water so there is enough to share.",
+     "html": "<p>Save water: short showers, fix leaks, collect rainwater.</p>"
+    }
+   ],
+   "example": {
+    "q": "A leaking tap wastes 20 litres a day. How much is that in a week?",
+    "steps": [
+     "7 days in a week.",
+     "20 × 7.",
+     "140 litres wasted."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What happens during evaporation?",
+     "options": [
+      "Water is heated and turns into vapour",
+      "Rain falls",
+      "Water freezes",
+      "Clouds disappear"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sun heats water.",
+      "It rises.",
+      "Vapour."
+     ],
+     "explain": "Heated water evaporates into vapour."
+    },
+    {
+     "type": "num",
+     "q": "A leaking tap wastes 15 litres a day. How much in 4 days, in litres?",
+     "answer": "60",
+     "options": [
+      "60",
+      "19",
+      "11",
+      "45"
+     ],
+     "hints": [
+      "15 × 4.",
+      "Count in fifteens.",
+      "60."
+     ],
+     "explain": "15 × 4 = 60 litres."
+    },
+    {
+     "type": "mcq",
+     "q": "Which action saves water?",
+     "options": [
+      "Fixing a leaking tap",
+      "Leaving the tap running",
+      "Washing the car every day",
+      "Long showers"
+     ],
+     "answer": 0,
+     "hints": [
+      "Stop the waste.",
+      "Leaks waste water.",
+      "Fix it."
+     ],
+     "explain": "Fixing leaks stops water being wasted."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should we save water even if we have plenty at home?",
+     "options": [
+      "Water is shared, so our use affects others",
+      "Water is free",
+      "Saving is boring",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Rivers and dams are shared.",
+      "Other people need it.",
+      "Shared."
+     ],
+     "explain": "Water comes from shared sources, so our choices affect others."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following the water cycle",
+     "Calculating water waste",
+     "Thinking about others",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child inquired into how water is shared and how to save it.",
+   "teacher": "Sharing the planet: shows describing the water cycle, calculating waste and reasoning about fair access (caring).",
+   "done": "Water is shared. Our choices affect other people and living things."
+  }
+ ],
+ "words": {
+  "m6-percent": {
+   "words": [
+    [
+     "💯",
+     "Percent",
+     "out of 100"
+    ],
+    [
+     "🔸",
+     "Decimal comma",
+     "the comma that separates wholes from parts"
+    ],
+    [
+     "🏷️",
+     "Discount",
+     "money taken off the price"
+    ]
+   ]
+  },
+  "e6-advert": {
+   "words": [
+    [
+     "🗣️",
+     "Persuade",
+     "try to make someone do or believe something"
+    ],
+    [
+     "✅",
+     "Fact",
+     "something that can be checked"
+    ],
+    [
+     "💭",
+     "Opinion",
+     "what someone thinks or feels"
+    ],
+    [
+     "⏰",
+     "Urgency",
+     "a feeling that you must hurry"
+    ]
+   ],
+   "phrases": [
+    [
+     "Be a Sunrise champion",
+     "the advert wants you to feel like a winner if you buy it"
+    ],
+    [
+     "Start your day the Sunrise way",
+     "eat these rusks for breakfast"
+    ]
+   ]
+  },
+  "n6-photosynthesis": {
+   "words": [
+    [
+     "☀️",
+     "Photosynthesis",
+     "how plants make food using sunlight"
+    ],
+    [
+     "🍃",
+     "Chlorophyll",
+     "the green colour in leaves that traps light"
+    ],
+    [
+     "💨",
+     "Carbon dioxide",
+     "a gas in the air that plants take in"
+    ],
+    [
+     "🫧",
+     "Oxygen",
+     "the gas plants give out, which we breathe"
+    ]
+   ]
+  },
+  "l6-peer": {
+   "words": [
+    [
+     "👥",
+     "Peer",
+     "someone your own age"
+    ],
+    [
+     "🧲",
+     "Pressure",
+     "a push to do something"
+    ],
+    [
+     "🗣️",
+     "Assertive",
+     "saying what you mean in a clear, respectful way"
+    ]
+   ]
+  },
+  "m6-primes": {
+   "words": [
+    [
+     "🔑",
+     "Prime number",
+     "a number with exactly two factors, 1 and itself"
+    ],
+    [
+     "🧱",
+     "Composite number",
+     "a number with more than two factors"
+    ],
+    [
+     "✖️",
+     "Product",
+     "the answer when you multiply"
+    ]
+   ]
+  },
+  "m6-order": {
+   "words": [
+    [
+     "( )",
+     "Brackets",
+     "do the part inside them first"
+    ],
+    [
+     "➕",
+     "Operation",
+     "add, subtract, multiply or divide"
+    ],
+    [
+     "📋",
+     "Order",
+     "which step comes first, next and last"
+    ]
+   ]
+  },
+  "e6-drama": {
+   "words": [
+    [
+     "🎭",
+     "Script",
+     "the written words of a play"
+    ],
+    [
+     "🎬",
+     "Stage directions",
+     "instructions for the actors, in brackets"
+    ],
+    [
+     "💬",
+     "Dialogue",
+     "the words the characters say"
+    ]
+   ],
+   "phrases": [
+    [
+     "scratching his head",
+     "a sign that he is trying hard to remember"
+    ]
+   ]
+  },
+  "e6-metaphor": {
+   "words": [
+    [
+     "🔗",
+     "Metaphor",
+     "saying one thing is another thing"
+    ],
+    [
+     "🧍",
+     "Personification",
+     "giving human actions to things that are not human"
+    ],
+    [
+     "😴",
+     "Weary",
+     "very tired"
+    ]
+   ],
+   "phrases": [
+    [
+     "the city is a sleeping giant",
+     "the big city is quiet at night"
+    ],
+    [
+     "streetlights blink their tired eyes",
+     "the streetlights flicker"
+    ],
+    [
+     "the wind whispers",
+     "the wind makes a soft sound"
+    ],
+    [
+     "the moon keeps watch",
+     "the moon shines all night"
+    ],
+    [
+     "the taxis rest their weary wheels",
+     "the taxis are parked and not driving"
+    ],
+    [
+     "morning is a golden blanket",
+     "the morning sunlight spreads over the city"
+    ]
+   ]
+  },
+  "n6-nutrients": {
+   "words": [
+    [
+     "🥗",
+     "Nutrient",
+     "something in food that the body needs"
+    ],
+    [
+     "🍞",
+     "Carbohydrates",
+     "give energy"
+    ],
+    [
+     "🥚",
+     "Proteins",
+     "help the body grow and repair"
+    ],
+    [
+     "🍽️",
+     "Balanced diet",
+     "a mix of foods that gives all the nutrients"
+    ]
+   ]
+  },
+  "n6-mixtures": {
+   "words": [
+    [
+     "🥣",
+     "Mixture",
+     "two or more things mixed together"
+    ],
+    [
+     "🧂",
+     "Dissolve",
+     "mix into a liquid so you cannot see it any more"
+    ],
+    [
+     "🥤",
+     "Solution",
+     "a mixture where something has dissolved"
+    ],
+    [
+     "☕",
+     "Filter",
+     "something that lets liquid through and catches solids"
+    ]
+   ]
+  },
+  "l6-potential": {
+   "words": [
+    [
+     "🛠️",
+     "Ability",
+     "something you can do"
+    ],
+    [
+     "❤️",
+     "Interest",
+     "something you enjoy"
+    ],
+    [
+     "🌱",
+     "Potential",
+     "what you could become with effort and support"
+    ],
+    [
+     "🗺️",
+     "Action plan",
+     "a goal with small steps to reach it"
+    ]
+   ]
+  },
+  "l6-mediation": {
+   "words": [
+    [
+     "🧑‍⚖️",
+     "Mediator",
+     "a fair person who helps others solve a conflict"
+    ],
+    [
+     "⚖️",
+     "Neutral",
+     "not taking sides"
+    ],
+    [
+     "🤝",
+     "Agree",
+     "both people say yes to the same solution"
+    ]
+   ]
+  },
+  "camp6-ratio": {
+   "words": [
+    [
+     "⚖️",
+     "Ratio",
+     "compares amounts, like 2 to 3"
+    ],
+    [
+     "📈",
+     "Proportion",
+     "when amounts grow by the same scale"
+    ],
+    [
+     "🤝",
+     "Share in a ratio",
+     "divide an amount into the given parts"
+    ]
+   ]
+  },
+  "camp6-formal": {
+   "words": [
+    [
+     "🎩",
+     "Formal",
+     "serious, polite language for people you don't know well"
+    ],
+    [
+     "👕",
+     "Informal",
+     "relaxed language for friends and family"
+    ],
+    [
+     "💬",
+     "Slang",
+     "very informal words used by a group"
+    ]
+   ]
+  },
+  "camp6-circuits": {
+   "words": [
+    [
+     "🔁",
+     "Circuit",
+     "a complete loop for electricity"
+    ],
+    [
+     "🔘",
+     "Switch",
+     "opens or closes a gap in a circuit"
+    ],
+    [
+     "⚡",
+     "Conductor",
+     "lets electricity through"
+    ],
+    [
+     "🚫",
+     "Insulator",
+     "does not let electricity through"
+    ]
+   ]
+  },
+  "pyp6-averages": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "➗",
+     "Mean",
+     "the total divided by how many there are"
+    ],
+    [
+     "🎯",
+     "Median",
+     "the middle value when they are in order"
+    ],
+    [
+     "🔝",
+     "Mode",
+     "the value that appears most often"
+    ],
+    [
+     "↔️",
+     "Range",
+     "the biggest minus the smallest"
+    ]
+   ]
+  },
+  "pyp6-perspectives": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "👀",
+     "Perspective",
+     "how one person sees something"
+    ],
+    [
+     "🗣️",
+     "Narrator",
+     "the person telling the story"
+    ]
+   ]
+  },
+  "pyp6-water": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🔄",
+     "Water cycle",
+     "water moving between sea, sky and land"
+    ],
+    [
+     "☁️",
+     "Evaporation",
+     "water turning into vapour"
+    ],
+    [
+     "🚰",
+     "Access",
+     "being able to get and use something"
+    ]
+   ]
+  }
+ }
+}

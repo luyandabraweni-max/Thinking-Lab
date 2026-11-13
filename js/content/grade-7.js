@@ -210,7 +210,7 @@ const UNITS_G7 = [
     lesson: [
       { h: "Self-image", say: "Self-image is how you see yourself. It is shaped by your family, friends, media and your own thoughts. A healthy self-image accepts strengths and things you are working on.", html: PICS("🪞", "A mirror") + P("Social media shows <b>edited</b> lives. Compare yourself to who you were yesterday, not to a filter.") },
       { h: "Peer pressure", say: "Peer pressure is when people your age push you to do something. It can be positive, like studying together, or negative, like skipping class.", html: chainRow(["Positive: join a team", "Negative: bunk school"]) + P("<b>Peer pressure</b> can go either way.") },
-      { h: "Saying no with confidence", say: "To resist negative pressure: say no clearly, give a reason or suggest something else, and walk away if you need to. Choose friends who respect your no.", html: chainRow(["Say no", "Give a reason", "Suggest something else", "Walk away"]) + P("Being <b>assertive</b> is clear and respectful.") }
+      { h: "Saying no with confidence", say: "To resist negative pressure, say no clearly. Give a reason, or suggest something else. Walk away if you need to. Choose friends who respect your no.", html: chainRow(["Say no", "Give a reason", "Suggest something else", "Walk away"]) + P("Being <b>assertive</b> is clear and respectful.") }
     ],
     example: { q: "Friends dare Lebo to share a rude photo of a classmate. What can she do?", steps: ["It would hurt the classmate and could be against school rules or the law.", "She says: No, that's not cool.", "She suggests something else, and tells an adult if the photo is being shared."] },
     questions: [

@@ -1,16 +1,40 @@
 {
   "name": "thinking-lab",
   "private": true,
-  "description": "Test tooling only. The site itself has no build step and no runtime dependencies.",
+  "description": "The live site (repo root) has no build step. The React platform lives in apps/ and packages/ (see docs/architecture/README.md).",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vitest run",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "platform:check": "npm run platform:types && npm run platform:lint && npm run platform:bounds && npm run platform:test",
+    "platform:types": "tsc -p tsconfig.platform.json",
+    "platform:lint": "eslint apps packages supabase/tests",
+    "platform:bounds": "node tools/check-boundaries.mjs",
+    "platform:test": "vitest run --config vitest.platform.config.mts",
+    "app:dev": "node tools/export-clips.mjs && npm run dev -w @tl/app",
+    "app:build": "node tools/export-clips.mjs && npm run build -w @tl/app",
+    "app:clips": "node tools/export-clips.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@electric-sql/pglite": "0.5.13",
+    "@eslint/js": "10.0.1",
     "@playwright/test": "1.64.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/user-event": "14.6.8",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "fake-indexeddb": "6.2.6",
     "jsdom": "30.1.3",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
     "vitest": "5.1.0"
   }
 }
