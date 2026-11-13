@@ -1585,7 +1585,7 @@
     },
     {
      "h": "Safe places to cross",
-     "say": "Cross at a pedestrian crossing, at a traffic light when the green man shows, or where a scholar patrol helps you.",
+     "say": "Cross the road at a pedestrian crossing. Or cross at a traffic light when the green man shows. Or cross where a scholar patrol helps you.",
      "html": "<p class=\"pics\" role=\"img\" aria-label=\"Crossing, traffic light, walking\">🚸 🚦 🧍</p><p><b>Green man</b> means you may cross. <b>Red man</b> means wait.</p>"
     },
     {

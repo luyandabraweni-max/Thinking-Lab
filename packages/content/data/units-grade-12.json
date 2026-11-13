@@ -25,7 +25,7 @@
     },
     {
      "h": "Sums",
-     "say": "The sum of the first n terms of an arithmetic series is n over two, times two a plus n minus one d. For a geometric series it is a times r to the n minus one, over r minus one.",
+     "say": "Here is the sum of the first n terms of an arithmetic series. It is n over two, times two a plus n minus one d. For a geometric series it is a times r to the n minus one, over r minus one.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sₙ = n/2 [2a + (n − 1)d]</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sₙ = a(rⁿ − 1)/(r − 1)</span></div><p>These are on the <b>formula sheet</b>.</p>"
     }
    ],
@@ -558,12 +558,12 @@
    "lesson": [
     {
      "h": "Surface area",
-     "say": "Surface area is the total area of all the faces of an object, like the cardboard needed to make a box. A box has six rectangular faces in three matching pairs.",
+     "say": "Surface area is the total area of all the faces of an object. Think of the cardboard needed to make a box. A box has six rectangular faces in three matching pairs.",
      "html": "<p>Surface area of a box = 2(l × b) + 2(l × h) + 2(b × h)</p>"
     },
     {
      "h": "Packing",
-     "say": "To find how many small boxes fit in a big box, divide each length by the small box's length, round down to whole boxes, then multiply the three answers.",
+     "say": "How many small boxes fit in a big box? Divide each length of the big box by the matching length of the small box. Round each answer down to whole boxes. Then multiply the three answers.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Length ÷</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Width ÷</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Height ÷</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Round down, then multiply</span></div>"
     },
     {
@@ -699,7 +699,7 @@
     },
     {
      "h": "Quantities from plans",
-     "say": "Builders use plans to work out how much material is needed. For a wall, find its area, subtract the windows and doors, then multiply by how many bricks cover one square metre.",
+     "say": "Builders use plans to work out how much material is needed. For a wall, first find its area. Subtract the area of the windows and doors. Then multiply by the number of bricks that cover one square metre.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wall area</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">− windows and doors</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">× bricks per m²</span></div>"
     },
     {
@@ -830,7 +830,7 @@
    "lesson": [
     {
      "h": "Quartiles",
-     "say": "Order the data. The median splits it in half. The lower quartile is the middle of the lower half, and the upper quartile is the middle of the upper half.",
+     "say": "Order the data. The median splits it in half. The lower quartile is the middle of the lower half. The upper quartile is the middle of the upper half.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Minimum</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Q1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Median</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Q3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Maximum</span></div><p>Interquartile range (IQR) = Q3 − Q1</p>"
     },
     {
@@ -840,7 +840,7 @@
     },
     {
      "h": "Checking claims",
-     "say": "When someone uses data to make a claim, ask: how big was the sample, who was asked, and does the average hide a big spread?",
+     "say": "When someone uses data to make a claim, ask three questions. How big was the sample? Who was asked? Does the average hide a big spread?",
      "html": "<p>Ask: <b>who was asked, how many, and how spread out?</b></p>"
     }
    ],
@@ -971,7 +971,7 @@
     },
     {
      "h": "Is the game fair?",
-     "say": "A game is fair if every player has the same chance of winning. If player A wins on a 1 or 2, and player B wins on 3, 4, 5 or 6, player B is twice as likely to win.",
+     "say": "A game is fair if every player has the same chance of winning. For example, player A wins on a 1 or 2. Player B wins on a 3, 4, 5 or 6. Then player B is twice as likely to win.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">A: 2/6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">B: 4/6</span></div><p>Not fair: B is twice as likely to win.</p>"
     },
     {
@@ -1375,7 +1375,7 @@
    "lesson": [
     {
      "h": "Structure a speech",
-     "say": "A good speech has a hook to grab attention, three clear points with examples, and a strong ending that the audience will remember.",
+     "say": "A good speech starts with something that gets the audience's attention. This is called a hook. Then it gives three clear points with examples. It ends strongly, so the audience remembers it.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Hook</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Point 1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Point 2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Point 3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Memorable ending</span></div><p>Use cue cards with keywords, not full sentences.</p>"
     },
     {
@@ -1430,7 +1430,7 @@
       "Just reminders.",
       "Keywords."
      ],
-     "explain": "Keywords keep you on track without reading."
+     "explain": "Keywords remind you what to say, so you do not need to read it all."
     },
     {
      "type": "mcq",
@@ -1793,7 +1793,7 @@
     },
     {
      "h": "Evidence and South Africa",
-     "say": "Evidence comes from fossils, comparing anatomy, and DNA. South Africa's Cradle of Humankind is a World Heritage Site with important hominin fossils, such as Mrs Ples and Little Foot.",
+     "say": "Evidence comes from fossils, comparing anatomy, and DNA. South Africa's Cradle of Humankind is a World Heritage Site. It has important hominin fossils, such as Mrs Ples and Little Foot.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fossils</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Anatomy</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">DNA</span></div><p>The <b>Cradle of Humankind</b> is near Johannesburg.</p>"
     }
    ],
@@ -2333,12 +2333,12 @@
     },
     {
      "h": "The theorem",
-     "say": "a plus b to the n is the sum of n choose r, times a to the n minus r, times b to the r.",
+     "say": "The binomial theorem expands a plus b to the n. It is the sum of n choose r, times a to the n minus r, times b to the r.",
      "html": "<p>(a + b)ⁿ = Σ ⁿCᵣ aⁿ⁻ʳ bʳ</p>"
     },
     {
      "h": "Finding one term",
-     "say": "The general term is n choose r, a to the n minus r, b to the r. To find the x squared term in x plus 2 to the 5, use r equals 3: 10 times x squared times 8, which is 80 x squared.",
+     "say": "The general term is n choose r, a to the n minus r, b to the r. For example, find the x squared term in x plus 2 to the 5. Use r equals 3. That gives 10 times x squared times 8, which is 80 x squared.",
      "html": "<p>ⁿCᵣ aⁿ⁻ʳ bʳ → ⁵C₃ x² 2³ = <b>80x²</b></p>"
     },
     {
@@ -2612,12 +2612,12 @@
    "lesson": [
     {
      "h": "The individual oral",
-     "say": "In the individual oral, you explore how a global issue is presented in one literary and one non-literary text, through their content and form.",
+     "say": "In the individual oral, you explore one global issue. You look at how it is presented in one literary text and one non-literary text. You discuss their content and their form.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Global issue</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Literary text</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Non-literary text</span></div>"
     },
     {
      "h": "Choosing the issue",
-     "say": "A global issue is significant, transnational and felt in everyday life, such as access to education, gender roles or the impact of technology.",
+     "say": "A global issue is significant and transnational, which means it crosses borders. It is felt in everyday life. Examples are access to education, gender roles and the impact of technology.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Significant</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Transnational</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Everyday impact</span></div>"
     },
     {
@@ -2754,7 +2754,7 @@
    "lesson": [
     {
      "h": "Dynamic equilibrium",
-     "say": "In a closed system, a reversible reaction reaches dynamic equilibrium: the forward and reverse reactions continue at equal rates, so concentrations stay constant.",
+     "say": "In a closed system, a reversible reaction reaches dynamic equilibrium. The forward and reverse reactions keep going at equal rates. So the concentrations stay constant.",
      "html": "<p>Rate forward = rate reverse · concentrations <b>constant</b></p>"
     },
     {
@@ -3180,7 +3180,7 @@
     },
     {
      "h": "Set up the function",
-     "say": "A farmer has 40 metres of fencing for a rectangle against a wall, so only three sides need fencing. If the two short sides are x, the long side is 40 minus 2x, and the area is x times 40 minus 2x.",
+     "say": "A farmer has 40 metres of fencing for a rectangle against a wall. The wall is one side, so only three sides need fencing. Let the two short sides be x. Then the long side is 40 minus 2x. The area is x times 40 minus 2x.",
      "html": "<p>A = x(40 − 2x) = 40x − 2x²</p>"
     },
     {
@@ -3460,7 +3460,7 @@
     },
     {
      "h": "A focused thesis",
-     "say": "Answer the question in one sentence that you will prove: for example, the poem presents the grandmother's body as a record of knowledge passed on without writing.",
+     "say": "Answer the question in one sentence, and then prove it. For example: the poem shows the grandmother's body as a record of knowledge passed on without writing.",
      "html": "<p>Thesis: <b>an answer you will prove</b></p>"
     },
     {
@@ -3871,7 +3871,7 @@
     },
     {
      "h": "Weighing both sides",
-     "say": "GM maize can resist pests and need less pesticide, but some people worry about seed costs for small farmers and effects on biodiversity.",
+     "say": "GM maize can resist pests, so farmers need less pesticide. But some people worry about the cost of seed for small farmers. They also worry about effects on biodiversity.",
      "html": "<p>Benefit: fewer pests, less spraying · Concern: seed costs, biodiversity</p>"
     },
     {
@@ -4008,7 +4008,7 @@
     },
     {
      "h": "Definite integrals",
-     "say": "A definite integral from a to b gives a number: find the antiderivative, then subtract its value at a from its value at b.",
+     "say": "A definite integral from a to b gives a number. First find the antiderivative. Then subtract its value at a from its value at b.",
      "html": "<p>∫ from a to b of f(x) dx = F(b) − F(a)</p>"
     },
     {
@@ -4150,7 +4150,7 @@
     },
     {
      "h": "z-scores",
-     "say": "A z-score tells you how many standard deviations a value is from the mean: z equals x minus the mean, divided by the standard deviation.",
+     "say": "A z-score tells you how many standard deviations a value is from the mean. The formula is: z equals x minus the mean, divided by the standard deviation.",
      "html": "<p>z = (x − μ) ÷ σ</p>"
     }
    ],

@@ -2541,7 +2541,7 @@
     },
     {
      "h": "Making my own",
-     "say": "You can design a pattern that says something about you: a colour you love, a shape that is special to you, repeated in a pattern.",
+     "say": "You can design a pattern that tells people about you. Choose a colour you love and a shape that is special to you. Repeat them to make a pattern.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Choose colours</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Choose shapes</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Repeat</span></div>"
     }
    ],

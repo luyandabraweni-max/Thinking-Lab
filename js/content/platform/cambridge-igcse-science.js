@@ -11,7 +11,7 @@
     intention: "Today I am learning how substances move into and out of cells.", prompt: "Why do you think wilted lettuce goes crisp in cold water?",
     lesson: [
       { h: "Plant and animal cells", say: "Animal and plant cells both have a nucleus, cytoplasm and a cell membrane. Plant cells also have a cell wall, chloroplasts and a large vacuole.", html: chainRow(["Both: nucleus, cytoplasm, membrane", "Plants also: wall, chloroplasts, vacuole"]) },
-      { h: "Diffusion", say: "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration, down a concentration gradient. It is how oxygen gets into cells.", html: chainRow(["Higher concentration", "Lower concentration"]) },
+      { h: "Diffusion", say: "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration. This is called moving down a concentration gradient. It is how oxygen gets into cells.", html: chainRow(["Higher concentration", "Lower concentration"]) },
       { h: "Osmosis", say: "Osmosis is the movement of water through a partially permeable membrane, from a dilute solution to a more concentrated one. Plant cells take in water by osmosis and become firm.", html: P("Water moves towards the <b>more concentrated</b> solution.") }
     ],
     example: { q: "Why does a slice of potato in very salty water go soft?", steps: ["The salty water is more concentrated than the potato cells.", "Water leaves the cells by osmosis.", "The cells lose water and become soft (flaccid)."] },

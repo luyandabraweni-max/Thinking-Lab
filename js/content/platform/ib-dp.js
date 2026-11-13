@@ -23,7 +23,7 @@
     lesson: [
       { h: "Arithmetic sequences", say: "An arithmetic sequence adds the same common difference d each time. The nth term is u1 plus n minus 1 times d.", html: P("uₙ = u₁ + (n − 1)d · Sₙ = n/2 (2u₁ + (n − 1)d)") },
       { h: "Geometric sequences", say: "A geometric sequence multiplies by the same common ratio r each time. The nth term is u1 times r to the power n minus 1.", html: P("uₙ = u₁ rⁿ⁻¹ · Sₙ = u₁(1 − rⁿ) ÷ (1 − r)") },
-      { h: "Sum to infinity", say: "If the absolute value of r is less than 1, the terms shrink and the series has a finite sum: u1 over 1 minus r.", html: P("S∞ = u₁ ÷ (1 − r), when |r| < 1") },
+      { h: "Sum to infinity", say: "Sometimes the absolute value of r is less than 1. Then the terms shrink, and the series has a finite sum. The sum is u1 over 1 minus r.", html: P("S∞ = u₁ ÷ (1 − r), when |r| < 1") },
       TOK("Is a sum of infinitely many terms that is finite discovered or invented?")
     ],
     example: { q: "Find the sum to infinity of 8 + 4 + 2 + 1 + …", steps: ["u₁ = 8 and r = 1/2.", "|r| < 1, so the sum exists.", "S∞ = 8 ÷ (1 − 1/2) = 16."] },
@@ -46,7 +46,7 @@
       { h: "Scatter diagrams and r", say: "A scatter diagram shows two variables together. Pearson's r measures linear correlation, from minus 1 to 1. Close to 1 is strong positive; close to 0 is weak.", html: chainRow(["r ≈ 1: strong positive", "r ≈ 0: little linear correlation", "r ≈ −1: strong negative"]) },
       { h: "The regression line", say: "The regression line of y on x, y equals a x plus b, is used to predict y from x. Your calculator finds a and b.", html: P("ŷ = ax + b") },
       { h: "Use with care", say: "Predicting inside the data range is interpolation and is usually reliable. Predicting outside it is extrapolation and may be unreliable. Correlation does not prove causation.", html: P("Correlation ≠ <b>causation</b>") },
-      TOK("If two variables are strongly correlated, what further knowledge do we need to claim that one causes the other?")
+      TOK("Two variables are strongly correlated. What more do we need to know to claim that one causes the other?")
     ],
     example: { q: "The regression line for revision hours (x) and test score (y) is y = 4x + 40, for 2 to 10 hours. Predict the score for 6 hours.", steps: ["6 is inside the data range, so this is interpolation.", "y = 4(6) + 40.", "y = 64."] },
     questions: [
@@ -89,8 +89,8 @@
     intention: "Today I am comparing the ways substances cross cell membranes.", prompt: "How does a cell let in what it needs and keep out what it doesn't?",
     lesson: [
       { h: "The membrane", say: "The cell membrane is a phospholipid bilayer with proteins embedded in it. It is partially permeable: small non-polar molecules pass easily; ions and large molecules need help.", html: P("Phospholipid bilayer + proteins = <b>partially permeable</b>") },
-      { h: "Passive transport", say: "Simple diffusion, facilitated diffusion through channel proteins, and osmosis all move substances down a concentration gradient, without using energy from ATP.", html: chainRow(["Simple diffusion", "Facilitated diffusion", "Osmosis"]) + P("Down the gradient · <b>no ATP</b>") },
-      { h: "Active transport", say: "Active transport uses ATP and pump proteins to move substances against their concentration gradient, such as the sodium–potassium pump in nerve cells.", html: P("Against the gradient · <b>uses ATP</b>") },
+      { h: "Passive transport", say: "Three processes move substances down a concentration gradient: simple diffusion, facilitated diffusion through channel proteins, and osmosis. None of them uses energy from ATP.", html: chainRow(["Simple diffusion", "Facilitated diffusion", "Osmosis"]) + P("Down the gradient · <b>no ATP</b>") },
+      { h: "Active transport", say: "Active transport uses ATP and pump proteins to move substances against their concentration gradient. An example is the sodium–potassium pump in nerve cells.", html: P("Against the gradient · <b>uses ATP</b>") },
       TOK("The fluid mosaic model replaced earlier models. What makes scientists accept a new model?")
     ],
     example: { q: "Root hair cells absorb mineral ions from soil where the ions are less concentrated. Which process is needed?", steps: ["The ions move from low to high concentration.", "That is against the gradient.", "So active transport, using ATP, is needed."] },
@@ -110,7 +110,7 @@
     caps: dp("Theory of Knowledge", "knowledge questions; the knower; areas of knowledge"),
     intention: "Today I am asking questions about knowledge itself.", prompt: "How do you know that what you learnt in history is true?",
     lesson: [
-      { h: "Questions about knowledge", say: "TOK asks how we know what we claim to know. A knowledge question is about knowledge itself, is open to debate, and uses TOK concepts such as evidence, certainty, truth and interpretation.", html: chainRow(["About knowledge", "Contestable", "Uses TOK concepts"]) },
+      { h: "Questions about knowledge", say: "TOK asks how we know what we claim to know. A knowledge question is about knowledge itself, and it is open to debate. It uses TOK concepts such as evidence, certainty, truth and interpretation.", html: chainRow(["About knowledge", "Contestable", "Uses TOK concepts"]) },
       { h: "Subject question or knowledge question?", say: "When did apartheid end is a history question. How can historians decide which sources to trust is a knowledge question.", html: P("<b>Subject:</b> When did apartheid end?") + P("<b>Knowledge:</b> How do historians decide which sources to trust?") },
       { h: "Areas of knowledge", say: "TOK compares how knowledge is made in different areas: mathematics, the natural sciences, the human sciences, history and the arts.", html: chainRow(["Mathematics", "Natural sciences", "Human sciences", "History", "The arts"]) }
     ],
@@ -133,7 +133,7 @@
     lesson: [
       { h: "What the EE is", say: "The Extended Essay is an independent research paper of up to 4 000 words, in one subject, guided by a supervisor.", html: P("Up to <b>4 000 words</b> · one subject · a supervisor") },
       { h: "Narrow the topic", say: "Start broad, then narrow. Water becomes water in South Africa, then the effect of the 2018 Cape Town drought restrictions on household water use.", html: chainRow(["Water", "Water in South Africa", "Cape Town 2018 restrictions and household use"]) },
-      { h: "A good research question", say: "A good research question is focused, researchable with the time and sources you have, arguable, and clearly linked to one subject.", html: chainRow(["Focused", "Researchable", "Arguable", "Subject-specific"]) }
+      { h: "A good research question", say: "A good research question is focused and arguable. You can research it with the time and sources you have. It is clearly linked to one subject.", html: chainRow(["Focused", "Researchable", "Arguable", "Subject-specific"]) }
     ],
     example: { q: "Improve: 'Is pollution bad?'", steps: ["It is too broad and has an obvious answer.", "Narrow it: a place, a pollutant, a measurable effect.", "'To what extent did the 2020 lockdown reduce nitrogen dioxide levels in Johannesburg?'"] },
     questions: [
@@ -154,8 +154,8 @@
     intention: "Today I am expanding powers of brackets with the binomial theorem.", prompt: "What patterns can you see in Pascal's triangle?",
     lesson: [
       { h: "Pascal's triangle", say: "Each number in Pascal's triangle is the sum of the two above it. The rows give the coefficients for expanding a plus b to a power.", html: P("1<br>1 1<br>1 2 1<br>1 3 3 1<br>1 4 6 4 1") },
-      { h: "The theorem", say: "a plus b to the n is the sum of n choose r, times a to the n minus r, times b to the r.", html: P("(a + b)ⁿ = Σ ⁿCᵣ aⁿ⁻ʳ bʳ") },
-      { h: "Finding one term", say: "The general term is n choose r, a to the n minus r, b to the r. To find the x squared term in x plus 2 to the 5, use r equals 3: 10 times x squared times 8, which is 80 x squared.", html: P("ⁿCᵣ aⁿ⁻ʳ bʳ → ⁵C₃ x² 2³ = <b>80x²</b>") },
+      { h: "The theorem", say: "The binomial theorem expands a plus b to the n. It is the sum of n choose r, times a to the n minus r, times b to the r.", html: P("(a + b)ⁿ = Σ ⁿCᵣ aⁿ⁻ʳ bʳ") },
+      { h: "Finding one term", say: "The general term is n choose r, a to the n minus r, b to the r. For example, find the x squared term in x plus 2 to the 5. Use r equals 3. That gives 10 times x squared times 8, which is 80 x squared.", html: P("ⁿCᵣ aⁿ⁻ʳ bʳ → ⁵C₃ x² 2³ = <b>80x²</b>") },
       TOK("Pascal's triangle was known in China, Persia and India centuries before Pascal. What does this suggest about who gets credit for knowledge?")
     ],
     example: { q: "Expand (x + 1)³.", steps: ["Row 3 of Pascal's triangle: 1, 3, 3, 1.", "x³ + 3x²(1) + 3x(1)² + 1³.", "x³ + 3x² + 3x + 1."] },
@@ -197,8 +197,8 @@
     caps: dp("Language A: Language and Literature (SL/HL)", "individual oral (exploring a global issue through a literary and a non-literary text)"),
     intention: "Today I am planning how two texts explore a global issue.", prompt: "Which global issue matters most to you?",
     lesson: [
-      { h: "The individual oral", say: "In the individual oral, you explore how a global issue is presented in one literary and one non-literary text, through their content and form.", html: chainRow(["Global issue", "Literary text", "Non-literary text"]) },
-      { h: "Choosing the issue", say: "A global issue is significant, transnational and felt in everyday life, such as access to education, gender roles or the impact of technology.", html: chainRow(["Significant", "Transnational", "Everyday impact"]) },
+      { h: "The individual oral", say: "In the individual oral, you explore one global issue. You look at how it is presented in one literary text and one non-literary text. You discuss their content and their form.", html: chainRow(["Global issue", "Literary text", "Non-literary text"]) },
+      { h: "Choosing the issue", say: "A global issue is significant and transnational, which means it crosses borders. It is felt in everyday life. Examples are access to education, gender roles and the impact of technology.", html: chainRow(["Significant", "Transnational", "Everyday impact"]) },
       { h: "Focusing on extracts", say: "Choose a short extract from each text. Analyse how the authors' choices present the issue, and compare the two texts, rather than just retelling them.", html: P("Content <b>and</b> form · compare, don't retell") },
       TOK("Can a work of fiction give us knowledge about real global issues?")
     ],
@@ -219,7 +219,7 @@
     caps: dp("Chemistry (SL/HL)", "dynamic equilibrium; Le Chatelier's principle; effect of conditions on equilibrium position"),
     intention: "Today I am predicting how equilibria respond to change.", prompt: "Why does a fizzy drink go flat when you open it?",
     lesson: [
-      { h: "Dynamic equilibrium", say: "In a closed system, a reversible reaction reaches dynamic equilibrium: the forward and reverse reactions continue at equal rates, so concentrations stay constant.", html: P("Rate forward = rate reverse · concentrations <b>constant</b>") },
+      { h: "Dynamic equilibrium", say: "In a closed system, a reversible reaction reaches dynamic equilibrium. The forward and reverse reactions keep going at equal rates. So the concentrations stay constant.", html: P("Rate forward = rate reverse · concentrations <b>constant</b>") },
       { h: "Le Chatelier's principle", say: "If conditions change, the equilibrium shifts to oppose the change. Adding a reactant shifts it to the right. Increasing pressure shifts it towards fewer gas molecules.", html: chainRow(["Add reactant: shift right", "More pressure: fewer gas moles", "Catalyst: no shift"]) },
       { h: "Temperature", say: "Raising the temperature favours the endothermic direction. A catalyst speeds up both directions equally, so it doesn't change the position of equilibrium.", html: P("Heat → favours <b>endothermic</b> direction") },
       TOK("Le Chatelier's principle predicts but doesn't explain. Is a useful rule the same as understanding?")

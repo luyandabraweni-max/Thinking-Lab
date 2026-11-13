@@ -184,7 +184,7 @@
     lesson: [
       IDEA("People use patterns, colours and symbols to express who they are.", "Perspective", "Open-minded", "How we express ourselves"),
       { h: "Patterns with meaning", say: "Many cultures paint or bead patterns that carry meaning. Ndebele house paintings use bold shapes and colours, and beadwork colours can share messages.", html: BIG("🔺🔷🔺🔷") + P("Bold repeating shapes and colours") },
-      { h: "Making my own", say: "You can design a pattern that says something about you: a colour you love, a shape that is special to you, repeated in a pattern.", html: chainRow(["Choose colours", "Choose shapes", "Repeat"]) }
+      { h: "Making my own", say: "You can design a pattern that tells people about you. Choose a colour you love and a shape that is special to you. Repeat them to make a pattern.", html: chainRow(["Choose colours", "Choose shapes", "Repeat"]) }
     ],
     example: { q: "Continue the pattern: red, blue, red, blue, …", steps: ["Look at what repeats.", "Red, then blue.", "The next colour is red."] },
     questions: [

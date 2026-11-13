@@ -53,7 +53,7 @@
     lesson: [
       { ...READ, html: STORM },
       { h: "Imagery", say: "Writers choose images to make us see and feel. The sky the colour of a bruise suggests something dark, painful and threatening.", html: chainRow(["colour of a bruise", "dark, painful", "threat"]) },
-      { h: "Explaining effects", say: "To explain an effect, quote the words, say what they literally mean, then what they suggest, and how they make the reader feel.", html: chainRow(["Quote", "Literal meaning", "Suggestion", "Effect on the reader"]) }
+      { h: "Explaining effects", say: "To explain an effect, first quote the words. Say what they literally mean. Then say what they suggest, and how they make the reader feel.", html: chainRow(["Quote", "Literal meaning", "Suggestion", "Effect on the reader"]) }
     ],
     example: { q: "Explain the effect of 'as if someone had tipped the sky over'.", steps: ["Literally, a huge amount of rain fell suddenly.", "Tipping a container suggests all the water pouring out at once.", "It makes the storm feel sudden and overwhelming."] },
     questions: [
@@ -74,7 +74,7 @@
     passage: WATER,
     lesson: [
       { ...READ, html: WATER },
-      { h: "Selecting points", say: "A summary only includes points that answer the question. If the question asks how the school saved water, leave out the burst pipe, which explains the problem, not the solution.", html: chainRow(["Read the question", "Mark relevant points", "Leave out extras"]) },
+      { h: "Selecting points", say: "A summary only includes points that answer the question. For example, the question asks how the school saved water. So leave out the burst pipe, because it explains the problem, not the solution.", html: chainRow(["Read the question", "Mark relevant points", "Leave out extras"]) },
       { h: "Own words, concisely", say: "Write the points in your own words, in a smooth paragraph, within the word limit. Don't add your own opinion.", html: P("Self-closing taps, early-morning watering, a weekly class competition.") }
     ],
     example: { q: "Summarise how the Grade 10s saved water, in one sentence.", steps: ["Point 1: taps that switch off by themselves.", "Point 2: watering early, so less evaporates. Point 3: a weekly chart that made it a competition.", "They fitted self-closing taps, watered the gardens early and made saving water a class competition with a weekly meter chart."] },
@@ -96,9 +96,9 @@
     lesson: [
       { h: "Purpose, audience, register", say: "Before you write, ask: why am I writing, who will read it, and how formal should I be? A letter to a principal needs a polite, formal register.", html: chainRow(["Purpose", "Audience", "Register"]) },
       { h: "Using the reading text", say: "Directed writing asks you to use ideas from a passage. Select the ideas, then develop them with your own reasons and examples, rather than copying.", html: P("Use the ideas; don't copy the sentences.") },
-      { h: "Persuasive techniques", say: "Persuade with a clear opening, reasons in a logical order, evidence, a polite answer to objections, and a confident call to action.", html: chainRow(["Clear aim", "Reasons and evidence", "Answer objections", "Call to action"]) }
+      { h: "Persuasive techniques", say: "To persuade, start with a clear opening. Give your reasons in a logical order, with evidence. Answer objections politely, and end with a confident call to action.", html: chainRow(["Clear aim", "Reasons and evidence", "Answer objections", "Call to action"]) }
     ],
-    example: { q: "Write an opening sentence for a letter to your principal asking for push-taps.", steps: ["Purpose: to persuade. Audience: the principal. Register: formal.", "State the request politely and clearly.", "'I am writing to ask whether the school could install push-taps, a simple change that would save both water and money.'"] },
+    example: { q: "Write an opening sentence for a letter to your principal asking for push-taps.", steps: ["Purpose: to persuade. Audience: the principal. Register: formal.", "State the request politely and clearly.", "'I am writing to ask whether the school could install push-taps. This simple change would save water and money.'"] },
     questions: [
       { type: "mcq", q: "Which greeting suits a formal letter to a principal?", options: ["Dear Mr Naidoo,", "Hey Naidoo!", "Yo, sir", "To whoever"], answer: 0, hints: ["Formal register.", "Use their title and name.", "Dear Mr…"], explain: "'Dear Mr Naidoo,' is polite and formal." },
       { type: "mcq", q: "What is the main purpose of a persuasive letter?", options: ["To convince the reader to agree or act", "To describe a place", "To tell a story", "To list facts only"], answer: 0, hints: ["Persuade means…", "…convince.", "To make them act."], explain: "Persuasive writing aims to convince." },
@@ -117,7 +117,7 @@
     lesson: [
       { h: "Show, don't tell", say: "Description creates a picture in the reader's mind. Instead of saying the market was busy, show it: hawkers calling, the smell of roasting mielies, people squeezing past.", html: P("<b>Tell:</b> The market was busy.") + P("<b>Show:</b> Hawkers sang their prices over the hiss of the grills.") },
       { h: "All the senses", say: "Use more than sight. Sounds, smells, textures and even tastes make a place feel real.", html: chainRow(["See", "Hear", "Smell", "Touch", "Taste"]) },
-      { h: "Structure", say: "Description still needs a structure. You might move through space, from the gate to the centre, or through time, from dawn to dusk, or zoom from a wide view to a small detail.", html: chainRow(["Wide view", "Closer", "One small detail"]) }
+      { h: "Structure", say: "Description still needs a structure. You might move through space, from the gate to the centre. You might move through time, from dawn to dusk. Or you might zoom from a wide view to a small detail.", html: chainRow(["Wide view", "Closer", "One small detail"]) }
     ],
     example: { q: "Improve: 'It was a hot day.'", steps: ["Choose a sense: touch.", "Show the effect of the heat instead of naming it.", "'The tar softened under my shoes, and even the shade felt like breath on my neck.'"] },
     questions: [
@@ -182,14 +182,14 @@
     passage: SLEEP,
     lesson: [
       { ...READ, html: SLEEP },
-      { h: "Finding the points", say: "First mark the points that answer the question. For why teenagers struggle to wake up, the reasons are a later body clock, blue light from screens, alert brains from social media, and early school starts.", html: chainRow(["Body clock shifts", "Blue light", "Social media", "Early starts"]) },
+      { h: "Finding the points", say: "First mark the points that answer the question. Why do teenagers struggle to wake up? Their body clock runs later. Blue light from screens delays sleep. Social media keeps their brains alert. And school starts early.", html: chainRow(["Body clock shifts", "Blue light", "Social media", "Early starts"]) },
       { h: "Concise, own words", say: "Combine points into fluent sentences, use your own words where you can, and leave out examples, statistics and repetition.", html: P("Cut: 'A teenager who cannot fall asleep before eleven is not being stubborn.' That is an example.") }
     ],
-    example: { q: "Summarise the causes in one sentence.", steps: ["Point 1: the sleep hormone arrives later in adolescence.", "Points 2 and 3: screens and social media keep them awake. Point 4: school starts early.", "Teenagers' body clocks shift later, screens and social media delay sleep further, and early school starts leave them short of rest."] },
+    example: { q: "Summarise the causes in one sentence.", steps: ["Point 1: the sleep hormone arrives later in adolescence.", "Points 2 and 3: screens and social media keep them awake. Point 4: school starts early.", "Teenagers' body clocks shift later, and screens and social media delay sleep. Early school starts leave them short of rest."] },
     questions: [
       { type: "mcq", q: "Which is a reason teenagers struggle to wake up?", options: ["Melatonin is released later in adolescence", "Teenagers are lazy", "Car accidents", "Better attendance"], answer: 0, hints: ["The writer rejects one of these.", "Look for biology.", "Melatonin."], explain: "The later release of melatonin is a cause; the writer rejects laziness." },
       { type: "mcq", q: "For a summary of the CAUSES, which detail should be left out?", options: ["Fewer car accidents at schools that start later", "The body clock shifts later", "Blue light delays melatonin", "School starts early"], answer: 0, hints: ["Which one isn't a cause?", "It is a result of a solution.", "Car accidents."], explain: "Fewer accidents is a result of later starts, not a cause." },
-      { type: "mcq", q: "Which is the most concise own-words version of 'the body releases melatonin … about two hours later than it does in childhood'?", options: ["Teenagers' sleep hormone arrives later.", "The body releases melatonin about two hours later than in childhood.", "Melatonin, a hormone, which is the hormone that makes us sleepy, comes later.", "Biology tells a different story."], answer: 0, hints: ["One is copied.", "One repeats itself.", "Short and own words."], explain: "It keeps the meaning in fewer, original words." },
+      { type: "mcq", q: "The text says 'the body releases melatonin … about two hours later than it does in childhood'. Which own-words version is the most concise?", options: ["Teenagers' sleep hormone arrives later.", "The body releases melatonin about two hours later than in childhood.", "Melatonin, a hormone, which is the hormone that makes us sleepy, comes later.", "Biology tells a different story."], answer: 0, hints: ["One is copied.", "One repeats itself.", "Short and own words."], explain: "It keeps the meaning in fewer, original words." },
       { type: "mcq", q: "What should you do with ideas that are repeated?", options: ["Combine them into one point", "Write them twice", "Add your opinion", "Quote them"], answer: 0, hints: ["Concise means no repetition.", "Merge them.", "One point."], explain: "Combine repeated ideas to stay concise." },
       { type: "mcq", q: "Which is a suggested solution, not a cause?", options: ["Switching off screens an hour before bed", "Blue light", "Early school starts", "A later body clock"], answer: 0, hints: ["Causes explain the problem.", "Solutions fix it.", "Switching off screens."], explain: "Switching off screens is a way to help, not a cause." }
     ],

@@ -362,7 +362,7 @@
     caps: cs(6, "Physics (simple circuits; conductors and insulators; switches)"),
     intention: "Today I am building circuits and testing materials.", prompt: "Why are electrical wires covered in plastic?",
     lesson: [
-      { h: "A complete circuit", say: "A bulb lights when there is a complete loop from the cell, through the wires and bulb, and back to the cell. A gap stops the current.", html: chainRow(["Cell", "Wire", "Bulb", "Wire", "back to cell"]) },
+      { h: "A complete circuit", say: "A bulb lights when there is a complete loop. The loop goes from the cell, through the wires and bulb, and back to the cell. A gap stops the current.", html: chainRow(["Cell", "Wire", "Bulb", "Wire", "back to cell"]) },
       { h: "Switches", say: "A switch makes or breaks the circuit. When it is open, there is a gap and the bulb goes off.", html: chainRow(["Switch closed: bulb on", "Switch open: bulb off"]) },
       { h: "Conductors and insulators", say: "Conductors let electricity flow, like metals. Insulators don't, like plastic, rubber and wood. Wires are metal inside and plastic outside, to keep us safe.", html: chainRow(["Conductors: copper, steel", "Insulators: plastic, rubber, wood"]) }
     ],

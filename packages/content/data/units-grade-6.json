@@ -2062,7 +2062,7 @@
    "lesson": [
     {
      "h": "A complete circuit",
-     "say": "A bulb lights when there is a complete loop from the cell, through the wires and bulb, and back to the cell. A gap stops the current.",
+     "say": "A bulb lights when there is a complete loop. The loop goes from the cell, through the wires and bulb, and back to the cell. A gap stops the current.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bulb</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">back to cell</span></div>"
     },
     {

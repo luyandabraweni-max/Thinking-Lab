@@ -53,8 +53,8 @@
     caps: "IB MYP Mathematics, year 4: Geometry (similarity and scale factors). Key concept: Form. Global context: Personal and cultural expression.",
     intention: "Today I am using scale factors with similar shapes and models.", prompt: "How do architects show a building before it is built?",
     lesson: [
-      SOI("The form of an object can be scaled while keeping its proportions, which lets artists and architects plan their work.", "Form", "Personal and cultural expression"),
-      { h: "Similar shapes", say: "Two shapes are similar if one is an enlargement of the other: the angles are the same, and every length is multiplied by the same scale factor.", html: P("Scale factor = new length ÷ original length") },
+      SOI("The form of an object can be scaled while keeping its proportions. This lets artists and architects plan their work.", "Form", "Personal and cultural expression"),
+      { h: "Similar shapes", say: "Two shapes are similar if one is an enlargement of the other. The angles are the same. Every length is multiplied by the same scale factor.", html: P("Scale factor = new length ÷ original length") },
       { h: "Scale models", say: "Architects build scale models. In a 1 to 50 model, every real length is 50 times the model length.", html: P("Model 1 : 50 → 4 cm on the model = 200 cm = <b>2 m</b> real") }
     ],
     example: { q: "A photo 10 cm wide is enlarged to 25 cm wide. It was 8 cm high. Find the new height.", steps: ["Scale factor = 25 ÷ 10 = 2.5.", "New height = 8 × 2.5.", "= 20 cm."] },
@@ -100,7 +100,7 @@
     lesson: [
       SOI("Advertisers communicate with carefully chosen audiences, and critical readers question the claims they make.", "Communication", "Globalization and sustainability"),
       READ(AD),
-      { h: "Techniques", say: "Adverts use techniques such as short slogans, appeals to the reader's identity, statistics, rhetorical questions and links with nature or success.", html: chainRow(["Slogan", "Statistic", "Rhetorical question", "Association"]) },
+      { h: "Techniques", say: "Adverts use many techniques. They use short slogans, statistics and rhetorical questions. They appeal to who the reader is, or link the product with nature or success.", html: chainRow(["Slogan", "Statistic", "Rhetorical question", "Association"]) },
       { h: "Reading critically", say: "Ask who made the advert, who it is for, and what it leaves out. Small print often limits a big claim.", html: P("Check the <b>small print</b> and the <b>sample</b>.") }
     ],
     example: { q: "Analyse '9 out of 10 athletes we asked prefer it'.", steps: ["It is a statistic, which sounds scientific.", "'We asked' means the company chose whom to ask, and we don't know how many.", "It persuades by linking the water with athletes, but the evidence is weak."] },
@@ -122,7 +122,7 @@
     lesson: [
       SOI("Scientists test relationships between variables by changing one thing at a time.", "Relationships", "Scientific and technical innovation"),
       { h: "Variables", say: "The independent variable is what you change. The dependent variable is what you measure. Control variables are kept the same, so the test is fair.", html: chainRow(["Change: independent", "Measure: dependent", "Keep the same: controls"]) },
-      { h: "Hypothesis", say: "A hypothesis predicts the relationship and gives a scientific reason: if the water is warmer, then sugar will dissolve faster, because the particles move faster.", html: P("<b>If</b> … <b>then</b> … <b>because</b> …") },
+      { h: "Hypothesis", say: "A hypothesis predicts the relationship and gives a scientific reason. For example: if the water is warmer, then sugar will dissolve faster, because the particles move faster.", html: P("<b>If</b> … <b>then</b> … <b>because</b> …") },
       { h: "Reliable results", say: "Repeat each trial at least three times and calculate a mean, so one odd result doesn't mislead you.", html: P("Repeat, then find the <b>mean</b>.") }
     ],
     example: { q: "Plan: does the amount of light affect how tall bean plants grow?", steps: ["Independent: hours of light each day.", "Dependent: plant height after two weeks.", "Controls: the same water, soil, pot size and type of bean."] },
@@ -165,7 +165,7 @@
     caps: "IB MYP Mathematics, year 5 (extended): Algebra (exponential functions as models of growth and decay). Key concept: Change. Global context: Globalization and sustainability.",
     intention: "Today I am modelling growth and decay with exponential functions.", prompt: "Why do savings grow faster the longer you leave them?",
     lesson: [
-      SOI("Exponential models describe change that speeds up or slows down, from population growth to how medicines leave the body.", "Change", "Globalization and sustainability"),
+      SOI("Exponential models describe change that speeds up or slows down. Examples are population growth and how medicines leave the body.", "Change", "Globalization and sustainability"),
       { h: "Growth by a percentage", say: "When something grows by the same percentage each period, multiply by the same factor each time. Growing 10 percent a year means multiplying by 1.1.", html: P("y = a × bⁿ, with b = 1.1 for 10% growth") },
       { h: "Decay", say: "When something decreases by a percentage, the factor is less than 1. Losing 20 percent each hour means multiplying by 0.8.", html: P("Decay: b = 1 − rate, for example <b>0.8</b>") },
       { h: "Linear or exponential?", say: "Linear change adds the same amount each time. Exponential change multiplies by the same factor each time, so it eventually grows much faster.", html: chainRow(["Linear: + the same amount", "Exponential: × the same factor"]) }
@@ -210,7 +210,7 @@
     intention: "Today I am comparing data sets fairly and checking for bias.", prompt: "How would you show that something at school is unfair?",
     lesson: [
       SOI("Comparing data sets fairly helps communities make decisions about fairness and development.", "Relationships", "Fairness and development"),
-      { h: "Centre and spread", say: "To compare two groups, compare a measure of centre, such as the median, and a measure of spread, such as the interquartile range.", html: chainRow(["Centre: median or mean", "Spread: range or IQR"]) },
+      { h: "Centre and spread", say: "To compare two groups, compare a measure of centre, such as the median. Also compare a measure of spread, such as the interquartile range.", html: chainRow(["Centre: median or mean", "Spread: range or IQR"]) },
       { h: "Sampling and bias", say: "A sample must represent the population. Asking only people at one shop, or only people online, can bias the results.", html: P("Ask: <b>who was left out?</b>") },
       { h: "Drawing conclusions", say: "Write conclusions that refer to the data, and say how certain you can be. Small samples give weaker conclusions.", html: P("'Based on this sample, it is likely that…'") }
     ],
@@ -232,9 +232,9 @@
     intention: "Today I am exploring how history shapes the meaning of a poem.", prompt: "What habits have you picked up from your family?",
     passage: PASS,
     lesson: [
-      SOI("Texts connect to the times and places in which they are written and read; knowing the context deepens our understanding.", "Connections", "Orientation in space and time"),
+      SOI("Texts connect to the times and places in which they are written and read. Knowing the context deepens our understanding.", "Connections", "Orientation in space and time"),
       READ(PASS),
-      { h: "What context means", say: "Context is the time, place and situation of a text. Under apartheid, pass laws forced Black South Africans to carry a pass book, and police could arrest anyone found without one.", html: P("The 'small brown book' is a <b>pass book</b>.") },
+      { h: "What context means", say: "Context is the time, place and situation of a text. Under apartheid, pass laws forced Black South Africans to carry a pass book. The police could arrest anyone found without one.", html: P("The 'small brown book' is a <b>pass book</b>.") },
       { h: "Then and now", say: "The poem connects two times. The father's fear lives on as a habit in the child, who is free to walk wherever the road allows.", html: chainRow(["Father: pass book, fear", "Child: freedom, an inherited habit"]) }
     ],
     example: { q: "Why does the father touch his pocket 'the way you check a wound'?", steps: ["You check a wound because it hurts and you worry about it.", "The pass book was a constant source of danger and pain.", "The simile shows that carrying the pass was a daily injury."] },
@@ -279,7 +279,7 @@
     lesson: [
       SOI("Clear organisation helps writers communicate their interpretation persuasively.", "Communication", "Personal and cultural expression"),
       { h: "The thesis", say: "An analytical essay begins with a thesis: your interpretation of the text, which the essay will prove. It should be arguable, not just a fact.", html: P("<b>Fact:</b> The poem is about a pass book.") + P("<b>Thesis:</b> The poem shows how the trauma of the pass laws is inherited by the next generation.") },
-      { h: "Analytical paragraphs", say: "Each paragraph makes a point about the text, embeds a short quotation, analyses the language and links back to the thesis.", html: chainRow(["Point", "Quotation", "Analysis", "Link"]) },
+      { h: "Analytical paragraphs", say: "Each paragraph makes a point about the text. It includes a short quotation and analyses the language. Then it links back to the thesis.", html: chainRow(["Point", "Quotation", "Analysis", "Link"]) },
       { h: "Linking and concluding", say: "Use transitions to guide the reader, such as furthermore, in contrast and as a result. End with a conclusion that shows why your thesis matters, not just a repeat.", html: P("Transitions: <b>furthermore</b>, <b>in contrast</b>, <b>as a result</b>") }
     ],
     example: { q: "Turn 'The father is scared' into an analytical sentence.", steps: ["Add evidence: he touches his pocket “the way you check a wound”.", "Analyse: the simile links the pass book to pain.", "“The simile ‘the way you check a wound’ suggests the pass book is a constant injury, not simply a document.”"] },
@@ -344,7 +344,7 @@
     intention: "Today I am explaining motion with Newton's three laws.", prompt: "Why do you lurch forward when a taxi brakes?",
     lesson: [
       SOI("Relationships between force, mass and motion explain how everything moves, from minibus taxis to rockets.", "Relationships", "Orientation in space and time"),
-      { h: "The first law", say: "An object stays still, or keeps moving at a steady speed in a straight line, unless an unbalanced force acts on it. That is why passengers lurch forward when a taxi brakes.", html: P("No unbalanced force: <b>no change</b> in motion") },
+      { h: "The first law", say: "An object stays still, or keeps moving at a steady speed in a straight line. This changes only when an unbalanced force acts on it. That is why passengers lurch forward when a taxi brakes.", html: P("No unbalanced force: <b>no change</b> in motion") },
       { h: "The second law", say: "Force equals mass times acceleration. The bigger the mass, the more force you need for the same acceleration.", html: P("F = m × a") },
       { h: "The third law", say: "For every force, there is an equal and opposite force on the other object. A rocket pushes gas down, and the gas pushes the rocket up.", html: P("Action and reaction: <b>equal and opposite</b>") }
     ],

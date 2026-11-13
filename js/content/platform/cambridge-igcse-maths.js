@@ -54,7 +54,7 @@
     caps: "Cambridge IGCSE Mathematics (0580): Coordinate geometry (gradient; y = mx + c; parallel lines)",
     intention: "Today I am finding gradients and equations of straight lines.", prompt: "What does steepness mean on a hill or a graph?",
     lesson: [
-      { h: "y = mx + c", say: "Every straight line, except a vertical one, can be written as y equals m x plus c. m is the gradient, how steep the line is. c is where it crosses the y-axis.", html: chainRow(["m: gradient", "c: y-intercept"]) },
+      { h: "y = mx + c", say: "Every straight line, except a vertical one, can be written as y equals m x plus c. Here, m is the gradient, which is how steep the line is. And c is where the line crosses the y-axis.", html: chainRow(["m: gradient", "c: y-intercept"]) },
       { h: "Finding the gradient", say: "The gradient is the change in y divided by the change in x between two points. From 1, 3 to 3, 7, y goes up 4 while x goes up 2, so the gradient is 2.", html: P("gradient = (y₂ − y₁) ÷ (x₂ − x₁) = (7 − 3) ÷ (3 − 1) = <b>2</b>") },
       { h: "Parallel lines", say: "Parallel lines have the same gradient. A negative gradient means the line goes down from left to right.", html: P("y = 2x + 1 and y = 2x − 5 are <b>parallel</b>.") }
     ],
@@ -119,7 +119,7 @@
     intention: "Today I am solving quadratic equations.", prompt: "Why might an equation have two answers?",
     lesson: [
       { h: "Factorising", say: "A quadratic equation has an x squared term. Make one side zero, then factorise. If two brackets multiply to give zero, one of them must be zero.", html: P("x² + 5x + 6 = 0 → (x + 2)(x + 3) = 0 → x = −2 or x = −3") },
-      { h: "The quadratic formula", say: "When it won't factorise, use the formula: x equals minus b, plus or minus the square root of b squared minus 4 a c, all over 2 a.", html: P("x = (−b ± √(b² − 4ac)) ÷ 2a") },
+      { h: "The quadratic formula", say: "When it won't factorise, use the formula. x equals minus b, plus or minus the square root of b squared minus 4 a c. Divide all of that by 2 a.", html: P("x = (−b ± √(b² − 4ac)) ÷ 2a") },
       { h: "Two answers", say: "Most quadratic equations have two solutions. Check both by substituting them back into the equation.", html: P("Check x = −2: 4 − 10 + 6 = 0 ✓") }
     ],
     example: { q: "Solve x² − x − 12 = 0.", steps: ["Find two numbers that multiply to −12 and add to −1: −4 and 3.", "(x − 4)(x + 3) = 0.", "x = 4 or x = −3."] },
@@ -182,8 +182,8 @@
     intention: "Today I am solving triangles that are not right-angled.", prompt: "How could a surveyor measure across a river without crossing it?",
     lesson: [
       { h: "Beyond right angles", say: "The sine and cosine rules work in any triangle, not only right-angled ones. Label the sides a, b and c, opposite the angles A, B and C.", html: P("Side <b>a</b> is opposite angle <b>A</b>.") },
-      { h: "The sine rule", say: "Use the sine rule when you know a side and the angle opposite it. a over sin A equals b over sin B equals c over sin C.", html: P("a ÷ sin A = b ÷ sin B = c ÷ sin C") },
-      { h: "The cosine rule", say: "Use the cosine rule when you know two sides and the angle between them, or all three sides. a squared equals b squared plus c squared minus 2 b c cos A.", html: P("a² = b² + c² − 2bc cos A") }
+      { h: "The sine rule", say: "Use the sine rule when you know a side and the angle opposite it. The rule is a over sin A equals b over sin B equals c over sin C.", html: P("a ÷ sin A = b ÷ sin B = c ÷ sin C") },
+      { h: "The cosine rule", say: "Use the cosine rule when you know two sides and the angle between them. You can also use it when you know all three sides. The rule is a squared equals b squared plus c squared minus 2 b c cos A.", html: P("a² = b² + c² − 2bc cos A") }
     ],
     example: { q: "b = 5 cm, c = 8 cm and A = 60°. Find a.", steps: ["a² = 5² + 8² − 2(5)(8) cos 60°.", "cos 60° = 0.5, so a² = 25 + 64 − 40 = 49.", "a = 7 cm."] },
     questions: [
@@ -204,7 +204,7 @@
     lesson: [
       { h: "Tree diagrams", say: "A tree diagram shows two or more events one after the other. Multiply along the branches to find the probability of a path.", html: P("P(A then B) = P(A) × P(B)") },
       { h: "Adding paths", say: "When more than one path gives the outcome you want, add the probabilities of those paths.", html: P("P(one red) = P(red, blue) + P(blue, red)") },
-      { h: "Without replacement", say: "If you don't put the first item back, the probabilities on the second branches change, because there is one item fewer in the bag.", html: P("3 red and 2 blue: P(red, red) = 3/5 × 2/4 = 6/20 = <b>3/10</b>") }
+      { h: "Without replacement", say: "Sometimes you don't put the first item back. Then the probabilities on the second branches change, because there is one item fewer in the bag.", html: P("3 red and 2 blue: P(red, red) = 3/5 × 2/4 = 6/20 = <b>3/10</b>") }
     ],
     example: { q: "A bag has 4 green counters and 1 yellow counter. Two are taken without replacement. Find P(both green).", steps: ["First green: 4/5.", "Second green: 3/4, because one green counter is gone.", "4/5 × 3/4 = 12/20 = 3/5."] },
     questions: [

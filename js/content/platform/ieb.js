@@ -138,7 +138,7 @@
     caps: ieb("Life Sciences", "Grade 10 scientific investigation: aim, hypothesis, variables, validity and reliability"),
     intention: "Today I am planning a valid and reliable investigation.", prompt: "How would you test whether music helps plants grow?",
     lesson: [
-      { h: "Aim and hypothesis", say: "The aim says what you are investigating. The hypothesis is a testable prediction, for example: seeds kept at 25 degrees Celsius will germinate faster than seeds kept at 10 degrees Celsius.", html: P("Aim: <b>to investigate…</b> · Hypothesis: <b>a testable prediction</b>") },
+      { h: "Aim and hypothesis", say: "The aim says what you are investigating. The hypothesis is a prediction you can test. For example: seeds kept at 25 degrees Celsius will germinate faster than seeds kept at 10 degrees Celsius.", html: P("Aim: <b>to investigate…</b> · Hypothesis: <b>a testable prediction</b>") },
       { h: "Validity", say: "An investigation is valid if it tests what it claims to. Change only one variable, and keep everything else the same.", html: P("Valid: tests the <b>right thing</b>, fairly.") },
       { h: "Reliability", say: "Results are reliable if they can be repeated. Use large samples and repeat the investigation, then calculate averages.", html: P("Reliable: <b>repeat</b> and use <b>large samples</b>.") }
     ],
@@ -290,7 +290,7 @@
     intention: "Today I am using calculus to find the best possible value.", prompt: "How would a farmer get the biggest field from a fixed amount of fencing?",
     lesson: [
       { h: "What optimisation means", say: "Optimisation means finding a maximum or minimum, such as the largest area or the lowest cost. At a maximum or minimum, the derivative is zero.", html: P("At a max or min: <b>f′(x) = 0</b>") },
-      { h: "Set up the function", say: "A farmer has 40 metres of fencing for a rectangle against a wall, so only three sides need fencing. If the two short sides are x, the long side is 40 minus 2x, and the area is x times 40 minus 2x.", html: P("A = x(40 − 2x) = 40x − 2x²") },
+      { h: "Set up the function", say: "A farmer has 40 metres of fencing for a rectangle against a wall. The wall is one side, so only three sides need fencing. Let the two short sides be x. Then the long side is 40 minus 2x. The area is x times 40 minus 2x.", html: P("A = x(40 − 2x) = 40x − 2x²") },
       { h: "Differentiate and solve", say: "The derivative is 40 minus 4x. Set it to zero: x equals 10. The long side is 20, so the largest area is 200 square metres.", html: P("A′ = 40 − 4x = 0 → x = 10 → A = <b>200 m²</b>") }
     ],
     example: { q: "Check that x = 10 gives a maximum.", steps: ["A″ = −4.", "A negative second derivative means the graph is concave down.", "So x = 10 gives a maximum."] },
@@ -334,7 +334,7 @@
     lesson: [
       READ(POEM),
       { h: "First reading, then focus", say: "Read once for the overall meaning, then again with the question in mind. Underline images, word choices and shifts in tone.", html: chainRow(["Overall meaning", "Re-read for the question", "Mark key words"]) },
-      { h: "A focused thesis", say: "Answer the question in one sentence that you will prove: for example, the poem presents the grandmother's body as a record of knowledge passed on without writing.", html: P("Thesis: <b>an answer you will prove</b>") },
+      { h: "A focused thesis", say: "Answer the question in one sentence, and then prove it. For example: the poem shows the grandmother's body as a record of knowledge passed on without writing.", html: P("Thesis: <b>an answer you will prove</b>") },
       { h: "Structure and turn", say: "Look for where the poem turns. Here the second stanza moves from describing her hands to what the speaker inherited. Shifts like this are often the key to meaning.", html: P("Find the <b>turn</b>.") }
     ],
     example: { q: "Write a topic sentence about the first stanza.", steps: ["Focus: the hands as a record of hardship.", "Evidence: 'a scar where the paraffin stove once argued with her'.", "'The first stanza presents her hands as a record of a hard life, with the personified stove suggesting daily struggle.'"] },
@@ -397,7 +397,7 @@
     intention: "Today I am weighing up the benefits and concerns of genetic technology.", prompt: "Should everyone know their genetic risks?",
     lesson: [
       { h: "Genetic technologies", say: "Genetic technologies include genetically modified crops, genetic testing and DNA profiling. Each brings benefits and raises concerns.", html: chainRow(["GM crops", "Genetic testing", "DNA profiling"]) },
-      { h: "Weighing both sides", say: "GM maize can resist pests and need less pesticide, but some people worry about seed costs for small farmers and effects on biodiversity.", html: P("Benefit: fewer pests, less spraying · Concern: seed costs, biodiversity") },
+      { h: "Weighing both sides", say: "GM maize can resist pests, so farmers need less pesticide. But some people worry about the cost of seed for small farmers. They also worry about effects on biodiversity.", html: P("Benefit: fewer pests, less spraying · Concern: seed costs, biodiversity") },
       { h: "Ethical questions", say: "Ethics asks what is right. Who owns genetic information? Should insurers see it? A balanced answer presents both sides, then reaches a justified view.", html: P("Present both sides, then a <b>justified view</b>.") }
     ],
     example: { q: "Give one benefit and one concern of genetic testing for disease risk.", steps: ["Benefit: people can take early action, such as screening or lifestyle changes.", "Concern: the information could be misused, for example by insurers or employers.", "A balanced answer weighs both and suggests protections, such as privacy laws."] },
@@ -420,7 +420,7 @@
     lesson: [
       { h: "Distance from zero", say: "The absolute value of a number is its distance from zero, so it is never negative. The absolute value of minus 5 is 5.", html: P("|−5| = 5 and |5| = 5") },
       { h: "Equations", say: "If the absolute value of x minus 3 equals 4, then x minus 3 is 4 or minus 4. So x is 7 or minus 1.", html: P("|x − 3| = 4 → x − 3 = 4 or x − 3 = −4 → <b>x = 7 or x = −1</b>") },
-      { h: "Inequalities", say: "The absolute value of x is less than 2 means x is within 2 of zero: minus 2 is less than x, which is less than 2.", html: P("|x| < 2 → <b>−2 < x < 2</b>") }
+      { h: "Inequalities", say: "If the absolute value of x is less than 2, then x is within 2 of zero. So x is between minus 2 and 2.", html: P("|x| < 2 → <b>−2 < x < 2</b>") }
     ],
     example: { q: "Solve |2x + 1| = 5.", steps: ["2x + 1 = 5 or 2x + 1 = −5.", "2x = 4 or 2x = −6.", "x = 2 or x = −3."] },
     questions: [
@@ -441,7 +441,7 @@
     lesson: [
       { h: "The domino idea", say: "Induction proves a statement for every natural number. Show the first case is true, then show that if any case is true, the next one is true too. Like dominoes, they all fall.", html: chainRow(["Base case", "Assume true for k", "Prove for k + 1", "Conclude"]) },
       { h: "An example", say: "Prove that 1 plus 2 plus up to n equals n times n plus 1 over 2. When n is 1, both sides are 1. Assume it is true for k.", html: P("1 + 2 + … + n = n(n + 1) ÷ 2") },
-      { h: "The inductive step", say: "Add k plus 1 to both sides. k times k plus 1 over 2, plus k plus 1, equals k plus 1 times k plus 2, over 2. That is the formula for k plus 1, so it is true for all n.", html: P("k(k + 1)/2 + (k + 1) = <b>(k + 1)(k + 2)/2</b>") }
+      { h: "The inductive step", say: "Add k plus 1 to both sides. The left side becomes k times k plus 1 over 2, plus k plus 1. This simplifies to k plus 1 times k plus 2, over 2. That is the formula for k plus 1. So it is true for all n.", html: P("k(k + 1)/2 + (k + 1) = <b>(k + 1)(k + 2)/2</b>") }
     ],
     example: { q: "Check the base case of 1 + 3 + 5 + … + (2n − 1) = n².", steps: ["When n = 1, the left side is 1.", "The right side is 1² = 1.", "Both sides are equal, so the base case holds."] },
     questions: [
@@ -481,7 +481,7 @@
     caps: apm("Module 1, Calculus (limits and continuity)"),
     intention: "Today I am finding limits and testing whether a function is continuous.", prompt: "Can you get closer and closer to something without reaching it?",
     lesson: [
-      { h: "What a limit is", say: "The limit of f of x as x approaches a is the value f of x gets closer to as x gets closer to a. The function doesn't need to be defined at a itself.", html: P("lim (x → a) f(x)") },
+      { h: "What a limit is", say: "As x gets closer to a, f of x gets closer to some value. That value is the limit of f of x as x approaches a. The function doesn't need to be defined at a itself.", html: P("lim (x → a) f(x)") },
       { h: "Simplify first", say: "Substituting x equals 2 into x squared minus 4 over x minus 2 gives 0 over 0. Factorise first: x minus 2 times x plus 2, over x minus 2, simplifies to x plus 2. The limit is 4.", html: P("(x² − 4) ÷ (x − 2) = x + 2 → limit as x → 2 is <b>4</b>") },
       { h: "Continuity", say: "A function is continuous at a if it is defined at a, the limit exists there, and they are equal. You could draw the graph there without lifting your pen.", html: chainRow(["f(a) defined", "The limit exists", "They are equal"]) }
     ],
@@ -503,7 +503,7 @@
     intention: "Today I am integrating to find the area under a curve.", prompt: "How could you find the area of a shape with a curved edge?",
     lesson: [
       { h: "Reversing differentiation", say: "Integration reverses differentiation. The integral of x to the n is x to the n plus 1, over n plus 1, plus a constant c.", html: P("∫ xⁿ dx = xⁿ⁺¹ ÷ (n + 1) + c, for n ≠ −1") },
-      { h: "Definite integrals", say: "A definite integral from a to b gives a number: find the antiderivative, then subtract its value at a from its value at b.", html: P("∫ from a to b of f(x) dx = F(b) − F(a)") },
+      { h: "Definite integrals", say: "A definite integral from a to b gives a number. First find the antiderivative. Then subtract its value at a from its value at b.", html: P("∫ from a to b of f(x) dx = F(b) − F(a)") },
       { h: "Area under a curve", say: "For a curve above the x-axis, the definite integral gives the area between the curve and the axis. The area under y equals x squared from 0 to 3 is 9.", html: P("∫ from 0 to 3 of x² dx = [x³ ÷ 3] from 0 to 3 = <b>9</b>") }
     ],
     example: { q: "Find ∫ from 1 to 2 of 2x dx.", steps: ["The antiderivative of 2x is x².", "F(2) − F(1) = 4 − 1.", "= 3."] },
@@ -525,7 +525,7 @@
     lesson: [
       { h: "The bell curve", say: "Many measurements, like heights, follow a normal distribution: a symmetrical bell-shaped curve centred on the mean.", html: P("Symmetrical about the <b>mean</b>.") },
       { h: "The 68, 95, 99.7 rule", say: "About 68 percent of values lie within 1 standard deviation of the mean, about 95 percent within 2, and about 99.7 percent within 3.", html: chainRow(["±1σ: 68%", "±2σ: 95%", "±3σ: 99.7%"]) },
-      { h: "z-scores", say: "A z-score tells you how many standard deviations a value is from the mean: z equals x minus the mean, divided by the standard deviation.", html: P("z = (x − μ) ÷ σ") }
+      { h: "z-scores", say: "A z-score tells you how many standard deviations a value is from the mean. The formula is: z equals x minus the mean, divided by the standard deviation.", html: P("z = (x − μ) ÷ σ") }
     ],
     example: { q: "Test marks have a mean of 60 and a standard deviation of 10. Find the z-score of a mark of 75.", steps: ["z = (75 − 60) ÷ 10.", "= 15 ÷ 10.", "= 1.5: the mark is 1.5 standard deviations above the mean."] },
     questions: [

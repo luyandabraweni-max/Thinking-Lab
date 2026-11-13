@@ -25,7 +25,7 @@
     },
     {
      "h": "Difference of two squares",
-     "say": "A squared minus b squared always factorises to a minus b times a plus b. x squared minus nine is x minus three times x plus three.",
+     "say": "A squared minus b squared always factorises to a minus b times a plus b. So x squared minus nine is x minus three times x plus three.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a² − b² = (a − b)(a + b)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x² − 9 = (x − 3)(x + 3)</span></div><p>Look for two <b>perfect squares</b> with a <b>minus</b> between them.</p>"
     }
    ],
@@ -1249,7 +1249,7 @@
    "lesson": [
     {
      "h": "What you take",
-     "say": "In Grades 10 to 12 you take seven subjects: a home language, a first additional language, Mathematics or Mathematical Literacy, Life Orientation, and three subjects you choose.",
+     "say": "In Grades 10 to 12 you take seven subjects. Four are compulsory: a home language, a first additional language, Mathematics or Mathematical Literacy, and Life Orientation. You choose the other three.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 languages</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Maths or Maths Lit</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Life Orientation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3 choices</span></div><p>The three choices can be academic, technical or occupational, depending on your school.</p>"
     },
     {
@@ -1390,7 +1390,7 @@
     },
     {
      "h": "Making it SMART",
-     "say": "Wish: get better at maths. SMART goal: I will improve my maths mark from 55 to 65 percent by the end of term, by doing 20 minutes of practice every weekday.",
+     "say": "Wish: get better at maths. SMART goal: I will improve my maths mark from 55 to 65 percent by the end of term. I will do 20 minutes of practice every weekday.",
      "html": "<div class=\"passage-text\"><p>I will improve my maths mark <b>from 55% to 65%</b> by <b>the end of term</b>, by doing <b>20 minutes</b> of practice <b>every weekday</b>.</p></div>"
     },
     {
@@ -2070,7 +2070,7 @@
    "lesson": [
     {
      "h": "Speeches are heard",
-     "say": "A speech is written to be heard, so use short sentences, direct address with you and we, and clear signposts like firstly and finally.",
+     "say": "A speech is written to be heard. So use short sentences. Speak directly to the audience with you and we. Use clear signpost words like firstly and finally.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Short sentences</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">You and we</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Signposts</span></div>"
     },
     {
@@ -2618,12 +2618,12 @@
    "lesson": [
     {
      "h": "Statement of inquiry",
-     "say": "Statement of inquiry: The form of an object can be scaled while keeping its proportions, which lets artists and architects plan their work. Key concept: Form. Global context: Personal and cultural expression.",
-     "html": "<p><b>Statement of inquiry:</b> The form of an object can be scaled while keeping its proportions, which lets artists and architects plan their work.</p><p>Key concept: <b>Form</b> · Global context: <b>Personal and cultural expression</b></p>"
+     "say": "Statement of inquiry: The form of an object can be scaled while keeping its proportions. This lets artists and architects plan their work. Key concept: Form. Global context: Personal and cultural expression.",
+     "html": "<p><b>Statement of inquiry:</b> The form of an object can be scaled while keeping its proportions. This lets artists and architects plan their work.</p><p>Key concept: <b>Form</b> · Global context: <b>Personal and cultural expression</b></p>"
     },
     {
      "h": "Similar shapes",
-     "say": "Two shapes are similar if one is an enlargement of the other: the angles are the same, and every length is multiplied by the same scale factor.",
+     "say": "Two shapes are similar if one is an enlargement of the other. The angles are the same. Every length is multiplied by the same scale factor.",
      "html": "<p>Scale factor = new length ÷ original length</p>"
     },
     {
@@ -2909,7 +2909,7 @@
     },
     {
      "h": "Techniques",
-     "say": "Adverts use techniques such as short slogans, appeals to the reader's identity, statistics, rhetorical questions and links with nature or success.",
+     "say": "Adverts use many techniques. They use short slogans, statistics and rhetorical questions. They appeal to who the reader is, or link the product with nature or success.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slogan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Statistic</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rhetorical question</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Association</span></div>"
     },
     {
@@ -3051,7 +3051,7 @@
     },
     {
      "h": "Hypothesis",
-     "say": "A hypothesis predicts the relationship and gives a scientific reason: if the water is warmer, then sugar will dissolve faster, because the particles move faster.",
+     "say": "A hypothesis predicts the relationship and gives a scientific reason. For example: if the water is warmer, then sugar will dissolve faster, because the particles move faster.",
      "html": "<p><b>If</b> … <b>then</b> … <b>because</b> …</p>"
     },
     {

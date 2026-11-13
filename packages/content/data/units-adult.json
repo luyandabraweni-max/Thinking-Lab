@@ -20,7 +20,7 @@
     },
     {
      "h": "Common fields",
-     "say": "Forms often ask for your full names, surname, ID number, date of birth in a set format, physical address, postal address, and contact details.",
+     "say": "Forms ask for your full names, surname and ID number. They ask for your date of birth in a set format. They also ask for your home address, postal address and contact details.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Surname</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Full names</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">ID number</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Date of birth (YYYY/MM/DD)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Address</span></div><p><b>Physical</b> address is where you live. <b>Postal</b> address is where mail goes.</p>"
     },
     {
@@ -151,7 +151,7 @@
    "lesson": [
     {
      "h": "Parts of an email",
-     "say": "A professional email has a clear subject line, a greeting, a short purpose, the details, a polite closing, and your name and contact number.",
+     "say": "A professional email has a clear subject line and a greeting. Then say why you are writing, and give the details. End politely, with your name and contact number.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Subject</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Greeting</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Purpose</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Details</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Closing</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Name</span></div>"
     },
     {
@@ -299,7 +299,7 @@
     },
     {
      "h": "Your rights",
-     "say": "Under South Africa's Rental Housing Act, the deposit must be kept in an interest-bearing account, and landlord and tenant should inspect the property together at the start and end. Disputes can go to the Rental Housing Tribunal in your province.",
+     "say": "South Africa's Rental Housing Act has rules about deposits. The deposit must be kept in an account that earns interest. The landlord and tenant should check the property together at the start and at the end. Disputes can go to the Rental Housing Tribunal in your province.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Interest on deposit</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Joint inspection</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rental Housing Tribunal</span></div><p>Take dated photos of the property when you move in.</p>"
     }
    ],
@@ -697,7 +697,7 @@
    "lesson": [
     {
      "h": "Unit price",
-     "say": "To compare products of different sizes, find the unit price: the price for one unit, such as per kilogram or per litre.",
+     "say": "To compare products of different sizes, find the unit price. That is the price for one unit, such as one kilogram or one litre.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Price ÷ quantity</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">=</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">unit price</span></div><p>Many shop labels show the unit price in small print.</p>"
     },
     {
@@ -707,7 +707,7 @@
     },
     {
      "h": "Think beyond price",
-     "say": "The best buy also depends on whether you can afford it now, whether it will spoil before you use it, and whether you have space to store it.",
+     "say": "The best buy also depends on three things. Can you afford it now? Will it spoil before you use it? Do you have space to store it?",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Unit price</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Can I afford it?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Will it spoil?</span></div><p>Bulk buying with neighbours or a stokvel can lower costs.</p>"
     }
    ],
@@ -832,12 +832,12 @@
    "lesson": [
     {
      "h": "Common scams",
-     "say": "Common scams include fake job offers that ask for a fee, messages pretending to be from your bank, prizes you never entered, and people asking for money urgently.",
+     "say": "Here are common scams. A fake job offer asks you to pay a fee. A message pretends to be from your bank. You win a prize you never entered. Someone asks you for money urgently.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fake jobs</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bank phishing</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fake prizes</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Urgent money requests</span></div>"
     },
     {
      "h": "Warning signs",
-     "say": "Warning signs are urgency, requests for passwords or one-time PINs, payment to get a job, spelling mistakes, and links that do not match the real website.",
+     "say": "Watch for these warning signs. Someone rushes you. Someone asks for a password or a one-time PIN. You must pay to get a job. There are spelling mistakes, or a link does not match the real website.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Urgent!</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Asks for PIN or OTP</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pay to get a job</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Strange link</span></div><p>A real bank will <b>never</b> ask for your PIN or OTP.</p>"
     },
     {
@@ -849,7 +849,7 @@
    "example": {
     "q": "An SMS says: Your account is blocked. Click here and enter your OTP to unlock. What should you do?",
     "steps": [
-     "Urgency plus a request for an OTP are red flags.",
+     "Urgency plus a request for an OTP are warning signs.",
      "Do not click or share anything.",
      "Call your bank on the number on the back of your card."
     ]
@@ -867,7 +867,7 @@
      "answer": 0,
      "hints": [
       "Real employers pay you.",
-      "Paying to get a job is a red flag.",
+      "Paying to get a job is a warning sign.",
       "A scam."
      ],
      "explain": "Asking you to pay for a job is a classic scam."
@@ -925,7 +925,7 @@
     },
     {
      "type": "sort",
-     "q": "Red flag or safe?",
+     "q": "Warning sign or safe?",
      "items": [
       "Pay a fee to get the job",
       "Official website address you typed yourself",
@@ -933,7 +933,7 @@
       "Calling the number on your bank card"
      ],
      "bins": [
-      "Red flag",
+      "Warning sign",
       "Safe"
      ],
      "answer": [
@@ -947,7 +947,7 @@
       "Using official contacts is safe.",
       "Sort each."
      ],
-     "explain": "Fees and PIN requests are red flags."
+     "explain": "Fees and PIN requests are warning signs."
     }
    ],
    "reflect": {
@@ -1113,12 +1113,12 @@
    "lesson": [
     {
      "h": "Many routes",
-     "say": "Look for work through job sites, company websites, recruitment agencies, the Department of Employment and Labour's ESSA system, youth employment programmes, and people you know.",
+     "say": "Look for work on job sites and company websites, and through recruitment agencies. Use ESSA, the job system of the Department of Employment and Labour. Try youth employment programmes, and ask people you know.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Job sites</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Company websites</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Labour centres (ESSA)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Youth programmes</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Your network</span></div><p>Many jobs are filled through <b>word of mouth</b>.</p>"
     },
     {
      "h": "Be ready",
-     "say": "Have an updated CV, certified copies of your ID and qualifications, a professional email address and a phone with airtime and data.",
+     "say": "Have an updated CV, and certified copies of your ID and qualifications. You also need a professional email address, and a phone with airtime and data.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">CV</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Certified copies</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Email</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Airtime</span></div><p>Keep digital copies on your phone.</p>"
     },
     {

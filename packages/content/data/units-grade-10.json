@@ -971,7 +971,7 @@
     },
     {
      "h": "Working it out",
-     "say": "When every outcome is equally likely, probability is the number of outcomes you want, divided by the total number of outcomes. Rolling a 6 on a dice is 1 out of 6.",
+     "say": "Sometimes every outcome is equally likely. Then the probability is the number of outcomes you want, divided by the total number of outcomes. Rolling a 6 on a dice is 1 out of 6.",
      "html": "<p>Probability = outcomes you want ÷ all outcomes</p><p>P(rolling a 6) = <b>1/6</b></p>"
     },
     {
@@ -1925,7 +1925,7 @@
     },
     {
      "h": "Healthy coping",
-     "say": "Healthy ways to cope include exercise, sleep, talking to someone, breaking tasks into steps, slow breathing and time for things you enjoy.",
+     "say": "Healthy ways to cope include exercise, sleep and talking to someone. Break tasks into steps. Breathe slowly, and make time for things you enjoy.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Move</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sleep</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Talk</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Plan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Breathe</span></div><p>Try <b>box breathing</b>: in for 4, hold 4, out 4, hold 4.</p>"
     },
     {
@@ -2056,17 +2056,17 @@
    "lesson": [
     {
      "h": "Violations",
-     "say": "A human rights violation is when someone's rights are denied or abused, such as discrimination, gender-based violence, or a child being kept out of school.",
+     "say": "A human rights violation is when someone's rights are denied or abused. Examples are discrimination, gender-based violence, or a child being kept out of school.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Discrimination</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Violence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Exclusion</span></div><p>Violations can happen at home, school, work or online.</p>"
     },
     {
      "h": "Who protects rights",
-     "say": "In South Africa, the courts, the South African Human Rights Commission, the Commission for Gender Equality and the Public Protector help protect rights. These are Chapter 9 institutions.",
+     "say": "In South Africa, the courts protect rights. So do the Chapter 9 institutions. These include the South African Human Rights Commission, the Commission for Gender Equality and the Public Protector.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Courts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Human Rights Commission</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gender Commission</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Public Protector</span></div><p>Anyone can lodge a complaint with the <b>SAHRC</b>.</p>"
     },
     {
      "h": "Taking action",
-     "say": "You can respond by reporting, supporting the person affected, raising awareness through a campaign, or joining an organisation that works on the issue.",
+     "say": "You can respond in different ways. You can report it, or support the person affected. You can raise awareness with a campaign, or join an organisation that works on the issue.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Report</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Support</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Raise awareness</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Join</span></div><p>A campaign needs a clear <b>goal</b>, <b>audience</b> and <b>message</b>.</p>"
     }
    ],
@@ -2192,7 +2192,7 @@
    "lesson": [
     {
      "h": "Options after school",
-     "say": "After matric you can go to a university, a university of technology, a TVET college, a private college, a learnership, or into work or business.",
+     "say": "After matric there are many options. You can study at a university, a university of technology, a TVET college or a private college. You can do a learnership, or go into work or business.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">University</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">TVET college</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Learnership</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Work or business</span></div>"
     },
     {
@@ -2278,7 +2278,7 @@
      "answer": 0,
      "hints": [
       "NSFAS applications are free.",
-      "Paying is a red flag.",
+      "Paying is a warning sign.",
       "A scam."
      ],
      "explain": "NSFAS applications are free, so this is likely a scam."
@@ -2478,7 +2478,7 @@
     },
     {
      "h": "Explaining effects",
-     "say": "To explain an effect, quote the words, say what they literally mean, then what they suggest, and how they make the reader feel.",
+     "say": "To explain an effect, first quote the words. Say what they literally mean. Then say what they suggest, and how they make the reader feel.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Quote</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Literal meaning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Suggestion</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Effect on the reader</span></div>"
     }
    ],
@@ -2611,7 +2611,7 @@
     },
     {
      "h": "Selecting points",
-     "say": "A summary only includes points that answer the question. If the question asks how the school saved water, leave out the burst pipe, which explains the problem, not the solution.",
+     "say": "A summary only includes points that answer the question. For example, the question asks how the school saved water. So leave out the burst pipe, because it explains the problem, not the solution.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Read the question</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mark relevant points</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Leave out extras</span></div>"
     },
     {
@@ -2753,7 +2753,7 @@
     },
     {
      "h": "Persuasive techniques",
-     "say": "Persuade with a clear opening, reasons in a logical order, evidence, a polite answer to objections, and a confident call to action.",
+     "say": "To persuade, start with a clear opening. Give your reasons in a logical order, with evidence. Answer objections politely, and end with a confident call to action.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Clear aim</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reasons and evidence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Answer objections</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Call to action</span></div>"
     }
    ],
@@ -2762,7 +2762,7 @@
     "steps": [
      "Purpose: to persuade. Audience: the principal. Register: formal.",
      "State the request politely and clearly.",
-     "'I am writing to ask whether the school could install push-taps, a simple change that would save both water and money.'"
+     "'I am writing to ask whether the school could install push-taps. This simple change would save water and money.'"
     ]
    },
    "questions": [
@@ -2890,7 +2890,7 @@
     },
     {
      "h": "Structure",
-     "say": "Description still needs a structure. You might move through space, from the gate to the centre, or through time, from dawn to dusk, or zoom from a wide view to a small detail.",
+     "say": "Description still needs a structure. You might move through space, from the gate to the centre. You might move through time, from dawn to dusk. Or you might zoom from a wide view to a small detail.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wide view</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Closer</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">One small detail</span></div>"
     }
    ],
@@ -3291,7 +3291,7 @@
    "lesson": [
     {
      "h": "y = mx + c",
-     "say": "Every straight line, except a vertical one, can be written as y equals m x plus c. m is the gradient, how steep the line is. c is where it crosses the y-axis.",
+     "say": "Every straight line, except a vertical one, can be written as y equals m x plus c. Here, m is the gradient, which is how steep the line is. And c is where the line crosses the y-axis.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m: gradient</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">c: y-intercept</span></div>"
     },
     {
@@ -3707,7 +3707,7 @@
     },
     {
      "h": "Diffusion",
-     "say": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration, down a concentration gradient. It is how oxygen gets into cells.",
+     "say": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration. This is called moving down a concentration gradient. It is how oxygen gets into cells.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Higher concentration</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Lower concentration</span></div>"
     },
     {
@@ -4387,8 +4387,8 @@
    "lesson": [
     {
      "h": "Statement of inquiry",
-     "say": "Statement of inquiry: Exponential models describe change that speeds up or slows down, from population growth to how medicines leave the body. Key concept: Change. Global context: Globalization and sustainability.",
-     "html": "<p><b>Statement of inquiry:</b> Exponential models describe change that speeds up or slows down, from population growth to how medicines leave the body.</p><p>Key concept: <b>Change</b> · Global context: <b>Globalization and sustainability</b></p>"
+     "say": "Statement of inquiry: Exponential models describe change that speeds up or slows down. Examples are population growth and how medicines leave the body. Key concept: Change. Global context: Globalization and sustainability.",
+     "html": "<p><b>Statement of inquiry:</b> Exponential models describe change that speeds up or slows down. Examples are population growth and how medicines leave the body.</p><p>Key concept: <b>Change</b> · Global context: <b>Globalization and sustainability</b></p>"
     },
     {
      "h": "Growth by a percentage",
@@ -4676,7 +4676,7 @@
     },
     {
      "h": "Centre and spread",
-     "say": "To compare two groups, compare a measure of centre, such as the median, and a measure of spread, such as the interquartile range.",
+     "say": "To compare two groups, compare a measure of centre, such as the median. Also compare a measure of spread, such as the interquartile range.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Centre: median or mean</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spread: range or IQR</span></div>"
     },
     {
@@ -4814,8 +4814,8 @@
    "lesson": [
     {
      "h": "Statement of inquiry",
-     "say": "Statement of inquiry: Texts connect to the times and places in which they are written and read; knowing the context deepens our understanding. Key concept: Connections. Global context: Orientation in space and time.",
-     "html": "<p><b>Statement of inquiry:</b> Texts connect to the times and places in which they are written and read; knowing the context deepens our understanding.</p><p>Key concept: <b>Connections</b> · Global context: <b>Orientation in space and time</b></p>"
+     "say": "Statement of inquiry: Texts connect to the times and places in which they are written and read. Knowing the context deepens our understanding. Key concept: Connections. Global context: Orientation in space and time.",
+     "html": "<p><b>Statement of inquiry:</b> Texts connect to the times and places in which they are written and read. Knowing the context deepens our understanding.</p><p>Key concept: <b>Connections</b> · Global context: <b>Orientation in space and time</b></p>"
     },
     {
      "h": "Read the text",
@@ -4824,7 +4824,7 @@
     },
     {
      "h": "What context means",
-     "say": "Context is the time, place and situation of a text. Under apartheid, pass laws forced Black South Africans to carry a pass book, and police could arrest anyone found without one.",
+     "say": "Context is the time, place and situation of a text. Under apartheid, pass laws forced Black South Africans to carry a pass book. The police could arrest anyone found without one.",
      "html": "<p>The 'small brown book' is a <b>pass book</b>.</p>"
     },
     {
@@ -5109,7 +5109,7 @@
     },
     {
      "h": "Analytical paragraphs",
-     "say": "Each paragraph makes a point about the text, embeds a short quotation, analyses the language and links back to the thesis.",
+     "say": "Each paragraph makes a point about the text. It includes a short quotation and analyses the language. Then it links back to the thesis.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Point</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Quotation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Analysis</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Link</span></div>"
     },
     {
@@ -5530,7 +5530,7 @@
     },
     {
      "h": "The first law",
-     "say": "An object stays still, or keeps moving at a steady speed in a straight line, unless an unbalanced force acts on it. That is why passengers lurch forward when a taxi brakes.",
+     "say": "An object stays still, or keeps moving at a steady speed in a straight line. This changes only when an unbalanced force acts on it. That is why passengers lurch forward when a taxi brakes.",
      "html": "<p>No unbalanced force: <b>no change</b> in motion</p>"
     },
     {
@@ -6354,7 +6354,7 @@
    "lesson": [
     {
      "h": "Aim and hypothesis",
-     "say": "The aim says what you are investigating. The hypothesis is a testable prediction, for example: seeds kept at 25 degrees Celsius will germinate faster than seeds kept at 10 degrees Celsius.",
+     "say": "The aim says what you are investigating. The hypothesis is a prediction you can test. For example: seeds kept at 25 degrees Celsius will germinate faster than seeds kept at 10 degrees Celsius.",
      "html": "<p>Aim: <b>to investigate…</b> · Hypothesis: <b>a testable prediction</b></p>"
     },
     {
@@ -6501,7 +6501,7 @@
     },
     {
      "h": "Inequalities",
-     "say": "The absolute value of x is less than 2 means x is within 2 of zero: minus 2 is less than x, which is less than 2.",
+     "say": "If the absolute value of x is less than 2, then x is within 2 of zero. So x is between minus 2 and 2.",
      "html": "<p>|x| < 2 → <b>−2 < x < 2</b></p>"
     }
    ],

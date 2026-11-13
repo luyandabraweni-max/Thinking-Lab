@@ -17,8 +17,8 @@ const UNITS_G11 = [
     intention: "Today I am solving quadratic equations by factorising and with the formula.", prompt: "How do you choose between factorising and the formula?",
     lesson: [
       { h: "Standard form", say: "A quadratic equation can be written as a x squared plus b x plus c equals zero. Always get it into this form first.", html: chainRow(["ax² + bx + c = 0"]) + P("Move every term to one side so the other side is <b>zero</b>.") },
-      { h: "Factorising", say: "If x squared minus five x plus six equals zero, factorise to x minus two times x minus three equals zero. So x equals two or x equals three.", html: chainRow(["x² − 5x + 6 = 0", "(x − 2)(x − 3) = 0", "x = 2 or x = 3"]) + P("If a product is zero, one of the factors must be <b>zero</b>.") },
-      { h: "The quadratic formula", say: "When it will not factorise easily, use the formula: x equals negative b, plus or minus the square root of b squared minus four a c, all over two a.", html: chainRow(["x = (−b ± √(b² − 4ac)) / 2a"]) + P("b² − 4ac is the <b>discriminant</b>. If it is negative, there are no real roots.") }
+      { h: "Factorising", say: "Take x squared minus five x plus six equals zero. It factorises to x minus two, times x minus three, equals zero. So x equals two or x equals three.", html: chainRow(["x² − 5x + 6 = 0", "(x − 2)(x − 3) = 0", "x = 2 or x = 3"]) + P("If a product is zero, one of the factors must be <b>zero</b>.") },
+      { h: "The quadratic formula", say: "Sometimes it will not factorise easily. Then use the formula. x equals negative b, plus or minus the square root of b squared minus four a c. Divide all of that by two a.", html: chainRow(["x = (−b ± √(b² − 4ac)) / 2a"]) + P("b² − 4ac is the <b>discriminant</b>. If it is negative, there are no real roots.") }
     ],
     example: { q: "Solve x² + 2x − 15 = 0.", steps: ["Find two numbers that multiply to −15 and add to 2: 5 and −3.", "(x + 5)(x − 3) = 0.", "x = −5 or x = 3."] },
     questions: [
@@ -58,7 +58,7 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Mathematics, Term 3: Euclidean geometry (circle theorems: perpendicular from centre bisects chord; angle at centre; angles in the same segment; cyclic quadrilaterals; tangents)",
     intention: "Today I am using circle theorems to find unknown angles.", prompt: "Which theorem do you find easiest to spot in a diagram?",
     lesson: [
-      { h: "Angle at the centre", say: "The angle at the centre of a circle is double the angle at the circumference, when both stand on the same arc.", html: chainRow(["∠ centre = 2 × ∠ circumference"]) + P("If the angle at the circumference is 40°, the angle at the centre is <b>80°</b>.") },
+      { h: "Angle at the centre", say: "Look at two angles that stand on the same arc. The angle at the centre is double the angle at the circumference.", html: chainRow(["∠ centre = 2 × ∠ circumference"]) + P("If the angle at the circumference is 40°, the angle at the centre is <b>80°</b>.") },
       { h: "Angles in a semicircle and same segment", say: "The angle in a semicircle is ninety degrees. Angles in the same segment, standing on the same chord, are equal.", html: chainRow(["∠ in semicircle = 90°", "∠s in same segment are equal"]) },
       { h: "Cyclic quadrilaterals and tangents", say: "In a cyclic quadrilateral, opposite angles add up to one hundred and eighty degrees. A tangent is perpendicular to the radius at the point of contact.", html: chainRow(["Opposite ∠s of cyclic quad = 180°", "Tangent ⊥ radius"]) + P("Always give the <b>reason</b> for each step.") }
     ],
@@ -143,9 +143,9 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Mathematical Literacy: Data handling (bar graphs, pie charts and line graphs; choosing a suitable graph; recognising misleading graphs)",
     intention: "Today I am choosing the right graph and spotting misleading ones.", prompt: "Have you seen a graph in an advert? Did you trust it?",
     lesson: [
-      { h: "Choosing a graph", say: "Use a bar graph to compare groups, a pie chart to show parts of a whole, and a line graph to show change over time.", html: chainRow(["Compare groups: bar", "Parts of a whole: pie", "Change over time: line"]) },
+      { h: "Choosing a graph", say: "Use a bar graph to compare groups. Use a pie chart to show parts of a whole. Use a line graph to show change over time.", html: chainRow(["Compare groups: bar", "Parts of a whole: pie", "Change over time: line"]) },
       { h: "Pie charts", say: "A whole pie is 360 degrees, or 100 percent. If 25 percent of a budget goes on food, its slice is a quarter of the circle, 90 degrees.", html: chainRow(["100% = 360°", "25% = 90°", "1% = 3,6°"]) },
-      { h: "Misleading graphs", say: "A graph can mislead if the vertical axis does not start at zero, if the scale jumps, or if pictures are stretched. Always read the numbers, not only the shape.", html: P("A small rise looks huge when the axis starts at 95 instead of 0.") }
+      { h: "Misleading graphs", say: "A graph can mislead. The vertical axis might not start at zero, the scale might jump, or pictures might be stretched. Always read the numbers, not only the shape.", html: P("A small rise looks huge when the axis starts at 95 instead of 0.") }
     ],
     example: { q: "A household spends R3 000 of its R12 000 income on rent. How many degrees is the rent slice in a pie chart?", steps: ["Fraction: 3 000 ÷ 12 000 = 1/4.", "1/4 of 360° = 90°.", "The rent slice is 90°, a quarter of the circle."] },
     questions: [
@@ -164,7 +164,7 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Mathematical Literacy: Probability (two-way tables; tree diagrams for two events; interpreting risk in health, games and insurance)",
     intention: "Today I am comparing risks fairly, using tables and tree diagrams.", prompt: "How do people decide whether something is risky?",
     lesson: [
-      { h: "Two-way tables", say: "A two-way table sorts data by two things at once, for example whether people were vaccinated, and whether they got flu. Of 200 vaccinated people, 10 got flu. Of 200 unvaccinated people, 40 got flu.", html: P("Vaccinated: <b>10</b> of 200 got flu.") + P("Not vaccinated: <b>40</b> of 200 got flu.") },
+      { h: "Two-way tables", say: "A two-way table sorts data by two things at once. For example, were people vaccinated, and did they get flu? Of 200 vaccinated people, 10 got flu. Of 200 unvaccinated people, 40 got flu.", html: P("Vaccinated: <b>10</b> of 200 got flu.") + P("Not vaccinated: <b>40</b> of 200 got flu.") },
       { h: "Comparing risk", say: "To compare groups fairly, compare probabilities, not only counts. 10 out of 200 is 5 percent. 40 out of 200 is 20 percent. The unvaccinated group had four times the risk.", html: chainRow(["10 ÷ 200 = 5%", "40 ÷ 200 = 20%"]) + P("Percentages let you compare groups of <b>different sizes</b> too.") },
       { h: "Tree diagrams", say: "A tree diagram lists every outcome of two events. Tossing two coins gives four outcomes: heads heads, heads tails, tails heads and tails tails. The chance of two heads is 1 out of 4.", html: chainRow(["HH", "HT", "TH", "TT"]) + P("P(two heads) = <b>1/4</b>") }
     ],
@@ -231,7 +231,7 @@ const UNITS_G11 = [
     lesson: [
       { h: "Denotation and connotation", say: "Denotation is a word's dictionary meaning. Connotation is the feeling it carries. Slim and skinny both mean thin, but slim sounds positive and skinny can sound negative.", html: chainRow(["slim 👍", "thin", "skinny 👎"]) + P("Same <b>denotation</b>, different <b>connotation</b>.") },
       { h: "Loaded language", say: "Writers choose words to influence us. Protesters or rioters? Freedom fighters or rebels? The choice shows a point of view.", html: chainRow(["protesters ↔ rioters", "debate ↔ row", "claimed ↔ explained"]) + P("Ask: what <b>other word</b> could have been used?") },
-      { h: "Manipulation techniques", say: "Watch for generalisations like everyone knows, false choices like you're either with us or against us, and euphemisms that soften bad news, like let go instead of fired.", html: chainRow(["Generalisation", "False choice", "Euphemism"]) + P("Critical readers <b>question</b> the language.") }
+      { h: "Manipulation techniques", say: "Watch for generalisations, like everyone knows. Watch for false choices, like you're either with us or against us. And watch for euphemisms, which are soft words for bad news, like let go instead of fired.", html: chainRow(["Generalisation", "False choice", "Euphemism"]) + P("Critical readers <b>question</b> the language.") }
     ],
     example: { q: "Headline A: Community members gather to demand water. Headline B: Mob blocks road in water chaos. How do they differ?", steps: ["Both describe the same event.", "A uses neutral words: members, gather, demand.", "B uses negative words: mob, chaos. It frames people as dangerous."] },
     questions: [
@@ -251,7 +251,7 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Life Sciences, Term 2: Animal nutrition (human digestive system; mechanical and chemical digestion; enzymes; absorption; balanced diet)",
     intention: "Today I am following food through the digestive system.", prompt: "Why do we need enzymes?",
     lesson: [
-      { h: "The digestive tract", say: "Food travels from the mouth, down the oesophagus, to the stomach, the small intestine, the large intestine, and out through the anus. The liver and pancreas help digestion.", html: chainRow(["Mouth", "Oesophagus", "Stomach", "Small intestine", "Large intestine"]) },
+      { h: "The digestive tract", say: "Food goes from the mouth, down the oesophagus, to the stomach. Then it moves through the small intestine and the large intestine, and out through the anus. The liver and pancreas help digestion.", html: chainRow(["Mouth", "Oesophagus", "Stomach", "Small intestine", "Large intestine"]) },
       { h: "Mechanical and chemical", say: "Mechanical digestion breaks food into smaller pieces, like chewing. Chemical digestion uses enzymes to break large molecules into small ones the body can absorb.", html: chainRow(["Amylase: starch → sugar", "Protease: protein → amino acids", "Lipase: fat → fatty acids"]) + P("Bile from the liver <b>emulsifies</b> fats.") },
       { h: "Absorption", say: "Most nutrients are absorbed in the small intestine through villi, tiny finger-like folds that give a huge surface area. The large intestine absorbs water.", html: PICS("🫁", "Body") + P("<b>Villi</b> increase surface area for absorption.") }
     ],
@@ -316,14 +316,14 @@ const UNITS_G11 = [
     intention: "Today I am exploring the role of the media in a democracy and how to spot false information.", prompt: "How do you check if something online is true?",
     lesson: [
       { h: "Why the media matters", say: "In a democracy, a free media informs citizens, holds leaders accountable and gives people a voice. Freedom of the press is protected in Section 16 of the Constitution.", html: chainRow(["Inform", "Hold accountable", "Give a voice"]) + P("Investigative journalism has exposed corruption in South Africa.") },
-      { h: "Limits", say: "Freedom of expression does not cover propaganda for war, incitement of violence, or hate speech based on race, ethnicity, gender or religion that incites harm.", html: chainRow(["No incitement", "No hate speech", "No propaganda for war"]) + P("Rights have <b>limits</b> that protect others.") },
-      { h: "Spotting false information", say: "Before you share, check the source, look for the date, see if trusted outlets report it, and be wary of headlines designed to make you angry.", html: chainRow(["Source?", "Date?", "Other outlets?", "Emotional bait?"]) + P("<b>Pause before you share.</b>") }
+      { h: "Limits", say: "Freedom of expression has limits. It does not cover propaganda for war, or inciting violence. It also does not cover hate speech based on race, ethnicity, gender or religion that incites harm.", html: chainRow(["No incitement", "No hate speech", "No propaganda for war"]) + P("Rights have <b>limits</b> that protect others.") },
+      { h: "Spotting false information", say: "Before you share, check the source and the date. See if trusted news outlets report it. Be careful with headlines designed to make you angry.", html: chainRow(["Source?", "Date?", "Other outlets?", "Emotional bait?"]) + P("<b>Pause before you share.</b>") }
     ],
     example: { q: "A WhatsApp message says schools will close tomorrow, with no source. What should you do?", steps: ["Check: who sent it originally? Is there an official source?", "Look on the Department of Education's official channels.", "Do not forward it until it is confirmed."] },
     questions: [
       { type: "mcq", q: "Which section of the Constitution protects freedom of expression?", options: ["Section 16", "Section 9", "Section 28", "Section 1"], answer: 0, hints: ["It covers the press too.", "Not equality (9) or children (28).", "Section 16."], explain: "Section 16 protects freedom of expression." },
       { type: "mcq", q: "Which is NOT protected by freedom of expression?", options: ["Incitement of violence", "Criticising the government", "Writing an opinion piece", "Peaceful protest signs"], answer: 0, hints: ["Some speech causes harm.", "Calling for violence.", "Incitement."], explain: "Incitement to violence is not protected." },
-      { type: "mcq", q: "What is a sign of fake news?", options: ["No source and an emotional headline", "Many trusted outlets report it", "It has a date and author", "It quotes official documents"], answer: 0, hints: ["Red flags.", "Who wrote it?", "No source, emotional."], explain: "No source and emotional bait are warning signs." },
+      { type: "mcq", q: "What is a sign of fake news?", options: ["No source and an emotional headline", "Many trusted outlets report it", "It has a date and author", "It quotes official documents"], answer: 0, hints: ["Warning signs.", "Who wrote it?", "No source, emotional."], explain: "No source and emotional bait are warning signs." },
       { type: "mcq", q: "How does the media hold leaders accountable?", options: ["By investigating and reporting what they do", "By hiding information", "By only printing praise", "By banning opinions"], answer: 0, hints: ["Watchdog role.", "Exposing wrongdoing.", "Investigating."], explain: "Investigative reporting holds leaders accountable." },
       { type: "order", q: "Put the steps before sharing in order.", items: ["Pause", "Check the source", "Check other trusted outlets", "Decide whether to share"], orderLabel: "first to last", hints: ["Stop first.", "Then check.", "Decide last."], explain: "Pause, check the source, compare outlets, then decide." }
     ],
@@ -357,8 +357,8 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Life Orientation: Development of the self in society (relationships: signs of healthy and unhealthy relationships; respect and boundaries; where to get help)",
     intention: "Today I am learning the signs of healthy and unhealthy relationships.", prompt: "What does respect look like in a friendship or relationship?",
     lesson: [
-      { h: "Healthy signs", say: "Healthy relationships, whether friendships or dating, include respect, trust, honesty, good communication, and space to be yourself and see other people.", html: chainRow(["Respect", "Trust", "Honesty", "Communication", "Independence"]) },
-      { h: "Warning signs", say: "Warning signs include jealousy and control, checking your phone, isolating you from friends, put-downs, pressure, threats, or any kind of violence.", html: chainRow(["Control", "Isolation", "Put-downs", "Pressure", "Threats"]) + P("Abuse can be physical, emotional, financial or digital.") },
+      { h: "Healthy signs", say: "Healthy friendships and dating relationships have respect, trust and honesty. They have good communication. There is space to be yourself and to see other people.", html: chainRow(["Respect", "Trust", "Honesty", "Communication", "Independence"]) },
+      { h: "Warning signs", say: "Warning signs include jealousy, control and checking your phone. Watch for keeping you away from friends, insults and pressure. Threats or any kind of violence are serious warning signs.", html: chainRow(["Control", "Isolation", "Put-downs", "Pressure", "Threats"]) + P("Abuse can be physical, emotional, financial or digital.") },
       { h: "Boundaries and help", say: "You have the right to set boundaries and to say no. If a relationship feels unsafe, talk to a trusted adult. In South Africa, the GBV Command Centre is on 0800 428 428, and Childline is on 116.", html: chainRow(["Trusted adult", "Counsellor", "GBV Command Centre 0800 428 428", "Childline 116"]) + P("It is never your fault if someone abuses you.") }
     ],
     example: { q: "Leila's partner demands her phone password and gets angry when she sees friends. Is this healthy?", steps: ["Demanding passwords and anger about friends are controlling behaviours.", "These are warning signs.", "Leila deserves respect. She can talk to a trusted adult or counsellor for support."] },

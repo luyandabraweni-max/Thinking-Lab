@@ -156,7 +156,7 @@
     },
     {
      "h": "The theorem",
-     "say": "The square of the hypotenuse equals the sum of the squares of the other two sides. c squared equals a squared plus b squared.",
+     "say": "The square of the hypotenuse equals the sum of the squares of the other two sides. So c squared equals a squared plus b squared.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">c² = a² + b²</span></div><p>This only works for <b>right-angled</b> triangles.</p>"
     },
     {
@@ -1130,7 +1130,7 @@
    "lesson": [
     {
      "h": "A complete circuit",
-     "say": "Electricity only flows in a complete, closed loop. A circuit needs a source of energy, such as a cell, conductors such as wires, and a device such as a bulb.",
+     "say": "Electricity only flows in a complete, closed loop. A circuit needs three things. It needs a source of energy, such as a cell. It needs conductors, such as wires. And it needs a device, such as a bulb.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Switch</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bulb</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wire</span></div><p>Open the <b>switch</b> and the loop is broken.</p>"
     },
     {
@@ -1266,7 +1266,7 @@
    "lesson": [
     {
      "h": "Career fields",
-     "say": "Careers can be grouped into fields, such as health, engineering and building, business, arts and design, agriculture, education and information technology.",
+     "say": "Careers can be grouped into fields. Some fields are health, engineering and building, and business. Others are arts and design, agriculture, education and information technology.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Health</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Engineering</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Business</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Arts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Agriculture</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">IT</span></div><p>Each field has jobs at <b>different levels</b> of study.</p>"
     },
     {
@@ -1334,7 +1334,7 @@
      ],
      "answer": 0,
      "hints": [
-      "Trades are learned hands-on.",
+      "Trades are learned by doing the work.",
       "Colleges and workplaces train people.",
       "TVET or apprenticeship."
      ],
@@ -1411,7 +1411,7 @@
    "lesson": [
     {
      "h": "Spotting risk",
-     "say": "A risky situation could lead to harm: being alone with someone you do not trust, getting into a car with a driver who has been drinking, or meeting an online stranger.",
+     "say": "A risky situation could lead to harm. Examples are being alone with someone you do not trust, or meeting an online stranger. Getting into a car with a driver who has been drinking is also risky.",
      "html": "<p class=\"pics\" role=\"img\" aria-label=\"Warning\">⚠️</p><p>Trust your <b>gut feeling</b>. If something feels wrong, it may be.</p>"
     },
     {
@@ -2386,7 +2386,7 @@
     },
     {
      "h": "Reflection",
-     "say": "When light hits a mirror, it reflects. The angle of incidence equals the angle of reflection, both measured from the normal, a line at right angles to the mirror.",
+     "say": "When light hits a mirror, it reflects. The angle of incidence equals the angle of reflection. Both angles are measured from the normal. The normal is a line at right angles to the mirror.",
      "html": "<p>Angle of incidence = <b>angle of reflection</b></p>"
     },
     {

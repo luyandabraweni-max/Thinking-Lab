@@ -71,7 +71,7 @@
     lesson: [
       READ(GATE),
       { h: "Clues and inferences", say: "An inference is a sensible conclusion from clues. Ayanda checks the empty street, which suggests she feels she might be doing something she shouldn't.", html: chainRow(["Clue", "What it suggests"]) },
-      { h: "Explaining your inference", say: "Always say which words led you to your inference. 'Her hand was already on the cold metal before she had decided' suggests curiosity is stronger than caution.", html: P("Inference + <b>quotation</b> + explanation") }
+      { h: "Explaining your inference", say: "Always say which words led you to your inference. Look at this line: 'Her hand was already on the cold metal before she had decided.' It suggests her curiosity is stronger than her caution.", html: P("Inference + <b>quotation</b> + explanation") }
     ],
     example: { q: "What does 'every day it had been locked' tell us about Ayanda?", steps: ["She noticed the gate every single day.", "That suggests she has wondered about it for a long time.", "She is curious about what is behind it."] },
     questions: [
@@ -262,7 +262,7 @@
     intention: "Today I am explaining how light reflects and bends.", prompt: "Why does a straw look bent in a glass of water?",
     lesson: [
       { h: "Light travels in straight lines", say: "Light travels in straight lines called rays. We see objects when light from them enters our eyes.", html: P("Light → object → <b>eye</b>") },
-      { h: "Reflection", say: "When light hits a mirror, it reflects. The angle of incidence equals the angle of reflection, both measured from the normal, a line at right angles to the mirror.", html: P("Angle of incidence = <b>angle of reflection</b>") },
+      { h: "Reflection", say: "When light hits a mirror, it reflects. The angle of incidence equals the angle of reflection. Both angles are measured from the normal. The normal is a line at right angles to the mirror.", html: P("Angle of incidence = <b>angle of reflection</b>") },
       { h: "Refraction", say: "Light changes speed when it moves from one material to another, for example from water into air. This makes it change direction, or refract. That is why a straw looks bent.", html: P("Change of speed → change of <b>direction</b>") }
     ],
     example: { q: "A ray hits a mirror at 35° to the normal. What is the angle of reflection?", steps: ["The angle of incidence is 35°.", "The angle of reflection equals the angle of incidence.", "35°."] },
@@ -347,7 +347,7 @@
     caps: ce(9, "Writing and speaking (writing and delivering a persuasive speech for an audience)"),
     intention: "Today I am writing a speech that persuades an audience.", prompt: "What makes a speaker worth listening to?",
     lesson: [
-      { h: "Speeches are heard", say: "A speech is written to be heard, so use short sentences, direct address with you and we, and clear signposts like firstly and finally.", html: chainRow(["Short sentences", "You and we", "Signposts"]) },
+      { h: "Speeches are heard", say: "A speech is written to be heard. So use short sentences. Speak directly to the audience with you and we. Use clear signpost words like firstly and finally.", html: chainRow(["Short sentences", "You and we", "Signposts"]) },
       { h: "Rhetorical devices", say: "Speakers use the rule of three, rhetorical questions and repetition to make ideas memorable. For example: we can recycle, we can reuse, we can refuse.", html: P("<b>We can</b> recycle. <b>We can</b> reuse. <b>We can</b> refuse.") },
       { h: "A strong ending", say: "End with a call to action that tells the audience exactly what to do next.", html: P("'Bring one reusable bag tomorrow. That's all it takes to start.'") }
     ],

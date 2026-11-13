@@ -20,12 +20,12 @@
     },
     {
      "h": "Factorising",
-     "say": "If x squared minus five x plus six equals zero, factorise to x minus two times x minus three equals zero. So x equals two or x equals three.",
+     "say": "Take x squared minus five x plus six equals zero. It factorises to x minus two, times x minus three, equals zero. So x equals two or x equals three.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x² − 5x + 6 = 0</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">(x − 2)(x − 3) = 0</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x = 2 or x = 3</span></div><p>If a product is zero, one of the factors must be <b>zero</b>.</p>"
     },
     {
      "h": "The quadratic formula",
-     "say": "When it will not factorise easily, use the formula: x equals negative b, plus or minus the square root of b squared minus four a c, all over two a.",
+     "say": "Sometimes it will not factorise easily. Then use the formula. x equals negative b, plus or minus the square root of b squared minus four a c. Divide all of that by two a.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x = (−b ± √(b² − 4ac)) / 2a</span></div><p>b² − 4ac is the <b>discriminant</b>. If it is negative, there are no real roots.</p>"
     }
    ],
@@ -287,7 +287,7 @@
    "lesson": [
     {
      "h": "Angle at the centre",
-     "say": "The angle at the centre of a circle is double the angle at the circumference, when both stand on the same arc.",
+     "say": "Look at two angles that stand on the same arc. The angle at the centre is double the angle at the circumference.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">∠ centre = 2 × ∠ circumference</span></div><p>If the angle at the circumference is 40°, the angle at the centre is <b>80°</b>.</p>"
     },
     {
@@ -831,7 +831,7 @@
    "lesson": [
     {
      "h": "Choosing a graph",
-     "say": "Use a bar graph to compare groups, a pie chart to show parts of a whole, and a line graph to show change over time.",
+     "say": "Use a bar graph to compare groups. Use a pie chart to show parts of a whole. Use a line graph to show change over time.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Compare groups: bar</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Parts of a whole: pie</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Change over time: line</span></div>"
     },
     {
@@ -841,7 +841,7 @@
     },
     {
      "h": "Misleading graphs",
-     "say": "A graph can mislead if the vertical axis does not start at zero, if the scale jumps, or if pictures are stretched. Always read the numbers, not only the shape.",
+     "say": "A graph can mislead. The vertical axis might not start at zero, the scale might jump, or pictures might be stretched. Always read the numbers, not only the shape.",
      "html": "<p>A small rise looks huge when the axis starts at 95 instead of 0.</p>"
     }
    ],
@@ -967,7 +967,7 @@
    "lesson": [
     {
      "h": "Two-way tables",
-     "say": "A two-way table sorts data by two things at once, for example whether people were vaccinated, and whether they got flu. Of 200 vaccinated people, 10 got flu. Of 200 unvaccinated people, 40 got flu.",
+     "say": "A two-way table sorts data by two things at once. For example, were people vaccinated, and did they get flu? Of 200 vaccinated people, 10 got flu. Of 200 unvaccinated people, 40 got flu.",
      "html": "<p>Vaccinated: <b>10</b> of 200 got flu.</p><p>Not vaccinated: <b>40</b> of 200 got flu.</p>"
     },
     {
@@ -1387,7 +1387,7 @@
     },
     {
      "h": "Manipulation techniques",
-     "say": "Watch for generalisations like everyone knows, false choices like you're either with us or against us, and euphemisms that soften bad news, like let go instead of fired.",
+     "say": "Watch for generalisations, like everyone knows. Watch for false choices, like you're either with us or against us. And watch for euphemisms, which are soft words for bad news, like let go instead of fired.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Generalisation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">False choice</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Euphemism</span></div><p>Critical readers <b>question</b> the language.</p>"
     }
    ],
@@ -1513,7 +1513,7 @@
    "lesson": [
     {
      "h": "The digestive tract",
-     "say": "Food travels from the mouth, down the oesophagus, to the stomach, the small intestine, the large intestine, and out through the anus. The liver and pancreas help digestion.",
+     "say": "Food goes from the mouth, down the oesophagus, to the stomach. Then it moves through the small intestine and the large intestine, and out through the anus. The liver and pancreas help digestion.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mouth</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Oesophagus</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Stomach</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Small intestine</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Large intestine</span></div>"
     },
     {
@@ -1936,12 +1936,12 @@
     },
     {
      "h": "Limits",
-     "say": "Freedom of expression does not cover propaganda for war, incitement of violence, or hate speech based on race, ethnicity, gender or religion that incites harm.",
+     "say": "Freedom of expression has limits. It does not cover propaganda for war, or inciting violence. It also does not cover hate speech based on race, ethnicity, gender or religion that incites harm.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">No incitement</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">No hate speech</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">No propaganda for war</span></div><p>Rights have <b>limits</b> that protect others.</p>"
     },
     {
      "h": "Spotting false information",
-     "say": "Before you share, check the source, look for the date, see if trusted outlets report it, and be wary of headlines designed to make you angry.",
+     "say": "Before you share, check the source and the date. See if trusted news outlets report it. Be careful with headlines designed to make you angry.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Source?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Date?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Other outlets?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Emotional bait?</span></div><p><b>Pause before you share.</b></p>"
     }
    ],
@@ -1999,7 +1999,7 @@
      ],
      "answer": 0,
      "hints": [
-      "Red flags.",
+      "Warning signs.",
       "Who wrote it?",
       "No source, emotional."
      ],
@@ -2203,12 +2203,12 @@
    "lesson": [
     {
      "h": "Healthy signs",
-     "say": "Healthy relationships, whether friendships or dating, include respect, trust, honesty, good communication, and space to be yourself and see other people.",
+     "say": "Healthy friendships and dating relationships have respect, trust and honesty. They have good communication. There is space to be yourself and to see other people.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Respect</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Trust</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Honesty</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Communication</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Independence</span></div>"
     },
     {
      "h": "Warning signs",
-     "say": "Warning signs include jealousy and control, checking your phone, isolating you from friends, put-downs, pressure, threats, or any kind of violence.",
+     "say": "Warning signs include jealousy, control and checking your phone. Watch for keeping you away from friends, insults and pressure. Threats or any kind of violence are serious warning signs.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Control</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Isolation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Put-downs</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pressure</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Threats</span></div><p>Abuse can be physical, emotional, financial or digital.</p>"
     },
     {
@@ -2621,7 +2621,7 @@
     },
     {
      "h": "Finding the points",
-     "say": "First mark the points that answer the question. For why teenagers struggle to wake up, the reasons are a later body clock, blue light from screens, alert brains from social media, and early school starts.",
+     "say": "First mark the points that answer the question. Why do teenagers struggle to wake up? Their body clock runs later. Blue light from screens delays sleep. Social media keeps their brains alert. And school starts early.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Body clock shifts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Blue light</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Social media</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Early starts</span></div>"
     },
     {
@@ -2635,7 +2635,7 @@
     "steps": [
      "Point 1: the sleep hormone arrives later in adolescence.",
      "Points 2 and 3: screens and social media keep them awake. Point 4: school starts early.",
-     "Teenagers' body clocks shift later, screens and social media delay sleep further, and early school starts leave them short of rest."
+     "Teenagers' body clocks shift later, and screens and social media delay sleep. Early school starts leave them short of rest."
     ]
    },
    "questions": [
@@ -2675,7 +2675,7 @@
     },
     {
      "type": "mcq",
-     "q": "Which is the most concise own-words version of 'the body releases melatonin … about two hours later than it does in childhood'?",
+     "q": "The text says 'the body releases melatonin … about two hours later than it does in childhood'. Which own-words version is the most concise?",
      "options": [
       "Teenagers' sleep hormone arrives later.",
       "The body releases melatonin about two hours later than in childhood.",
@@ -3032,7 +3032,7 @@
     },
     {
      "h": "The quadratic formula",
-     "say": "When it won't factorise, use the formula: x equals minus b, plus or minus the square root of b squared minus 4 a c, all over 2 a.",
+     "say": "When it won't factorise, use the formula. x equals minus b, plus or minus the square root of b squared minus 4 a c. Divide all of that by 2 a.",
      "html": "<p>x = (−b ± √(b² − 4ac)) ÷ 2a</p>"
     },
     {
@@ -3443,12 +3443,12 @@
     },
     {
      "h": "The sine rule",
-     "say": "Use the sine rule when you know a side and the angle opposite it. a over sin A equals b over sin B equals c over sin C.",
+     "say": "Use the sine rule when you know a side and the angle opposite it. The rule is a over sin A equals b over sin B equals c over sin C.",
      "html": "<p>a ÷ sin A = b ÷ sin B = c ÷ sin C</p>"
     },
     {
      "h": "The cosine rule",
-     "say": "Use the cosine rule when you know two sides and the angle between them, or all three sides. a squared equals b squared plus c squared minus 2 b c cos A.",
+     "say": "Use the cosine rule when you know two sides and the angle between them. You can also use it when you know all three sides. The rule is a squared equals b squared plus c squared minus 2 b c cos A.",
      "html": "<p>a² = b² + c² − 2bc cos A</p>"
     }
    ],
@@ -3585,7 +3585,7 @@
     },
     {
      "h": "Without replacement",
-     "say": "If you don't put the first item back, the probabilities on the second branches change, because there is one item fewer in the bag.",
+     "say": "Sometimes you don't put the first item back. Then the probabilities on the second branches change, because there is one item fewer in the bag.",
      "html": "<p>3 red and 2 blue: P(red, red) = 3/5 × 2/4 = 6/20 = <b>3/10</b></p>"
     }
    ],
@@ -4407,7 +4407,7 @@
     },
     {
      "h": "Sum to infinity",
-     "say": "If the absolute value of r is less than 1, the terms shrink and the series has a finite sum: u1 over 1 minus r.",
+     "say": "Sometimes the absolute value of r is less than 1. Then the terms shrink, and the series has a finite sum. The sum is u1 over 1 minus r.",
      "html": "<p>S∞ = u₁ ÷ (1 − r), when |r| < 1</p>"
     },
     {
@@ -4554,8 +4554,8 @@
     },
     {
      "h": "TOK link",
-     "say": "Theory of Knowledge link: If two variables are strongly correlated, what further knowledge do we need to claim that one causes the other?",
-     "html": "<p><b>TOK link:</b> If two variables are strongly correlated, what further knowledge do we need to claim that one causes the other?</p>"
+     "say": "Theory of Knowledge link: Two variables are strongly correlated. What more do we need to know to claim that one causes the other?",
+     "html": "<p><b>TOK link:</b> Two variables are strongly correlated. What more do we need to know to claim that one causes the other?</p>"
     }
    ],
    "example": {
@@ -4829,12 +4829,12 @@
     },
     {
      "h": "Passive transport",
-     "say": "Simple diffusion, facilitated diffusion through channel proteins, and osmosis all move substances down a concentration gradient, without using energy from ATP.",
+     "say": "Three processes move substances down a concentration gradient: simple diffusion, facilitated diffusion through channel proteins, and osmosis. None of them uses energy from ATP.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Simple diffusion</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Facilitated diffusion</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Osmosis</span></div><p>Down the gradient · <b>no ATP</b></p>"
     },
     {
      "h": "Active transport",
-     "say": "Active transport uses ATP and pump proteins to move substances against their concentration gradient, such as the sodium–potassium pump in nerve cells.",
+     "say": "Active transport uses ATP and pump proteins to move substances against their concentration gradient. An example is the sodium–potassium pump in nerve cells.",
      "html": "<p>Against the gradient · <b>uses ATP</b></p>"
     },
     {
@@ -4966,7 +4966,7 @@
    "lesson": [
     {
      "h": "Questions about knowledge",
-     "say": "TOK asks how we know what we claim to know. A knowledge question is about knowledge itself, is open to debate, and uses TOK concepts such as evidence, certainty, truth and interpretation.",
+     "say": "TOK asks how we know what we claim to know. A knowledge question is about knowledge itself, and it is open to debate. It uses TOK concepts such as evidence, certainty, truth and interpretation.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">About knowledge</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Contestable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Uses TOK concepts</span></div>"
     },
     {
@@ -5113,7 +5113,7 @@
     },
     {
      "h": "A good research question",
-     "say": "A good research question is focused, researchable with the time and sources you have, arguable, and clearly linked to one subject.",
+     "say": "A good research question is focused and arguable. You can research it with the time and sources you have. It is clearly linked to one subject.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Focused</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Researchable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Arguable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Subject-specific</span></div>"
     }
    ],
@@ -6074,7 +6074,7 @@
     },
     {
      "h": "The inductive step",
-     "say": "Add k plus 1 to both sides. k times k plus 1 over 2, plus k plus 1, equals k plus 1 times k plus 2, over 2. That is the formula for k plus 1, so it is true for all n.",
+     "say": "Add k plus 1 to both sides. The left side becomes k times k plus 1 over 2, plus k plus 1. This simplifies to k plus 1 times k plus 2, over 2. That is the formula for k plus 1. So it is true for all n.",
      "html": "<p>k(k + 1)/2 + (k + 1) = <b>(k + 1)(k + 2)/2</b></p>"
     }
    ],
@@ -6338,7 +6338,7 @@
    "lesson": [
     {
      "h": "What a limit is",
-     "say": "The limit of f of x as x approaches a is the value f of x gets closer to as x gets closer to a. The function doesn't need to be defined at a itself.",
+     "say": "As x gets closer to a, f of x gets closer to some value. That value is the limit of f of x as x approaches a. The function doesn't need to be defined at a itself.",
      "html": "<p>lim (x → a) f(x)</p>"
     },
     {

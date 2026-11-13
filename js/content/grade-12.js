@@ -15,7 +15,7 @@ const UNITS_G12 = [
     lesson: [
       { h: "Arithmetic sequences", say: "An arithmetic sequence adds the same number each time, called the common difference, d. The general term is T n equals a plus n minus one, times d.", html: chainRow(["3, 7, 11, 15 …", "d = 4", "Tₙ = a + (n − 1)d"]) + P("a is the first term.") },
       { h: "Geometric sequences", say: "A geometric sequence multiplies by the same number each time, called the common ratio, r. The general term is T n equals a times r to the power n minus one.", html: chainRow(["2, 6, 18, 54 …", "r = 3", "Tₙ = a·rⁿ⁻¹"]) },
-      { h: "Sums", say: "The sum of the first n terms of an arithmetic series is n over two, times two a plus n minus one d. For a geometric series it is a times r to the n minus one, over r minus one.", html: chainRow(["Sₙ = n/2 [2a + (n − 1)d]", "Sₙ = a(rⁿ − 1)/(r − 1)"]) + P("These are on the <b>formula sheet</b>.") }
+      { h: "Sums", say: "Here is the sum of the first n terms of an arithmetic series. It is n over two, times two a plus n minus one d. For a geometric series it is a times r to the n minus one, over r minus one.", html: chainRow(["Sₙ = n/2 [2a + (n − 1)d]", "Sₙ = a(rⁿ − 1)/(r − 1)"]) + P("These are on the <b>formula sheet</b>.") }
     ],
     example: { q: "Find the 20th term of 5, 8, 11, 14 …", steps: ["Arithmetic: a = 5, d = 3.", "T₂₀ = 5 + (20 − 1)(3).", "= 5 + 57 = 62."] },
     questions: [
@@ -98,8 +98,8 @@ const UNITS_G12 = [
     caps: "CAPS Grade 12 Mathematical Literacy: Measurement (surface area and volume of rectangular prisms and cylinders; packing problems; cost of materials)",
     intention: "Today I am working out surface area, packing and material costs.", prompt: "Why do you think some boxes have so much empty space?",
     lesson: [
-      { h: "Surface area", say: "Surface area is the total area of all the faces of an object, like the cardboard needed to make a box. A box has six rectangular faces in three matching pairs.", html: P("Surface area of a box = 2(l × b) + 2(l × h) + 2(b × h)") },
-      { h: "Packing", say: "To find how many small boxes fit in a big box, divide each length by the small box's length, round down to whole boxes, then multiply the three answers.", html: chainRow(["Length ÷", "Width ÷", "Height ÷", "Round down, then multiply"]) },
+      { h: "Surface area", say: "Surface area is the total area of all the faces of an object. Think of the cardboard needed to make a box. A box has six rectangular faces in three matching pairs.", html: P("Surface area of a box = 2(l × b) + 2(l × h) + 2(b × h)") },
+      { h: "Packing", say: "How many small boxes fit in a big box? Divide each length of the big box by the matching length of the small box. Round each answer down to whole boxes. Then multiply the three answers.", html: chainRow(["Length ÷", "Width ÷", "Height ÷", "Round down, then multiply"]) },
       { h: "Costing materials", say: "Once you know the surface area, multiply by the price per square metre to find the cost of material. Add extra for overlaps and waste.", html: P("Packers and builders often add about <b>10%</b> for waste.") }
     ],
     example: { q: "Boxes of 10 cm × 10 cm × 10 cm are packed into a crate 50 cm × 30 cm × 20 cm. How many fit?", steps: ["50 ÷ 10 = 5 along the length.", "30 ÷ 10 = 3 across, and 20 ÷ 10 = 2 high.", "5 × 3 × 2 = 30 boxes."] },
@@ -120,7 +120,7 @@ const UNITS_G12 = [
     intention: "Today I am using building plans to work out the materials needed.", prompt: "What would you need to build a room?",
     lesson: [
       { h: "Plans and elevations", say: "A floor plan shows a building from above. An elevation shows it from the front, back or side, so you can see heights, doors and windows.", html: chainRow(["Floor plan: from above", "Elevation: from the side"]) },
-      { h: "Quantities from plans", say: "Builders use plans to work out how much material is needed. For a wall, find its area, subtract the windows and doors, then multiply by how many bricks cover one square metre.", html: chainRow(["Wall area", "− windows and doors", "× bricks per m²"]) },
+      { h: "Quantities from plans", say: "Builders use plans to work out how much material is needed. For a wall, first find its area. Subtract the area of the windows and doors. Then multiply by the number of bricks that cover one square metre.", html: chainRow(["Wall area", "− windows and doors", "× bricks per m²"]) },
       { h: "Rounding up", say: "You can't buy part of a bag of cement. When ordering materials, always round up to whole units.", html: P("23,2 bags means you buy <b>24</b> bags.") }
     ],
     example: { q: "A wall is 5 m long and 2,4 m high, with a 1 m² window. About 50 bricks cover 1 m². How many bricks are needed?", steps: ["Wall area: 5 × 2,4 = 12 m².", "Subtract the window: 12 − 1 = 11 m².", "11 × 50 = 550 bricks."] },
@@ -140,9 +140,9 @@ const UNITS_G12 = [
     caps: "CAPS Grade 12 Mathematical Literacy: Data handling (quartiles and box-and-whisker plots; comparing two data sets; evaluating claims made with data)",
     intention: "Today I am comparing two sets of data and checking claims.", prompt: "What makes you believe or doubt a statistic in the news?",
     lesson: [
-      { h: "Quartiles", say: "Order the data. The median splits it in half. The lower quartile is the middle of the lower half, and the upper quartile is the middle of the upper half.", html: chainRow(["Minimum", "Q1", "Median", "Q3", "Maximum"]) + P("Interquartile range (IQR) = Q3 − Q1") },
+      { h: "Quartiles", say: "Order the data. The median splits it in half. The lower quartile is the middle of the lower half. The upper quartile is the middle of the upper half.", html: chainRow(["Minimum", "Q1", "Median", "Q3", "Maximum"]) + P("Interquartile range (IQR) = Q3 − Q1") },
       { h: "Box-and-whisker plots", say: "A box-and-whisker plot draws the five-number summary. The box shows the middle half of the data. Comparing two boxes shows which group is higher, and which is more spread out.", html: P("A <b>longer box</b> means more spread in the middle half.") },
-      { h: "Checking claims", say: "When someone uses data to make a claim, ask: how big was the sample, who was asked, and does the average hide a big spread?", html: P("Ask: <b>who was asked, how many, and how spread out?</b>") }
+      { h: "Checking claims", say: "When someone uses data to make a claim, ask three questions. How big was the sample? Who was asked? Does the average hide a big spread?", html: P("Ask: <b>who was asked, how many, and how spread out?</b>") }
     ],
     example: { q: "Class A test marks: Q1 = 45, median = 60, Q3 = 70. Class B: Q1 = 55, median = 62, Q3 = 66. Compare them.", steps: ["The medians are close: 60 and 62.", "Class A's IQR is 70 − 45 = 25. Class B's is 66 − 55 = 11.", "Similar averages, but Class B's marks are much more consistent."] },
     questions: [
@@ -162,7 +162,7 @@ const UNITS_G12 = [
     intention: "Today I am judging whether games are fair, and what to expect over many plays.", prompt: "Why do you think lotteries make money?",
     lesson: [
       { h: "Theory and experiment", say: "Theoretical probability is what should happen, like a half for heads. Experimental probability is what actually happened in trials. With more trials, the results usually get closer to the theory.", html: chainRow(["10 tosses: 7 heads", "1 000 tosses: about 500 heads"]) },
-      { h: "Is the game fair?", say: "A game is fair if every player has the same chance of winning. If player A wins on a 1 or 2, and player B wins on 3, 4, 5 or 6, player B is twice as likely to win.", html: chainRow(["A: 2/6", "B: 4/6"]) + P("Not fair: B is twice as likely to win.") },
+      { h: "Is the game fair?", say: "A game is fair if every player has the same chance of winning. For example, player A wins on a 1 or 2. Player B wins on a 3, 4, 5 or 6. Then player B is twice as likely to win.", html: chainRow(["A: 2/6", "B: 4/6"]) + P("Not fair: B is twice as likely to win.") },
       { h: "Expected results", say: "Expected winnings are the average result over many plays: the chance of winning times the prize. Compare that with what you pay. Lotteries are designed so that players lose money on average.", html: P("A R5 ticket with a 1 in 1 000 chance of winning R2 000: expected winnings are R2 a ticket, so on average you lose <b>R3</b>.") }
     ],
     example: { q: "A spinner has 4 equal parts. 1 part wins R10, and 3 parts win nothing. It costs R3 to play. Is it worth playing?", steps: ["Chance of winning: 1/4.", "Expected winnings: 1/4 × R10 = R2,50.", "You pay R3, so on average you lose 50c a game."] },
@@ -226,14 +226,14 @@ const UNITS_G12 = [
     caps: "CAPS Grade 12 English Home Language: Listening and Speaking (prepared formal speech; interview skills; body language; register)",
     intention: "Today I am preparing for a formal speech and a job or university interview.", prompt: "What makes a speaker confident?",
     lesson: [
-      { h: "Structure a speech", say: "A good speech has a hook to grab attention, three clear points with examples, and a strong ending that the audience will remember.", html: chainRow(["Hook", "Point 1", "Point 2", "Point 3", "Memorable ending"]) + P("Use cue cards with keywords, not full sentences.") },
+      { h: "Structure a speech", say: "A good speech starts with something that gets the audience's attention. This is called a hook. Then it gives three clear points with examples. It ends strongly, so the audience remembers it.", html: chainRow(["Hook", "Point 1", "Point 2", "Point 3", "Memorable ending"]) + P("Use cue cards with keywords, not full sentences.") },
       { h: "Delivery", say: "Make eye contact, vary your pace and tone, pause for effect, stand still and use natural gestures. Practise out loud, not just in your head.", html: chainRow(["Eye contact", "Pace", "Pauses", "Posture"]) + P("Nerves are normal. <b>Breathe</b> slowly before you start.") },
       { h: "Interviews", say: "Research the organisation. Prepare answers to common questions, like tell me about yourself. Use examples from your life. Prepare a question to ask them at the end.", html: chainRow(["Research", "Prepare examples", "Dress appropriately", "Ask a question"]) + P("Use the <b>STAR</b> method: Situation, Task, Action, Result.") }
     ],
     example: { q: "Interview question: Tell me about a time you solved a problem. How could you answer using STAR?", steps: ["Situation and task: our school garden had no water during the drought.", "Action: I organised learners to collect grey water.", "Result: the garden survived and fed the school's nutrition programme."] },
     questions: [
       { type: "mcq", q: "What is a hook in a speech?", options: ["An opening that grabs attention", "The final sentence", "A cue card", "A question from the audience"], answer: 0, hints: ["It starts the speech.", "It catches interest.", "Grabs attention."], explain: "A hook grabs the audience's attention." },
-      { type: "mcq", q: "What should cue cards contain?", options: ["Keywords", "The full speech word for word", "Nothing", "Jokes only"], answer: 0, hints: ["You should not read.", "Just reminders.", "Keywords."], explain: "Keywords keep you on track without reading." },
+      { type: "mcq", q: "What should cue cards contain?", options: ["Keywords", "The full speech word for word", "Nothing", "Jokes only"], answer: 0, hints: ["You should not read.", "Just reminders.", "Keywords."], explain: "Keywords remind you what to say, so you do not need to read it all." },
       { type: "mcq", q: "What does STAR stand for?", options: ["Situation, Task, Action, Result", "Start, Talk, Answer, Repeat", "Smile, Talk, Ask, Return", "Speak, Think, Act, Rest"], answer: 0, hints: ["An interview method.", "Telling a story about yourself.", "Situation, Task, Action, Result."], explain: "Situation, Task, Action, Result." },
       { type: "mcq", q: "Which is good delivery?", options: ["Making eye contact and pausing", "Reading fast without looking up", "Mumbling", "Pacing nervously"], answer: 0, hints: ["Connect with the audience.", "Pauses help.", "Eye contact."], explain: "Eye contact and pauses improve delivery." },
       { type: "mcq", q: "Why prepare a question for the interviewer?", options: ["It shows interest and preparation", "It wastes time", "It is rude", "It is not allowed"], answer: 0, hints: ["Shows you researched.", "Shows interest.", "Interest and preparation."], explain: "It shows genuine interest and preparation." }
@@ -292,7 +292,7 @@ const UNITS_G12 = [
     lesson: [
       { h: "Variation", say: "Individuals in a population vary. Some variation is inherited, coming from mutations and sexual reproduction.", html: PICS("🐞🐞🐞", "Ladybirds with different patterns") + P("Without variation, selection cannot happen.") },
       { h: "Natural selection", say: "More offspring are born than can survive. Individuals with helpful traits survive and reproduce more. They pass these traits on. Over many generations, the population changes.", html: chainRow(["Variation", "Competition", "Survival of the fittest", "Inheritance", "Change over time"]) + P("Charles Darwin and Alfred Russel Wallace described this in the 1850s.") },
-      { h: "Evidence and South Africa", say: "Evidence comes from fossils, comparing anatomy, and DNA. South Africa's Cradle of Humankind is a World Heritage Site with important hominin fossils, such as Mrs Ples and Little Foot.", html: chainRow(["Fossils", "Anatomy", "DNA"]) + P("The <b>Cradle of Humankind</b> is near Johannesburg.") }
+      { h: "Evidence and South Africa", say: "Evidence comes from fossils, comparing anatomy, and DNA. South Africa's Cradle of Humankind is a World Heritage Site. It has important hominin fossils, such as Mrs Ples and Little Foot.", html: chainRow(["Fossils", "Anatomy", "DNA"]) + P("The <b>Cradle of Humankind</b> is near Johannesburg.") }
     ],
     example: { q: "Why do some bacteria survive antibiotics?", steps: ["Some bacteria have a mutation that gives resistance.", "The antibiotic kills the others; the resistant ones survive and multiply.", "Over time, the population becomes resistant. This is natural selection."] },
     questions: [

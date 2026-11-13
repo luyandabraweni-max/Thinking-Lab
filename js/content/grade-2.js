@@ -253,7 +253,7 @@ const UNITS_G2 = [
     intention: "Today I am learning how to stay safe on the road.", prompt: "What will you do the next time you cross a road?",
     lesson: [
       { h: "Stop, look and listen", say: "Before you cross, stop at the side of the road. Look right, look left and look right again. Listen for cars.", html: chainRow(["Stop", "Look right", "Look left", "Look right", "Listen"]) + P("Cross only when the road is <b>clear</b>. Walk, do not run.") },
-      { h: "Safe places to cross", say: "Cross at a pedestrian crossing, at a traffic light when the green man shows, or where a scholar patrol helps you.", html: PICS("🚸 🚦 🧍", "Crossing, traffic light, walking") + P("<b>Green man</b> means you may cross. <b>Red man</b> means wait.") },
+      { h: "Safe places to cross", say: "Cross the road at a pedestrian crossing. Or cross at a traffic light when the green man shows. Or cross where a scholar patrol helps you.", html: PICS("🚸 🚦 🧍", "Crossing, traffic light, walking") + P("<b>Green man</b> means you may cross. <b>Red man</b> means wait.") },
       { h: "In a car or taxi", say: "In a car, always wear your seatbelt. Get in and out on the side of the pavement, not the road.", html: PICS("🚗 🔒", "Car and seatbelt") + P("Buckle your <b>seatbelt</b> every time.") }
     ],
     example: { q: "Neo wants to cross the road to the shop. There is a pedestrian crossing a little further on. What should he do?", steps: ["Crossings are safer.", "Walk to the crossing.", "Stop, look right, left and right again, then cross."] },

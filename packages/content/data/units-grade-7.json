@@ -1272,7 +1272,7 @@
     },
     {
      "h": "Saying no with confidence",
-     "say": "To resist negative pressure: say no clearly, give a reason or suggest something else, and walk away if you need to. Choose friends who respect your no.",
+     "say": "To resist negative pressure, say no clearly. Give a reason, or suggest something else. Walk away if you need to. Choose friends who respect your no.",
      "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Say no</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Give a reason</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Suggest something else</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Walk away</span></div><p>Being <b>assertive</b> is clear and respectful.</p>"
     }
    ],
@@ -1974,7 +1974,7 @@
     },
     {
      "h": "Explaining your inference",
-     "say": "Always say which words led you to your inference. 'Her hand was already on the cold metal before she had decided' suggests curiosity is stronger than caution.",
+     "say": "Always say which words led you to your inference. Look at this line: 'Her hand was already on the cold metal before she had decided.' It suggests her curiosity is stronger than her caution.",
      "html": "<p>Inference + <b>quotation</b> + explanation</p>"
     }
    ],
