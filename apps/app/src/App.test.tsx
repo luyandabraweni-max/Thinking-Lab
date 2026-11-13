@@ -155,6 +155,26 @@ describe("learners on a shared device", () => {
   });
 });
 
+describe("handing the device to a learner", () => {
+  it("sets the pictures, signs the adult out and opens the learner's space; next time it only asks to start", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: "Hand over to Brave Meerkat" }));
+    expect(await screen.findByText("Step 1 of 2")).toBeInTheDocument();
+    for (const p of ["lion", "star", "moon"]) await user.click(screen.getByRole("button", { name: p }));
+    expect(await screen.findByText(/pictures are lion, then star, then moon/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Start Brave Meerkat's time" }));
+    await user.click(await screen.findByRole("button", { name: "Skip" })); // "How are you feeling?": no picture password needed
+    expect(screen.queryByRole("button", { name: "Sign out" })).toBeNull(); // the adult is signed out
+    await user.click(screen.getByRole("button", { name: "I'm done" }));
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: "Hand over to Brave Meerkat" }));
+    expect(await screen.findByText(/already has a picture password/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Start Brave Meerkat's time" }));
+    expect(await screen.findByRole("button", { name: "Skip" })).toBeInTheDocument();
+  });
+});
+
 describe("the Thinking Lab", () => {
   it("lets a learner solve Light the Village, reflect, and saves how they worked", async () => {
     const user = start();

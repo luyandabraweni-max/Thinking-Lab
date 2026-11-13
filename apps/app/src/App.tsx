@@ -1,15 +1,15 @@
-import type { Account } from "@tl/data";
+import type { Account, Learner } from "@tl/data";
 import { Button } from "@tl/ui";
 import type { SpeechEngine } from "@tl/voice";
 import { VoiceProvider } from "@tl/voice/react";
 import { useEffect, useRef, useState } from "react";
 import { SetPassword, SignIn } from "./modules/auth";
 import { LearnerHome } from "./modules/learner";
-import { LearnerPage, TeamHome } from "./modules/team";
+import { HandOver, LearnerPage, TeamHome } from "./modules/team";
 import { ServicesProvider, WhoContext, type DeviceLearner, type Services } from "./platform";
 
 // The shell: which module is on screen. Modules talk to each other only through the props passed here.
-type View = { at: "front" } | { at: "home" } | { at: "learner"; id: string } | { at: "space"; learner: DeviceLearner };
+type View = { at: "front" } | { at: "home" } | { at: "learner"; id: string } | { at: "handover"; learner: Learner } | { at: "space"; learner: DeviceLearner };
 
 /** `voice` lets tests use a scripted microphone; the app finds the device's own. */
 export function App({ services, voice }: { services: Services; voice?: { engine: SpeechEngine | null; say: (t: string) => Promise<void> } }) {
@@ -30,7 +30,7 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
     return () => { live = false; stop?.(); };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- once, when the app opens
   }, [services]);
-  const signOut = async () => { await services.auth.signOut(); signedInRef.current = false; setMe(null); setRegistering(false); setPw(null); setView({ at: "front" }); };
+  const signOut = async (next: View = { at: "front" }) => { await services.auth.signOut(); signedInRef.current = false; setMe(null); setRegistering(false); setPw(null); setView(next); };
   return (
     <ServicesProvider services={services}>
       <VoiceProvider {...(voice ?? {})}>
@@ -49,7 +49,8 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
               : view.at === "space" ? <LearnerHome learner={view.learner} onDone={() => setView({ at: "front" })} />
               : !me ? <SignIn key={String(registering)} registering={registering} onAdult={signedIn} onLearner={l => setView({ at: "space", learner: l })} />
               : view.at === "learner" ? <LearnerPage me={me} learnerId={view.id} onBack={() => setView({ at: "home" })} />
-              : <TeamHome me={me} onOpen={id => setView({ at: "learner", id })} />}
+              : view.at === "handover" ? <HandOver me={me} learner={view.learner} onStart={l => void signOut({ at: "space", learner: l })} onBack={() => setView({ at: "home" })} />
+              : <TeamHome me={me} onOpen={id => setView({ at: "learner", id })} onHandOver={learner => setView({ at: "handover", learner })} />}
           </main>
         </WhoContext.Provider>
       </VoiceProvider>

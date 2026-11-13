@@ -24,7 +24,7 @@ export function SignIn({ onAdult, onLearner, registering }: { onAdult: (a: Accou
     <Card>
       <h1>Who is learning?</h1>
       {learners.length ? <div className="tl-row">{learners.map(l => <Button key={l.learnerId} onClick={() => setStep({ at: "pictures", learner: l })}>{l.nickname}</Button>)}</div>
-        : <p>No learners use this device yet. A grown-up on your team can set it up for you from their account.</p>}
+        : <p>No learners use this device yet. Grown-ups: sign in, then press <b>Hand over</b> next to the learner's name.</p>}
       <div className="tl-row"><Button variant="quiet" onClick={() => setStep({ at: "doors" })}>Back</Button></div>
     </Card>);
   if (step.at === "pictures") return <PicturePassword learner={step.learner} onOk={() => onLearner(step.learner)} onBack={() => setStep({ at: "learners" })} />;

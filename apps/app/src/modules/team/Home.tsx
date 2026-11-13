@@ -12,7 +12,7 @@ import { useLoad } from "./use-load";
 const news = (n: number) => (n ? ` (${n} new message${n > 1 ? "s" : ""})` : "");
 
 /** An adult's dashboard: the learners they may see, with unread messages. Admins see no learner records. */
-export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: string) => void }) {
+export function TeamHome({ me, onOpen, onHandOver }: { me: Account; onOpen: (learnerId: string) => void; onHandOver: (learner: Learner) => void }) {
   const { store } = useServices();
   const [rows, reload] = useLoad(async () => {
     const s = store.as(me), ls = await s.learners();
@@ -28,13 +28,17 @@ export function TeamHome({ me, onOpen }: { me: Account; onOpen: (learnerId: stri
     {professional ? <SafeguardingPanel me={me} /> : null}
     <Card>
       <h1>{me.role === "guardian" ? "Your children" : "Your learners"}</h1>
+      {rows?.length ? <p className="tl-muted">When it's {me.role === "guardian" ? "your child's" : "a learner's"} turn on this device, press <b>Hand over</b>. It sets up the device for them and opens their learning space.</p> : null}
       {!rows ? <p>Loading…</p> : rows.length === 0 ? <p className="tl-muted">{me.role === "guardian" ? "No children yet. Add your child below to get started." : "No families have shared a learner with you yet."}</p> :
         <ul className="tl-stack" style={{ listStyle: "none", padding: 0, margin: 0 }}>
           {rows.map(({ L, unread }: { L: Learner; unread: number }) => (
             <li key={L.id}><Card as="article">
               <h2>{L.nickname}</h2>
               <p className="tl-muted">{L.curriculum}, {L.level}</p>
-              <div className="tl-row"><Button variant="primary" onClick={() => onOpen(L.id)} aria-label={`Open ${L.nickname}${news(unread)}`}>Open{news(unread)}</Button></div>
+              <div className="tl-row">
+                <Button variant="primary" onClick={() => onHandOver(L)}><span aria-hidden="true">👋</span>Hand over to {L.nickname}</Button>
+                <Button onClick={() => onOpen(L.id)} aria-label={`Open ${L.nickname}${news(unread)}`}>Open{news(unread)}</Button>
+              </div>
             </Card></li>))}
         </ul>}
       {professional ? <div className="tl-row"><Button onClick={() => setReviewing(true)}><span aria-hidden="true">📝</span>Review the adaptation rules</Button></div> : null}

@@ -68,7 +68,7 @@ function OpenOnDevice({ me, learner }: { me: Account; learner: Learner }) {
     if (next.length < 3) return setPics(next);
     await addDeviceLearner(store.kv, { learnerId: learner.id, nickname: learner.nickname, adultId: me.id }, next);
     setPics([]);
-    setMsg(`Done. ${learner.nickname}'s pictures are ${next.map(n => PICTURES[n]![1]).join(", then ")}. Help them remember, then they can choose "I'm a learner" on the front screen.`);
+    setMsg(`Done. ${learner.nickname}'s pictures are ${next.map(n => PICTURES[n]![1]).join(", then ")}. Help them remember. To give them the device now, use "Hand over to ${learner.nickname}" on your home screen.`);
   };
   return (
     <Card>
