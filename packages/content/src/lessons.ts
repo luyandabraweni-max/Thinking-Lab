@@ -24,7 +24,8 @@ export const curriculumShort = (curriculum: string) => (curriculum === "CAPS-SID
 
 export interface LessonChoice { curriculum?: string | null; maths?: "maths" | "lit" | null }
 const takesMaths = (u: CatalogueEntry, maths?: "maths" | "lit" | null) =>
-  !maths || u.grade < 10 || u.grade > 12 || !(u.subject === "Mathematical Literacy" || u.subject === "Mathematics") || (u.subject === "Mathematical Literacy") === (maths === "lit");
+  u.subject === "Advanced Programme Mathematics" ? maths !== "lit" // an extra subject for those who take Mathematics
+  : !maths || u.grade < 10 || u.grade > 12 || !(u.subject === "Mathematical Literacy" || u.subject === "Mathematics") || (u.subject === "Mathematical Literacy") === (maths === "lit");
 
 /** The lessons for one learning area at one level, and whether they are CAPS lessons standing in for the learner's own. */
 export function lessonsIn(all: CatalogueEntry[], area: Area, grade: number, c: LessonChoice): { units: CatalogueEntry[]; standIn: boolean } {

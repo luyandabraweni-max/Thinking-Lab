@@ -4381,6 +4381,1241 @@
    "parent": "Your child described waves and used the wave equation.",
    "teacher": "Shows describing wave properties, distinguishing transverse and longitudinal waves, and applying v = fλ.",
    "done": "Waves carry energy. v = f × λ."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ieb11-ma-functions-context",
+   "grade": 11,
+   "title": "Functions in context",
+   "topic": "Modelling with functions",
+   "category": "Problem Solving",
+   "caps": "IEB Mathematics (CAPS content, IEB assessment): Grade 11 functions, with emphasis on interpreting graphs and parameters in real contexts",
+   "intention": "Today I am interpreting a parabola in a real situation.",
+   "prompt": "What shape does a ball make when you throw it?",
+   "lesson": [
+    {
+     "h": "A parabola in context",
+     "say": "The height of a ball is h equals minus 5 t squared plus 20 t, where t is time in seconds. The negative sign means the parabola opens downwards: the ball goes up, then comes down.",
+     "html": "<p>h = −5t² + 20t</p>"
+    },
+    {
+     "h": "Key points mean something",
+     "say": "The turning point is the maximum height. The t-intercepts show when the ball is at ground level. Always say what each point means in the context.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Turning point: highest point</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">t-intercepts: on the ground</span></div>"
+    },
+    {
+     "h": "Finding the turning point",
+     "say": "For a parabola a t squared plus b t, the turning point is at t equals minus b over 2a. Here that is minus 20 over minus 10, which is 2 seconds.",
+     "html": "<p>t = −b ÷ 2a = −20 ÷ (−10) = <b>2 s</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Find the maximum height of h = −5t² + 20t.",
+    "steps": [
+     "The turning point is at t = 2 s.",
+     "h = −5(2)² + 20(2) = −20 + 40.",
+     "The maximum height is 20 m."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why does h = −5t² + 20t open downwards?",
+     "options": [
+      "The coefficient of t² is negative",
+      "The 20 is positive",
+      "t is time",
+      "It has no constant"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the t² term.",
+      "It is −5.",
+      "Negative opens down."
+     ],
+     "explain": "A negative t² coefficient makes the parabola open downwards."
+    },
+    {
+     "type": "num",
+     "q": "At what time is the ball at its highest, in seconds?",
+     "answer": "2",
+     "options": [
+      "2",
+      "4",
+      "20",
+      "10"
+     ],
+     "hints": [
+      "t = −b ÷ 2a.",
+      "−20 ÷ (−10).",
+      "2."
+     ],
+     "explain": "t = −20 ÷ (−10) = 2 s."
+    },
+    {
+     "type": "num",
+     "q": "When does the ball land? Solve −5t² + 20t = 0 for t > 0, in seconds.",
+     "answer": "4",
+     "options": [
+      "4",
+      "2",
+      "20",
+      "5"
+     ],
+     "hints": [
+      "Factorise: −5t(t − 4) = 0.",
+      "t = 0 or t = 4.",
+      "t > 0."
+     ],
+     "explain": "−5t(t − 4) = 0 gives t = 4 s."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the turning point represent here?",
+     "options": [
+      "The ball's maximum height and when it happens",
+      "The start of the throw",
+      "Where the ball lands",
+      "The speed of the ball"
+     ],
+     "answer": 0,
+     "hints": [
+      "The highest point.",
+      "Of the ball's path.",
+      "Maximum height."
+     ],
+     "explain": "It gives the maximum height and its time."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is only t > 0 sensible here?",
+     "options": [
+      "Time after the throw can't be negative",
+      "Parabolas are always positive",
+      "The ball is heavy",
+      "It is a rule of algebra"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about the context.",
+      "Time starts at the throw.",
+      "No negative time."
+     ],
+     "explain": "In this context, time starts at 0."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Linking points to the context",
+     "Using t = −b ÷ 2a",
+     "Factorising to find roots",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used a parabola to work out the height and flight time of a ball.",
+   "teacher": "Shows interpreting a quadratic model, finding and interpreting turning points and roots, and applying contextual restrictions.",
+   "done": "Every key point on the graph means something in the real situation."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ieb11-ma-probability",
+   "grade": 11,
+   "title": "Probability: dependent or independent?",
+   "topic": "Probability: reasoning",
+   "category": "Flexible Thinking",
+   "caps": "IEB Mathematics (CAPS content, IEB assessment): Grade 11 probability: Venn diagrams, independent and mutually exclusive events, with justification",
+   "intention": "Today I am deciding whether events are independent, and proving it.",
+   "prompt": "Does today's weather change the chance of tomorrow's?",
+   "lesson": [
+    {
+     "h": "Mutually exclusive",
+     "say": "Two events are mutually exclusive if they can't happen together. Then P of A or B equals P of A plus P of B.",
+     "html": "<p>Mutually exclusive: P(A and B) = 0</p>"
+    },
+    {
+     "h": "Independent",
+     "say": "Two events are independent if one doesn't change the chance of the other. Then P of A and B equals P of A times P of B.",
+     "html": "<p>Independent: P(A and B) = P(A) × P(B)</p>"
+    },
+    {
+     "h": "Proving it",
+     "say": "IEB questions often ask you to prove independence. Calculate P of A times P of B, and compare it with P of A and B. If they are equal, the events are independent.",
+     "html": "<p>Compare <b>P(A) × P(B)</b> with <b>P(A and B)</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "P(A) = 0.5, P(B) = 0.4 and P(A and B) = 0.2. Are A and B independent?",
+    "steps": [
+     "P(A) × P(B) = 0.5 × 0.4 = 0.2.",
+     "P(A and B) = 0.2.",
+     "They are equal, so A and B are independent."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "P(A) = 0.3, P(B) = 0.5 and P(A and B) = 0.15. Are A and B independent?",
+     "options": [
+      "Yes, because 0.3 × 0.5 = 0.15",
+      "No",
+      "Only if they are mutually exclusive",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply P(A) and P(B).",
+      "0.15.",
+      "Compare."
+     ],
+     "explain": "0.3 × 0.5 = 0.15 = P(A and B), so they are independent."
+    },
+    {
+     "type": "mcq",
+     "q": "P(A) = 0.6, P(B) = 0.5 and P(A and B) = 0.2. Are A and B independent?",
+     "options": [
+      "No, because 0.6 × 0.5 = 0.3, not 0.2",
+      "Yes",
+      "Yes, because 0.2 is small",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "0.6 × 0.5 = 0.3.",
+      "Is that 0.2?",
+      "No."
+     ],
+     "explain": "0.3 ≠ 0.2, so they are not independent."
+    },
+    {
+     "type": "num",
+     "q": "A and B are mutually exclusive. P(A) = 0.25 and P(B) = 0.4. Find P(A or B).",
+     "answer": "0.65",
+     "options": [
+      "0.65",
+      "0.1",
+      "0.15",
+      "1"
+     ],
+     "hints": [
+      "Mutually exclusive: add.",
+      "0.25 + 0.4.",
+      "0.65."
+     ],
+     "explain": "0.25 + 0.4 = 0.65."
+    },
+    {
+     "type": "mcq",
+     "q": "Can two events with non-zero probabilities be both independent and mutually exclusive?",
+     "options": [
+      "No",
+      "Yes, always",
+      "Only with coins",
+      "Only with dice"
+     ],
+     "answer": 0,
+     "hints": [
+      "Mutually exclusive: P(A and B) = 0.",
+      "Independent: P(A and B) = P(A) × P(B) > 0.",
+      "They contradict."
+     ],
+     "explain": "If both probabilities are above 0, the product can't be 0."
+    },
+    {
+     "type": "mcq",
+     "q": "Rolling a 6 on a dice, then tossing heads on a coin. These events are…",
+     "options": [
+      "independent",
+      "mutually exclusive",
+      "the same event",
+      "impossible"
+     ],
+     "answer": 0,
+     "hints": [
+      "Does the dice affect the coin?",
+      "No.",
+      "Independent."
+     ],
+     "explain": "One doesn't affect the other."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two values",
+     "Mutually exclusive versus independent",
+     "Writing the conclusion",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child tested whether events are independent and proved it with calculations.",
+   "teacher": "Shows distinguishing independent and mutually exclusive events and justifying independence numerically.",
+   "done": "Independent if P(A) × P(B) = P(A and B). Show the comparison."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "English Home Language",
+   "domain": "Communication and Expression",
+   "id": "ieb11-en-text-visual",
+   "grade": 11,
+   "title": "Comparing a text and an image",
+   "topic": "Comparative analysis",
+   "category": "Reflection",
+   "caps": "IEB English Home Language (CAPS content, IEB assessment): Grade 11 comparative analysis of a written text and a visual source",
+   "intention": "Today I am comparing how a poem and an image present the same idea.",
+   "prompt": "Which tells a story better, a picture or words?",
+   "passage": "<div class=\"passage-text\"><p><b>Inheritance</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>My grandmother's hands were maps:<br>rivers of blue under paper skin,<br>a scar where the paraffin stove<br>once argued with her.</p>\n<p>She never wrote a letter in her life,<br>yet every recipe I know<br>is written in the margins of her palms,<br>and I am still learning to read them.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the source",
+     "say": "Read the source, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Inheritance</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>My grandmother's hands were maps:<br>rivers of blue under paper skin,<br>a scar where the paraffin stove<br>once argued with her.</p>\n<p>She never wrote a letter in her life,<br>yet every recipe I know<br>is written in the margins of her palms,<br>and I am still learning to read them.</p></div>"
+    },
+    {
+     "h": "The image",
+     "say": "Imagine a photograph: an old woman's hands, close up, holding a wooden spoon over a pot. The light falls on the lines and scars of her skin.",
+     "html": "<p><b>Image (described):</b> close-up of an old woman's hands, holding a wooden spoon over a pot; light on the lines and scars.</p>"
+    },
+    {
+     "h": "Comparing",
+     "say": "Both present hands as carrying history. The poem uses metaphor, hands as maps and margins, while the photograph uses close-up framing and light. Compare the idea, then the methods.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Shared idea</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Poem's methods</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Image's methods</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Compare how both texts present the grandmother's hands.",
+    "steps": [
+     "Shared idea: her hands hold her life story and knowledge.",
+     "The poem uses the map and margin metaphors.",
+     "The image uses a close-up and light to draw attention to scars and lines."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does the metaphor 'my grandmother's hands were maps' suggest?",
+     "options": [
+      "Her hands record her life journey",
+      "She was a geography teacher",
+      "She drew maps",
+      "Her hands were lost"
+     ],
+     "answer": 0,
+     "hints": [
+      "Maps show journeys.",
+      "Her hands show her life.",
+      "A record of her life."
+     ],
+     "explain": "Her hands record where life has taken her."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'every recipe I know is written in the margins of her palms' suggest?",
+     "options": [
+      "Her knowledge was passed on through doing, not writing",
+      "She wrote recipes on her hands",
+      "She had no recipes",
+      "The speaker can't cook"
+     ],
+     "answer": 0,
+     "hints": [
+      "She never wrote a letter.",
+      "Yet the speaker knows her recipes.",
+      "Learnt by watching."
+     ],
+     "explain": "Her knowledge was passed down through cooking together."
+    },
+    {
+     "type": "mcq",
+     "q": "Which camera technique matches the poem's focus on detail?",
+     "options": [
+      "A close-up",
+      "A wide landscape shot",
+      "A blurred background only",
+      "A picture of a city"
+     ],
+     "answer": 0,
+     "hints": [
+      "The poem looks closely.",
+      "At the hands.",
+      "Close-up."
+     ],
+     "explain": "A close-up mirrors the poem's attention to detail."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sentence compares rather than just describes?",
+     "options": [
+      "While the poem uses metaphor, the photograph uses light to reveal the same history.",
+      "The poem has two stanzas.",
+      "The photo shows hands.",
+      "Both are good."
+     ],
+     "answer": 0,
+     "hints": [
+      "Comparison links both texts.",
+      "Look for 'while'.",
+      "The first."
+     ],
+     "explain": "It links the methods of both texts to one idea."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'I am still learning to read them' suggest?",
+     "options": [
+      "The speaker is still discovering what the grandmother taught",
+      "The speaker can't read",
+      "The hands have words",
+      "The grandmother is still teaching reading"
+     ],
+     "answer": 0,
+     "hints": [
+      "Reading the palms is a metaphor.",
+      "Understanding her legacy.",
+      "Still discovering."
+     ],
+     "explain": "The speaker is still understanding her grandmother's legacy."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding the shared idea",
+     "Comparing methods",
+     "Using comparison words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared how a poem and an image present the same idea.",
+   "teacher": "Shows identifying shared themes across a written and a visual text and comparing literary and visual techniques.",
+   "done": "Find the shared idea, then compare how each text presents it."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "English Home Language",
+   "domain": "Communication and Expression",
+   "id": "ieb11-en-argument-eval",
+   "grade": 11,
+   "title": "Evaluating an argument",
+   "topic": "Critical reading: fallacies",
+   "category": "Flexible Thinking",
+   "caps": "IEB English Home Language (CAPS content, IEB assessment): Grade 11 critical reading: evaluating arguments and identifying fallacies",
+   "intention": "Today I am testing whether an argument holds up.",
+   "prompt": "Have you ever won an argument without really being right?",
+   "lesson": [
+    {
+     "h": "Claim, reason, evidence",
+     "say": "A sound argument makes a claim, gives reasons and supports them with evidence. Weak arguments skip the evidence or use tricks instead.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Claim</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reason</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Evidence</span></div>"
+    },
+    {
+     "h": "Common fallacies",
+     "say": "A fallacy is a flaw in reasoning. An ad hominem attacks the person instead of the argument. A false dilemma pretends there are only two options. A hasty generalisation draws a big conclusion from too few examples.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Ad hominem</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">False dilemma</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Hasty generalisation</span></div>"
+    },
+    {
+     "h": "Evaluating",
+     "say": "To evaluate, say whether the reasoning is sound, name any flaw, and explain how it weakens the argument.",
+     "html": "<p>Name the flaw, then explain <b>why it weakens</b> the argument.</p>"
+    }
+   ],
+   "example": {
+    "q": "'You can't trust Thandi's idea about recycling; she drives a big car.' Evaluate.",
+    "steps": [
+     "The claim attacks Thandi, not her idea.",
+     "This is an ad hominem fallacy.",
+     "Her car doesn't make her recycling argument wrong, so the reasoning is weak."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "'Either we ban all phones, or learners will fail.' What fallacy is this?",
+     "options": [
+      "False dilemma",
+      "Ad hominem",
+      "Hasty generalisation",
+      "None"
+     ],
+     "answer": 0,
+     "hints": [
+      "Only two options are offered.",
+      "Are there others?",
+      "False dilemma."
+     ],
+     "explain": "It ignores other options, such as rules for phone use."
+    },
+    {
+     "type": "mcq",
+     "q": "'My two cousins hated that school, so it's a terrible school.' What fallacy is this?",
+     "options": [
+      "Hasty generalisation",
+      "False dilemma",
+      "Ad hominem",
+      "None"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many examples?",
+      "Two.",
+      "Too few."
+     ],
+     "explain": "Two examples are too few for a big conclusion."
+    },
+    {
+     "type": "mcq",
+     "q": "'He's only 16, so his views on climate change are worthless.' What fallacy is this?",
+     "options": [
+      "Ad hominem",
+      "False dilemma",
+      "Hasty generalisation",
+      "None"
+     ],
+     "answer": 0,
+     "hints": [
+      "It attacks the person.",
+      "Not the argument.",
+      "Ad hominem."
+     ],
+     "explain": "It dismisses the person, not the argument."
+    },
+    {
+     "type": "mcq",
+     "q": "What makes an argument strong?",
+     "options": [
+      "Reasons supported by reliable evidence",
+      "Loud repetition",
+      "Attacking opponents",
+      "Using long words"
+     ],
+     "answer": 0,
+     "hints": [
+      "Claim, reason…",
+      "…evidence.",
+      "Reliable evidence."
+     ],
+     "explain": "Strong arguments support reasons with reliable evidence."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best evaluation?",
+     "options": [
+      "The argument is weak because it attacks the speaker rather than answering her point.",
+      "The argument is bad.",
+      "I disagree.",
+      "The argument is long."
+     ],
+     "answer": 0,
+     "hints": [
+      "Name the flaw.",
+      "Explain its effect.",
+      "The first."
+     ],
+     "explain": "It names the flaw and explains why it weakens the argument."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Claim, reason, evidence",
+     "Naming the fallacy",
+     "Explaining the weakness",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child tested arguments for flaws in reasoning.",
+   "teacher": "Shows analysing argument structure, identifying common fallacies and evaluating their effect on persuasiveness.",
+   "done": "Check the claim, reasons and evidence, and name any flaw."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Life Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ieb11-ls-data-tables",
+   "grade": 11,
+   "title": "Data in tables",
+   "topic": "Data-based questions: tables",
+   "caps": "IEB Life Sciences (CAPS content, IEB assessment): Grade 11 scientific skills: interpreting tables, calculating percentages and drawing conclusions",
+   "intention": "Today I am interpreting a data table and drawing a conclusion.",
+   "prompt": "How would you show that a vaccine works?",
+   "lesson": [
+    {
+     "h": "Reading a table",
+     "say": "A table shows data in rows and columns. Read the headings and units first. In this study, 1 000 people were vaccinated and 1 000 were not.",
+     "html": "<p>Vaccinated: 1 000 people, 20 got sick.</p><p>Not vaccinated: 1 000 people, 150 got sick.</p>"
+    },
+    {
+     "h": "Calculating percentages",
+     "say": "To compare groups, convert to percentages. 20 out of 1 000 is 2 percent. 150 out of 1 000 is 15 percent.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">20 ÷ 1 000 = 2%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">150 ÷ 1 000 = 15%</span></div>"
+    },
+    {
+     "h": "Drawing a conclusion",
+     "say": "A conclusion answers the aim using the data. The vaccinated group had a much lower rate of illness, so the vaccine reduced illness in this study.",
+     "html": "<p>Conclusion = answer to the aim + <b>data</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "By how many percentage points did vaccination reduce illness?",
+    "steps": [
+     "Unvaccinated: 15%.",
+     "Vaccinated: 2%.",
+     "15 − 2 = 13 percentage points."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "20 out of 1 000 vaccinated people got sick. What percentage is that? (Type the number only.)",
+     "answer": "2",
+     "options": [
+      "2",
+      "20",
+      "0.2",
+      "50"
+     ],
+     "hints": [
+      "20 ÷ 1 000.",
+      "= 0.02.",
+      "2%."
+     ],
+     "explain": "20 ÷ 1 000 = 0.02 = 2%."
+    },
+    {
+     "type": "num",
+     "q": "150 out of 1 000 unvaccinated people got sick. What percentage is that? (Type the number only.)",
+     "answer": "15",
+     "options": [
+      "15",
+      "150",
+      "1.5",
+      "85"
+     ],
+     "hints": [
+      "150 ÷ 1 000.",
+      "= 0.15.",
+      "15%."
+     ],
+     "explain": "150 ÷ 1 000 = 15%."
+    },
+    {
+     "type": "mcq",
+     "q": "Which conclusion is supported by the data?",
+     "options": [
+      "In this study, vaccinated people were less likely to get sick.",
+      "Vaccines cure all diseases.",
+      "Nobody vaccinated got sick.",
+      "The study proves nothing."
+     ],
+     "answer": 0,
+     "hints": [
+      "Stay within the data.",
+      "2% against 15%.",
+      "Less likely."
+     ],
+     "explain": "It is supported and doesn't overstate the result."
+    },
+    {
+     "type": "mcq",
+     "q": "Why were the two groups the same size?",
+     "options": [
+      "To make a fair comparison",
+      "To save money",
+      "Because 1 000 is lucky",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Comparing groups.",
+      "Equal sizes help.",
+      "Fairness."
+     ],
+     "explain": "Equal group sizes make comparison fairer."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is a large sample, like 1 000, useful?",
+     "options": [
+      "It makes the results more reliable",
+      "It makes the study shorter",
+      "It changes the aim",
+      "It removes the need for a control"
+     ],
+     "answer": 0,
+     "hints": [
+      "Odd results matter less.",
+      "More data.",
+      "Reliability."
+     ],
+     "explain": "Large samples improve reliability."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Reading the headings",
+     "Converting to percentages",
+     "Linking the conclusion to the aim",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child interpreted a data table and drew a careful conclusion.",
+   "teacher": "Shows extracting data from tables, comparing groups using percentages and drawing evidence-based conclusions.",
+   "done": "Read the headings, convert to percentages, and conclude with data."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Life Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ieb11-ls-claims",
+   "grade": 11,
+   "title": "Evaluating a health claim",
+   "topic": "Science in society",
+   "caps": "IEB Life Sciences (CAPS content, IEB assessment): Grade 11 nature of science: evaluating claims, sample size, controls and sources",
+   "intention": "Today I am testing a health claim like a scientist.",
+   "prompt": "Have you seen a health 'miracle' online?",
+   "passage": "<div class=\"passage-text\"><p><b>Source: a social-media post</b> <span class=\"muted\">(made up)</span></p>\n<p>\"Scientists PROVE that drinking 3 cups of rooibos tea a day stops heart disease! A study of 40 people found that tea drinkers had lower blood pressure after 2 weeks. Share before Big Pharma deletes this!\"</p></div>",
+   "lesson": [
+    {
+     "h": "Read the source",
+     "say": "Read the source, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Source: a social-media post</b> <span class=\"muted\">(made up)</span></p>\n<p>\"Scientists PROVE that drinking 3 cups of rooibos tea a day stops heart disease! A study of 40 people found that tea drinkers had lower blood pressure after 2 weeks. Share before Big Pharma deletes this!\"</p></div>"
+    },
+    {
+     "h": "Questions to ask",
+     "say": "How many people were studied? Was there a control group? How long did the study last? Who funded it? Was it published and checked by other scientists?",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sample size</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Control</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Duration</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Source</span></div>"
+    },
+    {
+     "h": "What it does and doesn't show",
+     "say": "Lower blood pressure after two weeks is not the same as preventing heart disease. A small, short study can suggest an idea, but it can't prove it.",
+     "html": "<p>Suggests ≠ <b>proves</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Identify two weaknesses in the rooibos claim.",
+    "steps": [
+     "The sample is small: only 40 people.",
+     "The study lasted only 2 weeks, but heart disease develops over years.",
+     "So it can't show that tea 'stops heart disease'."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why is a sample of 40 people a weakness?",
+     "options": [
+      "It is too small to be reliable",
+      "40 is an odd number",
+      "It is too large",
+      "It isn't a weakness"
+     ],
+     "answer": 0,
+     "hints": [
+      "Small samples…",
+      "…can give misleading results.",
+      "Too small."
+     ],
+     "explain": "Small samples are less reliable."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is 2 weeks too short to support the claim?",
+     "options": [
+      "Heart disease develops over years",
+      "Tea takes a month to brew",
+      "Blood pressure never changes",
+      "It is long enough"
+     ],
+     "answer": 0,
+     "hints": [
+      "The claim is about heart disease.",
+      "How long does that take?",
+      "Years."
+     ],
+     "explain": "A 2-week study can't show long-term prevention."
+    },
+    {
+     "type": "mcq",
+     "q": "What is missing that would make the study more valid?",
+     "options": [
+      "A control group that drank no tea",
+      "More capital letters",
+      "A celebrity",
+      "A shorter study"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do you compare with?",
+      "People without tea.",
+      "A control group."
+     ],
+     "explain": "A control group lets you compare fairly."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the problem with the word 'PROVE'?",
+     "options": [
+      "One small study can't prove a claim",
+      "It is spelt wrongly",
+      "Scientists never use words",
+      "It is too short"
+     ],
+     "answer": 0,
+     "hints": [
+      "Science builds evidence.",
+      "Over many studies.",
+      "One study isn't proof."
+     ],
+     "explain": "One small study can suggest, not prove."
+    },
+    {
+     "type": "mcq",
+     "q": "'Share before Big Pharma deletes this!' is an example of…",
+     "options": [
+      "an emotional appeal that avoids evidence",
+      "scientific evidence",
+      "a control group",
+      "a hypothesis"
+     ],
+     "answer": 0,
+     "hints": [
+      "It creates urgency and suspicion.",
+      "No evidence.",
+      "Emotional appeal."
+     ],
+     "explain": "It uses fear and urgency instead of evidence."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking the five questions",
+     "Suggests versus proves",
+     "Spotting emotional appeals",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child evaluated a health claim like a scientist.",
+   "teacher": "Shows evaluating scientific claims in terms of sample size, controls, duration and source reliability.",
+   "done": "Ask: how many, compared with what, for how long, and who says so?"
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Advanced Programme Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "apm11-induction",
+   "grade": 11,
+   "title": "Proof by induction",
+   "topic": "Algebra: mathematical induction",
+   "category": "Pattern Thinking",
+   "caps": "IEB Advanced Programme Mathematics: Module 1, Algebra (proof by mathematical induction)",
+   "intention": "Today I am proving statements for every natural number using induction.",
+   "prompt": "How do you know every domino in a row will fall?",
+   "lesson": [
+    {
+     "h": "The domino idea",
+     "say": "Induction proves a statement for every natural number. Show the first case is true, then show that if any case is true, the next one is true too. Like dominoes, they all fall.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Base case</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Assume true for k</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Prove for k + 1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Conclude</span></div>"
+    },
+    {
+     "h": "An example",
+     "say": "Prove that 1 plus 2 plus up to n equals n times n plus 1 over 2. When n is 1, both sides are 1. Assume it is true for k.",
+     "html": "<p>1 + 2 + … + n = n(n + 1) ÷ 2</p>"
+    },
+    {
+     "h": "The inductive step",
+     "say": "Add k plus 1 to both sides. k times k plus 1 over 2, plus k plus 1, equals k plus 1 times k plus 2, over 2. That is the formula for k plus 1, so it is true for all n.",
+     "html": "<p>k(k + 1)/2 + (k + 1) = <b>(k + 1)(k + 2)/2</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Check the base case of 1 + 3 + 5 + … + (2n − 1) = n².",
+    "steps": [
+     "When n = 1, the left side is 1.",
+     "The right side is 1² = 1.",
+     "Both sides are equal, so the base case holds."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the first step of proof by induction?",
+     "options": [
+      "Show the base case is true",
+      "Assume it is false",
+      "Check 10 examples",
+      "Differentiate"
+     ],
+     "answer": 0,
+     "hints": [
+      "The first domino.",
+      "Usually n = 1.",
+      "Base case."
+     ],
+     "explain": "Start by proving the base case."
+    },
+    {
+     "type": "mcq",
+     "q": "In the inductive step, what do you assume?",
+     "options": [
+      "The statement is true for n = k",
+      "It is true for all n",
+      "It is false for n = k",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "One domino falls.",
+      "For some k.",
+      "True for n = k."
+     ],
+     "explain": "You assume it holds for n = k."
+    },
+    {
+     "type": "mcq",
+     "q": "What must you then prove?",
+     "options": [
+      "That it is true for n = k + 1",
+      "That it is true for n = 1 again",
+      "That k is even",
+      "That it is false"
+     ],
+     "answer": 0,
+     "hints": [
+      "The next domino.",
+      "k + 1.",
+      "True for k + 1."
+     ],
+     "explain": "Show that truth for k implies truth for k + 1."
+    },
+    {
+     "type": "num",
+     "q": "Using 1 + 2 + … + n = n(n + 1) ÷ 2, find 1 + 2 + … + 10.",
+     "answer": "55",
+     "options": [
+      "55",
+      "110",
+      "50",
+      "100"
+     ],
+     "hints": [
+      "n = 10.",
+      "10 × 11 ÷ 2.",
+      "55."
+     ],
+     "explain": "10 × 11 ÷ 2 = 55."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are both steps needed?",
+     "options": [
+      "The base case starts the chain, and the step keeps it going",
+      "Only one is needed",
+      "To make the proof longer",
+      "Examiners like two steps"
+     ],
+     "answer": 0,
+     "hints": [
+      "Dominoes need a first push…",
+      "…and each must knock the next.",
+      "Both."
+     ],
+     "explain": "Without either step, the chain breaks."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The domino picture",
+     "Writing the k + 1 statement",
+     "Using the assumption",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt to prove statements for every number using mathematical induction.",
+   "teacher": "Shows structuring a proof by induction: base case, inductive hypothesis, inductive step and conclusion.",
+   "done": "Prove the first case, assume k, prove k + 1, then conclude."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Advanced Programme Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "apm11-complex",
+   "grade": 11,
+   "title": "Complex numbers",
+   "topic": "Algebra: complex numbers",
+   "category": "Flexible Thinking",
+   "caps": "IEB Advanced Programme Mathematics: Module 1, Algebra (complex numbers: arithmetic and solving quadratics)",
+   "intention": "Today I am working with complex numbers.",
+   "prompt": "What number squared gives −1?",
+   "lesson": [
+    {
+     "h": "The number i",
+     "say": "There is no real number whose square is minus 1. We define i so that i squared equals minus 1. Numbers like 3 plus 2i are complex numbers.",
+     "html": "<p>i² = −1 · complex number: <b>a + bi</b></p>"
+    },
+    {
+     "h": "Adding and multiplying",
+     "say": "Add the real parts and the imaginary parts separately. When multiplying, expand the brackets and replace i squared with minus 1.",
+     "html": "<p>(1 + 2i)(3 − i) = 3 − i + 6i − 2i² = <b>5 + 5i</b></p>"
+    },
+    {
+     "h": "Solving quadratics",
+     "say": "x squared plus 4 equals 0 has no real solutions, but it has complex ones: x equals 2i or minus 2i.",
+     "html": "<p>x² = −4 → <b>x = ±2i</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Simplify (2 + 3i) + (4 − i).",
+    "steps": [
+     "Real parts: 2 + 4 = 6.",
+     "Imaginary parts: 3i − i = 2i.",
+     "6 + 2i."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is i²?",
+     "options": [
+      "−1",
+      "1",
+      "i",
+      "0"
+     ],
+     "answer": 0,
+     "hints": [
+      "By definition.",
+      "No real number does this.",
+      "−1."
+     ],
+     "explain": "i² = −1 by definition."
+    },
+    {
+     "type": "mcq",
+     "q": "Simplify (3 + 2i) + (1 + 4i).",
+     "options": [
+      "4 + 6i",
+      "4 + 8i",
+      "3 + 6i",
+      "10i"
+     ],
+     "answer": 0,
+     "hints": [
+      "3 + 1 = 4.",
+      "2i + 4i = 6i.",
+      "4 + 6i."
+     ],
+     "explain": "(3 + 1) + (2 + 4)i = 4 + 6i."
+    },
+    {
+     "type": "mcq",
+     "q": "Simplify (1 + 2i)(3 − i).",
+     "options": [
+      "5 + 5i",
+      "3 − 2i",
+      "1 + 5i",
+      "5 − 5i"
+     ],
+     "answer": 0,
+     "hints": [
+      "3 − i + 6i − 2i².",
+      "−2i² = +2.",
+      "5 + 5i."
+     ],
+     "explain": "3 + 5i + 2 = 5 + 5i."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve x² + 9 = 0.",
+     "options": [
+      "x = ±3i",
+      "x = ±3",
+      "x = 9i",
+      "No solution"
+     ],
+     "answer": 0,
+     "hints": [
+      "x² = −9.",
+      "√(−9) = 3i.",
+      "±3i."
+     ],
+     "explain": "x = ±3i."
+    },
+    {
+     "type": "mcq",
+     "q": "What is i⁴?",
+     "options": [
+      "1",
+      "−1",
+      "i",
+      "−i"
+     ],
+     "answer": 0,
+     "hints": [
+      "i⁴ = (i²)².",
+      "(−1)².",
+      "1."
+     ],
+     "explain": "i⁴ = (−1)² = 1."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Remembering i² = −1",
+     "Collecting real and imaginary parts",
+     "Solving with ±i",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child calculated with complex numbers and used them to solve equations.",
+   "teacher": "Shows performing arithmetic with complex numbers and solving quadratics with complex roots.",
+   "done": "i² = −1. Keep real and imaginary parts separate."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Advanced Programme Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "apm11-limits",
+   "grade": 11,
+   "title": "Limits and continuity",
+   "topic": "Calculus: limits",
+   "category": "Pattern Thinking",
+   "caps": "IEB Advanced Programme Mathematics: Module 1, Calculus (limits and continuity)",
+   "intention": "Today I am finding limits and testing whether a function is continuous.",
+   "prompt": "Can you get closer and closer to something without reaching it?",
+   "lesson": [
+    {
+     "h": "What a limit is",
+     "say": "The limit of f of x as x approaches a is the value f of x gets closer to as x gets closer to a. The function doesn't need to be defined at a itself.",
+     "html": "<p>lim (x → a) f(x)</p>"
+    },
+    {
+     "h": "Simplify first",
+     "say": "Substituting x equals 2 into x squared minus 4 over x minus 2 gives 0 over 0. Factorise first: x minus 2 times x plus 2, over x minus 2, simplifies to x plus 2. The limit is 4.",
+     "html": "<p>(x² − 4) ÷ (x − 2) = x + 2 → limit as x → 2 is <b>4</b></p>"
+    },
+    {
+     "h": "Continuity",
+     "say": "A function is continuous at a if it is defined at a, the limit exists there, and they are equal. You could draw the graph there without lifting your pen.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">f(a) defined</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The limit exists</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">They are equal</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Find the limit of (x² − 9) ÷ (x − 3) as x → 3.",
+    "steps": [
+     "Substituting gives 0 ÷ 0, so simplify.",
+     "(x − 3)(x + 3) ÷ (x − 3) = x + 3.",
+     "As x → 3, the limit is 6."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the limit of (2x + 1) as x → 3.",
+     "answer": "7",
+     "options": [
+      "7",
+      "6",
+      "3",
+      "5"
+     ],
+     "hints": [
+      "Substitute x = 3.",
+      "2(3) + 1.",
+      "7."
+     ],
+     "explain": "2(3) + 1 = 7."
+    },
+    {
+     "type": "num",
+     "q": "Find the limit of (x² − 4) ÷ (x − 2) as x → 2.",
+     "answer": "4",
+     "options": [
+      "4",
+      "0",
+      "2",
+      "Undefined"
+     ],
+     "hints": [
+      "Factorise the top.",
+      "Simplify to x + 2.",
+      "2 + 2."
+     ],
+     "explain": "It simplifies to x + 2, so the limit is 4."
+    },
+    {
+     "type": "mcq",
+     "q": "Substituting gives 0 ÷ 0. What should you do?",
+     "options": [
+      "Simplify, for example by factorising",
+      "Say the limit is 0",
+      "Say the limit doesn't exist",
+      "Give up"
+     ],
+     "answer": 0,
+     "hints": [
+      "0 ÷ 0 is indeterminate.",
+      "Try to simplify.",
+      "Factorise."
+     ],
+     "explain": "0 ÷ 0 means you should simplify first."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is needed for f to be continuous at x = a?",
+     "options": [
+      "f(a) is defined, the limit exists, and they are equal",
+      "Only that f(a) is defined",
+      "Only that the limit exists",
+      "That f is a straight line"
+     ],
+     "answer": 0,
+     "hints": [
+      "Three conditions.",
+      "All must hold.",
+      "The first."
+     ],
+     "explain": "All three conditions are needed."
+    },
+    {
+     "type": "mcq",
+     "q": "f(x) = 1 ÷ x. Is f continuous at x = 0?",
+     "options": [
+      "No, f(0) is undefined",
+      "Yes",
+      "Only for positive x",
+      "It is a straight line"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can you divide by 0?",
+      "No.",
+      "f(0) is undefined."
+     ],
+     "explain": "f(0) is undefined, so f isn't continuous there."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Substituting first",
+     "Factorising when I get 0 ÷ 0",
+     "The three continuity conditions",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found limits and tested whether functions are continuous.",
+   "teacher": "Shows evaluating limits, resolving indeterminate forms algebraically and applying the definition of continuity.",
+   "done": "Substitute; if you get 0 ÷ 0, simplify first. Continuous means defined, limit exists, and equal."
   }
  ],
  "words": {

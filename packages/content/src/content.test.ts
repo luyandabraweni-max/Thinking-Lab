@@ -22,7 +22,7 @@ describe("content", () => {
       const pack = await loadPack(packOf(g));
       expect(pack.units.map(u => u.id)).toEqual(CATALOGUE.filter(u => u.grade === g).map(u => u.id));
     }
-    expect(CATALOGUE).toHaveLength(256);
+    expect(CATALOGUE).toHaveLength(280);
   });
   it("has complete, answerable questions in every lesson", async () => {
     const bad: string[] = [];
@@ -67,5 +67,13 @@ describe("content", () => {
     expect(g6.units.map(u => u.id)).toEqual(["sid0-count", "sid2-coins", "sid3-day"]);
     expect(lessonsIn(CATALOGUE, "science", 6, { curriculum: "CAPS-SID" }).units).toEqual([]);
     expect(lessonsIn(CATALOGUE, "life", 9, { curriculum: "CAPS" }).units.some(u => u.curriculum)).toBe(false);
+  });
+  it("gives IEB learners the CAPS lessons plus IEB ones, with AP Maths unless they take Maths Lit", () => {
+    const ids = (c: Parameters<typeof lessonsIn>[3]) => lessonsIn(CATALOGUE, "maths", 11, c).units.map(u => u.id);
+    expect(ids({ curriculum: "IEB" })).toEqual(expect.arrayContaining(["ieb11-ma-functions-context", "apm11-induction", "g11-ml-interest"]));
+    expect(ids({ curriculum: "IEB" }).some(id => id.startsWith("g11-") && !id.includes("-ml-"))).toBe(true); // CAPS Mathematics too
+    expect(ids({ curriculum: "IEB", maths: "lit" })).not.toContain("apm11-induction");
+    expect(ids({ curriculum: "IEB", maths: "lit" })).not.toContain("ieb11-ma-functions-context");
+    expect(ids({ curriculum: "CAPS" }).some(id => id.startsWith("ieb") || id.startsWith("apm"))).toBe(false);
   });
 });

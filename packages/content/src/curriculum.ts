@@ -13,7 +13,7 @@ export const curriculumName = (g: number) => (g === -1 ? "NCF aligned" : g === 1
 // Learning areas group subject names that change between phases, so a learner can work at a different level in each.
 export type Area = "maths" | "language" | "life" | "science" | "creative";
 export const AREAS: Record<Area, [string, string[]]> = {
-  maths: ["Maths", ["Mathematics", "Mathematical Literacy", "Exploring Mathematics"]],
+  maths: ["Maths", ["Mathematics", "Mathematical Literacy", "Advanced Programme Mathematics", "Exploring Mathematics"]],
   language: ["Language", ["English Home Language", "English", "Language and Literature", "Communication"]],
   life: ["Life skills", ["Life Skills", "Life Orientation", "Life and work skills", "Identity and Belonging", "Well-being"]],
   science: ["Science and technology", ["Natural Sciences and Technology", "Natural Sciences", "Life Sciences", "Combined Science", "Sciences", "Knowledge and Understanding of the World", "Information and Communication Technology"]],

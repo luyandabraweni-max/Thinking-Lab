@@ -5651,6 +5651,967 @@
    "parent": "Your child used Newton's laws to explain everyday motion.",
    "teacher": "Criterion A: applies Newton's three laws to explain everyday motion and uses F = ma quantitatively.",
    "done": "Forces change motion; F = ma; every force has an equal, opposite partner."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ieb10-ma-patterns",
+   "grade": 10,
+   "title": "Explaining a pattern",
+   "topic": "Reasoning in unfamiliar problems",
+   "category": "Pattern Thinking",
+   "caps": "IEB Mathematics (CAPS content, IEB assessment): Grade 10 number patterns, with emphasis on generalising and justifying in unfamiliar contexts",
+   "intention": "Today I am finding a rule for a pattern and explaining why it works.",
+   "prompt": "How do you know a pattern will continue?",
+   "lesson": [
+    {
+     "h": "Unfamiliar, not impossible",
+     "say": "IEB papers often set problems you have never seen before. Start by trying small cases, record them in a table, and look for what changes each time.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Try small cases</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Make a table</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spot the change</span></div>"
+    },
+    {
+     "h": "Finding the rule",
+     "say": "Matchstick squares in a row: 1 square uses 4 matches, 2 squares use 7, 3 squares use 10. Each new square adds 3, so the rule is 3n plus 1.",
+     "html": "<p>Squares: 1, 2, 3 → matches: 4, 7, 10</p><p>Rule: <b>3n + 1</b></p>"
+    },
+    {
+     "h": "Explaining why",
+     "say": "A rule is stronger when you explain it from the picture. The first square needs one extra match to start, and each square then adds 3 new matches.",
+     "html": "<p>Explain the rule from the <b>structure</b>, not only from the numbers.</p>"
+    }
+   ],
+   "example": {
+    "q": "Using 3n + 1, how many matches make 20 squares in a row?",
+    "steps": [
+     "Substitute n = 20.",
+     "3 × 20 + 1.",
+     "61 matches."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Using 3n + 1, how many matches make 10 squares in a row?",
+     "answer": "31",
+     "options": [
+      "31",
+      "30",
+      "40",
+      "13"
+     ],
+     "hints": [
+      "Substitute n = 10.",
+      "3 × 10 + 1.",
+      "31."
+     ],
+     "explain": "3 × 10 + 1 = 31."
+    },
+    {
+     "type": "num",
+     "q": "A pattern goes 5, 9, 13, 17. What is the next term?",
+     "answer": "21",
+     "options": [
+      "21",
+      "20",
+      "22",
+      "34"
+     ],
+     "hints": [
+      "Find the difference.",
+      "It goes up by 4.",
+      "17 + 4."
+     ],
+     "explain": "Each term adds 4: 17 + 4 = 21."
+    },
+    {
+     "type": "mcq",
+     "q": "Which rule gives 5, 9, 13, 17, …?",
+     "options": [
+      "4n + 1",
+      "5n",
+      "n + 4",
+      "4n"
+     ],
+     "answer": 0,
+     "hints": [
+      "The difference is 4, so start with 4n.",
+      "When n = 1, 4n = 4.",
+      "Add 1 to get 5."
+     ],
+     "explain": "4n + 1 gives 5, 9, 13, 17."
+    },
+    {
+     "type": "num",
+     "q": "With 3n + 1, how many squares can you make with exactly 100 matches?",
+     "answer": "33",
+     "options": [
+      "33",
+      "34",
+      "100",
+      "30"
+     ],
+     "hints": [
+      "Solve 3n + 1 = 100.",
+      "3n = 99.",
+      "n = 33."
+     ],
+     "explain": "3n + 1 = 100 gives n = 33."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is explaining the rule from the picture stronger than only checking numbers?",
+     "options": [
+      "It shows why the rule always works, not just for the cases tried",
+      "It is faster",
+      "Pictures are always correct",
+      "Examiners don't read numbers"
+     ],
+     "answer": 0,
+     "hints": [
+      "A few cases could be a coincidence.",
+      "The structure explains it.",
+      "Always works."
+     ],
+     "explain": "Explaining from the structure shows the rule works for every case."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Trying small cases",
+     "Making a table",
+     "Explaining from the picture",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found and explained the rule behind a pattern, as IEB papers ask.",
+   "teacher": "Shows generalising linear patterns, solving for n, and justifying a rule from the structure of the problem.",
+   "done": "Try small cases, find the rule, then explain why it works."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ieb10-ma-geometry-proof",
+   "grade": 10,
+   "title": "Justifying in geometry",
+   "topic": "Euclidean geometry: reasoning",
+   "category": "Problem Solving",
+   "caps": "IEB Mathematics (CAPS content, IEB assessment): Grade 10 Euclidean geometry, with emphasis on giving reasons for every statement",
+   "intention": "Today I am writing geometry answers with a reason for every step.",
+   "prompt": "Why might a correct answer still lose marks?",
+   "lesson": [
+    {
+     "h": "Statement and reason",
+     "say": "In geometry, every statement needs a reason. Write the statement, then the reason in brackets, using the accepted wording.",
+     "html": "<p>∠A = 70° <b>(vertically opposite ∠s)</b></p>"
+    },
+    {
+     "h": "Common reasons",
+     "say": "Angles on a straight line add up to 180 degrees. Angles in a triangle add up to 180 degrees. With parallel lines, alternate angles are equal and co-interior angles add up to 180 degrees.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">∠s on a str line</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">∠s in a △</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">alt ∠s, AB ∥ CD</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">co-int ∠s</span></div>"
+    },
+    {
+     "h": "Building a chain",
+     "say": "In unfamiliar diagrams, work forwards from what you know. Each new angle you find, with its reason, can unlock the next one.",
+     "html": "<p>Known → reason → new angle → reason → answer</p>"
+    }
+   ],
+   "example": {
+    "q": "AB ∥ CD. A transversal makes ∠1 = 65° at AB. Find the alternate angle at CD.",
+    "steps": [
+     "The lines are parallel.",
+     "Alternate angles are equal.",
+     "The angle is 65° (alt ∠s, AB ∥ CD)."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Two angles on a straight line: one is 125°. Find the other, in degrees.",
+     "answer": "55",
+     "options": [
+      "55",
+      "65",
+      "125",
+      "235"
+     ],
+     "hints": [
+      "Angles on a straight line add to 180°.",
+      "180 − 125.",
+      "55."
+     ],
+     "explain": "180° − 125° = 55° (∠s on a str line)."
+    },
+    {
+     "type": "num",
+     "q": "A triangle has angles of 50° and 60°. Find the third angle, in degrees.",
+     "answer": "70",
+     "options": [
+      "70",
+      "80",
+      "110",
+      "60"
+     ],
+     "hints": [
+      "Angles in a triangle add to 180°.",
+      "180 − 50 − 60.",
+      "70."
+     ],
+     "explain": "180° − 110° = 70° (∠s in a △)."
+    },
+    {
+     "type": "mcq",
+     "q": "AB ∥ CD and co-interior angles are x and 110°. What is x?",
+     "options": [
+      "70°",
+      "110°",
+      "180°",
+      "90°"
+     ],
+     "answer": 0,
+     "hints": [
+      "Co-interior angles add to 180°.",
+      "180 − 110.",
+      "70°."
+     ],
+     "explain": "x = 70° (co-int ∠s, AB ∥ CD)."
+    },
+    {
+     "type": "mcq",
+     "q": "Which answer earns full marks?",
+     "options": [
+      "∠B = 40° (∠s in a △)",
+      "∠B = 40°",
+      "∠B = 40° because I worked it out",
+      "40"
+     ],
+     "answer": 0,
+     "hints": [
+      "Every statement needs a reason.",
+      "Use the accepted wording.",
+      "The first."
+     ],
+     "explain": "It gives the statement and the accepted reason."
+    },
+    {
+     "type": "mcq",
+     "q": "When must you state that lines are parallel in your reason?",
+     "options": [
+      "When using alternate, corresponding or co-interior angles",
+      "Never",
+      "Only in triangles",
+      "Only for straight lines"
+     ],
+     "answer": 0,
+     "hints": [
+      "Some angle facts only work with parallel lines.",
+      "Which ones?",
+      "Alternate, corresponding, co-interior."
+     ],
+     "explain": "These angle facts depend on the lines being parallel."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing a reason for each step",
+     "Knowing the accepted wording",
+     "Working forwards from what I know",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised giving a reason for every step in geometry.",
+   "teacher": "Shows using angle relationships with correctly stated reasons and constructing chains of reasoning in unfamiliar diagrams.",
+   "done": "Every statement needs a reason, in the accepted wording."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "English Home Language",
+   "domain": "Communication and Expression",
+   "id": "ieb10-en-visual",
+   "grade": 10,
+   "title": "Reading a visual source",
+   "topic": "Visual literacy: satire",
+   "category": "Reflection",
+   "caps": "IEB English Home Language (CAPS content, IEB assessment): Grade 10 visual literacy, with emphasis on irony and critical comment in unseen sources",
+   "intention": "Today I am analysing how a cartoon uses irony to criticise.",
+   "prompt": "Have you seen a cartoon that made a serious point?",
+   "passage": "<div class=\"passage-text\"><p><b>Source: a cartoon, described</b> <span class=\"muted\">(a 2to.iQ text)</span></p>\n<p>A huge billboard reads <b>\"SAVE WATER. SAVE LIVES.\"</b> Beneath it, a sprinkler is watering the billboard company's perfect green lawn at midday. A thin learner walks past carrying two buckets from a communal tap. The caption reads: <i>\"We're all in this together.\"</i></p></div>",
+   "lesson": [
+    {
+     "h": "Read the source",
+     "say": "Read the source, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Source: a cartoon, described</b> <span class=\"muted\">(a 2to.iQ text)</span></p>\n<p>A huge billboard reads <b>\"SAVE WATER. SAVE LIVES.\"</b> Beneath it, a sprinkler is watering the billboard company's perfect green lawn at midday. A thin learner walks past carrying two buckets from a communal tap. The caption reads: <i>\"We're all in this together.\"</i></p></div>"
+    },
+    {
+     "h": "Irony",
+     "say": "Irony is when what is said or shown is the opposite of what is really happening. The billboard says save water, while the company wastes water on its lawn.",
+     "html": "<p>Message: <b>save water</b>. Reality: <b>wasting water</b>.</p>"
+    },
+    {
+     "h": "Who is criticised?",
+     "say": "Satire uses humour or irony to criticise. Here the target is the company, and anyone who preaches to others while doing the opposite.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Target</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Technique</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Message</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Explain the irony of the caption 'We're all in this together.'",
+    "steps": [
+     "The caption claims everyone shares the burden.",
+     "The cartoon shows the company wasting water while a poor learner carries buckets.",
+     "The caption is ironic: they are clearly not in it together."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the main target of the cartoon's criticism?",
+     "options": [
+      "The billboard company",
+      "The learner",
+      "Water",
+      "The tap"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who is doing the opposite of what they say?",
+      "The company owns the lawn.",
+      "The company."
+     ],
+     "explain": "The company preaches saving water while wasting it."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is the sprinkler running at midday significant?",
+     "options": [
+      "Most water evaporates then, so it is especially wasteful",
+      "It is cooler then",
+      "Plants only drink at noon",
+      "It is the law"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens to water in the midday heat?",
+      "It evaporates.",
+      "Wasteful."
+     ],
+     "explain": "Watering at midday wastes the most water."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the contrast between the green lawn and the learner with buckets suggest?",
+     "options": [
+      "Inequality in who carries the burden of saving water",
+      "Everyone has enough water",
+      "The learner is gardening",
+      "Lawns are bad"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who has plenty?",
+      "Who struggles?",
+      "Inequality."
+     ],
+     "explain": "It highlights unequal access and burden."
+    },
+    {
+     "type": "mcq",
+     "q": "What is satire?",
+     "options": [
+      "Using humour or irony to criticise",
+      "A true news report",
+      "A type of poem",
+      "An advert"
+     ],
+     "answer": 0,
+     "hints": [
+      "Cartoons often do it.",
+      "It criticises.",
+      "Through humour or irony."
+     ],
+     "explain": "Satire criticises through humour or irony."
+    },
+    {
+     "type": "mcq",
+     "q": "Which answer best analyses the caption?",
+     "options": [
+      "The caption is ironic, because the cartoon shows the burden falls unequally.",
+      "The caption is nice.",
+      "The caption says we are together.",
+      "There is a caption at the bottom."
+     ],
+     "answer": 0,
+     "hints": [
+      "Analysis explains how and why.",
+      "Not just what it says.",
+      "The first."
+     ],
+     "explain": "It names the technique and explains its effect."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Spotting the contrast",
+     "Naming the target",
+     "Explaining the irony",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how a cartoon uses irony to criticise.",
+   "teacher": "Shows interpreting visual texts, identifying irony and satirical targets, and analysing contrasts in unseen sources.",
+   "done": "Find the contrast, name the target, and explain the irony."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "English Home Language",
+   "domain": "Communication and Expression",
+   "id": "ieb10-en-bias",
+   "grade": 10,
+   "title": "Language, bias and manipulation",
+   "topic": "Critical language awareness",
+   "category": "Flexible Thinking",
+   "caps": "IEB English Home Language (CAPS content, IEB assessment): Grade 10 critical language awareness: bias, emotive language and manipulation",
+   "intention": "Today I am spotting how language is used to persuade and manipulate.",
+   "prompt": "How can the same event be told in two very different ways?",
+   "passage": "<div class=\"passage-text\"><p><b>Source: from a community newspaper editorial</b> <span class=\"muted\">(a 2to.iQ text)</span></p>\n<p>The so-called experts want us to believe that load-shedding schedules are fair. Ordinary residents know better. Every week, the leafy suburbs seem to get their power back first, while our township waits in the dark. It is time for the municipality to stop hiding behind spreadsheets and tell us the truth.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the source",
+     "say": "Read the source, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Source: from a community newspaper editorial</b> <span class=\"muted\">(a 2to.iQ text)</span></p>\n<p>The so-called experts want us to believe that load-shedding schedules are fair. Ordinary residents know better. Every week, the leafy suburbs seem to get their power back first, while our township waits in the dark. It is time for the municipality to stop hiding behind spreadsheets and tell us the truth.</p></div>"
+    },
+    {
+     "h": "Emotive and loaded words",
+     "say": "Writers choose words that carry feelings. Calling people the so-called experts mocks them, and waits in the dark makes us feel sympathy.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">so-called experts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">waits in the dark</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">hiding behind spreadsheets</span></div>"
+    },
+    {
+     "h": "Evidence or impression?",
+     "say": "Ask what evidence is given. The word seem shows the writer has an impression, not proof. Strong criticism needs facts.",
+     "html": "<p>Ask: <b>what is the evidence?</b></p>"
+    }
+   ],
+   "example": {
+    "q": "What is the effect of 'hiding behind spreadsheets'?",
+    "steps": [
+     "Hiding suggests dishonesty.",
+     "Spreadsheets suggests cold numbers instead of people.",
+     "It makes the municipality seem secretive and uncaring."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does 'so-called experts' suggest?",
+     "options": [
+      "The writer doubts their expertise",
+      "The writer admires them",
+      "They are famous",
+      "They are new"
+     ],
+     "answer": 0,
+     "hints": [
+      "'So-called' questions a title.",
+      "The writer doesn't trust them.",
+      "Doubt."
+     ],
+     "explain": "'So-called' mocks and doubts their status."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word shows the writer has an impression, not proof?",
+     "options": [
+      "seem",
+      "power",
+      "township",
+      "truth"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at 'seem to get their power back first'.",
+      "Not certain.",
+      "Seem."
+     ],
+     "explain": "'Seem' signals an impression, not evidence."
+    },
+    {
+     "type": "mcq",
+     "q": "What would most strengthen the writer's argument?",
+     "options": [
+      "Data comparing outage hours in different areas",
+      "More capital letters",
+      "Angrier words",
+      "A longer title"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is missing?",
+      "Evidence.",
+      "Data."
+     ],
+     "explain": "Facts and figures would support the claim."
+    },
+    {
+     "type": "mcq",
+     "q": "'Ordinary residents know better' appeals to…",
+     "options": [
+      "a sense of shared identity against the experts",
+      "scientific evidence",
+      "humour",
+      "the law"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who are 'ordinary residents'?",
+      "Us, the readers.",
+      "Us against them."
+     ],
+     "explain": "It builds a shared 'us' against the experts."
+    },
+    {
+     "type": "mcq",
+     "q": "Which statement is most balanced?",
+     "options": [
+      "Some residents believe the schedule favours certain areas, and want the data published.",
+      "The municipality are liars.",
+      "Experts are useless.",
+      "Everyone knows it's unfair."
+     ],
+     "answer": 0,
+     "hints": [
+      "Balanced means fair to both sides.",
+      "No loaded words.",
+      "The first."
+     ],
+     "explain": "It reports the concern without loaded language."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding loaded words",
+     "Asking for evidence",
+     "Rewriting in a balanced way",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child spotted bias and emotive language in an editorial.",
+   "teacher": "Shows identifying loaded and emotive language, distinguishing evidence from impression, and producing balanced alternatives.",
+   "done": "Spot the loaded words, ask for evidence, and say it fairly."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Life Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ieb10-ls-graphs",
+   "grade": 10,
+   "title": "Reading a scientific source",
+   "topic": "Data-based questions: graphs",
+   "caps": "IEB Life Sciences (CAPS content, IEB assessment): Grade 10 scientific skills: reading and interpreting graphs in unseen sources",
+   "intention": "Today I am reading a graph carefully and describing the trend.",
+   "prompt": "What do you look at first on a graph?",
+   "lesson": [
+    {
+     "h": "Read before you answer",
+     "say": "Start with the title, the axes, the units and the scale. Many marks are lost by misreading the scale.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Title</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Axes and units</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Scale</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Trend</span></div>"
+    },
+    {
+     "h": "Describing a trend",
+     "say": "Describe the overall pattern and give data from the graph. For example: as temperature increases from 10 to 35 degrees Celsius, the rate of photosynthesis increases from 4 to 20 units.",
+     "html": "<p>Trend + <b>data from the graph</b></p>"
+    },
+    {
+     "h": "Explain, don't just describe",
+     "say": "If the question asks you to explain, give the biological reason, not only the pattern. Enzymes work faster as temperature increases, up to their optimum.",
+     "html": "<p>Describe = <b>what</b>. Explain = <b>why</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A graph shows heart rate rising from 70 to 140 beats per minute during 5 minutes of exercise. Describe and explain.",
+    "steps": [
+     "Describe: heart rate doubles, from 70 to 140 beats per minute.",
+     "Explain: muscles need more oxygen and glucose during exercise.",
+     "So the heart pumps faster to deliver more blood."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What should you check first on a graph?",
+     "options": [
+      "The title, axes, units and scale",
+      "The colour",
+      "The last point only",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Know what is shown.",
+      "And how it is measured.",
+      "Title, axes, units, scale."
+     ],
+     "explain": "Understanding the axes and scale prevents misreading."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best description of a trend?",
+     "options": [
+      "As temperature increases from 10 °C to 35 °C, the rate increases from 4 to 20 units.",
+      "It goes up.",
+      "The graph is nice.",
+      "The rate is high."
+     ],
+     "answer": 0,
+     "hints": [
+      "Use data.",
+      "Give the range.",
+      "The first."
+     ],
+     "explain": "It describes the pattern and quotes data."
+    },
+    {
+     "type": "mcq",
+     "q": "A question says 'explain the trend'. What must you include?",
+     "options": [
+      "The biological reason for the pattern",
+      "Only the numbers",
+      "The graph title",
+      "Your opinion"
+     ],
+     "answer": 0,
+     "hints": [
+      "Explain means why.",
+      "Use biology.",
+      "The reason."
+     ],
+     "explain": "Explaining needs a biological reason."
+    },
+    {
+     "type": "num",
+     "q": "Heart rate rises from 70 to 140 beats per minute. By how many beats per minute did it increase?",
+     "answer": "70",
+     "options": [
+      "70",
+      "140",
+      "210",
+      "2"
+     ],
+     "hints": [
+      "Subtract.",
+      "140 − 70.",
+      "70."
+     ],
+     "explain": "140 − 70 = 70 beats per minute."
+    },
+    {
+     "type": "mcq",
+     "q": "On a graph, each small square on the y-axis is 2 units, not 1. What is the risk?",
+     "options": [
+      "Reading values wrongly if you assume 1 unit per square",
+      "No risk",
+      "The graph is broken",
+      "The x-axis changes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check the scale.",
+      "Misreading.",
+      "Wrong values."
+     ],
+     "explain": "Assuming the wrong scale gives wrong readings."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Checking the scale",
+     "Quoting data",
+     "Describing then explaining",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised reading graphs carefully and explaining trends.",
+   "teacher": "Shows interpreting axes and scales, describing trends with data, and distinguishing description from explanation.",
+   "done": "Check the axes and scale, describe with data, then explain with biology."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Life Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ieb10-ls-investigation",
+   "grade": 10,
+   "title": "Planning an investigation",
+   "topic": "Scientific investigation",
+   "caps": "IEB Life Sciences (CAPS content, IEB assessment): Grade 10 scientific investigation: aim, hypothesis, variables, validity and reliability",
+   "intention": "Today I am planning a valid and reliable investigation.",
+   "prompt": "How would you test whether music helps plants grow?",
+   "lesson": [
+    {
+     "h": "Aim and hypothesis",
+     "say": "The aim says what you are investigating. The hypothesis is a testable prediction, for example: seeds kept at 25 degrees Celsius will germinate faster than seeds kept at 10 degrees Celsius.",
+     "html": "<p>Aim: <b>to investigate…</b> · Hypothesis: <b>a testable prediction</b></p>"
+    },
+    {
+     "h": "Validity",
+     "say": "An investigation is valid if it tests what it claims to. Change only one variable, and keep everything else the same.",
+     "html": "<p>Valid: tests the <b>right thing</b>, fairly.</p>"
+    },
+    {
+     "h": "Reliability",
+     "say": "Results are reliable if they can be repeated. Use large samples and repeat the investigation, then calculate averages.",
+     "html": "<p>Reliable: <b>repeat</b> and use <b>large samples</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Plan: does temperature affect how fast seeds germinate?",
+    "steps": [
+     "Independent: temperature. Dependent: time to germinate.",
+     "Fixed: the type of seed, the amount of water, light and soil.",
+     "Use 20 seeds at each temperature and repeat, to improve reliability."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a testable hypothesis?",
+     "options": [
+      "Seeds at 25 °C will germinate faster than seeds at 10 °C.",
+      "Seeds are interesting.",
+      "Do seeds grow?",
+      "Temperature exists."
+     ],
+     "answer": 0,
+     "hints": [
+      "It must predict a result.",
+      "That can be measured.",
+      "The first."
+     ],
+     "explain": "It predicts a measurable result."
+    },
+    {
+     "type": "mcq",
+     "q": "Using 20 seeds instead of 2 mainly improves…",
+     "options": [
+      "reliability",
+      "the aim",
+      "the hypothesis",
+      "the colour"
+     ],
+     "answer": 0,
+     "hints": [
+      "More seeds give more data.",
+      "Odd results matter less.",
+      "Reliability."
+     ],
+     "explain": "Large samples make results more reliable."
+    },
+    {
+     "type": "mcq",
+     "q": "Keeping light and water the same for all seeds improves…",
+     "options": [
+      "validity",
+      "speed",
+      "the aim",
+      "the hypothesis"
+     ],
+     "answer": 0,
+     "hints": [
+      "Only one thing should change.",
+      "So the test is fair.",
+      "Validity."
+     ],
+     "explain": "Controlling variables makes the test valid."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the dependent variable when testing temperature on germination?",
+     "options": [
+      "Time to germinate",
+      "Temperature",
+      "Type of seed",
+      "Amount of water"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do you measure?",
+      "How long it takes.",
+      "Time to germinate."
+     ],
+     "explain": "You measure the time to germinate."
+    },
+    {
+     "type": "mcq",
+     "q": "Why repeat the investigation?",
+     "options": [
+      "To check the results are consistent",
+      "To use more seeds",
+      "To change the aim",
+      "Because it is fun"
+     ],
+     "answer": 0,
+     "hints": [
+      "Will you get the same result?",
+      "Consistency.",
+      "Reliability."
+     ],
+     "explain": "Repeating checks that results are consistent."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing the hypothesis",
+     "Validity versus reliability",
+     "Choosing what to keep the same",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child planned a fair, repeatable science investigation.",
+   "teacher": "Shows formulating aims and hypotheses, identifying variables, and distinguishing validity from reliability.",
+   "done": "Valid: test the right thing fairly. Reliable: repeat with large samples."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Advanced Programme Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "apm10-absolute",
+   "grade": 10,
+   "title": "Absolute value",
+   "topic": "Algebra: absolute value",
+   "category": "Problem Solving",
+   "caps": "IEB Advanced Programme Mathematics: Module 1, Algebra (absolute value: equations and inequalities)",
+   "intention": "Today I am solving equations with absolute value.",
+   "prompt": "How far is −5 from 0?",
+   "lesson": [
+    {
+     "h": "Distance from zero",
+     "say": "The absolute value of a number is its distance from zero, so it is never negative. The absolute value of minus 5 is 5.",
+     "html": "<p>|−5| = 5 and |5| = 5</p>"
+    },
+    {
+     "h": "Equations",
+     "say": "If the absolute value of x minus 3 equals 4, then x minus 3 is 4 or minus 4. So x is 7 or minus 1.",
+     "html": "<p>|x − 3| = 4 → x − 3 = 4 or x − 3 = −4 → <b>x = 7 or x = −1</b></p>"
+    },
+    {
+     "h": "Inequalities",
+     "say": "The absolute value of x is less than 2 means x is within 2 of zero: minus 2 is less than x, which is less than 2.",
+     "html": "<p>|x| < 2 → <b>−2 < x < 2</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Solve |2x + 1| = 5.",
+    "steps": [
+     "2x + 1 = 5 or 2x + 1 = −5.",
+     "2x = 4 or 2x = −6.",
+     "x = 2 or x = −3."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "What is |−8|?",
+     "answer": "8",
+     "options": [
+      "8",
+      "−8",
+      "0",
+      "64"
+     ],
+     "hints": [
+      "Distance from 0.",
+      "Never negative.",
+      "8."
+     ],
+     "explain": "|−8| = 8."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve |x| = 6.",
+     "options": [
+      "x = 6 or x = −6",
+      "x = 6 only",
+      "x = 36",
+      "No solution"
+     ],
+     "answer": 0,
+     "hints": [
+      "Two numbers are 6 from 0.",
+      "Positive and negative.",
+      "±6."
+     ],
+     "explain": "Both 6 and −6 are 6 units from 0."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve |x − 3| = 4.",
+     "options": [
+      "x = 7 or x = −1",
+      "x = 7 only",
+      "x = 1 or x = −7",
+      "x = 4"
+     ],
+     "answer": 0,
+     "hints": [
+      "x − 3 = 4 or x − 3 = −4.",
+      "x = 7 or x = −1.",
+      "Check both."
+     ],
+     "explain": "x = 7 or x = −1."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve |x| < 2.",
+     "options": [
+      "−2 < x < 2",
+      "x < 2",
+      "x > 2 or x < −2",
+      "x = 2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Within 2 of zero.",
+      "Between −2 and 2.",
+      "−2 < x < 2."
+     ],
+     "explain": "x lies between −2 and 2."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve |x + 1| = −3.",
+     "options": [
+      "No solution",
+      "x = 2",
+      "x = −4",
+      "x = 2 or x = −4"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can an absolute value be negative?",
+      "No.",
+      "No solution."
+     ],
+     "explain": "An absolute value can't equal a negative number."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Thinking of distance from zero",
+     "Splitting into two cases",
+     "Checking for no solution",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child solved equations and inequalities with absolute value.",
+   "teacher": "Shows interpreting absolute value as distance, solving absolute value equations by cases and solving simple inequalities.",
+   "done": "Absolute value is distance: split into two cases, and it is never negative."
   }
  ],
  "words": {

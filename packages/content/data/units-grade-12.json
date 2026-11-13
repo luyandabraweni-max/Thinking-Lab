@@ -2312,6 +2312,1108 @@
    "parent": "Your child learned how citizens take part in democracy, including registering to vote.",
    "teacher": "Shows knowledge of voting rights, the IEC, local government participation and civic responsibilities.",
    "done": "Register, vote, and take part in your community's decisions."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ieb12-ma-optimisation",
+   "grade": 12,
+   "title": "Calculus in context: optimisation",
+   "topic": "Differential calculus",
+   "category": "Problem Solving",
+   "caps": "IEB Mathematics (CAPS content, IEB assessment): Grade 12 differential calculus: optimisation in unfamiliar contexts",
+   "intention": "Today I am using calculus to find the best possible value.",
+   "prompt": "How would a farmer get the biggest field from a fixed amount of fencing?",
+   "lesson": [
+    {
+     "h": "What optimisation means",
+     "say": "Optimisation means finding a maximum or minimum, such as the largest area or the lowest cost. At a maximum or minimum, the derivative is zero.",
+     "html": "<p>At a max or min: <b>f′(x) = 0</b></p>"
+    },
+    {
+     "h": "Set up the function",
+     "say": "A farmer has 40 metres of fencing for a rectangle against a wall, so only three sides need fencing. If the two short sides are x, the long side is 40 minus 2x, and the area is x times 40 minus 2x.",
+     "html": "<p>A = x(40 − 2x) = 40x − 2x²</p>"
+    },
+    {
+     "h": "Differentiate and solve",
+     "say": "The derivative is 40 minus 4x. Set it to zero: x equals 10. The long side is 20, so the largest area is 200 square metres.",
+     "html": "<p>A′ = 40 − 4x = 0 → x = 10 → A = <b>200 m²</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Check that x = 10 gives a maximum.",
+    "steps": [
+     "A″ = −4.",
+     "A negative second derivative means the graph is concave down.",
+     "So x = 10 gives a maximum."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "At a maximum or minimum, what is the derivative?",
+     "options": [
+      "0",
+      "1",
+      "Undefined",
+      "Negative"
+     ],
+     "answer": 0,
+     "hints": [
+      "The tangent is flat.",
+      "Gradient 0.",
+      "f′(x) = 0."
+     ],
+     "explain": "The gradient is zero at a turning point."
+    },
+    {
+     "type": "mcq",
+     "q": "If A = 40x − 2x², what is A′?",
+     "options": [
+      "40 − 4x",
+      "40 − 2x",
+      "40x − 4x",
+      "−4x"
+     ],
+     "answer": 0,
+     "hints": [
+      "Differentiate each term.",
+      "40x → 40; −2x² → −4x.",
+      "40 − 4x."
+     ],
+     "explain": "A′ = 40 − 4x."
+    },
+    {
+     "type": "num",
+     "q": "Solve 40 − 4x = 0.",
+     "answer": "10",
+     "options": [
+      "10",
+      "4",
+      "40",
+      "20"
+     ],
+     "hints": [
+      "4x = 40.",
+      "x = 40 ÷ 4.",
+      "10."
+     ],
+     "explain": "x = 10."
+    },
+    {
+     "type": "num",
+     "q": "With x = 10, the area is 10 × (40 − 20). What is it, in m²?",
+     "answer": "200",
+     "options": [
+      "200",
+      "400",
+      "100",
+      "300"
+     ],
+     "hints": [
+      "40 − 20 = 20.",
+      "10 × 20.",
+      "200."
+     ],
+     "explain": "10 × 20 = 200 m²."
+    },
+    {
+     "type": "mcq",
+     "q": "Why must 0 < x < 20 here?",
+     "options": [
+      "Both sides must have positive length",
+      "Fences are always shorter than 20 m",
+      "Calculus only works below 20",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "x > 0 for a side.",
+      "40 − 2x > 0.",
+      "So x < 20."
+     ],
+     "explain": "Both x and 40 − 2x must be positive."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Setting up the area formula",
+     "Differentiating",
+     "Checking it is a maximum",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used calculus to find the biggest possible area for a fixed amount of fencing.",
+   "teacher": "Shows formulating a function from context, using f′(x) = 0 to optimise, verifying the nature of the turning point and applying domain restrictions.",
+   "done": "Write the function, set the derivative to zero, solve, and check."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ieb12-ma-proof",
+   "grade": 12,
+   "title": "Proof and counterexample",
+   "topic": "Mathematical reasoning",
+   "category": "Flexible Thinking",
+   "caps": "IEB Mathematics (CAPS content, IEB assessment): Grade 12 reasoning: proving general statements and disproving with counterexamples",
+   "intention": "Today I am proving statements, or disproving them with one example.",
+   "prompt": "How many examples does it take to prove something is always true?",
+   "lesson": [
+    {
+     "h": "Proving in general",
+     "say": "To prove a statement is always true, use algebra that covers every case. Checking a few examples is not a proof.",
+     "html": "<p>Examples suggest. <b>Algebra proves.</b></p>"
+    },
+    {
+     "h": "A proof",
+     "say": "Prove that the sum of two consecutive integers is odd. Let them be n and n plus 1. Their sum is 2n plus 1. 2n is even, so 2n plus 1 is odd, for every integer n.",
+     "html": "<p>n + (n + 1) = 2n + 1 → always <b>odd</b></p>"
+    },
+    {
+     "h": "Counterexamples",
+     "say": "To disprove a statement, one counterexample is enough. 'All prime numbers are odd' is false, because 2 is prime and even.",
+     "html": "<p>One counterexample <b>disproves</b> a general claim.</p>"
+    }
+   ],
+   "example": {
+    "q": "Prove that the product of two even numbers is a multiple of 4.",
+    "steps": [
+     "Let the numbers be 2a and 2b.",
+     "Product: 2a × 2b = 4ab.",
+     "4ab is a multiple of 4 for all integers a and b."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What disproves 'All prime numbers are odd'?",
+     "options": [
+      "2",
+      "3",
+      "9",
+      "11"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find a prime that is even.",
+      "There is only one.",
+      "2."
+     ],
+     "explain": "2 is prime and even."
+    },
+    {
+     "type": "mcq",
+     "q": "How do we write a general even number in algebra?",
+     "options": [
+      "2n",
+      "n + 2",
+      "n²",
+      "2n + 1"
+     ],
+     "answer": 0,
+     "hints": [
+      "Even numbers are multiples of 2.",
+      "2 times something.",
+      "2n."
+     ],
+     "explain": "2n is even for every integer n."
+    },
+    {
+     "type": "mcq",
+     "q": "Why doesn't checking 10 examples prove a statement?",
+     "options": [
+      "The next case might not work",
+      "10 is too small",
+      "Examples are always wrong",
+      "It does prove it"
+     ],
+     "answer": 0,
+     "hints": [
+      "There are infinitely many cases.",
+      "You can't check them all.",
+      "One might fail."
+     ],
+     "explain": "Examples can't cover every case."
+    },
+    {
+     "type": "mcq",
+     "q": "'n² + n + 41 is always prime.' Which value of n is a counterexample?",
+     "options": [
+      "n = 40",
+      "n = 1",
+      "n = 2",
+      "n = 3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Try n = 40.",
+      "40² + 40 + 41 = 1 681.",
+      "1 681 = 41²."
+     ],
+     "explain": "When n = 40, the value is 1 681 = 41², which isn't prime."
+    },
+    {
+     "type": "mcq",
+     "q": "n + (n + 1) = 2n + 1. Why does this prove the sum is odd?",
+     "options": [
+      "2n is even, and adding 1 makes it odd for every n",
+      "Because n is odd",
+      "Because 1 is odd",
+      "It doesn't"
+     ],
+     "answer": 0,
+     "hints": [
+      "2n is always even.",
+      "Even + 1…",
+      "…is odd."
+     ],
+     "explain": "An even number plus 1 is always odd."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing numbers in algebra",
+     "Hunting for a counterexample",
+     "Explaining why a proof is general",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child proved general statements with algebra and disproved others with counterexamples.",
+   "teacher": "Shows constructing algebraic proofs, recognising the limits of empirical checking and using counterexamples.",
+   "done": "Prove with algebra for every case; disprove with one counterexample."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "English Home Language",
+   "domain": "Communication and Expression",
+   "id": "ieb12-en-unseen-poem",
+   "grade": 12,
+   "title": "Responding to an unseen poem",
+   "topic": "Unseen poetry",
+   "category": "Reflection",
+   "caps": "IEB English Home Language (CAPS content, IEB assessment): Grade 12 unseen poetry: planning and writing a focused critical response",
+   "intention": "Today I am planning a critical response to a poem I haven't seen before.",
+   "prompt": "What do you do first when you read a new poem?",
+   "passage": "<div class=\"passage-text\"><p><b>Inheritance</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>My grandmother's hands were maps:<br>rivers of blue under paper skin,<br>a scar where the paraffin stove<br>once argued with her.</p>\n<p>She never wrote a letter in her life,<br>yet every recipe I know<br>is written in the margins of her palms,<br>and I am still learning to read them.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the source",
+     "say": "Read the source, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Inheritance</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>My grandmother's hands were maps:<br>rivers of blue under paper skin,<br>a scar where the paraffin stove<br>once argued with her.</p>\n<p>She never wrote a letter in her life,<br>yet every recipe I know<br>is written in the margins of her palms,<br>and I am still learning to read them.</p></div>"
+    },
+    {
+     "h": "First reading, then focus",
+     "say": "Read once for the overall meaning, then again with the question in mind. Underline images, word choices and shifts in tone.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Overall meaning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Re-read for the question</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mark key words</span></div>"
+    },
+    {
+     "h": "A focused thesis",
+     "say": "Answer the question in one sentence that you will prove: for example, the poem presents the grandmother's body as a record of knowledge passed on without writing.",
+     "html": "<p>Thesis: <b>an answer you will prove</b></p>"
+    },
+    {
+     "h": "Structure and turn",
+     "say": "Look for where the poem turns. Here the second stanza moves from describing her hands to what the speaker inherited. Shifts like this are often the key to meaning.",
+     "html": "<p>Find the <b>turn</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Write a topic sentence about the first stanza.",
+    "steps": [
+     "Focus: the hands as a record of hardship.",
+     "Evidence: 'a scar where the paraffin stove once argued with her'.",
+     "'The first stanza presents her hands as a record of a hard life, with the personified stove suggesting daily struggle.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What should you do on a second reading?",
+     "options": [
+      "Re-read with the question in mind and mark key words",
+      "Skip to the last line",
+      "Count the syllables",
+      "Start writing immediately"
+     ],
+     "answer": 0,
+     "hints": [
+      "Focus.",
+      "On the question.",
+      "Mark key words."
+     ],
+     "explain": "A focused second reading targets what the question asks."
+    },
+    {
+     "type": "mcq",
+     "q": "What technique is 'the paraffin stove once argued with her'?",
+     "options": [
+      "Personification",
+      "Simile",
+      "Alliteration",
+      "Onomatopoeia"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can a stove argue?",
+      "A human action.",
+      "Personification."
+     ],
+     "explain": "The stove is given a human action."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does the poem turn?",
+     "options": [
+      "At the start of the second stanza",
+      "In the title",
+      "In the last word",
+      "There is no turn"
+     ],
+     "answer": 0,
+     "hints": [
+      "From describing her hands…",
+      "…to what the speaker inherited.",
+      "Second stanza."
+     ],
+     "explain": "The second stanza shifts to the speaker's inheritance."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best thesis?",
+     "options": [
+      "The poem presents the grandmother's hands as a record of knowledge passed on without writing.",
+      "The poem is about hands.",
+      "I like this poem.",
+      "The poem has eight lines."
+     ],
+     "answer": 0,
+     "hints": [
+      "A thesis is arguable.",
+      "And answers the question.",
+      "The first."
+     ],
+     "explain": "It is a focused interpretation that can be proved."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'She never wrote a letter in her life' add?",
+     "options": [
+      "A contrast with the 'writing' in her palms",
+      "A fact about the post office",
+      "Humour only",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Later her palms are 'written'.",
+      "A contrast.",
+      "Unwritten knowledge."
+     ],
+     "explain": "It contrasts formal writing with knowledge held in her hands."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Reading twice",
+     "Finding the turn",
+     "Writing a thesis first",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child planned a critical response to an unseen poem.",
+   "teacher": "Shows approaching unseen poetry systematically, formulating a focused thesis and analysing imagery and structural shifts.",
+   "done": "Read twice, find the turn, write a thesis, then prove it."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "English Home Language",
+   "domain": "Communication and Expression",
+   "id": "ieb12-en-transactional",
+   "grade": 12,
+   "title": "Writing a report from sources",
+   "topic": "Transactional writing",
+   "category": "Planning and Organisation",
+   "caps": "IEB English Home Language (CAPS content, IEB assessment): Grade 12 transactional writing: synthesising sources into a formal report",
+   "intention": "Today I am writing a formal report using information from sources.",
+   "prompt": "Who reads reports, and what do they need from them?",
+   "lesson": [
+    {
+     "h": "Purpose and reader",
+     "say": "A report informs a decision-maker. It is formal, clear and organised under headings, with a recommendation at the end.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Introduction</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Findings</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Recommendation</span></div>"
+    },
+    {
+     "h": "Synthesising sources",
+     "say": "Combine information from several sources, in your own words. Group related points together instead of summarising each source separately.",
+     "html": "<p>Group by <b>theme</b>, not by source.</p>"
+    },
+    {
+     "h": "Formal register",
+     "say": "Use the third person, avoid slang and contractions, and keep opinions for the recommendation, supported by the findings.",
+     "html": "<p>Formal: <b>third person</b>, no slang, no contractions.</p>"
+    }
+   ],
+   "example": {
+    "q": "Turn a source note into a formal finding: 'loads of kids walk like 5km in the dark'.",
+    "steps": [
+     "Remove slang and vague words.",
+     "Use precise, third-person language.",
+     "'A significant number of learners walk more than five kilometres to school before sunrise.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Who is a report usually written for?",
+     "options": [
+      "Someone who must make a decision",
+      "A friend",
+      "A diary",
+      "A poem's reader"
+     ],
+     "answer": 0,
+     "hints": [
+      "Reports lead to action.",
+      "Who acts?",
+      "A decision-maker."
+     ],
+     "explain": "Reports inform decision-makers."
+    },
+    {
+     "type": "mcq",
+     "q": "How should information from several sources be organised?",
+     "options": [
+      "Grouped by theme",
+      "One paragraph per source",
+      "In random order",
+      "Copied exactly"
+     ],
+     "answer": 0,
+     "hints": [
+      "Synthesise.",
+      "Combine related points.",
+      "By theme."
+     ],
+     "explain": "Grouping by theme shows synthesis."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sentence suits a formal report?",
+     "options": [
+      "Learner attendance decreased by 12% during winter.",
+      "Loads of kids didn't pitch in winter.",
+      "I think winter is bad.",
+      "Winter's the worst, hey."
+     ],
+     "answer": 0,
+     "hints": [
+      "Formal register.",
+      "Precise data.",
+      "The first."
+     ],
+     "explain": "It is formal, precise and in the third person."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does the writer's recommendation belong?",
+     "options": [
+      "At the end, supported by the findings",
+      "In the title",
+      "In every sentence",
+      "Nowhere"
+     ],
+     "answer": 0,
+     "hints": [
+      "Findings first.",
+      "Then what should happen.",
+      "At the end."
+     ],
+     "explain": "The recommendation follows from the findings."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a contraction to avoid in formal writing?",
+     "options": [
+      "don't",
+      "do not",
+      "learners",
+      "therefore"
+     ],
+     "answer": 0,
+     "hints": [
+      "Contractions join words.",
+      "With an apostrophe.",
+      "don't."
+     ],
+     "explain": "Write 'do not' instead of 'don't'."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Grouping by theme",
+     "Using formal register",
+     "Ending with a recommendation",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised writing a formal report from several sources.",
+   "teacher": "Shows synthesising information across sources, organising a formal report and maintaining an appropriate register.",
+   "done": "Inform the decision-maker: group by theme, stay formal, end with a recommendation."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Life Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ieb12-ls-evolution-data",
+   "grade": 12,
+   "title": "Evidence for evolution: resistance",
+   "topic": "Evolution: interpreting evidence",
+   "caps": "IEB Life Sciences (CAPS content, IEB assessment): Grade 12 evolution by natural selection: interpreting data on antibiotic resistance",
+   "intention": "Today I am using data to explain natural selection.",
+   "prompt": "Why must you finish a course of antibiotics?",
+   "lesson": [
+    {
+     "h": "Natural selection",
+     "say": "Individuals in a population vary. Some variations help survival. Those individuals survive, reproduce and pass on the helpful alleles, so the population changes over generations.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Variation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Selection</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Survival and reproduction</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Change over generations</span></div>"
+    },
+    {
+     "h": "The data",
+     "say": "In a made-up hospital study, 5 percent of a bacterial population was resistant to an antibiotic in year 1. After years of heavy antibiotic use, 60 percent was resistant by year 6.",
+     "html": "<p>Resistant bacteria: year 1 = <b>5%</b> → year 6 = <b>60%</b></p>"
+    },
+    {
+     "h": "Explaining with the data",
+     "say": "The antibiotic killed non-resistant bacteria. Resistant ones survived and reproduced, so the proportion of resistant bacteria increased.",
+     "html": "<p>The antibiotic is the <b>selecting agent</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Use the data to explain the increase in resistance.",
+    "steps": [
+     "Resistance rose from 5% to 60% over 6 years.",
+     "The antibiotic killed non-resistant bacteria, while resistant ones survived.",
+     "Survivors reproduced and passed on resistance, so it became more common."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Resistance rose from 5% to 60%. By how many percentage points did it rise?",
+     "answer": "55",
+     "options": [
+      "55",
+      "65",
+      "12",
+      "60"
+     ],
+     "hints": [
+      "Subtract.",
+      "60 − 5.",
+      "55."
+     ],
+     "explain": "60 − 5 = 55 percentage points."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the selecting agent in this example?",
+     "options": [
+      "The antibiotic",
+      "The hospital",
+      "The bacteria",
+      "The patients"
+     ],
+     "answer": 0,
+     "hints": [
+      "What kills some bacteria?",
+      "Not all of them.",
+      "The antibiotic."
+     ],
+     "explain": "The antibiotic selects against non-resistant bacteria."
+    },
+    {
+     "type": "mcq",
+     "q": "Where did the resistance come from?",
+     "options": [
+      "Variation already present in the population",
+      "The antibiotic created it on purpose",
+      "The bacteria chose to resist",
+      "The hospital added it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Natural selection acts on variation.",
+      "It was already there.",
+      "A few resistant bacteria."
+     ],
+     "explain": "Some bacteria were already resistant; the antibiotic didn't create it."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does not finishing a course of antibiotics help resistance spread?",
+     "options": [
+      "The more resistant bacteria may survive and multiply",
+      "The antibiotic becomes stronger",
+      "Bacteria forget the antibiotic",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which bacteria are left?",
+      "The toughest.",
+      "They multiply."
+     ],
+     "explain": "Stopping early can leave the most resistant bacteria to multiply."
+    },
+    {
+     "type": "mcq",
+     "q": "Which statement uses the data correctly?",
+     "options": [
+      "Resistance increased from 5% to 60% over six years of heavy antibiotic use.",
+      "All bacteria are now resistant.",
+      "Antibiotics never work.",
+      "Resistance decreased."
+     ],
+     "answer": 0,
+     "hints": [
+      "Quote the data accurately.",
+      "Don't overstate.",
+      "The first."
+     ],
+     "explain": "It reports the data accurately without exaggerating."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The four steps of natural selection",
+     "Quoting the data",
+     "Naming the selecting agent",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used data to explain how bacteria become resistant to antibiotics.",
+   "teacher": "Shows explaining natural selection with reference to data, identifying the selecting agent and avoiding Lamarckian misconceptions.",
+   "done": "Variation, selection, survival and reproduction: support each step with data."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Life Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ieb12-ls-genetics-ethics",
+   "grade": 12,
+   "title": "Genetics and ethics",
+   "topic": "Genetic technology in society",
+   "caps": "IEB Life Sciences (CAPS content, IEB assessment): Grade 12 genetics: evaluating the benefits and concerns of genetic technologies",
+   "intention": "Today I am weighing up the benefits and concerns of genetic technology.",
+   "prompt": "Should everyone know their genetic risks?",
+   "lesson": [
+    {
+     "h": "Genetic technologies",
+     "say": "Genetic technologies include genetically modified crops, genetic testing and DNA profiling. Each brings benefits and raises concerns.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">GM crops</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Genetic testing</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">DNA profiling</span></div>"
+    },
+    {
+     "h": "Weighing both sides",
+     "say": "GM maize can resist pests and need less pesticide, but some people worry about seed costs for small farmers and effects on biodiversity.",
+     "html": "<p>Benefit: fewer pests, less spraying · Concern: seed costs, biodiversity</p>"
+    },
+    {
+     "h": "Ethical questions",
+     "say": "Ethics asks what is right. Who owns genetic information? Should insurers see it? A balanced answer presents both sides, then reaches a justified view.",
+     "html": "<p>Present both sides, then a <b>justified view</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Give one benefit and one concern of genetic testing for disease risk.",
+    "steps": [
+     "Benefit: people can take early action, such as screening or lifestyle changes.",
+     "Concern: the information could be misused, for example by insurers or employers.",
+     "A balanced answer weighs both and suggests protections, such as privacy laws."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is one benefit of pest-resistant GM maize?",
+     "options": [
+      "Less pesticide may be needed",
+      "It is always cheaper for every farmer",
+      "It never needs water",
+      "It removes all pests for ever"
+     ],
+     "answer": 0,
+     "hints": [
+      "The plant resists pests.",
+      "So…",
+      "less spraying."
+     ],
+     "explain": "Pest resistance can reduce pesticide use."
+    },
+    {
+     "type": "mcq",
+     "q": "What is one concern about GM seed for small farmers?",
+     "options": [
+      "The cost of buying patented seed each season",
+      "The seeds are too small",
+      "GM maize is blue",
+      "There are no concerns"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about money.",
+      "Patented seed.",
+      "Cost."
+     ],
+     "explain": "Patented seed can be expensive to buy every season."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is an ethical question about genetic testing?",
+     "options": [
+      "Should insurers be allowed to see the results?",
+      "How long is a DNA molecule?",
+      "What colour is DNA?",
+      "How many genes do humans have?"
+     ],
+     "answer": 0,
+     "hints": [
+      "Ethics asks what is right.",
+      "Not a factual question.",
+      "Insurers."
+     ],
+     "explain": "It asks what is right, not what is true."
+    },
+    {
+     "type": "mcq",
+     "q": "DNA profiling is used to…",
+     "options": [
+      "identify individuals, for example in forensic cases",
+      "change a person's genes",
+      "make crops grow faster",
+      "cure all diseases"
+     ],
+     "answer": 0,
+     "hints": [
+      "Profiling identifies.",
+      "Crime scenes.",
+      "Identify individuals."
+     ],
+     "explain": "DNA profiling identifies people from their DNA."
+    },
+    {
+     "type": "mcq",
+     "q": "What makes an ethics answer strong?",
+     "options": [
+      "Presenting both sides and reaching a justified view",
+      "Only giving your opinion",
+      "Listing facts with no view",
+      "Agreeing with everyone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Balance.",
+      "Then a conclusion.",
+      "Justified."
+     ],
+     "explain": "Strong answers weigh both sides and justify a view."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Listing benefits and concerns",
+     "Asking ethical questions",
+     "Reaching a justified view",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child weighed up the benefits and concerns of genetic technologies.",
+   "teacher": "Shows describing genetic technologies, evaluating benefits and concerns, and constructing balanced, justified ethical arguments.",
+   "done": "Present the benefits and the concerns, then reach a justified view."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Advanced Programme Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "apm12-integration",
+   "grade": 12,
+   "title": "Integration and area",
+   "topic": "Calculus: integration",
+   "category": "Problem Solving",
+   "caps": "IEB Advanced Programme Mathematics: Module 1, Calculus (antiderivatives and definite integrals; area under a curve)",
+   "intention": "Today I am integrating to find the area under a curve.",
+   "prompt": "How could you find the area of a shape with a curved edge?",
+   "lesson": [
+    {
+     "h": "Reversing differentiation",
+     "say": "Integration reverses differentiation. The integral of x to the n is x to the n plus 1, over n plus 1, plus a constant c.",
+     "html": "<p>∫ xⁿ dx = xⁿ⁺¹ ÷ (n + 1) + c, for n ≠ −1</p>"
+    },
+    {
+     "h": "Definite integrals",
+     "say": "A definite integral from a to b gives a number: find the antiderivative, then subtract its value at a from its value at b.",
+     "html": "<p>∫ from a to b of f(x) dx = F(b) − F(a)</p>"
+    },
+    {
+     "h": "Area under a curve",
+     "say": "For a curve above the x-axis, the definite integral gives the area between the curve and the axis. The area under y equals x squared from 0 to 3 is 9.",
+     "html": "<p>∫ from 0 to 3 of x² dx = [x³ ÷ 3] from 0 to 3 = <b>9</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Find ∫ from 1 to 2 of 2x dx.",
+    "steps": [
+     "The antiderivative of 2x is x².",
+     "F(2) − F(1) = 4 − 1.",
+     "= 3."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is ∫ x³ dx?",
+     "options": [
+      "x⁴ ÷ 4 + c",
+      "3x² + c",
+      "x⁴ + c",
+      "x³ ÷ 3 + c"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add 1 to the power.",
+      "Divide by the new power.",
+      "x⁴ ÷ 4."
+     ],
+     "explain": "∫ x³ dx = x⁴ ÷ 4 + c."
+    },
+    {
+     "type": "mcq",
+     "q": "Why add + c to an indefinite integral?",
+     "options": [
+      "Constants vanish when you differentiate, so any constant is possible",
+      "c means calculus",
+      "It is always 0",
+      "To make it longer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Differentiate x² + 5.",
+      "You get 2x.",
+      "The constant is lost."
+     ],
+     "explain": "Any constant differentiates to 0, so it must be included."
+    },
+    {
+     "type": "num",
+     "q": "Find ∫ from 0 to 2 of 3x² dx.",
+     "answer": "8",
+     "options": [
+      "8",
+      "12",
+      "6",
+      "4"
+     ],
+     "hints": [
+      "The antiderivative is x³.",
+      "2³ − 0³.",
+      "8."
+     ],
+     "explain": "[x³] from 0 to 2 = 8."
+    },
+    {
+     "type": "num",
+     "q": "Find the area under y = 4 from x = 0 to x = 5.",
+     "answer": "20",
+     "options": [
+      "20",
+      "9",
+      "4",
+      "25"
+     ],
+     "hints": [
+      "It is a rectangle.",
+      "4 × 5.",
+      "20."
+     ],
+     "explain": "∫ from 0 to 5 of 4 dx = 20."
+    },
+    {
+     "type": "mcq",
+     "q": "Integration is the reverse of…",
+     "options": [
+      "differentiation",
+      "multiplication",
+      "factorisation",
+      "substitution"
+     ],
+     "answer": 0,
+     "hints": [
+      "Antiderivative.",
+      "Undo the derivative.",
+      "Differentiation."
+     ],
+     "explain": "Integration reverses differentiation."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Raising the power and dividing",
+     "F(b) − F(a)",
+     "Linking integrals to area",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child integrated functions and used integration to find areas.",
+   "teacher": "Shows finding antiderivatives of power functions, evaluating definite integrals and interpreting them as area.",
+   "done": "Raise the power, divide by it, then evaluate F(b) − F(a)."
+  },
+  {
+   "curriculum": "IEB",
+   "subject": "Advanced Programme Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "apm12-normal",
+   "grade": 12,
+   "title": "The normal distribution",
+   "topic": "Statistics module: normal distribution",
+   "category": "Inquiry and Exploration",
+   "caps": "IEB Advanced Programme Mathematics: Module 2, Statistics (the normal distribution and z-scores)",
+   "intention": "Today I am using the normal distribution and z-scores.",
+   "prompt": "Why are most people close to average height?",
+   "lesson": [
+    {
+     "h": "The bell curve",
+     "say": "Many measurements, like heights, follow a normal distribution: a symmetrical bell-shaped curve centred on the mean.",
+     "html": "<p>Symmetrical about the <b>mean</b>.</p>"
+    },
+    {
+     "h": "The 68, 95, 99.7 rule",
+     "say": "About 68 percent of values lie within 1 standard deviation of the mean, about 95 percent within 2, and about 99.7 percent within 3.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">±1σ: 68%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">±2σ: 95%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">±3σ: 99.7%</span></div>"
+    },
+    {
+     "h": "z-scores",
+     "say": "A z-score tells you how many standard deviations a value is from the mean: z equals x minus the mean, divided by the standard deviation.",
+     "html": "<p>z = (x − μ) ÷ σ</p>"
+    }
+   ],
+   "example": {
+    "q": "Test marks have a mean of 60 and a standard deviation of 10. Find the z-score of a mark of 75.",
+    "steps": [
+     "z = (75 − 60) ÷ 10.",
+     "= 15 ÷ 10.",
+     "= 1.5: the mark is 1.5 standard deviations above the mean."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Mean 60, standard deviation 10. Find the z-score of 80.",
+     "answer": "2",
+     "options": [
+      "2",
+      "20",
+      "1",
+      "0.5"
+     ],
+     "hints": [
+      "(80 − 60) ÷ 10.",
+      "20 ÷ 10.",
+      "2."
+     ],
+     "explain": "z = 20 ÷ 10 = 2."
+    },
+    {
+     "type": "mcq",
+     "q": "About what percentage of values lie within 1 standard deviation of the mean?",
+     "options": [
+      "68%",
+      "95%",
+      "99.7%",
+      "50%"
+     ],
+     "answer": 0,
+     "hints": [
+      "The rule: 68, 95, 99.7.",
+      "1 standard deviation.",
+      "68%."
+     ],
+     "explain": "About 68% lie within ±1σ."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a z-score of −1 mean?",
+     "options": [
+      "The value is 1 standard deviation below the mean",
+      "The value is negative",
+      "The value is the mean",
+      "The value is impossible"
+     ],
+     "answer": 0,
+     "hints": [
+      "Negative z: below the mean.",
+      "By how many σ?",
+      "1."
+     ],
+     "explain": "z = −1 is one standard deviation below the mean."
+    },
+    {
+     "type": "num",
+     "q": "Heights: mean 160 cm, σ = 8 cm. About 95% of heights lie between 144 cm and what height, in cm?",
+     "answer": "176",
+     "options": [
+      "176",
+      "168",
+      "184",
+      "160"
+     ],
+     "hints": [
+      "95% is within ±2σ.",
+      "160 + 2 × 8.",
+      "176."
+     ],
+     "explain": "160 + 16 = 176 cm."
+    },
+    {
+     "type": "mcq",
+     "q": "What shape is a normal distribution?",
+     "options": [
+      "A symmetrical bell curve",
+      "A straight line",
+      "A U-shape",
+      "A rectangle"
+     ],
+     "answer": 0,
+     "hints": [
+      "Most values are near the middle.",
+      "Fewer at the edges.",
+      "A bell."
+     ],
+     "explain": "It is a symmetrical bell-shaped curve."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The 68, 95, 99.7 rule",
+     "Calculating z-scores",
+     "Picturing the bell curve",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used the normal distribution and z-scores to describe data.",
+   "teacher": "Shows applying the empirical rule, calculating and interpreting z-scores in context.",
+   "done": "Bell-shaped and symmetrical: 68, 95, 99.7, and z = (x − μ) ÷ σ."
   }
  ],
  "words": {
