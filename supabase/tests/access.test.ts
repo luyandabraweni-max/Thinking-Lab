@@ -182,6 +182,12 @@ describe("learner settings", () => {
     expect(now.prefs).toEqual({ size: "large", scan: true });
     expect(now.avatar).not.toBeNull(); // still the character from before
   });
+  it("keep the maths a learner takes at school, and only Mathematics or Mathematical Literacy", async () => {
+    expect((await push(PARENT, [{ id: uuid(82), table: "learner_settings", row: { id: kid, mathsSubject: "lit" } }])).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, [{ id: uuid(83), table: "learner_settings", row: { id: kid, adaptAuto: true } }])).applied).toHaveLength(1);
+    expect(((await pull(SPECIALIST)).learner_settings as unknown as { mathsSubject: unknown }[])[0]!.mathsSubject).toBe("lit");
+    expect((await push(PARENT, [{ id: uuid(84), table: "learner_settings", row: { id: kid, mathsSubject: "physics" } }])).applied).toHaveLength(0);
+  });
   it("refuses kinds of data the server doesn't know", async () => {
     expect((await push(PARENT, [{ id: uuid(63), table: "drop table", row: {} }])).rejected[0]!.reason).toMatch(/unknown table/);
   });

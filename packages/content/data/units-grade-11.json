@@ -410,6 +410,686 @@
    "done": "Spot the theorem in the diagram, apply it, and give the reason."
   },
   {
+   "id": "g11-ml-interest",
+   "grade": 11,
+   "subject": "Mathematical Literacy",
+   "title": "Interest, loans and inflation",
+   "topic": "Finance: interest",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 11 Mathematical Literacy: Finance (simple and compound interest; loans and investments; the effect of inflation)",
+   "intention": "Today I am working out interest and the real cost of borrowing.",
+   "prompt": "Why might a shop offer to let you pay later?",
+   "lesson": [
+    {
+     "h": "Simple interest",
+     "say": "Simple interest is worked out on the starting amount only. R1 000 at 10 percent a year earns R100 every year.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 000</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 100</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 200</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 300</span></div><p>Simple interest: the same <b>R100</b> every year.</p>"
+    },
+    {
+     "h": "Compound interest",
+     "say": "With compound interest, each year's interest is added on, so next year you also earn interest on the interest.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 000</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 100</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 210</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1 331</span></div><p>10% compound for 3 years: <b>R1 331</b>.</p>"
+    },
+    {
+     "h": "Borrowing costs more",
+     "say": "When you borrow, interest works against you. Store cards and short-term loans often charge high interest, so you can pay back much more than you borrowed. Inflation means prices rise over time, so money buys less.",
+     "html": "<p>Compare the <b>total cost</b> of a loan, not only the monthly payment.</p>"
+    }
+   ],
+   "example": {
+    "q": "You invest R5 000 at 8% simple interest per year. How much do you have after 3 years?",
+    "steps": [
+     "Interest per year: 8% of 5 000 = R400.",
+     "For 3 years: 400 × 3 = R1 200.",
+     "Total: 5 000 + 1 200 = R6 200."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "R2 000 earns 5% simple interest per year. How much interest is earned after 4 years, in rand?",
+     "answer": "400",
+     "options": [
+      "400",
+      "100",
+      "2 400",
+      "500"
+     ],
+     "hints": [
+      "5% of 2 000 = R100 a year.",
+      "For 4 years.",
+      "100 × 4."
+     ],
+     "explain": "R100 a year × 4 years = R400."
+    },
+    {
+     "type": "num",
+     "q": "R1 000 earns 10% compound interest per year. How much is there after 2 years, in rand?",
+     "answer": "1 210",
+     "options": [
+      "1 210",
+      "1 200",
+      "1 100",
+      "1 331"
+     ],
+     "hints": [
+      "After 1 year: R1 100.",
+      "Year 2: 10% of 1 100 = R110.",
+      "1 100 + 110."
+     ],
+     "explain": "1 000 → 1 100 → 1 210."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does compound interest grow faster than simple interest?",
+     "options": [
+      "You earn interest on earlier interest too",
+      "The rate is always higher",
+      "The bank adds a bonus",
+      "It is paid every day"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is the interest worked out on?",
+      "The amount keeps growing.",
+      "Interest on interest."
+     ],
+     "explain": "Each year's interest is added, so it earns interest too."
+    },
+    {
+     "type": "mcq",
+     "q": "Inflation is 5% a year. A loaf of bread costs R20 now. About how much will it cost in a year?",
+     "options": [
+      "R21",
+      "R25",
+      "R20,05",
+      "R15"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find 5% of R20.",
+      "That is R1.",
+      "20 + 1."
+     ],
+     "explain": "5% of R20 = R1, so about R21."
+    },
+    {
+     "type": "mcq",
+     "q": "Two loans of R10 000. Loan A: R950 a month for 12 months. Loan B: R620 a month for 24 months. Which costs less in total?",
+     "options": [
+      "Loan A",
+      "Loan B",
+      "They cost the same",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Work out each total.",
+      "A: 950 × 12 = R11 400.",
+      "B: 620 × 24 = R14 880."
+     ],
+     "explain": "Loan A costs R11 400 in total; Loan B costs R14 880. The smaller monthly payment costs more overall."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Seeing the amounts year by year",
+     "Working out the total cost",
+     "The worked example",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared simple and compound interest, and the real cost of loans.",
+   "teacher": "Shows calculating simple and compound interest, interpreting inflation, and comparing the total cost of credit.",
+   "done": "Compound interest grows on itself. Always compare the total cost of a loan."
+  },
+  {
+   "id": "g11-ml-measure",
+   "grade": 11,
+   "subject": "Mathematical Literacy",
+   "title": "Fencing, tiling and tanks",
+   "topic": "Measurement: perimeter, area and volume",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 11 Mathematical Literacy: Measurement (perimeter, area and volume of rectangles, circles, rectangular prisms and cylinders; using given formulas in real contexts)",
+   "intention": "Today I am using perimeter, area and volume for real jobs.",
+   "prompt": "Which job at home needs measuring first?",
+   "lesson": [
+    {
+     "h": "Perimeter and area",
+     "say": "Perimeter is the distance around a shape, like fencing a garden. Area is the space inside, like tiles for a floor. Area is measured in square units.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Perimeter: around (m)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Area: inside (m²)</span></div><p>Rectangle: perimeter = 2 × (l + b), area = l × b</p>"
+    },
+    {
+     "h": "Circles",
+     "say": "For a circle, the circumference is pi times the diameter, and the area is pi times the radius squared. Use 3.14 for pi.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">C = π × d</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">A = π × r²</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">π ≈ 3,14</span></div>"
+    },
+    {
+     "h": "Volume",
+     "say": "Volume is the space a container holds. For a box, multiply length by breadth by height. For a cylinder, multiply the area of the circle by the height. One cubic metre holds 1 000 litres.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Box: l × b × h</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cylinder: π × r² × h</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 m³ = 1 000 ℓ</span></div>"
+    }
+   ],
+   "example": {
+    "q": "A water tank is a cylinder with radius 1 m and height 2 m. How many litres does it hold? Use π = 3,14.",
+    "steps": [
+     "Volume = 3,14 × 1² × 2 = 6,28 m³.",
+     "1 m³ = 1 000 litres.",
+     "6,28 × 1 000 = 6 280 litres."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A room is 4 m by 3 m. What is its floor area, in m²?",
+     "answer": "12",
+     "options": [
+      "12",
+      "14",
+      "7",
+      "24"
+     ],
+     "hints": [
+      "Area = length × breadth.",
+      "4 × 3.",
+      "12."
+     ],
+     "explain": "4 × 3 = 12 m²."
+    },
+    {
+     "type": "num",
+     "q": "How many metres of fencing go around a garden 8 m by 5 m?",
+     "answer": "26",
+     "options": [
+      "26",
+      "40",
+      "13",
+      "21"
+     ],
+     "hints": [
+      "Perimeter = 2 × (l + b).",
+      "8 + 5 = 13.",
+      "2 × 13."
+     ],
+     "explain": "2 × (8 + 5) = 26 m."
+    },
+    {
+     "type": "num",
+     "q": "Find the area of a circle with radius 10 cm, in cm². Use π = 3,14.",
+     "answer": "314",
+     "options": [
+      "314",
+      "31,4",
+      "62,8",
+      "628"
+     ],
+     "hints": [
+      "A = π × r².",
+      "10² = 100.",
+      "3,14 × 100."
+     ],
+     "explain": "3,14 × 100 = 314 cm²."
+    },
+    {
+     "type": "num",
+     "q": "A box is 50 cm long, 20 cm wide and 10 cm high. What is its volume, in cm³?",
+     "answer": "10 000",
+     "options": [
+      "10 000",
+      "80",
+      "1 000",
+      "100 000"
+     ],
+     "hints": [
+      "Volume = l × b × h.",
+      "50 × 20 = 1 000.",
+      "1 000 × 10."
+     ],
+     "explain": "50 × 20 × 10 = 10 000 cm³."
+    },
+    {
+     "type": "mcq",
+     "q": "You want to tile a floor. What do you need to work out?",
+     "options": [
+      "The area",
+      "The perimeter",
+      "The volume",
+      "The diameter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tiles cover the space inside.",
+      "Inside = area.",
+      "Area."
+     ],
+     "explain": "Tiles cover the area of the floor."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Knowing which measurement the job needs",
+     "Using the formulas",
+     "Converting m³ to litres",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out perimeter, area and volume for real jobs like fencing, tiling and water tanks.",
+   "teacher": "Shows selecting and using given formulas for perimeter, area and volume, and converting between cubic metres and litres.",
+   "done": "Around: perimeter. Inside: area. What it holds: volume."
+  },
+  {
+   "id": "g11-ml-plans",
+   "grade": 11,
+   "subject": "Mathematical Literacy",
+   "title": "Floor plans and travel time",
+   "topic": "Maps, plans and other representations",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 11 Mathematical Literacy: Maps, plans and other representations (floor plans and symbols; scale calculations; planning routes; distance, speed and time)",
+   "intention": "Today I am reading floor plans and working out travel times.",
+   "prompt": "How do you decide when to leave for a trip?",
+   "lesson": [
+    {
+     "h": "Reading a floor plan",
+     "say": "A floor plan shows a building from above. It uses symbols for doors, windows and walls, and has a scale so you can work out real sizes.",
+     "html": "<p>A door is often drawn as a line with a quarter circle, showing which way it opens.</p>"
+    },
+    {
+     "h": "Scale on plans",
+     "say": "On a plan with a scale of 1 to 100, 1 centimetre on paper is 1 metre in real life. Measure on the plan, then multiply.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 : 100</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 cm on paper</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">= 1 m real</span></div>"
+    },
+    {
+     "h": "Distance, speed and time",
+     "say": "Distance equals speed times time. A taxi travelling at 60 kilometres per hour for 2 hours covers 120 kilometres. Time equals distance divided by speed.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">D = S × T</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">T = D ÷ S</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">S = D ÷ T</span></div><p>0,5 hours = 30 minutes; 0,25 hours = 15 minutes.</p>"
+    }
+   ],
+   "example": {
+    "q": "A route on a map is 90 km. A bus averages 60 km/h. How long does the trip take?",
+    "steps": [
+     "Time = distance ÷ speed.",
+     "90 ÷ 60 = 1,5 hours.",
+     "1,5 hours = 1 hour 30 minutes."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Scale 1 : 100. A bedroom is 3,5 cm long on the plan. How long is it really, in metres?",
+     "answer": "3,5",
+     "options": [
+      "3,5",
+      "35",
+      "350",
+      "0,35"
+     ],
+     "hints": [
+      "3,5 × 100 = 350 cm.",
+      "100 cm = 1 m.",
+      "350 ÷ 100."
+     ],
+     "explain": "350 cm = 3,5 m."
+    },
+    {
+     "type": "num",
+     "q": "A car travels at 80 km/h for 3 hours. How far does it go, in km?",
+     "answer": "240",
+     "options": [
+      "240",
+      "83",
+      "26,7",
+      "160"
+     ],
+     "hints": [
+      "Distance = speed × time.",
+      "80 × 3.",
+      "240."
+     ],
+     "explain": "80 × 3 = 240 km."
+    },
+    {
+     "type": "mcq",
+     "q": "A trip is 150 km at 100 km/h. How long does it take?",
+     "options": [
+      "1 hour 30 minutes",
+      "1 hour 50 minutes",
+      "2 hours 30 minutes",
+      "15 minutes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Time = distance ÷ speed.",
+      "150 ÷ 100 = 1,5 hours.",
+      "0,5 hours = 30 minutes."
+     ],
+     "explain": "1,5 hours = 1 hour 30 minutes, not 1 hour 50 minutes."
+    },
+    {
+     "type": "mcq",
+     "q": "What does a floor plan show?",
+     "options": [
+      "A building seen from above",
+      "The front of a building",
+      "Only the roof",
+      "A map of the town"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of looking down.",
+      "Without the roof.",
+      "From above."
+     ],
+     "explain": "A floor plan is a view from above, showing the rooms."
+    },
+    {
+     "type": "mcq",
+     "q": "A learner says 0,25 hours is 25 minutes. Is that right?",
+     "options": [
+      "No, it is 15 minutes",
+      "Yes",
+      "No, it is 2,5 minutes",
+      "No, it is 40 minutes"
+     ],
+     "answer": 0,
+     "hints": [
+      "An hour has 60 minutes, not 100.",
+      "0,25 is a quarter.",
+      "A quarter of 60."
+     ],
+     "explain": "0,25 × 60 = 15 minutes."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Multiplying by the scale",
+     "The D = S × T triangle",
+     "Changing hours to minutes",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read floor plans and worked out real sizes and travel times.",
+   "teacher": "Shows interpreting floor plans and symbols, applying scale, and using distance, speed and time, including converting decimal hours.",
+   "done": "Use the scale for real sizes, and D = S × T for trips. An hour has 60 minutes."
+  },
+  {
+   "id": "g11-ml-graphs",
+   "grade": 11,
+   "subject": "Mathematical Literacy",
+   "title": "Graphs that tell the truth",
+   "topic": "Data handling: graphs",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Reflection",
+   "caps": "CAPS Grade 11 Mathematical Literacy: Data handling (bar graphs, pie charts and line graphs; choosing a suitable graph; recognising misleading graphs)",
+   "intention": "Today I am choosing the right graph and spotting misleading ones.",
+   "prompt": "Have you seen a graph in an advert? Did you trust it?",
+   "lesson": [
+    {
+     "h": "Choosing a graph",
+     "say": "Use a bar graph to compare groups, a pie chart to show parts of a whole, and a line graph to show change over time.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Compare groups: bar</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Parts of a whole: pie</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Change over time: line</span></div>"
+    },
+    {
+     "h": "Pie charts",
+     "say": "A whole pie is 360 degrees, or 100 percent. If 25 percent of a budget goes on food, its slice is a quarter of the circle, 90 degrees.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">100% = 360°</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">25% = 90°</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1% = 3,6°</span></div>"
+    },
+    {
+     "h": "Misleading graphs",
+     "say": "A graph can mislead if the vertical axis does not start at zero, if the scale jumps, or if pictures are stretched. Always read the numbers, not only the shape.",
+     "html": "<p>A small rise looks huge when the axis starts at 95 instead of 0.</p>"
+    }
+   ],
+   "example": {
+    "q": "A household spends R3 000 of its R12 000 income on rent. How many degrees is the rent slice in a pie chart?",
+    "steps": [
+     "Fraction: 3 000 ÷ 12 000 = 1/4.",
+     "1/4 of 360° = 90°.",
+     "The rent slice is 90°, a quarter of the circle."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which graph best shows how the price of petrol changed over 12 months?",
+     "options": [
+      "A line graph",
+      "A pie chart",
+      "A tally",
+      "A map"
+     ],
+     "answer": 0,
+     "hints": [
+      "The question is about change over time.",
+      "Which graph shows time?",
+      "A line graph."
+     ],
+     "explain": "Line graphs show change over time."
+    },
+    {
+     "type": "mcq",
+     "q": "Which graph best shows how a budget is split between food, rent and transport?",
+     "options": [
+      "A pie chart",
+      "A line graph",
+      "A grid map",
+      "A number line"
+     ],
+     "answer": 0,
+     "hints": [
+      "The parts make up one whole budget.",
+      "Parts of a whole.",
+      "A pie chart."
+     ],
+     "explain": "A pie chart shows parts of a whole."
+    },
+    {
+     "type": "num",
+     "q": "In a pie chart, a slice is 50% of the whole. How many degrees is it?",
+     "answer": "180",
+     "options": [
+      "180",
+      "50",
+      "90",
+      "360"
+     ],
+     "hints": [
+      "The whole is 360°.",
+      "50% is half.",
+      "Half of 360."
+     ],
+     "explain": "Half of 360° = 180°."
+    },
+    {
+     "type": "mcq",
+     "q": "A bar graph of sales starts its vertical axis at 950 instead of 0. What is the danger?",
+     "options": [
+      "Small differences look much bigger",
+      "The graph becomes more accurate",
+      "Nothing, it is the same",
+      "The bars become shorter"
+     ],
+     "answer": 0,
+     "hints": [
+      "The bottoms of the bars are cut off.",
+      "What happens to differences between bars?",
+      "They look bigger."
+     ],
+     "explain": "Cutting off the axis makes small differences look large."
+    },
+    {
+     "type": "num",
+     "q": "A slice of a pie chart is 72°. What percentage of the whole is that? (Type the number only.)",
+     "answer": "20",
+     "options": [
+      "20",
+      "72",
+      "36",
+      "25"
+     ],
+     "hints": [
+      "Percentage = degrees ÷ 360 × 100.",
+      "72 ÷ 360 = 0,2.",
+      "0,2 = 20%."
+     ],
+     "explain": "72 ÷ 360 = 0,2 = 20%."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Matching the graph to the question",
+     "Working with 360°",
+     "Checking where the axis starts",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child chose suitable graphs and spotted ways that graphs can mislead.",
+   "teacher": "Shows selecting appropriate representations, calculating pie chart angles, and critically evaluating misleading graphs.",
+   "done": "Choose the graph that fits the question, and always check the axis."
+  },
+  {
+   "id": "g11-ml-risk",
+   "grade": 11,
+   "subject": "Mathematical Literacy",
+   "title": "Comparing risks",
+   "topic": "Probability: two-way tables",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Flexible Thinking",
+   "caps": "CAPS Grade 11 Mathematical Literacy: Probability (two-way tables; tree diagrams for two events; interpreting risk in health, games and insurance)",
+   "intention": "Today I am comparing risks fairly, using tables and tree diagrams.",
+   "prompt": "How do people decide whether something is risky?",
+   "lesson": [
+    {
+     "h": "Two-way tables",
+     "say": "A two-way table sorts data by two things at once, for example whether people were vaccinated, and whether they got flu. Of 200 vaccinated people, 10 got flu. Of 200 unvaccinated people, 40 got flu.",
+     "html": "<p>Vaccinated: <b>10</b> of 200 got flu.</p><p>Not vaccinated: <b>40</b> of 200 got flu.</p>"
+    },
+    {
+     "h": "Comparing risk",
+     "say": "To compare groups fairly, compare probabilities, not only counts. 10 out of 200 is 5 percent. 40 out of 200 is 20 percent. The unvaccinated group had four times the risk.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10 ÷ 200 = 5%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">40 ÷ 200 = 20%</span></div><p>Percentages let you compare groups of <b>different sizes</b> too.</p>"
+    },
+    {
+     "h": "Tree diagrams",
+     "say": "A tree diagram lists every outcome of two events. Tossing two coins gives four outcomes: heads heads, heads tails, tails heads and tails tails. The chance of two heads is 1 out of 4.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">HH</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">HT</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">TH</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">TT</span></div><p>P(two heads) = <b>1/4</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Of all 400 people above, 10 + 40 got flu. What is the probability that a person picked at random got flu?",
+    "steps": [
+     "People who got flu: 10 + 40 = 50.",
+     "Total people: 400.",
+     "50 ÷ 400 = 1/8 = 12,5%."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "200 vaccinated people: 10 got flu. What percentage got flu? (Type the number only.)",
+     "answer": "5",
+     "options": [
+      "5",
+      "10",
+      "20",
+      "50"
+     ],
+     "hints": [
+      "10 ÷ 200.",
+      "= 0,05.",
+      "0,05 = 5%."
+     ],
+     "explain": "10 ÷ 200 = 0,05 = 5%."
+    },
+    {
+     "type": "num",
+     "q": "200 unvaccinated people: 40 got flu. What percentage got flu? (Type the number only.)",
+     "answer": "20",
+     "options": [
+      "20",
+      "40",
+      "4",
+      "80"
+     ],
+     "hints": [
+      "40 ÷ 200.",
+      "= 0,2.",
+      "0,2 = 20%."
+     ],
+     "explain": "40 ÷ 200 = 0,2 = 20%."
+    },
+    {
+     "type": "mcq",
+     "q": "From these results, which group had the higher risk of flu?",
+     "options": [
+      "The unvaccinated group",
+      "The vaccinated group",
+      "Both the same",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Compare 5% and 20%.",
+      "Which is higher?",
+      "20%."
+     ],
+     "explain": "20% is higher than 5%."
+    },
+    {
+     "type": "mcq",
+     "q": "Two coins are tossed. What is the probability of getting one head and one tail?",
+     "options": [
+      "1/2",
+      "1/4",
+      "1/3",
+      "3/4"
+     ],
+     "answer": 0,
+     "hints": [
+      "List the outcomes: HH, HT, TH, TT.",
+      "HT and TH both work.",
+      "2 out of 4."
+     ],
+     "explain": "HT and TH: 2 out of 4 = 1/2."
+    },
+    {
+     "type": "mcq",
+     "q": "Why compare percentages instead of counts?",
+     "options": [
+      "The groups may be different sizes",
+      "Percentages are always bigger",
+      "Counts are never correct",
+      "It is the law"
+     ],
+     "answer": 0,
+     "hints": [
+      "Imagine 10 sick out of 50, and 20 sick out of 1 000.",
+      "Which group is worse off?",
+      "Size matters."
+     ],
+     "explain": "Percentages make groups of different sizes comparable."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Reading the table row by row",
+     "Changing counts to percentages",
+     "Listing outcomes in a tree",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used two-way tables and tree diagrams to compare risks fairly.",
+   "teacher": "Shows reading two-way tables, comparing relative risk using percentages, and listing outcomes with tree diagrams.",
+   "done": "Compare risks with percentages, and list every outcome before you count."
+  },
+  {
    "id": "g11-drama",
    "grade": 11,
    "subject": "English Home Language",

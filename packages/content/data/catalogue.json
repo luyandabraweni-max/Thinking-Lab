@@ -1485,6 +1485,61 @@
   "pack": "grade-10"
  },
  {
+  "id": "g10-ml-budget",
+  "grade": 10,
+  "subject": "Mathematical Literacy",
+  "title": "Budgets that balance",
+  "topic": "Finance: income and expenses",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Planning and Organisation",
+  "caps": "CAPS Grade 10 Mathematical Literacy: Finance (financial documents; income, expenditure, profit and loss; household budgets)",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-ml-units",
+  "grade": 10,
+  "subject": "Mathematical Literacy",
+  "title": "Converting units and recipes",
+  "topic": "Measurement: conversions",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "caps": "CAPS Grade 10 Mathematical Literacy: Measurement (conversions between metric units; measuring length, mass and volume; scaling recipes)",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-ml-maps",
+  "grade": 10,
+  "subject": "Mathematical Literacy",
+  "title": "Map scales and grids",
+  "topic": "Maps, plans and other representations",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Problem Solving",
+  "caps": "CAPS Grade 10 Mathematical Literacy: Maps, plans and other representations (number and bar scales; grid references; estimating real distances on maps)",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-ml-data",
+  "grade": 10,
+  "subject": "Mathematical Literacy",
+  "title": "Surveys and summaries",
+  "topic": "Data handling",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Inquiry and Exploration",
+  "caps": "CAPS Grade 10 Mathematical Literacy: Data handling (developing questions; collecting data with surveys; organising data in frequency tables; mean, median, mode and range)",
+  "pack": "grade-10"
+ },
+ {
+  "id": "g10-ml-chance",
+  "grade": 10,
+  "subject": "Mathematical Literacy",
+  "title": "How likely is it?",
+  "topic": "Probability",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Pattern Thinking",
+  "caps": "CAPS Grade 10 Mathematical Literacy: Probability (the probability scale from 0 to 1; expressing probability as fractions, decimals and percentages; weather forecasts and games)",
+  "pack": "grade-10"
+ },
+ {
   "id": "g10-poetry",
   "grade": 10,
   "subject": "English Home Language",
@@ -1617,6 +1672,61 @@
   "pack": "grade-11"
  },
  {
+  "id": "g11-ml-interest",
+  "grade": 11,
+  "subject": "Mathematical Literacy",
+  "title": "Interest, loans and inflation",
+  "topic": "Finance: interest",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "caps": "CAPS Grade 11 Mathematical Literacy: Finance (simple and compound interest; loans and investments; the effect of inflation)",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-ml-measure",
+  "grade": 11,
+  "subject": "Mathematical Literacy",
+  "title": "Fencing, tiling and tanks",
+  "topic": "Measurement: perimeter, area and volume",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "caps": "CAPS Grade 11 Mathematical Literacy: Measurement (perimeter, area and volume of rectangles, circles, rectangular prisms and cylinders; using given formulas in real contexts)",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-ml-plans",
+  "grade": 11,
+  "subject": "Mathematical Literacy",
+  "title": "Floor plans and travel time",
+  "topic": "Maps, plans and other representations",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "caps": "CAPS Grade 11 Mathematical Literacy: Maps, plans and other representations (floor plans and symbols; scale calculations; planning routes; distance, speed and time)",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-ml-graphs",
+  "grade": 11,
+  "subject": "Mathematical Literacy",
+  "title": "Graphs that tell the truth",
+  "topic": "Data handling: graphs",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "caps": "CAPS Grade 11 Mathematical Literacy: Data handling (bar graphs, pie charts and line graphs; choosing a suitable graph; recognising misleading graphs)",
+  "pack": "grade-11"
+ },
+ {
+  "id": "g11-ml-risk",
+  "grade": 11,
+  "subject": "Mathematical Literacy",
+  "title": "Comparing risks",
+  "topic": "Probability: two-way tables",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Flexible Thinking",
+  "caps": "CAPS Grade 11 Mathematical Literacy: Probability (two-way tables; tree diagrams for two events; interpreting risk in health, games and insurance)",
+  "pack": "grade-11"
+ },
+ {
   "id": "g11-drama",
   "grade": 11,
   "subject": "English Home Language",
@@ -1746,6 +1856,61 @@
   "domain": "Logical and Analytical Thinking",
   "category": "Problem Solving",
   "caps": "CAPS Grade 12 Mathematics, Term 1: Finance, growth and decay (future value and present value annuities; loans and bond repayments; sinking funds)",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-ml-tax",
+  "grade": 12,
+  "subject": "Mathematical Literacy",
+  "title": "VAT, payslips and income tax",
+  "topic": "Finance: tax",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "caps": "CAPS Grade 12 Mathematical Literacy: Finance (VAT; payslips and deductions; income tax using tax brackets and rebates)",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-ml-packaging",
+  "grade": 12,
+  "subject": "Mathematical Literacy",
+  "title": "Packing and packaging",
+  "topic": "Measurement: surface area and volume",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Problem Solving",
+  "caps": "CAPS Grade 12 Mathematical Literacy: Measurement (surface area and volume of rectangular prisms and cylinders; packing problems; cost of materials)",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-ml-building",
+  "grade": 12,
+  "subject": "Mathematical Literacy",
+  "title": "Building from plans",
+  "topic": "Maps, plans and other representations",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Planning and Organisation",
+  "caps": "CAPS Grade 12 Mathematical Literacy: Maps, plans and other representations (floor plans and elevation plans; scale drawings; calculating quantities of building materials)",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-ml-compare",
+  "grade": 12,
+  "subject": "Mathematical Literacy",
+  "title": "Comparing data sets",
+  "topic": "Data handling: quartiles and claims",
+  "domain": "Inquiry and Systems Thinking",
+  "category": "Reflection",
+  "caps": "CAPS Grade 12 Mathematical Literacy: Data handling (quartiles and box-and-whisker plots; comparing two data sets; evaluating claims made with data)",
+  "pack": "grade-12"
+ },
+ {
+  "id": "g12-ml-fair",
+  "grade": 12,
+  "subject": "Mathematical Literacy",
+  "title": "Fair games and expected results",
+  "topic": "Probability: fairness and expected value",
+  "domain": "Logical and Analytical Thinking",
+  "category": "Flexible Thinking",
+  "caps": "CAPS Grade 12 Mathematical Literacy: Probability (theoretical and experimental probability; fairness of games; risk and expected outcomes in lotteries and insurance)",
   "pack": "grade-12"
  },
  {

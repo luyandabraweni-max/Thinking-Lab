@@ -22,7 +22,7 @@ describe("content", () => {
       const pack = await loadPack(packOf(g));
       expect(pack.units.map(u => u.id)).toEqual(CATALOGUE.filter(u => u.grade === g).map(u => u.id));
     }
-    expect(CATALOGUE).toHaveLength(180);
+    expect(CATALOGUE).toHaveLength(195);
   });
   it("has complete, answerable questions in every lesson", async () => {
     const bad: string[] = [];

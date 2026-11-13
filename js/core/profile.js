@@ -16,7 +16,7 @@ function curGrade() { return ALL_LEVELS.includes(S.grade) ? S.grade : (DEFAULT_G
 // Learning areas group subject names that change between phases, so a learner can work at a different
 // level in each area (for example D-CAPS: Foundation Phase maths, higher in Life Skills).
 const AREAS = {
-  maths: ["Maths", ["Mathematics", "Exploring Mathematics"]],
+  maths: ["Maths", ["Mathematics", "Mathematical Literacy", "Exploring Mathematics"]],
   language: ["Language", ["English Home Language", "English", "Communication"]],
   life: ["Life skills", ["Life Skills", "Life Orientation", "Life and work skills", "Identity and Belonging", "Well-being"]],
   science: ["Science and technology", ["Natural Sciences and Technology", "Natural Sciences", "Life Sciences", "Knowledge and Understanding of the World", "Information and Communication Technology"]],

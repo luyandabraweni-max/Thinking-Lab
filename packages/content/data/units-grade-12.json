@@ -409,6 +409,686 @@
    "done": "Future value builds savings; present value works out loan payments. Always compare the total cost."
   },
   {
+   "id": "g12-ml-tax",
+   "grade": 12,
+   "subject": "Mathematical Literacy",
+   "title": "VAT, payslips and income tax",
+   "topic": "Finance: tax",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 12 Mathematical Literacy: Finance (VAT; payslips and deductions; income tax using tax brackets and rebates)",
+   "intention": "Today I am working out VAT, net pay and income tax.",
+   "prompt": "What would you like to know about your first payslip?",
+   "lesson": [
+    {
+     "h": "VAT",
+     "say": "Value-added tax, or VAT, is added to most goods and services. This lesson uses South Africa's rate of 15 percent. To add VAT, multiply by 1.15. To find the price before VAT, divide by 1.15.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Before VAT × 1,15</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">= price with VAT</span></div><p>Price with VAT ÷ 1,15 = price before VAT</p>"
+    },
+    {
+     "h": "Payslips",
+     "say": "A payslip shows gross pay, which is what you earn, then deductions such as PAYE income tax, UIF and pension. What you take home is the net pay. Workers pay 1 percent of their pay to UIF.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gross pay</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">− deductions</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">= net pay</span></div>"
+    },
+    {
+     "h": "Income tax",
+     "say": "Income tax uses brackets: higher incomes are taxed at higher rates. You work out the tax on taxable income, then subtract a rebate. SARS publishes new tables every year, so always use the current ones.",
+     "html": "<p>This lesson uses a <b>made-up, simplified</b> tax table for practice, not SARS's real one.</p>"
+    }
+   ],
+   "example": {
+    "q": "Practice table: tax = 18% of taxable income, minus a rebate of R17 000. Annual taxable income is R150 000. What is the tax for the year?",
+    "steps": [
+     "18% of 150 000 = R27 000.",
+     "Subtract the rebate: 27 000 − 17 000 = R10 000.",
+     "Tax for the year: R10 000, about R833 a month."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A kettle costs R300 before VAT. What does it cost with 15% VAT, in rand?",
+     "answer": "345",
+     "options": [
+      "345",
+      "315",
+      "45",
+      "300"
+     ],
+     "hints": [
+      "Multiply by 1,15.",
+      "Or add 15% of 300 = R45.",
+      "300 + 45."
+     ],
+     "explain": "300 × 1,15 = R345."
+    },
+    {
+     "type": "num",
+     "q": "A price including 15% VAT is R230. What was the price before VAT, in rand?",
+     "answer": "200",
+     "options": [
+      "200",
+      "195,50",
+      "215",
+      "264,50"
+     ],
+     "hints": [
+      "Don't subtract 15% of R230.",
+      "Divide by 1,15.",
+      "230 ÷ 1,15."
+     ],
+     "explain": "230 ÷ 1,15 = R200."
+    },
+    {
+     "type": "num",
+     "q": "Gross pay is R9 000. Deductions are R1 350. What is the net pay, in rand?",
+     "answer": "7 650",
+     "options": [
+      "7 650",
+      "10 350",
+      "9 000",
+      "1 350"
+     ],
+     "hints": [
+      "Net = gross − deductions.",
+      "9 000 − 1 350.",
+      "7 650."
+     ],
+     "explain": "9 000 − 1 350 = R7 650."
+    },
+    {
+     "type": "num",
+     "q": "UIF is 1% of gross pay. Gross pay is R9 000. What is the UIF deduction, in rand?",
+     "answer": "90",
+     "options": [
+      "90",
+      "900",
+      "9",
+      "0,9"
+     ],
+     "hints": [
+      "1% means divide by 100.",
+      "9 000 ÷ 100.",
+      "90."
+     ],
+     "explain": "1% of 9 000 = R90."
+    },
+    {
+     "type": "mcq",
+     "q": "Practice table: tax is 18% of taxable income, minus a R17 000 rebate. Someone earns R80 000 a year, and 18% of R80 000 is R14 400. How much tax do they pay?",
+     "options": [
+      "R0, because the rebate is more than the tax",
+      "R14 400",
+      "R31 400",
+      "−R2 600"
+     ],
+     "answer": 0,
+     "hints": [
+      "Subtract the rebate from R14 400.",
+      "14 400 − 17 000 is less than zero.",
+      "Tax can't be negative."
+     ],
+     "explain": "The rebate is bigger than the tax, so they pay no income tax."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Multiplying or dividing by 1,15",
+     "Seeing gross and net pay",
+     "Subtracting the rebate",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child calculated VAT, read a payslip and used a practice tax table.",
+   "teacher": "Shows calculating VAT-inclusive and VAT-exclusive amounts, interpreting payslip deductions, and applying tax brackets and rebates (practice table).",
+   "done": "VAT: × 1,15 or ÷ 1,15. Net pay = gross pay − deductions."
+  },
+  {
+   "id": "g12-ml-packaging",
+   "grade": 12,
+   "subject": "Mathematical Literacy",
+   "title": "Packing and packaging",
+   "topic": "Measurement: surface area and volume",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 12 Mathematical Literacy: Measurement (surface area and volume of rectangular prisms and cylinders; packing problems; cost of materials)",
+   "intention": "Today I am working out surface area, packing and material costs.",
+   "prompt": "Why do you think some boxes have so much empty space?",
+   "lesson": [
+    {
+     "h": "Surface area",
+     "say": "Surface area is the total area of all the faces of an object, like the cardboard needed to make a box. A box has six rectangular faces in three matching pairs.",
+     "html": "<p>Surface area of a box = 2(l × b) + 2(l × h) + 2(b × h)</p>"
+    },
+    {
+     "h": "Packing",
+     "say": "To find how many small boxes fit in a big box, divide each length by the small box's length, round down to whole boxes, then multiply the three answers.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Length ÷</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Width ÷</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Height ÷</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Round down, then multiply</span></div>"
+    },
+    {
+     "h": "Costing materials",
+     "say": "Once you know the surface area, multiply by the price per square metre to find the cost of material. Add extra for overlaps and waste.",
+     "html": "<p>Packers and builders often add about <b>10%</b> for waste.</p>"
+    }
+   ],
+   "example": {
+    "q": "Boxes of 10 cm × 10 cm × 10 cm are packed into a crate 50 cm × 30 cm × 20 cm. How many fit?",
+    "steps": [
+     "50 ÷ 10 = 5 along the length.",
+     "30 ÷ 10 = 3 across, and 20 ÷ 10 = 2 high.",
+     "5 × 3 × 2 = 30 boxes."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the surface area of a box 10 cm × 5 cm × 2 cm, in cm².",
+     "answer": "160",
+     "options": [
+      "160",
+      "100",
+      "80",
+      "17"
+     ],
+     "hints": [
+      "Faces: 10 × 5 = 50, 10 × 2 = 20, 5 × 2 = 10.",
+      "Each face comes twice.",
+      "2 × (50 + 20 + 10)."
+     ],
+     "explain": "2 × (50 + 20 + 10) = 160 cm²."
+    },
+    {
+     "type": "num",
+     "q": "Small boxes are 20 cm × 20 cm × 20 cm. A crate is 100 cm × 60 cm × 40 cm. How many boxes fit?",
+     "answer": "30",
+     "options": [
+      "30",
+      "24",
+      "60",
+      "15"
+     ],
+     "hints": [
+      "100 ÷ 20 = 5.",
+      "60 ÷ 20 = 3 and 40 ÷ 20 = 2.",
+      "5 × 3 × 2."
+     ],
+     "explain": "5 × 3 × 2 = 30 boxes."
+    },
+    {
+     "type": "num",
+     "q": "A crate is 45 cm long. Boxes are 10 cm long. How many fit along the length?",
+     "answer": "4",
+     "options": [
+      "4",
+      "4,5",
+      "5",
+      "3"
+     ],
+     "hints": [
+      "45 ÷ 10 = 4,5.",
+      "You can't fit half a box.",
+      "Round down."
+     ],
+     "explain": "4,5 rounds down to 4 whole boxes."
+    },
+    {
+     "type": "num",
+     "q": "A box needs 2 m² of cardboard. Cardboard costs R12 per m². What does the cardboard cost, in rand?",
+     "answer": "24",
+     "options": [
+      "24",
+      "14",
+      "6",
+      "12"
+     ],
+     "hints": [
+      "Cost = area × price per m².",
+      "2 × 12.",
+      "24."
+     ],
+     "explain": "2 × R12 = R24."
+    },
+    {
+     "type": "mcq",
+     "q": "Which job needs surface area rather than volume?",
+     "options": [
+      "Wrapping paper for a gift",
+      "Water in a tank",
+      "Sand in a truck",
+      "Milk in a bottle"
+     ],
+     "answer": 0,
+     "hints": [
+      "Surface area covers the outside.",
+      "Volume is what is inside.",
+      "Which one covers the outside?"
+     ],
+     "explain": "Wrapping paper covers the outside: surface area."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Working face by face",
+     "Rounding down to whole boxes",
+     "Costing the material",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out surface area, packing and material costs.",
+   "teacher": "Shows calculating surface area, solving packing problems with whole objects, and costing materials.",
+   "done": "Outside: surface area. Inside: volume. Pack in whole boxes only."
+  },
+  {
+   "id": "g12-ml-building",
+   "grade": 12,
+   "subject": "Mathematical Literacy",
+   "title": "Building from plans",
+   "topic": "Maps, plans and other representations",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 12 Mathematical Literacy: Maps, plans and other representations (floor plans and elevation plans; scale drawings; calculating quantities of building materials)",
+   "intention": "Today I am using building plans to work out the materials needed.",
+   "prompt": "What would you need to build a room?",
+   "lesson": [
+    {
+     "h": "Plans and elevations",
+     "say": "A floor plan shows a building from above. An elevation shows it from the front, back or side, so you can see heights, doors and windows.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Floor plan: from above</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Elevation: from the side</span></div>"
+    },
+    {
+     "h": "Quantities from plans",
+     "say": "Builders use plans to work out how much material is needed. For a wall, find its area, subtract the windows and doors, then multiply by how many bricks cover one square metre.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wall area</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">− windows and doors</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">× bricks per m²</span></div>"
+    },
+    {
+     "h": "Rounding up",
+     "say": "You can't buy part of a bag of cement. When ordering materials, always round up to whole units.",
+     "html": "<p>23,2 bags means you buy <b>24</b> bags.</p>"
+    }
+   ],
+   "example": {
+    "q": "A wall is 5 m long and 2,4 m high, with a 1 m² window. About 50 bricks cover 1 m². How many bricks are needed?",
+    "steps": [
+     "Wall area: 5 × 2,4 = 12 m².",
+     "Subtract the window: 12 − 1 = 11 m².",
+     "11 × 50 = 550 bricks."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which drawing shows how high a house's windows are?",
+     "options": [
+      "An elevation",
+      "A floor plan",
+      "A map",
+      "A tally table"
+     ],
+     "answer": 0,
+     "hints": [
+      "Height is seen from the side.",
+      "Not from above.",
+      "An elevation."
+     ],
+     "explain": "Elevations show the building from the side, with heights."
+    },
+    {
+     "type": "num",
+     "q": "A wall is 4 m by 2,5 m. What is its area, in m²?",
+     "answer": "10",
+     "options": [
+      "10",
+      "13",
+      "6,5",
+      "100"
+     ],
+     "hints": [
+      "Area = length × height.",
+      "4 × 2,5.",
+      "10."
+     ],
+     "explain": "4 × 2,5 = 10 m²."
+    },
+    {
+     "type": "num",
+     "q": "A wall of 10 m² has a door of 2 m². About 50 bricks cover 1 m². How many bricks are needed?",
+     "answer": "400",
+     "options": [
+      "400",
+      "500",
+      "600",
+      "8"
+     ],
+     "hints": [
+      "Subtract the door: 10 − 2 = 8 m².",
+      "Multiply by 50.",
+      "8 × 50."
+     ],
+     "explain": "8 m² × 50 = 400 bricks."
+    },
+    {
+     "type": "num",
+     "q": "You need 13,4 bags of cement. How many bags must you buy?",
+     "answer": "14",
+     "options": [
+      "14",
+      "13",
+      "13,4",
+      "15"
+     ],
+     "hints": [
+      "You can't buy part of a bag.",
+      "13 bags is not enough.",
+      "Round up."
+     ],
+     "explain": "Round up to 14 whole bags."
+    },
+    {
+     "type": "num",
+     "q": "Scale 1 : 50. A window is 3 cm wide on the elevation. How wide is it really, in metres?",
+     "answer": "1,5",
+     "options": [
+      "1,5",
+      "150",
+      "15",
+      "0,15"
+     ],
+     "hints": [
+      "3 × 50 = 150 cm.",
+      "100 cm = 1 m.",
+      "150 ÷ 100."
+     ],
+     "explain": "150 cm = 1,5 m."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Telling plans and elevations apart",
+     "Subtracting the openings",
+     "Rounding up to whole units",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read building plans and worked out the materials needed.",
+   "teacher": "Shows distinguishing plan and elevation views, calculating areas less openings, applying scale, and rounding quantities up in context.",
+   "done": "Find the area, take away the openings, and always round materials up."
+  },
+  {
+   "id": "g12-ml-compare",
+   "grade": 12,
+   "subject": "Mathematical Literacy",
+   "title": "Comparing data sets",
+   "topic": "Data handling: quartiles and claims",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Reflection",
+   "caps": "CAPS Grade 12 Mathematical Literacy: Data handling (quartiles and box-and-whisker plots; comparing two data sets; evaluating claims made with data)",
+   "intention": "Today I am comparing two sets of data and checking claims.",
+   "prompt": "What makes you believe or doubt a statistic in the news?",
+   "lesson": [
+    {
+     "h": "Quartiles",
+     "say": "Order the data. The median splits it in half. The lower quartile is the middle of the lower half, and the upper quartile is the middle of the upper half.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Minimum</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Q1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Median</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Q3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Maximum</span></div><p>Interquartile range (IQR) = Q3 − Q1</p>"
+    },
+    {
+     "h": "Box-and-whisker plots",
+     "say": "A box-and-whisker plot draws the five-number summary. The box shows the middle half of the data. Comparing two boxes shows which group is higher, and which is more spread out.",
+     "html": "<p>A <b>longer box</b> means more spread in the middle half.</p>"
+    },
+    {
+     "h": "Checking claims",
+     "say": "When someone uses data to make a claim, ask: how big was the sample, who was asked, and does the average hide a big spread?",
+     "html": "<p>Ask: <b>who was asked, how many, and how spread out?</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Class A test marks: Q1 = 45, median = 60, Q3 = 70. Class B: Q1 = 55, median = 62, Q3 = 66. Compare them.",
+    "steps": [
+     "The medians are close: 60 and 62.",
+     "Class A's IQR is 70 − 45 = 25. Class B's is 66 − 55 = 11.",
+     "Similar averages, but Class B's marks are much more consistent."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the median of 3, 7, 8, 12, 15, 18, 20.",
+     "answer": "12",
+     "options": [
+      "12",
+      "15",
+      "11,9",
+      "8"
+     ],
+     "hints": [
+      "The data is in order, with 7 values.",
+      "The middle value is the 4th.",
+      "12."
+     ],
+     "explain": "The 4th of 7 values is 12."
+    },
+    {
+     "type": "num",
+     "q": "Q1 = 20 and Q3 = 35. What is the interquartile range?",
+     "answer": "15",
+     "options": [
+      "15",
+      "55",
+      "27,5",
+      "20"
+     ],
+     "hints": [
+      "IQR = Q3 − Q1.",
+      "35 − 20.",
+      "15."
+     ],
+     "explain": "35 − 20 = 15."
+    },
+    {
+     "type": "mcq",
+     "q": "Two taxi routes have the same median trip time. Route A's IQR is 5 minutes and Route B's is 20 minutes. Which route is more reliable?",
+     "options": [
+      "Route A",
+      "Route B",
+      "They are the same",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "IQR shows spread.",
+      "Less spread means more predictable.",
+      "The smaller IQR."
+     ],
+     "explain": "Route A's times vary less, so it is more reliable."
+    },
+    {
+     "type": "mcq",
+     "q": "A shop says 9 out of 10 customers prefer its bread, after asking 10 people in its own shop. What is the main problem?",
+     "options": [
+      "The sample is small, and only includes its own customers",
+      "9 out of 10 is too high to be real",
+      "Bread can't be surveyed",
+      "Nothing: the claim is proven"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many people were asked?",
+      "Who were they?",
+      "Small and one-sided."
+     ],
+     "explain": "10 of its own customers is a small, biased sample."
+    },
+    {
+     "type": "mcq",
+     "q": "On a box-and-whisker plot, what does the box show?",
+     "options": [
+      "The middle half of the data",
+      "All the data",
+      "Only the outliers",
+      "The mean"
+     ],
+     "answer": 0,
+     "hints": [
+      "The box goes from Q1 to Q3.",
+      "That covers 50% of the data.",
+      "The middle half."
+     ],
+     "explain": "The box spans Q1 to Q3, the middle half."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Ordering the data first",
+     "Comparing the IQRs",
+     "Asking who was surveyed",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared two sets of data using quartiles, and checked claims made with data.",
+   "teacher": "Shows calculating quartiles and IQR, interpreting box-and-whisker plots to compare data sets, and critiquing sampling behind claims.",
+   "done": "Compare the centre and the spread, and ask who was asked and how many."
+  },
+  {
+   "id": "g12-ml-fair",
+   "grade": 12,
+   "subject": "Mathematical Literacy",
+   "title": "Fair games and expected results",
+   "topic": "Probability: fairness and expected value",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Flexible Thinking",
+   "caps": "CAPS Grade 12 Mathematical Literacy: Probability (theoretical and experimental probability; fairness of games; risk and expected outcomes in lotteries and insurance)",
+   "intention": "Today I am judging whether games are fair, and what to expect over many plays.",
+   "prompt": "Why do you think lotteries make money?",
+   "lesson": [
+    {
+     "h": "Theory and experiment",
+     "say": "Theoretical probability is what should happen, like a half for heads. Experimental probability is what actually happened in trials. With more trials, the results usually get closer to the theory.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10 tosses: 7 heads</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 000 tosses: about 500 heads</span></div>"
+    },
+    {
+     "h": "Is the game fair?",
+     "say": "A game is fair if every player has the same chance of winning. If player A wins on a 1 or 2, and player B wins on 3, 4, 5 or 6, player B is twice as likely to win.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">A: 2/6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">B: 4/6</span></div><p>Not fair: B is twice as likely to win.</p>"
+    },
+    {
+     "h": "Expected results",
+     "say": "Expected winnings are the average result over many plays: the chance of winning times the prize. Compare that with what you pay. Lotteries are designed so that players lose money on average.",
+     "html": "<p>A R5 ticket with a 1 in 1 000 chance of winning R2 000: expected winnings are R2 a ticket, so on average you lose <b>R3</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A spinner has 4 equal parts. 1 part wins R10, and 3 parts win nothing. It costs R3 to play. Is it worth playing?",
+    "steps": [
+     "Chance of winning: 1/4.",
+     "Expected winnings: 1/4 × R10 = R2,50.",
+     "You pay R3, so on average you lose 50c a game."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "A coin is tossed 10 times and lands heads 7 times. What does this show?",
+     "options": [
+      "Small experiments can differ from the theory",
+      "The coin is definitely unfair",
+      "Heads has a 70% chance for ever",
+      "The theory is wrong"
+     ],
+     "answer": 0,
+     "hints": [
+      "10 tosses is a small number.",
+      "Results vary in small experiments.",
+      "More tosses get closer to 1/2."
+     ],
+     "explain": "In a few trials, results often differ from the theory."
+    },
+    {
+     "type": "mcq",
+     "q": "A wins if a dice shows 1, 2 or 3. B wins on 4, 5 or 6. Is the game fair?",
+     "options": [
+      "Yes, each has a 1/2 chance",
+      "No, A is more likely to win",
+      "No, B is more likely to win",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count each player's numbers.",
+      "3 each.",
+      "3/6 = 1/2 each."
+     ],
+     "explain": "Each player has 3 of the 6 numbers: 1/2 each."
+    },
+    {
+     "type": "num",
+     "q": "A R10 ticket has a 1 in 100 chance of winning R500. What are the expected winnings per ticket, in rand?",
+     "answer": "5",
+     "options": [
+      "5",
+      "50",
+      "500",
+      "10"
+     ],
+     "hints": [
+      "Expected winnings = chance × prize.",
+      "1/100 × 500.",
+      "5."
+     ],
+     "explain": "500 ÷ 100 = R5."
+    },
+    {
+     "type": "mcq",
+     "q": "The same ticket costs R10, and the expected winnings are R5. What happens on average?",
+     "options": [
+      "You lose R5 a ticket",
+      "You win R5 a ticket",
+      "You break even",
+      "You win R500"
+     ],
+     "answer": 0,
+     "hints": [
+      "Compare what you pay with what you expect to win.",
+      "10 − 5.",
+      "A loss of R5."
+     ],
+     "explain": "You pay R10 and get back R5 on average: a R5 loss."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a fair game for two players with one dice?",
+     "options": [
+      "Each player wins on 3 of the 6 numbers",
+      "Player A wins on 1 to 4",
+      "Player B wins only on a 6",
+      "Player A wins on 1 and 2, and B on 6"
+     ],
+     "answer": 0,
+     "hints": [
+      "Fair means the same chance.",
+      "Count each player's numbers.",
+      "3 and 3."
+     ],
+     "explain": "Only the first gives both players the same chance."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Counting each player's chances",
+     "Chance × prize",
+     "Comparing with the cost",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child tested whether games are fair, and saw why lotteries lose money on average.",
+   "teacher": "Shows distinguishing theoretical and experimental probability, judging fairness, and calculating expected value in context.",
+   "done": "Fair means equal chances. Expected winnings = chance × prize."
+  },
+  {
    "id": "g12-novel",
    "grade": 12,
    "subject": "English Home Language",

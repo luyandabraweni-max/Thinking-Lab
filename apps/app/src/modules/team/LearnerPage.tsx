@@ -5,6 +5,7 @@ import { useServices } from "../../platform";
 import { AvatarPicture } from "../avatar";
 import { Health } from "./Health";
 import { Messages } from "./Messages";
+import { MathsChoice } from "./MathsChoice";
 import { Goals, Notes } from "./Plan";
 // Reports and adaptation bring the games and lesson catalogue with them, so they load when opened.
 const Adapting = lazy(() => import("./Adapting").then(m => ({ default: m.Adapting })));
@@ -32,6 +33,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
         <h1>{learner.nickname}</h1>
       </div>
       <p className="tl-muted">{learner.curriculum}, {learner.level}</p>
+      {learner.cohort === "teen" ? <MathsChoice me={me} learner={learner} /> : null}
       {concerns?.length ? <div className="safety-alert" role="alert">
         <h2><span aria-hidden="true">🛟</span> Safeguarding: {learner.nickname} said they feel unsafe</h2>
         <ul className="plain">{concerns.map(c => <li key={c.id}>{new Date(c.at).toLocaleString("en-ZA", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · from the {c.where}</li>)}</ul>

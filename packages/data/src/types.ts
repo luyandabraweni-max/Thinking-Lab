@@ -94,6 +94,8 @@ export interface LearnerSettings {
   avatar?: AvatarLook | null;
   /** The learner's My way choices (screen, sound, ways of choosing), following them between devices. */
   prefs?: Record<string, unknown> | null;
+  /** Grades 10 to 12: the maths the learner takes at school. Unset shows both Mathematics and Mathematical Literacy. */
+  mathsSubject?: "maths" | "lit" | null;
   /** The plan the learner last took, and when. */
   lastPlan?: (SessionPlan & { used: string }) | null;
 }

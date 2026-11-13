@@ -1,6 +1,6 @@
 "use strict";
 
-// ---------- Learn units: Grade 10 (CAPS FET: Mathematics, English HL, Life Sciences, Life Orientation). Original content. ----------
+// ---------- Learn units: Grade 10 (CAPS FET: Mathematics, Mathematical Literacy, English HL, Life Sciences, Life Orientation). Original content. ----------
 const POEM_TAXI = `<div class="passage-text"><p><b>Rank</b> <span class="muted">(a 2to.iQ poem)</span></p>
 <p>At five the rank is already awake,<br>a throat of engines clearing<br>the night from its voice.</p>
 <p>Gogo Nomsa sells boiled eggs and patience,<br>her hands a quiet arithmetic<br>of coins and change and small talk.</p>
@@ -71,6 +71,112 @@ const UNITS_G10 = [
     parent: "Your child summarised data with mean, median, mode, range and quartiles.",
     teacher: "Shows calculating measures of central tendency and dispersion, and judging which average represents data best.",
     done: "Use averages for the centre and range or IQR for the spread." },
+
+  // ===================== GRADE 10 MATHEMATICAL LITERACY =====================
+  { id: "g10-ml-budget", grade: 10, subject: "Mathematical Literacy", title: "Budgets that balance", topic: "Finance: income and expenses", domain: "Logical and Analytical Thinking", category: "Planning and Organisation",
+    caps: "CAPS Grade 10 Mathematical Literacy: Finance (financial documents; income, expenditure, profit and loss; household budgets)",
+    intention: "Today I am planning a budget so that income covers expenses.", prompt: "Which household expense is easiest to cut, and why?",
+    lesson: [
+      { h: "Income and expenses", say: "Income is money coming in, like a wage, a grant or money from selling. Expenses are money going out, like transport, food and airtime.", html: chainRow(["Income: money in", "Expenses: money out"]) + P("A <b>budget</b> plans how income will cover expenses.") },
+      { h: "Fixed and variable expenses", say: "Fixed expenses stay the same each month, like rent or school fees. Variable expenses change, like food, electricity and transport.", html: chainRow(["Fixed: rent, school fees", "Variable: food, electricity"]) + P("Variable expenses are usually where you can save.") },
+      { h: "Surplus or deficit", say: "Subtract total expenses from total income. If the answer is positive, it is a surplus you can save. If it is negative, it is a deficit: you must spend less or earn more.", html: P("Income − expenses = balance") + P("Positive: <b>surplus</b>. Negative: <b>deficit</b>.") }
+    ],
+    example: { q: "Thabo earns R6 500 a month. He spends R2 800 on rent, R1 900 on food, R950 on transport and R400 on airtime. What is his balance?", steps: ["Add the expenses: 2 800 + 1 900 + 950 + 400 = R6 050.", "Subtract from income: 6 500 − 6 050 = R450.", "He has a surplus of R450 to save."] },
+    questions: [
+      { type: "mcq", q: "Which of these is income?", options: ["A child support grant", "A taxi fare", "The electricity bill", "School shoes"], answer: 0, hints: ["Income is money coming in.", "Which one brings money to the household?", "The grant."], explain: "A grant is money coming in. The others are expenses." },
+      { type: "mcq", q: "Which is a fixed expense?", options: ["Monthly rent", "Groceries", "Electricity", "Airtime"], answer: 0, hints: ["Fixed means the same every month.", "Which one is agreed in advance?", "Rent."], explain: "Rent stays the same each month. The others change." },
+      { type: "num", q: "Lerato's income is R8 200. Her expenses add up to R7 650. What is her surplus, in rand?", answer: "550", options: ["550", "1 550", "650", "450"], hints: ["Surplus = income − expenses.", "8 200 − 7 650.", "550."], explain: "8 200 − 7 650 = R550." },
+      { type: "mcq", q: "A family's income is R12 000 and their expenses are R12 600. What does this mean?", options: ["They have a deficit of R600", "They have a surplus of R600", "Their budget balances", "They saved R12 600"], answer: 0, hints: ["Are the expenses more or less than the income?", "More: 12 600 − 12 000 = 600.", "A deficit."], explain: "They spend R600 more than they earn: a deficit." },
+      { type: "num", q: "A spaza shop buys 24 cold drinks for R168 and sells each one for R10. What is the profit, in rand?", answer: "72", options: ["72", "240", "168", "48"], hints: ["Money from sales: 24 × R10.", "That is R240.", "Profit = 240 − 168."], explain: "Sales R240 − cost R168 = R72 profit." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Sorting money in and money out", "Adding the expenses first", "The worked example", "Not sure"] },
+    parent: "Your child worked out a household budget: income, fixed and variable expenses, and a surplus or deficit.",
+    teacher: "Shows identifying income and expenditure, classifying fixed and variable costs, and calculating a budget balance and profit.",
+    done: "Income minus expenses shows a surplus or a deficit." },
+
+  { id: "g10-ml-units", grade: 10, subject: "Mathematical Literacy", title: "Converting units and recipes", topic: "Measurement: conversions", domain: "Logical and Analytical Thinking", category: "Problem Solving",
+    caps: "CAPS Grade 10 Mathematical Literacy: Measurement (conversions between metric units; measuring length, mass and volume; scaling recipes)",
+    intention: "Today I am converting between units and scaling a recipe.", prompt: "Where at home do you see measurements every day?",
+    lesson: [
+      { h: "Metric units", say: "Length uses millimetres, centimetres, metres and kilometres. Mass uses grams and kilograms. Volume uses millilitres and litres.", html: chainRow(["10 mm = 1 cm", "100 cm = 1 m", "1 000 m = 1 km"]) + P("1 000 g = 1 kg and 1 000 ml = 1 ℓ.") },
+      { h: "Bigger or smaller units", say: "To change to a smaller unit, multiply. To change to a bigger unit, divide. Two and a half kilograms is 2 500 grams.", html: chainRow(["To a smaller unit: ×", "To a bigger unit: ÷"]) + P("2,5 kg × 1 000 = 2 500 g") },
+      { h: "Scaling a recipe", say: "To feed more people, multiply every ingredient by the same number. If a recipe serves 4 and you need to feed 12, multiply everything by 3.", html: chainRow(["12 ÷ 4 = 3", "every ingredient × 3"]) + P("Scale <b>every</b> ingredient by the same number.") }
+    ],
+    example: { q: "A recipe for 6 people uses 750 g of mealie meal. How much is needed for 18 people, in kilograms?", steps: ["18 ÷ 6 = 3, so multiply by 3.", "750 g × 3 = 2 250 g.", "2 250 ÷ 1 000 = 2,25 kg."] },
+    questions: [
+      { type: "num", q: "How many millilitres are in 2 litres?", answer: "2 000", options: ["2 000", "200", "20", "20 000"], hints: ["1 litre = 1 000 ml.", "Multiply by 1 000.", "2 × 1 000."], explain: "2 × 1 000 = 2 000 ml." },
+      { type: "num", q: "Convert 350 cm to metres.", answer: "3,5", options: ["3,5", "35", "0,35", "3 500"], hints: ["100 cm = 1 m.", "To a bigger unit, divide.", "350 ÷ 100."], explain: "350 ÷ 100 = 3,5 m." },
+      { type: "mcq", q: "To change kilometres to metres, you …", options: ["multiply by 1 000", "divide by 1 000", "multiply by 100", "divide by 100"], answer: 0, hints: ["Metres are smaller than kilometres.", "To a smaller unit, multiply.", "1 km = 1 000 m."], explain: "1 km = 1 000 m, so multiply by 1 000." },
+      { type: "num", q: "A recipe for 4 people needs 300 ml of milk. How many millilitres are needed for 10 people?", answer: "750", options: ["750", "1 200", "3 000", "600"], hints: ["Find the amount for 1 person first.", "300 ÷ 4 = 75 ml.", "75 × 10."], explain: "75 ml per person × 10 = 750 ml." },
+      { type: "mcq", q: "Which is the heaviest?", options: ["2,1 kg", "1 900 g", "2 050 g", "0,5 kg"], answer: 0, hints: ["Change them all to grams.", "2,1 kg = 2 100 g.", "2 100 g is the most."], explain: "2,1 kg = 2 100 g, more than 2 050 g and 1 900 g." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Remembering bigger or smaller", "Changing everything to one unit", "Finding the amount for one person", "Not sure"] },
+    parent: "Your child converted between metric units and scaled a recipe for more people.",
+    teacher: "Shows converting between metric units of length, mass and volume, and using proportional reasoning to scale recipes.",
+    done: "To a smaller unit, multiply. To a bigger unit, divide." },
+
+  { id: "g10-ml-maps", grade: 10, subject: "Mathematical Literacy", title: "Map scales and grids", topic: "Maps, plans and other representations", domain: "Inquiry and Systems Thinking", category: "Problem Solving",
+    caps: "CAPS Grade 10 Mathematical Literacy: Maps, plans and other representations (number and bar scales; grid references; estimating real distances on maps)",
+    intention: "Today I am using a map scale to work out real distances.", prompt: "When have you used a map, on paper or on a phone?",
+    lesson: [
+      { h: "What a scale means", say: "A scale of 1 to 50 000 means 1 centimetre on the map stands for 50 000 centimetres in real life. That is 500 metres.", html: chainRow(["1 cm on the map", "50 000 cm real", "= 500 m"]) + P("Scale is written <b>1 : 50 000</b>.") },
+      { h: "Bar scales", say: "A bar scale is a line marked with real distances. Measure on the map with a ruler or a piece of string, then compare it with the bar.", html: P("A bar scale stays correct when a map is made bigger or smaller, because the bar changes size with it.") },
+      { h: "Grid references", say: "Many maps have a grid, with letters along one side and numbers along the other. B3 means column B, row 3. It helps you find places quickly.", html: chainRow(["Letter: column", "Number: row", "B3"]) }
+    ],
+    example: { q: "On a map with scale 1 : 25 000, two villages are 8 cm apart. How far apart are they really, in kilometres?", steps: ["8 × 25 000 = 200 000 cm.", "200 000 cm ÷ 100 = 2 000 m.", "2 000 m ÷ 1 000 = 2 km."] },
+    questions: [
+      { type: "num", q: "Scale 1 : 100. A wall is 5 cm long on the plan. How long is it really, in metres?", answer: "5", options: ["5", "500", "50", "0,5"], hints: ["5 × 100 = 500 cm.", "100 cm = 1 m.", "500 ÷ 100."], explain: "5 × 100 = 500 cm = 5 m." },
+      { type: "num", q: "Scale 1 : 50 000. Two towns are 4 cm apart on the map. What is the real distance, in kilometres?", answer: "2", options: ["2", "20", "200", "0,2"], hints: ["4 × 50 000 = 200 000 cm.", "That is 2 000 m.", "2 000 m = 2 km."], explain: "200 000 cm = 2 000 m = 2 km." },
+      { type: "mcq", q: "Why does a bar scale stay correct when a map is photocopied larger?", options: ["The bar is enlarged by the same amount as the map", "The bar is always 1 cm long", "Photocopies never change size", "The numbers change by themselves"], answer: 0, hints: ["What happens to the bar when the map grows?", "It grows too.", "By the same amount."], explain: "The bar grows with the map, so it still matches." },
+      { type: "mcq", q: "On a grid map, what does D2 mean?", options: ["Column D, row 2", "Row D, column 2", "2 km in direction D", "Distance 2"], answer: 0, hints: ["Letters and numbers label the grid.", "The letter is the column.", "The number is the row."], explain: "D is the column and 2 is the row." },
+      { type: "mcq", q: "A map scale is 1 : 200 000. Which is true?", options: ["1 cm on the map is 2 km in real life", "1 cm on the map is 200 m", "1 cm on the map is 20 km", "1 cm on the map is 200 km"], answer: 0, hints: ["1 cm = 200 000 cm.", "200 000 cm = 2 000 m.", "2 000 m = 2 km."], explain: "200 000 cm = 2 000 m = 2 km." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Multiplying by the scale", "Converting cm to m to km", "Using the grid letters and numbers", "Not sure"] },
+    parent: "Your child used map scales and grid references to work out real distances.",
+    teacher: "Shows using number and bar scales to calculate real distances, converting units, and reading grid references.",
+    done: "Measure on the map, multiply by the scale, then change to sensible units." },
+
+  { id: "g10-ml-data", grade: 10, subject: "Mathematical Literacy", title: "Surveys and summaries", topic: "Data handling", domain: "Inquiry and Systems Thinking", category: "Inquiry and Exploration",
+    caps: "CAPS Grade 10 Mathematical Literacy: Data handling (developing questions; collecting data with surveys; organising data in frequency tables; mean, median, mode and range)",
+    intention: "Today I am collecting data and summarising it.", prompt: "What question would you like to ask your class?",
+    lesson: [
+      { h: "The data cycle", say: "Data handling starts with a question, like how do learners in our class get to school? Then you collect the answers, organise them, summarise them and say what they mean.", html: chainRow(["Question", "Collect", "Organise", "Summarise", "Interpret"]) },
+      { h: "Tallies and frequency tables", say: "A tally mark records each answer. Group tallies in fives so they are easy to count. The frequency is how many times each answer came up.", html: P("Walk: 13 · Taxi: 9 · Bus: 6 · Car: 2") + P("Total: <b>30</b> learners.") },
+      { h: "Summarising", say: "The mode is the most common answer. For numbers, the mean and median describe the centre, and the range describes the spread. Always say what the numbers mean in real life.", html: chainRow(["Mode: most common", "Mean: fair share", "Range: spread"]) }
+    ],
+    example: { q: "Five learners' travel times in minutes: 10, 15, 15, 20, 40. Find the mean and the range.", steps: ["Add: 10 + 15 + 15 + 20 + 40 = 100.", "Mean = 100 ÷ 5 = 20 minutes.", "Range = 40 − 10 = 30 minutes."] },
+    questions: [
+      { type: "mcq", q: "Which is the best survey question?", options: ["How do you usually travel to school?", "Don't you think taxis are dangerous?", "Why is walking the best?", "Travel?"], answer: 0, hints: ["A good question is clear.", "It doesn't push people towards an answer.", "The first one is fair to every answer."], explain: "It is clear and doesn't suggest an answer." },
+      { type: "num", q: "A tally group of four lines with a fifth line across them stands for how many?", answer: "5", options: ["5", "4", "6", "10"], hints: ["Count every line.", "Four lines plus the one across.", "5."], explain: "Tallies are grouped in fives." },
+      { type: "mcq", q: "Walk 13, Taxi 9, Bus 6, Car 2. What is the mode?", options: ["Walk", "Taxi", "Bus", "Car"], answer: 0, hints: ["The mode is the most common.", "Which has the biggest number?", "13."], explain: "Walking has the highest frequency, 13." },
+      { type: "num", q: "Walk 13, Taxi 9, Bus 6, Car 2. How many learners were asked?", answer: "30", options: ["30", "13", "28", "4"], hints: ["Add all the frequencies.", "13 + 9 + 6 + 2.", "30."], explain: "13 + 9 + 6 + 2 = 30." },
+      { type: "num", q: "Find the range of these prices: R12, R18, R9, R25, R15.", answer: "16", options: ["16", "25", "9", "15,8"], hints: ["Range = highest − lowest.", "Highest R25, lowest R9.", "25 − 9."], explain: "R25 − R9 = R16." }
+    ],
+    reflect: { q: "What helped you most?", options: ["The data cycle", "Counting the tallies", "Finding the highest and lowest", "Not sure"] },
+    parent: "Your child asked a survey question, organised the answers in a table and summarised them.",
+    teacher: "Shows formulating unbiased questions, using tallies and frequency tables, and calculating mode, mean and range in context.",
+    done: "Ask a fair question, organise the answers, then summarise what they mean." },
+
+  { id: "g10-ml-chance", grade: 10, subject: "Mathematical Literacy", title: "How likely is it?", topic: "Probability", domain: "Logical and Analytical Thinking", category: "Pattern Thinking",
+    caps: "CAPS Grade 10 Mathematical Literacy: Probability (the probability scale from 0 to 1; expressing probability as fractions, decimals and percentages; weather forecasts and games)",
+    intention: "Today I am describing how likely things are.", prompt: "What does a 60% chance of rain make you decide to do?",
+    lesson: [
+      { h: "The probability scale", say: "Probability says how likely something is, from 0, impossible, to 1, certain. A half, or 50 percent, means it is just as likely to happen as not.", html: chainRow(["0: impossible", "0,5: even chance", "1: certain"]) },
+      { h: "Working it out", say: "When every outcome is equally likely, probability is the number of outcomes you want, divided by the total number of outcomes. Rolling a 6 on a dice is 1 out of 6.", html: P("Probability = outcomes you want ÷ all outcomes") + P("P(rolling a 6) = <b>1/6</b>") },
+      { h: "Three ways to write it", say: "You can write a probability as a fraction, a decimal or a percentage. One quarter is 0.25, which is 25 percent. A forecast of 70 percent rain means rain is likely, not certain.", html: chainRow(["1/4", "0,25", "25%"]) }
+    ],
+    example: { q: "A bag has 3 red, 5 blue and 2 green sweets. You take one without looking. What is the probability that it is blue?", steps: ["Total sweets: 3 + 5 + 2 = 10.", "Blue sweets: 5 out of 10.", "5/10 = 1/2 = 0,5 = 50%."] },
+    questions: [
+      { type: "mcq", q: "The forecast says there is an 80% chance of rain. What does this mean?", options: ["Rain is likely, but not certain", "It will definitely rain", "It will rain for 80% of the day", "80 mm of rain will fall"], answer: 0, hints: ["80% is high, but not 100%.", "Likely, not certain.", "The first answer."], explain: "80% means rain is likely, but it might not rain." },
+      { type: "mcq", q: "What is the probability of rolling an even number on a normal dice?", options: ["1/2", "1/6", "1/3", "2/3"], answer: 0, hints: ["The even numbers are 2, 4 and 6.", "That is 3 out of 6.", "3/6 = 1/2."], explain: "3 even numbers out of 6 = 1/2." },
+      { type: "num", q: "A coin is tossed. What is the probability of heads, as a percentage? (Type the number only.)", answer: "50", options: ["50", "25", "100", "0"], hints: ["Heads or tails: 2 outcomes.", "1 out of 2.", "1/2 = 50%."], explain: "1/2 = 50%." },
+      { type: "mcq", q: "Which event has a probability of 0?", options: ["Rolling a 7 on a normal dice", "Rolling a 6", "Getting heads", "Rolling a number less than 7"], answer: 0, hints: ["0 means impossible.", "A normal dice shows 1 to 6.", "A 7 can't happen."], explain: "A normal dice has no 7, so it is impossible." },
+      { type: "mcq", q: "A box has 4 winning tickets and 16 losing tickets. What is the chance of winning?", options: ["1/5", "1/4", "4/16", "1/16"], answer: 0, hints: ["Total tickets: 4 + 16 = 20.", "4 out of 20.", "4/20 = 1/5."], explain: "4 winners out of 20 tickets = 1/5." }
+    ],
+    reflect: { q: "What helped you most?", options: ["The 0 to 1 scale", "Counting all the outcomes", "Changing fractions to percentages", "Not sure"] },
+    parent: "Your child described how likely events are, using fractions, decimals and percentages.",
+    teacher: "Shows using the probability scale, calculating simple theoretical probability, and interpreting forecasts.",
+    done: "Probability = outcomes you want ÷ all outcomes, from 0 to 1." },
 
   // ===================== GRADE 10 ENGLISH HOME LANGUAGE =====================
   { id: "g10-poetry", grade: 10, subject: "English Home Language", title: "Poem: Rank", topic: "Analysing poetry", domain: "Communication and Expression", category: "Creativity",

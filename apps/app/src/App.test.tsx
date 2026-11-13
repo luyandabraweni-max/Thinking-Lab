@@ -175,6 +175,37 @@ describe("handing the device to a learner", () => {
   });
 });
 
+describe("Mathematical Literacy", () => {
+  it("lets the family choose the maths their teen takes, and the learner sees only that from Grade 10", async () => {
+    const { LearnHome } = await import("./modules/learning");
+    const teen = { ...(await store.as((await store.account(DEMO.parent))!).learner(DEMO.teen)), level: "Grade 11" };
+    const titles = (maths?: "maths" | "lit" | null) => {
+      const r = render(<LearnHome learner={teen} mathsSubject={maths} onPick={() => {}} onBack={() => {}} />);
+      const t = within(r.container).getAllByRole("button").map(b => b.textContent ?? ""); cleanup(); return t.join(" | ");
+    };
+    const pure = (await import("@tl/content")).CATALOGUE.find(u => u.grade === 11 && u.subject === "Mathematics")!.title;
+    expect(titles()).toContain("Interest, loans and inflation"); // nothing chosen yet: both
+    expect(titles()).toContain(pure);
+    expect(titles("lit")).toContain("Interest, loans and inflation");
+    expect(titles("lit")).not.toContain(pure);
+    expect(titles("maths")).toContain(pure);
+    expect(titles("maths")).not.toContain("Interest, loans and inflation");
+
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Quiet River/ }));
+    await user.selectOptions(await screen.findByLabelText(/Maths at school/), "Mathematical Literacy");
+    await waitFor(async () => expect((await store.as((await store.account(DEMO.parent))!).settings(DEMO.teen)).mathsSubject).toBe("lit"));
+  });
+  it("keeps the earlier grades' maths when Mathematical Literacy is chosen", async () => {
+    const { LearnHome } = await import("./modules/learning");
+    const teen = { ...(await store.as((await store.account(DEMO.parent))!).learner(DEMO.teen)), level: "Grade 9" };
+    const r = render(<LearnHome learner={teen} mathsSubject="lit" onPick={() => {}} onBack={() => {}} />);
+    const g9 = (await import("@tl/content")).CATALOGUE.filter(u => u.grade === 9 && u.subject === "Mathematics");
+    for (const u of g9) expect(within(r.container).getByText(u.title)).toBeInTheDocument();
+  });
+});
+
 describe("the Thinking Lab", () => {
   it("lets a learner solve Light the Village, reflect, and saves how they worked", async () => {
     const user = start();
