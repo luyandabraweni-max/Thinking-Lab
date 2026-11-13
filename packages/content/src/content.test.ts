@@ -38,6 +38,14 @@ describe("content", () => {
     expect(unit.grade).toBe(5);
     expect(words === undefined || Array.isArray(words.words) || Array.isArray(words.phrases)).toBe(true);
   });
+  it("gives every lesson key words with a picture and a plain meaning", async () => {
+    const missing: string[] = [];
+    for (const c of CATALOGUE) {
+      const { words } = await loadUnit(c.id);
+      if (!words?.words?.length || words.words.some(w => w.length !== 3 || w.some(s => !s))) missing.push(c.id);
+    }
+    expect(missing).toEqual([]);
+  });
   it("shows each curriculum its own lessons, with CAPS lessons standing in where none are written yet", () => {
     const ids = (r: ReturnType<typeof lessonsIn>) => r.units.map(u => u.id);
     const cam = lessonsIn(CATALOGUE, "maths", 10, { curriculum: "Cambridge" });

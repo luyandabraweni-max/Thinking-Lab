@@ -2795,6 +2795,125 @@
      "facts about you, like your address or school"
     ]
    ]
+  },
+  "camp5-fdp": {
+   "words": [
+    [
+     "🍕",
+     "Fraction",
+     "a part of a whole, like a half"
+    ],
+    [
+     "🔸",
+     "Decimal",
+     "a number with tenths and hundredths, like 0.5"
+    ],
+    [
+     "💯",
+     "Percent",
+     "out of 100"
+    ]
+   ]
+  },
+  "camp5-fact-opinion": {
+   "words": [
+    [
+     "✅",
+     "Fact",
+     "something that can be proved true"
+    ],
+    [
+     "💭",
+     "Opinion",
+     "what someone thinks or feels"
+    ],
+    [
+     "🔍",
+     "Clue word",
+     "a word like think or best that shows an opinion"
+    ]
+   ]
+  },
+  "camp5-sound": {
+   "words": [
+    [
+     "〰️",
+     "Vibration",
+     "moving quickly back and forth"
+    ],
+    [
+     "🔊",
+     "Loudness",
+     "how loud or soft a sound is"
+    ],
+    [
+     "🎵",
+     "Pitch",
+     "how high or low a sound is"
+    ]
+   ]
+  },
+  "pyp5-area-perimeter": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "📏",
+     "Perimeter",
+     "the distance around the edge"
+    ],
+    [
+     "🟫",
+     "Area",
+     "the space a flat shape covers"
+    ]
+   ]
+  },
+  "pyp5-news": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "❓",
+     "The five Ws",
+     "who, what, where, when and why"
+    ],
+    [
+     "📰",
+     "Headline",
+     "the title of a news report"
+    ]
+   ]
+  },
+  "pyp5-trade": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🍞",
+     "Need",
+     "something you must have to live"
+    ],
+    [
+     "🎮",
+     "Want",
+     "something nice to have, but not needed"
+    ],
+    [
+     "🔄",
+     "Trade",
+     "swap things, or buy them with money"
+    ]
+   ]
   }
  }
 }

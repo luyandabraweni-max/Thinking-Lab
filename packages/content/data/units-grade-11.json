@@ -6509,6 +6509,116 @@
     ]
    ]
   },
+  "g11-ml-interest": {
+   "words": [
+    [
+     "💵",
+     "Simple interest",
+     "interest on the first amount only"
+    ],
+    [
+     "📈",
+     "Compound interest",
+     "interest on the amount plus the interest already added"
+    ],
+    [
+     "💸",
+     "Inflation",
+     "prices rising over time"
+    ],
+    [
+     "🏦",
+     "Loan",
+     "money you borrow and pay back with interest"
+    ]
+   ]
+  },
+  "g11-ml-measure": {
+   "words": [
+    [
+     "📏",
+     "Perimeter",
+     "the distance around the edge"
+    ],
+    [
+     "🟫",
+     "Area",
+     "the space a flat shape covers"
+    ],
+    [
+     "🛢️",
+     "Volume",
+     "the space inside a 3D object"
+    ],
+    [
+     "⭕",
+     "Radius",
+     "the distance from the centre of a circle to its edge"
+    ]
+   ]
+  },
+  "g11-ml-plans": {
+   "words": [
+    [
+     "🏠",
+     "Floor plan",
+     "a drawing of a building from above"
+    ],
+    [
+     "📐",
+     "Scale",
+     "how much smaller the drawing is than real life"
+    ],
+    [
+     "🚗",
+     "Speed",
+     "distance divided by time"
+    ]
+   ]
+  },
+  "g11-ml-graphs": {
+   "words": [
+    [
+     "📊",
+     "Bar graph",
+     "bars that compare groups"
+    ],
+    [
+     "🥧",
+     "Pie chart",
+     "a circle that shows parts of a whole"
+    ],
+    [
+     "📈",
+     "Line graph",
+     "a graph that shows change over time"
+    ],
+    [
+     "🪤",
+     "Misleading",
+     "giving a wrong idea"
+    ]
+   ]
+  },
+  "g11-ml-risk": {
+   "words": [
+    [
+     "🔲",
+     "Two-way table",
+     "a table that sorts data by two things at once"
+    ],
+    [
+     "⚠️",
+     "Risk",
+     "the chance that something bad happens"
+    ],
+    [
+     "🌳",
+     "Tree diagram",
+     "branches that show all possible outcomes"
+    ]
+   ]
+  },
   "g11-drama": {
    "words": [
     [
@@ -6652,6 +6762,616 @@
      "🚩",
      "Warning sign",
      "a sign that something is wrong"
+    ]
+   ]
+  },
+  "cam11-eng-compare": {
+   "words": [
+    [
+     "👁️",
+     "Viewpoint",
+     "what a writer thinks about a topic"
+    ],
+    [
+     "⚖️",
+     "Compare",
+     "show what is the same and what is different"
+    ],
+    [
+     "🔗",
+     "Connective",
+     "a word that links ideas, like however"
+    ]
+   ]
+  },
+  "cam11-eng-tone": {
+   "words": [
+    [
+     "💭",
+     "Connotation",
+     "the feeling or idea a word suggests"
+    ],
+    [
+     "🎵",
+     "Tone",
+     "the writer's attitude, shown through words"
+    ],
+    [
+     "🔍",
+     "Analysis",
+     "explaining how and why"
+    ]
+   ]
+  },
+  "cam11-eng-summary": {
+   "words": [
+    [
+     "📝",
+     "Summary",
+     "the main points, written shorter"
+    ],
+    [
+     "🔑",
+     "Point",
+     "one idea that answers the question"
+    ],
+    [
+     "✂️",
+     "Concise",
+     "short, with no extra words"
+    ],
+    [
+     "🗣️",
+     "Own words",
+     "your wording, not copied from the text"
+    ]
+   ]
+  },
+  "cam11-eng-argue": {
+   "words": [
+    [
+     "🎯",
+     "Position",
+     "what you argue for"
+    ],
+    [
+     "🧾",
+     "Evidence",
+     "facts or examples that prove a point"
+    ],
+    [
+     "🔄",
+     "Counter-argument",
+     "the other side's view, which you answer"
+    ]
+   ]
+  },
+  "cam11-eng-story": {
+   "words": [
+    [
+     "📈",
+     "Tension",
+     "the feeling that something is about to happen"
+    ],
+    [
+     "🧗",
+     "Climax",
+     "the most exciting moment"
+    ],
+    [
+     "🔚",
+     "Resolution",
+     "how the problem is sorted out"
+    ]
+   ]
+  },
+  "cam11-quadratics": {
+   "words": [
+    [
+     "🟰",
+     "Quadratic",
+     "an equation with x squared as the highest power"
+    ],
+    [
+     "🧩",
+     "Factorise",
+     "write as brackets multiplied together"
+    ],
+    [
+     "📜",
+     "Quadratic formula",
+     "a formula that solves any quadratic"
+    ]
+   ]
+  },
+  "cam11-functions": {
+   "words": [
+    [
+     "🔧",
+     "Function",
+     "a rule that turns an input into an output"
+    ],
+    [
+     "🔗",
+     "Composite function",
+     "one function done after another"
+    ],
+    [
+     "↩️",
+     "Inverse function",
+     "the function that undoes another"
+    ]
+   ]
+  },
+  "cam11-vectors": {
+   "words": [
+    [
+     "➡️",
+     "Vector",
+     "a size and a direction"
+    ],
+    [
+     "📏",
+     "Magnitude",
+     "the size or length of a vector"
+    ],
+    [
+     "➕",
+     "Resultant",
+     "the vector you get by adding vectors"
+    ]
+   ]
+  },
+  "cam11-sine-cosine": {
+   "words": [
+    [
+     "📐",
+     "Sine rule",
+     "links each side with the angle opposite it"
+    ],
+    [
+     "📐",
+     "Cosine rule",
+     "finds a side or angle from two sides and the angle between them"
+    ],
+    [
+     "🔺",
+     "Non-right-angled triangle",
+     "a triangle with no 90 degree angle"
+    ]
+   ]
+  },
+  "cam11-tree-diagrams": {
+   "words": [
+    [
+     "🌳",
+     "Tree diagram",
+     "branches that show all possible outcomes"
+    ],
+    [
+     "✖️",
+     "Multiply along",
+     "for one path, multiply the probabilities"
+    ],
+    [
+     "🔙",
+     "Without replacement",
+     "the first item is not put back"
+    ]
+   ]
+  },
+  "cam11-sci-enzymes": {
+   "words": [
+    [
+     "🧪",
+     "Enzyme",
+     "a protein that speeds up reactions in living things"
+    ],
+    [
+     "🔑",
+     "Active site",
+     "the part of the enzyme where the substance fits"
+    ],
+    [
+     "🔥",
+     "Denature",
+     "when heat or pH changes the enzyme's shape, so it stops working"
+    ]
+   ]
+  },
+  "cam11-sci-plants": {
+   "words": [
+    [
+     "☀️",
+     "Photosynthesis",
+     "plants making glucose from carbon dioxide, water and light"
+    ],
+    [
+     "🚧",
+     "Limiting factor",
+     "the thing in short supply that slows the rate"
+    ],
+    [
+     "🫁",
+     "Aerobic respiration",
+     "releasing energy from glucose, using oxygen"
+    ]
+   ]
+  },
+  "cam11-sci-acids": {
+   "words": [
+    [
+     "🍋",
+     "Acid",
+     "a substance with a pH below 7"
+    ],
+    [
+     "🧼",
+     "Alkali",
+     "a substance with a pH above 7"
+    ],
+    [
+     "🟰",
+     "Neutralisation",
+     "an acid and a base reacting to make a neutral solution"
+    ],
+    [
+     "🧂",
+     "Salt",
+     "made when an acid reacts with a base"
+    ]
+   ]
+  },
+  "cam11-sci-circuits": {
+   "words": [
+    [
+     "⚡",
+     "Current",
+     "the flow of charge, measured in amps"
+    ],
+    [
+     "🔋",
+     "Voltage",
+     "the push that moves the current, measured in volts"
+    ],
+    [
+     "🚧",
+     "Resistance",
+     "how much a part slows the current, measured in ohms"
+    ],
+    [
+     "🔀",
+     "Parallel",
+     "a circuit with more than one path"
+    ]
+   ]
+  },
+  "cam11-sci-waves": {
+   "words": [
+    [
+     "🌊",
+     "Wavelength",
+     "the distance from one wave peak to the next"
+    ],
+    [
+     "🔁",
+     "Frequency",
+     "how many waves pass each second"
+    ],
+    [
+     "📏",
+     "Amplitude",
+     "the height of a wave from the middle"
+    ],
+    [
+     "↕️",
+     "Transverse",
+     "vibrates at right angles to the way the wave travels"
+    ]
+   ]
+  },
+  "dp11-aa-sequences": {
+   "words": [
+    [
+     "➕",
+     "Arithmetic sequence",
+     "add the same number each time"
+    ],
+    [
+     "✖️",
+     "Geometric sequence",
+     "multiply by the same number each time"
+    ],
+    [
+     "♾️",
+     "Sum to infinity",
+     "the total of a series that never ends, when its terms shrink"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp11-ai-regression": {
+   "words": [
+    [
+     "🔗",
+     "Correlation",
+     "how closely two variables move together"
+    ],
+    [
+     "📈",
+     "Regression line",
+     "the straight line that fits the data best"
+    ],
+    [
+     "🎯",
+     "Causation",
+     "when one thing actually makes another happen"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp11-ll-paper1": {
+   "words": [
+    [
+     "📰",
+     "Non-literary text",
+     "a real-world text, like an advert or an article"
+    ],
+    [
+     "🎯",
+     "Purpose",
+     "why the text was made"
+    ],
+    [
+     "🛠️",
+     "Technique",
+     "a way of using language or images for an effect"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp11-bio-membranes": {
+   "words": [
+    [
+     "🧱",
+     "Membrane",
+     "the thin layer around a cell"
+    ],
+    [
+     "🌫️",
+     "Diffusion",
+     "moving from high to low concentration"
+    ],
+    [
+     "⚡",
+     "Active transport",
+     "moving against the concentration gradient, using energy"
+    ],
+    [
+     "🔋",
+     "ATP",
+     "the molecule cells use for energy"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp11-tok-questions": {
+   "words": [
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ],
+    [
+     "❓",
+     "Knowledge question",
+     "a question about knowledge itself, open to debate"
+    ],
+    [
+     "📚",
+     "Area of knowledge",
+     "a field like mathematics, history or the arts"
+    ]
+   ]
+  },
+  "dp11-ee-question": {
+   "words": [
+    [
+     "📘",
+     "Extended Essay",
+     "a research essay of up to 4,000 words"
+    ],
+    [
+     "❓",
+     "Research question",
+     "the exact question your essay answers"
+    ],
+    [
+     "🎯",
+     "Focused",
+     "narrow enough to answer well"
+    ]
+   ]
+  },
+  "ieb11-ma-functions-context": {
+   "words": [
+    [
+     "🌈",
+     "Parabola",
+     "the U-shaped graph of a quadratic"
+    ],
+    [
+     "🔝",
+     "Turning point",
+     "the highest or lowest point of the graph"
+    ],
+    [
+     "✂️",
+     "Intercept",
+     "where the graph crosses an axis"
+    ]
+   ]
+  },
+  "ieb11-ma-probability": {
+   "words": [
+    [
+     "🚫",
+     "Mutually exclusive",
+     "cannot happen at the same time"
+    ],
+    [
+     "🆓",
+     "Independent",
+     "one does not change the chance of the other"
+    ]
+   ]
+  },
+  "ieb11-en-text-visual": {
+   "words": [
+    [
+     "🖼️",
+     "Visual",
+     "a picture or image"
+    ],
+    [
+     "💬",
+     "Caption",
+     "words that go with a picture"
+    ],
+    [
+     "⚖️",
+     "Compare",
+     "show what is the same and what is different"
+    ]
+   ]
+  },
+  "ieb11-en-argument-eval": {
+   "words": [
+    [
+     "📣",
+     "Claim",
+     "what the writer says is true"
+    ],
+    [
+     "💬",
+     "Reason",
+     "why they say it"
+    ],
+    [
+     "🧾",
+     "Evidence",
+     "facts that support it"
+    ],
+    [
+     "🪤",
+     "Fallacy",
+     "a mistake in reasoning"
+    ]
+   ]
+  },
+  "ieb11-ls-data-tables": {
+   "words": [
+    [
+     "📋",
+     "Table",
+     "data in rows and columns"
+    ],
+    [
+     "💯",
+     "Percentage",
+     "out of 100"
+    ],
+    [
+     "💡",
+     "Conclusion",
+     "what the data shows"
+    ]
+   ]
+  },
+  "ieb11-ls-claims": {
+   "words": [
+    [
+     "📣",
+     "Claim",
+     "what someone says is true"
+    ],
+    [
+     "👥",
+     "Sample size",
+     "how many people or things were tested"
+    ],
+    [
+     "⚖️",
+     "Control group",
+     "the group that did not get the treatment, used to compare"
+    ]
+   ]
+  },
+  "apm11-induction": {
+   "words": [
+    [
+     "🧱",
+     "Induction",
+     "proving something is true for all whole numbers, step by step"
+    ],
+    [
+     "1️⃣",
+     "Base case",
+     "show it is true for the first number"
+    ],
+    [
+     "➡️",
+     "Inductive step",
+     "show that if it is true for k, it is true for k plus 1"
+    ]
+   ]
+  },
+  "apm11-complex": {
+   "words": [
+    [
+     "ℹ️",
+     "i",
+     "the number whose square is minus 1"
+    ],
+    [
+     "🔢",
+     "Complex number",
+     "a number like a plus b i"
+    ],
+    [
+     "🪞",
+     "Conjugate",
+     "the same complex number with the sign of the i part changed"
+    ]
+   ]
+  },
+  "apm11-limits": {
+   "words": [
+    [
+     "🎯",
+     "Limit",
+     "the value a function gets closer and closer to"
+    ],
+    [
+     "〰️",
+     "Continuous",
+     "the graph has no breaks or jumps"
     ]
    ]
   }

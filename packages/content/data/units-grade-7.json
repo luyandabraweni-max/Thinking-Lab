@@ -3689,6 +3689,292 @@
      "studying a little at a time over several days"
     ]
    ]
+  },
+  "cam7-integers": {
+   "words": [
+    [
+     "➖",
+     "Negative number",
+     "a number less than zero"
+    ],
+    [
+     "📏",
+     "Number line",
+     "a line with numbers in order"
+    ],
+    [
+     "🔢",
+     "Integer",
+     "a whole number: positive, negative or zero"
+    ]
+   ]
+  },
+  "cam7-expressions": {
+   "words": [
+    [
+     "🔤",
+     "Variable",
+     "a letter that stands for a number"
+    ],
+    [
+     "🧺",
+     "Like terms",
+     "terms with the same letter, like 3x and 5x"
+    ],
+    [
+     "🔁",
+     "Substitute",
+     "put a number in place of a letter"
+    ]
+   ]
+  },
+  "cam7-eng-inference": {
+   "words": [
+    [
+     "🕵️",
+     "Inference",
+     "something you work out from clues"
+    ],
+    [
+     "🔍",
+     "Clue",
+     "a detail that helps you work something out"
+    ],
+    [
+     "🧾",
+     "Evidence",
+     "the words that support your idea"
+    ]
+   ]
+  },
+  "cam7-eng-paragraphs": {
+   "words": [
+    [
+     "📄",
+     "Paragraph",
+     "a group of sentences about one idea"
+    ],
+    [
+     "🥇",
+     "Topic sentence",
+     "the sentence that says what the paragraph is about"
+    ],
+    [
+     "🔗",
+     "Connective",
+     "a word that links ideas, like however"
+    ]
+   ]
+  },
+  "cam7-sci-specialised-cells": {
+   "words": [
+    [
+     "🧫",
+     "Specialised cell",
+     "a cell with a special job"
+    ],
+    [
+     "🧱",
+     "Tissue",
+     "a group of similar cells"
+    ],
+    [
+     "🫀",
+     "Organ",
+     "tissues working together, like the heart"
+    ]
+   ]
+  },
+  "cam7-sci-dissolving": {
+   "words": [
+    [
+     "🧂",
+     "Solute",
+     "the substance that dissolves"
+    ],
+    [
+     "💧",
+     "Solvent",
+     "the liquid it dissolves in"
+    ],
+    [
+     "🥤",
+     "Solution",
+     "the solute and solvent mixed together"
+    ]
+   ]
+  },
+  "sidw-taxi": {
+   "words": [
+    [
+     "🚕",
+     "Taxi",
+     "a minibus that takes people for money"
+    ],
+    [
+     "💵",
+     "Fare",
+     "the money you pay for the trip"
+    ],
+    [
+     "📍",
+     "Get off",
+     "climb out of the taxi where you need to be"
+    ],
+    [
+     "📞",
+     "Someone you trust",
+     "a person who will help you"
+    ]
+   ]
+  },
+  "sidw-budget": {
+   "words": [
+    [
+     "📝",
+     "List",
+     "the things you need, written down"
+    ],
+    [
+     "💰",
+     "Budget",
+     "how much money you can spend"
+    ],
+    [
+     "🪙",
+     "Change",
+     "money you get back when you pay too much"
+    ]
+   ]
+  },
+  "sidw-instructions": {
+   "words": [
+    [
+     "👂",
+     "Listen",
+     "pay attention to what is said"
+    ],
+    [
+     "1️⃣",
+     "Step",
+     "one part of a job"
+    ],
+    [
+     "🙋",
+     "Ask",
+     "find out when you are not sure"
+    ]
+   ]
+  },
+  "sidw-customers": {
+   "words": [
+    [
+     "🛍️",
+     "Customer",
+     "a person who comes to buy or to get help"
+    ],
+    [
+     "👋",
+     "Greet",
+     "say hello"
+    ],
+    [
+     "🙂",
+     "Polite",
+     "kind and respectful"
+    ]
+   ]
+  },
+  "sidw-safety": {
+   "words": [
+    [
+     "🟥",
+     "Red sign",
+     "stop, or fire"
+    ],
+    [
+     "🟨",
+     "Yellow sign",
+     "be careful"
+    ],
+    [
+     "🟩",
+     "Green sign",
+     "safe, like the way out"
+    ],
+    [
+     "🟦",
+     "Blue sign",
+     "you must do this, like wear gloves"
+    ],
+    [
+     "🧤",
+     "Protective clothing",
+     "gloves, masks or shoes that keep your body safe"
+    ],
+    [
+     "🧑‍💼",
+     "Supervisor",
+     "the person in charge of your work"
+    ]
+   ]
+  },
+  "sidw-cleaning": {
+   "words": [
+    [
+     "🧽",
+     "Clean",
+     "take away the dirt"
+    ],
+    [
+     "🧴",
+     "Detergent",
+     "soap for cleaning"
+    ],
+    [
+     "⬇️",
+     "Top to bottom",
+     "clean high places first, so dirt falls down"
+    ]
+   ]
+  },
+  "sidw-help": {
+   "words": [
+    [
+     "🙋",
+     "Help",
+     "when someone does something for you"
+    ],
+    [
+     "🧑‍💼",
+     "Supervisor",
+     "the person in charge of your work"
+    ],
+    [
+     "💬",
+     "Please",
+     "a polite word when you ask"
+    ]
+   ]
+  },
+  "sidw-time": {
+   "words": [
+    [
+     "⏰",
+     "On time",
+     "at the right time, not late"
+    ],
+    [
+     "⌛",
+     "Late",
+     "after the right time"
+    ],
+    [
+     "🗓️",
+     "Plan",
+     "decide before what you will do"
+    ]
+   ]
   }
  }
 }

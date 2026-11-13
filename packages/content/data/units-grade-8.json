@@ -2712,6 +2712,131 @@
      "unfair treatment"
     ]
    ]
+  },
+  "cam8-equations": {
+   "words": [
+    [
+     "⚖️",
+     "Equation",
+     "two sides that are equal"
+    ],
+    [
+     "❓",
+     "Unknown",
+     "the letter whose value you must find"
+    ],
+    [
+     "( )",
+     "Brackets",
+     "multiply these out first"
+    ]
+   ]
+  },
+  "cam8-percentage-change": {
+   "words": [
+    [
+     "💯",
+     "Percentage",
+     "out of 100"
+    ],
+    [
+     "✖️",
+     "Multiplier",
+     "the number you multiply by, like 1.1 for a 10% increase"
+    ],
+    [
+     "📈",
+     "Increase",
+     "get bigger"
+    ],
+    [
+     "📉",
+     "Decrease",
+     "get smaller"
+    ]
+   ]
+  },
+  "cam8-eng-character": {
+   "words": [
+    [
+     "🧑",
+     "Character",
+     "a person in a story"
+    ],
+    [
+     "🏞️",
+     "Setting",
+     "where and when a story happens"
+    ],
+    [
+     "🌫️",
+     "Mood",
+     "the feeling a place or scene creates"
+    ]
+   ]
+  },
+  "cam8-eng-balanced": {
+   "words": [
+    [
+     "⚖️",
+     "Balanced argument",
+     "looks at both sides fairly"
+    ],
+    [
+     "➕",
+     "For",
+     "reasons that support an idea"
+    ],
+    [
+     "➖",
+     "Against",
+     "reasons that oppose an idea"
+    ]
+   ],
+   "phrases": [
+    [
+     "on the other hand",
+     "here is the other side"
+    ]
+   ]
+  },
+  "cam8-sci-digestion": {
+   "words": [
+    [
+     "🍽️",
+     "Digestion",
+     "breaking food down so the body can use it"
+    ],
+    [
+     "🧪",
+     "Enzyme",
+     "a substance that breaks food down"
+    ],
+    [
+     "🩸",
+     "Absorption",
+     "food passing into the blood"
+    ]
+   ]
+  },
+  "cam8-sci-light": {
+   "words": [
+    [
+     "🪞",
+     "Reflection",
+     "light bouncing off a surface"
+    ],
+    [
+     "🌊",
+     "Refraction",
+     "light bending as it goes into a new material"
+    ],
+    [
+     "📐",
+     "Normal",
+     "a line at right angles to the surface"
+    ]
+   ]
   }
  }
 }

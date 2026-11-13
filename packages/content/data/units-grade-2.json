@@ -2833,6 +2833,168 @@
      "people who help children cross the road"
     ]
    ]
+  },
+  "camp2-odd-even": {
+   "words": [
+    [
+     "👫",
+     "Even",
+     "can be put into pairs with none left over"
+    ],
+    [
+     "🧍",
+     "Odd",
+     "one is left over when you make pairs"
+    ],
+    [
+     "🔚",
+     "Last digit",
+     "the digit on the right"
+    ]
+   ]
+  },
+  "camp2-sentences": {
+   "words": [
+    [
+     "🔠",
+     "Capital letter",
+     "a big letter, like A"
+    ],
+    [
+     "⚫",
+     "Full stop",
+     "the dot at the end of a sentence"
+    ],
+    [
+     "❓",
+     "Question mark",
+     "the mark at the end of a question"
+    ]
+   ]
+  },
+  "camp2-materials": {
+   "words": [
+    [
+     "🪵",
+     "Material",
+     "what something is made of"
+    ],
+    [
+     "🏷️",
+     "Property",
+     "what a material is like, such as hard or soft"
+    ],
+    [
+     "💧",
+     "Waterproof",
+     "does not let water through"
+    ]
+   ]
+  },
+  "sid2-coins": {
+   "words": [
+    [
+     "🪙",
+     "Coin",
+     "round metal money"
+    ],
+    [
+     "💰",
+     "Rand",
+     "the money we use in South Africa"
+    ],
+    [
+     "⬆️",
+     "Worth more",
+     "it can buy more"
+    ]
+   ]
+  },
+  "sid2-feelings": {
+   "words": [
+    [
+     "😊",
+     "Happy",
+     "feeling good"
+    ],
+    [
+     "😢",
+     "Sad",
+     "feeling down. You may cry"
+    ],
+    [
+     "😠",
+     "Angry",
+     "feeling cross"
+    ],
+    [
+     "😨",
+     "Scared",
+     "feeling afraid"
+    ]
+   ]
+  },
+  "pyp2-data": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "✏️",
+     "Tally mark",
+     "a line for each thing you count"
+    ],
+    [
+     "🖼️",
+     "Pictograph",
+     "a graph that uses pictures"
+    ],
+    [
+     "🔑",
+     "Key",
+     "tells you what each picture stands for"
+    ]
+   ]
+  },
+  "pyp2-describe": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "🌸",
+     "Describing word",
+     "a word that tells what something is like"
+    ],
+    [
+     "👃",
+     "Senses",
+     "see, hear, smell, taste and touch"
+    ]
+   ]
+  },
+  "pyp2-then-now": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🕰️",
+     "Then",
+     "a time in the past"
+    ],
+    [
+     "📱",
+     "Now",
+     "today"
+    ]
+   ]
   }
  }
 }

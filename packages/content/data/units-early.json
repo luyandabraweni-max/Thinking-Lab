@@ -1839,6 +1839,44 @@
     ]
    ]
   },
+  "ey-safe": {
+   "words": [
+    [
+     "🔥",
+     "Hot",
+     "very warm. It can burn you"
+    ],
+    [
+     "🧑",
+     "Grown-up",
+     "an adult who looks after you"
+    ],
+    [
+     "✅",
+     "Safe",
+     "nothing here can hurt you"
+    ]
+   ]
+  },
+  "ey-me": {
+   "words": [
+    [
+     "⭐",
+     "Special",
+     "there is only one you"
+    ],
+    [
+     "💪",
+     "I can",
+     "I am able to do it"
+    ],
+    [
+     "🌈",
+     "Different",
+     "not the same"
+    ]
+   ]
+  },
   "ey-turns": {
    "words": [
     [
@@ -1853,6 +1891,25 @@
     ]
    ]
   },
+  "ey-sounds": {
+   "words": [
+    [
+     "👂",
+     "Ear",
+     "the part of your body that hears"
+    ],
+    [
+     "🔊",
+     "Sound",
+     "what you hear"
+    ],
+    [
+     "🤫",
+     "Quiet",
+     "with very little sound"
+    ]
+   ]
+  },
   "ey-story": {
    "words": [
     [
@@ -1864,6 +1921,120 @@
      "🔚",
      "Last",
      "the one at the end"
+    ]
+   ]
+  },
+  "ey-count": {
+   "words": [
+    [
+     "👆",
+     "Count",
+     "say one number for each thing"
+    ],
+    [
+     "🔢",
+     "How many",
+     "the last number you say when you count"
+    ]
+   ]
+  },
+  "ey-shapes": {
+   "words": [
+    [
+     "⚪",
+     "Circle",
+     "a round shape with no corners"
+    ],
+    [
+     "🟥",
+     "Square",
+     "four sides, all the same length"
+    ],
+    [
+     "🔺",
+     "Triangle",
+     "a shape with three sides"
+    ]
+   ]
+  },
+  "ey-colours": {
+   "words": [
+    [
+     "🎨",
+     "Colour",
+     "red, blue, yellow and more"
+    ],
+    [
+     "🔀",
+     "Mix",
+     "put together to make something new"
+    ],
+    [
+     "🌿",
+     "Nature",
+     "plants, animals, sky and sea"
+    ]
+   ]
+  },
+  "ey-music": {
+   "words": [
+    [
+     "🔊",
+     "Loud",
+     "a big sound"
+    ],
+    [
+     "🔈",
+     "Soft",
+     "a small, quiet sound"
+    ],
+    [
+     "🐇",
+     "Fast",
+     "quick"
+    ],
+    [
+     "🐢",
+     "Slow",
+     "not quick"
+    ]
+   ]
+  },
+  "ey-animals": {
+   "words": [
+    [
+     "🐣",
+     "Baby animal",
+     "a very young animal"
+    ],
+    [
+     "🐄",
+     "Calf",
+     "a baby cow"
+    ],
+    [
+     "🤲",
+     "Care",
+     "look after"
+    ]
+   ]
+  },
+  "ey-weather": {
+   "words": [
+    [
+     "☀️",
+     "Sunny",
+     "the sun is shining"
+    ],
+    [
+     "🌧️",
+     "Rainy",
+     "water falls from the clouds"
+    ],
+    [
+     "💨",
+     "Windy",
+     "the air moves strongly"
     ]
    ]
   }

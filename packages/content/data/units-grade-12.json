@@ -4306,6 +4306,116 @@
     ]
    ]
   },
+  "g12-ml-tax": {
+   "words": [
+    [
+     "🧾",
+     "VAT",
+     "value-added tax, added to the price of most things"
+    ],
+    [
+     "📄",
+     "Payslip",
+     "a page that shows your pay and what was taken off"
+    ],
+    [
+     "➖",
+     "Deduction",
+     "money taken off your pay"
+    ],
+    [
+     "🏛️",
+     "Income tax",
+     "tax paid on what you earn"
+    ]
+   ]
+  },
+  "g12-ml-packaging": {
+   "words": [
+    [
+     "📦",
+     "Surface area",
+     "the total area of all the faces"
+    ],
+    [
+     "🧊",
+     "Volume",
+     "the space inside"
+    ],
+    [
+     "🔽",
+     "Round down",
+     "use the whole number below"
+    ]
+   ]
+  },
+  "g12-ml-building": {
+   "words": [
+    [
+     "📐",
+     "Plan",
+     "a drawing from above"
+    ],
+    [
+     "🏠",
+     "Elevation",
+     "a drawing from the side"
+    ],
+    [
+     "🧱",
+     "Quantity",
+     "how much is needed"
+    ],
+    [
+     "🔼",
+     "Round up",
+     "use the whole number above, so you have enough"
+    ]
+   ]
+  },
+  "g12-ml-compare": {
+   "words": [
+    [
+     "📊",
+     "Quartile",
+     "a value that splits ordered data into quarters"
+    ],
+    [
+     "📦",
+     "Box-and-whisker plot",
+     "a diagram of the lowest value, quartiles, median and highest value"
+    ],
+    [
+     "👥",
+     "Sample",
+     "the group that was asked or tested"
+    ]
+   ]
+  },
+  "g12-ml-fair": {
+   "words": [
+    [
+     "⚖️",
+     "Fair",
+     "every player has the same chance"
+    ],
+    [
+     "📐",
+     "Theoretical probability",
+     "what should happen"
+    ],
+    [
+     "🎲",
+     "Experimental probability",
+     "what did happen when you tried it"
+    ],
+    [
+     "🔮",
+     "Expected",
+     "what you predict over many tries"
+    ]
+   ]
+  },
   "g12-novel": {
    "words": [
     [
@@ -4449,6 +4559,302 @@
      "🏘️",
      "Ward councillor",
      "the person who represents your area in the municipality"
+    ]
+   ]
+  },
+  "dp12-aa-binomial": {
+   "words": [
+    [
+     "🔺",
+     "Pascal's triangle",
+     "a triangle of numbers that gives the coefficients"
+    ],
+    [
+     "🔢",
+     "Coefficient",
+     "the number in front of a term"
+    ],
+    [
+     "🎟️",
+     "n choose r",
+     "the number of ways to choose r things from n"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp12-ai-chi-squared": {
+   "words": [
+    [
+     "0️⃣",
+     "Null hypothesis",
+     "the claim that there is no link"
+    ],
+    [
+     "👀",
+     "Observed",
+     "the counts you actually got"
+    ],
+    [
+     "🔮",
+     "Expected",
+     "the counts if there were no link"
+    ],
+    [
+     "📏",
+     "p-value",
+     "how likely the result is if the null hypothesis is true"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp12-ll-global-issue": {
+   "words": [
+    [
+     "🌍",
+     "Global issue",
+     "a big problem felt in many countries and in everyday life"
+    ],
+    [
+     "🗣️",
+     "Individual oral",
+     "a spoken assessment about two texts"
+    ],
+    [
+     "📖",
+     "Extract",
+     "a short part taken from a longer text"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp12-chem-equilibrium": {
+   "words": [
+    [
+     "🔄",
+     "Reversible reaction",
+     "a reaction that can go both ways"
+    ],
+    [
+     "⚖️",
+     "Dynamic equilibrium",
+     "forward and reverse reactions at equal rates"
+    ],
+    [
+     "🔀",
+     "Le Chatelier's principle",
+     "a system shifts to oppose a change"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp12-phys-momentum": {
+   "words": [
+    [
+     "🏃",
+     "Momentum",
+     "mass times velocity"
+    ],
+    [
+     "🔒",
+     "Conservation",
+     "the total stays the same"
+    ],
+    [
+     "💥",
+     "Impulse",
+     "force times time. It is the change in momentum"
+    ],
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ]
+   ]
+  },
+  "dp12-tok-essay": {
+   "words": [
+    [
+     "🤔",
+     "TOK",
+     "Theory of Knowledge: thinking about how we know things"
+    ],
+    [
+     "📜",
+     "Prescribed title",
+     "the essay question set by the IB"
+    ],
+    [
+     "📣",
+     "Claim",
+     "a point you argue"
+    ],
+    [
+     "🔄",
+     "Counterclaim",
+     "a point against your claim"
+    ]
+   ]
+  },
+  "ieb12-ma-optimisation": {
+   "words": [
+    [
+     "🏆",
+     "Optimise",
+     "find the biggest or smallest value"
+    ],
+    [
+     "📐",
+     "Derivative",
+     "the rate of change, or gradient"
+    ],
+    [
+     "0️⃣",
+     "Stationary point",
+     "where the derivative is zero"
+    ]
+   ]
+  },
+  "ieb12-ma-proof": {
+   "words": [
+    [
+     "✅",
+     "Proof",
+     "an argument that shows something is always true"
+    ],
+    [
+     "❌",
+     "Counterexample",
+     "one case that shows a claim is false"
+    ]
+   ]
+  },
+  "ieb12-en-unseen-poem": {
+   "words": [
+    [
+     "👀",
+     "Unseen",
+     "a text you have not read before"
+    ],
+    [
+     "🎯",
+     "Thesis",
+     "your main answer, which you then prove"
+    ],
+    [
+     "🔄",
+     "Turn",
+     "where a poem changes direction or mood"
+    ]
+   ]
+  },
+  "ieb12-en-transactional": {
+   "words": [
+    [
+     "📑",
+     "Report",
+     "formal writing that gives information"
+    ],
+    [
+     "🧩",
+     "Synthesise",
+     "combine information from several sources"
+    ],
+    [
+     "🎩",
+     "Formal register",
+     "serious language, with no slang"
+    ]
+   ]
+  },
+  "ieb12-ls-evolution-data": {
+   "words": [
+    [
+     "🦠",
+     "Natural selection",
+     "individuals that suit their environment survive and pass on their genes"
+    ],
+    [
+     "💊",
+     "Resistance",
+     "no longer harmed by a medicine or poison"
+    ],
+    [
+     "🧬",
+     "Variation",
+     "differences between individuals"
+    ]
+   ]
+  },
+  "ieb12-ls-genetics-ethics": {
+   "words": [
+    [
+     "🌽",
+     "GM",
+     "genetically modified: with genes changed by scientists"
+    ],
+    [
+     "⚖️",
+     "Ethics",
+     "deciding what is right and wrong"
+    ],
+    [
+     "🌿",
+     "Biodiversity",
+     "the variety of living things"
+    ]
+   ]
+  },
+  "apm12-integration": {
+   "words": [
+    [
+     "∫",
+     "Integral",
+     "the reverse of differentiation"
+    ],
+    [
+     "🔙",
+     "Antiderivative",
+     "a function whose derivative is the one you started with"
+    ],
+    [
+     "📐",
+     "Definite integral",
+     "gives the area between two limits"
+    ]
+   ]
+  },
+  "apm12-normal": {
+   "words": [
+    [
+     "🔔",
+     "Normal distribution",
+     "a bell-shaped spread of data that is the same on both sides"
+    ],
+    [
+     "↔️",
+     "Standard deviation",
+     "how spread out the values are from the mean"
+    ],
+    [
+     "📏",
+     "z-score",
+     "how many standard deviations a value is from the mean"
     ]
    ]
   }

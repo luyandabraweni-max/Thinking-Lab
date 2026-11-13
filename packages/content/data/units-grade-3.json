@@ -2829,6 +2829,178 @@
      "catches fire easily"
     ]
    ]
+  },
+  "camp3-time": {
+   "words": [
+    [
+     "🕐",
+     "Hour hand",
+     "the short hand on a clock"
+    ],
+    [
+     "⏱️",
+     "Minute hand",
+     "the long hand on a clock"
+    ],
+    [
+     "🕧",
+     "Half past",
+     "30 minutes after the hour"
+    ],
+    [
+     "🕒",
+     "Quarter past",
+     "15 minutes after the hour"
+    ]
+   ]
+  },
+  "camp3-word-classes": {
+   "words": [
+    [
+     "🏷️",
+     "Noun",
+     "a naming word"
+    ],
+    [
+     "🏃",
+     "Verb",
+     "a doing word"
+    ],
+    [
+     "🎨",
+     "Adjective",
+     "a describing word"
+    ]
+   ]
+  },
+  "camp3-forces": {
+   "words": [
+    [
+     "💪",
+     "Force",
+     "a push or a pull"
+    ],
+    [
+     "🫸",
+     "Push",
+     "move something away from you"
+    ],
+    [
+     "🫷",
+     "Pull",
+     "move something towards you"
+    ]
+   ]
+  },
+  "sid3-signs": {
+   "words": [
+    [
+     "🚪",
+     "Exit",
+     "the way out"
+    ],
+    [
+     "⚠️",
+     "Danger",
+     "something here can hurt you"
+    ],
+    [
+     "🚻",
+     "Toilets",
+     "this way to the toilets"
+    ],
+    [
+     "🛑",
+     "Stop",
+     "do not go on"
+    ]
+   ]
+  },
+  "sid3-day": {
+   "words": [
+    [
+     "🌅",
+     "Morning",
+     "the start of the day"
+    ],
+    [
+     "🌞",
+     "Afternoon",
+     "the time after lunch"
+    ],
+    [
+     "🌙",
+     "Night",
+     "when it is dark and we sleep"
+    ],
+    [
+     "⏭️",
+     "After",
+     "later"
+    ]
+   ]
+  },
+  "pyp3-shapes": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "🔷",
+     "2D shape",
+     "a flat shape"
+    ],
+    [
+     "📐",
+     "Side",
+     "a straight edge of a shape"
+    ],
+    [
+     "📍",
+     "Corner",
+     "where two sides meet"
+    ]
+   ]
+  },
+  "pyp3-poem": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "🔁",
+     "Repetition",
+     "saying a word or line again"
+    ],
+    [
+     "🎵",
+     "Rhyme",
+     "words that end with the same sound"
+    ]
+   ]
+  },
+  "pyp3-symbols": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🔁",
+     "Pattern",
+     "something that repeats"
+    ],
+    [
+     "🔣",
+     "Symbol",
+     "a picture or sign that stands for something"
+    ]
+   ]
   }
  }
 }

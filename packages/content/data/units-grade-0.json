@@ -2088,12 +2088,69 @@
     ]
    ]
   },
+  "gr-shapes": {
+   "words": [
+    [
+     "⚽",
+     "Roll",
+     "turn over and over while moving"
+    ],
+    [
+     "📦",
+     "Slide",
+     "move along without turning over"
+    ],
+    [
+     "📍",
+     "Position",
+     "where something is"
+    ]
+   ]
+  },
+  "gr-measure": {
+   "words": [
+    [
+     "📏",
+     "Tall",
+     "high from bottom to top"
+    ],
+    [
+     "🪨",
+     "Heavy",
+     "hard to lift"
+    ],
+    [
+     "🪶",
+     "Light",
+     "easy to lift"
+    ],
+    [
+     "🥛",
+     "Full",
+     "there is no space for more"
+    ]
+   ]
+  },
   "gr-rhyme": {
    "words": [
     [
      "🎵",
      "Rhyme",
      "words that sound the same at the end"
+    ]
+   ]
+  },
+  "gr-sounds": {
+   "words": [
+    [
+     "🔤",
+     "Sound",
+     "what you hear when you say a letter"
+    ],
+    [
+     "🥇",
+     "First sound",
+     "the sound at the start of a word"
     ]
    ]
   },
@@ -2129,6 +2186,54 @@
     ]
    ]
   },
+  "gr-days": {
+   "words": [
+    [
+     "📅",
+     "Week",
+     "seven days"
+    ],
+    [
+     "🏠",
+     "Weekend",
+     "Saturday and Sunday"
+    ],
+    [
+     "⬅️",
+     "Yesterday",
+     "the day before today"
+    ],
+    [
+     "➡️",
+     "Tomorrow",
+     "the day after today"
+    ]
+   ]
+  },
+  "gr-transport": {
+   "words": [
+    [
+     "🚌",
+     "Transport",
+     "ways to move people and things"
+    ],
+    [
+     "🚢",
+     "Ship",
+     "a big boat"
+    ],
+    [
+     "✈️",
+     "Aeroplane",
+     "a machine that flies"
+    ],
+    [
+     "🕰️",
+     "Long ago",
+     "a long time before now"
+    ]
+   ]
+  },
   "gr-wild": {
    "words": [
     [
@@ -2140,6 +2245,44 @@
      "🐕",
      "Tame",
      "looked after by people"
+    ]
+   ]
+  },
+  "sid0-count": {
+   "words": [
+    [
+     "👆",
+     "Count",
+     "say one number for each thing"
+    ],
+    [
+     "🔢",
+     "How many",
+     "the number of things"
+    ]
+   ]
+  },
+  "sid0-colours": {
+   "words": [
+    [
+     "🔴",
+     "Red",
+     "the colour of a tomato"
+    ],
+    [
+     "🟡",
+     "Yellow",
+     "the colour of the sun"
+    ],
+    [
+     "🔵",
+     "Blue",
+     "the colour of the sky"
+    ],
+    [
+     "🟰",
+     "Same",
+     "just like the other one"
     ]
    ]
   }

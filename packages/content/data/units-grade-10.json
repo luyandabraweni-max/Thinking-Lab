@@ -6667,6 +6667,111 @@
     ]
    ]
   },
+  "g10-ml-budget": {
+   "words": [
+    [
+     "💰",
+     "Income",
+     "money coming in"
+    ],
+    [
+     "🧾",
+     "Expense",
+     "money going out"
+    ],
+    [
+     "📌",
+     "Fixed expense",
+     "the same amount every month"
+    ],
+    [
+     "➕",
+     "Surplus",
+     "money left over after expenses"
+    ],
+    [
+     "➖",
+     "Deficit",
+     "when expenses are more than income"
+    ]
+   ]
+  },
+  "g10-ml-units": {
+   "words": [
+    [
+     "⚖️",
+     "Metric units",
+     "grams, metres and litres"
+    ],
+    [
+     "🔁",
+     "Convert",
+     "change to another unit"
+    ],
+    [
+     "🍲",
+     "Scale a recipe",
+     "make it bigger or smaller by the same amount"
+    ]
+   ]
+  },
+  "g10-ml-maps": {
+   "words": [
+    [
+     "🗺️",
+     "Scale",
+     "how much smaller the map is than real life"
+    ],
+    [
+     "📏",
+     "Bar scale",
+     "a line on the map that shows real distances"
+    ],
+    [
+     "#️⃣",
+     "Grid reference",
+     "a letter and a number that find a square on a map"
+    ]
+   ]
+  },
+  "g10-ml-data": {
+   "words": [
+    [
+     "🔄",
+     "Data cycle",
+     "ask, collect, organise, summarise, explain"
+    ],
+    [
+     "✏️",
+     "Tally",
+     "a mark for each thing you count"
+    ],
+    [
+     "📊",
+     "Frequency",
+     "how many times something happens"
+    ]
+   ]
+  },
+  "g10-ml-chance": {
+   "words": [
+    [
+     "🎲",
+     "Probability",
+     "how likely something is to happen"
+    ],
+    [
+     "🎯",
+     "Outcome",
+     "one possible result"
+    ],
+    [
+     "⚖️",
+     "Equally likely",
+     "with the same chance"
+    ]
+   ]
+  },
   "g10-poetry": {
    "words": [
     [
@@ -6820,6 +6925,650 @@
      "🛠️",
      "Learnership",
      "earning while you learn in a workplace"
+    ]
+   ]
+  },
+  "cam10-eng-meaning": {
+   "words": [
+    [
+     "👁️",
+     "Explicit",
+     "said directly"
+    ],
+    [
+     "🕵️",
+     "Implicit",
+     "suggested, not said directly"
+    ],
+    [
+     "💡",
+     "Infer",
+     "work out from clues"
+    ]
+   ]
+  },
+  "cam10-eng-effects": {
+   "words": [
+    [
+     "🖼️",
+     "Imagery",
+     "words that make a picture in your mind"
+    ],
+    [
+     "✨",
+     "Effect",
+     "what the words make the reader think or feel"
+    ],
+    [
+     "🔍",
+     "Literal",
+     "the exact, everyday meaning"
+    ]
+   ]
+  },
+  "cam10-eng-summary": {
+   "words": [
+    [
+     "📝",
+     "Summary",
+     "the main points, written shorter"
+    ],
+    [
+     "✂️",
+     "Concise",
+     "short, with no extra words"
+    ],
+    [
+     "🗣️",
+     "Own words",
+     "your wording, not copied from the text"
+    ]
+   ]
+  },
+  "cam10-eng-letter": {
+   "words": [
+    [
+     "🎯",
+     "Purpose",
+     "why you are writing"
+    ],
+    [
+     "👥",
+     "Audience",
+     "who will read it"
+    ],
+    [
+     "🎩",
+     "Register",
+     "how formal or informal the language is"
+    ],
+    [
+     "📣",
+     "Call to action",
+     "telling the reader what to do"
+    ]
+   ]
+  },
+  "cam10-eng-describe": {
+   "words": [
+    [
+     "👀",
+     "Show, don't tell",
+     "use details that show a feeling, instead of naming it"
+    ],
+    [
+     "👃",
+     "Senses",
+     "sight, hearing, smell, taste and touch"
+    ],
+    [
+     "🧱",
+     "Structure",
+     "the order of the parts"
+    ]
+   ]
+  },
+  "cam10-standard-form": {
+   "words": [
+    [
+     "🔟",
+     "Standard form",
+     "a number from 1 to 10, times a power of 10"
+    ],
+    [
+     "⬆️",
+     "Power",
+     "the small raised number that says how many times to multiply"
+    ],
+    [
+     "⬇️",
+     "Negative power",
+     "used for numbers smaller than 1"
+    ]
+   ]
+  },
+  "cam10-simultaneous": {
+   "words": [
+    [
+     "🤝",
+     "Simultaneous",
+     "true at the same time"
+    ],
+    [
+     "➖",
+     "Elimination",
+     "add or subtract the equations to remove one letter"
+    ],
+    [
+     "🔄",
+     "Substitution",
+     "put one equation into the other"
+    ]
+   ]
+  },
+  "cam10-straight-lines": {
+   "words": [
+    [
+     "📈",
+     "Gradient",
+     "how steep a line is"
+    ],
+    [
+     "✂️",
+     "y-intercept",
+     "where the line crosses the y-axis"
+    ],
+    [
+     "🛤️",
+     "Parallel",
+     "lines that never meet. They have the same gradient"
+    ]
+   ]
+  },
+  "cam10-polygons": {
+   "words": [
+    [
+     "🔷",
+     "Polygon",
+     "a flat shape with straight sides"
+    ],
+    [
+     "↩️",
+     "Interior angle",
+     "an angle inside the shape"
+    ],
+    [
+     "↪️",
+     "Exterior angle",
+     "the angle outside, between one side and the next side made longer"
+    ]
+   ]
+  },
+  "cam10-frequency": {
+   "words": [
+    [
+     "📊",
+     "Frequency",
+     "how many times a value appears"
+    ],
+    [
+     "➗",
+     "Mean",
+     "the total divided by how many values there are"
+    ],
+    [
+     "📦",
+     "Grouped data",
+     "values put into classes, like 10 to 19"
+    ]
+   ]
+  },
+  "cam10-sci-cells": {
+   "words": [
+    [
+     "🧫",
+     "Cell",
+     "the smallest living unit"
+    ],
+    [
+     "🌫️",
+     "Diffusion",
+     "particles spreading from where there are many to where there are few"
+    ],
+    [
+     "💧",
+     "Osmosis",
+     "water moving through a membrane"
+    ],
+    [
+     "🧱",
+     "Membrane",
+     "a thin layer around a cell"
+    ]
+   ]
+  },
+  "cam10-sci-states": {
+   "words": [
+    [
+     "🧊",
+     "Solid",
+     "keeps its shape"
+    ],
+    [
+     "💧",
+     "Liquid",
+     "flows and takes the shape of its container"
+    ],
+    [
+     "💨",
+     "Gas",
+     "spreads out to fill any space"
+    ],
+    [
+     "🌡️",
+     "Melting point",
+     "the temperature where a solid turns to liquid"
+    ]
+   ]
+  },
+  "cam10-sci-atoms": {
+   "words": [
+    [
+     "➕",
+     "Proton",
+     "a positive particle in the nucleus"
+    ],
+    [
+     "⚪",
+     "Neutron",
+     "a particle with no charge, in the nucleus"
+    ],
+    [
+     "➖",
+     "Electron",
+     "a tiny negative particle around the nucleus"
+    ],
+    [
+     "🗂️",
+     "Periodic table",
+     "a chart of all the elements"
+    ]
+   ]
+  },
+  "cam10-sci-motion": {
+   "words": [
+    [
+     "🏃",
+     "Speed",
+     "distance divided by time"
+    ],
+    [
+     "📉",
+     "Distance–time graph",
+     "shows how far something goes over time"
+    ],
+    [
+     "🚀",
+     "Acceleration",
+     "how fast the speed changes"
+    ]
+   ]
+  },
+  "cam10-sci-energy": {
+   "words": [
+    [
+     "🔋",
+     "Energy store",
+     "where energy is kept, like a battery"
+    ],
+    [
+     "⚙️",
+     "Efficiency",
+     "how much of the energy put in is useful"
+    ],
+    [
+     "♻️",
+     "Renewable",
+     "will not run out, like sun and wind"
+    ]
+   ]
+  },
+  "ib10-exponential": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "📈",
+     "Exponential growth",
+     "growing by the same percentage each time"
+    ],
+    [
+     "📉",
+     "Decay",
+     "shrinking by the same percentage each time"
+    ],
+    [
+     "📏",
+     "Linear",
+     "changing by the same amount each time"
+    ]
+   ]
+  },
+  "ib10-trig-heights": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "📐",
+     "SOH CAH TOA",
+     "a memory aid for sine, cosine and tangent"
+    ],
+    [
+     "⬆️",
+     "Angle of elevation",
+     "the angle you look up from flat ground"
+    ]
+   ]
+  },
+  "ib10-compare-data": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🎯",
+     "Median",
+     "the middle value when the data is in order"
+    ],
+    [
+     "📦",
+     "Interquartile range",
+     "the spread of the middle half of the data"
+    ],
+    [
+     "⚖️",
+     "Bias",
+     "something that makes a result unfair"
+    ]
+   ]
+  },
+  "ib10-ll-context": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🌍",
+     "Context",
+     "the time, place and situation of a text"
+    ],
+    [
+     "🪪",
+     "Pass laws",
+     "apartheid laws that controlled where Black people could go"
+    ]
+   ]
+  },
+  "ib10-ll-rhetoric": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🧑‍⚖️",
+     "Ethos",
+     "making the audience trust the speaker"
+    ],
+    [
+     "❤️",
+     "Pathos",
+     "an appeal to feelings"
+    ],
+    [
+     "🧠",
+     "Logos",
+     "an appeal to reason and facts"
+    ]
+   ]
+  },
+  "ib10-ll-essay": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🎯",
+     "Thesis",
+     "the main argument of the essay"
+    ],
+    [
+     "🔍",
+     "Analyse",
+     "explain how the language works and why"
+    ]
+   ]
+  },
+  "ib10-sci-rates": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "💥",
+     "Collision",
+     "particles hitting each other"
+    ],
+    [
+     "⏱️",
+     "Rate",
+     "how fast something happens"
+    ],
+    [
+     "⚡",
+     "Catalyst",
+     "speeds up a reaction without being used up"
+    ]
+   ]
+  },
+  "ib10-sci-inheritance": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🧬",
+     "Gene",
+     "a piece of DNA that controls a feature"
+    ],
+    [
+     "🔀",
+     "Allele",
+     "one version of a gene"
+    ],
+    [
+     "💪",
+     "Dominant",
+     "the allele that shows when it is there"
+    ],
+    [
+     "🙈",
+     "Recessive",
+     "the allele that shows only when there are two of it"
+    ]
+   ]
+  },
+  "ib10-sci-newton": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "⚖️",
+     "Unbalanced force",
+     "forces that do not cancel out"
+    ],
+    [
+     "🏋️",
+     "Mass",
+     "how much matter something has"
+    ],
+    [
+     "↔️",
+     "Reaction",
+     "the equal and opposite force"
+    ]
+   ]
+  },
+  "ieb10-ma-patterns": {
+   "words": [
+    [
+     "🔁",
+     "Pattern",
+     "things that follow a rule"
+    ],
+    [
+     "📐",
+     "General rule",
+     "a formula that works for every term"
+    ],
+    [
+     "❓",
+     "Unfamiliar",
+     "new to you, not seen before"
+    ]
+   ]
+  },
+  "ieb10-ma-geometry-proof": {
+   "words": [
+    [
+     "📝",
+     "Statement",
+     "what you say is true"
+    ],
+    [
+     "💬",
+     "Reason",
+     "the rule that shows it is true"
+    ],
+    [
+     "🔗",
+     "Chain",
+     "steps that follow one after another"
+    ]
+   ]
+  },
+  "ieb10-en-visual": {
+   "words": [
+    [
+     "🖼️",
+     "Visual source",
+     "a picture, cartoon or advert"
+    ],
+    [
+     "🙃",
+     "Irony",
+     "when what is shown is the opposite of what is meant"
+    ],
+    [
+     "🎯",
+     "Criticise",
+     "point out what is wrong"
+    ]
+   ]
+  },
+  "ieb10-en-bias": {
+   "words": [
+    [
+     "⚖️",
+     "Bias",
+     "favouring one side unfairly"
+    ],
+    [
+     "😡",
+     "Emotive words",
+     "words chosen to stir up feelings"
+    ],
+    [
+     "🏷️",
+     "Loaded words",
+     "words that carry a hidden judgement"
+    ]
+   ]
+  },
+  "ieb10-ls-graphs": {
+   "words": [
+    [
+     "📈",
+     "Trend",
+     "the general direction of the data"
+    ],
+    [
+     "📝",
+     "Describe",
+     "say what happens"
+    ],
+    [
+     "💡",
+     "Explain",
+     "say why it happens"
+    ]
+   ]
+  },
+  "ieb10-ls-investigation": {
+   "words": [
+    [
+     "🎯",
+     "Aim",
+     "what you want to find out"
+    ],
+    [
+     "🔮",
+     "Hypothesis",
+     "a prediction you can test"
+    ],
+    [
+     "✅",
+     "Valid",
+     "tests what it says it tests"
+    ],
+    [
+     "🔁",
+     "Reliable",
+     "gives the same results when repeated"
+    ]
+   ]
+  },
+  "apm10-absolute": {
+   "words": [
+    [
+     "📏",
+     "Absolute value",
+     "the distance from zero. It is never negative"
+    ],
+    [
+     "↔️",
+     "Inequality",
+     "a statement with less than or greater than"
     ]
    ]
   }

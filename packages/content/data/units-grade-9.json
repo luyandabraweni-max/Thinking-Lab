@@ -3499,6 +3499,264 @@
      "the difference something makes"
     ]
    ]
+  },
+  "cam9-pythagoras": {
+   "words": [
+    [
+     "📐",
+     "Hypotenuse",
+     "the longest side, opposite the right angle"
+    ],
+    [
+     "⬛",
+     "Right angle",
+     "an angle of 90 degrees"
+    ],
+    [
+     "✖️",
+     "Squared",
+     "a number times itself"
+    ]
+   ]
+  },
+  "cam9-expected-frequency": {
+   "words": [
+    [
+     "🔮",
+     "Expected frequency",
+     "how many times you predict something will happen"
+    ],
+    [
+     "🎲",
+     "Relative frequency",
+     "how often it happened, out of all the tries"
+    ],
+    [
+     "⚖️",
+     "Fair",
+     "every outcome is equally likely"
+    ]
+   ]
+  },
+  "cam9-eng-structure": {
+   "words": [
+    [
+     "🧱",
+     "Structure",
+     "how a text is put together"
+    ],
+    [
+     "🚪",
+     "Opening",
+     "how a text starts"
+    ],
+    [
+     "🔚",
+     "Ending",
+     "how a text finishes"
+    ],
+    [
+     "🔄",
+     "Shift",
+     "a change in focus, time or place"
+    ]
+   ]
+  },
+  "cam9-eng-speech": {
+   "words": [
+    [
+     "🎤",
+     "Speech",
+     "a talk given to an audience"
+    ],
+    [
+     "❓",
+     "Rhetorical question",
+     "a question asked for effect, not for an answer"
+    ],
+    [
+     "3️⃣",
+     "Rule of three",
+     "listing three things for effect"
+    ]
+   ]
+  },
+  "cam9-sci-reactivity": {
+   "words": [
+    [
+     "📊",
+     "Reactivity series",
+     "metals listed from most to least reactive"
+    ],
+    [
+     "🫧",
+     "Reactive",
+     "reacts easily"
+    ],
+    [
+     "🔄",
+     "Displacement",
+     "a more reactive metal taking the place of a less reactive one"
+    ]
+   ]
+  },
+  "cam9-sci-carbon-cycle": {
+   "words": [
+    [
+     "🔄",
+     "Carbon cycle",
+     "carbon moving between air, living things, oceans and rocks"
+    ],
+    [
+     "🌡️",
+     "Greenhouse effect",
+     "gases trapping heat around the Earth"
+    ],
+    [
+     "🏭",
+     "Fossil fuels",
+     "coal, oil and gas, made from things that lived long ago"
+    ]
+   ]
+  },
+  "ib9-linear-models": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "📏",
+     "Linear model",
+     "a straight-line rule that describes real data"
+    ],
+    [
+     "📈",
+     "Gradient",
+     "the rate of change"
+    ],
+    [
+     "✂️",
+     "Intercept",
+     "the starting value"
+    ]
+   ]
+  },
+  "ib9-similarity": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🔍",
+     "Similar",
+     "the same shape, but a different size"
+    ],
+    [
+     "📐",
+     "Scale factor",
+     "the number every length is multiplied by"
+    ]
+   ]
+  },
+  "ib9-ll-perspective": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "👁️",
+     "Point of view",
+     "who is telling the story"
+    ],
+    [
+     "1️⃣",
+     "First person",
+     "told by a character, using I"
+    ],
+    [
+     "3️⃣",
+     "Third person",
+     "told by an outside narrator, using he, she or they"
+    ]
+   ]
+  },
+  "ib9-ll-advert": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "💬",
+     "Slogan",
+     "a short phrase that is easy to remember"
+    ],
+    [
+     "❓",
+     "Rhetorical question",
+     "a question asked for effect"
+    ],
+    [
+     "🎯",
+     "Target audience",
+     "the people an advert is aimed at"
+    ]
+   ]
+  },
+  "ib9-sci-fair-test": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🔧",
+     "Independent variable",
+     "what you change"
+    ],
+    [
+     "📏",
+     "Dependent variable",
+     "what you measure"
+    ],
+    [
+     "🔒",
+     "Control variable",
+     "what you keep the same"
+    ]
+   ]
+  },
+  "ib9-sci-ecosystems": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🔗",
+     "Food chain",
+     "shows what eats what"
+    ],
+    [
+     "🌱",
+     "Producer",
+     "a plant that makes its own food"
+    ],
+    [
+     "☀️",
+     "Energy transfer",
+     "energy passing from one living thing to the next"
+    ]
+   ]
   }
  }
 }

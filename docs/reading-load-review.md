@@ -35,20 +35,22 @@ These comprehension texts are over 100 words. The passage is what the lesson ass
 | 104 | Drama: The Inheritance (g11-drama) | 11 | CAPS |
 | 103 | Newspaper report: Beach clean-up (e5-news) | 5 | CAPS |
 
-## 2. Lessons with no key-word help
+## 2. Key-word help
 
-Most lessons have a "What does this mean?" box that explains key words with a picture. 180 lessons have none:
+Every lesson now has a "What does this mean?" box that explains its key words with a picture. 180 lessons got one for the first time:
 
 - every Cambridge, IB, IEB and CAPS for SID lesson: 151 lessons
 - 29 shared lessons
 
-**Question for review:** this is probably the biggest gap. Do the reviewers agree that these lessons should get word boxes first?
+The new lists are in `js/content/platform/words.js`. A test now fails if any lesson is missing one.
+
+**Question for review:** are the plain meanings right, and simple enough for the learners who will read them? This matters most for the CAPS for SID lessons.
 
 ## 3. Lessons with the most specialist vocabulary
 
 These have the highest share of long words (four syllables or more).
 
-| Long words | Lesson | Grade | Has word box |
+| Long words | Lesson | Grade | Had a word box before |
 |---|---|---|---|
 | 11% | Choosing Grade 10 subjects (g9-subjects) | 9 | Yes |
 | 10% | Evolution by natural selection (g12-evolution) | 12 | Yes |

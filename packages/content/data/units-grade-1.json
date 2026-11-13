@@ -2916,6 +2916,158 @@
      "telling the truth"
     ]
    ]
+  },
+  "camp1-bonds": {
+   "words": [
+    [
+     "🤝",
+     "Number bond",
+     "two numbers that make a total"
+    ],
+    [
+     "🔟",
+     "Ten",
+     "the number of fingers on two hands"
+    ],
+    [
+     "❓",
+     "Missing number",
+     "the number you need to find"
+    ]
+   ]
+  },
+  "camp1-rhymes": {
+   "words": [
+    [
+     "🎵",
+     "Rhyme",
+     "words that end with the same sound"
+    ],
+    [
+     "🔚",
+     "End",
+     "the last part"
+    ]
+   ]
+  },
+  "camp1-living": {
+   "words": [
+    [
+     "🌱",
+     "Living",
+     "it grows, eats and breathes"
+    ],
+    [
+     "🪨",
+     "Not living",
+     "it was never alive"
+    ],
+    [
+     "🍂",
+     "Once alive",
+     "it was alive before, like a dry leaf"
+    ]
+   ]
+  },
+  "sid1-hello": {
+   "words": [
+    [
+     "👋",
+     "Hello",
+     "what we say when we meet someone"
+    ],
+    [
+     "🚪",
+     "Goodbye",
+     "what we say when we leave"
+    ],
+    [
+     "🙂",
+     "Smile",
+     "a happy face"
+    ]
+   ]
+  },
+  "sid1-teeth": {
+   "words": [
+    [
+     "🦷",
+     "Teeth",
+     "the hard white parts in your mouth for biting"
+    ],
+    [
+     "🪥",
+     "Toothbrush",
+     "a small brush for your teeth"
+    ],
+    [
+     "🧴",
+     "Toothpaste",
+     "the paste you put on the brush"
+    ]
+   ]
+  },
+  "pyp1-measure": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "📏",
+     "Longer",
+     "more long"
+    ],
+    [
+     "✋",
+     "Measure",
+     "find out how long something is"
+    ]
+   ]
+  },
+  "pyp1-story": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "🟢",
+     "Beginning",
+     "the start"
+    ],
+    [
+     "🟡",
+     "Middle",
+     "the part in between"
+    ],
+    [
+     "🔴",
+     "End",
+     "the last part"
+    ]
+   ]
+  },
+  "pyp1-healthy": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🥕",
+     "Healthy",
+     "well and strong"
+    ],
+    [
+     "😴",
+     "Rest",
+     "sleep or stay still so your body can recover"
+    ]
+   ]
   }
  }
 }

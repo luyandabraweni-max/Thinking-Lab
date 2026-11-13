@@ -2821,6 +2821,140 @@
      "both people say yes to the same solution"
     ]
    ]
+  },
+  "camp6-ratio": {
+   "words": [
+    [
+     "⚖️",
+     "Ratio",
+     "compares amounts, like 2 to 3"
+    ],
+    [
+     "📈",
+     "Proportion",
+     "when amounts grow by the same scale"
+    ],
+    [
+     "🤝",
+     "Share in a ratio",
+     "divide an amount into the given parts"
+    ]
+   ]
+  },
+  "camp6-formal": {
+   "words": [
+    [
+     "🎩",
+     "Formal",
+     "serious, polite language for people you don't know well"
+    ],
+    [
+     "👕",
+     "Informal",
+     "relaxed language for friends and family"
+    ],
+    [
+     "💬",
+     "Slang",
+     "very informal words used by a group"
+    ]
+   ]
+  },
+  "camp6-circuits": {
+   "words": [
+    [
+     "🔁",
+     "Circuit",
+     "a complete loop for electricity"
+    ],
+    [
+     "🔘",
+     "Switch",
+     "opens or closes a gap in a circuit"
+    ],
+    [
+     "⚡",
+     "Conductor",
+     "lets electricity through"
+    ],
+    [
+     "🚫",
+     "Insulator",
+     "does not let electricity through"
+    ]
+   ]
+  },
+  "pyp6-averages": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "➗",
+     "Mean",
+     "the total divided by how many there are"
+    ],
+    [
+     "🎯",
+     "Median",
+     "the middle value when they are in order"
+    ],
+    [
+     "🔝",
+     "Mode",
+     "the value that appears most often"
+    ],
+    [
+     "↔️",
+     "Range",
+     "the biggest minus the smallest"
+    ]
+   ]
+  },
+  "pyp6-perspectives": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "👀",
+     "Perspective",
+     "how one person sees something"
+    ],
+    [
+     "🗣️",
+     "Narrator",
+     "the person telling the story"
+    ]
+   ]
+  },
+  "pyp6-water": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🔄",
+     "Water cycle",
+     "water moving between sea, sky and land"
+    ],
+    [
+     "☁️",
+     "Evaporation",
+     "water turning into vapour"
+    ],
+    [
+     "🚰",
+     "Access",
+     "being able to get and use something"
+    ]
+   ]
   }
  }
 }

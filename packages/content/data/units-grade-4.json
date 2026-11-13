@@ -2822,6 +2822,130 @@
      "a way to fix a problem"
     ]
    ]
+  },
+  "camp4-arrays": {
+   "words": [
+    [
+     "🔲",
+     "Array",
+     "objects set out in rows and columns"
+    ],
+    [
+     "↔️",
+     "Row",
+     "a line going across"
+    ],
+    [
+     "↕️",
+     "Column",
+     "a line going down"
+    ]
+   ]
+  },
+  "camp4-instructions": {
+   "words": [
+    [
+     "📋",
+     "Instructions",
+     "steps that tell you how to do something"
+    ],
+    [
+     "🗣️",
+     "Bossy verb",
+     "a doing word at the start of a step, like mix"
+    ],
+    [
+     "1️⃣",
+     "Order word",
+     "a word like first, next or finally"
+    ]
+   ]
+  },
+  "camp4-states": {
+   "words": [
+    [
+     "🧊",
+     "Solid",
+     "keeps its shape"
+    ],
+    [
+     "💧",
+     "Liquid",
+     "flows and takes the shape of its container"
+    ],
+    [
+     "💨",
+     "Gas",
+     "spreads out to fill any space"
+    ],
+    [
+     "🌡️",
+     "Melt",
+     "change from solid to liquid"
+    ]
+   ]
+  },
+  "pyp4-fractions": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "🍕",
+     "Fraction",
+     "a part of a whole"
+    ],
+    [
+     "⚖️",
+     "Equal parts",
+     "parts that are exactly the same size"
+    ]
+   ]
+  },
+  "pyp4-persuade": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "📣",
+     "Persuade",
+     "try to make someone agree or act"
+    ],
+    [
+     "💬",
+     "Slogan",
+     "a short phrase that is easy to remember"
+    ]
+   ]
+  },
+  "pyp4-machines": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🪵",
+     "Lever",
+     "a bar that turns on a point to lift things"
+    ],
+    [
+     "📍",
+     "Fulcrum",
+     "the point a lever turns on"
+    ],
+    [
+     "📐",
+     "Ramp",
+     "a slope that makes lifting easier"
+    ]
+   ]
   }
  }
 }
