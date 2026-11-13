@@ -23,3 +23,8 @@ export class AccessDenied extends Error {
 export const canEditPlan = (me: Account, L: Learner) => isTeamMember(me, L);
 /** The school learner profile: the learner's teachers and specialists, and only once the family agreed to support needs being recorded. */
 export const canKeepProfile = (me: Account, L: Learner) => isTeamMember(me, L) && L.consent.support;
+/** The family's intake: the family always; a team member with health access, once the family agreed to share it with the team (item 3). */
+export const intakeShared = (data: Record<string, unknown>) => String(data.c3 ?? "").startsWith("Yes");
+export const canSeeIntake = (me: Account, L: Learner, data: Record<string, unknown>) => isGuardian(me, L) || (canSeeHealth(me, L) && intakeShared(data));
+/** The team's part of the intake: team members with health access. */
+export const canKeepIntakeTeam = (me: Account, L: Learner) => isTeamMember(me, L) && canSeeHealth(me, L);

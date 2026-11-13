@@ -7,7 +7,7 @@ import type { TableName, Tables } from "./types";
 
 export type Changes = { [T in TableName]?: Tables[T][] } & { visible?: Visible };
 /** Which learners this person may still see, and whose health records: anything else on the device is removed. */
-export interface Visible { learners: string[]; health: string[]; profiles?: string[] }
+export interface Visible { learners: string[]; health: string[]; profiles?: string[]; intakes?: string[] }
 const HEALTH: TableName[] = ["medications", "doses", "health_log"];
 const BY_LEARNER: TableName[] = ["messages", "attempts", "concerns", "goals", "observations", "notes", ...HEALTH];
 
@@ -20,6 +20,10 @@ export async function prune(store: LocalStore, v: Visible) {
   await drop("learner_settings", (await store.kv.all("learner_settings")).filter(x => !see.has(x.id)).map(x => x.id));
   const profiles = new Set(v.profiles ?? v.learners); // a server without the school profile sends no list
   await drop("school_profiles", (await store.kv.all("school_profiles")).filter(x => !profiles.has(x.id)).map(x => x.id));
+  const intakes = new Set(v.intakes ?? v.health);
+  await drop("family_intakes", (await store.kv.all("family_intakes")).filter(x => !intakes.has(x.id)).map(x => x.id));
+  await drop("intake_team", (await store.kv.all("intake_team")).filter(x => !health.has(x.id)).map(x => x.id));
+  await drop("support_profiles", (await store.kv.all("support_profiles")).filter(x => !see.has(x.id)).map(x => x.id));
   for (const t of BY_LEARNER) {
     const keep = HEALTH.includes(t) ? health : see;
     await drop(t, ((await store.kv.all(t)) as { id: string; learnerId: string }[]).filter(r => !keep.has(r.learnerId)).map(r => r.id));

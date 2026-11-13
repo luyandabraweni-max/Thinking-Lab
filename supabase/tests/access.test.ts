@@ -349,3 +349,35 @@ describe("the school learner profile", () => {
     expect(await pulled(SPECIALIST)).toEqual([]);
   });
 });
+
+describe("the multidisciplinary intake", () => {
+  const entry = (table: string, row: Record<string, unknown>, n: number) => [{ id: uuid(n), table, row: { id: kid, ...row } }];
+  const rows = async (who: string, table: string) => ((await pull(who))[table] ?? []) as unknown as { data: Record<string, unknown> }[];
+  it("is written only by the family, and reaches the team only with health access and the intake's own consent to share", async () => {
+    expect((await push(SPECIALIST, entry("family_intakes", { data: { o1: "Trains" } }, 110))).rejected[0]!.reason).toMatch(/row-level security/);
+    expect((await push(PARENT, entry("family_intakes", { data: { o1: "Trains", c3: "No, I do not agree" } }, 111))).applied).toHaveLength(1);
+    expect((await rows(PARENT, "family_intakes"))[0]!.data.o1).toBe("Trains");
+    await as(db, PARENT, q => q("update public.learner_consent set health = true, updated_by = $2 where learner_id = $1", [kid, PARENT]));
+    await as(db, PARENT, q => q("update public.learner_team set health_access = true where learner_id = $1 and user_id = $2", [kid, SPECIALIST]));
+    expect(await rows(SPECIALIST, "family_intakes")).toEqual([]); // health access, but the family hasn't agreed to share the intake
+    expect((await push(PARENT, entry("family_intakes", { data: { c3: "Yes, I agree" } }, 112))).applied).toHaveLength(1);
+    expect((await rows(SPECIALIST, "family_intakes"))[0]!.data).toMatchObject({ o1: "Trains", c3: "Yes, I agree" }); // merged
+    expect(await rows(STRANGER, "family_intakes")).toEqual([]);
+  });
+  it("keeps the team's part from the family, and the support profile only for the learner's family and team", async () => {
+    expect((await push(SPECIALIST, entry("intake_team", { data: { f2: "Working formulation" } }, 113))).applied).toHaveLength(1);
+    expect(await rows(PARENT, "intake_team")).toEqual([]);
+    expect((await push(PARENT, entry("intake_team", { data: { f2: "x" } }, 114))).rejected[0]!.reason).toMatch(/row-level security/);
+    expect((await push(PARENT, entry("support_profiles", { data: { name: "Brave Meerkat" }, by: "Demo Parent" }, 115))).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, entry("support_profiles", { data: { name: "x" } }, 116))).rejected[0]!.reason).toMatch(/row-level security/);
+    expect((await rows(SPECIALIST, "support_profiles"))[0]!.data).toEqual({ name: "Brave Meerkat" });
+    expect(await rows(STRANGER, "support_profiles")).toEqual([]);
+  });
+  it("leaves the team's devices when the family withdraws health consent", async () => {
+    await as(db, PARENT, q => q("update public.learner_consent set health = false, updated_by = $2 where learner_id = $1", [kid, PARENT]));
+    const v = ((await pull(SPECIALIST)) as unknown as { visible: { intakes: string[] } }).visible;
+    expect(v.intakes).toEqual([]);
+    expect(await rows(SPECIALIST, "family_intakes")).toEqual([]);
+    expect(await rows(SPECIALIST, "intake_team")).toEqual([]);
+  });
+});

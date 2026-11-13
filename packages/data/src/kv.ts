@@ -46,8 +46,8 @@ export class IdbKv implements Kv {
     // An app tab still open on an older version holds the database and stops the upgrade, and the browser just waits.
     // Newer tabs step aside when asked (blocking); if an old tab doesn't, say so instead of waiting forever.
     this.db = new Promise((resolve, reject) => {
-      openDB(name, 7, {
-        upgrade(db) { // version 2 added attempts, 3 concerns, 4 goals, observations and notes, 5 learner settings, 6 rule reviews, 7 school profiles; creating only what's missing upgrades older devices in place
+      openDB(name, 8, {
+        upgrade(db) { // version 2 added attempts, 3 concerns, 4 goals, observations and notes, 5 learner settings, 6 rule reviews, 7 school profiles, 8 the intake; creating only what's missing upgrades older devices in place
           for (const t of TABLES) if (!db.objectStoreNames.contains(t)) db.createObjectStore(t, { keyPath: "id" });
           if (!db.objectStoreNames.contains("outbox")) db.createObjectStore("outbox", { keyPath: "id" });
           if (!db.objectStoreNames.contains("meta")) db.createObjectStore("meta");

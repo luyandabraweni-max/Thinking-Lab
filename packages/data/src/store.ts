@@ -1,6 +1,6 @@
-import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canKeepProfile, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
+import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canKeepIntakeTeam, canKeepProfile, canSeeIntake, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, AvatarLook, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, ProfileRating, RuleReview, SchoolProfile, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, AvatarLook, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, FamilyIntake, IntakeTeam, IntakeValue, ProfileRating, RuleReview, SchoolProfile, SessionPlan, SupportProfile, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -278,6 +278,44 @@ export class Session {
     const next: SchoolProfile = { ...cur, [part]: { ...cur[part], ...stamped } };
     await this.store.writeChanges("school_profiles", next, { [part]: stamped } as Partial<SchoolProfile>);
     return next;
+  }
+
+  // ---------- The multidisciplinary intake ----------
+  /** The family's intake, or null when this person may not see it (no health access, or the family hasn't shared it with the team). */
+  async intake(learnerId: string): Promise<FamilyIntake | null> {
+    const L = await this.learner(learnerId);
+    const row = (await this.kv.all("family_intakes")).find(x => x.id === learnerId) ?? { id: learnerId, data: {} };
+    return canSeeIntake(this.me, L, row.data) ? row : null;
+  }
+  /** The family changes some answers; only those are sent, and the server merges them. */
+  async updateIntake(learnerId: string, patch: Record<string, IntakeValue>) {
+    await this.learnerFor(learnerId, canEditHealth, "changing the intake (only the family can)");
+    const cur = (await this.kv.all("family_intakes")).find(x => x.id === learnerId) ?? { id: learnerId, data: {} };
+    const next: FamilyIntake = { id: learnerId, data: { ...cur.data, ...patch } };
+    await this.store.writeChanges("family_intakes", next, { data: patch });
+    return next;
+  }
+  async intakeTeam(learnerId: string): Promise<IntakeTeam> {
+    await this.learnerFor(learnerId, canKeepIntakeTeam, "the clinical team's part of the intake");
+    return (await this.kv.all("intake_team")).find(x => x.id === learnerId) ?? { id: learnerId, data: {} };
+  }
+  async updateIntakeTeam(learnerId: string, patch: Record<string, IntakeValue>) {
+    const cur = await this.intakeTeam(learnerId), next: IntakeTeam = { id: learnerId, data: { ...cur.data, ...patch } };
+    await this.store.writeChanges("intake_team", next, { data: patch });
+    return next;
+  }
+  /** "How to support me", as the family last shared it with the team (or nothing). */
+  async supportProfile(learnerId: string): Promise<SupportProfile | null> {
+    await this.learner(learnerId);
+    const p = (await this.kv.all("support_profiles")).find(x => x.id === learnerId);
+    return p && Object.keys(p.data).length ? p : null;
+  }
+  /** The family shares the support profile with the team, or stops sharing it (an empty profile). */
+  async shareSupportProfile(learnerId: string, data: Record<string, string>) {
+    await this.learnerFor(learnerId, canEditHealth, "sharing the support profile (only the family can)");
+    const p: SupportProfile = { id: learnerId, data, at: now(), by: this.me.name };
+    await this.store.write("support_profiles", p);
+    return p;
   }
 
   // ---------- Consent ----------

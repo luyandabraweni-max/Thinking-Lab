@@ -164,3 +164,7 @@ export function change(base: number | undefined, latest: number | undefined) {
   const d = Math.round((latest - base) * 100) / 100;
   return { d, tone: d < 0 ? "better" : d >= 0.5 ? "worse" : "same" } as const;
 }
+
+/** Average impact per domain for this learner's phase: what the intake's home and school comparison reads. */
+export const domainAveragesFor = (p: SchoolProfile, level: string) => domainAverages(p, itemsFor(phaseOf(p, level)));
+export const ratedCount = (p: SchoolProfile, level: string) => counts(p, itemsFor(phaseOf(p, level))).total - counts(p, itemsFor(phaseOf(p, level))).blank;

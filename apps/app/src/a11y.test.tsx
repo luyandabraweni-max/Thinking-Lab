@@ -59,6 +59,27 @@ describe("accessibility", () => {
     await screen.findByRole("button", { name: "Brave Meerkat" });
     await noProblems("support tracker");
   }, 60000); // eight large pages, each scanned in full
+  it("the intake, for the family and for the team", async () => {
+    const user = userEvent.setup(); render(<App services={services} />);
+    await signIn(user, "Demo parent");
+    await openKid(user);
+    await user.click(await screen.findByRole("tab", { name: "Intake" }));
+    await user.selectOptions(await screen.findByLabelText(/^3\. The named professionals may share/), "Yes, I agree");
+    for (const t of ["Consent", "About", "Our story", "In my own words", "Early years and health", "Daily life", "Senses", "Safety", "Reports and services", "How to support me"]) {
+      await user.click(await screen.findByRole("tab", { name: t }));
+      await screen.findAllByRole("tabpanel");
+      await noProblems(`intake, family: ${t}`);
+    }
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signIn(user, "Demo specialist");
+    await openKid(user);
+    await user.click(await screen.findByRole("tab", { name: "Intake" }));
+    for (const t of ["Summary", "The family's answers", "How to support me", "Professional view", "Safety review", "Formulation", "Reviews and goals"]) {
+      await user.click(await screen.findByRole("tab", { name: t }));
+      await screen.findAllByRole("tabpanel");
+      await noProblems(`intake, team: ${t}`);
+    }
+  }, 90000);
   it("a specialist's and a school admin's screens", async () => {
     const user = userEvent.setup(); render(<App services={services} />);
     await signIn(user, "Demo specialist");

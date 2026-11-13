@@ -332,6 +332,34 @@ describe("My way", () => {
 });
 
 describe("the support plan", () => {
+  it("lets the family fill in the intake and share How to support me, and shows the clinical summary only to the team with health access", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Intake" }));
+    await user.selectOptions(await screen.findByLabelText(/^3\. The named professionals may share/), "Yes, I agree");
+    await user.selectOptions(screen.getByLabelText(/^4\. Relevant information may be shared with the school/), "Yes, I agree");
+    await user.click(screen.getByRole("tab", { name: "Our story" }));
+    await user.type(await screen.findByLabelText("What are they good at?"), "Building with blocks");
+    await user.tab();
+    await user.click(screen.getByRole("tab", { name: "Senses" }));
+    await user.click(await screen.findByText(/^2\. Light, brightness/));
+    await user.selectOptions(screen.getByLabelText("How much does it affect daily life?", { selector: "#in-e1c" }), "Significant, affects daily life");
+    await user.click(screen.getByRole("tab", { name: "How to support me" }));
+    expect(await screen.findByText("Building with blocks")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Share with Brave Meerkat's team" }));
+    expect(await screen.findByText(/The team sees the copy you shared/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "Intake" }));
+    expect(await screen.findByRole("heading", { name: "Flags to read before the first appointment" })).toBeInTheDocument();
+    expect(screen.getByText(/Hearing has not been confirmed/)).toBeInTheDocument();
+    expect(screen.getByText("Light, brightness and busy visual spaces")).toBeInTheDocument();
+    const therapist = (await store.account(DEMO.therapist))!, intake = await store.as(therapist).intake(DEMO.kid);
+    expect(intake).toBeNull(); // on the team, but without health access
+    expect((await store.as(therapist).supportProfile(DEMO.kid))!.data["What I am good at"]).toBe("Building with blocks");
+  });
   it("lets a specialist keep the school profile: rate an observation, see the flag, the alerts and the strategies, plan, and track; the family never sees it", async () => {
     const user = start();
     await signInDemo(user, "Demo specialist");

@@ -136,6 +136,18 @@ export interface ProfilePlanRow {
 /** Average impact per domain, taken when the baseline or a term review is saved. */
 export interface ProfileReview { date: string; by: string; avg: Record<string, number> }
 
+/**
+ * The multidisciplinary intake (Pholoso Afrika Foundation, Multidisciplinary Neurodevelopmental Intake v2.0). The family
+ * fills in their part; the learner's team sees it only with health consent, health access, and the intake's own consent
+ * to share it with the team (item 3). Values are text, or a table row. Merged key by key on the server.
+ */
+export type IntakeValue = string | Record<string, string>;
+export interface FamilyIntake { id: string; data: Record<string, IntakeValue> }
+/** The clinical team's part of the intake: formulation, safety review, professional view, reviews and goals. */
+export interface IntakeTeam { id: string; data: Record<string, IntakeValue> }
+/** "How to support me": a one-page snapshot the family shares with the whole team when they agree to (intake item 4). */
+export interface SupportProfile { id: string; data: Record<string, string>; at: string; by: string }
+
 export type Tables = {
   accounts: Account;
   learners: Learner;
@@ -151,6 +163,9 @@ export type Tables = {
   learner_settings: LearnerSettings;
   rule_reviews: RuleReview;
   school_profiles: SchoolProfile;
+  family_intakes: FamilyIntake;
+  intake_team: IntakeTeam;
+  support_profiles: SupportProfile;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings", "rule_reviews", "school_profiles"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings", "rule_reviews", "school_profiles", "family_intakes", "intake_team", "support_profiles"];
