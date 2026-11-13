@@ -113,6 +113,29 @@ export interface ConcernRow { id: string; learnerId: string; at: string; where: 
 /** A specialist's view of one adaptation rule. Id: "<rule>:<user id>", one per rule per person. */
 export interface RuleReview { id: string; rule: string; verdict: "agree" | "change" | "unsure"; comment: string; by: string; byName: string; profession: string; date: string }
 
+/**
+ * The school learner profile (Pholoso Afrika Foundation, School Neurodevelopmental Learner Profile v2.0): what the
+ * school observes, rated, with the learner's own words and the support plan. Kept by the learner's teachers and
+ * specialists, with the family's consent to record support needs. Each part is a map, and the server merges it key by
+ * key, so two teachers rating different observations never overwrite each other.
+ */
+export interface SchoolProfile {
+  id: string; // the learner's id
+  answers: Record<string, string>; // the profile and school context (page 01), by question key
+  voice: Record<string, string>; // in the learner's own words (page 03), by question key
+  ratings: Record<string, ProfileRating>; // observations (page 04 and the phase page), by item id
+  plan: Record<string, ProfilePlanRow>; // the support plan (page 12), by row id
+  reviews: Record<string, ProfileReview>; // the baseline and the term reviews (page 15)
+}
+/** One rated observation. Impact and support use the pack's scales: 0 to 4, or -1 for not observed / not applicable. */
+export interface ProfileRating { impact?: number | null; often?: string; support?: number | null; source?: string; evidence?: string; by?: string; at?: string }
+export interface ProfilePlanRow {
+  domain: string; barrier: string; strength: string; action: string; who: string; often: string; start: string; baseline: string;
+  review: string; happened: string; learnerSays: string; decision: string; next: string; removed?: boolean; at: string;
+}
+/** Average impact per domain, taken when the baseline or a term review is saved. */
+export interface ProfileReview { date: string; by: string; avg: Record<string, number> }
+
 export type Tables = {
   accounts: Account;
   learners: Learner;
@@ -127,6 +150,7 @@ export type Tables = {
   notes: Note;
   learner_settings: LearnerSettings;
   rule_reviews: RuleReview;
+  school_profiles: SchoolProfile;
 };
 export type TableName = keyof Tables;
-export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings", "rule_reviews"];
+export const TABLES: TableName[] = ["accounts", "learners", "messages", "medications", "doses", "health_log", "attempts", "concerns", "goals", "observations", "notes", "learner_settings", "rule_reviews", "school_profiles"];

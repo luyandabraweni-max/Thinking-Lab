@@ -21,3 +21,5 @@ export class AccessDenied extends Error {
 }
 /** Support-plan goals, observations and notes are written by teachers and specialists on the learner's team. */
 export const canEditPlan = (me: Account, L: Learner) => isTeamMember(me, L);
+/** The school learner profile: the learner's teachers and specialists, and only once the family agreed to support needs being recorded. */
+export const canKeepProfile = (me: Account, L: Learner) => isTeamMember(me, L) && L.consent.support;

@@ -41,6 +41,24 @@ describe("accessibility", () => {
       await noProblems(`parent: ${t}`);
     }
   });
+  it("the school profile and the support tracker", async () => {
+    const user = userEvent.setup(); render(<App services={services} />);
+    await signIn(user, "Demo specialist");
+    await openKid(user);
+    await user.click(await screen.findByRole("tab", { name: "School profile" }));
+    for (const t of ["Profile", "Phase guide", "Their words", "Observations", "Concerns", "Support map", "Plan", "Term reviews"]) {
+      await user.click(await screen.findByRole("tab", { name: t }));
+      await screen.findAllByRole("tabpanel");
+      if (t === "Observations") await user.click(await screen.findByText(/^Communication & language ·/));
+      if (t === "Plan") await user.click(screen.getByRole("button", { name: "Add an action" }));
+      await noProblems(`school profile: ${t}`);
+    }
+    await user.click(screen.getByRole("button", { name: "All learners" }));
+    await user.click(await screen.findByRole("button", { name: "Support tracker" }));
+    await screen.findByRole("heading", { name: "Support tracker" });
+    await screen.findByRole("button", { name: "Brave Meerkat" });
+    await noProblems("support tracker");
+  }, 60000); // eight large pages, each scanned in full
   it("a specialist's and a school admin's screens", async () => {
     const user = userEvent.setup(); render(<App services={services} />);
     await signIn(user, "Demo specialist");

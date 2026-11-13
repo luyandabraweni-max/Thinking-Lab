@@ -139,3 +139,25 @@ p { margin: 0; }
 /* The privacy notice, folded until opened. */
 .privacy-box summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; font-weight: 600; }
 .privacy-box[open] { border: 2px solid var(--line); border-radius: 12px; padding: 0 14px 10px; }
+
+/* School learner profile: flags always carry their word too, never colour alone. */
+:root { --crit: #A8413A; --crit-soft: #F6E4E1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --crit: #E59A92; --crit-soft: #3D2A28; } }
+:root[data-theme="dark"] { --crit: #E59A92; --crit-soft: #3D2A28; }
+.pf-flag { display: inline-block; padding: 2px 10px; border-radius: 999px; font-weight: 700; font-size: 0.9rem; border: 2px solid var(--line); white-space: nowrap; }
+.pf-flag.pf-critical, .pf-row.pf-critical { border-color: var(--crit); background: var(--crit-soft); }
+.pf-flag.pf-watch, .pf-row.pf-watch { border-color: var(--gold); background: var(--gold-soft); }
+.pf-flag.pf-ok, .pf-row.pf-ok { border-color: var(--ok); background: var(--ok-soft); }
+.pf-item { border: 2px solid var(--line); border-left-width: 8px; border-radius: 12px; padding: 12px; display: grid; gap: 10px; background: var(--surface); min-width: 0; }
+.pf-item.pf-critical { border-left-color: var(--crit); }
+.pf-item.pf-watch { border-left-color: var(--gold); }
+.pf-item.pf-ok { border-left-color: var(--ok); }
+.pf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 10px; }
+.pf-scroll { overflow-x: auto; max-width: 100%; }
+.pf-table { width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+.pf-table th, .pf-table td { border: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+.pf-table th { background: var(--bg); }
+.pf-group > summary { cursor: pointer; font-weight: 700; padding: 8px 0; }
+.pf-better { background: var(--ok-soft); }
+.pf-worse { background: var(--crit-soft); }
+@media print { .tl-tabs, .pf-noprint, header, nav { display: none !important; } .tl-card { box-shadow: none; border: 0; } }

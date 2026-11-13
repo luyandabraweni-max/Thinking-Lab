@@ -1,6 +1,6 @@
-import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
+import { AccessDenied, canChangeConsent, canEditHealth, canEditPlan, canKeepProfile, canSeeHealth, canSeeLearner, isTeamMember } from "./access";
 import type { Kv } from "./kv";
-import type { Account, Attempt, AvatarLook, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, RuleReview, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
+import type { Account, Attempt, AvatarLook, ConcernRow, Consent, Goal, LearnerSettings, PlanStep, ProfileRating, RuleReview, SchoolProfile, SessionPlan, Note, Observation, Dose, HealthEntry, Learner, Medication, Message, TableName, Tables } from "./types";
 
 // Offline first (docs/system-design.md, section 9): every change is saved on the device and queued in the outbox
 // in one step, so the learner and the adult never wait for the network. A Transport sends the outbox later.
@@ -9,6 +9,8 @@ const now = () => new Date().toISOString();
 export const defaultSettings = (learnerId: string): LearnerSettings => ({ id: learnerId, adaptAuto: true, adaptOff: {}, levels: {}, decisions: {}, log: [] });
 const settingsOf = async (kv: Kv, learnerId: string) => (await kv.all("learner_settings")).find(x => x.id === learnerId) ?? defaultSettings(learnerId);
 const newId = () => crypto.randomUUID();
+const emptyProfile = (id: string): SchoolProfile => ({ id, answers: {}, voice: {}, ratings: {}, plan: {}, reviews: {} });
+export type ProfilePart = "answers" | "voice" | "ratings" | "plan" | "reviews";
 
 export class LocalStore {
   constructor(readonly kv: Kv) {}
@@ -250,6 +252,32 @@ export class Session {
   async concernsOnDevice(learnerId: string): Promise<ConcernRow[]> {
     await this.learner(learnerId);
     return (await this.kv.all("concerns")).filter(c => c.learnerId === learnerId);
+  }
+
+  // ---------- The school learner profile ----------
+  private profileFor(learnerId: string) {
+    return this.learnerFor(learnerId, canKeepProfile, "the school learner profile (only the learner's teachers and specialists, once the family agreed to support needs being recorded)");
+  }
+  /** Whether this person may keep the learner's school profile. */
+  async mayKeepProfile(learnerId: string) { return canKeepProfile(this.me, await this.learner(learnerId)); }
+  async schoolProfile(learnerId: string): Promise<SchoolProfile> {
+    await this.profileFor(learnerId);
+    return (await this.kv.all("school_profiles")).find(p => p.id === learnerId) ?? emptyProfile(learnerId);
+  }
+  /** Profiles for every learner this person may keep one for (the class and caseload tracker). */
+  async schoolProfiles() {
+    const ls = (await this.learners()).filter(L => canKeepProfile(this.me, L)), all = await this.kv.all("school_profiles");
+    return ls.map(L => ({ learner: L, profile: all.find(p => p.id === L.id) ?? emptyProfile(L.id) }));
+  }
+  /** Change some keys in one part of the profile. Only those keys are sent, and the server merges them into what it holds. */
+  async updateProfile<K extends ProfilePart>(learnerId: string, part: K, patch: SchoolProfile[K]) {
+    const cur = await this.schoolProfile(learnerId);
+    const stamped = (part === "ratings"
+      ? Object.fromEntries(Object.entries(patch as Record<string, ProfileRating>).map(([k, r]) => [k, { ...r, by: this.me.name, at: now() }]))
+      : patch) as SchoolProfile[K];
+    const next: SchoolProfile = { ...cur, [part]: { ...cur[part], ...stamped } };
+    await this.store.writeChanges("school_profiles", next, { [part]: stamped } as Partial<SchoolProfile>);
+    return next;
   }
 
   // ---------- Consent ----------

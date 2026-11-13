@@ -323,3 +323,29 @@ describe("deleting a child's profile", () => {
     expect((await db.query("select 1 from safeguarding.concerns where learner_id = $1", [child])).rows).toEqual([]);
   });
 });
+
+describe("the school learner profile", () => {
+  const profile = (row: Record<string, unknown>, n: number) => [{ id: uuid(n), table: "school_profiles", row: { id: kid, ...row } }];
+  const pulled = async (who: string) => ((await pull(who)).school_profiles ?? []) as unknown as { id: string; answers: Record<string, string>; ratings: Record<string, { impact: number }> }[];
+  it("can't be kept until the family agrees to support needs being recorded", async () => {
+    expect((await push(SPECIALIST, profile({ answers: { phase: "foundation" } }, 100))).rejected[0]!.reason).toMatch(/row-level security/);
+  });
+  it("is kept by the learner's team, merged key by key, and never shown to the family or anyone else", async () => {
+    await as(db, PARENT, q => q("update public.learner_consent set support = true, updated_by = $2 where learner_id = $1", [kid, PARENT]));
+    expect((await push(SPECIALIST, profile({ answers: { phase: "foundation" }, ratings: { c6: { impact: 3 } } }, 101))).applied).toHaveLength(1);
+    expect((await push(SPECIALIST, profile({ ratings: { c7: { impact: 1 } } }, 102))).applied).toHaveLength(1); // another teacher, another item
+    const [p] = await pulled(SPECIALIST);
+    expect([p!.answers.phase, p!.ratings.c6!.impact, p!.ratings.c7!.impact]).toEqual(["foundation", 3, 1]);
+    expect(await pulled(PARENT)).toEqual([]);
+    expect(await pulled(STRANGER)).toEqual([]);
+    expect((await push(PARENT, profile({ answers: { phase: "fet" } }, 103))).rejected[0]!.reason).toMatch(/row-level security/);
+    expect((await push(STRANGER, profile({ answers: { phase: "fet" } }, 104))).rejected[0]!.reason).toMatch(/row-level security/);
+  });
+  it("leaves devices when the family withdraws consent to record support needs", async () => {
+    const visible = async () => ((await pull(SPECIALIST)) as unknown as { visible: { profiles: string[] } }).visible.profiles;
+    expect(await visible()).toEqual([kid]);
+    await as(db, PARENT, q => q("update public.learner_consent set support = false, updated_by = $2 where learner_id = $1", [kid, PARENT]));
+    expect(await visible()).toEqual([]);
+    expect(await pulled(SPECIALIST)).toEqual([]);
+  });
+});

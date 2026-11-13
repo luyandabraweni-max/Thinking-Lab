@@ -332,6 +332,36 @@ describe("My way", () => {
 });
 
 describe("the support plan", () => {
+  it("lets a specialist keep the school profile: rate an observation, see the flag, the alerts and the strategies, plan, and track; the family never sees it", async () => {
+    const user = start();
+    await signInDemo(user, "Demo specialist");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    await user.click(screen.getByRole("tab", { name: "School profile" }));
+    expect(await screen.findByText(/worked out from Foundation level/)).toBeInTheDocument();
+    await user.click(screen.getByRole("tab", { name: "Observations" }));
+    await user.click(await screen.findByText(/^Communication & language · 0 of 5 rated/));
+    const item = screen.getByRole("group", { name: /How does the learner understand spoken instructions/ });
+    await user.selectOptions(within(item).getByLabelText("Impact on access and participation"), "Significant, limits access or participation");
+    expect(await within(item).findByText("CRITICAL")).toBeInTheDocument();
+    await user.click(screen.getByRole("tab", { name: "Concerns" }));
+    expect(await screen.findByText("1 critical observations recorded. SIAS stage: not entered.")).toBeInTheDocument();
+    expect(screen.getByText("The learner's own views have not been recorded")).toBeInTheDocument();
+    await user.click(screen.getByRole("tab", { name: "Support map" }));
+    const barrier = (await screen.findByRole("button", { name: "Add to the plan" })).closest(".pf-item") as HTMLElement;
+    expect(within(barrier).getByText("Give instructions one step at a time")).toBeInTheDocument();
+    await user.click(within(barrier).getByRole("button", { name: "Add to the plan" }));
+    expect(await screen.findByText("1. Communication & language")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "All learners" }));
+    await user.click(await screen.findByRole("button", { name: "Support tracker" }));
+    const row = (await screen.findByRole("button", { name: "Brave Meerkat" })).closest("tr")!;
+    expect(within(row).getByText("High, act this term")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "All learners" }));
+    await user.click(screen.getByRole("button", { name: "Sign out" }));
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Brave Meerkat/ }));
+    expect(screen.queryByRole("tab", { name: "School profile" })).toBeNull();
+    await expect(store.as((await store.account(DEMO.parent))!).schoolProfile(DEMO.kid)).rejects.toThrow(/Not allowed/);
+  });
   it("lets a specialist set goals, observe and write notes, and shows the family the goals and shared notes only", async () => {
     const user = start();
     await signInDemo(user, "Demo specialist");
