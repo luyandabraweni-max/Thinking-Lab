@@ -187,6 +187,9 @@ describe("learner settings", () => {
     expect((await push(SPECIALIST, [{ id: uuid(83), table: "learner_settings", row: { id: kid, adaptAuto: true } }])).applied).toHaveLength(1);
     expect(((await pull(SPECIALIST)).learner_settings as unknown as { mathsSubject: unknown }[])[0]!.mathsSubject).toBe("lit");
     expect((await push(PARENT, [{ id: uuid(84), table: "learner_settings", row: { id: kid, mathsSubject: "physics" } }])).applied).toHaveLength(0);
+    expect((await push(PARENT, [{ id: uuid(85), table: "learner_settings", row: { id: kid, curriculum: "Cambridge" } }])).applied).toHaveLength(1);
+    const now = ((await pull(SPECIALIST)).learner_settings as unknown as { mathsSubject: unknown; curriculum: unknown }[])[0]!;
+    expect([now.curriculum, now.mathsSubject]).toEqual(["Cambridge", "lit"]); // each field changes on its own
   });
   it("refuses kinds of data the server doesn't know", async () => {
     expect((await push(PARENT, [{ id: uuid(63), table: "drop table", row: {} }])).rejected[0]!.reason).toMatch(/unknown table/);

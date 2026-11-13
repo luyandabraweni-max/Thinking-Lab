@@ -1,0 +1,30 @@
+import { areaOf, type Area } from "./curriculum";
+import type { CatalogueEntry } from "./types";
+
+// Which lessons a learner sees. Most lessons are the shared CAPS-aligned set. Some curricula (Cambridge) have their own
+// lessons: where those exist for an area and level, the learner sees only them; until they are written, the CAPS
+// lessons for that grade stand in. From Grade 10, CAPS and IEB learners take Mathematics or Mathematical Literacy.
+
+/** The curricula a family can choose. Stored as these names. */
+export const CURRICULA = ["CAPS", "IEB", "Cambridge", "D-CAPS", "NCF", "Other"] as const;
+export const CURRICULUM_NAME: Record<string, string> = {
+  CAPS: "CAPS (public schools)", IEB: "IEB (independent schools)", Cambridge: "Cambridge (IGCSE and international)",
+  "D-CAPS": "D-CAPS (differentiated)", NCF: "NCF (early years)", Other: "Other or not sure"
+};
+/** Curricula with lessons of their own (the rest use the shared set). */
+const OWN = new Set(["Cambridge"]);
+
+export interface LessonChoice { curriculum?: string | null; maths?: "maths" | "lit" | null }
+const takesMaths = (u: CatalogueEntry, maths?: "maths" | "lit" | null) =>
+  !maths || u.grade < 10 || u.grade > 12 || !(u.subject === "Mathematical Literacy" || u.subject === "Mathematics") || (u.subject === "Mathematical Literacy") === (maths === "lit");
+
+/** The lessons for one learning area at one level, and whether they are CAPS lessons standing in for the learner's own. */
+export function lessonsIn(all: CatalogueEntry[], area: Area, grade: number, c: LessonChoice): { units: CatalogueEntry[]; standIn: boolean } {
+  const here = all.filter(u => areaOf(u.subject) === area && u.grade === grade);
+  const shared = here.filter(u => !u.curriculum);
+  if (c.curriculum && OWN.has(c.curriculum)) {
+    const own = here.filter(u => u.curriculum === c.curriculum);
+    return own.length ? { units: own, standIn: false } : { units: shared, standIn: shared.length > 0 };
+  }
+  return { units: here.filter(u => (!u.curriculum || u.curriculum === c.curriculum) && takesMaths(u, c.maths)), standIn: false };
+}

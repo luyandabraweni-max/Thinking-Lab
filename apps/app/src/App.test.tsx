@@ -183,7 +183,7 @@ describe("Mathematical Literacy", () => {
       const r = render(<LearnHome learner={teen} mathsSubject={maths} onPick={() => {}} onBack={() => {}} />);
       const t = within(r.container).getAllByRole("button").map(b => b.textContent ?? ""); cleanup(); return t.join(" | ");
     };
-    const pure = (await import("@tl/content")).CATALOGUE.find(u => u.grade === 11 && u.subject === "Mathematics")!.title;
+    const pure = (await import("@tl/content")).CATALOGUE.find(u => u.grade === 11 && u.subject === "Mathematics" && !u.curriculum)!.title;
     expect(titles()).toContain("Interest, loans and inflation"); // nothing chosen yet: both
     expect(titles()).toContain(pure);
     expect(titles("lit")).toContain("Interest, loans and inflation");
@@ -196,6 +196,20 @@ describe("Mathematical Literacy", () => {
     await user.click(await screen.findByRole("button", { name: /^Open Quiet River/ }));
     await user.selectOptions(await screen.findByLabelText(/Maths at school/), "Mathematical Literacy");
     await waitFor(async () => expect((await store.as((await store.account(DEMO.parent))!).settings(DEMO.teen)).mathsSubject).toBe("lit"));
+  });
+  it("lets the family change the curriculum; Cambridge learners see Cambridge lessons, and the maths choice goes away", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Quiet River/ }));
+    await user.selectOptions(await screen.findByLabelText("Curriculum"), "Cambridge");
+    expect(await screen.findByText(/^Cambridge \(IGCSE and international\), Grade 9/)).toBeInTheDocument();
+    await waitFor(() => expect(screen.queryByLabelText(/Maths at school/)).toBeNull());
+    const { LearnHome } = await import("./modules/learning");
+    const teen = { ...(await store.as((await store.account(DEMO.parent))!).learner(DEMO.teen)), level: "Grade 10" };
+    cleanup();
+    const r = render(<LearnHome learner={teen} curriculum="Cambridge" onPick={() => {}} onBack={() => {}} />);
+    expect(within(r.container).getByText("Standard form")).toBeInTheDocument();
+    expect(within(r.container).queryByText("Budgets that balance")).toBeNull();
   });
   it("keeps the earlier grades' maths when Mathematical Literacy is chosen", async () => {
     const { LearnHome } = await import("./modules/learning");
@@ -474,7 +488,7 @@ describe("adding a child", () => {
     await user.click(screen.getByRole("checkbox", { name: /I am this child's parent or guardian/ }));
     await user.click(screen.getByRole("button", { name: "Add child" }));
     expect(await screen.findByRole("heading", { name: "Happy Hippo" })).toBeInTheDocument();
-    expect(screen.getByText("NCF, Grade R")).toBeInTheDocument();
+    expect(screen.getByText("NCF (early years), Grade R")).toBeInTheDocument();
   });
 });
 

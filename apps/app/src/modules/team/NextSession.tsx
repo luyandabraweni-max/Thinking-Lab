@@ -1,4 +1,4 @@
-import { AREAS, areaOf, CATALOGUE, COHORTS, cohortFor, DEFAULT_LEVEL, levelName, type Area } from "@tl/content";
+import { AREAS, CATALOGUE, COHORTS, cohortFor, DEFAULT_LEVEL, lessonsIn, levelName, type Area } from "@tl/content";
 import type { Account, Learner, PlanStep } from "@tl/data";
 import { Button } from "@tl/ui";
 import { useState } from "react";
@@ -19,7 +19,8 @@ export function NextSession({ me, learner }: { me: Account; learner: Learner }) 
   if (!settings) return <p>Loading…</p>;
   const level = levelFromName(learner.level) ?? DEFAULT_LEVEL[cohortFor(learner.cohort)];
   const levelOf = (a: Area) => settings.levels[a] ?? level;
-  const units = CATALOGUE.filter(u => u.grade === levelOf(areaOf(u.subject))).slice(0, 60);
+  const choice = { curriculum: settings.curriculum ?? learner.curriculum, maths: settings.mathsSubject };
+  const units = (Object.keys(AREAS) as Area[]).flatMap(a => lessonsIn(CATALOGUE, a, levelOf(a), choice).units).slice(0, 60);
   const options: PlanStep[] = [...GAME_LIST.map(g => ({ key: `x:${g.id}`, pic: g.pic, label: g.name })), ...units.map(u => ({ key: `u:${u.id}`, pic: "📚", label: u.title })), ...PLAN_KINDS];
   const steps = settings.plan?.steps ?? [];
   const save = async (next: PlanStep[] | null, msg: string) => { await s.setPlan(learner.id, next); setSaid(msg); reload(); void syncNow().catch(() => {}); };

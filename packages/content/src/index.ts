@@ -4,6 +4,7 @@ import type { CatalogueEntry, Pack } from "./types";
 // Public interface of the content module.
 export type { CatalogueEntry, ChoiceQuestion, LessonPage, NumberQuestion, OrderQuestion, Pack, Question, SortQuestion, Unit, WordHelp } from "./types";
 export * from "./curriculum";
+export * from "./lessons";
 
 /** Every lesson's summary. Small, so it ships with the app; full lessons come in packs. */
 export const CATALOGUE = catalogueData as CatalogueEntry[];

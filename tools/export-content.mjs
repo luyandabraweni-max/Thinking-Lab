@@ -7,7 +7,12 @@ import { loadApp } from "../tests/unit/load-app.js";
 
 const out = new URL("../packages/content/data/", import.meta.url);
 const app = loadApp();
-const { units, words, skills } = JSON.parse(app.run("JSON.stringify({ units: UNITS, words: WORDS, skills: { list: SKILLS, soon: SKILLS_SOON, levels: SKILL_LEVELS, how: SKILL_HOW } })"));
+// Lessons for other curricula (js/content/platform/) are for the new app only: the live site doesn't load them.
+// They use the live site's helpers, so they run in the same page, after its scripts.
+app.run("var PLATFORM_UNITS = [];");
+const extra = new URL("../js/content/platform/", import.meta.url);
+for (const f of readdirSync(extra).filter(f => f.endsWith(".js")).sort()) app.window.eval(readFileSync(new URL(f, extra), "utf8"));
+const { units, words, skills } = JSON.parse(app.run("JSON.stringify({ units: UNITS.concat(PLATFORM_UNITS), words: WORDS, skills: { list: SKILLS, soon: SKILLS_SOON, levels: SKILL_LEVELS, how: SKILL_HOW } })"));
 const levelKey = g => (g === -1 ? "early" : g === 13 ? "adult" : `grade-${g}`);
 
 mkdirSync(out, { recursive: true });
@@ -19,7 +24,7 @@ const byLevel = new Map();
 for (const u of units) { const k = levelKey(u.grade); if (!byLevel.has(k)) byLevel.set(k, []); byLevel.get(k).push(u); }
 for (const [k, us] of byLevel) write(`units-${k}.json`, { level: k, units: us, words: Object.fromEntries(us.filter(u => words[u.id]).map(u => [u.id, words[u.id]])) });
 // The catalogue: every lesson's summary, small enough to ship with the app.
-write("catalogue.json", units.map(u => ({ id: u.id, grade: u.grade, subject: u.subject, title: u.title, topic: u.topic, domain: u.domain, category: u.category, caps: u.caps, pack: levelKey(u.grade) })));
+write("catalogue.json", units.map(u => ({ id: u.id, grade: u.grade, subject: u.subject, title: u.title, topic: u.topic, domain: u.domain, category: u.category, caps: u.caps, ...(u.curriculum ? { curriculum: u.curriculum } : {}), pack: levelKey(u.grade) })));
 write("skills.json", skills);
 // The live stylesheet (games, lessons, display modes) and its fonts, for the platform's design system. Its tokens
 // (lines 8 to 82) already live in packages/ui/src/tokens.css, so only the font faces and the rules after them are copied.

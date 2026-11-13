@@ -5,7 +5,7 @@ import { useServices } from "../../platform";
 import { AvatarPicture } from "../avatar";
 import { Health } from "./Health";
 import { Messages } from "./Messages";
-import { MathsChoice } from "./MathsChoice";
+import { curriculumOf, School } from "./School";
 import { Goals, Notes } from "./Plan";
 // Reports and adaptation bring the games and lesson catalogue with them, so they load when opened.
 const Adapting = lazy(() => import("./Adapting").then(m => ({ default: m.Adapting })));
@@ -19,7 +19,7 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
   const { store } = useServices();
   const [learner, reload, error] = useLoad(() => store.as(me).learner(learnerId), [store, me, learnerId]);
   const [tab, setTab] = useState("messages");
-  const [settings] = useLoad(() => store.as(me).settings(learnerId), [store, me, learnerId]);
+  const [settings, reloadSettings] = useLoad(() => store.as(me).settings(learnerId), [store, me, learnerId]);
   const [concerns] = useLoad(() => store.as(me).concernsOnDevice(learnerId), [store, me, learnerId]);
   if (error) return <Card><p className="tl-error">{error}</p><Button onClick={onBack}>Back</Button></Card>;
   if (!learner) return <Card><p>Loading…</p></Card>;
@@ -32,8 +32,8 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
         {settings?.avatar ? <AvatarPicture look={settings.avatar} size={72} label={`${learner.nickname}'s character, ${settings.avatar.name}`} /> : null}
         <h1>{learner.nickname}</h1>
       </div>
-      <p className="tl-muted">{learner.curriculum}, {learner.level}</p>
-      {learner.cohort === "teen" ? <MathsChoice me={me} learner={learner} /> : null}
+      <p className="tl-muted">{curriculumOf(learner, settings?.curriculum)}, {learner.level}</p>
+      <School me={me} learner={learner} onChanged={reloadSettings} />
       {concerns?.length ? <div className="safety-alert" role="alert">
         <h2><span aria-hidden="true">🛟</span> Safeguarding: {learner.nickname} said they feel unsafe</h2>
         <ul className="plain">{concerns.map(c => <li key={c.id}>{new Date(c.at).toLocaleString("en-ZA", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · from the {c.where}</li>)}</ul>

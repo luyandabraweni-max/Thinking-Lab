@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { ALL_LEVELS, areaOf, CATALOGUE, loadPack, loadUnit, packOf, type Question } from "./index";
+import { ALL_LEVELS, areaOf, CATALOGUE, lessonsIn, loadPack, loadUnit, packOf, type Question } from "./index";
 
 // Every lesson must be complete and answerable, so a broken lesson never reaches a learner (section 15).
 const problems = (q: Question): string[] => {
@@ -22,7 +22,7 @@ describe("content", () => {
       const pack = await loadPack(packOf(g));
       expect(pack.units.map(u => u.id)).toEqual(CATALOGUE.filter(u => u.grade === g).map(u => u.id));
     }
-    expect(CATALOGUE).toHaveLength(195);
+    expect(CATALOGUE).toHaveLength(225);
   });
   it("has complete, answerable questions in every lesson", async () => {
     const bad: string[] = [];
@@ -37,5 +37,19 @@ describe("content", () => {
     const { unit, words } = await loadUnit("g5-fractions-intro").catch(() => loadUnit(CATALOGUE.find(u => u.grade === 5)!.id));
     expect(unit.grade).toBe(5);
     expect(words === undefined || Array.isArray(words.words) || Array.isArray(words.phrases)).toBe(true);
+  });
+  it("shows each curriculum its own lessons, with CAPS lessons standing in where none are written yet", () => {
+    const ids = (r: ReturnType<typeof lessonsIn>) => r.units.map(u => u.id);
+    const cam = lessonsIn(CATALOGUE, "maths", 10, { curriculum: "Cambridge" });
+    expect(cam.standIn).toBe(false);
+    expect(cam.units.every(u => u.curriculum === "Cambridge")).toBe(true);
+    expect(ids(cam)).toContain("cam10-standard-form");
+    const caps = lessonsIn(CATALOGUE, "maths", 10, { curriculum: "CAPS" });
+    expect(caps.units.some(u => u.curriculum)).toBe(false); // Cambridge lessons stay with Cambridge learners
+    expect(ids(caps)).toEqual(expect.arrayContaining(["g10-exponents", "g10-ml-budget"]));
+    expect(ids(lessonsIn(CATALOGUE, "maths", 10, { curriculum: "IEB", maths: "lit" }))).not.toContain("g10-exponents");
+    const early = lessonsIn(CATALOGUE, "maths", 9, { curriculum: "Cambridge" }); // no Cambridge Grade 9 lessons yet
+    expect(early.standIn).toBe(true);
+    expect(early.units.length).toBeGreaterThan(0);
   });
 });

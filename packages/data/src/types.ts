@@ -96,6 +96,8 @@ export interface LearnerSettings {
   prefs?: Record<string, unknown> | null;
   /** Grades 10 to 12: the maths the learner takes at school. Unset shows both Mathematics and Mathematical Literacy. */
   mathsSubject?: "maths" | "lit" | null;
+  /** The curriculum the learner follows, when changed after they were added (otherwise the learner's own). */
+  curriculum?: string | null;
   /** The plan the learner last took, and when. */
   lastPlan?: (SessionPlan & { used: string }) | null;
 }

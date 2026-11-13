@@ -7,6 +7,7 @@ const RuleReview = lazy(() => import("./RuleReview").then(m => ({ default: m.Rul
 const AddChild = lazy(() => import("./AddChild").then(m => ({ default: m.AddChild })));
 import { AdminHome } from "./Admin";
 import { SafeguardingPanel } from "./Safeguarding";
+import { curriculumOf } from "./School";
 import { useLoad } from "./use-load";
 
 const news = (n: number) => (n ? ` (${n} new message${n > 1 ? "s" : ""})` : "");
@@ -16,7 +17,7 @@ export function TeamHome({ me, onOpen, onHandOver }: { me: Account; onOpen: (lea
   const { store } = useServices();
   const [rows, reload] = useLoad(async () => {
     const s = store.as(me), ls = await s.learners();
-    return Promise.all(ls.map(async L => ({ L, unread: await s.unread(L.id) })));
+    return Promise.all(ls.map(async L => ({ L, unread: await s.unread(L.id), curriculum: (await s.settings(L.id)).curriculum })));
   }, [store, me]);
 
   const [reviewing, setReviewing] = useState(false);
@@ -31,10 +32,10 @@ export function TeamHome({ me, onOpen, onHandOver }: { me: Account; onOpen: (lea
       {rows?.length ? <p className="tl-muted">When it's {me.role === "guardian" ? "your child's" : "a learner's"} turn on this device, press <b>Hand over</b>. It sets up the device for them and opens their learning space.</p> : null}
       {!rows ? <p>Loading…</p> : rows.length === 0 ? <p className="tl-muted">{me.role === "guardian" ? "No children yet. Add your child below to get started." : "No families have shared a learner with you yet."}</p> :
         <ul className="tl-stack" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-          {rows.map(({ L, unread }: { L: Learner; unread: number }) => (
+          {rows.map(({ L, unread, curriculum }: { L: Learner; unread: number; curriculum?: string | null }) => (
             <li key={L.id}><Card as="article">
               <h2>{L.nickname}</h2>
-              <p className="tl-muted">{L.curriculum}, {L.level}</p>
+              <p className="tl-muted">{curriculumOf(L, curriculum)}, {L.level}</p>
               <div className="tl-row">
                 <Button variant="primary" onClick={() => onHandOver(L)}><span aria-hidden="true">👋</span>Hand over to {L.nickname}</Button>
                 <Button onClick={() => onOpen(L.id)} aria-label={`Open ${L.nickname}${news(unread)}`}>Open{news(unread)}</Button>

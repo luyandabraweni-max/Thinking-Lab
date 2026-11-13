@@ -28,7 +28,9 @@ export interface Unit {
   teacher: string;
   done: string;
   passage?: string;
+  /** Lessons written for one curriculum only, such as Cambridge IGCSE. No tag: the shared CAPS-aligned set. */
+  curriculum?: string;
 }
-export type CatalogueEntry = Pick<Unit, "id" | "grade" | "subject" | "title" | "topic" | "domain" | "category" | "caps"> & { pack: string };
+export type CatalogueEntry = Pick<Unit, "id" | "grade" | "subject" | "title" | "topic" | "domain" | "category" | "caps" | "curriculum"> & { pack: string };
 export interface WordHelp { words?: [string, string, string][]; phrases?: [string, string][] }
 export interface Pack { level: string; units: Unit[]; words: Record<string, WordHelp> }

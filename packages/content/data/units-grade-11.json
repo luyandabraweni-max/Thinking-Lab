@@ -2324,6 +2324,2063 @@
    "parent": "Your child learned the signs of healthy and unhealthy relationships and where to get help.",
    "teacher": "Shows identifying healthy relationship qualities, warning signs of abuse, boundary-setting and support services.",
    "done": "Healthy relationships are built on respect. You can always ask for help."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam11-eng-compare",
+   "grade": 11,
+   "title": "Comparing viewpoints",
+   "topic": "Reading: comparing texts",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge IGCSE First Language English (0500): Reading (comparing ideas, opinions and how writers present them across texts)",
+   "intention": "Today I am comparing what two writers think and how they persuade.",
+   "prompt": "Should phones be allowed at school? Why?",
+   "passage": "<div class=\"passage-text\"><p><b>Text A</b> <span class=\"muted\">(from a principal's newsletter)</span></p>\n<p>Phones have no place in the classroom. Every buzz breaks concentration, and every screen is a doorway to distraction. Since we began collecting phones at the gate, teachers report calmer lessons, and learners talk to each other again at break.</p>\n<p><b>Text B</b> <span class=\"muted\">(from a learner's blog)</span></p>\n<p>Banning phones treats us like children. My phone is my dictionary, my calculator and, when the taxi is late, the only way to tell my gran I'm safe. Teach us to use them well; don't pretend they don't exist.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the passage",
+     "say": "Read the passage, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Text A</b> <span class=\"muted\">(from a principal's newsletter)</span></p>\n<p>Phones have no place in the classroom. Every buzz breaks concentration, and every screen is a doorway to distraction. Since we began collecting phones at the gate, teachers report calmer lessons, and learners talk to each other again at break.</p>\n<p><b>Text B</b> <span class=\"muted\">(from a learner's blog)</span></p>\n<p>Banning phones treats us like children. My phone is my dictionary, my calculator and, when the taxi is late, the only way to tell my gran I'm safe. Teach us to use them well; don't pretend they don't exist.</p></div>"
+    },
+    {
+     "h": "Identifying viewpoints",
+     "say": "A viewpoint is the writer's opinion. Text A argues phones harm learning. Text B argues phones are useful tools and learners should be trusted.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Text A: keep phones out</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Text B: teach good use</span></div>"
+    },
+    {
+     "h": "Comparing how",
+     "say": "Compare not only what they think, but how they persuade. Text A uses evidence from teachers. Text B uses personal examples and an emotional appeal about safety.",
+     "html": "<p>Link your points: <b>whereas</b>, <b>similarly</b>, <b>in contrast</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Compare the evidence each writer uses.",
+    "steps": [
+     "Text A uses reports from teachers about calmer lessons.",
+     "Text B uses personal experience: dictionary, calculator, contacting gran.",
+     "Whereas Text A relies on what staff have observed, Text B draws on one learner's everyday needs."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is Text A's viewpoint?",
+     "options": [
+      "Phones should be kept out of the classroom",
+      "Phones are useful tools",
+      "Learners should be trusted",
+      "Phones are good for safety"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is the principal's newsletter.",
+      "Look at the first sentence.",
+      "'No place in the classroom.'"
+     ],
+     "explain": "Text A says phones have no place in the classroom."
+    },
+    {
+     "type": "mcq",
+     "q": "Which phrase in Text B appeals most to emotion?",
+     "options": [
+      "'the only way to tell my gran I'm safe'",
+      "'my calculator'",
+      "'Banning phones'",
+      "'Teach us'"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one makes you feel something?",
+      "Think about family and safety.",
+      "Gran."
+     ],
+     "explain": "Safety and family make an emotional appeal."
+    },
+    {
+     "type": "mcq",
+     "q": "'Every screen is a doorway to distraction' is an example of…",
+     "options": [
+      "a metaphor",
+      "a simile",
+      "a statistic",
+      "a question"
+     ],
+     "answer": 0,
+     "hints": [
+      "A screen isn't literally a doorway.",
+      "No 'like' or 'as'.",
+      "A metaphor."
+     ],
+     "explain": "It says a screen is a doorway, without 'like' or 'as'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which linking word shows contrast?",
+     "options": [
+      "Whereas",
+      "Similarly",
+      "Also",
+      "Furthermore"
+     ],
+     "answer": 0,
+     "hints": [
+      "Contrast shows difference.",
+      "Three of these add or compare.",
+      "Whereas."
+     ],
+     "explain": "'Whereas' introduces a difference."
+    },
+    {
+     "type": "mcq",
+     "q": "Which statement is a fair comparison?",
+     "options": [
+      "Text A focuses on learning in class, while Text B focuses on phones' everyday uses",
+      "Both texts want phones banned",
+      "Text B uses statistics",
+      "Neither text gives reasons"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check each claim against the texts.",
+      "Do both want a ban?",
+      "Look at their focus."
+     ],
+     "explain": "It accurately contrasts their focus."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Naming each viewpoint",
+     "Comparing methods, not just ideas",
+     "Using linking words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared two writers' opinions and how each one persuades.",
+   "teacher": "Shows identifying viewpoints and comparing how writers use evidence and language to persuade, using comparative connectives.",
+   "done": "Compare what each writer thinks and how they persuade, linked with comparison words."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam11-eng-tone",
+   "grade": 11,
+   "title": "Connotation and tone",
+   "topic": "Reading: language analysis",
+   "category": "Communication",
+   "caps": "Cambridge IGCSE First Language English (0500): Reading (how word choice, connotation and tone shape meaning)",
+   "intention": "Today I am exploring how word choices create tone.",
+   "prompt": "Have you ever been upset by how something was said, rather than what?",
+   "lesson": [
+    {
+     "h": "Connotation",
+     "say": "Words have a dictionary meaning, called denotation, and associations, called connotation. Slim and skinny both mean thin, but slim sounds positive, and skinny can sound negative.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">slim: positive</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">skinny: negative</span></div>"
+    },
+    {
+     "h": "Tone",
+     "say": "Tone is the writer's attitude, shown through word choice. It might be angry, admiring, sarcastic, nostalgic or hopeful.",
+     "html": "<p>Name the tone, then <b>quote the words</b> that create it.</p>"
+    },
+    {
+     "h": "Building the analysis",
+     "say": "Pick a word, give its connotations, link them to the tone, and say how the reader is meant to feel.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Word</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Connotations</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tone</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reader's response</span></div>"
+    }
+   ],
+   "example": {
+    "q": "'The developers bulldozed the old cinema.' What tone does 'bulldozed' create?",
+    "steps": [
+     "Literally, a bulldozer knocks buildings down.",
+     "It suggests force, carelessness and destruction.",
+     "The tone is critical: the writer disapproves of the developers."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word has the most positive connotation for someone careful with money?",
+     "options": [
+      "Thrifty",
+      "Stingy",
+      "Mean",
+      "Tight-fisted"
+     ],
+     "answer": 0,
+     "hints": [
+      "They all mean careful with money.",
+      "Three sound like criticism.",
+      "Thrifty sounds wise."
+     ],
+     "explain": "'Thrifty' suggests sensible saving; the others sound critical."
+    },
+    {
+     "type": "mcq",
+     "q": "'The so-called experts were wrong again.' What is the tone?",
+     "options": [
+      "Sarcastic",
+      "Admiring",
+      "Neutral",
+      "Joyful"
+     ],
+     "answer": 0,
+     "hints": [
+      "'So-called' doubts their title.",
+      "'Again' mocks them.",
+      "Sarcastic."
+     ],
+     "explain": "'So-called' and 'again' mock the experts."
+    },
+    {
+     "type": "mcq",
+     "q": "'We would sit on Gogo's stoep, the evening smelling of rain and woodsmoke.' What is the tone?",
+     "options": [
+      "Nostalgic",
+      "Angry",
+      "Sarcastic",
+      "Urgent"
+     ],
+     "answer": 0,
+     "hints": [
+      "'We would' looks back.",
+      "Warm sensory memories.",
+      "Fondness for the past."
+     ],
+     "explain": "It looks back fondly on the past: nostalgic."
+    },
+    {
+     "type": "mcq",
+     "q": "What is connotation?",
+     "options": [
+      "The associations and feelings a word carries",
+      "A word's dictionary meaning",
+      "The number of syllables",
+      "A type of punctuation"
+     ],
+     "answer": 0,
+     "hints": [
+      "Not the dictionary meaning.",
+      "That's denotation.",
+      "Associations."
+     ],
+     "explain": "Connotation is what a word suggests beyond its dictionary meaning."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word suggests a crowd is threatening?",
+     "options": [
+      "Mob",
+      "Gathering",
+      "Audience",
+      "Group"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which sounds out of control?",
+      "Which might be violent?",
+      "Mob."
+     ],
+     "explain": "'Mob' suggests an angry, uncontrolled crowd."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing similar words",
+     "Naming the tone",
+     "Linking words to the reader's feelings",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored how word choice creates a writer's tone.",
+   "teacher": "Shows distinguishing denotation from connotation and analysing how lexical choices create tone.",
+   "done": "Words carry feelings. Name the tone and quote the words that create it."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam11-eng-summary",
+   "grade": 11,
+   "title": "Summary: concise and in your own words",
+   "topic": "Reading and writing: summary",
+   "category": "Planning and Organisation",
+   "caps": "Cambridge IGCSE First Language English (0500): Reading and writing (summarising selected ideas concisely, fluently and in own words)",
+   "intention": "Today I am writing a concise summary in my own words.",
+   "prompt": "What time does your body want to sleep?",
+   "passage": "<div class=\"passage-text\"><p><b>Why teenagers struggle to wake up</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Parents often blame late nights on laziness, but biology tells a different story. During adolescence, the body releases melatonin, the hormone that makes us sleepy, about two hours later than it does in childhood. A teenager who cannot fall asleep before eleven is not being stubborn; their body clock has genuinely shifted.</p>\n<p>Screens make matters worse. The blue light from phones delays melatonin even further, and social media keeps the brain alert. Early school starts add to the problem, so many teenagers are always short of sleep.</p>\n<p>Some schools that have moved their start time later report better attendance and fewer car accidents among teenage drivers. Simpler changes help too: switching off screens an hour before bed, and keeping wake-up times regular, even at weekends.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the passage",
+     "say": "Read the passage, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Why teenagers struggle to wake up</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Parents often blame late nights on laziness, but biology tells a different story. During adolescence, the body releases melatonin, the hormone that makes us sleepy, about two hours later than it does in childhood. A teenager who cannot fall asleep before eleven is not being stubborn; their body clock has genuinely shifted.</p>\n<p>Screens make matters worse. The blue light from phones delays melatonin even further, and social media keeps the brain alert. Early school starts add to the problem, so many teenagers are always short of sleep.</p>\n<p>Some schools that have moved their start time later report better attendance and fewer car accidents among teenage drivers. Simpler changes help too: switching off screens an hour before bed, and keeping wake-up times regular, even at weekends.</p></div>"
+    },
+    {
+     "h": "Finding the points",
+     "say": "First mark the points that answer the question. For why teenagers struggle to wake up, the reasons are a later body clock, blue light from screens, alert brains from social media, and early school starts.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Body clock shifts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Blue light</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Social media</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Early starts</span></div>"
+    },
+    {
+     "h": "Concise, own words",
+     "say": "Combine points into fluent sentences, use your own words where you can, and leave out examples, statistics and repetition.",
+     "html": "<p>Cut: 'A teenager who cannot fall asleep before eleven is not being stubborn.' That is an example.</p>"
+    }
+   ],
+   "example": {
+    "q": "Summarise the causes in one sentence.",
+    "steps": [
+     "Point 1: the sleep hormone arrives later in adolescence.",
+     "Points 2 and 3: screens and social media keep them awake. Point 4: school starts early.",
+     "Teenagers' body clocks shift later, screens and social media delay sleep further, and early school starts leave them short of rest."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a reason teenagers struggle to wake up?",
+     "options": [
+      "Melatonin is released later in adolescence",
+      "Teenagers are lazy",
+      "Car accidents",
+      "Better attendance"
+     ],
+     "answer": 0,
+     "hints": [
+      "The writer rejects one of these.",
+      "Look for biology.",
+      "Melatonin."
+     ],
+     "explain": "The later release of melatonin is a cause; the writer rejects laziness."
+    },
+    {
+     "type": "mcq",
+     "q": "For a summary of the CAUSES, which detail should be left out?",
+     "options": [
+      "Fewer car accidents at schools that start later",
+      "The body clock shifts later",
+      "Blue light delays melatonin",
+      "School starts early"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one isn't a cause?",
+      "It is a result of a solution.",
+      "Car accidents."
+     ],
+     "explain": "Fewer accidents is a result of later starts, not a cause."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the most concise own-words version of 'the body releases melatonin … about two hours later than it does in childhood'?",
+     "options": [
+      "Teenagers' sleep hormone arrives later.",
+      "The body releases melatonin about two hours later than in childhood.",
+      "Melatonin, a hormone, which is the hormone that makes us sleepy, comes later.",
+      "Biology tells a different story."
+     ],
+     "answer": 0,
+     "hints": [
+      "One is copied.",
+      "One repeats itself.",
+      "Short and own words."
+     ],
+     "explain": "It keeps the meaning in fewer, original words."
+    },
+    {
+     "type": "mcq",
+     "q": "What should you do with ideas that are repeated?",
+     "options": [
+      "Combine them into one point",
+      "Write them twice",
+      "Add your opinion",
+      "Quote them"
+     ],
+     "answer": 0,
+     "hints": [
+      "Concise means no repetition.",
+      "Merge them.",
+      "One point."
+     ],
+     "explain": "Combine repeated ideas to stay concise."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a suggested solution, not a cause?",
+     "options": [
+      "Switching off screens an hour before bed",
+      "Blue light",
+      "Early school starts",
+      "A later body clock"
+     ],
+     "answer": 0,
+     "hints": [
+      "Causes explain the problem.",
+      "Solutions fix it.",
+      "Switching off screens."
+     ],
+     "explain": "Switching off screens is a way to help, not a cause."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Marking the relevant points",
+     "Cutting examples",
+     "Combining ideas",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child wrote a concise summary of an article in their own words.",
+   "teacher": "Shows selecting points for a specific focus, excluding examples and repetition, and writing fluently in own words.",
+   "done": "Keep only what the question asks for, cut examples, and combine ideas in your own words."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam11-eng-argue",
+   "grade": 11,
+   "title": "Argumentative writing",
+   "topic": "Writing: composition",
+   "category": "Communication",
+   "caps": "Cambridge IGCSE First Language English (0500): Composition (argumentative writing: structure, development of ideas and counter-argument)",
+   "intention": "Today I am building a strong argument, including the other side.",
+   "prompt": "What change at school would you argue for?",
+   "lesson": [
+    {
+     "h": "A clear position",
+     "say": "An argument takes a clear position and supports it with reasons. State your view in the introduction, so the reader knows where you stand.",
+     "html": "<p>Thesis: <b>Schools should start at nine, not half past seven.</b></p>"
+    },
+    {
+     "h": "Paragraphs that prove",
+     "say": "Each paragraph makes one point, supports it with evidence or an example, then explains why it matters.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Point</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Evidence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Explain</span></div>"
+    },
+    {
+     "h": "The counter-argument",
+     "say": "Strong arguments deal with the other side. Present an objection fairly, then answer it with a reason.",
+     "html": "<p><b>Some argue</b> later starts mean later finishes; <b>however</b>, rested learners learn faster.</p>"
+    }
+   ],
+   "example": {
+    "q": "Write a topic sentence for a paragraph supporting later school starts.",
+    "steps": [
+     "Choose one reason: sleep and learning.",
+     "Make it a clear claim.",
+     "'Starting later would let teenagers' body clocks work with learning, not against it.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a clear thesis statement?",
+     "options": [
+      "School uniforms should be optional in Grades 10 to 12.",
+      "Uniforms are a thing.",
+      "Some people like uniforms and some don't.",
+      "What about uniforms?"
+     ],
+     "answer": 0,
+     "hints": [
+      "A thesis takes a position.",
+      "Which one says what should happen?",
+      "The first."
+     ],
+     "explain": "It states a clear, arguable position."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a counter-argument?",
+     "options": [
+      "An opposing view you present and then answer",
+      "An argument with your teacher",
+      "A list of facts",
+      "Your conclusion"
+     ],
+     "answer": 0,
+     "hints": [
+      "Counter means against.",
+      "The other side's view.",
+      "Which you then answer."
+     ],
+     "explain": "You present the other side fairly, then rebut it."
+    },
+    {
+     "type": "mcq",
+     "q": "Which phrase best introduces a rebuttal?",
+     "options": [
+      "However,",
+      "Firstly,",
+      "In addition,",
+      "For example,"
+     ],
+     "answer": 0,
+     "hints": [
+      "A rebuttal turns against the objection.",
+      "You need a contrast word.",
+      "However."
+     ],
+     "explain": "'However' signals you are answering the objection."
+    },
+    {
+     "type": "mcq",
+     "q": "What should follow evidence in a paragraph?",
+     "options": [
+      "An explanation of why it supports your point",
+      "A new, unrelated topic",
+      "The conclusion",
+      "A question to the reader"
+     ],
+     "answer": 0,
+     "hints": [
+      "Point, evidence, …",
+      "Don't leave evidence alone.",
+      "Explain it."
+     ],
+     "explain": "Explain how the evidence proves your point."
+    },
+    {
+     "type": "mcq",
+     "q": "Which conclusion is strongest?",
+     "options": [
+      "'A later start is a small change that would give us healthier, sharper learners: it is time to try it.'",
+      "'That's it.'",
+      "'In conclusion, I have written an essay.'",
+      "'Some people agree.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "A conclusion restates the case.",
+      "And leaves an impact.",
+      "The first."
+     ],
+     "explain": "It restates the argument and ends with a call to act."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Stating my position clearly",
+     "Point, evidence, explain",
+     "Answering the other side",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised building an argument, including answering the other side.",
+   "teacher": "Shows formulating a thesis, structuring paragraphs with evidence and explanation, and handling counter-arguments.",
+   "done": "Clear position, one point per paragraph, answer the other side, end strongly."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam11-eng-story",
+   "grade": 11,
+   "title": "Narrative writing: building tension",
+   "topic": "Writing: composition",
+   "category": "Creativity",
+   "caps": "Cambridge IGCSE First Language English (0500): Composition (narrative writing: structure, characterisation, tension and endings)",
+   "intention": "Today I am shaping a story and building tension.",
+   "prompt": "What makes you keep reading a story?",
+   "lesson": [
+    {
+     "h": "The shape of a story",
+     "say": "A short story needs a clear shape: an opening that hooks, rising tension, a climax and a resolution. In a short piece, keep to a few characters and one main event.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Hook</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rising tension</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Climax</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Resolution</span></div>"
+    },
+    {
+     "h": "Building tension",
+     "say": "Slow time down at key moments. Use short sentences, sensory detail and information you hold back, so the reader is anxious to know what happens.",
+     "html": "<p>The handle turned. Slowly. Then stopped.</p>"
+    },
+    {
+     "h": "Endings",
+     "say": "A good ending feels earned. It can resolve the problem, surprise the reader, or leave a meaningful question, but it should never feel rushed.",
+     "html": "<p>Avoid: 'And then I woke up. It was all a dream.'</p>"
+    }
+   ],
+   "example": {
+    "q": "Rewrite to build tension: 'I heard a noise and went to see what it was.'",
+    "steps": [
+     "Slow it down and add sensory detail.",
+     "Use short sentences.",
+     "'A scrape. Then silence. I put down my pen and listened, my heart loud in my ears.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which opening hooks the reader best?",
+     "options": [
+      "'Nobody believed Thabo when he said the river was rising.'",
+      "'This is a story about a boy.'",
+      "'Once upon a time there was a day.'",
+      "'I will now tell you a story.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "A hook raises a question.",
+      "Which makes you want to know more?",
+      "Why didn't they believe him?"
+     ],
+     "explain": "It raises a question and hints at danger."
+    },
+    {
+     "type": "mcq",
+     "q": "Which technique builds tension?",
+     "options": [
+      "Short sentences at a key moment",
+      "Long lists of background facts",
+      "Explaining everything at once",
+      "Skipping the climax"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tension slows things down.",
+      "Short, sharp sentences.",
+      "The first."
+     ],
+     "explain": "Short sentences slow the moment and raise suspense."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the climax of a story?",
+     "options": [
+      "The moment of greatest tension or the turning point",
+      "The first sentence",
+      "The title",
+      "The description of the setting"
+     ],
+     "answer": 0,
+     "hints": [
+      "The tension rises towards it.",
+      "Things change here.",
+      "The turning point."
+     ],
+     "explain": "The climax is the peak of tension."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should a short story have only a few characters?",
+     "options": [
+      "So each can be developed in the space available",
+      "Characters are not allowed",
+      "To make it longer",
+      "Examiners dislike names"
+     ],
+     "answer": 0,
+     "hints": [
+      "Space is limited.",
+      "Characters need development.",
+      "Fewer, deeper."
+     ],
+     "explain": "Fewer characters can be developed properly."
+    },
+    {
+     "type": "mcq",
+     "q": "Which ending is weakest?",
+     "options": [
+      "'Then I woke up and it was all a dream.'",
+      "An ending that resolves the main problem",
+      "An ending with a meaningful surprise",
+      "An ending that leaves a thoughtful question"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one cancels the whole story?",
+      "It undoes everything.",
+      "The dream ending."
+     ],
+     "explain": "The dream ending cancels the story instead of resolving it."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Planning the story's shape",
+     "Short sentences for tension",
+     "Choosing an earned ending",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised shaping a story and building tension.",
+   "teacher": "Shows structuring narrative, controlling pace to build tension, and crafting effective openings and endings.",
+   "done": "Hook, build tension, reach a climax, and end in a way the story has earned."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam11-quadratics",
+   "grade": 11,
+   "title": "Solving quadratic equations",
+   "topic": "Algebra",
+   "category": "Problem Solving",
+   "caps": "Cambridge IGCSE Mathematics (0580): Algebra and graphs (solving quadratic equations by factorising and by the quadratic formula)",
+   "intention": "Today I am solving quadratic equations.",
+   "prompt": "Why might an equation have two answers?",
+   "lesson": [
+    {
+     "h": "Factorising",
+     "say": "A quadratic equation has an x squared term. Make one side zero, then factorise. If two brackets multiply to give zero, one of them must be zero.",
+     "html": "<p>x² + 5x + 6 = 0 → (x + 2)(x + 3) = 0 → x = −2 or x = −3</p>"
+    },
+    {
+     "h": "The quadratic formula",
+     "say": "When it won't factorise, use the formula: x equals minus b, plus or minus the square root of b squared minus 4 a c, all over 2 a.",
+     "html": "<p>x = (−b ± √(b² − 4ac)) ÷ 2a</p>"
+    },
+    {
+     "h": "Two answers",
+     "say": "Most quadratic equations have two solutions. Check both by substituting them back into the equation.",
+     "html": "<p>Check x = −2: 4 − 10 + 6 = 0 ✓</p>"
+    }
+   ],
+   "example": {
+    "q": "Solve x² − x − 12 = 0.",
+    "steps": [
+     "Find two numbers that multiply to −12 and add to −1: −4 and 3.",
+     "(x − 4)(x + 3) = 0.",
+     "x = 4 or x = −3."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Factorise x² + 7x + 10.",
+     "options": [
+      "(x + 5)(x + 2)",
+      "(x + 10)(x + 1)",
+      "(x + 7)(x + 3)",
+      "(x − 5)(x − 2)"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply to 10, add to 7.",
+      "5 × 2 = 10 and 5 + 2 = 7.",
+      "(x + 5)(x + 2)."
+     ],
+     "explain": "5 and 2 multiply to 10 and add to 7."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve (x − 3)(x + 6) = 0.",
+     "options": [
+      "x = 3 or x = −6",
+      "x = −3 or x = 6",
+      "x = 3 or x = 6",
+      "x = 18"
+     ],
+     "answer": 0,
+     "hints": [
+      "One bracket must be zero.",
+      "x − 3 = 0 or x + 6 = 0.",
+      "x = 3 or x = −6."
+     ],
+     "explain": "x − 3 = 0 gives 3; x + 6 = 0 gives −6."
+    },
+    {
+     "type": "mcq",
+     "q": "Solve x² − 9 = 0.",
+     "options": [
+      "x = 3 or x = −3",
+      "x = 3 only",
+      "x = 9",
+      "x = 4.5"
+     ],
+     "answer": 0,
+     "hints": [
+      "x² = 9.",
+      "Which numbers square to 9?",
+      "Don't forget the negative."
+     ],
+     "explain": "3² = 9 and (−3)² = 9."
+    },
+    {
+     "type": "num",
+     "q": "In 2x² + 3x − 5 = 0, what is the value of b² − 4ac?",
+     "answer": "49",
+     "options": [
+      "49",
+      "−31",
+      "9",
+      "40"
+     ],
+     "hints": [
+      "a = 2, b = 3, c = −5.",
+      "9 − 4(2)(−5).",
+      "9 + 40."
+     ],
+     "explain": "9 − 4 × 2 × (−5) = 9 + 40 = 49."
+    },
+    {
+     "type": "mcq",
+     "q": "Using the formula, what are the solutions of 2x² + 3x − 5 = 0?",
+     "options": [
+      "x = 1 or x = −2.5",
+      "x = −1 or x = 2.5",
+      "x = 2 or x = −5",
+      "x = 7 or x = −3"
+     ],
+     "answer": 0,
+     "hints": [
+      "√49 = 7.",
+      "x = (−3 ± 7) ÷ 4.",
+      "4 ÷ 4 and −10 ÷ 4."
+     ],
+     "explain": "(−3 + 7) ÷ 4 = 1 and (−3 − 7) ÷ 4 = −2.5."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Factorising first",
+     "Using the formula carefully",
+     "Checking both answers",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child solved quadratic equations by factorising and with the formula.",
+   "teacher": "Shows solving quadratic equations by factorisation and by the quadratic formula, and checking solutions.",
+   "done": "Make one side zero, factorise or use the formula, and expect two answers."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam11-functions",
+   "grade": 11,
+   "title": "Composite and inverse functions",
+   "topic": "Functions",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge IGCSE Mathematics (0580), Extended: Functions (function notation; composite functions; inverse functions)",
+   "intention": "Today I am combining and reversing functions.",
+   "prompt": "What everyday actions can be undone, and which can't?",
+   "lesson": [
+    {
+     "h": "Function notation",
+     "say": "f of x means a rule applied to x. If f of x is 2x plus 3, then f of 4 is 2 times 4 plus 3, which is 11.",
+     "html": "<p>f(x) = 2x + 3 → f(4) = <b>11</b></p>"
+    },
+    {
+     "h": "Composite functions",
+     "say": "f g of x means do g first, then f. If g of x is x squared, then f g of 3 is f of 9, which is 21.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x = 3</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">g: 9</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">f: 21</span></div>"
+    },
+    {
+     "h": "Inverse functions",
+     "say": "The inverse function, f to the minus 1, undoes f. Write y equals f of x, swap x and y, then make y the subject.",
+     "html": "<p>f(x) = 2x + 3 → f⁻¹(x) = (x − 3) ÷ 2</p>"
+    }
+   ],
+   "example": {
+    "q": "f(x) = 3x − 1. Find f⁻¹(x).",
+    "steps": [
+     "Write y = 3x − 1, then swap x and y: x = 3y − 1.",
+     "Add 1: x + 1 = 3y.",
+     "f⁻¹(x) = (x + 1) ÷ 3."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "f(x) = 5x − 2. Find f(3).",
+     "answer": "13",
+     "options": [
+      "13",
+      "15",
+      "1",
+      "17"
+     ],
+     "hints": [
+      "Replace x with 3.",
+      "5 × 3 − 2.",
+      "15 − 2."
+     ],
+     "explain": "5 × 3 − 2 = 13."
+    },
+    {
+     "type": "num",
+     "q": "f(x) = x + 4 and g(x) = 2x. Find fg(3).",
+     "answer": "10",
+     "options": [
+      "10",
+      "14",
+      "7",
+      "12"
+     ],
+     "hints": [
+      "Do g first: g(3) = 6.",
+      "Then f(6).",
+      "6 + 4."
+     ],
+     "explain": "g(3) = 6, then f(6) = 10."
+    },
+    {
+     "type": "num",
+     "q": "f(x) = x + 4 and g(x) = 2x. Find gf(3).",
+     "answer": "14",
+     "options": [
+      "14",
+      "10",
+      "7",
+      "24"
+     ],
+     "hints": [
+      "Do f first: f(3) = 7.",
+      "Then g(7).",
+      "2 × 7."
+     ],
+     "explain": "f(3) = 7, then g(7) = 14. The order matters."
+    },
+    {
+     "type": "mcq",
+     "q": "f(x) = 2x + 3. What is f⁻¹(x)?",
+     "options": [
+      "(x − 3) ÷ 2",
+      "(x + 3) ÷ 2",
+      "2x − 3",
+      "x ÷ 2 + 3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Undo the steps in reverse order.",
+      "f multiplies by 2, then adds 3.",
+      "Subtract 3, then divide by 2."
+     ],
+     "explain": "Undo +3 first, then ×2: (x − 3) ÷ 2."
+    },
+    {
+     "type": "mcq",
+     "q": "If f(5) = 12, what is f⁻¹(12)?",
+     "options": [
+      "5",
+      "12",
+      "1/12",
+      "7"
+     ],
+     "answer": 0,
+     "hints": [
+      "The inverse undoes f.",
+      "f takes 5 to 12.",
+      "So f⁻¹ takes 12 back to 5."
+     ],
+     "explain": "f⁻¹ reverses f, so f⁻¹(12) = 5."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Doing the inside function first",
+     "Swapping x and y",
+     "Undoing steps in reverse",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child combined functions and found inverse functions.",
+   "teacher": "Shows evaluating functions, forming composite functions in the correct order, and finding inverse functions.",
+   "done": "fg(x): g first, then f. The inverse undoes the function."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam11-vectors",
+   "grade": 11,
+   "title": "Vectors",
+   "topic": "Transformations and vectors",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge IGCSE Mathematics (0580): Transformations and vectors (column vectors; adding, subtracting and multiplying vectors by a scalar; magnitude)",
+   "intention": "Today I am adding vectors and finding their length.",
+   "prompt": "How would you give directions using only across and up?",
+   "lesson": [
+    {
+     "h": "What a vector is",
+     "say": "A vector has size and direction. A column vector shows how far to move across, then up. In these lessons we write it in a line: 3, minus 2 means 3 to the right and 2 down.",
+     "html": "<p>(3, −2): <b>3 right, 2 down</b></p><p>In a column vector, the top number is across and the bottom number is up.</p>"
+    },
+    {
+     "h": "Adding vectors",
+     "say": "To add vectors, add the top numbers and add the bottom numbers. 3, minus 2 plus 1, 5 gives 4, 3. To multiply by a number, multiply both parts.",
+     "html": "<p>(3, −2) + (1, 5) = <b>(4, 3)</b></p><p>2 × (3, −2) = (6, −4)</p>"
+    },
+    {
+     "h": "Magnitude",
+     "say": "The magnitude is the length of the vector. Use Pythagoras: the square root of across squared plus up squared. The vector 3, 4 has magnitude 5.",
+     "html": "<p>|(3, 4)| = √(3² + 4²) = √25 = <b>5</b></p>"
+    }
+   ],
+   "example": {
+    "q": "a = (2, 1) and b = (−1, 3). Find 2a + b.",
+    "steps": [
+     "2a = (4, 2).",
+     "2a + b = (4 + (−1), 2 + 3).",
+     "= (3, 5)."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does the vector (−4, 1) mean?",
+     "options": [
+      "4 left and 1 up",
+      "4 right and 1 down",
+      "1 left and 4 up",
+      "4 up and 1 left"
+     ],
+     "answer": 0,
+     "hints": [
+      "The first number is across.",
+      "Negative across means left.",
+      "The second number is up."
+     ],
+     "explain": "−4 across is 4 left; 1 is 1 up."
+    },
+    {
+     "type": "mcq",
+     "q": "Find (2, 5) + (3, −1).",
+     "options": [
+      "(5, 4)",
+      "(5, 6)",
+      "(−1, 6)",
+      "(6, −5)"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add the first numbers: 2 + 3.",
+      "Add the second numbers: 5 + (−1).",
+      "(5, 4)."
+     ],
+     "explain": "(2 + 3, 5 − 1) = (5, 4)."
+    },
+    {
+     "type": "mcq",
+     "q": "a = (1, −2). Find 3a.",
+     "options": [
+      "(3, −6)",
+      "(4, 1)",
+      "(3, −2)",
+      "(1, −6)"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply both numbers by 3.",
+      "3 × 1 and 3 × (−2).",
+      "(3, −6)."
+     ],
+     "explain": "3 × (1, −2) = (3, −6)."
+    },
+    {
+     "type": "num",
+     "q": "Find the magnitude of the vector (6, 8).",
+     "answer": "10",
+     "options": [
+      "10",
+      "14",
+      "48",
+      "100"
+     ],
+     "hints": [
+      "√(6² + 8²).",
+      "36 + 64 = 100.",
+      "√100."
+     ],
+     "explain": "√100 = 10."
+    },
+    {
+     "type": "mcq",
+     "q": "Find (5, 2) − (1, 4).",
+     "options": [
+      "(4, −2)",
+      "(6, 6)",
+      "(4, 2)",
+      "(−4, 2)"
+     ],
+     "answer": 0,
+     "hints": [
+      "Subtract the first numbers: 5 − 1.",
+      "Subtract the second numbers: 2 − 4.",
+      "(4, −2)."
+     ],
+     "explain": "(5 − 1, 2 − 4) = (4, −2)."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Across first, then up",
+     "Adding part by part",
+     "Pythagoras for the length",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child added and scaled vectors and found their length.",
+   "teacher": "Shows interpreting column vectors, performing vector addition, subtraction and scalar multiplication, and calculating magnitude.",
+   "done": "Work part by part, and use Pythagoras for the magnitude."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam11-sine-cosine",
+   "grade": 11,
+   "title": "The sine and cosine rules",
+   "topic": "Trigonometry",
+   "category": "Problem Solving",
+   "caps": "Cambridge IGCSE Mathematics (0580), Extended: Trigonometry (sine rule and cosine rule in triangles that are not right-angled)",
+   "intention": "Today I am solving triangles that are not right-angled.",
+   "prompt": "How could a surveyor measure across a river without crossing it?",
+   "lesson": [
+    {
+     "h": "Beyond right angles",
+     "say": "The sine and cosine rules work in any triangle, not only right-angled ones. Label the sides a, b and c, opposite the angles A, B and C.",
+     "html": "<p>Side <b>a</b> is opposite angle <b>A</b>.</p>"
+    },
+    {
+     "h": "The sine rule",
+     "say": "Use the sine rule when you know a side and the angle opposite it. a over sin A equals b over sin B equals c over sin C.",
+     "html": "<p>a ÷ sin A = b ÷ sin B = c ÷ sin C</p>"
+    },
+    {
+     "h": "The cosine rule",
+     "say": "Use the cosine rule when you know two sides and the angle between them, or all three sides. a squared equals b squared plus c squared minus 2 b c cos A.",
+     "html": "<p>a² = b² + c² − 2bc cos A</p>"
+    }
+   ],
+   "example": {
+    "q": "b = 5 cm, c = 8 cm and A = 60°. Find a.",
+    "steps": [
+     "a² = 5² + 8² − 2(5)(8) cos 60°.",
+     "cos 60° = 0.5, so a² = 25 + 64 − 40 = 49.",
+     "a = 7 cm."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "You know two sides and the angle between them. Which rule finds the third side?",
+     "options": [
+      "The cosine rule",
+      "The sine rule",
+      "Pythagoras only",
+      "Neither"
+     ],
+     "answer": 0,
+     "hints": [
+      "The angle is between the two sides.",
+      "That matches a² = b² + c² − 2bc cos A.",
+      "The cosine rule."
+     ],
+     "explain": "Two sides and the included angle: use the cosine rule."
+    },
+    {
+     "type": "mcq",
+     "q": "You know angle A, angle B and side a. Which rule finds side b?",
+     "options": [
+      "The sine rule",
+      "The cosine rule",
+      "Pythagoras",
+      "Neither"
+     ],
+     "answer": 0,
+     "hints": [
+      "You have a side and its opposite angle.",
+      "That is a matching pair.",
+      "The sine rule."
+     ],
+     "explain": "A side with its opposite angle: use the sine rule."
+    },
+    {
+     "type": "num",
+     "q": "b = 3, c = 4 and A = 90°. Use a² = b² + c² − 2bc cos A to find a. (cos 90° = 0)",
+     "answer": "5",
+     "options": [
+      "5",
+      "7",
+      "25",
+      "1"
+     ],
+     "hints": [
+      "The last term is 0.",
+      "a² = 9 + 16 = 25.",
+      "√25."
+     ],
+     "explain": "a² = 25, so a = 5. With a right angle, the cosine rule becomes Pythagoras."
+    },
+    {
+     "type": "num",
+     "q": "a ÷ sin 30° = 10. What is a? (sin 30° = 0.5)",
+     "answer": "5",
+     "options": [
+      "5",
+      "20",
+      "10",
+      "0.5"
+     ],
+     "hints": [
+      "a = 10 × sin 30°.",
+      "10 × 0.5.",
+      "5."
+     ],
+     "explain": "a = 10 × 0.5 = 5."
+    },
+    {
+     "type": "mcq",
+     "q": "In triangle ABC, which side is opposite angle C?",
+     "options": [
+      "c",
+      "a",
+      "b",
+      "The longest side"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sides are named after the opposite angle.",
+      "Small letter, capital angle.",
+      "c."
+     ],
+     "explain": "Side c is opposite angle C."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Labelling the sides and angles",
+     "Choosing the right rule",
+     "Substituting carefully",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used the sine and cosine rules to solve triangles.",
+   "teacher": "Shows labelling triangles, selecting the sine or cosine rule appropriately, and substituting to find sides.",
+   "done": "Matching side and angle: sine rule. Two sides and the angle between: cosine rule."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam11-tree-diagrams",
+   "grade": 11,
+   "title": "Probability with tree diagrams",
+   "topic": "Probability",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge IGCSE Mathematics (0580): Probability (tree diagrams; combined events; probability with and without replacement)",
+   "intention": "Today I am using tree diagrams for combined events.",
+   "prompt": "Does taking a sweet out of a bag change the chances for the next person?",
+   "lesson": [
+    {
+     "h": "Tree diagrams",
+     "say": "A tree diagram shows two or more events one after the other. Multiply along the branches to find the probability of a path.",
+     "html": "<p>P(A then B) = P(A) × P(B)</p>"
+    },
+    {
+     "h": "Adding paths",
+     "say": "When more than one path gives the outcome you want, add the probabilities of those paths.",
+     "html": "<p>P(one red) = P(red, blue) + P(blue, red)</p>"
+    },
+    {
+     "h": "Without replacement",
+     "say": "If you don't put the first item back, the probabilities on the second branches change, because there is one item fewer in the bag.",
+     "html": "<p>3 red and 2 blue: P(red, red) = 3/5 × 2/4 = 6/20 = <b>3/10</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A bag has 4 green counters and 1 yellow counter. Two are taken without replacement. Find P(both green).",
+    "steps": [
+     "First green: 4/5.",
+     "Second green: 3/4, because one green counter is gone.",
+     "4/5 × 3/4 = 12/20 = 3/5."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "P(rain) = 0.3 each day, independently. What is P(rain on both of two days)?",
+     "options": [
+      "0.09",
+      "0.6",
+      "0.3",
+      "0.9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply along the branches.",
+      "0.3 × 0.3.",
+      "0.09."
+     ],
+     "explain": "0.3 × 0.3 = 0.09."
+    },
+    {
+     "type": "mcq",
+     "q": "A coin is tossed twice. What is P(two tails)?",
+     "options": [
+      "1/4",
+      "1/2",
+      "1/3",
+      "3/4"
+     ],
+     "answer": 0,
+     "hints": [
+      "P(tail) = 1/2 each time.",
+      "Multiply.",
+      "1/2 × 1/2."
+     ],
+     "explain": "1/2 × 1/2 = 1/4."
+    },
+    {
+     "type": "mcq",
+     "q": "A bag has 2 red and 3 blue counters. One is taken and not replaced. If it was red, what is P(the second is red)?",
+     "options": [
+      "1/4",
+      "2/5",
+      "1/5",
+      "2/4"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many are left?",
+      "4 counters, 1 of them red.",
+      "1/4."
+     ],
+     "explain": "1 red out of 4 remaining = 1/4."
+    },
+    {
+     "type": "mcq",
+     "q": "A bag has 2 red and 3 blue counters. Two are taken without replacement. What is P(red, then red)?",
+     "options": [
+      "1/10",
+      "4/25",
+      "2/9",
+      "1/5"
+     ],
+     "answer": 0,
+     "hints": [
+      "First red: 2/5.",
+      "Second red: 1/4.",
+      "2/5 × 1/4 = 2/20."
+     ],
+     "explain": "2/5 × 1/4 = 2/20 = 1/10."
+    },
+    {
+     "type": "mcq",
+     "q": "On a tree diagram, when do you add probabilities?",
+     "options": [
+      "When several paths give the outcome you want",
+      "Along each branch",
+      "Never",
+      "Only with replacement"
+     ],
+     "answer": 0,
+     "hints": [
+      "Along a path you multiply.",
+      "Between paths…",
+      "…you add."
+     ],
+     "explain": "Multiply along a path; add the paths that give the outcome."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Multiplying along branches",
+     "Adding the paths",
+     "Changing the fractions without replacement",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used tree diagrams to find probabilities of combined events.",
+   "teacher": "Shows constructing and using tree diagrams, including conditional probability without replacement.",
+   "done": "Multiply along a path, add between paths, and adjust without replacement."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam11-sci-enzymes",
+   "grade": 11,
+   "title": "Enzymes",
+   "topic": "Biology: enzymes",
+   "caps": "Cambridge IGCSE Combined Science (0653): Biology (enzymes as biological catalysts; effects of temperature and pH)",
+   "intention": "Today I am finding out how enzymes work and what stops them.",
+   "prompt": "Why does a high fever make people so ill?",
+   "lesson": [
+    {
+     "h": "Biological catalysts",
+     "say": "Enzymes are proteins that speed up chemical reactions in living things without being used up. Each enzyme fits a particular substrate, like a lock and key.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Substrate</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fits the active site</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Products</span></div>"
+    },
+    {
+     "h": "Temperature",
+     "say": "Enzymes work best at an optimum temperature, about 37 degrees Celsius in humans. Above this, the active site changes shape and the enzyme is denatured.",
+     "html": "<p>Denatured: the shape is lost, and it <b>can't</b> work again.</p>"
+    },
+    {
+     "h": "pH",
+     "say": "Each enzyme also has an optimum pH. Pepsin in the stomach works best in acid, while enzymes in the small intestine work best in slightly alkaline conditions.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pepsin: acidic</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Intestine enzymes: alkaline</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Explain why an enzyme stops working at 70 °C.",
+    "steps": [
+     "High temperature changes the shape of the active site.",
+     "The substrate no longer fits.",
+     "The enzyme is denatured, so the reaction stops."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What are enzymes?",
+     "options": [
+      "Proteins that act as biological catalysts",
+      "Fats that store energy",
+      "Sugars",
+      "Minerals"
+     ],
+     "answer": 0,
+     "hints": [
+      "They speed up reactions.",
+      "They are made of protein.",
+      "Biological catalysts."
+     ],
+     "explain": "Enzymes are protein catalysts."
+    },
+    {
+     "type": "mcq",
+     "q": "What does denatured mean?",
+     "options": [
+      "The active site has changed shape permanently",
+      "The enzyme is working fast",
+      "The enzyme is cold",
+      "The enzyme has been eaten"
+     ],
+     "answer": 0,
+     "hints": [
+      "It happens at high temperature.",
+      "The shape is lost.",
+      "Permanently."
+     ],
+     "explain": "Denaturing permanently changes the active site's shape."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens to enzyme activity at low temperatures?",
+     "options": [
+      "It slows down, but the enzyme is not denatured",
+      "It stops for ever",
+      "It speeds up",
+      "The enzyme melts"
+     ],
+     "answer": 0,
+     "hints": [
+      "Particles move slowly when cold.",
+      "Fewer collisions.",
+      "But the shape survives."
+     ],
+     "explain": "Cold slows enzymes, but they recover when warmed."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does each enzyme work on only one substrate?",
+     "options": [
+      "Only that substrate fits its active site",
+      "Enzymes are lazy",
+      "Other substrates are too hot",
+      "Substrates are all the same"
+     ],
+     "answer": 0,
+     "hints": [
+      "Lock and key.",
+      "Shape matters.",
+      "Only one fits."
+     ],
+     "explain": "The active site's shape fits only its substrate."
+    },
+    {
+     "type": "num",
+     "q": "What is the optimum temperature of most human enzymes, in °C?",
+     "answer": "37",
+     "options": [
+      "37",
+      "100",
+      "0",
+      "70"
+     ],
+     "hints": [
+      "Body temperature.",
+      "A little under 40.",
+      "37."
+     ],
+     "explain": "Human body temperature, about 37 °C."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The lock-and-key picture",
+     "What denatured means",
+     "Linking enzymes to the body",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how enzymes speed up reactions and what stops them working.",
+   "teacher": "Shows explaining enzyme specificity and the effects of temperature and pH, including denaturation.",
+   "done": "Enzymes fit their substrate. Too hot or the wrong pH changes their shape."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam11-sci-plants",
+   "grade": 11,
+   "title": "Photosynthesis and respiration",
+   "topic": "Biology: plants and energy",
+   "caps": "Cambridge IGCSE Combined Science (0653): Biology (photosynthesis; limiting factors; aerobic respiration)",
+   "intention": "Today I am comparing how plants make food and how all living things release energy.",
+   "prompt": "Where does the mass of a tree come from?",
+   "lesson": [
+    {
+     "h": "Photosynthesis",
+     "say": "Plants make glucose from carbon dioxide and water, using light energy absorbed by chlorophyll. Oxygen is released.",
+     "html": "<p>carbon dioxide + water → glucose + oxygen</p><p>Needs <b>light</b> and <b>chlorophyll</b>.</p>"
+    },
+    {
+     "h": "Limiting factors",
+     "say": "The rate of photosynthesis can be limited by light intensity, carbon dioxide concentration or temperature. Increasing whichever is in shortest supply speeds it up.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Light</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Carbon dioxide</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Temperature</span></div>"
+    },
+    {
+     "h": "Aerobic respiration",
+     "say": "All living cells respire to release energy. Aerobic respiration uses glucose and oxygen and produces carbon dioxide and water. It is not the same as breathing.",
+     "html": "<p>glucose + oxygen → carbon dioxide + water</p><p>Energy is <b>released</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A greenhouse farmer adds carbon dioxide on bright days. Why?",
+    "steps": [
+     "On bright days, light is not the limiting factor.",
+     "Carbon dioxide may then limit the rate.",
+     "Adding it increases photosynthesis, so the plants grow faster."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which gas do plants take in for photosynthesis?",
+     "options": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a raw material.",
+      "Animals breathe it out.",
+      "Carbon dioxide."
+     ],
+     "explain": "Carbon dioxide is used to make glucose."
+    },
+    {
+     "type": "mcq",
+     "q": "What absorbs light energy in a leaf?",
+     "options": [
+      "Chlorophyll",
+      "Water",
+      "Starch",
+      "Glucose"
+     ],
+     "answer": 0,
+     "hints": [
+      "It makes leaves green.",
+      "Found in chloroplasts.",
+      "Chlorophyll."
+     ],
+     "explain": "Chlorophyll absorbs light."
+    },
+    {
+     "type": "mcq",
+     "q": "What are the products of aerobic respiration?",
+     "options": [
+      "Carbon dioxide and water",
+      "Glucose and oxygen",
+      "Oxygen and water",
+      "Starch and carbon dioxide"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is the reverse of photosynthesis.",
+      "Glucose and oxygen go in.",
+      "Carbon dioxide and water come out."
+     ],
+     "explain": "Respiration produces carbon dioxide and water."
+    },
+    {
+     "type": "mcq",
+     "q": "A plant is in dim light with plenty of carbon dioxide. What is the limiting factor?",
+     "options": [
+      "Light intensity",
+      "Carbon dioxide",
+      "Water",
+      "Soil"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which is in short supply?",
+      "The light is dim.",
+      "Light."
+     ],
+     "explain": "Dim light limits the rate."
+    },
+    {
+     "type": "mcq",
+     "q": "Which statement is true?",
+     "options": [
+      "Plants respire all the time, day and night",
+      "Plants only respire at night",
+      "Only animals respire",
+      "Respiration is the same as breathing"
+     ],
+     "answer": 0,
+     "hints": [
+      "All living cells need energy.",
+      "All the time.",
+      "Day and night."
+     ],
+     "explain": "All living cells respire all the time."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two word equations",
+     "Finding the limiting factor",
+     "Respiration is not breathing",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared photosynthesis and respiration, and what limits plant growth.",
+   "teacher": "Shows stating the word equations for photosynthesis and aerobic respiration, and applying limiting factors.",
+   "done": "Plants make glucose with light; every living cell respires to release energy."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam11-sci-acids",
+   "grade": 11,
+   "title": "Acids, bases and salts",
+   "topic": "Chemistry: acids and bases",
+   "caps": "Cambridge IGCSE Combined Science (0653): Chemistry (the pH scale; neutralisation; preparing and naming salts)",
+   "intention": "Today I am using the pH scale and naming salts.",
+   "prompt": "Why do people take antacids for heartburn?",
+   "lesson": [
+    {
+     "h": "The pH scale",
+     "say": "pH measures how acidic or alkaline a solution is. Below 7 is acidic, 7 is neutral, and above 7 is alkaline. Universal indicator changes colour across the scale.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Below 7: acidic</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">7: neutral</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Above 7: alkaline</span></div>"
+    },
+    {
+     "h": "Neutralisation",
+     "say": "An acid reacts with a base to make a salt and water. This is neutralisation. Farmers add lime to acidic soil for this reason.",
+     "html": "<p>acid + base → salt + water</p>"
+    },
+    {
+     "h": "Naming salts",
+     "say": "A salt's name comes from the metal in the base and the acid used. Hydrochloric acid makes chlorides, sulfuric acid makes sulfates, and nitric acid makes nitrates.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Hydrochloric: chloride</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sulfuric: sulfate</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Nitric: nitrate</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Name the salt made when sodium hydroxide reacts with hydrochloric acid.",
+    "steps": [
+     "The metal comes from the base: sodium.",
+     "Hydrochloric acid makes chlorides.",
+     "The salt is sodium chloride; water is also made."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "A solution has pH 3. What is it?",
+     "options": [
+      "Acidic",
+      "Neutral",
+      "Alkaline",
+      "Pure water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Compare it with 7.",
+      "Below 7.",
+      "Acidic."
+     ],
+     "explain": "pH 3 is below 7, so acidic."
+    },
+    {
+     "type": "mcq",
+     "q": "What are the products of neutralisation?",
+     "options": [
+      "A salt and water",
+      "An acid and a base",
+      "Oxygen and hydrogen",
+      "Carbon dioxide only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Acid + base → …",
+      "Two products.",
+      "Salt and water."
+     ],
+     "explain": "Acid + base → salt + water."
+    },
+    {
+     "type": "mcq",
+     "q": "Which salt is made from copper oxide and sulfuric acid?",
+     "options": [
+      "Copper sulfate",
+      "Copper chloride",
+      "Copper nitrate",
+      "Sulfur oxide"
+     ],
+     "answer": 0,
+     "hints": [
+      "The metal is copper.",
+      "Sulfuric acid makes…",
+      "…sulfates."
+     ],
+     "explain": "Copper oxide + sulfuric acid → copper sulfate + water."
+    },
+    {
+     "type": "mcq",
+     "q": "What pH is a neutral solution?",
+     "options": [
+      "7",
+      "0",
+      "14",
+      "1"
+     ],
+     "answer": 0,
+     "hints": [
+      "The middle of the scale.",
+      "Pure water.",
+      "7."
+     ],
+     "explain": "Neutral is pH 7."
+    },
+    {
+     "type": "mcq",
+     "q": "Why might a farmer add lime to soil?",
+     "options": [
+      "To neutralise acidic soil",
+      "To make the soil more acidic",
+      "To add salt",
+      "To kill all the plants"
+     ],
+     "answer": 0,
+     "hints": [
+      "Lime is a base.",
+      "Base + acid…",
+      "…neutralises."
+     ],
+     "explain": "Lime neutralises acidic soil so crops grow better."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pH number line",
+     "acid + base → salt + water",
+     "Matching acids to salt names",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used the pH scale and named the salts made in neutralisation.",
+   "teacher": "Shows interpreting pH, describing neutralisation and naming salts from given acids and bases.",
+   "done": "Below 7 acid, above 7 alkali. Acid + base → salt + water."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam11-sci-circuits",
+   "grade": 11,
+   "title": "Electric circuits",
+   "topic": "Physics: electricity",
+   "caps": "Cambridge IGCSE Combined Science (0653): Physics (current, potential difference and resistance; series and parallel circuits)",
+   "intention": "Today I am working out current, voltage and resistance.",
+   "prompt": "Why do the other lights stay on when one bulb in your house blows?",
+   "lesson": [
+    {
+     "h": "Current and voltage",
+     "say": "Current is the flow of charge, measured in amperes with an ammeter connected in series. Voltage, or potential difference, is measured in volts with a voltmeter connected in parallel.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Current: ammeter, in series</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Voltage: voltmeter, in parallel</span></div>"
+    },
+    {
+     "h": "Resistance",
+     "say": "Resistance opposes the current. Voltage equals current times resistance, so resistance is voltage divided by current, measured in ohms.",
+     "html": "<p>V = I × R, so R = V ÷ I</p>"
+    },
+    {
+     "h": "Series and parallel",
+     "say": "In a series circuit, the current is the same everywhere and the voltages add up. In a parallel circuit, each branch gets the full voltage, and the currents in the branches add up.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Series: same current</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Parallel: same voltage</span></div>"
+    }
+   ],
+   "example": {
+    "q": "A lamp has 6 V across it and 0.5 A through it. Find its resistance.",
+    "steps": [
+     "R = V ÷ I.",
+     "R = 6 ÷ 0.5.",
+     "R = 12 Ω."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A resistor has 12 V across it and 3 A through it. What is its resistance, in ohms?",
+     "answer": "4",
+     "options": [
+      "4",
+      "36",
+      "15",
+      "0.25"
+     ],
+     "hints": [
+      "R = V ÷ I.",
+      "12 ÷ 3.",
+      "4."
+     ],
+     "explain": "12 ÷ 3 = 4 Ω."
+    },
+    {
+     "type": "num",
+     "q": "A 10 Ω resistor carries 2 A. What is the voltage across it, in volts?",
+     "answer": "20",
+     "options": [
+      "20",
+      "5",
+      "12",
+      "0.2"
+     ],
+     "hints": [
+      "V = I × R.",
+      "2 × 10.",
+      "20."
+     ],
+     "explain": "2 × 10 = 20 V."
+    },
+    {
+     "type": "mcq",
+     "q": "How is an ammeter connected?",
+     "options": [
+      "In series",
+      "In parallel",
+      "Across the battery only",
+      "It isn't connected"
+     ],
+     "answer": 0,
+     "hints": [
+      "It measures the flow through the circuit.",
+      "The current must go through it.",
+      "In series."
+     ],
+     "explain": "An ammeter goes in series so the current passes through it."
+    },
+    {
+     "type": "mcq",
+     "q": "Two identical lamps are in parallel with a 6 V battery. What is the voltage across each?",
+     "options": [
+      "6 V",
+      "3 V",
+      "12 V",
+      "0 V"
+     ],
+     "answer": 0,
+     "hints": [
+      "In parallel, each branch gets…",
+      "…the full voltage.",
+      "6 V."
+     ],
+     "explain": "Each parallel branch gets the full 6 V."
+    },
+    {
+     "type": "mcq",
+     "q": "In a series circuit, if one lamp breaks…",
+     "options": [
+      "all the lamps go out",
+      "only that lamp goes out",
+      "the others get brighter",
+      "nothing happens"
+     ],
+     "answer": 0,
+     "hints": [
+      "There is only one path.",
+      "A break stops the current.",
+      "Everywhere."
+     ],
+     "explain": "A break in the only path stops the current everywhere."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "V = I × R",
+     "Where to connect the meters",
+     "Series and parallel rules",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out current, voltage and resistance, and compared series and parallel circuits.",
+   "teacher": "Shows applying V = IR, connecting meters correctly, and describing current and voltage in series and parallel circuits.",
+   "done": "V = I × R. Series shares the voltage; parallel shares the current."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam11-sci-waves",
+   "grade": 11,
+   "title": "Properties of waves",
+   "topic": "Physics: waves",
+   "caps": "Cambridge IGCSE Combined Science (0653): Physics (transverse and longitudinal waves; amplitude, wavelength and frequency; the wave equation)",
+   "intention": "Today I am describing waves and using the wave equation.",
+   "prompt": "How does sound reach your ears?",
+   "lesson": [
+    {
+     "h": "Describing waves",
+     "say": "Waves transfer energy without transferring matter. Amplitude is the height from the middle to a peak. Wavelength is the distance from one peak to the next. Frequency is the number of waves each second, in hertz.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Amplitude</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wavelength</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Frequency (Hz)</span></div>"
+    },
+    {
+     "h": "Transverse and longitudinal",
+     "say": "In transverse waves, like light and water waves, the vibrations are at right angles to the direction the wave travels. In longitudinal waves, like sound, the vibrations are along the direction of travel.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Transverse: light, water</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Longitudinal: sound</span></div>"
+    },
+    {
+     "h": "The wave equation",
+     "say": "Wave speed equals frequency times wavelength. A wave with frequency 5 hertz and wavelength 2 metres travels at 10 metres per second.",
+     "html": "<p>v = f × λ</p>"
+    }
+   ],
+   "example": {
+    "q": "A sound wave has frequency 170 Hz and wavelength 2 m. Find its speed.",
+    "steps": [
+     "v = f × λ.",
+     "v = 170 × 2.",
+     "v = 340 m/s."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What do waves transfer?",
+     "options": [
+      "Energy, not matter",
+      "Matter, not energy",
+      "Both energy and matter",
+      "Neither"
+     ],
+     "answer": 0,
+     "hints": [
+      "A cork on a ripple bobs up and down.",
+      "It doesn't travel with the wave.",
+      "Energy only."
+     ],
+     "explain": "Waves carry energy; the material just vibrates in place."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a longitudinal wave?",
+     "options": [
+      "Sound",
+      "Light",
+      "A water ripple",
+      "A radio wave"
+     ],
+     "answer": 0,
+     "hints": [
+      "Vibrations along the direction of travel.",
+      "Compressions and rarefactions.",
+      "Sound."
+     ],
+     "explain": "Sound is longitudinal; the others are transverse."
+    },
+    {
+     "type": "num",
+     "q": "A wave has frequency 4 Hz and wavelength 3 m. What is its speed, in m/s?",
+     "answer": "12",
+     "options": [
+      "12",
+      "7",
+      "1.33",
+      "0.75"
+     ],
+     "hints": [
+      "v = f × λ.",
+      "4 × 3.",
+      "12."
+     ],
+     "explain": "4 × 3 = 12 m/s."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the frequency of a wave?",
+     "options": [
+      "The number of waves passing a point each second",
+      "The height of a wave",
+      "The distance between peaks",
+      "The speed of the wave"
+     ],
+     "answer": 0,
+     "hints": [
+      "Measured in hertz.",
+      "How often.",
+      "Waves per second."
+     ],
+     "explain": "Frequency is waves per second (Hz)."
+    },
+    {
+     "type": "num",
+     "q": "A water wave travels at 6 m/s with wavelength 2 m. What is its frequency, in Hz?",
+     "answer": "3",
+     "options": [
+      "3",
+      "12",
+      "8",
+      "4"
+     ],
+     "hints": [
+      "f = v ÷ λ.",
+      "6 ÷ 2.",
+      "3."
+     ],
+     "explain": "6 ÷ 2 = 3 Hz."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Labelling a wave",
+     "Transverse or longitudinal",
+     "v = f × λ",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child described waves and used the wave equation.",
+   "teacher": "Shows describing wave properties, distinguishing transverse and longitudinal waves, and applying v = fλ.",
+   "done": "Waves carry energy. v = f × λ."
   }
  ],
  "words": {

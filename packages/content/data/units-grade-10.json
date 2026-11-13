@@ -2313,6 +2313,2064 @@
    "parent": "Your child learned about study options after school and ways to fund them, including NSFAS, bursaries and learnerships.",
    "teacher": "Shows knowledge of post-school pathways, funding options, application timing and avoiding scams.",
    "done": "Research funding early: NSFAS, bursaries, scholarships and learnerships."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam10-eng-meaning",
+   "grade": 10,
+   "title": "Explicit and implicit meaning",
+   "topic": "Reading",
+   "category": "Communication",
+   "caps": "Cambridge IGCSE First Language English (0500): Reading (explicit and implicit meanings and attitudes)",
+   "intention": "Today I am finding what a text says directly and what it suggests.",
+   "prompt": "How can you tell how someone feels without them saying it?",
+   "passage": "<div class=\"passage-text\"><p><b>The Storm</b> <span class=\"muted\">(a 2to.iQ passage)</span></p>\n<p>By four o'clock the sky over the township had turned the colour of a bruise. Mama Dlamini stopped sweeping and stood very still, the broom held like a spear. Somewhere a dog began to bark, then thought better of it.</p>\n<p>The first drops were fat and slow, each one landing on the dust with a soft cough. Then the wind arrived, slamming doors that nobody had left open, and the rain came all at once, as if someone had tipped the sky over.</p>\n<p>Lindiwe ran for the washing line. She was laughing, though she could not have said why. Her mother's voice followed her, sharp and worried, but the thunder swallowed it whole.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the passage",
+     "say": "Read the passage, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>The Storm</b> <span class=\"muted\">(a 2to.iQ passage)</span></p>\n<p>By four o'clock the sky over the township had turned the colour of a bruise. Mama Dlamini stopped sweeping and stood very still, the broom held like a spear. Somewhere a dog began to bark, then thought better of it.</p>\n<p>The first drops were fat and slow, each one landing on the dust with a soft cough. Then the wind arrived, slamming doors that nobody had left open, and the rain came all at once, as if someone had tipped the sky over.</p>\n<p>Lindiwe ran for the washing line. She was laughing, though she could not have said why. Her mother's voice followed her, sharp and worried, but the thunder swallowed it whole.</p></div>"
+    },
+    {
+     "h": "Explicit meaning",
+     "say": "Explicit information is stated directly in the text. The passage tells us plainly that Lindiwe ran for the washing line.",
+     "html": "<p>Explicit: <b>stated</b>. Find it and quote it.</p>"
+    },
+    {
+     "h": "Implicit meaning",
+     "say": "Implicit meaning is suggested, not stated. Mama Dlamini holds the broom like a spear, which suggests she is tense and ready, as if facing an enemy.",
+     "html": "<p>Implicit: <b>inferred</b> from clues. Explain the clue.</p>"
+    }
+   ],
+   "example": {
+    "q": "What does 'her mother's voice followed her, sharp and worried' suggest?",
+    "steps": [
+     "Sharp suggests a raised, urgent tone.",
+     "Worried tells us how the mother feels.",
+     "Implicitly, the mother thinks Lindiwe may be in danger in the storm."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "At what time had the sky changed colour?",
+     "options": [
+      "By four o'clock",
+      "At noon",
+      "At midnight",
+      "The passage doesn't say"
+     ],
+     "answer": 0,
+     "hints": [
+      "This is explicit.",
+      "Look at the first sentence.",
+      "Four o'clock."
+     ],
+     "explain": "The first sentence says 'By four o'clock'."
+    },
+    {
+     "type": "mcq",
+     "q": "What is Mama Dlamini doing when the passage begins?",
+     "options": [
+      "Sweeping",
+      "Cooking",
+      "Hanging washing",
+      "Sleeping"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is stated directly.",
+      "She stopped doing something.",
+      "She stopped sweeping."
+     ],
+     "explain": "She 'stopped sweeping'."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the writer say the dog 'thought better of it'?",
+     "options": [
+      "To suggest that even the dog sensed something frightening",
+      "Because the dog was asleep",
+      "To show the dog was clever",
+      "Because the dog ran away"
+     ],
+     "answer": 0,
+     "hints": [
+      "The dog starts barking, then stops.",
+      "Why might an animal go quiet?",
+      "It senses danger."
+     ],
+     "explain": "It suggests a tense, threatening atmosphere that even the dog feels."
+    },
+    {
+     "type": "mcq",
+     "q": "What does Lindiwe's laughter suggest about her?",
+     "options": [
+      "She finds the storm exciting",
+      "She is frightened",
+      "She is angry with her mother",
+      "She is bored"
+     ],
+     "answer": 0,
+     "hints": [
+      "She laughs while running in the rain.",
+      "Compare her with her mother.",
+      "Excited, not afraid."
+     ],
+     "explain": "Unlike her mother, she finds the storm thrilling."
+    },
+    {
+     "type": "mcq",
+     "q": "Which of these is implicit rather than explicit?",
+     "options": [
+      "Mama Dlamini is uneasy about the storm",
+      "Lindiwe ran for the washing line",
+      "The first drops were fat and slow",
+      "A dog began to bark"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is never stated directly?",
+      "Three are written in the passage.",
+      "Her unease is suggested by the spear image."
+     ],
+     "explain": "Her unease is inferred; the others are stated."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding the exact words",
+     "Explaining the clue",
+     "Reading it aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found what a story states directly and what it suggests.",
+   "teacher": "Shows retrieving explicit information and inferring implicit meanings and attitudes, with reference to the text.",
+   "done": "Explicit: stated. Implicit: suggested by clues you can explain."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam10-eng-effects",
+   "grade": 10,
+   "title": "Writer's effects",
+   "topic": "Reading: language analysis",
+   "category": "Creativity",
+   "caps": "Cambridge IGCSE First Language English (0500): Reading (how writers achieve effects and influence readers)",
+   "intention": "Today I am explaining how a writer's words create effects.",
+   "prompt": "Which words in a story have ever given you goosebumps?",
+   "passage": "<div class=\"passage-text\"><p><b>The Storm</b> <span class=\"muted\">(a 2to.iQ passage)</span></p>\n<p>By four o'clock the sky over the township had turned the colour of a bruise. Mama Dlamini stopped sweeping and stood very still, the broom held like a spear. Somewhere a dog began to bark, then thought better of it.</p>\n<p>The first drops were fat and slow, each one landing on the dust with a soft cough. Then the wind arrived, slamming doors that nobody had left open, and the rain came all at once, as if someone had tipped the sky over.</p>\n<p>Lindiwe ran for the washing line. She was laughing, though she could not have said why. Her mother's voice followed her, sharp and worried, but the thunder swallowed it whole.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the passage",
+     "say": "Read the passage, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>The Storm</b> <span class=\"muted\">(a 2to.iQ passage)</span></p>\n<p>By four o'clock the sky over the township had turned the colour of a bruise. Mama Dlamini stopped sweeping and stood very still, the broom held like a spear. Somewhere a dog began to bark, then thought better of it.</p>\n<p>The first drops were fat and slow, each one landing on the dust with a soft cough. Then the wind arrived, slamming doors that nobody had left open, and the rain came all at once, as if someone had tipped the sky over.</p>\n<p>Lindiwe ran for the washing line. She was laughing, though she could not have said why. Her mother's voice followed her, sharp and worried, but the thunder swallowed it whole.</p></div>"
+    },
+    {
+     "h": "Imagery",
+     "say": "Writers choose images to make us see and feel. The sky the colour of a bruise suggests something dark, painful and threatening.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">colour of a bruise</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">dark, painful</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">threat</span></div>"
+    },
+    {
+     "h": "Explaining effects",
+     "say": "To explain an effect, quote the words, say what they literally mean, then what they suggest, and how they make the reader feel.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Quote</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Literal meaning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Suggestion</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Effect on the reader</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Explain the effect of 'as if someone had tipped the sky over'.",
+    "steps": [
+     "Literally, a huge amount of rain fell suddenly.",
+     "Tipping a container suggests all the water pouring out at once.",
+     "It makes the storm feel sudden and overwhelming."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "'Each one landing on the dust with a soft cough.' What technique is this?",
+     "options": [
+      "Personification",
+      "Alliteration",
+      "A rhetorical question",
+      "A statistic"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can a raindrop cough?",
+      "A human action is given to a thing.",
+      "Personification."
+     ],
+     "explain": "Coughing is a human action given to the raindrops."
+    },
+    {
+     "type": "mcq",
+     "q": "What does 'slamming doors that nobody had left open' suggest about the wind?",
+     "options": [
+      "It is so strong it seems to force its way in",
+      "It is gentle",
+      "People left the doors open",
+      "It is not windy"
+     ],
+     "answer": 0,
+     "hints": [
+      "Nobody left them open…",
+      "…yet they slam.",
+      "The wind forces them."
+     ],
+     "explain": "The wind seems powerful enough to force closed doors."
+    },
+    {
+     "type": "mcq",
+     "q": "What effect does 'the thunder swallowed it whole' create?",
+     "options": [
+      "The thunder is so loud the mother can't be heard",
+      "The mother is eaten",
+      "The thunder is quiet",
+      "Lindiwe ignores her mother"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is swallowed?",
+      "The mother's voice.",
+      "It disappears in the noise."
+     ],
+     "explain": "The thunder drowns out her voice completely."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the best first step when explaining a writer's effect?",
+     "options": [
+      "Quote the exact words",
+      "Summarise the whole story",
+      "Give your opinion of the weather",
+      "Count the sentences"
+     ],
+     "answer": 0,
+     "hints": [
+      "Start with evidence.",
+      "Which words?",
+      "Quote them."
+     ],
+     "explain": "Start by quoting the exact words you will analyse."
+    },
+    {
+     "type": "mcq",
+     "q": "Why might the writer compare the broom to a spear?",
+     "options": [
+      "To show Mama Dlamini is ready to face the storm like a warrior",
+      "Because brooms are weapons",
+      "To describe the colour of the broom",
+      "To show she is lazy"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is a spear used for?",
+      "Facing an enemy.",
+      "The storm is the enemy."
+     ],
+     "explain": "It presents her as a warrior bracing for the storm."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Quoting first",
+     "Literal, then suggested meaning",
+     "Thinking about the reader's feelings",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explained how a writer's word choices create atmosphere and feeling.",
+   "teacher": "Shows analysing imagery and figurative language, explaining literal and connotative meanings and their effect on the reader.",
+   "done": "Quote, explain the literal meaning, then what it suggests and how it makes you feel."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam10-eng-summary",
+   "grade": 10,
+   "title": "Summary writing",
+   "topic": "Reading and writing: summary",
+   "category": "Planning and Organisation",
+   "caps": "Cambridge IGCSE First Language English (0500): Reading and writing (selecting relevant information and summarising it in your own words)",
+   "intention": "Today I am selecting the main points and summarising them.",
+   "prompt": "How would you tell a friend about a film in three sentences?",
+   "passage": "<div class=\"passage-text\"><p><b>Saving water at school</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Last year our school used more water than any other in the district. Some of this was bad luck: a pipe burst under the netball court and went unnoticed for weeks. But much of it was habit. Taps were left running during break, and the gardens were watered at midday, when most of the water simply evaporated.</p>\n<p>This year the Grade 10s took charge. They fitted cheap push-taps in the bathrooms, so a tap turns itself off after a few seconds. They moved garden watering to early morning. They also put up a chart outside the office showing the meter reading every Friday, which turned saving water into a competition between classes.</p>\n<p>The result surprised everyone. In one term, water use fell by almost a third, and the money saved paid for new library books.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the passage",
+     "say": "Read the passage, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Saving water at school</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Last year our school used more water than any other in the district. Some of this was bad luck: a pipe burst under the netball court and went unnoticed for weeks. But much of it was habit. Taps were left running during break, and the gardens were watered at midday, when most of the water simply evaporated.</p>\n<p>This year the Grade 10s took charge. They fitted cheap push-taps in the bathrooms, so a tap turns itself off after a few seconds. They moved garden watering to early morning. They also put up a chart outside the office showing the meter reading every Friday, which turned saving water into a competition between classes.</p>\n<p>The result surprised everyone. In one term, water use fell by almost a third, and the money saved paid for new library books.</p></div>"
+    },
+    {
+     "h": "Selecting points",
+     "say": "A summary only includes points that answer the question. If the question asks how the school saved water, leave out the burst pipe, which explains the problem, not the solution.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Read the question</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mark relevant points</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Leave out extras</span></div>"
+    },
+    {
+     "h": "Own words, concisely",
+     "say": "Write the points in your own words, in a smooth paragraph, within the word limit. Don't add your own opinion.",
+     "html": "<p>Self-closing taps, early-morning watering, a weekly class competition.</p>"
+    }
+   ],
+   "example": {
+    "q": "Summarise how the Grade 10s saved water, in one sentence.",
+    "steps": [
+     "Point 1: taps that switch off by themselves.",
+     "Point 2: watering early, so less evaporates. Point 3: a weekly chart that made it a competition.",
+     "They fitted self-closing taps, watered the gardens early and made saving water a class competition with a weekly meter chart."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "The question asks how the school saved water. Which point belongs in the summary?",
+     "options": [
+      "Push-taps were fitted in the bathrooms",
+      "A pipe burst under the netball court",
+      "The school used the most water in the district",
+      "New library books were bought"
+     ],
+     "answer": 0,
+     "hints": [
+      "Only solutions belong.",
+      "Which one is something they did to save water?",
+      "Push-taps."
+     ],
+     "explain": "Push-taps are a way of saving water; the others are background or results."
+    },
+    {
+     "type": "mcq",
+     "q": "Why was watering at midday wasteful?",
+     "options": [
+      "Most of the water evaporated",
+      "The gardens were closed",
+      "Learners were in class",
+      "The taps were broken"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is in the first paragraph.",
+      "What happens to water in the midday heat?",
+      "Evaporation."
+     ],
+     "explain": "Most of the water evaporated."
+    },
+    {
+     "type": "mcq",
+     "q": "Which point should be left out of a summary of the solutions?",
+     "options": [
+      "The burst pipe",
+      "Early-morning watering",
+      "The weekly meter chart",
+      "Push-taps"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is not a solution?",
+      "It is part of the problem.",
+      "The pipe."
+     ],
+     "explain": "The burst pipe is part of the problem, not the solution."
+    },
+    {
+     "type": "mcq",
+     "q": "Which version is in your own words and concise?",
+     "options": [
+      "Watering moved to early morning to reduce evaporation.",
+      "They moved garden watering to early morning.",
+      "The gardens, which had previously been watered at midday when the water evaporated, were now watered in the morning instead.",
+      "I think watering is good."
+     ],
+     "answer": 0,
+     "hints": [
+      "One copies the text exactly.",
+      "One is too long, one is opinion.",
+      "Short and in your own words."
+     ],
+     "explain": "It is brief, accurate and not copied."
+    },
+    {
+     "type": "mcq",
+     "q": "What should a summary NOT include?",
+     "options": [
+      "Your own opinion",
+      "The main points",
+      "Your own words",
+      "A clear paragraph"
+     ],
+     "answer": 0,
+     "hints": [
+      "A summary reports the text.",
+      "It doesn't comment on it.",
+      "No opinions."
+     ],
+     "explain": "A summary reports the writer's points, not your views."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Re-reading the question",
+     "Leaving out extras",
+     "Using my own words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child picked out the main points of an article and summarised them concisely.",
+   "teacher": "Shows selecting relevant information for a specific focus and summarising concisely in own words.",
+   "done": "Answer the question, keep only relevant points, use your own words and no opinions."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam10-eng-letter",
+   "grade": 10,
+   "title": "Directed writing: a persuasive letter",
+   "topic": "Writing: directed writing",
+   "category": "Communication",
+   "caps": "Cambridge IGCSE First Language English (0500): Directed writing (using and developing ideas from reading; writing for a specific purpose, audience and register)",
+   "intention": "Today I am writing to persuade, using ideas from a text.",
+   "prompt": "What would you ask your principal to change?",
+   "lesson": [
+    {
+     "h": "Purpose, audience, register",
+     "say": "Before you write, ask: why am I writing, who will read it, and how formal should I be? A letter to a principal needs a polite, formal register.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Purpose</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Audience</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Register</span></div>"
+    },
+    {
+     "h": "Using the reading text",
+     "say": "Directed writing asks you to use ideas from a passage. Select the ideas, then develop them with your own reasons and examples, rather than copying.",
+     "html": "<p>Use the ideas; don't copy the sentences.</p>"
+    },
+    {
+     "h": "Persuasive techniques",
+     "say": "Persuade with a clear opening, reasons in a logical order, evidence, a polite answer to objections, and a confident call to action.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Clear aim</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reasons and evidence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Answer objections</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Call to action</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Write an opening sentence for a letter to your principal asking for push-taps.",
+    "steps": [
+     "Purpose: to persuade. Audience: the principal. Register: formal.",
+     "State the request politely and clearly.",
+     "'I am writing to ask whether the school could install push-taps, a simple change that would save both water and money.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which greeting suits a formal letter to a principal?",
+     "options": [
+      "Dear Mr Naidoo,",
+      "Hey Naidoo!",
+      "Yo, sir",
+      "To whoever"
+     ],
+     "answer": 0,
+     "hints": [
+      "Formal register.",
+      "Use their title and name.",
+      "Dear Mr…"
+     ],
+     "explain": "'Dear Mr Naidoo,' is polite and formal."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the main purpose of a persuasive letter?",
+     "options": [
+      "To convince the reader to agree or act",
+      "To describe a place",
+      "To tell a story",
+      "To list facts only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Persuade means…",
+      "…convince.",
+      "To make them act."
+     ],
+     "explain": "Persuasive writing aims to convince."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best way to answer an objection?",
+     "options": [
+      "'Some may worry about the cost, but push-taps are cheap and soon pay for themselves.'",
+      "'Anyone who disagrees is wrong.'",
+      "Ignore all objections.",
+      "'Cost doesn't matter.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "Acknowledge the worry.",
+      "Then give a reason.",
+      "Stay polite."
+     ],
+     "explain": "It respects the concern, then answers it with a reason."
+    },
+    {
+     "type": "mcq",
+     "q": "Which ending is a clear call to action?",
+     "options": [
+      "'Could we discuss this at the next staff meeting?'",
+      "'That is all.'",
+      "'Water is wet.'",
+      "'Bye.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "What should the reader do next?",
+      "A specific, polite request.",
+      "The meeting."
+     ],
+     "explain": "It asks for a specific next step."
+    },
+    {
+     "type": "mcq",
+     "q": "When using ideas from a reading passage, you should…",
+     "options": [
+      "develop them in your own words",
+      "copy whole sentences",
+      "ignore the passage",
+      "only use the title"
+     ],
+     "answer": 0,
+     "hints": [
+      "Examiners reward development.",
+      "Not copying.",
+      "Your own words."
+     ],
+     "explain": "Select ideas and develop them in your own words."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Thinking about the reader",
+     "Answering objections",
+     "Ending with a clear request",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child planned a formal persuasive letter using ideas from an article.",
+   "teacher": "Shows adapting register for purpose and audience, developing ideas from reading, and using persuasive structure.",
+   "done": "Know your purpose and reader, develop the ideas, answer objections, end with a request."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam10-eng-describe",
+   "grade": 10,
+   "title": "Descriptive writing",
+   "topic": "Writing: composition",
+   "category": "Creativity",
+   "caps": "Cambridge IGCSE First Language English (0500): Composition (descriptive writing: vocabulary, imagery, structure and atmosphere)",
+   "intention": "Today I am writing description that creates a vivid picture.",
+   "prompt": "What place do you know so well you could describe it with your eyes closed?",
+   "lesson": [
+    {
+     "h": "Show, don't tell",
+     "say": "Description creates a picture in the reader's mind. Instead of saying the market was busy, show it: hawkers calling, the smell of roasting mielies, people squeezing past.",
+     "html": "<p><b>Tell:</b> The market was busy.</p><p><b>Show:</b> Hawkers sang their prices over the hiss of the grills.</p>"
+    },
+    {
+     "h": "All the senses",
+     "say": "Use more than sight. Sounds, smells, textures and even tastes make a place feel real.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">See</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Hear</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Smell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Touch</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Taste</span></div>"
+    },
+    {
+     "h": "Structure",
+     "say": "Description still needs a structure. You might move through space, from the gate to the centre, or through time, from dawn to dusk, or zoom from a wide view to a small detail.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wide view</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Closer</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">One small detail</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Improve: 'It was a hot day.'",
+    "steps": [
+     "Choose a sense: touch.",
+     "Show the effect of the heat instead of naming it.",
+     "'The tar softened under my shoes, and even the shade felt like breath on my neck.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which sentence shows rather than tells?",
+     "options": [
+      "Steam curled from the pot as the spoon knocked against its sides.",
+      "The food was nice.",
+      "It was a good kitchen.",
+      "Cooking happened."
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one lets you see and hear it?",
+      "Look for specific details.",
+      "Steam, spoon, knocking."
+     ],
+     "explain": "Specific sights and sounds let the reader experience the scene."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sense does 'the sour tang of overripe mangoes' appeal to?",
+     "options": [
+      "Smell or taste",
+      "Hearing",
+      "Touch",
+      "Sight only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sour and tang.",
+      "You can smell or taste these.",
+      "Smell or taste."
+     ],
+     "explain": "Sour and tang appeal to smell and taste."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a good structure for a descriptive piece?",
+     "options": [
+      "Zooming from a wide view to a small detail",
+      "Listing facts in a table",
+      "Writing the conclusion first",
+      "Using only dialogue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Description moves the reader's eye.",
+      "Like a camera.",
+      "Wide to close."
+     ],
+     "explain": "Zooming in guides the reader like a camera."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should description avoid long strings of adjectives?",
+     "options": [
+      "It can feel cluttered; precise verbs and nouns often work better",
+      "Adjectives are not allowed",
+      "It makes writing too short",
+      "Examiners can't read them"
+     ],
+     "answer": 0,
+     "hints": [
+      "'The big, old, tall, grey, sad tree'…",
+      "…feels heavy.",
+      "Precise words are stronger."
+     ],
+     "explain": "One precise verb or noun often beats several adjectives."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the main aim of descriptive writing?",
+     "options": [
+      "To create a vivid picture and atmosphere",
+      "To argue a point",
+      "To give instructions",
+      "To summarise a text"
+     ],
+     "answer": 0,
+     "hints": [
+      "It isn't arguing or instructing.",
+      "It paints a scene.",
+      "Picture and atmosphere."
+     ],
+     "explain": "Description creates a picture and a mood."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Showing, not telling",
+     "Using different senses",
+     "Planning a structure",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised descriptive writing using the senses and a clear structure.",
+   "teacher": "Shows using precise vocabulary, sensory imagery and deliberate structure to create atmosphere.",
+   "done": "Show with the senses, choose precise words, and give the description a shape."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam10-standard-form",
+   "grade": 10,
+   "title": "Standard form",
+   "topic": "Number",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge IGCSE Mathematics (0580): Number (standard form; calculating with numbers in standard form)",
+   "intention": "Today I am writing very large and very small numbers in standard form.",
+   "prompt": "Where might you meet a very large or very small number?",
+   "lesson": [
+    {
+     "h": "Big numbers",
+     "say": "Standard form writes a number as a number from 1 up to, but not including, 10, multiplied by a power of 10. 4 500 000 is 4.5 times 10 to the power 6.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4 500 000</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4.5 × 10⁶</span></div><p>The first part must be at least 1 and less than 10.</p>"
+    },
+    {
+     "h": "Small numbers",
+     "say": "For numbers less than 1, the power of 10 is negative. 0.00032 is 3.2 times 10 to the power minus 4.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">0.00032</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3.2 × 10⁻⁴</span></div>"
+    },
+    {
+     "h": "Calculating",
+     "say": "To multiply, multiply the first parts and add the powers. Then check the answer is still in standard form.",
+     "html": "<p>(3 × 10⁴) × (5 × 10³) = 15 × 10⁷ = <b>1.5 × 10⁸</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Write 0.000067 in standard form.",
+    "steps": [
+     "Move the decimal point to get 6.7.",
+     "It moved 5 places.",
+     "0.000067 = 6.7 × 10⁻⁵."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Write 72 000 in standard form.",
+     "options": [
+      "7.2 × 10⁴",
+      "72 × 10³",
+      "7.2 × 10³",
+      "0.72 × 10⁵"
+     ],
+     "answer": 0,
+     "hints": [
+      "The first part must be between 1 and 10.",
+      "7.2, then count the places.",
+      "4 places."
+     ],
+     "explain": "72 000 = 7.2 × 10 000 = 7.2 × 10⁴."
+    },
+    {
+     "type": "mcq",
+     "q": "Write 0.0059 in standard form.",
+     "options": [
+      "5.9 × 10⁻³",
+      "5.9 × 10³",
+      "59 × 10⁻⁴",
+      "5.9 × 10⁻²"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is less than 1, so the power is negative.",
+      "Move the point to get 5.9.",
+      "3 places."
+     ],
+     "explain": "0.0059 = 5.9 × 10⁻³."
+    },
+    {
+     "type": "num",
+     "q": "Write 3.4 × 10³ as an ordinary number.",
+     "answer": "3 400",
+     "options": [
+      "3 400",
+      "34 000",
+      "340",
+      "0.0034"
+     ],
+     "hints": [
+      "10³ = 1 000.",
+      "3.4 × 1 000.",
+      "3 400."
+     ],
+     "explain": "3.4 × 1 000 = 3 400."
+    },
+    {
+     "type": "mcq",
+     "q": "Work out (2 × 10⁵) × (4 × 10³).",
+     "options": [
+      "8 × 10⁸",
+      "8 × 10¹⁵",
+      "6 × 10⁸",
+      "8 × 10²"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply 2 × 4.",
+      "Add the powers: 5 + 3.",
+      "8 × 10⁸."
+     ],
+     "explain": "2 × 4 = 8 and 10⁵ × 10³ = 10⁸."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number is NOT in standard form?",
+     "options": [
+      "12 × 10⁴",
+      "1.2 × 10⁵",
+      "9.9 × 10⁻²",
+      "1 × 10⁶"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check each first part.",
+      "Is it from 1 to less than 10?",
+      "12 is too big."
+     ],
+     "explain": "12 is not less than 10, so 12 × 10⁴ should be 1.2 × 10⁵."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Counting the places",
+     "Checking the first part is between 1 and 10",
+     "Adding the powers",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child wrote very large and very small numbers in standard form, and calculated with them.",
+   "teacher": "Shows converting to and from standard form, including negative powers, and multiplying in standard form.",
+   "done": "Standard form: a number from 1 to less than 10, times a power of 10."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam10-simultaneous",
+   "grade": 10,
+   "title": "Simultaneous equations",
+   "topic": "Algebra",
+   "category": "Problem Solving",
+   "caps": "Cambridge IGCSE Mathematics (0580): Algebra and graphs (solving simultaneous linear equations by elimination and substitution)",
+   "intention": "Today I am solving two equations with two unknowns.",
+   "prompt": "Where might two facts together tell you two unknown prices?",
+   "lesson": [
+    {
+     "h": "Two unknowns",
+     "say": "Simultaneous equations are two equations that are both true at the same time. You need two equations to find two unknowns.",
+     "html": "<p>x + y = 10 and x − y = 4</p>"
+    },
+    {
+     "h": "Elimination",
+     "say": "Add or subtract the equations to remove one unknown. Adding x plus y equals 10 to x minus y equals 4 gives 2x equals 14, so x is 7.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Add: 2x = 14</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x = 7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">y = 3</span></div>"
+    },
+    {
+     "h": "Substitution and checking",
+     "say": "You can also make one unknown the subject and substitute it into the other equation. Always check your answer in both equations.",
+     "html": "<p>Check: 7 + 3 = 10 ✓ and 7 − 3 = 4 ✓</p>"
+    }
+   ],
+   "example": {
+    "q": "Solve 2x + y = 11 and x + y = 7.",
+    "steps": [
+     "Subtract the second equation from the first: x = 4.",
+     "Substitute: 4 + y = 7, so y = 3.",
+     "Check: 2(4) + 3 = 11 ✓."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Solve x + y = 12 and x − y = 2.",
+     "options": [
+      "x = 7, y = 5",
+      "x = 5, y = 7",
+      "x = 6, y = 6",
+      "x = 10, y = 2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add the equations.",
+      "2x = 14.",
+      "x = 7, then y = 5."
+     ],
+     "explain": "2x = 14, so x = 7 and y = 5. Check: 7 − 5 = 2 ✓."
+    },
+    {
+     "type": "num",
+     "q": "If 3x + y = 14 and x + y = 6, what is x?",
+     "answer": "4",
+     "options": [
+      "4",
+      "2",
+      "8",
+      "6"
+     ],
+     "hints": [
+      "Subtract the second from the first.",
+      "2x = 8.",
+      "x = 4."
+     ],
+     "explain": "2x = 8, so x = 4."
+    },
+    {
+     "type": "num",
+     "q": "Using x = 4 and x + y = 6, what is y?",
+     "answer": "2",
+     "options": [
+      "2",
+      "10",
+      "4",
+      "6"
+     ],
+     "hints": [
+      "Substitute x = 4.",
+      "4 + y = 6.",
+      "y = 2."
+     ],
+     "explain": "4 + y = 6, so y = 2."
+    },
+    {
+     "type": "mcq",
+     "q": "To eliminate y from 2x + 3y = 13 and 4x − 3y = 5, you should…",
+     "options": [
+      "add the equations",
+      "subtract the equations",
+      "multiply both by 3",
+      "divide by y"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the y terms: +3y and −3y.",
+      "They cancel when added.",
+      "Add."
+     ],
+     "explain": "+3y and −3y cancel when you add."
+    },
+    {
+     "type": "mcq",
+     "q": "Two pens and a ruler cost $5. One pen and a ruler cost $3.50. How much is one pen?",
+     "options": [
+      "$1.50",
+      "$2",
+      "$3.50",
+      "$1"
+     ],
+     "answer": 0,
+     "hints": [
+      "2p + r = 5 and p + r = 3.50.",
+      "Subtract the equations.",
+      "p = 1.50."
+     ],
+     "explain": "Subtracting gives p = $1.50."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Choosing whether to add or subtract",
+     "Substituting back",
+     "Checking in both equations",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child solved pairs of equations with two unknowns.",
+   "teacher": "Shows solving simultaneous linear equations by elimination and substitution, and checking solutions.",
+   "done": "Remove one unknown, solve, substitute back, then check."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam10-straight-lines",
+   "grade": 10,
+   "title": "Straight-line graphs",
+   "topic": "Coordinate geometry",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge IGCSE Mathematics (0580): Coordinate geometry (gradient; y = mx + c; parallel lines)",
+   "intention": "Today I am finding gradients and equations of straight lines.",
+   "prompt": "What does steepness mean on a hill or a graph?",
+   "lesson": [
+    {
+     "h": "y = mx + c",
+     "say": "Every straight line, except a vertical one, can be written as y equals m x plus c. m is the gradient, how steep the line is. c is where it crosses the y-axis.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m: gradient</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">c: y-intercept</span></div>"
+    },
+    {
+     "h": "Finding the gradient",
+     "say": "The gradient is the change in y divided by the change in x between two points. From 1, 3 to 3, 7, y goes up 4 while x goes up 2, so the gradient is 2.",
+     "html": "<p>gradient = (y₂ − y₁) ÷ (x₂ − x₁) = (7 − 3) ÷ (3 − 1) = <b>2</b></p>"
+    },
+    {
+     "h": "Parallel lines",
+     "say": "Parallel lines have the same gradient. A negative gradient means the line goes down from left to right.",
+     "html": "<p>y = 2x + 1 and y = 2x − 5 are <b>parallel</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Find the equation of the line through (0, −1) with gradient 3.",
+    "steps": [
+     "The line crosses the y-axis at −1, so c = −1.",
+     "The gradient is 3, so m = 3.",
+     "y = 3x − 1."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the gradient of y = 5x − 2?",
+     "options": [
+      "5",
+      "−2",
+      "2",
+      "−5"
+     ],
+     "answer": 0,
+     "hints": [
+      "Compare with y = mx + c.",
+      "m is the number in front of x.",
+      "5."
+     ],
+     "explain": "m = 5."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does y = 4x + 7 cross the y-axis?",
+     "options": [
+      "(0, 7)",
+      "(7, 0)",
+      "(0, 4)",
+      "(4, 0)"
+     ],
+     "answer": 0,
+     "hints": [
+      "c is the y-intercept.",
+      "c = 7.",
+      "At x = 0."
+     ],
+     "explain": "c = 7, so it crosses at (0, 7)."
+    },
+    {
+     "type": "num",
+     "q": "Find the gradient of the line through (2, 1) and (4, 9).",
+     "answer": "4",
+     "options": [
+      "4",
+      "8",
+      "2",
+      "5"
+     ],
+     "hints": [
+      "Change in y: 9 − 1 = 8.",
+      "Change in x: 4 − 2 = 2.",
+      "8 ÷ 2."
+     ],
+     "explain": "8 ÷ 2 = 4."
+    },
+    {
+     "type": "mcq",
+     "q": "Which line is parallel to y = 3x + 2?",
+     "options": [
+      "y = 3x − 4",
+      "y = 2x + 3",
+      "y = −3x + 2",
+      "y = x + 3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Parallel lines have the same gradient.",
+      "The gradient is 3.",
+      "Which has 3x?"
+     ],
+     "explain": "y = 3x − 4 also has gradient 3."
+    },
+    {
+     "type": "mcq",
+     "q": "A line has a negative gradient. What does it look like?",
+     "options": [
+      "It goes down from left to right",
+      "It goes up from left to right",
+      "It is horizontal",
+      "It is vertical"
+     ],
+     "answer": 0,
+     "hints": [
+      "Negative: y falls as x grows.",
+      "Read from left to right.",
+      "Downhill."
+     ],
+     "explain": "A negative gradient slopes down from left to right."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Reading m and c from the equation",
+     "Change in y over change in x",
+     "Same gradient means parallel",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found the gradient and equation of straight lines.",
+   "teacher": "Shows calculating gradient from two points, interpreting y = mx + c, and identifying parallel lines.",
+   "done": "y = mx + c: m is the gradient, c is the y-intercept."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam10-polygons",
+   "grade": 10,
+   "title": "Angles in polygons",
+   "topic": "Geometry",
+   "category": "Problem Solving",
+   "caps": "Cambridge IGCSE Mathematics (0580): Geometry (angle properties of polygons; interior and exterior angles of regular polygons)",
+   "intention": "Today I am working out the angles in polygons.",
+   "prompt": "Why do you think bees build hexagons?",
+   "lesson": [
+    {
+     "h": "Interior angles",
+     "say": "The interior angles of a polygon with n sides add up to n minus 2, times 180 degrees. A pentagon has 5 sides, so its angles add up to 540 degrees.",
+     "html": "<p>Sum of interior angles = (n − 2) × 180°</p>"
+    },
+    {
+     "h": "Exterior angles",
+     "say": "The exterior angles of any polygon add up to 360 degrees. In a regular polygon they are all equal, so each one is 360 divided by the number of sides.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Exterior angles add to 360°</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Regular: 360° ÷ n</span></div>"
+    },
+    {
+     "h": "Interior and exterior together",
+     "say": "At each corner, the interior and exterior angles lie on a straight line, so they add up to 180 degrees.",
+     "html": "<p>interior + exterior = 180°</p>"
+    }
+   ],
+   "example": {
+    "q": "Find each interior angle of a regular hexagon.",
+    "steps": [
+     "Each exterior angle: 360° ÷ 6 = 60°.",
+     "Interior = 180° − 60° = 120°.",
+     "Check: 6 × 120° = 720° = (6 − 2) × 180° ✓."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "What do the interior angles of a quadrilateral add up to, in degrees?",
+     "answer": "360",
+     "options": [
+      "360",
+      "180",
+      "540",
+      "720"
+     ],
+     "hints": [
+      "n = 4.",
+      "(4 − 2) × 180.",
+      "2 × 180."
+     ],
+     "explain": "(4 − 2) × 180° = 360°."
+    },
+    {
+     "type": "num",
+     "q": "What do the interior angles of a pentagon add up to, in degrees?",
+     "answer": "540",
+     "options": [
+      "540",
+      "360",
+      "720",
+      "900"
+     ],
+     "hints": [
+      "n = 5.",
+      "(5 − 2) × 180.",
+      "3 × 180."
+     ],
+     "explain": "3 × 180° = 540°."
+    },
+    {
+     "type": "num",
+     "q": "Each exterior angle of a regular polygon is 30°. How many sides does it have?",
+     "answer": "12",
+     "options": [
+      "12",
+      "30",
+      "6",
+      "10"
+     ],
+     "hints": [
+      "Exterior angles add to 360°.",
+      "360 ÷ 30.",
+      "12."
+     ],
+     "explain": "360° ÷ 30° = 12 sides."
+    },
+    {
+     "type": "num",
+     "q": "Find each interior angle of a regular octagon, in degrees.",
+     "answer": "135",
+     "options": [
+      "135",
+      "45",
+      "120",
+      "144"
+     ],
+     "hints": [
+      "Exterior: 360 ÷ 8 = 45°.",
+      "Interior = 180 − exterior.",
+      "180 − 45."
+     ],
+     "explain": "180° − 45° = 135°."
+    },
+    {
+     "type": "mcq",
+     "q": "What do the exterior angles of a 20-sided polygon add up to?",
+     "options": [
+      "360°",
+      "3 240°",
+      "180°",
+      "720°"
+     ],
+     "answer": 0,
+     "hints": [
+      "Does the number of sides matter for exterior angles?",
+      "No.",
+      "Always 360°."
+     ],
+     "explain": "The exterior angles of any polygon add to 360°."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The (n − 2) × 180° rule",
+     "Exterior angles adding to 360°",
+     "Interior + exterior = 180°",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out interior and exterior angles of polygons.",
+   "teacher": "Shows using the interior angle sum and exterior angle properties of polygons, including regular polygons.",
+   "done": "Interior sum: (n − 2) × 180°. Exterior sum: always 360°."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam10-frequency",
+   "grade": 10,
+   "title": "Averages from frequency tables",
+   "topic": "Statistics",
+   "category": "Inquiry and Exploration",
+   "caps": "Cambridge IGCSE Mathematics (0580): Statistics (mean, median and mode from frequency tables; estimating the mean from grouped data)",
+   "intention": "Today I am finding averages from frequency tables.",
+   "prompt": "Why might a sports coach keep a frequency table?",
+   "lesson": [
+    {
+     "h": "Frequency tables",
+     "say": "A frequency table shows how many times each value occurs, for example the number of goals scored in 10 matches.",
+     "html": "<p>Goals: 0, 1, 2, 3</p><p>Frequency: 2, 4, 3, 1</p>"
+    },
+    {
+     "h": "The mean",
+     "say": "To find the mean, multiply each value by its frequency, add these up, then divide by the total frequency.",
+     "html": "<p>(0×2 + 1×4 + 2×3 + 3×1) ÷ 10 = 13 ÷ 10 = <b>1.3</b> goals</p>"
+    },
+    {
+     "h": "Grouped data",
+     "say": "When data is grouped, for example heights from 150 to 160 centimetres, you don't know the exact values. Use the midpoint of each group to estimate the mean.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">150 to 160 cm</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">midpoint 155</span></div><p>The answer is an <b>estimate</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Values 1, 2, 3 have frequencies 5, 3, 2. Find the mean.",
+    "steps": [
+     "Multiply and add: 1×5 + 2×3 + 3×2 = 5 + 6 + 6 = 17.",
+     "Total frequency: 5 + 3 + 2 = 10.",
+     "Mean = 17 ÷ 10 = 1.7."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Goals 0, 1, 2, 3 have frequencies 2, 4, 3, 1. What is the mode?",
+     "options": [
+      "1 goal",
+      "4 goals",
+      "2 goals",
+      "3 goals"
+     ],
+     "answer": 0,
+     "hints": [
+      "The mode is the value with the highest frequency.",
+      "The highest frequency is 4.",
+      "Which value has it?"
+     ],
+     "explain": "1 goal happened most often (4 times)."
+    },
+    {
+     "type": "num",
+     "q": "Goals 0, 1, 2, 3 have frequencies 2, 4, 3, 1. How many matches were there?",
+     "answer": "10",
+     "options": [
+      "10",
+      "6",
+      "4",
+      "13"
+     ],
+     "hints": [
+      "Add the frequencies.",
+      "2 + 4 + 3 + 1.",
+      "10."
+     ],
+     "explain": "2 + 4 + 3 + 1 = 10 matches."
+    },
+    {
+     "type": "num",
+     "q": "Values 2, 4, 6 have frequencies 1, 2, 1. Find the mean.",
+     "answer": "4",
+     "options": [
+      "4",
+      "12",
+      "3",
+      "6"
+     ],
+     "hints": [
+      "2×1 + 4×2 + 6×1 = 16.",
+      "Total frequency: 4.",
+      "16 ÷ 4."
+     ],
+     "explain": "16 ÷ 4 = 4."
+    },
+    {
+     "type": "num",
+     "q": "What is the midpoint of the group 20 to 30?",
+     "answer": "25",
+     "options": [
+      "25",
+      "50",
+      "10",
+      "20"
+     ],
+     "hints": [
+      "Halfway between 20 and 30.",
+      "(20 + 30) ÷ 2.",
+      "25."
+     ],
+     "explain": "(20 + 30) ÷ 2 = 25."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is a mean from grouped data only an estimate?",
+     "options": [
+      "We don't know the exact values in each group",
+      "The groups are always wrong",
+      "Midpoints are too large",
+      "Frequencies are guesses"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do we use instead of the real values?",
+      "Midpoints.",
+      "The real values are unknown."
+     ],
+     "explain": "We use midpoints because the exact values are unknown."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Multiplying value by frequency",
+     "Dividing by the total frequency",
+     "Using midpoints",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found averages from frequency tables, including grouped data.",
+   "teacher": "Shows calculating mean, median and mode from frequency tables and estimating the mean from grouped data.",
+   "done": "Mean from a table: add up value × frequency, then divide by the total frequency."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam10-sci-cells",
+   "grade": 10,
+   "title": "Cells, diffusion and osmosis",
+   "topic": "Biology: cells",
+   "caps": "Cambridge IGCSE Combined Science (0653): Biology (plant and animal cells; diffusion; osmosis)",
+   "intention": "Today I am learning how substances move into and out of cells.",
+   "prompt": "Why do you think wilted lettuce goes crisp in cold water?",
+   "lesson": [
+    {
+     "h": "Plant and animal cells",
+     "say": "Animal and plant cells both have a nucleus, cytoplasm and a cell membrane. Plant cells also have a cell wall, chloroplasts and a large vacuole.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Both: nucleus, cytoplasm, membrane</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Plants also: wall, chloroplasts, vacuole</span></div>"
+    },
+    {
+     "h": "Diffusion",
+     "say": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration, down a concentration gradient. It is how oxygen gets into cells.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Higher concentration</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Lower concentration</span></div>"
+    },
+    {
+     "h": "Osmosis",
+     "say": "Osmosis is the movement of water through a partially permeable membrane, from a dilute solution to a more concentrated one. Plant cells take in water by osmosis and become firm.",
+     "html": "<p>Water moves towards the <b>more concentrated</b> solution.</p>"
+    }
+   ],
+   "example": {
+    "q": "Why does a slice of potato in very salty water go soft?",
+    "steps": [
+     "The salty water is more concentrated than the potato cells.",
+     "Water leaves the cells by osmosis.",
+     "The cells lose water and become soft (flaccid)."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which structure is found in plant cells but not animal cells?",
+     "options": [
+      "Cell wall",
+      "Nucleus",
+      "Cell membrane",
+      "Cytoplasm"
+     ],
+     "answer": 0,
+     "hints": [
+      "Three are in both.",
+      "Which gives plants a rigid shape?",
+      "The cell wall."
+     ],
+     "explain": "Only plant cells have a cell wall."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the function of chloroplasts?",
+     "options": [
+      "Photosynthesis",
+      "Controlling the cell",
+      "Storing water",
+      "Letting substances in"
+     ],
+     "answer": 0,
+     "hints": [
+      "They contain chlorophyll.",
+      "They make food using light.",
+      "Photosynthesis."
+     ],
+     "explain": "Chloroplasts carry out photosynthesis."
+    },
+    {
+     "type": "mcq",
+     "q": "In diffusion, particles move…",
+     "options": [
+      "from higher to lower concentration",
+      "from lower to higher concentration",
+      "only through cell walls",
+      "only in plants"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of perfume spreading.",
+      "From crowded to less crowded.",
+      "Down the gradient."
+     ],
+     "explain": "Diffusion is from higher to lower concentration."
+    },
+    {
+     "type": "mcq",
+     "q": "Osmosis is the movement of…",
+     "options": [
+      "water through a partially permeable membrane",
+      "oxygen into the blood",
+      "sugar into cells",
+      "salt out of cells"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a special kind of diffusion.",
+      "Of one substance.",
+      "Water."
+     ],
+     "explain": "Osmosis is water moving through a partially permeable membrane."
+    },
+    {
+     "type": "mcq",
+     "q": "A plant cell is placed in pure water. What happens?",
+     "options": [
+      "It takes in water and becomes firm",
+      "It loses water and shrinks",
+      "Nothing",
+      "It bursts at once"
+     ],
+     "answer": 0,
+     "hints": [
+      "Pure water is more dilute than the cell.",
+      "Water moves in.",
+      "The wall stops it bursting."
+     ],
+     "explain": "Water enters by osmosis; the cell wall keeps it from bursting, so it becomes firm."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two kinds of cell",
+     "Higher to lower concentration",
+     "The potato example",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how cells are built and how water and other substances move in and out.",
+   "teacher": "Shows comparing plant and animal cells, and explaining diffusion and osmosis in terms of concentration.",
+   "done": "Diffusion: higher to lower concentration. Osmosis: water through a membrane."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam10-sci-states",
+   "grade": 10,
+   "title": "States of matter",
+   "topic": "Chemistry: particles",
+   "caps": "Cambridge IGCSE Combined Science (0653): Chemistry (states of matter; changes of state; the kinetic particle model; diffusion in gases)",
+   "intention": "Today I am explaining solids, liquids and gases using particles.",
+   "prompt": "Why can you smell food cooking from another room?",
+   "lesson": [
+    {
+     "h": "Three states",
+     "say": "In a solid, particles are packed closely in a regular pattern and vibrate. In a liquid they are close but move around each other. In a gas they are far apart and move quickly in all directions.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solid: fixed, vibrate</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Liquid: close, flow</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gas: far apart, fast</span></div>"
+    },
+    {
+     "h": "Changing state",
+     "say": "Heating gives particles more energy. Melting turns a solid into a liquid; boiling turns a liquid into a gas. Cooling reverses these: condensing and freezing.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solid</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Liquid</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gas</span></div><p>Melting, then boiling. Back again: condensing, then freezing.</p>"
+    },
+    {
+     "h": "Temperature and diffusion",
+     "say": "Gases diffuse faster at higher temperatures, because the particles move faster. Lighter gas particles also diffuse faster than heavier ones.",
+     "html": "<p>Hotter: faster particles, <b>faster diffusion</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Explain why a puddle dries up on a sunny day.",
+    "steps": [
+     "The sun heats the water particles.",
+     "Some particles at the surface gain enough energy to escape as a gas.",
+     "This is evaporation, so the puddle slowly disappears."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "In which state are particles arranged in a regular pattern?",
+     "options": [
+      "Solid",
+      "Liquid",
+      "Gas",
+      "All three"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of ice.",
+      "Particles fixed in place.",
+      "Solid."
+     ],
+     "explain": "Solids have a regular, fixed arrangement."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the change from gas to liquid called?",
+     "options": [
+      "Condensation",
+      "Evaporation",
+      "Melting",
+      "Freezing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think of a cold window in a steamy kitchen.",
+      "Gas becomes droplets.",
+      "Condensation."
+     ],
+     "explain": "Gas to liquid is condensation."
+    },
+    {
+     "type": "mcq",
+     "q": "Why can gases be compressed easily?",
+     "options": [
+      "There are large spaces between the particles",
+      "The particles are very small",
+      "Gases have no particles",
+      "The particles are stuck together"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is between gas particles?",
+      "Lots of space.",
+      "So they can be pushed together."
+     ],
+     "explain": "The large gaps between particles can be squeezed."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens to the particles when a solid is heated?",
+     "options": [
+      "They vibrate more",
+      "They stop moving",
+      "They get smaller",
+      "They disappear"
+     ],
+     "answer": 0,
+     "hints": [
+      "Heat gives energy.",
+      "More energy, more movement.",
+      "They vibrate more."
+     ],
+     "explain": "The particles gain energy and vibrate more."
+    },
+    {
+     "type": "mcq",
+     "q": "Which gas diffuses fastest at the same temperature?",
+     "options": [
+      "The one with the lightest particles",
+      "The one with the heaviest particles",
+      "They all diffuse equally fast",
+      "None of them diffuse"
+     ],
+     "answer": 0,
+     "hints": [
+      "Lighter particles move faster.",
+      "Faster particles spread faster.",
+      "The lightest."
+     ],
+     "explain": "Lighter particles move faster, so they diffuse faster."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Picturing the particles",
+     "Linking heat to energy",
+     "The puddle example",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explained solids, liquids and gases, and changes of state, using particles.",
+   "teacher": "Shows using the kinetic particle model to explain states, changes of state and rates of diffusion.",
+   "done": "More energy, faster particles: solids melt, liquids boil and gases spread faster."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam10-sci-atoms",
+   "grade": 10,
+   "title": "Atoms and the periodic table",
+   "topic": "Chemistry: atomic structure",
+   "caps": "Cambridge IGCSE Combined Science (0653): Chemistry (atomic structure; proton number and mass number; groups in the periodic table)",
+   "intention": "Today I am finding what is inside an atom.",
+   "prompt": "What do you think everything is made of?",
+   "lesson": [
+    {
+     "h": "Inside an atom",
+     "say": "An atom has a tiny nucleus containing protons and neutrons, with electrons in shells around it. Protons are positive, electrons are negative, and neutrons have no charge.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Proton: +1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Neutron: 0</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Electron: −1</span></div>"
+    },
+    {
+     "h": "Proton and mass numbers",
+     "say": "The proton number is the number of protons. The mass number is protons plus neutrons. In a neutral atom, the number of electrons equals the number of protons.",
+     "html": "<p>Sodium: proton number 11, mass number 23, so <b>12 neutrons</b>.</p>"
+    },
+    {
+     "h": "The periodic table",
+     "say": "Elements are arranged in order of proton number. Elements in the same group have the same number of outer electrons, so they react in similar ways.",
+     "html": "<p>Group I metals all have <b>1</b> outer electron.</p>"
+    }
+   ],
+   "example": {
+    "q": "Carbon has proton number 6 and mass number 12. How many protons, neutrons and electrons?",
+    "steps": [
+     "Protons = proton number = 6.",
+     "Neutrons = 12 − 6 = 6.",
+     "Electrons = protons = 6 in a neutral atom."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which particle has a negative charge?",
+     "options": [
+      "Electron",
+      "Proton",
+      "Neutron",
+      "Nucleus"
+     ],
+     "answer": 0,
+     "hints": [
+      "Protons are positive.",
+      "Neutrons are neutral.",
+      "Electrons."
+     ],
+     "explain": "Electrons are negative."
+    },
+    {
+     "type": "num",
+     "q": "An atom has proton number 8 and mass number 16. How many neutrons does it have?",
+     "answer": "8",
+     "options": [
+      "8",
+      "16",
+      "24",
+      "2"
+     ],
+     "hints": [
+      "Neutrons = mass number − proton number.",
+      "16 − 8.",
+      "8."
+     ],
+     "explain": "16 − 8 = 8 neutrons."
+    },
+    {
+     "type": "num",
+     "q": "Chlorine has proton number 17. How many electrons does a chlorine atom have?",
+     "answer": "17",
+     "options": [
+      "17",
+      "35",
+      "18",
+      "7"
+     ],
+     "hints": [
+      "A neutral atom…",
+      "…has equal protons and electrons.",
+      "17."
+     ],
+     "explain": "Electrons = protons = 17."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do elements in the same group react in similar ways?",
+     "options": [
+      "They have the same number of outer electrons",
+      "They have the same mass",
+      "They are the same colour",
+      "They have the same number of neutrons"
+     ],
+     "answer": 0,
+     "hints": [
+      "Reactions involve the outer shell.",
+      "What do group members share?",
+      "Outer electrons."
+     ],
+     "explain": "Same number of outer electrons, so similar reactions."
+    },
+    {
+     "type": "mcq",
+     "q": "Where are protons and neutrons found?",
+     "options": [
+      "In the nucleus",
+      "In the shells",
+      "Outside the atom",
+      "Only in metals"
+     ],
+     "answer": 0,
+     "hints": [
+      "Electrons are in shells.",
+      "The centre of the atom.",
+      "The nucleus."
+     ],
+     "explain": "Protons and neutrons are in the nucleus."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Remembering the three particles",
+     "Mass number − proton number",
+     "Linking groups to outer electrons",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt what atoms are made of and how the periodic table is organised.",
+   "teacher": "Shows describing atomic structure, calculating subatomic particles, and relating group number to outer electrons.",
+   "done": "Protons give the proton number; add neutrons for the mass number."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam10-sci-motion",
+   "grade": 10,
+   "title": "Speed and motion graphs",
+   "topic": "Physics: motion",
+   "caps": "Cambridge IGCSE Combined Science (0653): Physics (speed; distance–time and speed–time graphs; acceleration)",
+   "intention": "Today I am reading motion graphs and working out speed and acceleration.",
+   "prompt": "How would you show a taxi trip on a graph?",
+   "lesson": [
+    {
+     "h": "Speed",
+     "say": "Average speed is total distance divided by total time. A cyclist who travels 30 metres in 6 seconds has an average speed of 5 metres per second.",
+     "html": "<p>speed = distance ÷ time</p>"
+    },
+    {
+     "h": "Distance–time graphs",
+     "say": "On a distance–time graph, the gradient is the speed. A straight sloping line means constant speed; a flat line means the object is not moving.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Steeper: faster</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Flat: stopped</span></div>"
+    },
+    {
+     "h": "Speed–time graphs",
+     "say": "On a speed–time graph, the gradient is the acceleration, and the area under the line is the distance travelled.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gradient: acceleration</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Area: distance</span></div>"
+    }
+   ],
+   "example": {
+    "q": "A car speeds up from 0 to 20 m/s in 4 s. Find its acceleration.",
+    "steps": [
+     "Acceleration = change in speed ÷ time.",
+     "= (20 − 0) ÷ 4.",
+     "= 5 m/s²."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A runner covers 100 m in 20 s. What is her average speed, in m/s?",
+     "answer": "5",
+     "options": [
+      "5",
+      "2000",
+      "0.2",
+      "80"
+     ],
+     "hints": [
+      "speed = distance ÷ time.",
+      "100 ÷ 20.",
+      "5."
+     ],
+     "explain": "100 ÷ 20 = 5 m/s."
+    },
+    {
+     "type": "mcq",
+     "q": "On a distance–time graph, what does a horizontal line show?",
+     "options": [
+      "The object is stationary",
+      "Constant speed",
+      "Acceleration",
+      "Very high speed"
+     ],
+     "answer": 0,
+     "hints": [
+      "Distance isn't changing.",
+      "So it isn't moving.",
+      "Stationary."
+     ],
+     "explain": "No change in distance means it is not moving."
+    },
+    {
+     "type": "mcq",
+     "q": "On a speed–time graph, what does the gradient show?",
+     "options": [
+      "Acceleration",
+      "Distance",
+      "Time",
+      "Mass"
+     ],
+     "answer": 0,
+     "hints": [
+      "Change in speed ÷ time.",
+      "That is…",
+      "acceleration."
+     ],
+     "explain": "The gradient of speed against time is acceleration."
+    },
+    {
+     "type": "num",
+     "q": "A bus slows from 15 m/s to 5 m/s in 5 s. What is its deceleration, in m/s²?",
+     "answer": "2",
+     "options": [
+      "2",
+      "10",
+      "3",
+      "4"
+     ],
+     "hints": [
+      "Change in speed: 15 − 5 = 10 m/s.",
+      "Divide by time.",
+      "10 ÷ 5."
+     ],
+     "explain": "10 ÷ 5 = 2 m/s²."
+    },
+    {
+     "type": "num",
+     "q": "An object moves at a steady 10 m/s for 6 s. Using the area under a speed–time graph, how far does it go, in metres?",
+     "answer": "60",
+     "options": [
+      "60",
+      "16",
+      "0.6",
+      "600"
+     ],
+     "hints": [
+      "The area is a rectangle.",
+      "10 × 6.",
+      "60."
+     ],
+     "explain": "10 × 6 = 60 m."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "speed = distance ÷ time",
+     "Reading the gradient",
+     "Area under the graph",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out speed and acceleration, and read motion graphs.",
+   "teacher": "Shows calculating speed and acceleration, and interpreting gradients and areas on motion graphs.",
+   "done": "Distance–time: gradient is speed. Speed–time: gradient is acceleration, area is distance."
+  },
+  {
+   "subject": "Combined Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam10-sci-energy",
+   "grade": 10,
+   "title": "Energy resources and efficiency",
+   "topic": "Physics: energy",
+   "caps": "Cambridge IGCSE Combined Science (0653): Physics (energy stores and transfers; efficiency; energy resources)",
+   "intention": "Today I am tracking energy transfers and working out efficiency.",
+   "prompt": "Where does your home's electricity come from?",
+   "lesson": [
+    {
+     "h": "Stores and transfers",
+     "say": "Energy is stored in different ways, such as chemical, kinetic, gravitational potential and thermal. Energy is never created or destroyed, only transferred.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Chemical (coal)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Thermal</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Kinetic (turbine)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Electrical</span></div>"
+    },
+    {
+     "h": "Efficiency",
+     "say": "Efficiency is the useful energy output divided by the total energy input. No machine is 100 percent efficient: some energy is always wasted, often as heat.",
+     "html": "<p>efficiency = useful output ÷ total input × 100%</p>"
+    },
+    {
+     "h": "Energy resources",
+     "say": "Coal, oil and gas are non-renewable and release carbon dioxide. Solar, wind and hydroelectric power are renewable, but they can depend on the weather or the place.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Non-renewable: coal, gas, oil</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Renewable: solar, wind, hydro</span></div>"
+    }
+   ],
+   "example": {
+    "q": "A bulb takes in 200 J of electrical energy and gives out 40 J of light. Find its efficiency.",
+    "steps": [
+     "Useful output = 40 J; total input = 200 J.",
+     "40 ÷ 200 = 0.2.",
+     "0.2 × 100% = 20%."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A motor takes in 500 J and gives 400 J of useful kinetic energy. What is its efficiency, as a percentage? (Type the number only.)",
+     "answer": "80",
+     "options": [
+      "80",
+      "20",
+      "125",
+      "100"
+     ],
+     "hints": [
+      "Useful ÷ total.",
+      "400 ÷ 500 = 0.8.",
+      "× 100."
+     ],
+     "explain": "400 ÷ 500 × 100 = 80%."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a renewable energy resource?",
+     "options": [
+      "Wind",
+      "Coal",
+      "Natural gas",
+      "Oil"
+     ],
+     "answer": 0,
+     "hints": [
+      "Renewable won't run out.",
+      "Three are fossil fuels.",
+      "Wind."
+     ],
+     "explain": "Wind won't run out; the others are fossil fuels."
+    },
+    {
+     "type": "mcq",
+     "q": "What usually happens to wasted energy?",
+     "options": [
+      "It is transferred to the surroundings as heat",
+      "It is destroyed",
+      "It turns into mass",
+      "It is stored for ever"
+     ],
+     "answer": 0,
+     "hints": [
+      "Energy can't be destroyed.",
+      "Where does it go?",
+      "Heat to the surroundings."
+     ],
+     "explain": "Wasted energy usually spreads out as heat."
+    },
+    {
+     "type": "mcq",
+     "q": "What is one disadvantage of solar power?",
+     "options": [
+      "It doesn't produce electricity at night",
+      "It releases carbon dioxide",
+      "It will run out",
+      "It needs coal"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does solar need?",
+      "Sunlight.",
+      "None at night."
+     ],
+     "explain": "Solar panels need light, so they don't work at night."
+    },
+    {
+     "type": "mcq",
+     "q": "In a coal power station, what is the first energy store?",
+     "options": [
+      "Chemical",
+      "Kinetic",
+      "Electrical",
+      "Sound"
+     ],
+     "answer": 0,
+     "hints": [
+      "Energy is stored in the coal.",
+      "Released by burning.",
+      "Chemical."
+     ],
+     "explain": "Coal stores chemical energy."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following the energy chain",
+     "useful ÷ total",
+     "Comparing energy resources",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child followed energy transfers, worked out efficiency and compared energy resources.",
+   "teacher": "Shows describing energy stores and transfers, calculating efficiency, and evaluating renewable and non-renewable resources.",
+   "done": "Energy is transferred, never destroyed. Efficiency = useful ÷ total."
   }
  ],
  "words": {
