@@ -17,8 +17,8 @@ const UNITS_G11 = [
     intention: "Today I am solving quadratic equations by factorising and with the formula.", prompt: "How do you choose between factorising and the formula?",
     lesson: [
       { h: "Standard form", say: "A quadratic equation can be written as a x squared plus b x plus c equals zero. Always get it into this form first.", html: chainRow(["ax² + bx + c = 0"]) + P("Move every term to one side so the other side is <b>zero</b>.") },
-      { h: "Factorising", say: "If x squared minus five x plus six equals zero, factorise to x minus two times x minus three equals zero. So x equals two or x equals three.", html: chainRow(["x² − 5x + 6 = 0", "(x − 2)(x − 3) = 0", "x = 2 or x = 3"]) + P("If a product is zero, one of the factors must be <b>zero</b>.") },
-      { h: "The quadratic formula", say: "When it will not factorise easily, use the formula: x equals negative b, plus or minus the square root of b squared minus four a c, all over two a.", html: chainRow(["x = (−b ± √(b² − 4ac)) / 2a"]) + P("b² − 4ac is the <b>discriminant</b>. If it is negative, there are no real roots.") }
+      { h: "Factorising", say: "Take x squared minus five x plus six equals zero. It factorises to x minus two, times x minus three, equals zero. So x equals two or x equals three.", html: chainRow(["x² − 5x + 6 = 0", "(x − 2)(x − 3) = 0", "x = 2 or x = 3"]) + P("If a product is zero, one of the factors must be <b>zero</b>.") },
+      { h: "The quadratic formula", say: "Sometimes it will not factorise easily. Then use the formula. x equals negative b, plus or minus the square root of b squared minus four a c. Divide all of that by two a.", html: chainRow(["x = (−b ± √(b² − 4ac)) / 2a"]) + P("b² − 4ac is the <b>discriminant</b>. If it is negative, there are no real roots.") }
     ],
     example: { q: "Solve x² + 2x − 15 = 0.", steps: ["Find two numbers that multiply to −15 and add to 2: 5 and −3.", "(x + 5)(x − 3) = 0.", "x = −5 or x = 3."] },
     questions: [
@@ -58,7 +58,7 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Mathematics, Term 3: Euclidean geometry (circle theorems: perpendicular from centre bisects chord; angle at centre; angles in the same segment; cyclic quadrilaterals; tangents)",
     intention: "Today I am using circle theorems to find unknown angles.", prompt: "Which theorem do you find easiest to spot in a diagram?",
     lesson: [
-      { h: "Angle at the centre", say: "The angle at the centre of a circle is double the angle at the circumference, when both stand on the same arc.", html: chainRow(["∠ centre = 2 × ∠ circumference"]) + P("If the angle at the circumference is 40°, the angle at the centre is <b>80°</b>.") },
+      { h: "Angle at the centre", say: "Look at two angles that stand on the same arc. The angle at the centre is double the angle at the circumference.", html: chainRow(["∠ centre = 2 × ∠ circumference"]) + P("If the angle at the circumference is 40°, the angle at the centre is <b>80°</b>.") },
       { h: "Angles in a semicircle and same segment", say: "The angle in a semicircle is ninety degrees. Angles in the same segment, standing on the same chord, are equal.", html: chainRow(["∠ in semicircle = 90°", "∠s in same segment are equal"]) },
       { h: "Cyclic quadrilaterals and tangents", say: "In a cyclic quadrilateral, opposite angles add up to one hundred and eighty degrees. A tangent is perpendicular to the radius at the point of contact.", html: chainRow(["Opposite ∠s of cyclic quad = 180°", "Tangent ⊥ radius"]) + P("Always give the <b>reason</b> for each step.") }
     ],
@@ -74,6 +74,112 @@ const UNITS_G11 = [
     parent: "Your child used circle theorems to find unknown angles.",
     teacher: "Shows applying circle theorems with reasons: angle at centre, semicircle, same segment, cyclic quadrilateral, tangent-radius.",
     done: "Spot the theorem in the diagram, apply it, and give the reason." },
+
+  // ===================== GRADE 11 MATHEMATICAL LITERACY =====================
+  { id: "g11-ml-interest", grade: 11, subject: "Mathematical Literacy", title: "Interest, loans and inflation", topic: "Finance: interest", domain: "Logical and Analytical Thinking", category: "Problem Solving",
+    caps: "CAPS Grade 11 Mathematical Literacy: Finance (simple and compound interest; loans and investments; the effect of inflation)",
+    intention: "Today I am working out interest and the real cost of borrowing.", prompt: "Why might a shop offer to let you pay later?",
+    lesson: [
+      { h: "Simple interest", say: "Simple interest is worked out on the starting amount only. R1 000 at 10 percent a year earns R100 every year.", html: chainRow(["R1 000", "R1 100", "R1 200", "R1 300"]) + P("Simple interest: the same <b>R100</b> every year.") },
+      { h: "Compound interest", say: "With compound interest, each year's interest is added on, so next year you also earn interest on the interest.", html: chainRow(["R1 000", "R1 100", "R1 210", "R1 331"]) + P("10% compound for 3 years: <b>R1 331</b>.") },
+      { h: "Borrowing costs more", say: "When you borrow, interest works against you. Store cards and short-term loans often charge high interest, so you can pay back much more than you borrowed. Inflation means prices rise over time, so money buys less.", html: P("Compare the <b>total cost</b> of a loan, not only the monthly payment.") }
+    ],
+    example: { q: "You invest R5 000 at 8% simple interest per year. How much do you have after 3 years?", steps: ["Interest per year: 8% of 5 000 = R400.", "For 3 years: 400 × 3 = R1 200.", "Total: 5 000 + 1 200 = R6 200."] },
+    questions: [
+      { type: "num", q: "R2 000 earns 5% simple interest per year. How much interest is earned after 4 years, in rand?", answer: "400", options: ["400", "100", "2 400", "500"], hints: ["5% of 2 000 = R100 a year.", "For 4 years.", "100 × 4."], explain: "R100 a year × 4 years = R400." },
+      { type: "num", q: "R1 000 earns 10% compound interest per year. How much is there after 2 years, in rand?", answer: "1 210", options: ["1 210", "1 200", "1 100", "1 331"], hints: ["After 1 year: R1 100.", "Year 2: 10% of 1 100 = R110.", "1 100 + 110."], explain: "1 000 → 1 100 → 1 210." },
+      { type: "mcq", q: "Why does compound interest grow faster than simple interest?", options: ["You earn interest on earlier interest too", "The rate is always higher", "The bank adds a bonus", "It is paid every day"], answer: 0, hints: ["What is the interest worked out on?", "The amount keeps growing.", "Interest on interest."], explain: "Each year's interest is added, so it earns interest too." },
+      { type: "mcq", q: "Inflation is 5% a year. A loaf of bread costs R20 now. About how much will it cost in a year?", options: ["R21", "R25", "R20,05", "R15"], answer: 0, hints: ["Find 5% of R20.", "That is R1.", "20 + 1."], explain: "5% of R20 = R1, so about R21." },
+      { type: "mcq", q: "Two loans of R10 000. Loan A: R950 a month for 12 months. Loan B: R620 a month for 24 months. Which costs less in total?", options: ["Loan A", "Loan B", "They cost the same", "You can't tell"], answer: 0, hints: ["Work out each total.", "A: 950 × 12 = R11 400.", "B: 620 × 24 = R14 880."], explain: "Loan A costs R11 400 in total; Loan B costs R14 880. The smaller monthly payment costs more overall." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Seeing the amounts year by year", "Working out the total cost", "The worked example", "Not sure"] },
+    parent: "Your child compared simple and compound interest, and the real cost of loans.",
+    teacher: "Shows calculating simple and compound interest, interpreting inflation, and comparing the total cost of credit.",
+    done: "Compound interest grows on itself. Always compare the total cost of a loan." },
+
+  { id: "g11-ml-measure", grade: 11, subject: "Mathematical Literacy", title: "Fencing, tiling and tanks", topic: "Measurement: perimeter, area and volume", domain: "Logical and Analytical Thinking", category: "Problem Solving",
+    caps: "CAPS Grade 11 Mathematical Literacy: Measurement (perimeter, area and volume of rectangles, circles, rectangular prisms and cylinders; using given formulas in real contexts)",
+    intention: "Today I am using perimeter, area and volume for real jobs.", prompt: "Which job at home needs measuring first?",
+    lesson: [
+      { h: "Perimeter and area", say: "Perimeter is the distance around a shape, like fencing a garden. Area is the space inside, like tiles for a floor. Area is measured in square units.", html: chainRow(["Perimeter: around (m)", "Area: inside (m²)"]) + P("Rectangle: perimeter = 2 × (l + b), area = l × b") },
+      { h: "Circles", say: "For a circle, the circumference is pi times the diameter, and the area is pi times the radius squared. Use 3.14 for pi.", html: chainRow(["C = π × d", "A = π × r²", "π ≈ 3,14"]) },
+      { h: "Volume", say: "Volume is the space a container holds. For a box, multiply length by breadth by height. For a cylinder, multiply the area of the circle by the height. One cubic metre holds 1 000 litres.", html: chainRow(["Box: l × b × h", "Cylinder: π × r² × h", "1 m³ = 1 000 ℓ"]) }
+    ],
+    example: { q: "A water tank is a cylinder with radius 1 m and height 2 m. How many litres does it hold? Use π = 3,14.", steps: ["Volume = 3,14 × 1² × 2 = 6,28 m³.", "1 m³ = 1 000 litres.", "6,28 × 1 000 = 6 280 litres."] },
+    questions: [
+      { type: "num", q: "A room is 4 m by 3 m. What is its floor area, in m²?", answer: "12", options: ["12", "14", "7", "24"], hints: ["Area = length × breadth.", "4 × 3.", "12."], explain: "4 × 3 = 12 m²." },
+      { type: "num", q: "How many metres of fencing go around a garden 8 m by 5 m?", answer: "26", options: ["26", "40", "13", "21"], hints: ["Perimeter = 2 × (l + b).", "8 + 5 = 13.", "2 × 13."], explain: "2 × (8 + 5) = 26 m." },
+      { type: "num", q: "Find the area of a circle with radius 10 cm, in cm². Use π = 3,14.", answer: "314", options: ["314", "31,4", "62,8", "628"], hints: ["A = π × r².", "10² = 100.", "3,14 × 100."], explain: "3,14 × 100 = 314 cm²." },
+      { type: "num", q: "A box is 50 cm long, 20 cm wide and 10 cm high. What is its volume, in cm³?", answer: "10 000", options: ["10 000", "80", "1 000", "100 000"], hints: ["Volume = l × b × h.", "50 × 20 = 1 000.", "1 000 × 10."], explain: "50 × 20 × 10 = 10 000 cm³." },
+      { type: "mcq", q: "You want to tile a floor. What do you need to work out?", options: ["The area", "The perimeter", "The volume", "The diameter"], answer: 0, hints: ["Tiles cover the space inside.", "Inside = area.", "Area."], explain: "Tiles cover the area of the floor." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Knowing which measurement the job needs", "Using the formulas", "Converting m³ to litres", "Not sure"] },
+    parent: "Your child worked out perimeter, area and volume for real jobs like fencing, tiling and water tanks.",
+    teacher: "Shows selecting and using given formulas for perimeter, area and volume, and converting between cubic metres and litres.",
+    done: "Around: perimeter. Inside: area. What it holds: volume." },
+
+  { id: "g11-ml-plans", grade: 11, subject: "Mathematical Literacy", title: "Floor plans and travel time", topic: "Maps, plans and other representations", domain: "Inquiry and Systems Thinking", category: "Planning and Organisation",
+    caps: "CAPS Grade 11 Mathematical Literacy: Maps, plans and other representations (floor plans and symbols; scale calculations; planning routes; distance, speed and time)",
+    intention: "Today I am reading floor plans and working out travel times.", prompt: "How do you decide when to leave for a trip?",
+    lesson: [
+      { h: "Reading a floor plan", say: "A floor plan shows a building from above. It uses symbols for doors, windows and walls, and has a scale so you can work out real sizes.", html: P("A door is often drawn as a line with a quarter circle, showing which way it opens.") },
+      { h: "Scale on plans", say: "On a plan with a scale of 1 to 100, 1 centimetre on paper is 1 metre in real life. Measure on the plan, then multiply.", html: chainRow(["1 : 100", "1 cm on paper", "= 1 m real"]) },
+      { h: "Distance, speed and time", say: "Distance equals speed times time. A taxi travelling at 60 kilometres per hour for 2 hours covers 120 kilometres. Time equals distance divided by speed.", html: chainRow(["D = S × T", "T = D ÷ S", "S = D ÷ T"]) + P("0,5 hours = 30 minutes; 0,25 hours = 15 minutes.") }
+    ],
+    example: { q: "A route on a map is 90 km. A bus averages 60 km/h. How long does the trip take?", steps: ["Time = distance ÷ speed.", "90 ÷ 60 = 1,5 hours.", "1,5 hours = 1 hour 30 minutes."] },
+    questions: [
+      { type: "num", q: "Scale 1 : 100. A bedroom is 3,5 cm long on the plan. How long is it really, in metres?", answer: "3,5", options: ["3,5", "35", "350", "0,35"], hints: ["3,5 × 100 = 350 cm.", "100 cm = 1 m.", "350 ÷ 100."], explain: "350 cm = 3,5 m." },
+      { type: "num", q: "A car travels at 80 km/h for 3 hours. How far does it go, in km?", answer: "240", options: ["240", "83", "26,7", "160"], hints: ["Distance = speed × time.", "80 × 3.", "240."], explain: "80 × 3 = 240 km." },
+      { type: "mcq", q: "A trip is 150 km at 100 km/h. How long does it take?", options: ["1 hour 30 minutes", "1 hour 50 minutes", "2 hours 30 minutes", "15 minutes"], answer: 0, hints: ["Time = distance ÷ speed.", "150 ÷ 100 = 1,5 hours.", "0,5 hours = 30 minutes."], explain: "1,5 hours = 1 hour 30 minutes, not 1 hour 50 minutes." },
+      { type: "mcq", q: "What does a floor plan show?", options: ["A building seen from above", "The front of a building", "Only the roof", "A map of the town"], answer: 0, hints: ["Think of looking down.", "Without the roof.", "From above."], explain: "A floor plan is a view from above, showing the rooms." },
+      { type: "mcq", q: "A learner says 0,25 hours is 25 minutes. Is that right?", options: ["No, it is 15 minutes", "Yes", "No, it is 2,5 minutes", "No, it is 40 minutes"], answer: 0, hints: ["An hour has 60 minutes, not 100.", "0,25 is a quarter.", "A quarter of 60."], explain: "0,25 × 60 = 15 minutes." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Multiplying by the scale", "The D = S × T triangle", "Changing hours to minutes", "Not sure"] },
+    parent: "Your child read floor plans and worked out real sizes and travel times.",
+    teacher: "Shows interpreting floor plans and symbols, applying scale, and using distance, speed and time, including converting decimal hours.",
+    done: "Use the scale for real sizes, and D = S × T for trips. An hour has 60 minutes." },
+
+  { id: "g11-ml-graphs", grade: 11, subject: "Mathematical Literacy", title: "Graphs that tell the truth", topic: "Data handling: graphs", domain: "Inquiry and Systems Thinking", category: "Reflection",
+    caps: "CAPS Grade 11 Mathematical Literacy: Data handling (bar graphs, pie charts and line graphs; choosing a suitable graph; recognising misleading graphs)",
+    intention: "Today I am choosing the right graph and spotting misleading ones.", prompt: "Have you seen a graph in an advert? Did you trust it?",
+    lesson: [
+      { h: "Choosing a graph", say: "Use a bar graph to compare groups. Use a pie chart to show parts of a whole. Use a line graph to show change over time.", html: chainRow(["Compare groups: bar", "Parts of a whole: pie", "Change over time: line"]) },
+      { h: "Pie charts", say: "A whole pie is 360 degrees, or 100 percent. If 25 percent of a budget goes on food, its slice is a quarter of the circle, 90 degrees.", html: chainRow(["100% = 360°", "25% = 90°", "1% = 3,6°"]) },
+      { h: "Misleading graphs", say: "A graph can mislead. The vertical axis might not start at zero, the scale might jump, or pictures might be stretched. Always read the numbers, not only the shape.", html: P("A small rise looks huge when the axis starts at 95 instead of 0.") }
+    ],
+    example: { q: "A household spends R3 000 of its R12 000 income on rent. How many degrees is the rent slice in a pie chart?", steps: ["Fraction: 3 000 ÷ 12 000 = 1/4.", "1/4 of 360° = 90°.", "The rent slice is 90°, a quarter of the circle."] },
+    questions: [
+      { type: "mcq", q: "Which graph best shows how the price of petrol changed over 12 months?", options: ["A line graph", "A pie chart", "A tally", "A map"], answer: 0, hints: ["The question is about change over time.", "Which graph shows time?", "A line graph."], explain: "Line graphs show change over time." },
+      { type: "mcq", q: "Which graph best shows how a budget is split between food, rent and transport?", options: ["A pie chart", "A line graph", "A grid map", "A number line"], answer: 0, hints: ["The parts make up one whole budget.", "Parts of a whole.", "A pie chart."], explain: "A pie chart shows parts of a whole." },
+      { type: "num", q: "In a pie chart, a slice is 50% of the whole. How many degrees is it?", answer: "180", options: ["180", "50", "90", "360"], hints: ["The whole is 360°.", "50% is half.", "Half of 360."], explain: "Half of 360° = 180°." },
+      { type: "mcq", q: "A bar graph of sales starts its vertical axis at 950 instead of 0. What is the danger?", options: ["Small differences look much bigger", "The graph becomes more accurate", "Nothing, it is the same", "The bars become shorter"], answer: 0, hints: ["The bottoms of the bars are cut off.", "What happens to differences between bars?", "They look bigger."], explain: "Cutting off the axis makes small differences look large." },
+      { type: "num", q: "A slice of a pie chart is 72°. What percentage of the whole is that? (Type the number only.)", answer: "20", options: ["20", "72", "36", "25"], hints: ["Percentage = degrees ÷ 360 × 100.", "72 ÷ 360 = 0,2.", "0,2 = 20%."], explain: "72 ÷ 360 = 0,2 = 20%." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Matching the graph to the question", "Working with 360°", "Checking where the axis starts", "Not sure"] },
+    parent: "Your child chose suitable graphs and spotted ways that graphs can mislead.",
+    teacher: "Shows selecting appropriate representations, calculating pie chart angles, and critically evaluating misleading graphs.",
+    done: "Choose the graph that fits the question, and always check the axis." },
+
+  { id: "g11-ml-risk", grade: 11, subject: "Mathematical Literacy", title: "Comparing risks", topic: "Probability: two-way tables", domain: "Logical and Analytical Thinking", category: "Flexible Thinking",
+    caps: "CAPS Grade 11 Mathematical Literacy: Probability (two-way tables; tree diagrams for two events; interpreting risk in health, games and insurance)",
+    intention: "Today I am comparing risks fairly, using tables and tree diagrams.", prompt: "How do people decide whether something is risky?",
+    lesson: [
+      { h: "Two-way tables", say: "A two-way table sorts data by two things at once. For example, were people vaccinated, and did they get flu? Of 200 vaccinated people, 10 got flu. Of 200 unvaccinated people, 40 got flu.", html: P("Vaccinated: <b>10</b> of 200 got flu.") + P("Not vaccinated: <b>40</b> of 200 got flu.") },
+      { h: "Comparing risk", say: "To compare groups fairly, compare probabilities, not only counts. 10 out of 200 is 5 percent. 40 out of 200 is 20 percent. The unvaccinated group had four times the risk.", html: chainRow(["10 ÷ 200 = 5%", "40 ÷ 200 = 20%"]) + P("Percentages let you compare groups of <b>different sizes</b> too.") },
+      { h: "Tree diagrams", say: "A tree diagram lists every outcome of two events. Tossing two coins gives four outcomes: heads heads, heads tails, tails heads and tails tails. The chance of two heads is 1 out of 4.", html: chainRow(["HH", "HT", "TH", "TT"]) + P("P(two heads) = <b>1/4</b>") }
+    ],
+    example: { q: "Of all 400 people above, 10 + 40 got flu. What is the probability that a person picked at random got flu?", steps: ["People who got flu: 10 + 40 = 50.", "Total people: 400.", "50 ÷ 400 = 1/8 = 12,5%."] },
+    questions: [
+      { type: "num", q: "200 vaccinated people: 10 got flu. What percentage got flu? (Type the number only.)", answer: "5", options: ["5", "10", "20", "50"], hints: ["10 ÷ 200.", "= 0,05.", "0,05 = 5%."], explain: "10 ÷ 200 = 0,05 = 5%." },
+      { type: "num", q: "200 unvaccinated people: 40 got flu. What percentage got flu? (Type the number only.)", answer: "20", options: ["20", "40", "4", "80"], hints: ["40 ÷ 200.", "= 0,2.", "0,2 = 20%."], explain: "40 ÷ 200 = 0,2 = 20%." },
+      { type: "mcq", q: "From these results, which group had the higher risk of flu?", options: ["The unvaccinated group", "The vaccinated group", "Both the same", "You can't tell"], answer: 0, hints: ["Compare 5% and 20%.", "Which is higher?", "20%."], explain: "20% is higher than 5%." },
+      { type: "mcq", q: "Two coins are tossed. What is the probability of getting one head and one tail?", options: ["1/2", "1/4", "1/3", "3/4"], answer: 0, hints: ["List the outcomes: HH, HT, TH, TT.", "HT and TH both work.", "2 out of 4."], explain: "HT and TH: 2 out of 4 = 1/2." },
+      { type: "mcq", q: "Why compare percentages instead of counts?", options: ["The groups may be different sizes", "Percentages are always bigger", "Counts are never correct", "It is the law"], answer: 0, hints: ["Imagine 10 sick out of 50, and 20 sick out of 1 000.", "Which group is worse off?", "Size matters."], explain: "Percentages make groups of different sizes comparable." }
+    ],
+    reflect: { q: "What helped you most?", options: ["Reading the table row by row", "Changing counts to percentages", "Listing outcomes in a tree", "Not sure"] },
+    parent: "Your child used two-way tables and tree diagrams to compare risks fairly.",
+    teacher: "Shows reading two-way tables, comparing relative risk using percentages, and listing outcomes with tree diagrams.",
+    done: "Compare risks with percentages, and list every outcome before you count." },
 
   // ===================== GRADE 11 ENGLISH HOME LANGUAGE =====================
   { id: "g11-drama", grade: 11, subject: "English Home Language", title: "Drama: The Inheritance", topic: "Dramatic techniques", domain: "Communication and Expression", category: "Reflection",
@@ -125,7 +231,7 @@ const UNITS_G11 = [
     lesson: [
       { h: "Denotation and connotation", say: "Denotation is a word's dictionary meaning. Connotation is the feeling it carries. Slim and skinny both mean thin, but slim sounds positive and skinny can sound negative.", html: chainRow(["slim 👍", "thin", "skinny 👎"]) + P("Same <b>denotation</b>, different <b>connotation</b>.") },
       { h: "Loaded language", say: "Writers choose words to influence us. Protesters or rioters? Freedom fighters or rebels? The choice shows a point of view.", html: chainRow(["protesters ↔ rioters", "debate ↔ row", "claimed ↔ explained"]) + P("Ask: what <b>other word</b> could have been used?") },
-      { h: "Manipulation techniques", say: "Watch for generalisations like everyone knows, false choices like you're either with us or against us, and euphemisms that soften bad news, like let go instead of fired.", html: chainRow(["Generalisation", "False choice", "Euphemism"]) + P("Critical readers <b>question</b> the language.") }
+      { h: "Manipulation techniques", say: "Watch for generalisations, like everyone knows. Watch for false choices, like you're either with us or against us. And watch for euphemisms, which are soft words for bad news, like let go instead of fired.", html: chainRow(["Generalisation", "False choice", "Euphemism"]) + P("Critical readers <b>question</b> the language.") }
     ],
     example: { q: "Headline A: Community members gather to demand water. Headline B: Mob blocks road in water chaos. How do they differ?", steps: ["Both describe the same event.", "A uses neutral words: members, gather, demand.", "B uses negative words: mob, chaos. It frames people as dangerous."] },
     questions: [
@@ -145,7 +251,7 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Life Sciences, Term 2: Animal nutrition (human digestive system; mechanical and chemical digestion; enzymes; absorption; balanced diet)",
     intention: "Today I am following food through the digestive system.", prompt: "Why do we need enzymes?",
     lesson: [
-      { h: "The digestive tract", say: "Food travels from the mouth, down the oesophagus, to the stomach, the small intestine, the large intestine, and out through the anus. The liver and pancreas help digestion.", html: chainRow(["Mouth", "Oesophagus", "Stomach", "Small intestine", "Large intestine"]) },
+      { h: "The digestive tract", say: "Food goes from the mouth, down the oesophagus, to the stomach. Then it moves through the small intestine and the large intestine, and out through the anus. The liver and pancreas help digestion.", html: chainRow(["Mouth", "Oesophagus", "Stomach", "Small intestine", "Large intestine"]) },
       { h: "Mechanical and chemical", say: "Mechanical digestion breaks food into smaller pieces, like chewing. Chemical digestion uses enzymes to break large molecules into small ones the body can absorb.", html: chainRow(["Amylase: starch → sugar", "Protease: protein → amino acids", "Lipase: fat → fatty acids"]) + P("Bile from the liver <b>emulsifies</b> fats.") },
       { h: "Absorption", say: "Most nutrients are absorbed in the small intestine through villi, tiny finger-like folds that give a huge surface area. The large intestine absorbs water.", html: PICS("🫁", "Body") + P("<b>Villi</b> increase surface area for absorption.") }
     ],
@@ -210,14 +316,14 @@ const UNITS_G11 = [
     intention: "Today I am exploring the role of the media in a democracy and how to spot false information.", prompt: "How do you check if something online is true?",
     lesson: [
       { h: "Why the media matters", say: "In a democracy, a free media informs citizens, holds leaders accountable and gives people a voice. Freedom of the press is protected in Section 16 of the Constitution.", html: chainRow(["Inform", "Hold accountable", "Give a voice"]) + P("Investigative journalism has exposed corruption in South Africa.") },
-      { h: "Limits", say: "Freedom of expression does not cover propaganda for war, incitement of violence, or hate speech based on race, ethnicity, gender or religion that incites harm.", html: chainRow(["No incitement", "No hate speech", "No propaganda for war"]) + P("Rights have <b>limits</b> that protect others.") },
-      { h: "Spotting false information", say: "Before you share, check the source, look for the date, see if trusted outlets report it, and be wary of headlines designed to make you angry.", html: chainRow(["Source?", "Date?", "Other outlets?", "Emotional bait?"]) + P("<b>Pause before you share.</b>") }
+      { h: "Limits", say: "Freedom of expression has limits. It does not cover propaganda for war, or inciting violence. It also does not cover hate speech based on race, ethnicity, gender or religion that incites harm.", html: chainRow(["No incitement", "No hate speech", "No propaganda for war"]) + P("Rights have <b>limits</b> that protect others.") },
+      { h: "Spotting false information", say: "Before you share, check the source and the date. See if trusted news outlets report it. Be careful with headlines designed to make you angry.", html: chainRow(["Source?", "Date?", "Other outlets?", "Emotional bait?"]) + P("<b>Pause before you share.</b>") }
     ],
     example: { q: "A WhatsApp message says schools will close tomorrow, with no source. What should you do?", steps: ["Check: who sent it originally? Is there an official source?", "Look on the Department of Education's official channels.", "Do not forward it until it is confirmed."] },
     questions: [
       { type: "mcq", q: "Which section of the Constitution protects freedom of expression?", options: ["Section 16", "Section 9", "Section 28", "Section 1"], answer: 0, hints: ["It covers the press too.", "Not equality (9) or children (28).", "Section 16."], explain: "Section 16 protects freedom of expression." },
       { type: "mcq", q: "Which is NOT protected by freedom of expression?", options: ["Incitement of violence", "Criticising the government", "Writing an opinion piece", "Peaceful protest signs"], answer: 0, hints: ["Some speech causes harm.", "Calling for violence.", "Incitement."], explain: "Incitement to violence is not protected." },
-      { type: "mcq", q: "What is a sign of fake news?", options: ["No source and an emotional headline", "Many trusted outlets report it", "It has a date and author", "It quotes official documents"], answer: 0, hints: ["Red flags.", "Who wrote it?", "No source, emotional."], explain: "No source and emotional bait are warning signs." },
+      { type: "mcq", q: "What is a sign of fake news?", options: ["No source and an emotional headline", "Many trusted outlets report it", "It has a date and author", "It quotes official documents"], answer: 0, hints: ["Warning signs.", "Who wrote it?", "No source, emotional."], explain: "No source and emotional bait are warning signs." },
       { type: "mcq", q: "How does the media hold leaders accountable?", options: ["By investigating and reporting what they do", "By hiding information", "By only printing praise", "By banning opinions"], answer: 0, hints: ["Watchdog role.", "Exposing wrongdoing.", "Investigating."], explain: "Investigative reporting holds leaders accountable." },
       { type: "order", q: "Put the steps before sharing in order.", items: ["Pause", "Check the source", "Check other trusted outlets", "Decide whether to share"], orderLabel: "first to last", hints: ["Stop first.", "Then check.", "Decide last."], explain: "Pause, check the source, compare outlets, then decide." }
     ],
@@ -251,8 +357,8 @@ const UNITS_G11 = [
     caps: "CAPS Grade 11 Life Orientation: Development of the self in society (relationships: signs of healthy and unhealthy relationships; respect and boundaries; where to get help)",
     intention: "Today I am learning the signs of healthy and unhealthy relationships.", prompt: "What does respect look like in a friendship or relationship?",
     lesson: [
-      { h: "Healthy signs", say: "Healthy relationships, whether friendships or dating, include respect, trust, honesty, good communication, and space to be yourself and see other people.", html: chainRow(["Respect", "Trust", "Honesty", "Communication", "Independence"]) },
-      { h: "Warning signs", say: "Warning signs include jealousy and control, checking your phone, isolating you from friends, put-downs, pressure, threats, or any kind of violence.", html: chainRow(["Control", "Isolation", "Put-downs", "Pressure", "Threats"]) + P("Abuse can be physical, emotional, financial or digital.") },
+      { h: "Healthy signs", say: "Healthy friendships and dating relationships have respect, trust and honesty. They have good communication. There is space to be yourself and to see other people.", html: chainRow(["Respect", "Trust", "Honesty", "Communication", "Independence"]) },
+      { h: "Warning signs", say: "Warning signs include jealousy, control and checking your phone. Watch for keeping you away from friends, insults and pressure. Threats or any kind of violence are serious warning signs.", html: chainRow(["Control", "Isolation", "Put-downs", "Pressure", "Threats"]) + P("Abuse can be physical, emotional, financial or digital.") },
       { h: "Boundaries and help", say: "You have the right to set boundaries and to say no. If a relationship feels unsafe, talk to a trusted adult. In South Africa, the GBV Command Centre is on 0800 428 428, and Childline is on 116.", html: chainRow(["Trusted adult", "Counsellor", "GBV Command Centre 0800 428 428", "Childline 116"]) + P("It is never your fault if someone abuses you.") }
     ],
     example: { q: "Leila's partner demands her phone password and gets angry when she sees friends. Is this healthy?", steps: ["Demanding passwords and anger about friends are controlling behaviours.", "These are warning signs.", "Leila deserves respect. She can talk to a trusted adult or counsellor for support."] },

@@ -8,7 +8,7 @@ const units = app.run(`UNITS.map(u => ({ id: u.id, grade: u.grade, subject: u.su
 const levels = app.run(`ALL_LEVELS`);
 
 describe("lessons", () => {
-  it("has 180 lessons", () => { expect(units.length).toBe(180); });
+  it("has 195 lessons", () => { expect(units.length).toBe(195); });
   it("has unique ids", () => { expect(new Set(units.map(u => u.id)).size).toBe(units.length); });
   it.each(units.map(u => [u.id, u]))("%s has a known level, a title and a learning area", (_, u) => {
     expect(levels).toContain(u.grade);

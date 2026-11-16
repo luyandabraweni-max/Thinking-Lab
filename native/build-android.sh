@@ -4,7 +4,7 @@
 set -euo pipefail
 rm -rf native/www native/android
 rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='_headers' --exclude='node_modules' --exclude='native' --exclude='tests' --exclude='docs' \
-  --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='test-results' --exclude='playwright-report' ./ native/www/
+  --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='apps' --exclude='packages' --exclude='supabase' --exclude='tools' --exclude='tsconfig*.json' --exclude='*.config.mjs' --exclude='*.config.mts' --exclude='test-results' --exclude='playwright-report' ./ native/www/
 cd native
 npm install --no-audit --no-fund
 npx cap add android

@@ -1,0 +1,2919 @@
+{
+ "level": "grade-5",
+ "units": [
+  {
+   "id": "m5-fractions",
+   "grade": 5,
+   "subject": "Mathematics",
+   "title": "Comparing and adding fractions",
+   "topic": "Common fractions",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 5 Mathematics: Common fractions (compare and order to twelfths, add and subtract with the same denominator, mixed numbers, fractions of whole numbers)",
+   "intention": "Today I am practising comparing and adding fractions.",
+   "prompt": "How did you decide which is bigger?",
+   "lesson": [
+    {
+     "h": "What a fraction tells you",
+     "say": "In three eighths, the bottom number says the whole is cut into 8 equal parts. The top number says we have 3 of them.",
+     "html": "<p>In the fraction <b>3/8</b>, the <b>denominator</b> (8) says the whole is cut into 8 equal parts. The <b>numerator</b> (3) says how many parts we have.</p><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"3 out of 8 equal parts shaded\"><rect x=\"1\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"38.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"113.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"188.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"263.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg>"
+    },
+    {
+     "h": "Comparing fractions",
+     "say": "With the same denominator, compare the numerators. With the same numerator, the smaller denominator gives bigger parts.",
+     "html": "<p><b>Same denominator:</b> compare the numerators. 5/8 is more than 3/8.</p><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"5 eighths\"><rect x=\"1\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"38.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"113.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"188.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"263.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"3 eighths\"><rect x=\"1\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"38.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"76\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"113.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"188.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"226\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"263.5\" y=\"2\" width=\"35.5\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><p><b>Same numerator:</b> the smaller denominator gives <b>bigger</b> parts. 1/3 is more than 1/6.</p><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"1 third\"><rect x=\"1\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"101\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"201\" y=\"2\" width=\"98\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"1 sixth\"><rect x=\"1\" y=\"2\" width=\"48\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"51\" y=\"2\" width=\"48\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"101\" y=\"2\" width=\"48\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"151\" y=\"2\" width=\"48\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"201\" y=\"2\" width=\"48\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"251\" y=\"2\" width=\"48\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg>"
+    },
+    {
+     "h": "Adding and finding a fraction of a number",
+     "say": "To add fractions with the same denominator, add the numerators. To find three quarters of 20, divide by 4 then multiply by 3.",
+     "html": "<p><b>Adding:</b> when the denominators are the same, add the numerators and keep the denominator: 2/7 + 3/7 = 5/7.</p><p><b>Fraction of a number:</b> divide by the denominator, then multiply by the numerator. 3/4 of 20 = (20 ÷ 4) × 3 = 15.</p><p><b>Mixed numbers:</b> 7/4 is one whole (4/4) and 3/4 more, so 7/4 = 1¾.</p>"
+    }
+   ],
+   "example": {
+    "q": "Work out 2/5 of 30.",
+    "steps": [
+     "Divide by the denominator: 30 ÷ 5 = 6. So 1/5 of 30 is 6.",
+     "Multiply by the numerator: 6 × 2 = 12.",
+     "So 2/5 of 30 is 12."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which fraction is bigger?",
+     "html": "<svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"5 ninths\"><rect x=\"1\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"34.333333333333336\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"67.66666666666667\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"101\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"134.33333333333334\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"167.66666666666669\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"201\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"234.33333333333334\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"267.6666666666667\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg><svg width=\"100%\" style=\"max-width:300px\" viewBox=\"0 0 300 44\" role=\"img\" aria-label=\"2 ninths\"><rect x=\"1\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"34.333333333333336\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--shape-a)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"67.66666666666667\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"101\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"134.33333333333334\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"167.66666666666669\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"201\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"234.33333333333334\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/><rect x=\"267.6666666666667\" y=\"2\" width=\"31.333333333333336\" height=\"40\" rx=\"4\" fill=\"var(--surface)\" stroke=\"var(--ink)\" stroke-opacity=\"0.5\"/></svg>",
+     "options": [
+      "5/9",
+      "2/9"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Both fractions have the same denominator.",
+      "Compare the numerators.",
+      "5 parts are more than 2 parts of the same size."
+     ],
+     "explain": "The parts are the same size, and 5 parts are more than 2."
+    },
+    {
+     "type": "mcq",
+     "q": "Which fraction is bigger: 1/4 or 1/10?",
+     "options": [
+      "1/4",
+      "1/10",
+      "They are equal"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Both have 1 part. Which part is bigger?",
+      "Think of a pizza cut into 4 slices and one cut into 10 slices.",
+      "Fewer slices means bigger slices."
+     ],
+     "explain": "A quarter is bigger than a tenth, because the whole is cut into fewer parts."
+    },
+    {
+     "type": "mcq",
+     "q": "3/8 + 4/8 = ?",
+     "options": [
+      "7/8",
+      "7/16",
+      "1/8",
+      "12/8"
+     ],
+     "answer": 0,
+     "hints": [
+      "The denominators are the same.",
+      "Add the numerators only.",
+      "3 + 4 = 7. The denominator stays 8."
+     ],
+     "explain": "3/8 + 4/8 = 7/8. We add the parts; their size does not change."
+    },
+    {
+     "type": "order",
+     "q": "Put these fractions in order from smallest to biggest.",
+     "items": [
+      "1/12",
+      "1/5",
+      "1/2"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "All of these have 1 as the numerator.",
+      "The bigger the denominator, the smaller each part.",
+      "Twelfths are the smallest parts and halves are the biggest."
+     ],
+     "explain": "1/12 is smaller than 1/5, and 1/5 is smaller than 1/2."
+    },
+    {
+     "type": "num",
+     "q": "What is 3/4 of 24?",
+     "answer": "18",
+     "options": [
+      "18",
+      "6",
+      "8",
+      "72"
+     ],
+     "hints": [
+      "First find 1/4 of 24.",
+      "24 ÷ 4 = 6.",
+      "Now take 3 of those parts: 6 × 3."
+     ],
+     "explain": "24 ÷ 4 = 6, and 6 × 3 = 18."
+    },
+    {
+     "type": "mcq",
+     "q": "Sipho ate 2/6 of a pizza and Lerato ate 3/6. How much did they eat altogether?",
+     "options": [
+      "5/6",
+      "5/12",
+      "1/6",
+      "6/6"
+     ],
+     "answer": 0,
+     "hints": [
+      "The pizza slices are the same size.",
+      "Add the numerators and keep the denominator.",
+      "2 + 3 = 5 sixths."
+     ],
+     "explain": "2/6 + 3/6 = 5/6. One slice is left."
+    },
+    {
+     "type": "mcq",
+     "q": "Which mixed number is the same as 7/4?",
+     "options": [
+      "1¾",
+      "1¼",
+      "2¾",
+      "7¼"
+     ],
+     "answer": 0,
+     "hints": [
+      "How many quarters make one whole?",
+      "4 quarters make 1 whole. How many quarters are left over?",
+      "7 − 4 = 3, so it is 1 whole and 3 quarters."
+     ],
+     "explain": "7/4 = 4/4 + 3/4 = 1¾."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The fraction bars",
+     "Thinking about pizza slices",
+     "Dividing then multiplying",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared, ordered and added fractions, and found fractions of whole numbers.",
+   "teacher": "Shows whether the learner reasons about part size when comparing, adds like fractions correctly and uses the divide-then-multiply strategy.",
+   "done": "Fractions help us share fairly, cook, measure and tell the time."
+  },
+  {
+   "id": "e5-info",
+   "grade": 5,
+   "subject": "English Home Language",
+   "title": "Information text: African penguins",
+   "topic": "Information text, verbs and tense",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 5 English Home Language, Term 1: Information text with visuals (reading and viewing); language structures: verbs and tense",
+   "intention": "Today I am practising finding information in a text and using verbs correctly.",
+   "prompt": "Where in the text did you find that?",
+   "passage": "<div class=\"passage-text\"><p><b>African Penguins</b></p>\n<p><b>Where they live.</b> African penguins live along the coasts of South Africa and Namibia. One of the best places to see them is Boulders Beach, near Simon's Town in the Western Cape.</p>\n<p><b>What they look like.</b> An African penguin is about 60 centimetres tall. It has a black back, a white front and a black stripe across its chest. Above each eye there is a patch of pink skin. The pink patches help the penguin to lose heat when it is hot.</p>\n<p><b>What they eat.</b> African penguins are strong, fast swimmers. They dive into the sea to catch small fish, such as sardines and anchovies.</p>\n<p><b>A loud call.</b> African penguins make a loud call that sounds like a donkey braying.</p>\n<p><b>Why they need help.</b> There are far fewer African penguins today than there were a hundred years ago. Many people are working to protect them and the fish they eat.</p>\n<div class=\"factbox\"><b>Fact box</b><br>Height: about 60 cm<br>Food: small fish<br>Home: the coasts of South Africa and Namibia</div></div>",
+   "lesson": [
+    {
+     "h": "Information texts",
+     "say": "An information text gives facts about a topic. It uses headings so you can find information quickly, and it is usually written in the present tense.",
+     "html": "<p>An <b>information text</b> gives facts about a topic. It often has:</p><ul class=\"plain\"><li><b>headings</b> that help you find information quickly</li><li><b>visuals</b> or a fact box</li><li>verbs in the <b>present tense</b>: penguins <i>live</i>, they <i>eat</i></li></ul>"
+    },
+    {
+     "h": "Read the text",
+     "say": "Read the text about African penguins.",
+     "html": "<div class=\"passage-text\"><p><b>African Penguins</b></p>\n<p><b>Where they live.</b> African penguins live along the coasts of South Africa and Namibia. One of the best places to see them is Boulders Beach, near Simon's Town in the Western Cape.</p>\n<p><b>What they look like.</b> An African penguin is about 60 centimetres tall. It has a black back, a white front and a black stripe across its chest. Above each eye there is a patch of pink skin. The pink patches help the penguin to lose heat when it is hot.</p>\n<p><b>What they eat.</b> African penguins are strong, fast swimmers. They dive into the sea to catch small fish, such as sardines and anchovies.</p>\n<p><b>A loud call.</b> African penguins make a loud call that sounds like a donkey braying.</p>\n<p><b>Why they need help.</b> There are far fewer African penguins today than there were a hundred years ago. Many people are working to protect them and the fish they eat.</p>\n<div class=\"factbox\"><b>Fact box</b><br>Height: about 60 cm<br>Food: small fish<br>Home: the coasts of South Africa and Namibia</div></div>"
+    },
+    {
+     "h": "Verbs and tense",
+     "say": "A verb is a doing or being word. Present tense tells what happens now or usually. Past tense tells what already happened.",
+     "html": "<p>A <b>verb</b> is a doing or being word: <i>swim, eat, is</i>.</p><p><b>Present tense</b> tells what happens now or usually: <i>Penguins <b>swim</b> fast.</i></p><p><b>Past tense</b> tells what already happened: <i>The penguin <b>swam</b> to the rocks.</i> Many past tense verbs end in -ed (<i>dived, called</i>), but some change (<i>swim → swam, eat → ate</i>).</p>"
+    }
+   ],
+   "example": {
+    "q": "Change to the past tense: \"The penguin catches a fish.\"",
+    "steps": [
+     "Find the verb: \"catches\".",
+     "The past tense of \"catch\" is \"caught\". It does not end in -ed.",
+     "\"The penguin caught a fish.\""
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Where do African penguins live?",
+     "options": [
+      "On the coasts of South Africa and Namibia",
+      "In the Karoo",
+      "At the South Pole only",
+      "In rivers"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look under the heading \"Where they live\".",
+      "Read the first sentence of that part.",
+      "It names two countries."
+     ],
+     "explain": "They live along the coasts of South Africa and Namibia."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do African penguins have pink patches above their eyes?",
+     "options": [
+      "To help them lose heat",
+      "To help them see",
+      "To scare other animals",
+      "Because they eat pink fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look under the heading \"What they look like\".",
+      "Read the sentence after the one about pink skin.",
+      "It is about staying cool."
+     ],
+     "explain": "The pink patches help the penguin lose heat when it is hot."
+    },
+    {
+     "type": "mcq",
+     "q": "Which heading would help you find what penguins eat?",
+     "options": [
+      "What they eat",
+      "A loud call",
+      "Where they live",
+      "Why they need help"
+     ],
+     "answer": 0,
+     "hints": [
+      "Headings tell you what each part is about.",
+      "You want information about food.",
+      "Look for the heading with \"eat\" in it."
+     ],
+     "explain": "The heading \"What they eat\" tells you that part is about food."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the main idea of the whole text?",
+     "options": [
+      "Facts about African penguins and why they need help",
+      "How to catch sardines",
+      "A story about a lost penguin",
+      "How to visit Simon's Town"
+     ],
+     "answer": 0,
+     "hints": [
+      "The main idea is what the whole text is about, not one detail.",
+      "Look at the title and all the headings.",
+      "Every part is about the same animal."
+     ],
+     "explain": "The whole text gives facts about African penguins and explains why they need help."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the verbs into present tense and past tense.",
+     "items": [
+      "swim",
+      "dived",
+      "eat",
+      "called",
+      "live",
+      "caught"
+     ],
+     "bins": [
+      "Present tense",
+      "Past tense"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Past tense tells what already happened.",
+      "Many past tense verbs end in -ed.",
+      "\"Caught\" is the past tense of \"catch\"."
+     ],
+     "explain": "swim, eat and live are present tense. dived, called and caught are past tense."
+    },
+    {
+     "type": "mcq",
+     "q": "Choose the correct past tense: \"Yesterday the penguin ___ into the sea.\"",
+     "options": [
+      "dived",
+      "dives",
+      "diving",
+      "will dive"
+     ],
+     "answer": 0,
+     "hints": [
+      "\"Yesterday\" tells you it already happened.",
+      "You need the past tense.",
+      "Past tense often ends in -ed."
+     ],
+     "explain": "\"Yesterday\" means the past, so we use \"dived\"."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you find information?",
+    "options": [
+     "The headings",
+     "The fact box",
+     "Reading it twice",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read an information text about African penguins, found facts using headings, and practised verbs in the present and past tense.",
+   "teacher": "Shows use of text features (headings, fact box) to locate information, identification of the main idea, and control of verb tense, including irregular verbs.",
+   "done": "Information texts help us learn about the world and find facts quickly."
+  },
+  {
+   "id": "n5-foodchains",
+   "grade": 5,
+   "subject": "Natural Sciences and Technology",
+   "title": "Food chains",
+   "topic": "Life and Living",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 5 Natural Sciences and Technology, Term 1, Life and Living: Food chains (producers, consumers, herbivores, carnivores, omnivores)",
+   "intention": "Today I am practising showing how energy moves through living things.",
+   "prompt": "What would happen if one part was missing?",
+   "lesson": [
+    {
+     "h": "Producers and consumers",
+     "say": "Plants are producers. They make their own food using energy from the sun. Animals are consumers. They get energy by eating plants or other animals.",
+     "html": "<p><b>Producers</b> make their own food. Green plants are producers: they use energy from the <b>sun</b>.</p><p><b>Consumers</b> get energy by eating. <b>Herbivores</b> eat plants. <b>Carnivores</b> eat animals. <b>Omnivores</b> eat plants and animals.</p>"
+    },
+    {
+     "h": "Reading a food chain",
+     "say": "A food chain shows who eats what. The arrow points from the food to the animal that eats it. It shows the direction energy moves.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">grass</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">grasshopper</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">lizard</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">hawk</span></div><p>The <b>arrow</b> means \"<b>is eaten by</b>\". It points the way <b>energy</b> moves. Every food chain starts with a producer.</p>"
+    },
+    {
+     "h": "Chains are connected",
+     "say": "If one living thing in a food chain disappears, the others are affected. Living things depend on each other.",
+     "html": "<p>Living things <b>depend on each other</b>. If grasshoppers disappeared, lizards would have less food, and hawks might have fewer lizards to eat. Grass might grow taller with nothing eating it.</p>"
+    }
+   ],
+   "example": {
+    "q": "Build a food chain from: lion, grass, zebra.",
+    "steps": [
+     "Find the producer first: grass makes its own food.",
+     "Who eats grass? The zebra, a herbivore.",
+     "Who eats the zebra? The lion, a carnivore. So: grass → zebra → lion."
+    ]
+   },
+   "questions": [
+    {
+     "type": "order",
+     "q": "Put this food chain in order, starting with the producer.",
+     "items": [
+      "grass",
+      "springbok",
+      "cheetah"
+     ],
+     "orderLabel": "producer first",
+     "hints": [
+      "Which one makes its own food?",
+      "Which one eats plants?",
+      "The cheetah hunts the springbok."
+     ],
+     "explain": "grass → springbok → cheetah."
+    },
+    {
+     "type": "mcq",
+     "q": "In a food chain, what does the arrow mean?",
+     "options": [
+      "\"is eaten by\"",
+      "\"is bigger than\"",
+      "\"lives next to\"",
+      "\"is faster than\""
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at grass → grasshopper.",
+      "Does the grass eat the grasshopper, or the other way round?",
+      "The arrow points to the eater."
+     ],
+     "explain": "The arrow means \"is eaten by\" and shows the direction energy moves."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the animals: herbivore, carnivore or omnivore.",
+     "items": [
+      "cow",
+      "lion",
+      "baboon",
+      "zebra",
+      "eagle",
+      "human"
+     ],
+     "bins": [
+      "Herbivore",
+      "Carnivore",
+      "Omnivore"
+     ],
+     "answer": [
+      0,
+      1,
+      2,
+      0,
+      1,
+      2
+     ],
+     "hints": [
+      "Herbivores eat only plants. Carnivores eat only animals.",
+      "Omnivores eat both plants and animals.",
+      "Baboons eat fruit, roots and insects. Humans eat plants and meat."
+     ],
+     "explain": "Cows and zebras are herbivores, lions and eagles are carnivores, baboons and humans are omnivores."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does the energy in every food chain first come from?",
+     "options": [
+      "The sun",
+      "The soil",
+      "The water",
+      "The animals"
+     ],
+     "answer": 0,
+     "hints": [
+      "Producers start every food chain.",
+      "How do green plants make food?",
+      "They use light energy from ..."
+     ],
+     "explain": "Green plants use energy from the sun to make food. That energy passes along the chain."
+    },
+    {
+     "type": "mcq",
+     "q": "In grass → grasshopper → lizard → hawk, what might happen if all the grasshoppers died?",
+     "options": [
+      "Lizards would have less food",
+      "Hawks would have more food",
+      "Nothing would change",
+      "The grass would die"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who eats grasshoppers?",
+      "What happens when an animal loses its food?",
+      "Then think one step further along the chain."
+     ],
+     "explain": "Lizards would lose their food. Fewer lizards could then mean less food for hawks too."
+    },
+    {
+     "type": "mcq",
+     "q": "Which living thing is a producer?",
+     "options": [
+      "An aloe plant",
+      "A mouse",
+      "A spider",
+      "A snake"
+     ],
+     "answer": 0,
+     "hints": [
+      "Producers make their own food.",
+      "Which one uses sunlight?",
+      "It is green."
+     ],
+     "explain": "The aloe is a plant, so it makes its own food. It is a producer."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you understand food chains?",
+    "options": [
+     "Starting with the plant",
+     "Following the arrows",
+     "Thinking about real animals",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child built food chains, sorted animals by what they eat, and thought about what happens when one part of a chain is missing.",
+   "teacher": "Shows understanding of producers and consumers, the direction of energy flow, classification by diet and early systems thinking (knock-on effects).",
+   "done": "Every living thing is part of a bigger system."
+  },
+  {
+   "id": "l5-emotions",
+   "grade": 5,
+   "subject": "Life Skills",
+   "title": "Coping with emotions",
+   "topic": "Personal and Social Well-being: coping with emotions",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "CAPS Grade 5 Life Skills, Term 1, Personal and Social Well-being: Coping with emotions (anger, disappointment, sadness; empathy and compassion)",
+   "intention": "Today I am practising naming feelings and finding healthy ways to cope.",
+   "prompt": "What could help in that moment?",
+   "lesson": [
+    {
+     "h": "All feelings are normal",
+     "say": "Everyone feels angry, disappointed or sad sometimes. Feelings are normal. What matters is what we do with them.",
+     "html": "<p>Everyone feels <b>angry</b>, <b>disappointed</b> or <b>sad</b> sometimes. Feelings are normal and they pass. What matters is <b>what we do</b> with them.</p>"
+    },
+    {
+     "h": "Healthy ways to cope",
+     "say": "Healthy ways to cope include breathing slowly, taking a break, moving your body, and talking to someone you trust.",
+     "html": "<ul class=\"plain\"><li>Breathe in slowly, then out slowly</li><li>Take a short break somewhere calm</li><li>Move your body: walk, stretch, jump</li><li>Draw or write about it</li><li><b>Talk to someone you trust</b></li></ul><p>If you ever feel unsafe, or a feeling is too big to manage, tell a grown-up you trust.</p>"
+    },
+    {
+     "h": "Empathy",
+     "say": "Empathy means trying to understand how someone else feels. Compassion means wanting to help.",
+     "html": "<p><b>Empathy</b> means trying to understand how someone else feels. <b>Compassion</b> means wanting to help them feel better.</p>"
+    }
+   ],
+   "example": {
+    "q": "Lebo's drawing was torn by accident. She feels angry. What could she do?",
+    "steps": [
+     "First, name the feeling: \"I feel angry.\"",
+     "Then calm her body: breathe slowly or step away for a moment.",
+     "Then talk about it, or decide whether to fix or redo the drawing."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Sam was not chosen for the team. How might he feel?",
+     "options": [
+      "Disappointed",
+      "Excited",
+      "Bored",
+      "Sleepy"
+     ],
+     "answer": 0,
+     "hints": [
+      "He hoped for something that did not happen.",
+      "This feeling comes when hopes are not met.",
+      "It starts with \"dis…\"."
+     ],
+     "explain": "Not being chosen when you hoped to be can make you feel disappointed."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these ways of coping with anger.",
+     "items": [
+      "Breathe slowly",
+      "Hit someone",
+      "Take a break",
+      "Break something",
+      "Talk to a trusted adult",
+      "Shout insults"
+     ],
+     "bins": [
+      "Helpful",
+      "Not helpful"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Helpful ways keep you and others safe.",
+      "Would it hurt someone or something?",
+      "Calming down and talking are helpful."
+     ],
+     "explain": "Breathing, taking a break and talking are helpful. Hurting, breaking and insulting are not."
+    },
+    {
+     "type": "mcq",
+     "q": "Your friend's pet died and they are sad. What shows empathy?",
+     "options": [
+      "\"I'm sorry. That must be really hard.\"",
+      "\"It was just a pet.\"",
+      "\"Let's talk about something else.\"",
+      "Laugh to cheer them up"
+     ],
+     "answer": 0,
+     "hints": [
+      "Empathy means understanding their feeling.",
+      "Which answer shows you understand?",
+      "It is kind and gentle."
+     ],
+     "explain": "Saying you are sorry and that it must be hard shows you understand how they feel."
+    },
+    {
+     "type": "mcq",
+     "q": "What is a good first step when you feel a big emotion?",
+     "options": [
+      "Name the feeling",
+      "Pretend you feel nothing",
+      "Make a quick decision",
+      "Blame someone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Knowing what you feel helps you choose what to do.",
+      "\"I feel …\"",
+      "Putting a name to it is the first step."
+     ],
+     "explain": "Naming the feeling helps you understand it and choose a healthy way to cope."
+    },
+    {
+     "type": "mcq",
+     "q": "Which person is the BEST to talk to when a feeling is too big?",
+     "options": [
+      "A grown-up you trust",
+      "A stranger online",
+      "Nobody",
+      "Someone who teases you"
+     ],
+     "answer": 0,
+     "hints": [
+      "You want someone safe who can help.",
+      "Think of a parent, teacher or carer.",
+      "Someone you trust."
+     ],
+     "explain": "A trusted grown-up can listen and help you stay safe."
+    }
+   ],
+   "reflect": {
+    "q": "Which way of coping would you try?",
+    "options": [
+     "Breathing slowly",
+     "Taking a break",
+     "Talking to someone",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised naming feelings, choosing healthy ways to cope, and showing empathy. Nothing personal about their own feelings was recorded.",
+   "teacher": "Uses scenarios only. Shows recognition of emotions, sorting of coping strategies, and empathic responses. No personal disclosures are requested or recorded.",
+   "done": "Every feeling is allowed. You get to choose what you do with it."
+  },
+  {
+   "id": "m5-bignumbers",
+   "grade": 5,
+   "subject": "Mathematics",
+   "title": "Big numbers and rounding",
+   "topic": "Whole numbers to 6 digits",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 5 Mathematics: Whole numbers (place value to 6 digits; ordering and comparing; rounding to the nearest 5, 10, 100 and 1 000)",
+   "intention": "Today I am practising reading big numbers and rounding them.",
+   "prompt": "Which place did you look at first?",
+   "lesson": [
+    {
+     "h": "Six-digit numbers",
+     "say": "In 482 615, the 4 is worth 400 thousand and the 8 is worth 80 thousand.",
+     "html": "<table class=\"hist\"><thead><tr><th>HTh</th><th>TTh</th><th>Th</th><th>H</th><th>T</th><th>U</th></tr></thead><tbody><tr><td>4</td><td>8</td><td>2</td><td>6</td><td>1</td><td>5</td></tr></tbody></table><p><b>482 615</b> = 400 000 + 80 000 + 2 000 + 600 + 10 + 5. We read it as \"four hundred and eighty-two thousand, six hundred and fifteen\".</p>"
+    },
+    {
+     "h": "Rounding to the nearest 5",
+     "say": "Numbers rounded to the nearest 5 end in 0 or 5. 73 rounds to 75, and 71 rounds to 70.",
+     "html": "<p>Rounded to the nearest 5, a number ends in <b>0 or 5</b>. 73 is closer to 75 than to 70, so it rounds to <b>75</b>. 71 rounds to <b>70</b>.</p><p>For 10, 100 and 1 000, use the same rule as before: look at the digit to the right. 5 or more rounds up.</p>"
+    }
+   ],
+   "example": {
+    "q": "Round 248 637 to the nearest 1 000.",
+    "steps": [
+     "The thousands digit is 8, so the answer is 248 000 or 249 000.",
+     "Look at the hundreds digit: it is 6.",
+     "6 is 5 or more, so round up: 249 000."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the value of the 8 in 482 615?",
+     "options": [
+      "80 000",
+      "8 000",
+      "800 000",
+      "800"
+     ],
+     "answer": 0,
+     "hints": [
+      "Use the place value table.",
+      "The 8 is the second digit from the left.",
+      "It is in the ten thousands place."
+     ],
+     "explain": "The 8 is in the ten thousands place, so it is worth 80 000."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number is 300 000 + 40 000 + 500 + 7?",
+     "options": [
+      "340 507",
+      "345 007",
+      "340 057",
+      "304 507"
+     ],
+     "answer": 0,
+     "hints": [
+      "Put each part in its place.",
+      "There are no thousands and no tens.",
+      "3 hundred thousands, 4 ten thousands, 0 thousands, 5 hundreds, 0 tens, 7 units."
+     ],
+     "explain": "300 000 + 40 000 + 500 + 7 = 340 507."
+    },
+    {
+     "type": "num",
+     "q": "Round 73 to the nearest 5.",
+     "answer": "75",
+     "options": [
+      "75",
+      "70",
+      "80",
+      "73"
+     ],
+     "hints": [
+      "The answer must end in 0 or 5.",
+      "Is 73 closer to 70 or 75?",
+      "73 is 2 away from 75 and 3 away from 70."
+     ],
+     "explain": "73 is closer to 75 than to 70."
+    },
+    {
+     "type": "num",
+     "q": "Round 248 637 to the nearest 100.",
+     "answer": "248 600",
+     "options": [
+      "248 600",
+      "248 700",
+      "249 000",
+      "248 640"
+     ],
+     "hints": [
+      "The hundreds digit is 6.",
+      "Look at the tens digit.",
+      "The tens digit is 3, which is less than 5."
+     ],
+     "explain": "The tens digit is 3, so round down to 248 600."
+    },
+    {
+     "type": "order",
+     "q": "Put these in order from smallest to biggest.",
+     "items": [
+      "45 120",
+      "405 120",
+      "450 012"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "First count the digits. Fewer digits means a smaller number.",
+      "45 120 has only 5 digits.",
+      "Then compare 405 120 and 450 012 by the ten thousands digit."
+     ],
+     "explain": "45 120 is smallest. Then 405 120, then 450 012."
+    },
+    {
+     "type": "mcq",
+     "q": "A stadium has 58 386 seats. To the nearest 1 000, about how many seats is that?",
+     "options": [
+      "58 000",
+      "59 000",
+      "58 400",
+      "60 000"
+     ],
+     "answer": 0,
+     "hints": [
+      "Will it be 58 000 or 59 000?",
+      "Look at the hundreds digit.",
+      "It is 3, which is less than 5."
+     ],
+     "explain": "The hundreds digit is 3, so round down to 58 000."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you with big numbers?",
+    "options": [
+     "The place value table",
+     "Reading the number aloud",
+     "Comparing digit by digit",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read and compared six-digit numbers and rounded them in different ways.",
+   "teacher": "Shows place value to 6 digits, expanded notation, rounding to 5, 10, 100 and 1 000, and ordering by digit count and place.",
+   "done": "Big numbers are used for populations, distances and money."
+  },
+  {
+   "id": "m5-factors",
+   "grade": 5,
+   "subject": "Mathematics",
+   "title": "Multiples and factors",
+   "topic": "Multiples and factors to 100",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 5 Mathematics: Whole numbers, properties of numbers (multiples and factors of 2-digit numbers to at least 100)",
+   "intention": "Today I am practising finding multiples and factors.",
+   "prompt": "Did you check in pairs?",
+   "lesson": [
+    {
+     "h": "Multiples",
+     "say": "Multiples of 4 are the numbers in the 4 times table: 4, 8, 12, 16 and so on.",
+     "html": "<p>The <b>multiples</b> of 4 are the answers in the 4 times table:</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">12</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">16</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">20</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">…</span></div><p>A <b>common multiple</b> is in both lists. 12 is a common multiple of 3 and 4.</p>"
+    },
+    {
+     "h": "Factors",
+     "say": "Factors are numbers that divide exactly into a number. The factors of 12 are 1, 2, 3, 4, 6 and 12.",
+     "html": "<p><b>Factors</b> divide into a number exactly, with nothing left over. Find them in <b>pairs</b>:</p><p>12 = 1 × 12 = 2 × 6 = 3 × 4, so the factors of 12 are <b>1, 2, 3, 4, 6 and 12</b>.</p><p>The <b>highest common factor</b> of two numbers is the biggest factor they share.</p>"
+    }
+   ],
+   "example": {
+    "q": "Find all the factors of 18.",
+    "steps": [
+     "Start with 1: 1 × 18.",
+     "Try 2: 2 × 9. Try 3: 3 × 6. 4 and 5 do not divide 18 exactly.",
+     "The next would be 6, which we already have. So the factors are 1, 2, 3, 6, 9 and 18."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which number is a multiple of 6?",
+     "options": [
+      "42",
+      "26",
+      "33",
+      "16"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count in 6s.",
+      "6, 12, 18, 24, 30, 36, …",
+      "6 × 7 = ?"
+     ],
+     "explain": "6 × 7 = 42, so 42 is a multiple of 6."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these numbers: factors of 20, or not?",
+     "items": [
+      "4",
+      "6",
+      "5",
+      "8",
+      "10",
+      "3"
+     ],
+     "bins": [
+      "Factor of 20",
+      "Not a factor of 20"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A factor divides 20 exactly.",
+      "Find the pairs: 1 × 20, 2 × 10, 4 × 5.",
+      "6, 8 and 3 leave something over."
+     ],
+     "explain": "4, 5 and 10 are factors of 20. 6, 8 and 3 are not."
+    },
+    {
+     "type": "num",
+     "q": "How many factors does 16 have?",
+     "answer": "5",
+     "options": [
+      "5",
+      "4",
+      "6",
+      "8"
+     ],
+     "hints": [
+      "Find the factor pairs of 16.",
+      "1 × 16, 2 × 8, 4 × 4.",
+      "Count each number once: 1, 2, 4, 8, 16."
+     ],
+     "explain": "16 has 5 factors: 1, 2, 4, 8 and 16."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the biggest number that is a factor of both 12 and 18?",
+     "options": [
+      "6",
+      "3",
+      "2",
+      "36"
+     ],
+     "answer": 0,
+     "hints": [
+      "List the factors of 12 and of 18.",
+      "12: 1, 2, 3, 4, 6, 12. 18: 1, 2, 3, 6, 9, 18.",
+      "Which is the biggest one in both lists?"
+     ],
+     "explain": "6 is the highest common factor of 12 and 18."
+    },
+    {
+     "type": "mcq",
+     "q": "Chairs are put out in rows of 7. Which number of chairs makes full rows with none left over?",
+     "options": [
+      "63",
+      "45",
+      "50",
+      "60"
+     ],
+     "answer": 0,
+     "hints": [
+      "You need a multiple of 7.",
+      "7, 14, 21, 28, 35, 42, 49, 56, 63, …",
+      "7 × 9 = ?"
+     ],
+     "explain": "63 = 7 × 9, so 63 chairs make 9 full rows."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number is a common multiple of 3 and 4?",
+     "options": [
+      "24",
+      "14",
+      "18",
+      "30"
+     ],
+     "answer": 0,
+     "hints": [
+      "It must be in the 3 times table and the 4 times table.",
+      "Multiples of 4: 4, 8, 12, 16, 20, 24, …",
+      "Which of these is also a multiple of 3?"
+     ],
+     "explain": "24 is 3 × 8 and 4 × 6, so it is a common multiple."
+    }
+   ],
+   "reflect": {
+    "q": "How did you find factors?",
+    "options": [
+     "In pairs",
+     "Using times tables",
+     "Dividing",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found multiples and factors, including ones that two numbers share.",
+   "teacher": "Shows systematic search for factor pairs, recall of multiplication facts, and common multiples and factors.",
+   "done": "Factors help with sharing, grouping and simplifying fractions."
+  },
+  {
+   "id": "e5-news",
+   "grade": 5,
+   "subject": "English Home Language",
+   "title": "Newspaper report: Beach clean-up",
+   "topic": "Newspaper article, the 5 Ws",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 5 English Home Language, Term 1: Newspaper or magazine article (reading and viewing); direct speech",
+   "intention": "Today I am practising finding the key facts in a news report.",
+   "prompt": "Which W did you find first?",
+   "passage": "<div class=\"passage-text\"><p class=\"muted\" style=\"font-size:0.85rem\">A made-up news report for this lesson</p>\n<p class=\"ad-big\">Learners collect 300 kg of litter from beach</p>\n<p><i>By a Seaview Times reporter</i></p>\n<p>Grade 5 learners from Seaview Primary School collected 300 kilograms of litter from the beach near their school last Saturday morning.</p>\n<p>The 64 learners spent three hours picking up plastic bottles, bottle tops and fishing line. They wanted to protect the birds and fish that live along the coast.</p>\n<p>\"We found a seagull tangled in fishing line, and a lifeguard helped to free it,\" said learner Amahle Dube. \"That is when we knew our work really mattered.\"</p>\n<p>The school plans to clean the beach again next term.</p></div>",
+   "lesson": [
+    {
+     "h": "How a news report works",
+     "say": "A news report has a headline, a byline, and a first paragraph that answers who, what, where, when and why.",
+     "html": "<ul class=\"plain\"><li><b>Headline</b>: a short, catchy title</li><li><b>Byline</b>: who wrote it</li><li><b>Lead paragraph</b>: answers <b>who, what, where, when</b> and often <b>why</b></li><li><b>Quotes</b>: the exact words someone said, inside quotation marks</li><li>Written in the <b>past tense</b>, because it already happened</li></ul>"
+    },
+    {
+     "h": "Read the report",
+     "say": "Read the report about the beach clean-up. It is a made-up report for this lesson.",
+     "html": "<div class=\"passage-text\"><p class=\"muted\" style=\"font-size:0.85rem\">A made-up news report for this lesson</p>\n<p class=\"ad-big\">Learners collect 300 kg of litter from beach</p>\n<p><i>By a Seaview Times reporter</i></p>\n<p>Grade 5 learners from Seaview Primary School collected 300 kilograms of litter from the beach near their school last Saturday morning.</p>\n<p>The 64 learners spent three hours picking up plastic bottles, bottle tops and fishing line. They wanted to protect the birds and fish that live along the coast.</p>\n<p>\"We found a seagull tangled in fishing line, and a lifeguard helped to free it,\" said learner Amahle Dube. \"That is when we knew our work really mattered.\"</p>\n<p>The school plans to clean the beach again next term.</p></div>"
+    }
+   ],
+   "example": {
+    "q": "When did the clean-up happen?",
+    "steps": [
+     "\"When\" asks about time.",
+     "Look in the lead paragraph.",
+     "It happened \"last Saturday morning\"."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Who collected the litter?",
+     "options": [
+      "Grade 5 learners from Seaview Primary",
+      "A lifeguard",
+      "The newspaper reporter",
+      "Fishermen"
+     ],
+     "answer": 0,
+     "hints": [
+      "\"Who\" is answered in the first paragraph.",
+      "Read the first sentence.",
+      "They go to Seaview Primary School."
+     ],
+     "explain": "Grade 5 learners from Seaview Primary School collected the litter."
+    },
+    {
+     "type": "mcq",
+     "q": "Why did the learners clean the beach?",
+     "options": [
+      "To protect the birds and fish",
+      "To win a prize",
+      "Because it was a school rule",
+      "To find shells"
+     ],
+     "answer": 0,
+     "hints": [
+      "\"Why\" is in the second paragraph.",
+      "Find the sentence that starts \"They wanted…\"",
+      "It is about animals along the coast."
+     ],
+     "explain": "They wanted to protect the birds and fish along the coast."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the job of the headline?",
+     "options": [
+      "To tell the main news in a few words",
+      "To list everyone's names",
+      "To give the date",
+      "To show the price of the paper"
+     ],
+     "answer": 0,
+     "hints": [
+      "A headline is short.",
+      "It is the first thing you read.",
+      "It sums up the story."
+     ],
+     "explain": "A headline tells the main news quickly, so readers want to read on."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sentence is a direct quote?",
+     "options": [
+      "\"We found a seagull tangled in fishing line,\" said Amahle.",
+      "The school plans to clean the beach again.",
+      "The learners spent three hours.",
+      "They collected 300 kg of litter."
+     ],
+     "answer": 0,
+     "hints": [
+      "A quote shows someone's exact words.",
+      "Look for quotation marks.",
+      "Look for \"said\"."
+     ],
+     "explain": "The quote has quotation marks and \"said\", showing Amahle's exact words."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the facts from the report.",
+     "items": [
+      "300 kilograms",
+      "Seaview Primary School",
+      "last Saturday",
+      "the beach near the school"
+     ],
+     "bins": [
+      "What or who",
+      "When",
+      "Where"
+     ],
+     "answer": [
+      0,
+      0,
+      1,
+      2
+     ],
+     "hints": [
+      "\"When\" is a time.",
+      "\"Where\" is a place.",
+      "The amount and the school answer \"what\" and \"who\"."
+     ],
+     "explain": "The amount and the school are what and who, last Saturday is when, and the beach is where."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you find the facts?",
+    "options": [
+     "Thinking of the 5 Ws",
+     "Reading the first paragraph carefully",
+     "Looking for quotation marks",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a news report and found who, what, where, when and why, and a direct quote.",
+   "teacher": "Shows knowledge of news text features, retrieval of the 5 Ws, purpose of headlines and recognition of direct speech.",
+   "done": "News reports give the most important facts first."
+  },
+  {
+   "id": "e5-similes",
+   "grade": 5,
+   "subject": "English Home Language",
+   "title": "Poetry: My Gogo",
+   "topic": "Poetry and similes",
+   "domain": "Communication and Expression",
+   "category": "Creativity",
+   "caps": "CAPS Grade 5 English Home Language, Term 1: Poetry (reading and viewing); figurative language: similes",
+   "intention": "Today I am practising noticing and making similes.",
+   "prompt": "What picture did that simile give you?",
+   "passage": "<div class=\"passage-text\"><p><b>My Gogo</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>My gogo's hands are as soft as bread dough,<br>They move like a breeze when she plaits my hair slow.<br>Her laugh is like thunder that rolls round the room,<br>Her voice is as warm as the sun after gloom.</p>\n<p>Her stories are as long as the road to the sea,<br>And her hugs are like blankets wrapped warmly round me.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the poem",
+     "say": "Read the poem about a grandmother, called Gogo.",
+     "html": "<div class=\"passage-text\"><p><b>My Gogo</b> <span class=\"muted\">(a 2to.iQ poem)</span></p>\n<p>My gogo's hands are as soft as bread dough,<br>They move like a breeze when she plaits my hair slow.<br>Her laugh is like thunder that rolls round the room,<br>Her voice is as warm as the sun after gloom.</p>\n<p>Her stories are as long as the road to the sea,<br>And her hugs are like blankets wrapped warmly round me.</p></div>"
+    },
+    {
+     "h": "Similes",
+     "say": "A simile compares two different things using like or as. Her hugs are like blankets.",
+     "html": "<p>A <b>simile</b> compares two different things using <b>like</b> or <b>as … as</b>.</p><ul class=\"plain\"><li>Her hugs are <b>like</b> blankets.</li><li>Her hands are <b>as</b> soft <b>as</b> bread dough.</li></ul><p>Similes help the reader <b>picture</b> something and feel how the poet feels.</p>"
+    }
+   ],
+   "example": {
+    "q": "In \"Her laugh is like thunder\", what is being compared?",
+    "steps": [
+     "Find the word \"like\".",
+     "On one side is \"her laugh\". On the other side is \"thunder\".",
+     "Her laugh is compared to thunder, because it is loud and fills the room."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which line contains a simile?",
+     "options": [
+      "Her voice is as warm as the sun after gloom",
+      "My gogo plaits my hair",
+      "She tells stories",
+      "The room is big"
+     ],
+     "answer": 0,
+     "hints": [
+      "A simile uses \"like\" or \"as … as\".",
+      "Look for \"as warm as\".",
+      "It compares her voice to something else."
+     ],
+     "explain": "\"As warm as the sun\" compares her voice to the sun."
+    },
+    {
+     "type": "mcq",
+     "q": "\"Her hands are as soft as bread dough.\" What does this tell us?",
+     "options": [
+      "Her hands are gentle and soft",
+      "She is a baker",
+      "Her hands are covered in flour",
+      "Her hands are cold"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does bread dough feel like?",
+      "The poet compares how her hands feel.",
+      "Soft dough is gentle to touch."
+     ],
+     "explain": "Her hands feel soft and gentle, like bread dough."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the poet compare Gogo's hugs to blankets?",
+     "options": [
+      "Her hugs feel warm and safe",
+      "She owns many blankets",
+      "She is always cold",
+      "She sleeps a lot"
+     ],
+     "answer": 0,
+     "hints": [
+      "How does a blanket make you feel?",
+      "Think warm and cosy.",
+      "Hugs can make us feel the same."
+     ],
+     "explain": "Blankets are warm and comforting, and so are her hugs."
+    },
+    {
+     "type": "mcq",
+     "q": "Complete the simile: \"The child ran as fast as ___.\"",
+     "options": [
+      "a cheetah",
+      "a tortoise",
+      "a table",
+      "a cloud"
+     ],
+     "answer": 0,
+     "hints": [
+      "You need something that is very fast.",
+      "Which animal is famous for speed?",
+      "It hunts on the savanna."
+     ],
+     "explain": "A cheetah is very fast, so it makes a good simile for speed."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these sentences: simile or not a simile?",
+     "items": [
+      "He is as tall as a tree",
+      "The tree is tall",
+      "She sings like a bird",
+      "The bird sings"
+     ],
+     "bins": [
+      "Simile",
+      "Not a simile"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "A simile compares two different things.",
+      "Look for \"like\" or \"as … as\".",
+      "\"The tree is tall\" only describes."
+     ],
+     "explain": "\"As tall as a tree\" and \"like a bird\" are similes. The others only describe."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you understand the similes?",
+    "options": [
+     "Picturing them",
+     "Finding \"like\" or \"as\"",
+     "Thinking about my own family",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read a poem about a grandmother and learnt how similes help us picture things.",
+   "teacher": "Shows recognition and interpretation of similes, inference about tone, and generating an apt comparison.",
+   "done": "Similes make writing come alive."
+  },
+  {
+   "id": "n5-lifecycles",
+   "grade": 5,
+   "subject": "Natural Sciences and Technology",
+   "title": "Life cycles",
+   "topic": "Life and Living",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 5 Natural Sciences and Technology, Term 1, Life and Living: Life cycles (check against the Grade 5 ATP)",
+   "intention": "Today I am practising putting the stages of a life cycle in order.",
+   "prompt": "Why do you think it is called a cycle?",
+   "lesson": [
+    {
+     "h": "What is a life cycle?",
+     "say": "A life cycle shows the stages a living thing goes through, from the start of its life until it makes young of its own.",
+     "html": "<p>A <b>life cycle</b> shows the stages a living thing goes through, from the start of its life until it reproduces. Then the cycle starts again, which is why it is called a <b>cycle</b>.</p>"
+    },
+    {
+     "h": "Frogs and butterflies",
+     "say": "A frog goes from egg to tadpole to froglet to adult frog. A butterfly goes from egg to caterpillar to pupa to adult butterfly.",
+     "html": "<p><b>Frog:</b></p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">egg</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">tadpole</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">froglet</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">adult frog</span></div><p><b>Butterfly:</b></p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">egg</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">caterpillar (larva)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">pupa</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">adult butterfly</span></div><p>Inside the pupa, the caterpillar's body changes completely. Big changes like this are called <b>metamorphosis</b>.</p>"
+    },
+    {
+     "h": "Plants have life cycles too",
+     "say": "A plant grows from a seed into a seedling, then an adult plant, which makes flowers and new seeds.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">seed</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">seedling</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">adult plant</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">flower</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">new seeds</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Where does a tadpole fit in a frog's life cycle?",
+    "steps": [
+     "A frog's life cycle starts with an egg in water.",
+     "A tadpole hatches from the egg and lives in water, breathing with gills.",
+     "So the tadpole comes after the egg and before the froglet."
+    ]
+   },
+   "questions": [
+    {
+     "type": "order",
+     "q": "Put a frog's life cycle in order.",
+     "items": [
+      "egg",
+      "tadpole",
+      "froglet",
+      "adult frog"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start with what the mother frog lays.",
+      "The tadpole lives in water and has a tail.",
+      "A froglet has legs and a short tail."
+     ],
+     "explain": "egg → tadpole → froglet → adult frog."
+    },
+    {
+     "type": "order",
+     "q": "Put a butterfly's life cycle in order.",
+     "items": [
+      "egg",
+      "caterpillar",
+      "pupa",
+      "adult butterfly"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Butterflies lay eggs on leaves.",
+      "What hatches out and eats leaves?",
+      "The pupa comes just before the adult."
+     ],
+     "explain": "egg → caterpillar → pupa → adult butterfly."
+    },
+    {
+     "type": "mcq",
+     "q": "What happens inside a pupa?",
+     "options": [
+      "The caterpillar's body changes into a butterfly",
+      "The egg hatches",
+      "The butterfly lays eggs",
+      "The caterpillar sleeps for ever"
+     ],
+     "answer": 0,
+     "hints": [
+      "The pupa comes between caterpillar and butterfly.",
+      "Something big changes in there.",
+      "This change is called metamorphosis."
+     ],
+     "explain": "Inside the pupa, the caterpillar's body changes completely into a butterfly."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is it called a life CYCLE?",
+     "options": [
+      "The adult makes young, and the stages begin again",
+      "It goes very fast",
+      "Animals ride bicycles",
+      "It happens only once"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does an adult frog do?",
+      "It lays eggs.",
+      "The eggs start the stages again."
+     ],
+     "explain": "Adults make young, so the stages repeat in a circle: a cycle."
+    },
+    {
+     "type": "mcq",
+     "q": "Which comes straight after a seed in a plant's life cycle?",
+     "options": [
+      "Seedling",
+      "Flower",
+      "Fruit",
+      "Adult tree"
+     ],
+     "answer": 0,
+     "hints": [
+      "What grows first when a seed germinates?",
+      "It is a very young plant.",
+      "Its name has \"seed\" in it."
+     ],
+     "explain": "A seed germinates and grows into a seedling."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you remember the order?",
+    "options": [
+     "The arrows",
+     "Thinking of real animals",
+     "The word \"cycle\"",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child put the stages of frog, butterfly and plant life cycles in order.",
+   "teacher": "Shows sequencing of developmental stages, understanding of metamorphosis, and of why the pattern is cyclical.",
+   "done": "Every living thing has a life cycle."
+  },
+  {
+   "id": "n5-metals",
+   "grade": 5,
+   "subject": "Natural Sciences and Technology",
+   "title": "Metals and non-metals",
+   "topic": "Matter and Materials",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 5 Natural Sciences and Technology, Term 2, Matter and Materials: Metals and non-metals, uses of metals (check against the Grade 5 ATP)",
+   "intention": "Today I am practising choosing the right material for a job.",
+   "prompt": "Why is that material a good choice?",
+   "lesson": [
+    {
+     "h": "Properties of metals",
+     "say": "Metals are usually shiny, strong and hard. They let heat and electricity pass through them, and they can be bent or hammered into shape.",
+     "html": "<p>Most <b>metals</b> (iron, copper, aluminium, gold) are:</p><ul class=\"plain\"><li><b>shiny</b> when polished</li><li><b>strong</b> and hard</li><li><b>conductors</b>: they let heat and electricity pass through</li><li>able to be <b>bent and hammered</b> into shapes</li></ul>"
+    },
+    {
+     "h": "Non-metals and choosing materials",
+     "say": "Non-metals such as wood, plastic, glass and rubber usually do not let heat or electricity through. That makes them good insulators.",
+     "html": "<p><b>Non-metals</b> such as wood, plastic, glass and rubber usually do <b>not</b> let heat or electricity through. They are <b>insulators</b>.</p><p>A pot is made of metal so heat reaches the food, but its <b>handle</b> is plastic or wood so you don't burn your hand.</p>"
+    }
+   ],
+   "example": {
+    "q": "Why are electric wires made of copper covered in plastic?",
+    "steps": [
+     "Copper is a metal, so electricity passes through it easily.",
+     "Plastic is an insulator, so electricity does not pass through it.",
+     "The copper carries the electricity, and the plastic keeps people safe from shocks."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these materials into metals and non-metals.",
+     "items": [
+      "iron",
+      "wood",
+      "copper",
+      "plastic",
+      "aluminium",
+      "glass"
+     ],
+     "bins": [
+      "Metal",
+      "Non-metal"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Metals are usually shiny and conduct heat.",
+      "Iron, copper and aluminium are used in pots, wires and cans.",
+      "Wood, plastic and glass do not conduct heat well."
+     ],
+     "explain": "Iron, copper and aluminium are metals. Wood, plastic and glass are non-metals."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is a cooking pot made of metal?",
+     "options": [
+      "Metal lets heat pass through to the food",
+      "Metal is light",
+      "Metal is soft",
+      "Metal keeps food cold"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does a pot need to do on the stove?",
+      "Heat must reach the food.",
+      "Metals are good conductors of heat."
+     ],
+     "explain": "Metals conduct heat, so heat passes through the pot to cook the food."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does a pot have a wooden or plastic handle?",
+     "options": [
+      "They are insulators, so the handle stays cool",
+      "They are shinier",
+      "They conduct heat well",
+      "They are heavier"
+     ],
+     "answer": 0,
+     "hints": [
+      "You hold the handle.",
+      "You don't want to burn your hand.",
+      "Which materials do not let heat through?"
+     ],
+     "explain": "Wood and plastic are insulators, so the handle does not get too hot."
+    },
+    {
+     "type": "mcq",
+     "q": "Which material would you use for the outside of an electric plug?",
+     "options": [
+      "Plastic",
+      "Copper",
+      "Iron",
+      "Aluminium foil"
+     ],
+     "answer": 0,
+     "hints": [
+      "You touch the outside of a plug.",
+      "It must not let electricity through to your hand.",
+      "Choose an insulator."
+     ],
+     "explain": "Plastic is an insulator, so it keeps you safe from electric shocks."
+    },
+    {
+     "type": "mcq",
+     "q": "Which property lets metal be shaped into a car door?",
+     "options": [
+      "It can be bent and hammered",
+      "It is see-through",
+      "It melts in the sun",
+      "It floats"
+     ],
+     "answer": 0,
+     "hints": [
+      "A car door is a curved shape.",
+      "How do you change the shape of metal?",
+      "Metals can be pressed and bent."
+     ],
+     "explain": "Metals can be bent and hammered into shapes like car doors."
+    }
+   ],
+   "reflect": {
+    "q": "How did you choose the right material?",
+    "options": [
+     "Thinking about heat",
+     "Thinking about safety",
+     "Things I see at home",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt the properties of metals and non-metals and how we choose materials for a job.",
+   "teacher": "Shows classification by properties, understanding of conductors and insulators, and reasoning about material choice for function and safety.",
+   "done": "Engineers choose materials by what they need to do."
+  },
+  {
+   "id": "l5-feedback",
+   "grade": 5,
+   "subject": "Life Skills",
+   "title": "Giving and receiving feedback",
+   "topic": "Personal and Social Well-being: giving and receiving feedback",
+   "domain": "Creativity and Metacognition",
+   "category": "Reflection",
+   "caps": "CAPS Grade 5 Life Skills, Term 1, Personal and Social Well-being: Giving and receiving feedback (positive and negative, from peers and adults)",
+   "intention": "Today I am practising giving kind, helpful feedback and receiving it well.",
+   "prompt": "Would that feedback help someone improve?",
+   "lesson": [
+    {
+     "h": "Helpful feedback",
+     "say": "Good feedback is kind, specific and helpful. Try two stars and a wish: two things that went well and one thing to improve.",
+     "html": "<p>Good feedback is <b>kind</b>, <b>specific</b> and <b>helpful</b>. Try <b>two stars and a wish</b>:</p><ul class=\"plain\"><li>★ Something that went well</li><li>★ Another thing that went well</li><li>✦ A wish: one thing that could be better</li></ul><p>\"Your drawing is nice\" is kind but not specific. \"The colours in your sky really show it is sunset\" is kind <b>and</b> specific.</p>"
+    },
+    {
+     "h": "Receiving feedback",
+     "say": "When you get feedback, listen without interrupting, say thank you, and think about what you could use.",
+     "html": "<ul class=\"plain\"><li>Listen without interrupting</li><li>Say thank you</li><li>Ask a question if something is not clear</li><li>Decide what you will use to improve</li></ul><p>Feedback is about the <b>work</b>, not about who you are as a person.</p>"
+    }
+   ],
+   "example": {
+    "q": "Give Zola two stars and a wish about her poster.",
+    "steps": [
+     "Star: \"Your heading is big and easy to read.\"",
+     "Star: \"Your pictures match the facts.\"",
+     "Wish: \"I wish the writing at the bottom was a bit bigger.\""
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which feedback is the most helpful?",
+     "options": [
+      "\"Your story's beginning hooked me. Maybe add more about how the boy felt.\"",
+      "\"It's fine.\"",
+      "\"Boring.\"",
+      "\"Mine is better.\""
+     ],
+     "answer": 0,
+     "hints": [
+      "Helpful feedback is specific.",
+      "It says what went well and what to improve.",
+      "Which answer gives a clear idea for next time?"
+     ],
+     "explain": "It names something specific that worked and gives a clear idea to improve."
+    },
+    {
+     "type": "sort",
+     "q": "Sort these: specific feedback or vague feedback?",
+     "items": [
+      "\"Your handwriting is neat and easy to read\"",
+      "\"Nice\"",
+      "\"Your diagram labels are clear\"",
+      "\"Good job\""
+     ],
+     "bins": [
+      "Specific",
+      "Vague"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Specific feedback says exactly what.",
+      "\"Nice\" and \"Good job\" don't say what was good.",
+      "Which ones name a detail?"
+     ],
+     "explain": "Comments about the handwriting and labels are specific. \"Nice\" and \"Good job\" are vague."
+    },
+    {
+     "type": "mcq",
+     "q": "Your teacher says your maths needs more working out. What is a good way to respond?",
+     "options": [
+      "\"Thank you. I'll show my steps next time.\"",
+      "Roll your eyes",
+      "\"That's unfair!\"",
+      "Tear up the page"
+     ],
+     "answer": 0,
+     "hints": [
+      "Receiving feedback well means listening and thanking.",
+      "Which answer shows you will use it?",
+      "It is calm and positive."
+     ],
+     "explain": "Thanking the teacher and planning to show your steps shows you can use feedback."
+    },
+    {
+     "type": "mcq",
+     "q": "What should feedback be about?",
+     "options": [
+      "The work, not the person",
+      "Whether you like the person",
+      "How someone looks",
+      "Who is the cleverest"
+     ],
+     "answer": 0,
+     "hints": [
+      "Feedback helps improve something.",
+      "It is not about who you are.",
+      "Focus on what was done."
+     ],
+     "explain": "Feedback is about the work, so people can improve without feeling attacked."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a \"wish\" in two stars and a wish?",
+     "options": [
+      "\"I wish your title was a bit bigger.\"",
+      "\"I love your colours.\"",
+      "\"Your facts are correct.\"",
+      "\"I wish I had your pencils.\""
+     ],
+     "answer": 0,
+     "hints": [
+      "A wish suggests one improvement.",
+      "It is about their work.",
+      "Which one helps them make it better?"
+     ],
+     "explain": "\"I wish your title was a bit bigger\" suggests a helpful improvement."
+    }
+   ],
+   "reflect": {
+    "q": "What do you find easier?",
+    "options": [
+     "Giving feedback",
+     "Receiving feedback",
+     "Both are hard",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised giving kind, specific feedback and receiving feedback calmly.",
+   "teacher": "Shows distinction between specific and vague feedback, constructive suggestions, and appropriate responses to feedback from adults.",
+   "done": "Feedback helps everyone grow."
+  },
+  {
+   "id": "l5-relationships",
+   "grade": 5,
+   "subject": "Life Skills",
+   "title": "Safe and healthy relationships",
+   "topic": "Personal and Social Well-being: relationships with peers, older people and strangers",
+   "domain": "Creativity and Metacognition",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 5 Life Skills, Term 1, Personal and Social Well-being: Relationships with peers, older people and strangers (safe and unsafe, good and bad relationships)",
+   "intention": "Today I am practising telling safe relationships from unsafe ones.",
+   "prompt": "How would that make you feel?",
+   "lesson": [
+    {
+     "h": "Healthy relationships",
+     "say": "In a healthy relationship, people are kind, honest and respectful. They listen to each other and you feel safe.",
+     "html": "<p>In a <b>healthy relationship</b> with a friend or an adult, people are kind, honest and respectful. They listen, they keep you safe, and you feel good being with them.</p>"
+    },
+    {
+     "h": "Warning signs and strangers",
+     "say": "Be careful if someone asks you to keep secrets, makes you feel scared, or asks for personal information. Never go anywhere with a stranger, and check with a trusted adult first.",
+     "html": "<p><b>Warning signs</b>: someone asks you to keep secrets from your family, makes you feel scared or uncomfortable, pressures you, or asks for personal information.</p><ul class=\"plain\"><li>Never go anywhere with a stranger, even if they seem kind</li><li>Don't share your address, school or photos online</li><li>Always check with a trusted adult first</li><li>Tell a trusted adult if something feels wrong</li></ul>"
+    }
+   ],
+   "example": {
+    "q": "Someone Bongi met online asks for her home address so they can send a gift. What should she do?",
+    "steps": [
+     "Notice the warning sign: a person she doesn't know is asking for personal information.",
+     "Don't share the address, and don't reply further.",
+     "Tell a trusted adult and show them the message."
+    ]
+   },
+   "questions": [
+    {
+     "type": "sort",
+     "q": "Sort these: signs of a healthy relationship, or warning signs?",
+     "items": [
+      "Listens to you",
+      "Asks you to keep secrets from your family",
+      "Respects your \"no\"",
+      "Makes you feel scared"
+     ],
+     "bins": [
+      "Healthy",
+      "Warning sign"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Healthy relationships feel safe.",
+      "Secrets from family are a warning sign.",
+      "Feeling scared is a warning sign."
+     ],
+     "explain": "Listening and respecting \"no\" are healthy. Secrets from family and feeling scared are warning signs."
+    },
+    {
+     "type": "mcq",
+     "q": "A stranger in a car says your mom sent him to fetch you. What should you do?",
+     "options": [
+      "Don't go. Go to a safe place and tell a trusted adult",
+      "Get in the car",
+      "Ask him for sweets first",
+      "Wait alone at the gate"
+     ],
+     "answer": 0,
+     "hints": [
+      "Is he someone you know?",
+      "Your family would tell you about any change of plan.",
+      "Go to a safe place, like back into school."
+     ],
+     "explain": "Never go with a stranger. Go to a safe place and tell a trusted adult."
+    },
+    {
+     "type": "mcq",
+     "q": "What information is safe to share with a new online friend?",
+     "options": [
+      "Your favourite book",
+      "Your home address",
+      "Your school's name",
+      "A photo in your school uniform"
+     ],
+     "answer": 0,
+     "hints": [
+      "Personal information could tell someone where to find you.",
+      "Which answer does not reveal where you are?",
+      "Hobbies are safer than places."
+     ],
+     "explain": "A favourite book doesn't tell anyone where you are. Your address, school and uniform photos do."
+    },
+    {
+     "type": "mcq",
+     "q": "How do you show respect to older people?",
+     "options": [
+      "Greet them and listen politely",
+      "Ignore them",
+      "Interrupt them",
+      "Laugh at them"
+     ],
+     "answer": 0,
+     "hints": [
+      "Respect means treating people well.",
+      "How do you greet a gogo or a neighbour?",
+      "Listening shows respect."
+     ],
+     "explain": "Greeting older people and listening politely shows respect."
+    },
+    {
+     "type": "mcq",
+     "q": "Your friend always makes fun of you in front of others, then says it's \"just a joke\". What is true?",
+     "options": [
+      "A good friend wouldn't keep hurting you. You can talk to a trusted adult",
+      "You must accept it",
+      "It's always your fault",
+      "You should do it back"
+     ],
+     "answer": 0,
+     "hints": [
+      "Does it feel good or bad?",
+      "Healthy friendships are kind.",
+      "You can get help."
+     ],
+     "explain": "Repeated hurtful \"jokes\" are not healthy. You can say how it feels and talk to a trusted adult."
+    }
+   ],
+   "reflect": {
+    "q": "What would you do if something felt wrong?",
+    "options": [
+     "Tell a trusted adult",
+     "Say no and leave",
+     "Go to a safe place",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt to recognise safe and unsafe relationships, online safety and stranger safety. Please talk about trusted adults at home.",
+   "teacher": "Protective, scenario-based content. If a learner discloses anything, follow your school's safeguarding procedure.",
+   "done": "Safe people respect you. You can always ask for help."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp5-fdp",
+   "grade": 5,
+   "title": "Fractions, decimals and percentages",
+   "topic": "Number: equivalence",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 5: Number (equivalence of simple fractions, decimals and percentages)",
+   "intention": "Today I am matching fractions, decimals and percentages.",
+   "prompt": "What does 50% off mean in a shop?",
+   "lesson": [
+    {
+     "h": "Three ways to say it",
+     "say": "One half can be written as a fraction, a half, as a decimal, 0.5, or as a percentage, 50 percent. They all mean the same amount.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1/2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">0.5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">50%</span></div>"
+    },
+    {
+     "h": "Key facts",
+     "say": "A quarter is 0.25, or 25 percent. Three quarters is 0.75, or 75 percent. One tenth is 0.1, or 10 percent.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1/4 = 0.25 = 25%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3/4 = 0.75 = 75%</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1/10 = 0.1 = 10%</span></div>"
+    },
+    {
+     "h": "Per cent means out of 100",
+     "say": "Per cent means out of 100. 30 percent means 30 out of 100, which is 0.3.",
+     "html": "<p>30% = 30/100 = <b>0.3</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Write 2/5 as a percentage.",
+    "steps": [
+     "Make the bottom 100: multiply top and bottom by 20.",
+     "2/5 = 40/100.",
+     "40/100 = 40%."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is the same as 1/2?",
+     "options": [
+      "50%",
+      "25%",
+      "12%",
+      "0.2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Half of 100.",
+      "50.",
+      "50%."
+     ],
+     "explain": "1/2 = 50%."
+    },
+    {
+     "type": "mcq",
+     "q": "Write 0.25 as a fraction.",
+     "options": [
+      "1/4",
+      "1/2",
+      "2/5",
+      "1/25"
+     ],
+     "answer": 0,
+     "hints": [
+      "0.25 is 25 hundredths.",
+      "25 out of 100.",
+      "1/4."
+     ],
+     "explain": "0.25 = 25/100 = 1/4."
+    },
+    {
+     "type": "num",
+     "q": "Write 70% as a decimal.",
+     "answer": "0.7",
+     "options": [
+      "0.7",
+      "7",
+      "0.07",
+      "70"
+     ],
+     "hints": [
+      "70 out of 100.",
+      "70 ÷ 100.",
+      "0.7."
+     ],
+     "explain": "70 ÷ 100 = 0.7."
+    },
+    {
+     "type": "num",
+     "q": "Write 3/10 as a percentage. (Type the number only.)",
+     "answer": "30",
+     "options": [
+      "30",
+      "3",
+      "10",
+      "0.3"
+     ],
+     "hints": [
+      "Multiply top and bottom by 10.",
+      "30/100.",
+      "30%."
+     ],
+     "explain": "3/10 = 30/100 = 30%."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Remembering key facts",
+     "Thinking 'out of 100'",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child matched fractions, decimals and percentages.",
+   "teacher": "Shows recognising equivalent fractions, decimals and percentages, including tenths, quarters and halves.",
+   "done": "Per cent means out of 100: 1/2 = 0.5 = 50%."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp5-fact-opinion",
+   "grade": 5,
+   "title": "Fact and opinion",
+   "topic": "Reading: non-fiction",
+   "category": "Flexible Thinking",
+   "caps": "Cambridge Primary English (0058), Stage 5: Reading (distinguishing between fact and opinion)",
+   "intention": "Today I am telling facts from opinions.",
+   "prompt": "Is 'pizza is the best food' a fact?",
+   "lesson": [
+    {
+     "h": "Facts",
+     "say": "A fact can be checked and proved true. For example: the Orange River is the longest river in South Africa.",
+     "html": "<p>Fact: <b>can be proved</b>.</p>"
+    },
+    {
+     "h": "Opinions",
+     "say": "An opinion is what someone thinks or feels. People can disagree. For example: the Orange River is the most beautiful river.",
+     "html": "<p>Opinion: <b>what someone thinks</b>.</p>"
+    },
+    {
+     "h": "Clue words",
+     "say": "Opinion words include best, worst, beautiful, I think and should.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">best</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">worst</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">I think</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">should</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Fact or opinion: 'Cheetahs can run faster than lions.'",
+    "steps": [
+     "Can it be checked?",
+     "Yes, by measuring their speeds.",
+     "It is a fact."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "'There are seven days in a week.' Is this a fact or an opinion?",
+     "options": [
+      "Fact",
+      "Opinion"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can it be checked?",
+      "Yes, on a calendar.",
+      "Fact."
+     ],
+     "explain": "It can be checked, so it is a fact."
+    },
+    {
+     "type": "mcq",
+     "q": "'Saturday is the best day of the week.' Is this a fact or an opinion?",
+     "options": [
+      "Opinion",
+      "Fact"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for 'best'.",
+      "People could disagree.",
+      "Opinion."
+     ],
+     "explain": "'Best' shows an opinion."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word often signals an opinion?",
+     "options": [
+      "beautiful",
+      "seven",
+      "river",
+      "measured"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a judgement.",
+      "People see it differently.",
+      "Beautiful."
+     ],
+     "explain": "'Beautiful' is a judgement."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the sentences.",
+     "items": [
+      "Water boils at 100 °C.",
+      "Maths is boring.",
+      "Durban is in KwaZulu-Natal.",
+      "Cats are better than dogs."
+     ],
+     "bins": [
+      "Fact",
+      "Opinion"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Can it be checked?",
+      "Boiling point and Durban can be checked.",
+      "The others are feelings."
+     ],
+     "explain": "The boiling point and Durban's location are facts; the others are opinions."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking 'can it be checked?'",
+     "Spotting opinion words",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt to tell facts from opinions.",
+   "teacher": "Shows distinguishing fact from opinion and recognising evaluative language.",
+   "done": "A fact can be checked. An opinion is what someone thinks."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp5-sound",
+   "grade": 5,
+   "title": "Sound and vibrations",
+   "topic": "Physics: sound",
+   "caps": "Cambridge Primary Science (0097), Stage 5: Physics (sound is made by vibrations; pitch and loudness)",
+   "intention": "Today I am finding out how sounds are made and changed.",
+   "prompt": "Put your hand on your throat and hum. What do you feel?",
+   "lesson": [
+    {
+     "h": "Vibrations",
+     "say": "Sound is made when something vibrates, moving quickly back and forth. When you hum, your vocal cords vibrate.",
+     "html": "<p>Sound comes from <b>vibrations</b>.</p>"
+    },
+    {
+     "h": "Loudness",
+     "say": "Bigger vibrations make louder sounds. Hitting a drum harder makes it louder.",
+     "html": "<p>Bigger vibrations → <b>louder</b></p>"
+    },
+    {
+     "h": "Pitch",
+     "say": "Pitch is how high or low a sound is. Faster vibrations make a higher pitch. A short, tight string gives a higher note than a long, loose one.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Fast vibration: high pitch</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slow vibration: low pitch</span></div>"
+    }
+   ],
+   "example": {
+    "q": "How can you make a guitar string play a higher note?",
+    "steps": [
+     "A higher note needs faster vibrations.",
+     "Shorten the string by pressing it, or tighten it.",
+     "The string vibrates faster, so the pitch is higher."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What makes a sound?",
+     "options": [
+      "Vibrations",
+      "Light",
+      "Colours",
+      "Smells"
+     ],
+     "answer": 0,
+     "hints": [
+      "Feel your throat when you hum.",
+      "It shakes.",
+      "Vibrations."
+     ],
+     "explain": "Sounds come from vibrations."
+    },
+    {
+     "type": "mcq",
+     "q": "How do you make a drum louder?",
+     "options": [
+      "Hit it harder",
+      "Hit it softer",
+      "Paint it",
+      "Make it smaller"
+     ],
+     "answer": 0,
+     "hints": [
+      "Bigger vibrations.",
+      "More force.",
+      "Harder."
+     ],
+     "explain": "Hitting harder makes bigger vibrations."
+    },
+    {
+     "type": "mcq",
+     "q": "Which string makes the higher note?",
+     "options": [
+      "A short, tight string",
+      "A long, loose string",
+      "They are the same",
+      "Neither makes a sound"
+     ],
+     "answer": 0,
+     "hints": [
+      "Higher pitch = faster vibration.",
+      "Short and tight vibrate faster.",
+      "Short, tight."
+     ],
+     "explain": "Short, tight strings vibrate faster: higher pitch."
+    },
+    {
+     "type": "mcq",
+     "q": "What is pitch?",
+     "options": [
+      "How high or low a sound is",
+      "How loud a sound is",
+      "How far sound goes",
+      "The colour of sound"
+     ],
+     "answer": 0,
+     "hints": [
+      "Not loudness.",
+      "High or low.",
+      "Pitch."
+     ],
+     "explain": "Pitch is how high or low a sound is."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Feeling the vibration",
+     "Loudness versus pitch",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt how sounds are made and how pitch and loudness change.",
+   "teacher": "Shows explaining sound as vibration and relating vibration size and speed to loudness and pitch.",
+   "done": "Bigger vibrations: louder. Faster vibrations: higher pitch."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp5-area-perimeter",
+   "grade": 5,
+   "title": "Area and perimeter",
+   "topic": "Measurement",
+   "category": "Problem Solving",
+   "caps": "IB PYP Mathematics: measurement (perimeter and area of rectangles)",
+   "intention": "Today I am finding the perimeter and area of rectangles.",
+   "prompt": "How much fencing would a school garden need?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Measuring space helps us plan and build. Key concept: Function. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Measuring space helps us plan and build.</p><p>Key concept: <b>Function</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Perimeter",
+     "say": "Perimeter is the distance all the way around a shape. Add up all the sides. A rectangle 5 metres by 3 metres has a perimeter of 16 metres.",
+     "html": "<p>5 + 3 + 5 + 3 = <b>16 m</b></p>"
+    },
+    {
+     "h": "Area",
+     "say": "Area is the space inside a shape, measured in squares. Multiply length by width: 5 times 3 is 15 square metres.",
+     "html": "<p>5 × 3 = <b>15 m²</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A garden bed is 6 m long and 2 m wide. Find the perimeter and area.",
+    "steps": [
+     "Perimeter: 6 + 2 + 6 + 2 = 16 m.",
+     "Area: 6 × 2 = 12 m².",
+     "Fencing needs 16 m; soil covers 12 m²."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Find the perimeter of a rectangle 4 m by 2 m, in metres.",
+     "answer": "12",
+     "options": [
+      "12",
+      "8",
+      "6",
+      "16"
+     ],
+     "hints": [
+      "Add all four sides.",
+      "4 + 2 + 4 + 2.",
+      "12."
+     ],
+     "explain": "4 + 2 + 4 + 2 = 12 m."
+    },
+    {
+     "type": "num",
+     "q": "Find the area of a rectangle 7 cm by 3 cm, in cm².",
+     "answer": "21",
+     "options": [
+      "21",
+      "20",
+      "10",
+      "14"
+     ],
+     "hints": [
+      "Length × width.",
+      "7 × 3.",
+      "21."
+     ],
+     "explain": "7 × 3 = 21 cm²."
+    },
+    {
+     "type": "mcq",
+     "q": "You want to put a fence around a field. What do you need?",
+     "options": [
+      "The perimeter",
+      "The area",
+      "The weight",
+      "The height"
+     ],
+     "answer": 0,
+     "hints": [
+      "A fence goes around.",
+      "Distance around.",
+      "Perimeter."
+     ],
+     "explain": "A fence goes around, so you need the perimeter."
+    },
+    {
+     "type": "mcq",
+     "q": "You want to cover a floor with tiles. What do you need?",
+     "options": [
+      "The area",
+      "The perimeter",
+      "The temperature",
+      "The time"
+     ],
+     "answer": 0,
+     "hints": [
+      "Tiles cover the inside.",
+      "Space inside.",
+      "Area."
+     ],
+     "explain": "Tiles cover the space inside: the area."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Around or inside?",
+     "Adding sides",
+     "Multiplying length by width",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked out the perimeter and area of rectangles.",
+   "teacher": "Shows calculating perimeter and area of rectangles and choosing the right measure for a task (thinker).",
+   "done": "Perimeter: around. Area: inside (length × width)."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp5-news",
+   "grade": 5,
+   "title": "Writing a news report",
+   "topic": "Writing: recounts",
+   "category": "Planning and Organisation",
+   "caps": "IB PYP Language: writing (news reports: headline, the five Ws, and order of importance)",
+   "intention": "Today I am writing a news report.",
+   "prompt": "What news happened at school this week?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: News reports tell people what happened, clearly and fairly. Key concept: Responsibility. Today we are principled.",
+     "html": "<p><b>Central idea:</b> News reports tell people what happened, clearly and fairly.</p><p>Key concept: <b>Responsibility</b> · Learner profile: <b>Principled</b></p>"
+    },
+    {
+     "h": "The five Ws",
+     "say": "A news report answers who, what, where, when and why in the first paragraph.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Who?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">What?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Where?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">When?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Why?</span></div>"
+    },
+    {
+     "h": "Headline and order",
+     "say": "A headline is short and grabs attention. The most important facts come first, then the details. A good reporter checks facts and stays fair.",
+     "html": "<p><b>Learners Clean Up Riverbank</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Write a first sentence for a report about a school clean-up.",
+    "steps": [
+     "Who: Grade 5 learners. What: cleaned the river. Where: Mngeni River.",
+     "When: on Friday. Why: to protect wildlife.",
+     "'On Friday, Grade 5 learners cleaned the banks of the Mngeni River to protect wildlife.'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is a headline?",
+     "options": [
+      "A short title that grabs attention",
+      "The last sentence",
+      "A picture",
+      "The writer's name"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is at the top.",
+      "Short and bold.",
+      "A title."
+     ],
+     "explain": "A headline is a short, attention-grabbing title."
+    },
+    {
+     "type": "mcq",
+     "q": "Which question is NOT one of the five Ws?",
+     "options": [
+      "Which colour?",
+      "Who?",
+      "Where?",
+      "Why?"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who, what, where, when, why.",
+      "Which one is missing?",
+      "Which colour?"
+     ],
+     "explain": "The five Ws are who, what, where, when and why."
+    },
+    {
+     "type": "mcq",
+     "q": "What comes first in a news report?",
+     "options": [
+      "The most important facts",
+      "The smallest details",
+      "The writer's opinion",
+      "A joke"
+     ],
+     "answer": 0,
+     "hints": [
+      "Readers may stop early.",
+      "Give them the key facts.",
+      "Most important."
+     ],
+     "explain": "The most important facts come first."
+    },
+    {
+     "type": "mcq",
+     "q": "Why should a reporter check their facts?",
+     "options": [
+      "So the report is true and fair",
+      "To make it longer",
+      "Because it is fun",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "People trust the news.",
+      "It must be true.",
+      "True and fair."
+     ],
+     "explain": "Reporters are responsible for telling the truth."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The five Ws",
+     "Writing a headline",
+     "Checking facts",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child wrote a news report answering who, what, where, when and why.",
+   "teacher": "Shows structuring a news report with headline and five Ws, and recognising the responsibility to report accurately (principled).",
+   "done": "Headline, the five Ws first, then details. Check your facts."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Social Studies",
+   "id": "pyp5-trade",
+   "grade": 5,
+   "title": "How communities share and trade",
+   "topic": "How we organise ourselves",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "IB PYP Social studies, transdisciplinary theme 'How we organise ourselves': how communities organise trade, money and services",
+   "intention": "Today I am finding out how communities trade and share.",
+   "prompt": "Where does the bread in your shop come from?",
+   "lesson": [
+    {
+     "h": "Theme: How we organise ourselves",
+     "say": "Our theme is How we organise ourselves. Central idea: Communities organise trade and services so people can meet their needs. Key concept: Connection. Today we are thinkers.",
+     "html": "<p><b>Central idea:</b> Communities organise trade and services so people can meet their needs.</p><p>Key concept: <b>Connection</b> · Learner profile: <b>Thinkers</b></p>"
+    },
+    {
+     "h": "Needs and wants",
+     "say": "Needs are things we must have, like food, water and shelter. Wants are things we would like, like toys.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Needs: food, water, shelter</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wants: toys, games</span></div>"
+    },
+    {
+     "h": "Swapping and money",
+     "say": "Long ago, people swapped goods, called bartering. Today we usually use money, which makes trade easier. Shops, farms and transport are connected.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Farm grows wheat</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Bakery makes bread</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Truck delivers</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Shop sells</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Why is money easier than swapping?",
+    "steps": [
+     "Swapping only works if both people want what the other has.",
+     "Money can be used to buy anything.",
+     "So money makes trade easier."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a need?",
+     "pics": [
+      "💧",
+      "🎮",
+      "🧸"
+     ],
+     "options": [
+      "Water",
+      "A game",
+      "A teddy"
+     ],
+     "answer": 0,
+     "hints": [
+      "We can't live without it.",
+      "We drink it.",
+      "Water."
+     ],
+     "explain": "Water is a need."
+    },
+    {
+     "type": "mcq",
+     "q": "What is bartering?",
+     "options": [
+      "Swapping goods without money",
+      "Saving money",
+      "Building a shop",
+      "Growing food"
+     ],
+     "answer": 0,
+     "hints": [
+      "Long ago.",
+      "Swapping.",
+      "Without money."
+     ],
+     "explain": "Bartering is swapping goods directly."
+    },
+    {
+     "type": "order",
+     "q": "Put bread's journey in order.",
+     "items": [
+      "Farm grows wheat",
+      "Bakery makes bread",
+      "Truck delivers it",
+      "Shop sells it"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Wheat comes first.",
+      "Bread is made from wheat.",
+      "It is sold last."
+     ],
+     "explain": "Farm, bakery, truck, shop."
+    },
+    {
+     "type": "mcq",
+     "q": "What would happen if the trucks stopped running?",
+     "options": [
+      "Shops would run out of bread",
+      "Nothing",
+      "Farms would close at once",
+      "Bread would be cheaper"
+     ],
+     "answer": 0,
+     "hints": [
+      "The bread can't reach the shop.",
+      "Everything is connected.",
+      "Empty shelves."
+     ],
+     "explain": "Without delivery, shops can't get bread."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Needs and wants",
+     "Following the bread's journey",
+     "Seeing connections",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored how communities trade and how goods reach shops.",
+   "teacher": "How we organise ourselves: shows distinguishing needs and wants and explaining connections in a supply chain (thinker).",
+   "done": "Communities are connected: farms, bakeries, transport and shops."
+  }
+ ],
+ "words": {
+  "m5-fractions": {
+   "words": [
+    [
+     "⬆️",
+     "Numerator",
+     "the top number. It tells how many parts we have"
+    ],
+    [
+     "⬇️",
+     "Denominator",
+     "the bottom number. It tells how many equal parts the whole has"
+    ],
+    [
+     "🍞",
+     "Mixed number",
+     "a whole number and a fraction together"
+    ]
+   ]
+  },
+  "e5-info": {
+   "words": [
+    [
+     "🏖️",
+     "Coast",
+     "where the land meets the sea"
+    ],
+    [
+     "🫏",
+     "Braying",
+     "the loud sound a donkey makes"
+    ],
+    [
+     "🔤",
+     "Heading",
+     "a title for one part of a text"
+    ]
+   ]
+  },
+  "n5-foodchains": {
+   "words": [
+    [
+     "🌿",
+     "Producer",
+     "a plant that makes its own food"
+    ],
+    [
+     "🦓",
+     "Consumer",
+     "an animal that eats to get energy"
+    ],
+    [
+     "🐄",
+     "Herbivore",
+     "eats only plants"
+    ],
+    [
+     "🦁",
+     "Carnivore",
+     "eats only animals"
+    ],
+    [
+     "🐒",
+     "Omnivore",
+     "eats plants and animals"
+    ]
+   ]
+  },
+  "l5-emotions": {
+   "words": [
+    [
+     "💛",
+     "Emotion",
+     "a feeling, like happy, sad or angry"
+    ],
+    [
+     "😞",
+     "Disappointed",
+     "sad because something you hoped for did not happen"
+    ],
+    [
+     "🤗",
+     "Empathy",
+     "trying to understand how someone else feels"
+    ],
+    [
+     "🧘",
+     "Cope",
+     "deal with something in a healthy way"
+    ]
+   ]
+  },
+  "m5-bignumbers": {
+   "words": [
+    [
+     "🔢",
+     "Place value",
+     "what a digit is worth because of where it is"
+    ],
+    [
+     "🎯",
+     "Round",
+     "change a number to a simpler number close to it"
+    ],
+    [
+     "🤔",
+     "Estimate",
+     "a sensible guess that is close to the real answer"
+    ]
+   ]
+  },
+  "m5-factors": {
+   "words": [
+    [
+     "✖️",
+     "Multiple",
+     "an answer in a times table"
+    ],
+    [
+     "🧩",
+     "Factor",
+     "a number that divides exactly into another number"
+    ],
+    [
+     "🤝",
+     "Common",
+     "shared by both"
+    ]
+   ]
+  },
+  "e5-news": {
+   "words": [
+    [
+     "📰",
+     "Headline",
+     "the title of a news report"
+    ],
+    [
+     "🗑️",
+     "Litter",
+     "rubbish left lying around"
+    ],
+    [
+     "💬",
+     "Quote",
+     "the exact words someone said"
+    ]
+   ]
+  },
+  "e5-similes": {
+   "words": [
+    [
+     "🔗",
+     "Simile",
+     "a comparison using like or as"
+    ],
+    [
+     "👵",
+     "Gogo",
+     "grandmother"
+    ],
+    [
+     "➰",
+     "Plait",
+     "to weave hair into a braid"
+    ]
+   ],
+   "phrases": [
+    [
+     "as soft as bread dough",
+     "very soft"
+    ],
+    [
+     "her laugh is like thunder",
+     "her laugh is very loud"
+    ],
+    [
+     "as warm as the sun after gloom",
+     "her voice makes you feel warm and happy"
+    ],
+    [
+     "as long as the road to the sea",
+     "her stories are very long"
+    ],
+    [
+     "her hugs are like blankets",
+     "her hugs feel warm and safe"
+    ]
+   ]
+  },
+  "n5-lifecycles": {
+   "words": [
+    [
+     "🐸",
+     "Tadpole",
+     "a baby frog that lives in water"
+    ],
+    [
+     "🦋",
+     "Metamorphosis",
+     "a big change in body shape"
+    ],
+    [
+     "🌱",
+     "Seedling",
+     "a very young plant"
+    ]
+   ]
+  },
+  "n5-metals": {
+   "words": [
+    [
+     "🔩",
+     "Metal",
+     "a hard, shiny material like iron or copper"
+    ],
+    [
+     "⚡",
+     "Conductor",
+     "lets heat or electricity pass through"
+    ],
+    [
+     "🧤",
+     "Insulator",
+     "does not let heat or electricity pass through"
+    ]
+   ]
+  },
+  "l5-feedback": {
+   "words": [
+    [
+     "📝",
+     "Feedback",
+     "comments that help someone improve"
+    ],
+    [
+     "🎯",
+     "Specific",
+     "saying exactly what"
+    ],
+    [
+     "🔧",
+     "Improve",
+     "make something better"
+    ]
+   ]
+  },
+  "l5-relationships": {
+   "words": [
+    [
+     "👫",
+     "Relationship",
+     "how you get on with another person"
+    ],
+    [
+     "❓",
+     "Stranger",
+     "someone you do not know"
+    ],
+    [
+     "🏠",
+     "Personal information",
+     "facts about you, like your address or school"
+    ]
+   ]
+  },
+  "camp5-fdp": {
+   "words": [
+    [
+     "🍕",
+     "Fraction",
+     "a part of a whole, like a half"
+    ],
+    [
+     "🔸",
+     "Decimal",
+     "a number with tenths and hundredths, like 0.5"
+    ],
+    [
+     "💯",
+     "Percent",
+     "out of 100"
+    ]
+   ]
+  },
+  "camp5-fact-opinion": {
+   "words": [
+    [
+     "✅",
+     "Fact",
+     "something that can be proved true"
+    ],
+    [
+     "💭",
+     "Opinion",
+     "what someone thinks or feels"
+    ],
+    [
+     "🔍",
+     "Clue word",
+     "a word like think or best that shows an opinion"
+    ]
+   ]
+  },
+  "camp5-sound": {
+   "words": [
+    [
+     "〰️",
+     "Vibration",
+     "moving quickly back and forth"
+    ],
+    [
+     "🔊",
+     "Loudness",
+     "how loud or soft a sound is"
+    ],
+    [
+     "🎵",
+     "Pitch",
+     "how high or low a sound is"
+    ]
+   ]
+  },
+  "pyp5-area-perimeter": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "📏",
+     "Perimeter",
+     "the distance around the edge"
+    ],
+    [
+     "🟫",
+     "Area",
+     "the space a flat shape covers"
+    ]
+   ]
+  },
+  "pyp5-news": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "❓",
+     "The five Ws",
+     "who, what, where, when and why"
+    ],
+    [
+     "📰",
+     "Headline",
+     "the title of a news report"
+    ]
+   ]
+  },
+  "pyp5-trade": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🍞",
+     "Need",
+     "something you must have to live"
+    ],
+    [
+     "🎮",
+     "Want",
+     "something nice to have, but not needed"
+    ],
+    [
+     "🔄",
+     "Trade",
+     "swap things, or buy them with money"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@tl/content",
+  "private": true,
+  "description": "Lessons, word help, skills tracks and the curriculum model, as data. Lessons ship as one pack per level.",
+  "type": "module",
+  "exports": { ".": "./src/index.ts" }
+}

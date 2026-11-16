@@ -1,0 +1,8 @@
+{
+  "name": "@tl/adaptation",
+  "private": true,
+  "description": "The adaptation rules (docs/adaptation-rules.md): what changes for a learner during sessions, and level suggestions for adults.",
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@tl/content": "*" }
+}
