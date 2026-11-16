@@ -1,6 +1,7 @@
 import { fromAttempt, type Row } from "@tl/adaptation";
 import { CATALOGUE } from "@tl/content";
 import { canSeeHealth, type Account, type Learner } from "@tl/data";
+import { More } from "@tl/ui";
 import { CHART_KINDS, domainMonths, DOMAINS, monthName, shortDate, timeline, weeklyCounts, weekTotal, type Week } from "@tl/reports";
 import type { CSSProperties } from "react";
 import { useServices } from "../../platform";
@@ -25,7 +26,7 @@ export function Progress({ me, learner }: { me: Account; learner: Learner }) {
   return (
     <div className="tl-stack">
       <h2>How {name} is developing</h2>
-      <p className="note">Growth over time, from sessions, goals, notes and changes. It describes activities, not ability, and is not a diagnosis.</p>
+      <div className="note"><More label="About this">Growth over time, from sessions, goals, notes and changes. It describes activities, not ability, and is not a diagnosis.</More></div>
       <h3>Activities each week</h3>
       <Chart name={name} rows={data.rows} />
       <h3>Thinking domains, month by month</h3>
@@ -36,7 +37,7 @@ export function Progress({ me, learner }: { me: Account; learner: Learner }) {
           : <td key={x.month} className="muted">–</td>)}</tr>)}</tbody></table></div> : <p className="tl-muted">No sessions yet.</p>}
       <h3>Timeline</h3>
       {events.length ? <ol className="timeline">{events.map((e, i) => <li key={i}><span className="tl-date">{shortDate(e.date)}</span><span className="em" aria-hidden="true">{e.icon}</span><span>{e.text}</span></li>)}</ol> : <p className="tl-muted">Nothing yet.</p>}
-      {health ? <p className="note">Health entries (💊) show here because you may see {name}'s health records. They never appear in reports.</p> : null}
+      {health ? <div className="note"><More label="About this">Health entries (💊) show here because you may see {name}'s health records. They never appear in reports.</More></div> : null}
     </div>
   );
 }
@@ -71,7 +72,7 @@ function Chart({ name, rows }: { name: string; rows: Row[] }) {
       </svg>
       <figcaption>
         <ul className="ch-legend">{CHART_KINDS.map(([k, t]) => <li key={k}><svg width="16" height="16" aria-hidden="true" focusable="false"><rect className={`ch-${k}`} width="16" height="16" rx="3" /></svg>{t}</li>)}</ul>
-        <p className="note">Activities each week, starting on Monday. Counting activities, not marks: "not yet" is part of learning.</p>
+        <div className="note"><More label="About this">Activities each week, starting on Monday. Counting activities, not marks: "not yet" is part of learning.</More></div>
       </figcaption>
       <details className="ch-table"><summary>Show as a table</summary>
         <div className="tablewrap" tabIndex={0} role="region" aria-label="Activities each week"><table className="hist">

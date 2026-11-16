@@ -1,5 +1,5 @@
 import type { Account, OrgAdmin, StaffInvite } from "@tl/data";
-import { Button, Card, Field } from "@tl/ui";
+import { Button, Card, Field, More } from "@tl/ui";
 import { useState } from "react";
 import { useServices } from "../../platform";
 import { useLoad } from "./use-load";
@@ -26,7 +26,7 @@ export function AdminHome({ me }: { me: Account }) {
         <div className="stat"><b>{o.active30}</b><span>active in the last 30 days</span></div>
         <div className="stat"><b>{o.openConcerns}</b><span>safeguarding concern{o.openConcerns === 1 ? "" : "s"} still open</span></div>
       </div>
-      <p className="note">Totals only. As school admin you don't see learners' names, progress or notes: families share those with the specialists they choose.{o.openConcerns ? " Open concerns are handled by your safeguarding lead." : ""}</p>
+      <div className="note"><More label="About this">Totals only. As school admin you don't see learners' names, progress or notes: families share those with the specialists they choose.{o.openConcerns ? " Open concerns are handled by your safeguarding lead." : ""}</More></div>
       <h2>Staff</h2>
       {o.staff.length ? <div className="tablewrap" tabIndex={0} role="region" aria-label="Staff"><table className="hist">
         <thead><tr><th scope="col">Name</th><th scope="col">Role</th><th scope="col">Learners</th><th scope="col">Safeguarding lead</th><th scope="col"><span className="tl-visually-hidden">Remove</span></th></tr></thead>
@@ -61,7 +61,7 @@ function AddStaff({ api, org, invites, onChange }: { api: OrgAdmin; org: string;
   return (
     <>
       <h2>Add staff</h2>
-      <p className="note">Enter a colleague's work email. If they already use Thinking Lab, they join straight away. If not, they join when they register with that email. We don't send them an email: tell them yourself.</p>
+      <div className="note"><More label="About this">Enter a colleague's work email. If they already use Thinking Lab, they join straight away. If not, they join when they register with that email. We don't send them an email: tell them yourself.</More></div>
       <form className="tl-stack" onSubmit={e => { e.preventDefault(); void add(); }}>
         <Field label="Their email address" value={email} onChange={setEmail} type="email" autoComplete="off" error={error} />
         <div className="tl-field"><label htmlFor="stRole">Their role</label>

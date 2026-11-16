@@ -1,5 +1,5 @@
 import { canEditPlan, type Account, type Goal, type Learner, type Observation } from "@tl/data";
-import { Button, Card, Field } from "@tl/ui";
+import { Button, Card, Field, More } from "@tl/ui";
 import { VoiceField } from "@tl/voice/react";
 import { useState } from "react";
 import { useServices } from "../../platform";
@@ -42,7 +42,7 @@ export function Goals({ me, learner }: { me: Account; learner: Learner }) {
         </form>
       </Card> : null}
       {!team && data?.notes.length ? <><h2>Notes from {learner.nickname}'s specialists</h2>{data.notes.map(n => <div key={n.id} className="obs-item"><b>{n.authorName}</b> · {day(n.createdAt)}<div>{n.body}</div></div>)}</> : null}
-      <p className="note">This describes activities, not ability. It is not a diagnosis or an assessment.</p>
+      <div className="note"><More label="About this">This describes activities, not ability. It is not a diagnosis or an assessment.</More></div>
     </div>
   );
 }
@@ -81,7 +81,7 @@ export function Notes({ me, learner }: { me: Account; learner: Learner }) {
         <label className="tl-row"><input type="checkbox" checked={share} onChange={e => setShare(e.target.checked)} /> Share this note with the family</label>
         <div className="tl-row"><Button type="submit" variant="primary" disabled={!body.trim()}>Save note</Button></div>
       </form>
-      <p className="note">Write facts and observations. Don't record anything you wouldn't want the family to read: they can ask to see everything held about their child.</p>
+      <div className="note"><More label="About this">Write facts and observations. Don't record anything you wouldn't want the family to read: they can ask to see everything held about their child.</More></div>
       {notes?.length ? notes.map(n => <div key={n.id} className="obs-item"><b>{n.authorName}</b> · {day(n.createdAt)} · {n.shareFamily ? "shared with family" : "specialists only"}<div>{n.body}</div></div>) : <p className="tl-muted">No notes yet.</p>}
     </div>
   );

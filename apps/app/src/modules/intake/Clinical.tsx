@@ -1,5 +1,5 @@
 import type { Account, IntakeValue, Learner, SupportProfile } from "@tl/data";
-import { Button, Notice, TabPanel, Tabs } from "@tl/ui";
+import { Button, More, Notice, TabPanel, Tabs } from "@tl/ui";
 import { useEffect, useState } from "react";
 import { useServices } from "../../platform";
 import { domainAveragesFor, ratedCount } from "../school-profile";
@@ -36,7 +36,7 @@ export function ClinicalIntake({ me, learner, family, onChange }: { me: Account;
 
   return (
     <div className="tl-stack">
-      <p className="note pf-noprint">For the clinical team: {learner.nickname}'s team members with health access. The family's pages are read-only here. This is an information gathering pack: it is not a screening instrument, it has no norms and it produces no diagnostic score. Diagnosis needs qualified assessment with validated tools, direct observation and clinical judgement, and the conclusion belongs in a conversation with the family.</p>
+      <div className="pf-noprint"><More label="About this view">For the clinical team: {learner.nickname}'s team members with health access. The family's pages are read-only here. This is an information gathering pack: it is not a screening instrument, it has no norms and it produces no diagnostic score. Diagnosis needs qualified assessment with validated tools, direct observation and clinical judgement, and the conclusion belongs in a conversation with the family.</More></div>
       <Tabs label="Intake for the team" tabs={TABS} current={tab} onChange={setTab} />
       <TabPanel id={tab}>
         {tab === "summary" ? <Summary learner={learner} d={family} extra={extra} />
@@ -44,7 +44,7 @@ export function ClinicalIntake({ me, learner, family, onChange }: { me: Account;
               <div className="tl-field"><label htmlFor="in-page">Page</label><select id="in-page" value={page} onChange={e => setPage(e.target.value)}>{FAMILY_TABS.map(t => <option key={t.id} value={t.id}>{t.label}</option>)}</select></div>
               <FamilyPage tab={page} learner={learner} data={family} save={() => {}} readOnly me={me} />
             </div>
-          : tab === "support" ? <><div className="tl-row pf-noprint"><Button onClick={() => window.print()}><span aria-hidden="true">🖨️</span>Print</Button></div><SupportCard data={R.supportSnapshot(family, learner.nickname)} title={`How to support ${learner.nickname}`} /><p className="note">Share it only where the family's consent allows. Check their sharing list (Consent, in the family's answers) before it leaves the team.</p></>
+          : tab === "support" ? <><div className="tl-row pf-noprint"><Button onClick={() => window.print()}><span aria-hidden="true">🖨️</span>Print</Button></div><SupportCard data={R.supportSnapshot(family, learner.nickname)} title={`How to support ${learner.nickname}`} /><div className="pf-noprint"><More label="Before sharing">Share it only where the family's consent allows. Check their sharing list (Consent, in the family's answers) before it leaves the team.</More></div></>
           : tab === "pros" ? <Professionals d={team} save={save} />
           : tab === "safety" ? <div className="tl-stack"><p>For the team to complete after reviewing the family's safety page.</p><Sections secs={[{ title: "Safety review", questions: B.SAFETY_REVIEW }]} data={team} save={save} /></div>
           : tab === "formulation" ? <div className="tl-stack"><Notice>Nothing in the summary is a finding. Everything written here is.</Notice><Sections secs={[{ title: "Clinical formulation", questions: B.FORMULATION }]} data={team} save={save} /></div>
@@ -59,7 +59,7 @@ function Summary({ learner, d, extra }: { learner: Learner; d: Data; extra: { me
   const flags = R.flags(d, extra.meds), top = R.topDaily(d), senses = R.topSenses(d), areas = R.areaAverages(d), compare = R.homeAndSchool(d, extra.school), prompts = R.prompts(d, extra.schoolRated);
   return (
     <div className="tl-stack">
-      <p>This page fills in on its own from everything the family and the school entered. It is a reading aid, not an assessment result and not a score.</p>
+      <div className="pf-noprint"><More label="About the summary">This page fills in on its own from everything the family and the school entered. It is a reading aid, not an assessment result and not a score.</More></div>
       {R.immediateDanger(d) ? <div className="safety-alert" role="alert"><h2>The family reported an immediate safety concern</h2><p>Contact them today. Read the safety page.</p></div> : null}
       <h2>Identification</h2>
       <div className="pf-scroll"><table className="pf-table"><tbody>
@@ -69,13 +69,13 @@ function Summary({ learner, d, extra }: { learner: Learner; d: Data; extra: { me
       </tbody></table></div>
       {R.text(d, "a10") === "Yes" ? <p className="note">Book the interpreter before the first appointment, not on the day.</p> : null}
       <h2>Flags to read before the first appointment</h2>
-      <p className="tl-muted">Each flag is drawn from one named answer. Confirm it with the family rather than acting on the answer alone.</p>
+      <div className="pf-noprint"><More label="About the flags">Each flag is drawn from one named answer. Confirm it with the family rather than acting on the answer alone.</More></div>
       <div className="tl-stack">{flags.map(f => <div key={f.label} className={`pf-item ${f.attention ? "pf-watch" : ""}`}><b>{f.label}</b><span>{f.value}</span><span className="tl-muted">{f.note}</span></div>)}</div>
       <h2>Prompts for the team to consider</h2>
-      <p className="tl-muted">Generated by rule from the answers given. These are questions, not recommendations, and clinical judgement overrides every one of them.</p>
+      <div className="pf-noprint"><More label="About the prompts">Generated by rule from the answers given. These are questions, not recommendations, and clinical judgement overrides every one of them.</More></div>
       {prompts.length ? <ul>{prompts.map(p => <li key={p}>{p}</li>)}</ul> : <p className="tl-muted">None.</p>}
       <h2>What is still missing</h2>
-      <p className="tl-muted">Completion is not a measure of the family's effort. Blanks are often the most informative part of an intake.</p>
+      <div className="pf-noprint"><More label="About blanks">Completion is not a measure of the family's effort. Blanks are often the most informative part of an intake.</More></div>
       <div className="pf-scroll"><table className="pf-table"><thead><tr><th scope="col">Page</th><th scope="col">Answered</th><th scope="col">Questions</th></tr></thead>
         <tbody>{R.completeness(d).map(([p, c]) => <tr key={p}><th scope="row">{p}</th><td>{c.answered}</td><td>{c.total}</td></tr>)}</tbody></table></div>
       <h2>What each person says matters most</h2>
@@ -84,7 +84,7 @@ function Summary({ learner, d, extra }: { learner: Learner; d: Data; extra: { me
           ["What other people get wrong about this person", "o5"], ["What has already been tried and failed", "r2"], ["Anything that previously made things worse", "r3"]] as [string, string][]).map(([k, key]) => <tr key={k}><th scope="row">{k}</th><td style={{ whiteSpace: "pre-wrap" }}>{t(key)}</td></tr>)}
       </tbody></table></div>
       <h2>Highest reported impact at home</h2>
-      <p className="tl-muted">Ordered by the level the family chose, with their stated priorities lifted above items of the same level. This orders what was reported. It does not rank clinical significance.</p>
+      <div className="pf-noprint"><More label="How this is ordered">Ordered by the level the family chose, with their stated priorities lifted above items of the same level. This orders what was reported. It does not rank clinical significance.</More></div>
       {top.length ? <div className="pf-scroll"><table className="pf-table"><thead><tr>{["Rank", "Area", "What was reported", "Level", "How often", "Where", "In the family's words"].map(h => <th key={h} scope="col">{h}</th>)}</tr></thead>
         <tbody>{top.map((i, n) => <tr key={i.n}><td>{n + 1}</td><td>{i.area}</td><td>{i.text}{i.top ? " (a family priority)" : ""}</td><td>{i.level}</td><td>{i.often}</td><td>{i.where}</td><td>{i.words}</td></tr>)}</tbody></table></div> : <p className="tl-muted">Nothing rated yet.</p>}
       <h2>Highest reported sensory impact</h2>
@@ -93,9 +93,9 @@ function Summary({ learner, d, extra }: { learner: Learner; d: Data; extra: { me
       <h2>Reported impact by area, at home</h2>
       <div className="pf-scroll"><table className="pf-table"><thead><tr>{["Area", "Items rated", "Rated significant or severe", "Average of rated items", "Highest rating"].map(h => <th key={h} scope="col">{h}</th>)}</tr></thead>
         <tbody>{areas.map(a => <tr key={a.area}><th scope="row">{a.area}</th><td>{a.rated}</td><td>{a.significant}</td><td>{a.average ?? ""}</td><td>{a.highest ?? ""}</td></tr>)}</tbody></table></div>
-      <p className="note">Scale: 0 no concern, 1 slight, 2 moderate, 3 significant, 4 severe. Not known is left out of the average rather than counted as zero.</p>
+      <div className="pf-noprint"><More label="About the scale">Scale: 0 no concern, 1 slight, 2 moderate, 3 significant, 4 severe. Not known is left out of the average rather than counted as zero.</More></div>
       <h2>Home and school compared</h2>
-      <p className="tl-muted">A large difference is a finding in itself. It may mean the person holds difficulties in at school and releases them at home, that the demand differs, or that one setting has adjusted and the other has not. It does not mean anyone is wrong. School averages come from the school learner profile{extra.school ? "" : ", which you don't keep for this learner, or which has no ratings yet"}.</p>
+      <div className="pf-noprint"><More label="How to read this">A large difference is a finding in itself. It may mean the person holds difficulties in at school and releases them at home, that the demand differs, or that one setting has adjusted and the other has not. It does not mean anyone is wrong. School averages come from the school learner profile{extra.school ? "" : ", which you don't keep for this learner, or which has no ratings yet"}.</More></div>
       <div className="pf-scroll"><table className="pf-table"><thead><tr>{["Area at home", "Average at home", "Matching areas at school", "Average at school", "Difference", "What to do with it"].map(h => <th key={h} scope="col">{h}</th>)}</tr></thead>
         <tbody>{compare.map(c => <tr key={c.area}><th scope="row">{c.area}</th><td>{c.home ?? ""}</td><td>{c.schoolDomains}</td><td>{c.school ?? ""}</td><td>{c.diff ?? ""}</td><td>{c.read}</td></tr>)}</tbody></table></div>
     </div>
@@ -107,7 +107,7 @@ function Professionals({ d, save }: { d: Data; save: (p: Data) => void }) {
   const items = B.DISCIPLINE.filter(x => chosen.includes(x.prof));
   return (
     <div className="tl-stack">
-      <p>Choose up to four professionals this assessment is being prepared for. The shared sections below were collected once for the whole team; each professional then adds their own focus areas in the session. The mapping shows likely relevance, not scope of practice: every practitioner works within their own scope, registration and local standards.</p>
+      <div className="pf-noprint"><More label="How this works">Choose up to four professionals this assessment is being prepared for. The shared sections below were collected once for the whole team; each professional then adds their own focus areas in the session. The mapping shows likely relevance, not scope of practice: every practitioner works within their own scope, registration and local standards.</More></div>
       <div className="pf-grid">{[1, 2, 3, 4].map(i => <Ask key={i} id={`in-prof${i}`} q={`Professional ${i}`} list={B.PROFESSIONALS} value={R.text(d, `prof${i}`)} onSave={v => save({ [`prof${i}`]: v })} />)}</div>
       {!chosen.length ? <Notice>Nothing selected yet. Choose up to four professionals and their focus areas appear below.</Notice> : null}
       <details className="pf-group"><summary>Shared sections, collected once for the whole team ({B.SHARED.length})</summary>
@@ -134,7 +134,7 @@ function Reviews({ family, d, save, me }: { family: Data; d: Data; save: (p: Dat
   const latest = [...REVIEWS].reverse().find(([k]) => k !== "base" && rec(k));
   return (
     <div className="tl-stack">
-      <p>The intake gives a baseline. Rate the same areas again at each review, using the same scale (0 no concern to 4 severe), and the direction of travel becomes visible.</p>
+      <div className="pf-noprint"><More label="About reviews">The intake gives a baseline. Rate the same areas again at each review, using the same scale (0 no concern to 4 severe), and the direction of travel becomes visible.</More></div>
       <div className="tl-row"><Button small onClick={baseline}>{rec("base") ? "Update the baseline from the intake" : "Take the baseline from the intake"}</Button></div>
       <p className="tl-muted">{REVIEWS.filter(([k]) => rec(k)?.date).map(([k, l]) => `${l}: ${rec(k)!.date}${rec(k)!.by ? `, ${rec(k)!.by}` : ""}`).join(" · ") || "No baseline yet."}</p>
       <div className="pf-scroll"><table className="pf-table">
@@ -147,7 +147,7 @@ function Reviews({ family, d, save, me }: { family: Data; d: Data; save: (p: Dat
                 onBlur={e => { if (e.target.value !== (rec(k)?.[area] ?? "")) save({ [`rev:${k}`]: { ...(rec(k) ?? {}), [area]: e.target.value, date: new Date().toISOString().slice(0, 10), by: me.name } }); }} /></td>)}
             <td className={ch === null ? "" : ch < 0 ? "pf-better" : ch >= 0.5 ? "pf-worse" : ""}>{ch === null ? "" : `${ch > 0 ? "+" : ""}${ch}`}</td></tr>;
         })}</tbody></table></div>
-      <p className="note">A negative change means the reported level has come down since the baseline. Record what the team thinks caused it, including anything outside the therapy: a new teacher, a move, a medicine, a holiday, a change at home.</p>
+      <div className="pf-noprint"><More label="Reading the change">A negative change means the reported level has come down since the baseline. Record what the team thinks caused it, including anything outside the therapy: a new teacher, a move, a medicine, a holiday, a change at home.</More></div>
       <Ask id="in-rev-why" q="What changed, and what we think did it" kind="long" value={R.text(d, "revWhy")} onSave={v => save({ revWhy: v })} />
       <RowsTable table="goal" title="Goals and outcomes" cols={[["goal", "Goal, in the family's or person's own words"], ["whose", "Whose goal is it?"], ["know", "How we will know it is working"], ["owner", "Owner"], ["review", "Review date"], ["status", "Status"], ["notes", "Notes"]]} data={d} save={save} />
     </div>

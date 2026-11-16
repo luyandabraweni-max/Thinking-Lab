@@ -1,5 +1,5 @@
 import type { Account, Learner, ProfilePart, ProfilePlanRow, ProfileRating, SchoolProfile } from "@tl/data";
-import { Button, Card, Notice, TabPanel, Tabs } from "@tl/ui";
+import { Button, Card, More, Notice, TabPanel, Tabs } from "@tl/ui";
 import { useEffect, useState } from "react";
 import { useServices } from "../../platform";
 import * as B from "./bank";
@@ -38,7 +38,7 @@ export function SchoolProfileView({ me, learner }: { me: Account; learner: Learn
 
   return (
     <div className="tl-stack">
-      <p className="note pf-noprint">For the school. It records what staff observe, rates how much each thing limits access to learning, and raises a prompt when something needs action. It is <b>not</b> a diagnostic tool or a screening test, and it gives no diagnosis or score. Under SIAS a learner does not need a diagnosis to receive support. Only {learner.nickname}'s teachers and specialists see it.</p>
+      <div className="pf-noprint"><More label="About the school profile">For the school. It records what staff observe, rates how much each thing limits access to learning, and raises a prompt when something needs action. It is <b>not</b> a diagnostic tool or a screening test, and it gives no diagnosis or score. Under SIAS a learner does not need a diagnosis to receive support. Only {learner.nickname}'s teachers and specialists see it.</More></div>
       <Tabs label="School profile sections" tabs={TABS} current={tab} onChange={setTab} />
       <TabPanel id={tab}>
         {tab === "about" ? <About p={p} learner={learner} phase={phase} save={save} />
@@ -63,12 +63,12 @@ function Ask({ id, q, why, list, kind, value, onSave }: { id: string; q: string;
   return (
     <div className="tl-field">
       <label htmlFor={id}>{q}</label>
-      {why ? <span className="tl-hint" id={`${id}-why`}>{why}</span> : null}
-      {list ? <select id={id} value={v} aria-describedby={why ? `${id}-why` : undefined} onChange={e => { setV(e.target.value); onSave(e.target.value); }}>
+      {why ? <More about={q}>{why}</More> : null}
+      {list ? <select id={id} value={v} onChange={e => { setV(e.target.value); onSave(e.target.value); }}>
         <option value="">Not answered</option>{list.map(o => <option key={o}>{o}</option>)}</select>
-        : kind === "long" ? <textarea id={id} value={v} onChange={e => setV(e.target.value)} onBlur={blur} aria-describedby={why ? `${id}-why` : undefined} />
+        : kind === "long" ? <textarea id={id} value={v} onChange={e => setV(e.target.value)} onBlur={blur} />
         : <input id={id} type={kind === "date" ? "date" : kind === "number" ? "number" : "text"} min={kind === "number" ? 0 : undefined} value={v}
-            onChange={e => { setV(e.target.value); if (kind === "date") onSave(e.target.value); }} onBlur={kind === "date" ? undefined : blur} aria-describedby={why ? `${id}-why` : undefined} />}
+            onChange={e => { setV(e.target.value); if (kind === "date") onSave(e.target.value); }} onBlur={kind === "date" ? undefined : blur} />}
     </div>
   );
 }
@@ -97,7 +97,7 @@ function Guide({ phase }: { phase: B.Phase | null }) {
   const show = phase ? B.PHASES.slice(B.PHASES.indexOf(phase), B.PHASES.indexOf(phase) + 2) : [];
   return (
     <div className="tl-stack">
-      <p>The same learner meets a different set of demands in each phase. Most new difficulties are not new difficulties: they are the same profile meeting a demand that did not exist before. Read the column for this learner's phase, and the one to its right.</p>
+      <div className="pf-noprint"><More label="How to read this">The same learner meets a different set of demands in each phase. Most new difficulties are not new difficulties: they are the same profile meeting a demand that did not exist before. Read the column for this learner's phase, and the one to its right.</More></div>
       {show.length ? <div className="pf-grid">{show.map(ph => (
         <Card key={ph} as="article"><h2>{B.PHASE_NAME[ph]}{ph === phase ? " (this learner)" : " (next)"}</h2>
           <dl>{B.GUIDE_ROWS.map(([row, cells]) => <div key={row}><dt><b>{row}</b></dt><dd style={{ margin: "0 0 10px" }}>{cells[ph]}</dd></div>)}</dl></Card>))}</div>
@@ -119,7 +119,7 @@ function Voice({ p, save }: { p: SchoolProfile; save: Save }) {
   const groups = [...new Set(B.VOICE.map(v => v.group))];
   return (
     <div className="tl-stack">
-      <Notice>This page is for the learner. An adult may read the questions aloud, scribe the answers, or use pictures, signs or a device. <b>The words must stay the learner's own.</b> For a very young child, record what was observed during play instead, and say so. A learner may decline any question, and that is itself information.</Notice>
+      <div className="pf-noprint"><More label="How to fill this in">This page is for the learner. An adult may read the questions aloud, scribe the answers, or use pictures, signs or a device. <b>The words must stay the learner's own.</b> For a very young child, record what was observed during play instead, and say so. A learner may decline any question, and that is itself information.</More></div>
       <div className="pf-grid">
         <Ask id="pf-vhow" q="How this page was completed" list={B.VOICEHOW} value={p.voice.how ?? ""} onSave={v => void save("voice", { how: v })} />
         <Ask id="pf-vwho" q="Date, and who supported the learner" value={p.voice.who ?? ""} onSave={v => void save("voice", { who: v })} />
@@ -129,7 +129,7 @@ function Voice({ p, save }: { p: SchoolProfile; save: Save }) {
           <div className="pf-grid">{B.VOICE.filter(v => v.group === g).map(v => (
             <Ask key={v.key} id={`pf-${v.key}`} q={v.q} why={v.when} list={v.choice} kind={v.choice ? undefined : "long"} value={p.voice[v.key] ?? ""} onSave={x => void save("voice", { [v.key]: x })} />))}</div>
         </section>))}
-      <Notice tone="warn">If a learner tells you something that worries you: stay calm and listen, don't ask leading questions, and don't promise to keep it secret. Any answer other than No to "Is anyone unkind to me?" is followed up the same day. A teacher who concludes on reasonable grounds that a child has been abused or deliberately neglected must report it (Children's Act, section 110, Form 22), and that duty doesn't wait for this profile.</Notice>
+      <Notice tone="warn">If a learner tells you something worrying, follow your safeguarding procedure today. <More label="What to do">If a learner tells you something that worries you: stay calm and listen, don't ask leading questions, and don't promise to keep it secret. Any answer other than No to "Is anyone unkind to me?" is followed up the same day. A teacher who concludes on reasonable grounds that a child has been abused or deliberately neglected must report it (Children's Act, section 110, Form 22), and that duty doesn't wait for this profile.</More></Notice>
     </div>
   );
 }
@@ -141,7 +141,7 @@ function Observations({ p, phase, save }: { p: SchoolProfile; phase: B.Phase | n
   const c = R.counts(p, R.itemsFor(phase));
   return (
     <div className="tl-stack">
-      <Notice>Go down the list. Rate the impact first. Where there is no barrier, choose <b>No barrier observed</b> and move on. Evidence is what makes this defensible, so write a real example with a date wherever you rate something moderate or higher. A blank is not a zero.</Notice>
+      <div className="pf-noprint"><More label="How to fill this in">Go down the list. Rate the impact first. Where there is no barrier, choose <b>No barrier observed</b> and move on. Evidence is what makes this defensible, so write a real example with a date wherever you rate something moderate or higher. A blank is not a zero.</More></div>
       <p role="status"><b>{c.critical}</b> critical · <b>{c.watch}</b> watch · <b>{c.ok}</b> OK · <b>{c.blank}</b> not yet rated · {c.share}% rated</p>
       {!phase ? <Notice tone="warn">Choose the school phase in Profile to add the observations for this learner's phase.</Notice> : null}
       {pages.map(([title, intro, its]) => (
@@ -201,7 +201,7 @@ function Concerns({ p, learner, phase, concerns }: { p: SchoolProfile; learner: 
         <tr><th scope="row">Observations</th><td><b>{c.critical}</b> critical, <b>{c.watch}</b> watch, <b>{c.ok}</b> OK, <b>{c.blank}</b> not yet rated ({c.share}% rated). A profile with many blanks cannot carry a placement decision.</td></tr>
       </tbody></table></div>
       <h2>Alerts</h2>
-      <p className="tl-muted">Each line tests one rule against what was entered. ACTION NEEDED means a person must do something, not that a conclusion has been reached.</p>
+      <div className="pf-noprint"><More label="How to read the alerts">Each line tests one rule against what was entered. ACTION NEEDED means a person must do something, not that a conclusion has been reached.</More></div>
       <div className="tl-stack">{al.map(a => (
         <div key={a.key} className={`pf-item ${a.status === "action" ? "pf-critical" : a.status === "clear" ? "pf-ok" : ""}`}>
           <div className="tl-row" style={{ justifyContent: "space-between" }}><b>{a.check}</b><span className={`pf-flag ${a.status === "action" ? "pf-critical" : a.status === "clear" ? "pf-ok" : ""}`}>{R.ALERT_STATUS[a.status]}</span></div>
@@ -210,26 +210,24 @@ function Concerns({ p, learner, phase, concerns }: { p: SchoolProfile; learner: 
       <h2>Where the concerns sit</h2>
       <div className="pf-scroll"><table className="pf-table"><thead><tr><th scope="col">Domain</th><th scope="col">Critical</th><th scope="col">Watch</th><th scope="col">OK</th><th scope="col">Not yet rated</th><th scope="col">Highest impact</th></tr></thead>
         <tbody>{rows.map(r => <tr key={r.domain}><th scope="row">{r.domain}</th><td>{r.critical}</td><td>{r.watch}</td><td>{r.ok}</td><td>{r.blank}</td><td>{r.highest ?? ""}</td></tr>)}</tbody></table></div>
-      <p className="note">Highest impact: 0 no barrier, 1 slight, 2 moderate, 3 significant, 4 severe. A domain with nothing rated has not been observed yet, which is different from no concern.</p>
+      <div className="pf-noprint"><More label="About the scale">Highest impact: 0 no barrier, 1 slight, 2 moderate, 3 significant, 4 severe. A domain with nothing rated has not been observed yet, which is different from no concern.</More></div>
       <h2>The escalation ladder</h2>
       <p className="tl-muted">SIAS allocates support by level of need, not by diagnosis. Each step must be documented before the next one is used. Current stage: <b>{stage || "not entered"}</b>.</p>
       <div className="pf-scroll"><table className="pf-table"><thead><tr><th scope="col">Step</th><th scope="col">What must already be in place</th><th scope="col">Form</th><th scope="col">Who owns it</th></tr></thead>
         <tbody>{B.LADDER.map(([step, need, form, who], i) => <tr key={step}><th scope="row">{i + 1}. {step}</th><td>{need}</td><td>{form}</td><td>{who}</td></tr>)}</tbody></table></div>
-      <h2>Safeguarding: what a teacher must do</h2>
-      <ul>
+      <div><More label="Safeguarding: what a teacher must do"><ul className="tl-more-text">
         <li>Section 110 of the Children's Act 38 of 2005 names teachers among the professionals who must report.</li>
         <li>The threshold is a conclusion on reasonable grounds that a child has been abused in a way causing physical injury, sexually abused, or deliberately neglected. Reasonable grounds is lower than proof. It is not the teacher's job to establish what happened.</li>
         <li>The report is made on Form 22 to a designated child protection organisation, the provincial Department of Social Development, or a police official.</li>
         <li>Do not investigate, do not question the child repeatedly, and do not promise confidentiality you cannot keep.</li>
         <li>Record what was seen or heard, in the child's own words where possible, with the date, time and place, on the day it happened.</li>
         <li>Report first and complete this profile afterwards. Tell the school's designated safeguarding lead. Where the concern involves a staff member, follow the route that does not go through that person.</li>
-      </ul>
-      <h2>Attendance: the two points at which the school must act</h2>
-      <ul>
+      </ul></More></div>
+      <div><More label="Attendance: the two points at which the school must act"><ul className="tl-more-text">
         <li>Three consecutive school days of unexplained absence: the class teacher reports it to the principal, who must contact the parent and, where necessary, bring in social development support.</li>
         <li>Ten consecutive school days of absence without a valid reason: the learner's record may be cancelled in the class register. Act well before this point.</li>
         <li>Where absence is driven by anxiety or by something happening at school, attendance is a symptom. Treat the cause, and put a phased return in writing with a date to review it.</li>
-      </ul>
+      </ul></More></div>
     </div>
   );
 }
@@ -255,9 +253,9 @@ function SupportMap({ p, learner, items, save, onPlan }: { p: SchoolProfile; lea
       <div className="tl-row pf-noprint"><Button onClick={() => window.print()}><span aria-hidden="true">🖨️</span>Print the one page summary</Button></div>
       <h2>One page summary: share this with every teacher who sees {learner.nickname}</h2>
       <div className="pf-scroll"><table className="pf-table"><tbody>{summary.map(([k, val]) => <tr key={k}><th scope="row">{k}</th><td>{val?.trim() || "Not entered"}</td></tr>)}</tbody></table></div>
-      <p className="note">Health conditions and allergies: see the family's health records. Emergency contacts: held by the family and the school office.</p>
+      <div className="pf-noprint"><More label="Health and emergency contacts">Health conditions and allergies: see the family's health records. Emergency contacts: held by the family and the school office.</More></div>
       <h2>Barriers, highest impact first</h2>
-      <p className="tl-muted">Ordered by impact on access, then by how much adult support is needed. The order reflects what was recorded, not clinical priority: the team decides what to act on first. Strategies are suggestions from the catalogue, matched by domain. Check them against what has already been tried.</p>
+      <div className="pf-noprint"><More label="How this is ordered">Ordered by impact on access, then by how much adult support is needed. The order reflects what was recorded, not clinical priority: the team decides what to act on first. Strategies are suggestions from the catalogue, matched by domain. Check them against what has already been tried.</More></div>
       {list.length ? list.map((b, i) => (
         <div key={b.item.id} className={`pf-item pf-${R.flagOf(b.rating)}`}>
           <div className="tl-row" style={{ justifyContent: "space-between" }}><b>{i + 1}. {b.item.domain}</b><Flag f={R.flagOf(b.rating)} /></div>
@@ -285,8 +283,8 @@ function Plan({ p, items, save }: { p: SchoolProfile; items: B.Item[]; save: Sav
   const blank = (): ProfilePlanRow => ({ domain: "", barrier: "", strength: "", action: "", who: "", often: "", start: today(), baseline: "", review: "", happened: "", learnerSays: "", decision: "", next: "", at: new Date().toISOString() });
   return (
     <div className="tl-stack">
-      <p>Take the top barriers from the support map, state each one specifically, and record what was done and what happened. This is the evidence that SNA 2, DBE 120 and any later concession application rest on, so write it as though a district official will read it, because one may.</p>
-      <Notice tone="warn">A plan without a named owner and a date is not a plan. A support that was never applied consistently has not been tried, and recording it as tried and failed will cost the learner later.</Notice>
+      <div className="pf-noprint"><More label="About the plan">Take the top barriers from the support map, state each one specifically, and record what was done and what happened. This is the evidence that SNA 2, DBE 120 and any later concession application rest on, so write it as though a district official will read it, because one may.</More></div>
+      <div className="pf-noprint"><More label="Before you write a plan">A plan without a named owner and a date is not a plan. A support that was never applied consistently has not been tried, and recording it as tried and failed will cost the learner later.</More></div>
       <p role="status">{sum.actions} actions · {sum.overdue} reviews overdue with no decision · {sum.helped} supports that helped · {sum.changed} being changed or stopped · {sum.escalated} escalations</p>
       {rows.map(([id, r], i) => {
         const late = R.isOverdue(r);
@@ -315,7 +313,7 @@ function Progress({ p, items, me, save }: { p: SchoolProfile; items: B.Item[]; m
   };
   return (
     <div className="tl-stack">
-      <p>The observations give a baseline. Re-rate the same observations at the end of each term, then save the term here, and the direction of travel becomes visible. Without this, a support plan can run for years without anyone knowing whether it works.</p>
+      <div className="pf-noprint"><More label="About term reviews">The observations give a baseline. Re-rate the same observations at the end of each term, then save the term here, and the direction of travel becomes visible. Without this, a support plan can run for years without anyone knowing whether it works.</More></div>
       <div className="tl-row">{REVIEWS.map(([k, label]) => <Button key={k} small onClick={() => take(k, label)}>{p.reviews[k] ? `Update ${label}` : `Save ${label}`}</Button>)}</div>
       <p className="tl-muted">{REVIEWS.filter(([k]) => p.reviews[k]).map(([k, label]) => `${label}: ${p.reviews[k]!.date}, ${p.reviews[k]!.by}`).join(" · ") || "Nothing saved yet. Save the baseline once the observations are rated."}</p>
       <div className="pf-scroll"><table className="pf-table">
@@ -325,7 +323,7 @@ function Progress({ p, items, me, save }: { p: SchoolProfile; items: B.Item[]; m
           return <tr key={d}><th scope="row">{d}</th><td>{now[d] ?? ""}</td>{REVIEWS.map(([k]) => <td key={k}>{p.reviews[k]?.avg[d] ?? ""}</td>)}
             <td className={ch ? `pf-${ch.tone}` : ""}>{ch ? `${ch.d > 0 ? "+" : ""}${ch.d}${ch.tone === "better" ? " (better)" : ch.tone === "worse" ? " (harder)" : ""}` : ""}</td></tr>;
         })}</tbody></table></div>
-      <p className="note">Scale: 0 no barrier, 1 slight, 2 moderate, 3 significant, 4 severe. Not observed yet is left out of the average rather than counted as zero. A negative change means the reported barrier has come down. Half a point or more higher means something has got harder, and the team should say why.</p>
+      <div className="pf-noprint"><More label="About the scale">Scale: 0 no barrier, 1 slight, 2 moderate, 3 significant, 4 severe. Not observed yet is left out of the average rather than counted as zero. A negative change means the reported barrier has come down. Half a point or more higher means something has got harder, and the team should say why.</More></div>
       <Ask id="pf-why" q="What changed, and what the team thinks caused it" why="Record the cause even when it sits outside the support plan, such as a change of teacher, a move, a bereavement or a medication change." kind="long" value={p.answers.progressWhy ?? ""} onSave={v => void save("answers", { progressWhy: v })} />
     </div>
   );

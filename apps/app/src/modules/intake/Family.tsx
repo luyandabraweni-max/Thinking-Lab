@@ -1,5 +1,5 @@
 import type { Account, IntakeValue, Learner, SupportProfile } from "@tl/data";
-import { Button, Notice, TabPanel, Tabs } from "@tl/ui";
+import { Button, More, Notice, TabPanel, Tabs } from "@tl/ui";
 import { useState } from "react";
 import { useServices } from "../../platform";
 import * as B from "./bank";
@@ -17,6 +17,7 @@ export const FAMILY_TABS = [
 const str = (d: Record<string, IntakeValue>, k: string) => R.text(d, k);
 
 export function Helplines({ urgent }: { urgent?: boolean }) {
+  if (!urgent) return <div><b>In danger right now?</b> Call 10111, or 112 from a cellphone. <More label="More helplines"><ul className="plain">{B.HELPLINES.map(([who, n]) => <li key={who}>{who}: <b>{n}</b></li>)}</ul></More></div>;
   return (
     <div className={urgent ? "safety-alert" : "pf-item pf-critical"} role={urgent ? "alert" : undefined}>
       <b>If someone is in danger right now, do not use this form. Put it down and call one of these. They are free and they answer.</b>
@@ -32,8 +33,8 @@ export function FamilyIntake({ me, learner, data, onChange, support }: { me: Acc
   const save: Save = patch => { void s.updateIntake(learner.id, patch).then(() => { onChange(); void syncNow().catch(() => {}); }); };
   return (
     <div className="tl-stack">
-      <p>This intake collects {learner.nickname}'s background once, so you don't have to repeat the same story to every professional. <b>It is not a test.</b> There are no right answers and nothing is marked. Write <i>Not known</i> or <i>Not sure</i> as often as you need to; a guessed date is worse than a blank one. You can skip any question, and you don't have to finish in one sitting: every answer saves as you go. Start with <b>Our story</b>, which begins with what is going well.</p>
-      <p className="note">It gives no score and no diagnosis. Only a qualified professional, using proper assessment, can reach a conclusion, and that will be discussed with you face to face.</p>
+      <div className="pf-noprint"><More label="About the intake">This intake collects {learner.nickname}'s background once, so you don't have to repeat the same story to every professional. <b>It is not a test.</b> There are no right answers and nothing is marked. Write <i>Not known</i> or <i>Not sure</i> as often as you need to; a guessed date is worse than a blank one. You can skip any question, and you don't have to finish in one sitting: every answer saves as you go. Start with <b>Our story</b>, which begins with what is going well.</More></div>
+      <div className="pf-noprint"><More label="Not a test or a diagnosis">It gives no score and no diagnosis. Only a qualified professional, using proper assessment, can reach a conclusion, and that will be discussed with you face to face.</More></div>
       <Helplines urgent={R.immediateDanger(data)} />
       <Tabs label="Intake pages" tabs={[...FAMILY_TABS, { id: "share", label: "How to support me" }]} current={tab} onChange={setTab} />
       <TabPanel id={tab}>{tab === "share" ? <Share me={me} learner={learner} data={data} support={support} onChange={onChange} /> : <FamilyPage tab={tab} learner={learner} data={data} save={save} me={me} />}</TabPanel>
@@ -45,12 +46,12 @@ export function FamilyPage({ tab, learner, data, save, readOnly, me }: { tab: st
   return tab === "consent" ? <Consent data={data} save={save} readOnly={readOnly} me={me} />
     : tab === "about" ? <Sections secs={B.ABOUT} data={data} save={save} readOnly={readOnly} />
     : tab === "story" ? <><p className="tl-muted">The most important page. Written in your own words. It begins with strengths, on purpose.</p><Sections secs={B.STORY} data={data} save={save} readOnly={readOnly} /></>
-    : tab === "voice" ? <><Notice>This page is for {learner.nickname}. An adult may read the questions aloud, write down the answers, or help with a device, pictures or signs. The words should stay {learner.nickname}'s own. If they can't answer yet, you may answer as you believe they would, and say so in "How I filled this in".</Notice><Sections secs={B.VOICE} data={data} save={save} readOnly={readOnly} /></>
+    : tab === "voice" ? <><div className="pf-noprint"><More label="How to fill this in">This page is for {learner.nickname}. An adult may read the questions aloud, write down the answers, or help with a device, pictures or signs. The words should stay {learner.nickname}'s own. If they can't answer yet, you may answer as you believe they would, and say so in "How I filled this in".</More></div><Sections secs={B.VOICE} data={data} save={save} readOnly={readOnly} /></>
     : tab === "health" ? <Health data={data} save={save} readOnly={readOnly} />
     : tab === "daily" ? <Daily data={data} save={save} readOnly={readOnly} />
     : tab === "sensory" ? <Sensory data={data} save={save} readOnly={readOnly} />
     : tab === "safety" ? <Safety learner={learner} data={data} save={save} readOnly={readOnly} me={me} />
-    : <><p className="tl-muted">Everyone {learner.nickname} has already seen, and everything that has already been tried. This prevents repeated testing and wasted money.</p>
+    : <><div className="pf-noprint"><More label="About this page">Everyone {learner.nickname} has already seen, and everything that has already been tried. This prevents repeated testing and wasted money.</More></div>
         <RowsTable table="seen" {...B.TABLES.seen} data={data} save={save} readOnly={readOnly} />
         <RowsTable table="therapy" {...B.TABLES.therapy} data={data} save={save} readOnly={readOnly} />
         <Sections secs={[{ title: "What the team should learn from all of this", questions: B.SERVICES_Q }]} data={data} save={save} readOnly={readOnly} /></>;
@@ -61,13 +62,14 @@ function Consent({ data, save, readOnly, me }: { data: Record<string, IntakeValu
   return (
     <div className="tl-stack">
       <h2>Consent and privacy notice</h2>
-      <p><b>Why this information is collected.</b> To understand this person's strengths and support needs, plan an assessment, decide which professionals should be involved, and write a report that leads to practical support at home, at school and in the community.</p>
-      <p><b>What kind of information this is.</b> Some of it is special personal information under the Protection of Personal Information Act 4 of 2013, including health information. Where the person is under 18, the Act requires the prior consent of a competent person, usually a parent or legal guardian.</p>
-      <p><b>Who will see it.</b> Only the people on this learner's team that you have given health access to in Sharing, and only once you agree to item 3 below. The school sees only "How to support me", and only if you agree to item 4 and choose to share it.</p>
-      <p><b>What you may do.</b> Ask to see what is held, ask for a correction, ask who it has been shared with, withdraw consent for future sharing, or complain to the Information Regulator. Withdrawing consent does not undo sharing that has already happened lawfully.</p>
-      <p><b>The limits of this form.</b> It gathers information. It is not a test, not a screening tool and not a diagnosis.</p>
+      <div><More label="Read the privacy notice"><span className="tl-more-text"><b>Why this information is collected.</b> To understand this person's strengths and support needs, plan an assessment, decide which professionals should be involved, and write a report that leads to practical support at home, at school and in the community.</span>
+      <span className="tl-more-text"><b>What kind of information this is.</b> Some of it is special personal information under the Protection of Personal Information Act 4 of 2013, including health information. Where the person is under 18, the Act requires the prior consent of a competent person, usually a parent or legal guardian.</span>
+      <span className="tl-more-text"><b>Who will see it.</b> Only the people on this learner's team that you have given health access to in Sharing, and only once you agree to item 3 below. The school sees only "How to support me", and only if you agree to item 4 and choose to share it.</span>
+      <span className="tl-more-text"><b>What you may do.</b> Ask to see what is held, ask for a correction, ask who it has been shared with, withdraw consent for future sharing, or complain to the Information Regulator. Withdrawing consent does not undo sharing that has already happened lawfully.</span>
+      <span className="tl-more-text"><b>The limits of this form.</b> It gathers information. It is not a test, not a screening tool and not a diagnosis.</span>
+      </More></div>
       <h2>Consent</h2>
-      <p className="tl-muted">Choose an answer for each line. A No does not stop the assessment. It tells the team where the limits are.</p>
+      <p className="tl-muted">Choose an answer for each line. A No does not stop the assessment.</p>
       {B.CONSENT_ITEMS.map((t, i) => (
         <div key={i} className="pf-item"><div className="pf-grid">
           <Ask id={`in-c${i + 1}`} q={`${i + 1}. ${t}`} list={B.CONSENT_OPT} value={str(data, `c${i + 1}`)} readOnly={readOnly} onSave={v => save({ [`c${i + 1}`]: v })} />
@@ -90,10 +92,10 @@ function Consent({ data, save, readOnly, me }: { data: Record<string, IntakeValu
 function Health({ data, save, readOnly }: { data: Record<string, IntakeValue>; save: Save; readOnly?: boolean }) {
   return (
     <div className="tl-stack">
-      <p className="tl-muted">Fetch the clinic card or Road to Health booklet if you have it. Where you cannot remember, write Not known. A guess is worse than a blank.</p>
+      <div className="pf-noprint"><More label="Before you start">Fetch the clinic card or Road to Health booklet if you have it. Where you cannot remember, write Not known. A guess is worse than a blank.</More></div>
       <Sections secs={B.HEALTH.slice(0, 1)} data={data} save={save} readOnly={readOnly} />
       <section className="tl-stack"><h2>Early milestones</h2>
-        <p className="note">Most children can do each of these by the age shown: the point by which at least three quarters of children show the skill. Reaching one late is a prompt for a conversation, not a diagnosis. Many children reach some late and are fine. Not known is a perfectly good answer.</p>
+        <div className="pf-noprint"><More label="About milestones">Most children can do each of these by the age shown: the point by which at least three quarters of children show the skill. Reaching one late is a prompt for a conversation, not a diagnosis. Many children reach some late and are fine. Not known is a perfectly good answer.</More></div>
         {B.MILESTONES.map(([m, by], i) => (
           <div key={m} className="pf-item"><b>{i + 1}. {m}</b> <span className="tl-muted">Most children {by}</span>
             <div className="pf-grid">
@@ -116,8 +118,8 @@ function Daily({ data, save, readOnly }: { data: Record<string, IntakeValue>; sa
   const areas = R.areaAverages(data);
   return (
     <div className="tl-stack">
-      <p>The same areas every professional will ask about, in one place. This replaces being asked the same question by six different people.</p>
-      <Notice>Go down the list. For anything that is not a problem, choose <b>No concern</b> and move on. You only need the other boxes where there is something to say. Your own words matter most, and the team reads them first.</Notice>
+      <div className="pf-noprint"><More label="About this page">The same areas every professional will ask about, in one place. This replaces being asked the same question by six different people.</More></div>
+      <div className="pf-noprint"><More label="How to fill this in">Go down the list. For anything that is not a problem, choose <b>No concern</b> and move on. You only need the other boxes where there is something to say. Your own words matter most, and the team reads them first.</More></div>
       {B.DAILY_AREAS.map((area, ai) => {
         const row = areas[ai]!;
         return (
@@ -150,8 +152,8 @@ function Daily({ data, save, readOnly }: { data: Record<string, IntakeValue>; sa
 function Sensory({ data, save, readOnly }: { data: Record<string, IntakeValue>; save: Save; readOnly?: boolean }) {
   return (
     <div className="tl-stack">
-      <p>How this person takes in sound, light, touch, taste, smell and movement, and how they read signals from inside their own body. This page changes how the team runs the appointment itself.</p>
-      <p className="note">There is no right pattern here. Many people avoid some things and seek others out, and the same person can swing between the two on different days. Say what you see.</p>
+      <div className="pf-noprint"><More label="About this page">How this person takes in sound, light, touch, taste, smell and movement, and how they read signals from inside their own body. This page changes how the team runs the appointment itself.</More></div>
+      <div className="pf-noprint"><More label="No right answers">There is no right pattern here. Many people avoid some things and seek others out, and the same person can swing between the two on different days. Say what you see.</More></div>
       {B.SENSES.map((sense, i) => (
         <details key={sense} className="pf-group"><summary>{i + 1}. {sense}{str(data, `e${i}c`) ? ` · ${str(data, `e${i}c`)}` : ""}</summary>
           <div className="pf-grid">
@@ -174,9 +176,9 @@ function Safety({ learner, data, save, readOnly, me }: { learner: Learner; data:
     .then(() => { setAsked(true); void syncNow().catch(() => {}); });
   return (
     <div className="tl-stack">
-      <p>This page is short, and it matters. The team asks these questions of every family. Answering honestly lets the team keep {learner.nickname} safe and get the right help quickly. If you would rather talk about something than write it, choose <b>Prefer to discuss in person</b>.</p>
+      <div className="pf-noprint"><More label="About this page">This page is short, and it matters. The team asks these questions of every family. Answering honestly lets the team keep {learner.nickname} safe and get the right help quickly. If you would rather talk about something than write it, choose <b>Prefer to discuss in person</b>.</More></div>
       <Helplines urgent={R.immediateDanger(data)} />
-      <p className="note"><b>What the team must do by law.</b> Under section 110 of the Children's Act 38 of 2005, a teacher, nurse, doctor, psychologist, social worker, occupational therapist, physiotherapist or speech therapist who concludes on reasonable grounds that a child has been abused in a way causing physical injury, sexually abused or deliberately neglected must report it on Form 22 to a designated child protection organisation, the provincial Department of Social Development or the police. The team will tell you if it has to make a report, unless telling you would put the child at greater risk.</p>
+      <div className="pf-noprint"><More label="What the team must do by law"><b>What the team must do by law.</b> Under section 110 of the Children's Act 38 of 2005, a teacher, nurse, doctor, psychologist, social worker, occupational therapist, physiotherapist or speech therapist who concludes on reasonable grounds that a child has been abused in a way causing physical injury, sexually abused or deliberately neglected must report it on Form 22 to a designated child protection organisation, the provincial Department of Social Development or the police. The team will tell you if it has to make a report, unless telling you would put the child at greater risk.</More></div>
       <Sections secs={B.SAFETY} data={data} save={save} readOnly={readOnly} />
       {!readOnly && fu.length ? <Notice tone="warn">Some of your answers need a private conversation with the team.{" "}
         {asked ? <b>Your request was sent to {learner.nickname}'s team.</b> : <Button small onClick={askPrivate}>Ask the team for a private conversation</Button>}</Notice> : null}
@@ -189,7 +191,7 @@ function Share({ me, learner, data, support, onChange }: { me: Account; learner:
   const share = (d: Record<string, string>) => void store.as(me).shareSupportProfile(learner.id, d).then(() => { onChange(); void syncNow().catch(() => {}); });
   return (
     <div className="tl-stack">
-      <p>One page for a teacher, a relief teacher, a new therapist or a sports coach. It fills in on its own from your answers. Read it with {learner.nickname}, correct anything that is wrong in the pages it comes from, then share it.</p>
+      <div className="pf-noprint"><More label="About this page">One page for a teacher, a relief teacher, a new therapist or a sports coach. It fills in on its own from your answers. Read it with {learner.nickname}, correct anything that is wrong in the pages it comes from, then share it.</More></div>
       <div className="tl-row pf-noprint">
         {may ? <Button variant="primary" onClick={() => share(snap)}>{support ? "Update the copy the team sees" : `Share with ${learner.nickname}'s team`}</Button> : null}
         {support ? <Button variant="quiet" onClick={() => share({})}>Stop sharing</Button> : null}

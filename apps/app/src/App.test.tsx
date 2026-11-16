@@ -56,6 +56,7 @@ describe("signing in", () => {
   it("shows a school admin totals and staff, never learner records, and lets them choose the safeguarding lead", async () => {
     const user = start();
     await signInDemo(user, "Demo school admin");
+    await user.click((await screen.findAllByRole("button", { name: /About this/ }))[0]!); // the explanation is behind an "i"
     expect(await screen.findByText(/you don't see learners' names, progress or notes/)).toBeInTheDocument();
     expect(screen.queryByText(/Brave Meerkat/)).toBeNull();
     const lead = screen.getByRole("checkbox", { name: "Demo Specialist is a safeguarding lead" });

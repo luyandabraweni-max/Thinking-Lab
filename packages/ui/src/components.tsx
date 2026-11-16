@@ -1,4 +1,4 @@
-import { useId, type ButtonHTMLAttributes, type ReactNode } from "react";
+import { useId, useState, type ButtonHTMLAttributes, type ReactNode } from "react";
 
 // Accessible building blocks. Every display mode comes from tokens.css; components only use the tokens.
 
@@ -14,6 +14,21 @@ export function Card({ children, label, as: Tag = "section" }: { children: React
 
 export function Notice({ children, tone }: { children: ReactNode; tone?: "warn" | "ok" }) {
   return <div className={`tl-notice${tone ? ` tl-notice--${tone}` : ""}`}>{children}</div>;
+}
+
+/**
+ * Extra explanation, hidden until asked for, so screens stay short. Shows a small "i" (with a label if given); pressing it
+ * shows the text below, and pressing again hides it. Use it for hints and background, never for anything safety-critical.
+ */
+export function More({ children, label, about }: { children: ReactNode; label?: string; about?: string }) {
+  const [open, setOpen] = useState(false), id = useId();
+  return (
+    <div className="tl-more">
+      <button type="button" className="tl-more-btn" aria-expanded={open} aria-controls={id} onClick={() => setOpen(o => !o)}
+        aria-label={label ? undefined : `More about ${about ?? "this"}`}><span className="tl-more-i" aria-hidden="true">i</span>{label ? <span>{label}</span> : null}</button>
+      {open ? <div id={id} className="tl-more-text">{children}</div> : null}
+    </div>
+  );
 }
 
 export interface FieldProps {

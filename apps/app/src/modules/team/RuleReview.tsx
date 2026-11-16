@@ -1,6 +1,6 @@
 import { ADAPT, RULES_FOR_REVIEW } from "@tl/adaptation";
 import type { Account, RuleReview as Review } from "@tl/data";
-import { Button, Card } from "@tl/ui";
+import { Button, Card, More } from "@tl/ui";
 import { useState } from "react";
 import { useServices } from "../../platform";
 import { useLoad } from "./use-load";
@@ -28,7 +28,7 @@ export function RuleReview({ me, onBack }: { me: Account; onBack: () => void }) 
       {RULES_FOR_REVIEW.map(([k, name, text]) => <OneRule key={k} rule={k} name={name} text={text} mine={reviews.find(r => r.rule === k && r.by === me.id)} others={reviews.filter(r => r.rule === k && r.by !== me.id)}
         onSave={async (v, c) => { await s.reviewRule(k, v, c); setSaid(`Review of "${name}" saved. Thank you.`); reload(); void syncNow().catch(() => {}); }} />)}
       <div className="tl-row"><Button onClick={download}><span aria-hidden="true">⬇️</span>Download all reviews</Button><Button variant="quiet" onClick={onBack}>Back to my learners</Button></div>
-      <p className="note">Your reviews go to the 2to.iQ team, who revise the rules from them. Colleagues in your organisation see them too.</p>
+      <div className="note"><More label="About this">Your reviews go to the 2to.iQ team, who revise the rules from them. Colleagues in your organisation see them too.</More></div>
     </Card>
   );
 }

@@ -161,3 +161,12 @@ p { margin: 0; }
 .pf-better { background: var(--ok-soft); }
 .pf-worse { background: var(--crit-soft); }
 @media print { .tl-tabs, .pf-noprint, header, nav { display: none !important; } .tl-card { box-shadow: none; border: 0; } }
+
+/* More: a small "i" that shows extra information on request. */
+.tl-more { display: inline; }
+.tl-more-text ul { margin: 4px 0; }
+.tl-more-btn { font: inherit; font-size: 0.95rem; color: var(--brand); background: transparent; border: 0; padding: 0 4px; min-height: 32px; min-width: 32px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.tl-more-btn span:not(.tl-more-i) { text-decoration: underline dotted; }
+.tl-more-i { display: inline-grid; place-items: center; width: 1.3em; height: 1.3em; border-radius: 50%; border: 2px solid currentColor; font-family: Georgia, serif; font-style: italic; font-weight: 700; font-size: 0.85em; line-height: 1; }
+.tl-more-btn[aria-expanded="true"] .tl-more-i { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.tl-more-text { display: block; color: var(--muted); font-size: 0.97rem; margin: 4px 0 6px; white-space: pre-wrap; }

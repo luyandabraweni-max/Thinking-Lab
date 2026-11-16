@@ -1,5 +1,5 @@
 import type { Account } from "@tl/data";
-import { Button, Card } from "@tl/ui";
+import { Button, Card, More } from "@tl/ui";
 import { useEffect, useState } from "react";
 import { useServices } from "../../platform";
 import { PHASE_NAME } from "./bank";
@@ -35,7 +35,7 @@ export function SupportTracker({ me, onOpen, onBack }: { me: Account; onOpen: (l
     <Card>
       <div className="tl-row"><Button variant="quiet" onClick={onBack}>All learners</Button></div>
       <h1>Support tracker</h1>
-      <p className="tl-muted">One row for each learner whose school profile you keep. The risk band works itself out from each profile: safeguarding and attendance override everything else. It orders the team's work. It is not a measure of the child.</p>
+      <div className="pf-noprint"><More label="About the tracker">One row for each learner whose school profile you keep. The risk band works itself out from each profile: safeguarding and attendance override everything else. It orders the team's work. It is not a measure of the child.</More></div>
       {error ? <p className="tl-error">{error}</p> : !rows ? <p>Loading…</p> : !rows.length ? <p className="tl-muted">No profiles yet. A learner appears here once their family has shared them with you and agreed to support needs being recorded.</p> : <>
         <div className="pf-scroll"><table className="pf-table"><tbody>
           <tr><th scope="row">Learners on this tracker</th><td>{rows.length}</td></tr>

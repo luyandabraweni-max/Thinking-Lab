@@ -1,6 +1,6 @@
 import { AREAS, CATALOGUE, COHORTS, cohortFor, DEFAULT_LEVEL, lessonsIn, levelName, type Area } from "@tl/content";
 import type { Account, Learner, PlanStep } from "@tl/data";
-import { Button } from "@tl/ui";
+import { Button, More } from "@tl/ui";
 import { useState } from "react";
 import { useServices } from "../../platform";
 import { levelFromName } from "../learning";
@@ -28,7 +28,7 @@ export function NextSession({ me, learner }: { me: Account; learner: Learner }) 
   return (
     <div className="tl-stack">
       <h2>Plan the next session</h2>
-      <p className="note">Up to {PLAN_MAX} steps. {name} sees it as "My plan today" at their next session, and can still choose something else.</p>
+      <div className="note"><More label="About this">Up to {PLAN_MAX} steps. {name} sees it as "My plan today" at their next session, and can still choose something else.</More></div>
       <p role="status" className="tl-muted">{said}</p>
       {steps.length ? <>
         <ol className="plan-strip" aria-label={`${name}'s plan for next session`}>{steps.map((x, i) => <li key={i}><span className="em" aria-hidden="true">{x.pic}</span><span>{x.label}</span></li>)}</ol>

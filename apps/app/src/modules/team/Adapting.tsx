@@ -1,7 +1,7 @@
 import { ADAPT_NAMES, adaptList, fromAttempt, levelSuggestions, supportText, type Rule } from "@tl/adaptation";
 import { AREAS, cohortFor, levelName, type Area } from "@tl/content";
 import type { Account, Learner } from "@tl/data";
-import { Button } from "@tl/ui";
+import { Button, More } from "@tl/ui";
 import { useState } from "react";
 import { useServices } from "../../platform";
 import { levelFromName } from "../learning";
@@ -25,7 +25,7 @@ export function Adapting({ me, learner }: { me: Account; learner: Learner }) {
     <div className="adapt tl-stack">
       <p role="status" className="tl-muted">{said}</p>
       <h2>How the platform adapts for {name}</h2>
-      <p className="note">These rules respond to what {name} does in sessions, not to a label. They are provisional until specialists review them.</p>
+      <div className="note"><More label="About this">These rules respond to what {name} does in sessions, not to a label. They are provisional until specialists review them.</More></div>
       <label className="consent"><input type="checkbox" checked={settings.adaptAuto}
         onChange={e => void change({ adaptAuto: e.target.checked }, `Automatic changes turned ${e.target.checked ? "on" : "off"}`)} />
         <span>Adjust support for {name} automatically during sessions. {name} can always undo a change on the spot.</span></label>

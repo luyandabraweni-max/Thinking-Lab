@@ -1,6 +1,7 @@
 import { fromAttempt } from "@tl/adaptation";
 import { CATALOGUE, COHORTS, cohortFor } from "@tl/content";
 import { canEditPlan, type Account, type Learner } from "@tl/data";
+import { More } from "@tl/ui";
 import { buildReport, reportFileName, reportToDocx, reportToPdf, type ActivityInfo, type ReportModel, type ReportOptions } from "@tl/reports";
 import { useState } from "react";
 import { useServices } from "../../platform";
@@ -52,7 +53,7 @@ export function Report({ me, learner }: { me: Account; learner: Learner }) {
         <button className="btn" onClick={() => save("docx")}><span className="em" aria-hidden="true">📝</span><span>Download Word</span></button>
       </div>
       <p className="note" role="status">{msg}</p>
-      <p className="note">PDF is best for sending and printing. Word is best if you need to add to it or edit it. Both are made on this device; nothing is uploaded. The report contains information about a child, so share it only with people who support them.</p>
+      <div className="note"><More label="About this">PDF is best for sending and printing. Word is best if you need to add to it or edit it. Both are made on this device; nothing is uploaded. The report contains information about a child, so share it only with people who support them.</More></div>
       <h2>Preview</h2>
       <ReportPaper rep={rep} />
     </div>

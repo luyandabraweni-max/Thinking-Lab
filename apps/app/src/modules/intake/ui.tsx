@@ -1,5 +1,5 @@
 import type { IntakeValue } from "@tl/data";
-import { Button } from "@tl/ui";
+import { Button, More } from "@tl/ui";
 import { useState } from "react";
 import type { Question, Section } from "./bank";
 
@@ -11,11 +11,11 @@ export function Ask({ id, q, why, list, kind, value, onSave, readOnly }: { id: s
   if (value !== was) { setWas(value); setV(value); } // saved elsewhere or synced: show the newer value
   if (readOnly) return <div className="tl-field"><span><b>{q}</b></span><span style={{ whiteSpace: "pre-wrap" }}>{value || <span className="tl-muted">Not answered</span>}</span></div>;
   const blur = () => { if (v !== value) onSave(v); };
-  const described = why ? `${id}-why` : undefined;
+  const described = undefined;
   return (
     <div className="tl-field">
       <label htmlFor={id}>{q}</label>
-      {why ? <span className="tl-hint" id={`${id}-why`}>{why}</span> : null}
+      {why ? <More about={q}>{why}</More> : null}
       {list ? <select id={id} value={v} aria-describedby={described} onChange={e => { setV(e.target.value); onSave(e.target.value); }}><option value="">Not answered</option>{list.map(o => <option key={o}>{o}</option>)}</select>
         : kind === "long" ? <textarea id={id} value={v} onChange={e => setV(e.target.value)} onBlur={blur} aria-describedby={described} />
         : <input id={id} type={kind === "date" ? "date" : "text"} value={v} aria-describedby={described}
