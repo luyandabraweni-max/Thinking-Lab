@@ -45,3 +45,8 @@ build/
 native/www/
 native/android/
 native/ios/
+apps/app/android/
+apps/app/ios/
+
+# Recorded voice clips, generated from clips.js and clips/ by tools/export-clips.mjs
+apps/app/public/clips/

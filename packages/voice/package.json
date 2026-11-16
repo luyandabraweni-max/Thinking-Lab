@@ -1,0 +1,18 @@
+{
+  "name": "@tl/voice",
+  "private": true,
+  "description": "Speaking instead of typing, on the web, iOS and Android: speech engines, spoken commands and voice-filled forms.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react.tsx"
+  },
+  "peerDependencies": {
+    "react": "19.3.1",
+    "@tl/ui": "*",
+    "@capacitor/core": "7.6.10"
+  },
+  "dependencies": {
+    "@capacitor-community/speech-recognition": "7.0.1"
+  }
+}

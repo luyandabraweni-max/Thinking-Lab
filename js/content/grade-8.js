@@ -34,7 +34,7 @@ const UNITS_G8 = [
     intention: "Today I am using Pythagoras to find a missing side.", prompt: "How do you know which side is the hypotenuse?",
     lesson: [
       { h: "The hypotenuse", say: "In a right-angled triangle, the longest side is opposite the right angle. It is called the hypotenuse.", html: tri("a", "b", "c") + P("<b>c</b> is the <b>hypotenuse</b>, opposite the square corner.") },
-      { h: "The theorem", say: "The square of the hypotenuse equals the sum of the squares of the other two sides. c squared equals a squared plus b squared.", html: chainRow(["c² = a² + b²"]) + P("This only works for <b>right-angled</b> triangles.") },
+      { h: "The theorem", say: "The square of the hypotenuse equals the sum of the squares of the other two sides. So c squared equals a squared plus b squared.", html: chainRow(["c² = a² + b²"]) + P("This only works for <b>right-angled</b> triangles.") },
       { h: "Using it", say: "If the two shorter sides are three and four, then c squared is nine plus sixteen, which is twenty-five. So c is five.", html: tri("3", "4", "5") + chainRow(["3² + 4² = 9 + 16 = 25", "c = √25 = 5"]) }
     ],
     example: { q: "A ladder leans against a wall. Its foot is 6 m from the wall and it reaches 8 m up. How long is the ladder?", steps: ["The wall and ground make a right angle. The ladder is the hypotenuse.", "c² = 6² + 8² = 36 + 64 = 100.", "c = √100 = 10 m."] },
@@ -183,7 +183,7 @@ const UNITS_G8 = [
     caps: "CAPS Grade 8 Natural Sciences, Term 3 Energy and Change: Energy transfer in electrical systems (components of circuits; series and parallel; effects of current; circuit diagrams)",
     intention: "Today I am learning how electric circuits work.", prompt: "Why are the lights in a house wired in parallel?",
     lesson: [
-      { h: "A complete circuit", say: "Electricity only flows in a complete, closed loop. A circuit needs a source of energy, such as a cell, conductors such as wires, and a device such as a bulb.", html: chainRow(["Cell", "Wire", "Switch", "Bulb", "Wire"]) + P("Open the <b>switch</b> and the loop is broken.") },
+      { h: "A complete circuit", say: "Electricity only flows in a complete, closed loop. A circuit needs three things. It needs a source of energy, such as a cell. It needs conductors, such as wires. And it needs a device, such as a bulb.", html: chainRow(["Cell", "Wire", "Switch", "Bulb", "Wire"]) + P("Open the <b>switch</b> and the loop is broken.") },
       { h: "Series circuits", say: "In a series circuit, components are in one loop. If one bulb breaks, all the bulbs go out. More bulbs in series make each bulb dimmer.", html: PICS("🔋 → 💡 → 💡 ↩", "Series") + P("<b>Series</b>: one path.") },
       { h: "Parallel circuits", say: "In a parallel circuit, each component has its own branch. If one bulb breaks, the others stay on.", html: PICS("🔋 ⇉ 💡 💡", "Parallel") + P("<b>Parallel</b>: several paths. Houses are wired in parallel.") }
     ],
@@ -205,7 +205,7 @@ const UNITS_G8 = [
     caps: "CAPS Grade 8 Life Orientation: World of work (career fields; interests and abilities; subject choices for Grade 10; sources of career information)",
     intention: "Today I am matching my interests to career fields.", prompt: "Which career field fits you, and why?",
     lesson: [
-      { h: "Career fields", say: "Careers can be grouped into fields, such as health, engineering and building, business, arts and design, agriculture, education and information technology.", html: chainRow(["Health", "Engineering", "Business", "Arts", "Agriculture", "IT"]) + P("Each field has jobs at <b>different levels</b> of study.") },
+      { h: "Career fields", say: "Careers can be grouped into fields. Some fields are health, engineering and building, and business. Others are arts and design, agriculture, education and information technology.", html: chainRow(["Health", "Engineering", "Business", "Arts", "Agriculture", "IT"]) + P("Each field has jobs at <b>different levels</b> of study.") },
       { h: "Interests and abilities", say: "Think about what you enjoy and what you are good at. Do you like working with people, with your hands, with ideas or with data?", html: chainRow(["People", "Things", "Ideas", "Data"]) + P("Match <b>interests</b> and <b>abilities</b> to fields.") },
       { h: "Paths to a career", say: "There are many paths: university, a TVET college, a learnership or apprenticeship, or starting a business. Grade 9 subject choices can open or close some paths, so find out early.", html: chainRow(["University", "TVET college", "Learnership", "Own business"]) + P("Ask: what <b>subjects</b> does this career need?") }
     ],
@@ -213,7 +213,7 @@ const UNITS_G8 = [
     questions: [
       { type: "mcq", q: "Which career is in the health field?", options: ["Nurse", "Accountant", "Electrician", "Graphic designer"], answer: 0, hints: ["Who looks after sick people?", "Hospitals and clinics.", "Nurse."], explain: "Nursing is in the health field." },
       { type: "mcq", q: "Someone who loves organising data and numbers might enjoy …", options: ["Accounting or data analysis", "Acting", "Farming only", "Hairdressing"], answer: 0, hints: ["Data and numbers.", "Business or IT.", "Accounting or data analysis."], explain: "Accounting and data analysis work with numbers and data." },
-      { type: "mcq", q: "Which is a path to a trade like plumbing?", options: ["TVET college or apprenticeship", "Only university", "No training needed", "A modelling agency"], answer: 0, hints: ["Trades are learned hands-on.", "Colleges and workplaces train people.", "TVET or apprenticeship."], explain: "Trades are usually learned at TVET colleges and through apprenticeships." },
+      { type: "mcq", q: "Which is a path to a trade like plumbing?", options: ["TVET college or apprenticeship", "Only university", "No training needed", "A modelling agency"], answer: 0, hints: ["Trades are learned by doing the work.", "Colleges and workplaces train people.", "TVET or apprenticeship."], explain: "Trades are usually learned at TVET colleges and through apprenticeships." },
       { type: "mcq", q: "Why are Grade 9 subject choices important?", options: ["They can open or close some career paths", "They are not important", "They only affect sport", "They decide your friends"], answer: 0, hints: ["Some careers need certain subjects.", "For example, engineering needs Mathematics.", "They affect paths."], explain: "Some careers need specific Grade 10 to 12 subjects." },
       { type: "sort", q: "Match interest to field.", items: ["Caring for the sick", "Designing logos", "Treating patients' teeth", "Painting murals"], bins: ["Health", "Arts and design"], answer: [0, 1, 0, 1], hints: ["Health is about the body.", "Arts is about creating.", "Match each."], explain: "Caring for the sick and dentistry are health. Logos and murals are arts and design." }
     ],
@@ -226,7 +226,7 @@ const UNITS_G8 = [
     caps: "CAPS Grade 8 Life Orientation: Health, social and environmental responsibility (risky behaviour and situations; decision-making steps; where to get help)",
     intention: "Today I am using steps to make safe decisions.", prompt: "Who could you go to for help with a hard decision?",
     lesson: [
-      { h: "Spotting risk", say: "A risky situation could lead to harm: being alone with someone you do not trust, getting into a car with a driver who has been drinking, or meeting an online stranger.", html: PICS("⚠️", "Warning") + P("Trust your <b>gut feeling</b>. If something feels wrong, it may be.") },
+      { h: "Spotting risk", say: "A risky situation could lead to harm. Examples are being alone with someone you do not trust, or meeting an online stranger. Getting into a car with a driver who has been drinking is also risky.", html: PICS("⚠️", "Warning") + P("Trust your <b>gut feeling</b>. If something feels wrong, it may be.") },
       { h: "Decision steps", say: "Use these steps. Stop. Think about the choices. Think about the consequences for you and others. Choose the safest option. Then reflect.", html: chainRow(["Stop", "Options", "Consequences", "Choose", "Reflect"]) + P("Taking a <b>moment</b> helps you avoid pressure.") },
       { h: "Getting help", say: "You do not have to decide alone. Talk to a trusted adult, a teacher or a counsellor. Childline South Africa is free on 116.", html: chainRow(["Trusted adult", "Teacher", "Counsellor", "Childline 116"]) + P("Asking for help is a <b>strength</b>.") }
     ],

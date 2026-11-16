@@ -15,7 +15,7 @@ const UNITS_G9 = [
     lesson: [
       { h: "Factorising undoes expanding", say: "Expanding three times x plus two gives three x plus six. Factorising goes backwards: three x plus six becomes three times x plus two.", html: chainRow(["3(x + 2)", "⇄", "3x + 6"]) + P("<b>Factorise</b> means write as a <b>product</b>.") },
       { h: "Common factor", say: "Find the highest common factor of all the terms. In four x squared plus eight x, the common factor is four x. So it is four x times x plus two.", html: chainRow(["4x² + 8x", "= 4x(x + 2)"]) + P("Take out the <b>highest common factor</b>.") },
-      { h: "Difference of two squares", say: "A squared minus b squared always factorises to a minus b times a plus b. x squared minus nine is x minus three times x plus three.", html: chainRow(["a² − b² = (a − b)(a + b)", "x² − 9 = (x − 3)(x + 3)"]) + P("Look for two <b>perfect squares</b> with a <b>minus</b> between them.") }
+      { h: "Difference of two squares", say: "A squared minus b squared always factorises to a minus b times a plus b. So x squared minus nine is x minus three times x plus three.", html: chainRow(["a² − b² = (a − b)(a + b)", "x² − 9 = (x − 3)(x + 3)"]) + P("Look for two <b>perfect squares</b> with a <b>minus</b> between them.") }
     ],
     example: { q: "Factorise 5a² − 15a.", steps: ["Both terms contain 5 and a.", "The highest common factor is 5a.", "5a(a − 3). Check: 5a × a = 5a², 5a × (−3) = −15a."] },
     questions: [
@@ -207,7 +207,7 @@ const UNITS_G9 = [
     caps: "CAPS Grade 9 Life Orientation: World of work (subject choice for Grade 10 to 12; career and study pathways; requirements for further study)",
     intention: "Today I am learning how to choose subjects for Grade 10 to 12.", prompt: "Which subjects are you thinking of, and why?",
     lesson: [
-      { h: "What you take", say: "In Grades 10 to 12 you take seven subjects: a home language, a first additional language, Mathematics or Mathematical Literacy, Life Orientation, and three subjects you choose.", html: chainRow(["2 languages", "Maths or Maths Lit", "Life Orientation", "3 choices"]) + P("The three choices can be academic, technical or occupational, depending on your school.") },
+      { h: "What you take", say: "In Grades 10 to 12 you take seven subjects. Four are compulsory: a home language, a first additional language, Mathematics or Mathematical Literacy, and Life Orientation. You choose the other three.", html: chainRow(["2 languages", "Maths or Maths Lit", "Life Orientation", "3 choices"]) + P("The three choices can be academic, technical or occupational, depending on your school.") },
       { h: "Maths or Maths Literacy?", say: "Many university courses in science, engineering, medicine and commerce require Mathematics, not Mathematical Literacy. Check before you choose.", html: chainRow(["Engineering: Maths", "Medicine: Maths + Physical Sciences", "Many arts courses: either"]) + P("This choice <b>opens or closes</b> some doors.") },
       { h: "How to decide", say: "Think about what you enjoy, what you are good at, and what careers you are curious about. Look up entry requirements, and talk to your teachers and family.", html: chainRow(["Interests", "Strengths", "Career requirements", "Advice"]) + P("Universities and TVET colleges list <b>admission requirements</b> online.") }
     ],
@@ -229,7 +229,7 @@ const UNITS_G9 = [
     intention: "Today I am turning a wish into a SMART goal.", prompt: "What is one goal you want to set this term?",
     lesson: [
       { h: "A wish is not a goal", say: "I want to do better at maths is a wish. A goal is clear and has a plan. SMART goals are Specific, Measurable, Achievable, Relevant and Time-bound.", html: chainRow(["Specific", "Measurable", "Achievable", "Relevant", "Time-bound"]) + P("SMART turns a wish into a <b>plan</b>.") },
-      { h: "Making it SMART", say: "Wish: get better at maths. SMART goal: I will improve my maths mark from 55 to 65 percent by the end of term, by doing 20 minutes of practice every weekday.", html: `<div class="passage-text"><p>I will improve my maths mark <b>from 55% to 65%</b> by <b>the end of term</b>, by doing <b>20 minutes</b> of practice <b>every weekday</b>.</p></div>` },
+      { h: "Making it SMART", say: "Wish: get better at maths. SMART goal: I will improve my maths mark from 55 to 65 percent by the end of term. I will do 20 minutes of practice every weekday.", html: `<div class="passage-text"><p>I will improve my maths mark <b>from 55% to 65%</b> by <b>the end of term</b>, by doing <b>20 minutes</b> of practice <b>every weekday</b>.</p></div>` },
       { h: "Steps and setbacks", say: "Break the goal into small steps. Track your progress. If you have a setback, adjust the plan, not the dream.", html: chainRow(["Small steps", "Track", "Adjust"]) + P("Setbacks are <b>information</b>, not failure.") }
     ],
     example: { q: "Make this SMART: I want to get fit.", steps: ["Specific: run.", "Measurable and time-bound: run 3 kilometres without stopping in 8 weeks.", "Plan: run three times a week, adding a little each week."] },

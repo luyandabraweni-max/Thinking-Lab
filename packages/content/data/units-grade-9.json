@@ -1,0 +1,3762 @@
+{
+ "level": "grade-9",
+ "units": [
+  {
+   "id": "g9-factorise",
+   "grade": 9,
+   "subject": "Mathematics",
+   "title": "Factorising expressions",
+   "topic": "Common factors and difference of squares",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 9 Mathematics, Term 1: Algebraic expressions (products of binomials; factorise by taking out a common factor; difference of two squares; trinomials)",
+   "intention": "Today I am factorising expressions, which is expanding in reverse.",
+   "prompt": "How do you check that you factorised correctly?",
+   "lesson": [
+    {
+     "h": "Factorising undoes expanding",
+     "say": "Expanding three times x plus two gives three x plus six. Factorising goes backwards: three x plus six becomes three times x plus two.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3(x + 2)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">⇄</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3x + 6</span></div><p><b>Factorise</b> means write as a <b>product</b>.</p>"
+    },
+    {
+     "h": "Common factor",
+     "say": "Find the highest common factor of all the terms. In four x squared plus eight x, the common factor is four x. So it is four x times x plus two.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4x² + 8x</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">= 4x(x + 2)</span></div><p>Take out the <b>highest common factor</b>.</p>"
+    },
+    {
+     "h": "Difference of two squares",
+     "say": "A squared minus b squared always factorises to a minus b times a plus b. So x squared minus nine is x minus three times x plus three.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a² − b² = (a − b)(a + b)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x² − 9 = (x − 3)(x + 3)</span></div><p>Look for two <b>perfect squares</b> with a <b>minus</b> between them.</p>"
+    }
+   ],
+   "example": {
+    "q": "Factorise 5a² − 15a.",
+    "steps": [
+     "Both terms contain 5 and a.",
+     "The highest common factor is 5a.",
+     "5a(a − 3). Check: 5a × a = 5a², 5a × (−3) = −15a."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Factorise: 6x + 12",
+     "options": [
+      "6(x + 2)",
+      "6(x + 12)",
+      "3(2x + 12)",
+      "x(6 + 12)"
+     ],
+     "answer": 0,
+     "hints": [
+      "What divides into 6 and 12?",
+      "The highest is 6.",
+      "6(x + 2)."
+     ],
+     "explain": "6x + 12 = 6(x + 2)."
+    },
+    {
+     "type": "mcq",
+     "q": "Factorise: y² − 25",
+     "options": [
+      "(y − 5)(y + 5)",
+      "(y − 5)²",
+      "(y − 25)(y + 1)",
+      "y(y − 25)"
+     ],
+     "answer": 0,
+     "hints": [
+      "Both are perfect squares.",
+      "25 = 5².",
+      "Difference of squares."
+     ],
+     "explain": "y² − 25 = (y − 5)(y + 5)."
+    },
+    {
+     "type": "mcq",
+     "q": "Factorise: 3m² + 9m",
+     "options": [
+      "3m(m + 3)",
+      "3(m² + 9m)",
+      "m(3m + 9)",
+      "9m(m + 1)"
+     ],
+     "answer": 0,
+     "hints": [
+      "Common number: 3. Common letter: m.",
+      "HCF is 3m.",
+      "3m(m + 3)."
+     ],
+     "explain": "3m² + 9m = 3m(m + 3). The other forms are not fully factorised."
+    },
+    {
+     "type": "mcq",
+     "q": "Which can be factorised as a difference of two squares?",
+     "options": [
+      "x² − 49",
+      "x² + 49",
+      "x² − 7",
+      "x² − 2x"
+     ],
+     "answer": 0,
+     "hints": [
+      "You need two perfect squares.",
+      "And a minus sign.",
+      "49 = 7²."
+     ],
+     "explain": "x² − 49 = (x − 7)(x + 7)."
+    },
+    {
+     "type": "mcq",
+     "q": "Expand to check: (x − 4)(x + 4) = ?",
+     "options": [
+      "x² − 16",
+      "x² + 16",
+      "x² − 8x − 16",
+      "2x"
+     ],
+     "answer": 0,
+     "hints": [
+      "Multiply every term.",
+      "x² + 4x − 4x − 16.",
+      "The middle terms cancel."
+     ],
+     "explain": "The middle terms cancel, leaving x² − 16."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding the HCF",
+     "Spotting perfect squares",
+     "Expanding to check",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child factorised algebraic expressions using common factors and the difference of two squares.",
+   "teacher": "Shows factorising by highest common factor and difference of two squares, and checking by expansion.",
+   "done": "Factorising writes an expression as a product. Always check by expanding."
+  },
+  {
+   "id": "g9-graphs",
+   "grade": 9,
+   "subject": "Mathematics",
+   "title": "Straight-line graphs",
+   "topic": "Linear graphs: gradient and y-intercept",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 9 Mathematics, Term 3: Graphs (draw and interpret linear graphs; gradient and y-intercept; y = mx + c)",
+   "intention": "Today I am reading the gradient and y-intercept of a straight line.",
+   "prompt": "What does a steeper line tell you?",
+   "lesson": [
+    {
+     "h": "y = mx + c",
+     "say": "Every straight line can be written as y equals m x plus c. The number m is the gradient, the steepness. The number c is where the line crosses the y-axis.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">y = mx + c</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m: gradient</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">c: y-intercept</span></div><p>For y = 2x + 1, the gradient is <b>2</b> and the line crosses the y-axis at <b>1</b>.</p>"
+    },
+    {
+     "h": "Table of values",
+     "say": "For y equals two x plus one: when x is zero, y is one. When x is one, y is three. When x is two, y is five. Each step right, y goes up by two.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">x: 0, 1, 2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">y: 1, 3, 5</span></div><p>y goes up by the <b>gradient</b> each time x goes up by 1.</p>"
+    },
+    {
+     "h": "Positive and negative gradients",
+     "say": "A positive gradient slopes up from left to right. A negative gradient slopes down. A gradient of zero is flat.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m &gt; 0: up ↗</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m &lt; 0: down ↘</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m = 0: flat →</span></div><p>A bigger number means a <b>steeper</b> line.</p>"
+    }
+   ],
+   "example": {
+    "q": "A taxi charges R10 plus R5 per kilometre. Write it as y = mx + c.",
+    "steps": [
+     "The fixed amount is R10. That is where the line starts: c = 10.",
+     "Each kilometre adds R5: m = 5.",
+     "y = 5x + 10."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the gradient of y = 3x − 4?",
+     "options": [
+      "3",
+      "−4",
+      "x",
+      "1"
+     ],
+     "answer": 0,
+     "hints": [
+      "y = mx + c.",
+      "m is the number with x.",
+      "3."
+     ],
+     "explain": "m = 3."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does y = 2x + 7 cross the y-axis?",
+     "options": [
+      "At 7",
+      "At 2",
+      "At 0",
+      "At −7"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find c.",
+      "When x = 0, y = c.",
+      "7."
+     ],
+     "explain": "c = 7, so it crosses at (0; 7)."
+    },
+    {
+     "type": "num",
+     "q": "For y = 4x + 1, what is y when x = 3?",
+     "answer": "13",
+     "options": [
+      "13",
+      "12",
+      "8",
+      "7"
+     ],
+     "hints": [
+      "Substitute x = 3.",
+      "4 × 3 + 1.",
+      "12 + 1."
+     ],
+     "explain": "y = 13."
+    },
+    {
+     "type": "mcq",
+     "q": "Which line slopes down from left to right?",
+     "options": [
+      "y = −2x + 5",
+      "y = 2x + 5",
+      "y = 5",
+      "y = x"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for a negative gradient.",
+      "m < 0.",
+      "y = −2x + 5."
+     ],
+     "explain": "A negative gradient slopes down."
+    },
+    {
+     "type": "mcq",
+     "q": "A phone contract costs R99 a month plus R1 per minute. Which equation fits?",
+     "options": [
+      "y = x + 99",
+      "y = 99x + 1",
+      "y = 100x",
+      "y = 99"
+     ],
+     "answer": 0,
+     "hints": [
+      "The fixed amount is c.",
+      "R1 per minute is the gradient.",
+      "y = 1x + 99."
+     ],
+     "explain": "y = x + 99."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The table of values",
+     "Remembering y = mx + c",
+     "Real-life examples",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child read the gradient and y-intercept of straight-line graphs and used them in real situations.",
+   "teacher": "Shows identifying gradient and y-intercept from y = mx + c, substitution, sign of gradient, and modelling a context.",
+   "done": "In y = mx + c, m is the steepness and c is where the line starts."
+  },
+  {
+   "id": "g9-probability",
+   "grade": 9,
+   "subject": "Mathematics",
+   "title": "Probability",
+   "topic": "Chance and outcomes",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 9 Mathematics, Term 4: Probability (sample space; relative frequency; probability of simple events; compare predicted and actual results)",
+   "intention": "Today I am calculating the chance that something will happen.",
+   "prompt": "Why don't experiments always match the predicted probability?",
+   "lesson": [
+    {
+     "h": "What is probability?",
+     "say": "Probability is how likely something is, from zero, impossible, to one, certain. A half means it is equally likely to happen or not.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">0 impossible</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">½ even chance</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 certain</span></div><p>Probability can be a <b>fraction</b>, <b>decimal</b> or <b>percentage</b>.</p>"
+    },
+    {
+     "h": "Calculating it",
+     "say": "Probability equals the number of favourable outcomes divided by the total number of possible outcomes. The chance of rolling a six on a die is one out of six.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">P = favourable ÷ total</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">P(6) = 1/6</span></div><p>The list of all outcomes is the <b>sample space</b>.</p>"
+    },
+    {
+     "h": "Predicted and actual",
+     "say": "If you flip a coin 20 times, you expect about 10 heads, but you might get 12. The more times you try, the closer the result gets to the prediction.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Predicted: 10 heads</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Actual: 12 heads</span></div><p><b>Relative frequency</b> = how often it happened ÷ number of trials.</p>"
+    }
+   ],
+   "example": {
+    "q": "A bag has 3 red and 5 blue sweets. What is the probability of picking red?",
+    "steps": [
+     "Favourable outcomes: 3 red.",
+     "Total: 3 + 5 = 8.",
+     "P(red) = 3/8."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the probability of getting heads when you flip a fair coin?",
+     "options": [
+      "1/2",
+      "1",
+      "0",
+      "1/6"
+     ],
+     "answer": 0,
+     "hints": [
+      "Two outcomes.",
+      "One is heads.",
+      "1 out of 2."
+     ],
+     "explain": "P(heads) = 1/2."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the probability of rolling an even number on a die?",
+     "options": [
+      "1/2",
+      "1/6",
+      "1/3",
+      "2/3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Even numbers: 2, 4, 6.",
+      "That is 3 out of 6.",
+      "Simplify."
+     ],
+     "explain": "3/6 = 1/2."
+    },
+    {
+     "type": "mcq",
+     "q": "Which event is impossible?",
+     "options": [
+      "Rolling a 7 on a normal die",
+      "Rolling a 1",
+      "Flipping tails",
+      "Rolling an odd number"
+     ],
+     "answer": 0,
+     "hints": [
+      "What can a die show?",
+      "1 to 6.",
+      "7 is impossible."
+     ],
+     "explain": "A normal die has no 7, so P = 0."
+    },
+    {
+     "type": "mcq",
+     "q": "A spinner has 4 equal parts: 2 green, 1 red, 1 yellow. What is P(green)?",
+     "options": [
+      "1/2",
+      "1/4",
+      "2/3",
+      "1"
+     ],
+     "answer": 0,
+     "hints": [
+      "2 green out of 4.",
+      "2/4.",
+      "Simplify."
+     ],
+     "explain": "2/4 = 1/2."
+    },
+    {
+     "type": "mcq",
+     "q": "Lungi flips a coin 50 times and gets 29 heads. What is the relative frequency of heads?",
+     "options": [
+      "29/50",
+      "1/2",
+      "21/50",
+      "29/100"
+     ],
+     "answer": 0,
+     "hints": [
+      "How often it happened.",
+      "Divided by trials.",
+      "29 ÷ 50."
+     ],
+     "explain": "Relative frequency = 29/50 = 0,58."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Listing all outcomes",
+     "The formula",
+     "Thinking of real dice and coins",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child calculated probabilities and compared predicted results with actual results.",
+   "teacher": "Shows determining sample spaces, calculating theoretical probability and relative frequency.",
+   "done": "Probability = favourable outcomes ÷ total outcomes."
+  },
+  {
+   "id": "g9-argument",
+   "grade": 9,
+   "subject": "English Home Language",
+   "title": "Reading an argument",
+   "topic": "Argumentative texts",
+   "domain": "Communication and Expression",
+   "category": "Reflection",
+   "caps": "CAPS Grade 9 English Home Language: Reading and Viewing; Writing and Presenting (argumentative and discursive texts: claims, evidence, counter-arguments, conclusion)",
+   "intention": "Today I am analysing how an argument is built.",
+   "prompt": "Which side of the argument convinces you more, and why?",
+   "passage": "<div class=\"passage-text\"><p><b>Should Cellphones Be Allowed in Class?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Across South Africa, schools are debating whether learners should be allowed to use cellphones in class. Some schools ban them completely, while others allow them for learning.</p>\n<p>Supporters say phones give learners access to dictionaries, calculators and videos that explain hard topics. For learners without books at home, a phone may be their main way to research.</p>\n<p>However, many teachers say phones distract learners. Notifications interrupt concentration, and some learners use social media during lessons. Studies in several countries have found that test results improved after phones were banned.</p>\n<p>There are also safety concerns. Phones can be stolen, and cyberbullying can continue during school hours.</p>\n<p>Some schools have found a middle path: phones stay in bags unless the teacher asks learners to use them for a task. This keeps the benefits while reducing distraction.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the article",
+     "say": "Read the article, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Should Cellphones Be Allowed in Class?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Across South Africa, schools are debating whether learners should be allowed to use cellphones in class. Some schools ban them completely, while others allow them for learning.</p>\n<p>Supporters say phones give learners access to dictionaries, calculators and videos that explain hard topics. For learners without books at home, a phone may be their main way to research.</p>\n<p>However, many teachers say phones distract learners. Notifications interrupt concentration, and some learners use social media during lessons. Studies in several countries have found that test results improved after phones were banned.</p>\n<p>There are also safety concerns. Phones can be stolen, and cyberbullying can continue during school hours.</p>\n<p>Some schools have found a middle path: phones stay in bags unless the teacher asks learners to use them for a task. This keeps the benefits while reducing distraction.</p></div>"
+    },
+    {
+     "h": "Claims and evidence",
+     "say": "A claim is a point someone argues. Evidence supports it: facts, examples, statistics or expert views. A claim without evidence is weak.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Claim</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">→</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Evidence</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">→</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Explanation</span></div><p>Ask: <b>what is the proof?</b></p>"
+    },
+    {
+     "h": "Discursive or argumentative?",
+     "say": "This article is discursive. It presents both sides fairly. An argumentative text takes one side and argues for it, but should still answer the other side.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Discursive: both sides</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Argumentative: one side</span></div><p>A strong argument deals with the <b>counter-argument</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Which sentence gives evidence for banning phones?",
+    "steps": [
+     "Look for facts, not just opinions.",
+     "Studies found test results improved after bans.",
+     "That is evidence from research."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Is this article discursive or argumentative?",
+     "options": [
+      "Discursive",
+      "Argumentative"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Does it take one side?",
+      "It gives views for and against.",
+      "Discursive."
+     ],
+     "explain": "It presents both sides fairly, so it is discursive."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is an argument FOR phones in class?",
+     "options": [
+      "Learners can use dictionaries and calculators",
+      "Notifications interrupt concentration",
+      "Phones can be stolen",
+      "Cyberbullying can continue"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is a benefit?",
+      "Access to learning tools.",
+      "Dictionaries and calculators."
+     ],
+     "explain": "Access to learning tools supports allowing phones."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the word However signal in paragraph 3?",
+     "options": [
+      "A change to the other side",
+      "A conclusion",
+      "An example",
+      "A definition"
+     ],
+     "answer": 0,
+     "hints": [
+      "What comes after it?",
+      "The other point of view.",
+      "A contrast."
+     ],
+     "explain": "However introduces the opposing view."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the middle path the article suggests?",
+     "options": [
+      "Phones stay in bags unless needed for a task",
+      "Ban all phones",
+      "Allow phones all the time",
+      "Give everyone a tablet"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the last paragraph.",
+      "A compromise.",
+      "Phones in bags."
+     ],
+     "explain": "Phones stay away unless the teacher asks for them."
+    },
+    {
+     "type": "mcq",
+     "q": "Which would make the argument stronger?",
+     "options": [
+      "Naming the studies and their results",
+      "Using more capital letters",
+      "Adding a joke",
+      "Removing the evidence"
+     ],
+     "answer": 0,
+     "hints": [
+      "Specific evidence is stronger.",
+      "Readers can check it.",
+      "Name the studies."
+     ],
+     "explain": "Specific, checkable evidence strengthens an argument."
+    }
+   ],
+   "reflect": {
+    "q": "How did you analyse the argument?",
+    "options": [
+     "Finding claims",
+     "Checking evidence",
+     "Looking at both sides",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how an argument is built with claims, evidence and counter-arguments.",
+   "teacher": "Shows distinguishing discursive from argumentative text, identifying claims, evidence, discourse markers and evaluating strength.",
+   "done": "Strong arguments use evidence and answer the other side."
+  },
+  {
+   "id": "g9-summary",
+   "grade": 9,
+   "subject": "English Home Language",
+   "title": "Writing a summary",
+   "topic": "Summary skills",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 9 English Home Language: Reading and Viewing (summarise a text: select main points, use own words, keep to a word limit)",
+   "intention": "Today I am learning to pick out main points and summarise in my own words.",
+   "prompt": "How did you decide what to leave out?",
+   "passage": "<div class=\"passage-text\"><p><b>Should Cellphones Be Allowed in Class?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Across South Africa, schools are debating whether learners should be allowed to use cellphones in class. Some schools ban them completely, while others allow them for learning.</p>\n<p>Supporters say phones give learners access to dictionaries, calculators and videos that explain hard topics. For learners without books at home, a phone may be their main way to research.</p>\n<p>However, many teachers say phones distract learners. Notifications interrupt concentration, and some learners use social media during lessons. Studies in several countries have found that test results improved after phones were banned.</p>\n<p>There are also safety concerns. Phones can be stolen, and cyberbullying can continue during school hours.</p>\n<p>Some schools have found a middle path: phones stay in bags unless the teacher asks learners to use them for a task. This keeps the benefits while reducing distraction.</p></div>",
+   "lesson": [
+    {
+     "h": "What a summary is",
+     "say": "A summary gives only the main points of a text, in your own words, much shorter than the original.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Main points</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Own words</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Short</span></div><p>No examples, no repetition, no opinions of your own.</p>"
+    },
+    {
+     "h": "How to do it",
+     "say": "Read the text. Underline one main point in each paragraph. Leave out examples and details. Rewrite the points in your own words. Check the word count.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Read</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Underline</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cut details</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rewrite</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Count</span></div><p>Usually <b>one point per paragraph</b>.</p>"
+    },
+    {
+     "h": "Example",
+     "say": "Instead of: For learners without books at home, a phone may be their main way to research. Write: Phones help learners who have few books.",
+     "html": "<div class=\"passage-text\"><p><b>Original:</b> For learners without books at home, a phone may be their main way to research.</p><p><b>Summary point:</b> Phones help learners with few books.</p></div>"
+    }
+   ],
+   "example": {
+    "q": "Summarise paragraph 4 in one point.",
+    "steps": [
+     "Paragraph 4 is about safety.",
+     "Main idea: phones can be stolen and bullying continues.",
+     "Phones create safety risks."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What should a summary include?",
+     "options": [
+      "Only the main points",
+      "Every detail",
+      "Your own opinion",
+      "Quotes copied word for word"
+     ],
+     "answer": 0,
+     "hints": [
+      "Short.",
+      "Main ideas only.",
+      "Main points."
+     ],
+     "explain": "A summary includes only the main points."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best summary of paragraph 3?",
+     "options": [
+      "Phones distract learners and may lower results.",
+      "Teachers say many things.",
+      "Studies in several countries exist.",
+      "Notifications are sounds that phones make."
+     ],
+     "answer": 0,
+     "hints": [
+      "What is the main point?",
+      "Distraction and results.",
+      "The first one."
+     ],
+     "explain": "It captures distraction and lower results."
+    },
+    {
+     "type": "mcq",
+     "q": "Which should you leave out of a summary?",
+     "options": [
+      "Examples like dictionaries and calculators",
+      "The main argument",
+      "The conclusion",
+      "The topic"
+     ],
+     "answer": 0,
+     "hints": [
+      "Summaries are short.",
+      "Details and examples can go.",
+      "Examples."
+     ],
+     "explain": "Specific examples are usually left out."
+    },
+    {
+     "type": "mcq",
+     "q": "Why use your own words?",
+     "options": [
+      "It shows you understood the text",
+      "It makes it longer",
+      "It is easier to copy",
+      "It is not needed"
+     ],
+     "answer": 0,
+     "hints": [
+      "Copying does not show understanding.",
+      "Rewording does.",
+      "It shows understanding."
+     ],
+     "explain": "Rewording shows you understood it."
+    },
+    {
+     "type": "order",
+     "q": "Put the summary steps in order.",
+     "items": [
+      "Read the whole text",
+      "Underline the main points",
+      "Rewrite in your own words",
+      "Check the word count"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start by reading.",
+      "Then find the points.",
+      "Then write and check."
+     ],
+     "explain": "Read, underline, rewrite, check."
+    }
+   ],
+   "reflect": {
+    "q": "What was hardest?",
+    "options": [
+     "Choosing main points",
+     "Using my own words",
+     "Keeping it short",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised writing summaries by choosing main points and using their own words.",
+   "teacher": "Shows selecting main ideas, excluding examples and rewording within a word limit.",
+   "done": "A summary is short, in your own words, with only the main points."
+  },
+  {
+   "id": "g9-concord",
+   "grade": 9,
+   "subject": "English Home Language",
+   "title": "Subject-verb agreement",
+   "topic": "Concord",
+   "domain": "Communication and Expression",
+   "category": "Flexible Thinking",
+   "caps": "CAPS Grade 9 English Home Language: Language Structures and Conventions (concord: subject-verb agreement, including collective nouns and indefinite pronouns)",
+   "intention": "Today I am making sure the verb agrees with its subject.",
+   "prompt": "Which concord rule was new to you?",
+   "lesson": [
+    {
+     "h": "Singular and plural",
+     "say": "A singular subject takes a singular verb. A plural subject takes a plural verb. The dog barks. The dogs bark.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The dog barks.</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The dogs bark.</span></div><p>This is called <b>concord</b>.</p>"
+    },
+    {
+     "h": "Tricky subjects",
+     "say": "Each, everyone, nobody and either are singular. Everyone is here. Each of the learners has a book.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Everyone is</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Each of them has</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Nobody knows</span></div><p>Ignore the words between the subject and the verb: <b>Each</b> of the learners <b>has</b>.</p>"
+    },
+    {
+     "h": "Collective nouns",
+     "say": "A collective noun names a group, like team, class or family. When the group acts as one, use a singular verb. The team is winning.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The team is</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The class has</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">The committee decides</span></div><p>Neither … nor: the verb agrees with the <b>nearer</b> subject.</p>"
+    }
+   ],
+   "example": {
+    "q": "Choose the correct verb: The box of pencils (is / are) on the desk.",
+    "steps": [
+     "What is the subject? The box, not the pencils.",
+     "Box is singular.",
+     "The box of pencils is on the desk."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "The learners … in the hall.",
+     "options": [
+      "are",
+      "is",
+      "was",
+      "has"
+     ],
+     "answer": 0,
+     "hints": [
+      "Learners is plural.",
+      "Use a plural verb.",
+      "Are."
+     ],
+     "explain": "The learners are in the hall."
+    },
+    {
+     "type": "mcq",
+     "q": "Everyone … finished the test.",
+     "options": [
+      "has",
+      "have",
+      "are",
+      "were"
+     ],
+     "answer": 0,
+     "hints": [
+      "Everyone is singular.",
+      "Use a singular verb.",
+      "Has."
+     ],
+     "explain": "Everyone has finished."
+    },
+    {
+     "type": "mcq",
+     "q": "One of my friends … to Durban.",
+     "options": [
+      "is moving",
+      "are moving",
+      "were moving",
+      "have moved"
+     ],
+     "answer": 0,
+     "hints": [
+      "What is the subject: one or friends?",
+      "One is singular.",
+      "Is moving."
+     ],
+     "explain": "One … is moving."
+    },
+    {
+     "type": "mcq",
+     "q": "The choir … practising for the festival.",
+     "options": [
+      "is",
+      "are",
+      "were",
+      "have"
+     ],
+     "answer": 0,
+     "hints": [
+      "Choir is a collective noun acting as one.",
+      "Use singular.",
+      "Is."
+     ],
+     "explain": "The choir is practising."
+    },
+    {
+     "type": "mcq",
+     "q": "Neither the teacher nor the learners … ready.",
+     "options": [
+      "were",
+      "was",
+      "is",
+      "has"
+     ],
+     "answer": 0,
+     "hints": [
+      "Agree with the nearer subject.",
+      "Learners is nearer, and plural.",
+      "Were."
+     ],
+     "explain": "The verb agrees with learners: were."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding the real subject",
+     "The list of singular words",
+     "Saying it aloud",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised making verbs agree with their subjects.",
+   "teacher": "Shows subject-verb concord with intervening phrases, indefinite pronouns, collective nouns and neither/nor.",
+   "done": "Find the real subject, then match the verb to it."
+  },
+  {
+   "id": "g9-cells",
+   "grade": 9,
+   "subject": "Natural Sciences",
+   "title": "Cells, tissues and systems",
+   "topic": "Cells as the basic units of life",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 9 Natural Sciences, Term 1 Life and Living: Cells as the basic units of life (plant and animal cells; cells, tissues, organs and systems)",
+   "intention": "Today I am comparing plant and animal cells, and how cells build body systems.",
+   "prompt": "Why do plant cells need a cell wall?",
+   "lesson": [
+    {
+     "h": "Cells",
+     "say": "All living things are made of cells. Most cells have a cell membrane, cytoplasm and a nucleus. The nucleus controls the cell.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Membrane</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cytoplasm</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Nucleus</span></div><p>A <b>cell</b> is the smallest unit of life.</p>"
+    },
+    {
+     "h": "Plant and animal cells",
+     "say": "Plant cells also have a cell wall for support, chloroplasts for photosynthesis, and a large vacuole. Animal cells do not have these.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Plant only: cell wall</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">chloroplasts</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">large vacuole</span></div><p>That is why plants stand upright and are green.</p>"
+    },
+    {
+     "h": "From cells to systems",
+     "say": "Similar cells form tissues. Tissues form organs. Organs work together in systems. For example, muscle cells make muscle tissue, which forms the heart, part of the circulatory system.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cell</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Tissue</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Organ</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">System</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Organism</span></div><p>Each level is built from the one before.</p>"
+    }
+   ],
+   "example": {
+    "q": "A cell has a cell wall and chloroplasts. Is it a plant or animal cell?",
+    "steps": [
+     "Animal cells do not have cell walls or chloroplasts.",
+     "Plant cells have both.",
+     "It is a plant cell."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which part controls the cell?",
+     "options": [
+      "Nucleus",
+      "Cell wall",
+      "Vacuole",
+      "Cytoplasm"
+     ],
+     "answer": 0,
+     "hints": [
+      "It holds the genetic material.",
+      "Like a control centre.",
+      "Nucleus."
+     ],
+     "explain": "The nucleus controls the cell."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is found in plant cells but NOT animal cells?",
+     "options": [
+      "Cell wall",
+      "Nucleus",
+      "Cell membrane",
+      "Cytoplasm"
+     ],
+     "answer": 0,
+     "hints": [
+      "It gives support.",
+      "Animal cells have a membrane only.",
+      "Cell wall."
+     ],
+     "explain": "Only plant cells have a cell wall."
+    },
+    {
+     "type": "order",
+     "q": "Put the levels in order, smallest first.",
+     "items": [
+      "Cell",
+      "Tissue",
+      "Organ",
+      "System"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "Start with the smallest unit.",
+      "Cells make tissues.",
+      "Organs make systems."
+     ],
+     "explain": "Cell, tissue, organ, system."
+    },
+    {
+     "type": "mcq",
+     "q": "Which organ belongs to the respiratory system?",
+     "options": [
+      "Lungs",
+      "Stomach",
+      "Kidney",
+      "Brain"
+     ],
+     "answer": 0,
+     "hints": [
+      "Respiratory means breathing.",
+      "Where air goes.",
+      "Lungs."
+     ],
+     "explain": "The lungs are part of the respiratory system."
+    },
+    {
+     "type": "mcq",
+     "q": "What do chloroplasts do?",
+     "options": [
+      "Carry out photosynthesis",
+      "Store water",
+      "Control the cell",
+      "Protect the cell"
+     ],
+     "answer": 0,
+     "hints": [
+      "They are green.",
+      "They trap light.",
+      "Photosynthesis."
+     ],
+     "explain": "Chloroplasts carry out photosynthesis."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two cells",
+     "The levels ladder",
+     "Real body examples",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared plant and animal cells and learned how cells build tissues, organs and systems.",
+   "teacher": "Shows identifying cell organelles, comparing plant and animal cells, and the levels of organisation.",
+   "done": "Cells build tissues, organs and systems."
+  },
+  {
+   "id": "g9-acids",
+   "grade": 9,
+   "subject": "Natural Sciences",
+   "title": "Acids, bases and pH",
+   "topic": "Acids and bases",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 9 Natural Sciences, Term 2 Matter and Materials: Reactions of acids with bases (pH scale; indicators; neutralisation)",
+   "intention": "Today I am using the pH scale to classify acids and bases.",
+   "prompt": "Where do you find acids and bases at home?",
+   "lesson": [
+    {
+     "h": "The pH scale",
+     "say": "The pH scale runs from zero to fourteen. Below seven is acidic. Seven is neutral, like pure water. Above seven is basic, also called alkaline.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">0–6 acid</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">7 neutral</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">8–14 base</span></div><p>Lemon juice is about pH 2. Soap is about pH 10.</p>"
+    },
+    {
+     "h": "Indicators",
+     "say": "An indicator changes colour to show whether something is acidic or basic. Litmus paper turns red in acid and blue in a base. Red cabbage juice also works.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Red and blue litmus\">🟥 🟦</p><p><b>Acid</b>: blue litmus turns red. <b>Base</b>: red litmus turns blue.</p>"
+    },
+    {
+     "h": "Neutralisation",
+     "say": "When an acid and a base react, they neutralise each other, making a salt and water. Antacid tablets neutralise extra stomach acid.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">acid + base</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">→</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">salt + water</span></div><p>This is called <b>neutralisation</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A liquid turns blue litmus red. What is it?",
+    "steps": [
+     "Blue litmus turns red in acid.",
+     "So the liquid is acidic.",
+     "Its pH is below 7."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What pH is neutral?",
+     "options": [
+      "7",
+      "0",
+      "14",
+      "1"
+     ],
+     "answer": 0,
+     "hints": [
+      "The middle of the scale.",
+      "Pure water.",
+      "7."
+     ],
+     "explain": "pH 7 is neutral."
+    },
+    {
+     "type": "mcq",
+     "q": "Vinegar has a pH of about 3. What is it?",
+     "options": [
+      "An acid",
+      "A base",
+      "Neutral",
+      "A metal"
+     ],
+     "answer": 0,
+     "hints": [
+      "Below 7.",
+      "Acids are below 7.",
+      "Acid."
+     ],
+     "explain": "pH 3 is acidic."
+    },
+    {
+     "type": "mcq",
+     "q": "What does red litmus do in a base?",
+     "options": [
+      "Turns blue",
+      "Stays red",
+      "Turns green",
+      "Disappears"
+     ],
+     "answer": 0,
+     "hints": [
+      "Bases turn litmus one colour.",
+      "Not red.",
+      "Blue."
+     ],
+     "explain": "Bases turn red litmus blue."
+    },
+    {
+     "type": "mcq",
+     "q": "What do an acid and a base make when they react?",
+     "options": [
+      "A salt and water",
+      "Only gas",
+      "Another acid",
+      "Metal"
+     ],
+     "answer": 0,
+     "hints": [
+      "Neutralisation.",
+      "Two products.",
+      "Salt and water."
+     ],
+     "explain": "Acid + base → salt + water."
+    },
+    {
+     "type": "sort",
+     "q": "Acid or base?",
+     "items": [
+      "Lemon juice",
+      "Soap",
+      "Vinegar",
+      "Bicarbonate of soda"
+     ],
+     "bins": [
+      "Acid",
+      "Base"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Sour things are often acids.",
+      "Soap and bicarb feel slippery or bitter.",
+      "Lemon and vinegar are acidic."
+     ],
+     "explain": "Lemon juice and vinegar are acids. Soap and bicarbonate are bases."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pH scale",
+     "The litmus colours",
+     "Kitchen examples",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned the pH scale, indicators and neutralisation.",
+   "teacher": "Shows classifying substances by pH, interpreting indicator colours and describing neutralisation.",
+   "done": "Acids are below pH 7, bases above. Together they neutralise."
+  },
+  {
+   "id": "g9-rocks",
+   "grade": 9,
+   "subject": "Natural Sciences",
+   "title": "The rock cycle and mining",
+   "topic": "The lithosphere",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 9 Natural Sciences, Term 4 Planet Earth and Beyond: Lithosphere (Earth's layers; the rock cycle; mining and refining minerals; environmental impacts of mining)",
+   "intention": "Today I am learning how rocks form and change, and how mining affects the environment.",
+   "prompt": "How could mining be made less harmful?",
+   "lesson": [
+    {
+     "h": "Three kinds of rock",
+     "say": "Igneous rock forms when hot magma or lava cools, like granite. Sedimentary rock forms when layers of sand and mud are pressed together, like sandstone. Metamorphic rock forms when heat and pressure change rock, like marble.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Igneous: cooled magma</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sedimentary: layers</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Metamorphic: changed</span></div><p>Table Mountain's top is mostly <b>sandstone</b>.</p>"
+    },
+    {
+     "h": "The rock cycle",
+     "say": "Rocks change from one type to another over millions of years. Weathering breaks rock into sediment. Heat and pressure change it. Melting turns it into magma again.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Weathering</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sediment</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Pressure</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Heat</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Melting</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cooling</span></div><p>The <b>rock cycle</b> never stops.</p>"
+    },
+    {
+     "h": "Mining in South Africa",
+     "say": "South Africa mines gold, platinum, coal, iron ore and diamonds. Mining creates jobs, but it can damage land, pollute water and harm workers' health. Mines must rehabilitate land when they close.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Mining\">⛏️ 💎 🏭</p><p>Weigh <b>economic benefits</b> against <b>environmental costs</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Lava from a volcano cools into black rock. What type of rock is it?",
+    "steps": [
+     "It formed from cooling molten rock.",
+     "Cooled magma or lava makes igneous rock.",
+     "It is igneous rock."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which rock forms from layers of sediment pressed together?",
+     "options": [
+      "Sedimentary",
+      "Igneous",
+      "Metamorphic",
+      "Magma"
+     ],
+     "answer": 0,
+     "hints": [
+      "Sediment.",
+      "Layers.",
+      "Sedimentary."
+     ],
+     "explain": "Sedimentary rock forms from compressed layers."
+    },
+    {
+     "type": "mcq",
+     "q": "Marble forms when limestone is changed by heat and pressure. What type is marble?",
+     "options": [
+      "Metamorphic",
+      "Igneous",
+      "Sedimentary",
+      "Lava"
+     ],
+     "answer": 0,
+     "hints": [
+      "Meta means change.",
+      "Heat and pressure change it.",
+      "Metamorphic."
+     ],
+     "explain": "Marble is metamorphic."
+    },
+    {
+     "type": "mcq",
+     "q": "What breaks rocks into small pieces?",
+     "options": [
+      "Weathering",
+      "Melting",
+      "Cooling",
+      "Mining only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Wind, water and ice.",
+      "It happens at the surface.",
+      "Weathering."
+     ],
+     "explain": "Weathering breaks rocks into sediment."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is an environmental impact of mining?",
+     "options": [
+      "Water pollution",
+      "More rainfall",
+      "Cooler weather",
+      "New volcanoes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Mines produce waste.",
+      "Waste can reach rivers.",
+      "Water pollution."
+     ],
+     "explain": "Acid mine drainage can pollute water."
+    },
+    {
+     "type": "mcq",
+     "q": "What does rehabilitating a mine mean?",
+     "options": [
+      "Restoring the land after mining ends",
+      "Digging deeper",
+      "Opening a new shaft",
+      "Selling the minerals"
+     ],
+     "answer": 0,
+     "hints": [
+      "Rehabilitate means restore.",
+      "After the mine closes.",
+      "Restoring the land."
+     ],
+     "explain": "Mines must restore the land when they close."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The three rock types",
+     "The cycle diagram",
+     "South African examples",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned about igneous, sedimentary and metamorphic rocks, the rock cycle and mining's impact.",
+   "teacher": "Shows classifying rock types, describing the rock cycle and evaluating the impacts of mining.",
+   "done": "Rocks change through the rock cycle. Mining has benefits and costs."
+  },
+  {
+   "id": "g9-subjects",
+   "grade": 9,
+   "subject": "Life Orientation",
+   "title": "Choosing Grade 10 subjects",
+   "topic": "World of work: subject choice",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 9 Life Orientation: World of work (subject choice for Grade 10 to 12; career and study pathways; requirements for further study)",
+   "intention": "Today I am learning how to choose subjects for Grade 10 to 12.",
+   "prompt": "Which subjects are you thinking of, and why?",
+   "lesson": [
+    {
+     "h": "What you take",
+     "say": "In Grades 10 to 12 you take seven subjects. Four are compulsory: a home language, a first additional language, Mathematics or Mathematical Literacy, and Life Orientation. You choose the other three.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 languages</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Maths or Maths Lit</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Life Orientation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3 choices</span></div><p>The three choices can be academic, technical or occupational, depending on your school.</p>"
+    },
+    {
+     "h": "Maths or Maths Literacy?",
+     "say": "Many university courses in science, engineering, medicine and commerce require Mathematics, not Mathematical Literacy. Check before you choose.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Engineering: Maths</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Medicine: Maths + Physical Sciences</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Many arts courses: either</span></div><p>This choice <b>opens or closes</b> some doors.</p>"
+    },
+    {
+     "h": "How to decide",
+     "say": "Think about what you enjoy, what you are good at, and what careers you are curious about. Look up entry requirements, and talk to your teachers and family.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Interests</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Strengths</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Career requirements</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Advice</span></div><p>Universities and TVET colleges list <b>admission requirements</b> online.</p>"
+    }
+   ],
+   "example": {
+    "q": "Lerato wants to study engineering. Which subjects should she take?",
+    "steps": [
+     "Engineering usually requires Mathematics.",
+     "It also usually requires Physical Sciences.",
+     "She should take Mathematics and Physical Sciences, and check the university's requirements."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How many subjects do learners take in Grades 10 to 12?",
+     "options": [
+      "7",
+      "5",
+      "9",
+      "4"
+     ],
+     "answer": 0,
+     "hints": [
+      "Two languages, maths, LO and three more.",
+      "2 + 1 + 1 + 3.",
+      "7."
+     ],
+     "explain": "Seven subjects."
+    },
+    {
+     "type": "mcq",
+     "q": "Which subject is compulsory?",
+     "options": [
+      "Life Orientation",
+      "Physical Sciences",
+      "History",
+      "Accounting"
+     ],
+     "answer": 0,
+     "hints": [
+      "Everyone takes it.",
+      "Even in Grades 10 to 12.",
+      "Life Orientation."
+     ],
+     "explain": "Life Orientation is compulsory."
+    },
+    {
+     "type": "mcq",
+     "q": "Someone who wants to become a doctor should usually take …",
+     "options": [
+      "Mathematics and Physical Sciences",
+      "Mathematical Literacy only",
+      "Tourism",
+      "Dramatic Arts only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Medicine is science-based.",
+      "It needs maths and science.",
+      "Mathematics and Physical Sciences."
+     ],
+     "explain": "Medicine usually requires Mathematics and Physical Sciences."
+    },
+    {
+     "type": "mcq",
+     "q": "Where can you find a course's admission requirements?",
+     "options": [
+      "The university or college website",
+      "A random social media post",
+      "Nowhere",
+      "Only from friends"
+     ],
+     "answer": 0,
+     "hints": [
+      "Go to the source.",
+      "Official information.",
+      "Their website."
+     ],
+     "explain": "Check the institution's official website."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the best reason to choose a subject?",
+     "options": [
+      "It fits your interests, strengths and goals",
+      "Your friend takes it",
+      "It sounds easy",
+      "The teacher is funny"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think long term.",
+      "What fits you?",
+      "Interests, strengths and goals."
+     ],
+     "explain": "Choose based on your interests, strengths and goals."
+    }
+   ],
+   "reflect": {
+    "q": "What will you do next?",
+    "options": [
+     "Look up careers I like",
+     "Check requirements",
+     "Talk to my family",
+     "Talk to a teacher"
+    ]
+   },
+   "parent": "Your child learned how Grade 10 to 12 subject choices link to careers and study. A good time to talk together about options.",
+   "teacher": "Shows knowledge of FET subject packages, the Maths or Maths Literacy decision and researching admission requirements.",
+   "done": "Choose subjects that match your interests, strengths and goals, and check the requirements."
+  },
+  {
+   "id": "g9-goals",
+   "grade": 9,
+   "subject": "Life Orientation",
+   "title": "Setting SMART goals",
+   "topic": "Development of the self: goal setting",
+   "domain": "Creativity and Metacognition",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 9 Life Orientation: Development of the self in society (goal-setting skills; personal lifestyle plan; time management)",
+   "intention": "Today I am turning a wish into a SMART goal.",
+   "prompt": "What is one goal you want to set this term?",
+   "lesson": [
+    {
+     "h": "A wish is not a goal",
+     "say": "I want to do better at maths is a wish. A goal is clear and has a plan. SMART goals are Specific, Measurable, Achievable, Relevant and Time-bound.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Specific</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Measurable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Achievable</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Relevant</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Time-bound</span></div><p>SMART turns a wish into a <b>plan</b>.</p>"
+    },
+    {
+     "h": "Making it SMART",
+     "say": "Wish: get better at maths. SMART goal: I will improve my maths mark from 55 to 65 percent by the end of term. I will do 20 minutes of practice every weekday.",
+     "html": "<div class=\"passage-text\"><p>I will improve my maths mark <b>from 55% to 65%</b> by <b>the end of term</b>, by doing <b>20 minutes</b> of practice <b>every weekday</b>.</p></div>"
+    },
+    {
+     "h": "Steps and setbacks",
+     "say": "Break the goal into small steps. Track your progress. If you have a setback, adjust the plan, not the dream.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Small steps</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Track</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Adjust</span></div><p>Setbacks are <b>information</b>, not failure.</p>"
+    }
+   ],
+   "example": {
+    "q": "Make this SMART: I want to get fit.",
+    "steps": [
+     "Specific: run.",
+     "Measurable and time-bound: run 3 kilometres without stopping in 8 weeks.",
+     "Plan: run three times a week, adding a little each week."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What does the M in SMART stand for?",
+     "options": [
+      "Measurable",
+      "Magic",
+      "Maximum",
+      "Monthly"
+     ],
+     "answer": 0,
+     "hints": [
+      "You can count or check it.",
+      "Can you measure progress?",
+      "Measurable."
+     ],
+     "explain": "M is for measurable."
+    },
+    {
+     "type": "mcq",
+     "q": "Which goal is SMART?",
+     "options": [
+      "Read two books by 30 June, 20 pages a day",
+      "Read more",
+      "Be a better reader someday",
+      "Read every book in the library"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which is specific and has a date?",
+      "Which can be measured?",
+      "The first one."
+     ],
+     "explain": "It is specific, measurable and has a deadline."
+    },
+    {
+     "type": "mcq",
+     "q": "Why break a goal into small steps?",
+     "options": [
+      "It makes the goal manageable",
+      "It makes it harder",
+      "It wastes time",
+      "It is not useful"
+     ],
+     "answer": 0,
+     "hints": [
+      "Big goals can feel overwhelming.",
+      "Small steps feel doable.",
+      "Manageable."
+     ],
+     "explain": "Small steps make big goals manageable."
+    },
+    {
+     "type": "mcq",
+     "q": "Score 100% in every test this year, starting tomorrow. Which part of SMART is weak?",
+     "options": [
+      "Achievable",
+      "Specific",
+      "Time-bound",
+      "Measurable"
+     ],
+     "answer": 0,
+     "hints": [
+      "Is it realistic?",
+      "Perfect every time is very hard.",
+      "Achievable."
+     ],
+     "explain": "It may not be achievable."
+    },
+    {
+     "type": "mcq",
+     "q": "You miss your weekly target. What is a helpful response?",
+     "options": [
+      "Adjust the plan and keep going",
+      "Give up",
+      "Blame others",
+      "Hide it"
+     ],
+     "answer": 0,
+     "hints": [
+      "Setbacks happen.",
+      "Learn from it.",
+      "Adjust and continue."
+     ],
+     "explain": "Adjust the plan and keep going."
+    }
+   ],
+   "reflect": {
+    "q": "Which part of SMART is hardest for you?",
+    "options": [
+     "Specific",
+     "Measurable",
+     "Achievable",
+     "Time-bound"
+    ]
+   },
+   "parent": "Your child learned to set SMART goals and plan steps towards them.",
+   "teacher": "Shows applying the SMART framework, breaking goals into steps and responding constructively to setbacks.",
+   "done": "SMART goals are specific, measurable, achievable, relevant and time-bound."
+  },
+  {
+   "id": "g9-community",
+   "grade": 9,
+   "subject": "Life Orientation",
+   "title": "Making a difference in your community",
+   "topic": "Social and environmental responsibility",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 9 Life Orientation: Social and environmental responsibility (community and environmental problems; volunteering; planning a community project)",
+   "intention": "Today I am planning a small project to help my community.",
+   "prompt": "What problem in your community would you like to help solve?",
+   "lesson": [
+    {
+     "h": "Spot a need",
+     "say": "Look around your community. Is there litter, a lack of safe play spaces, learners who need help reading, or a water problem?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Litter, books, water, trees\">🗑️ 📚 💧 🌳</p><p>Start with a problem you <b>care</b> about.</p>"
+    },
+    {
+     "h": "Plan the project",
+     "say": "Decide the goal, who will help, what you need, what it will cost, and when it will happen. Ask permission where needed.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Goal</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Team</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Resources</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Timeline</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Permission</span></div><p>A small, finished project beats a big, unfinished one.</p>"
+    },
+    {
+     "h": "Do it and reflect",
+     "say": "Carry out the project. Afterwards, ask: what worked, what did not, and what changed in the community?",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Act</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Measure</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Reflect</span></div><p>Count the impact: bags collected, children helped, trees planted.</p>"
+    }
+   ],
+   "example": {
+    "q": "Learners notice litter near the school gate. What could a project look like?",
+    "steps": [
+     "Goal: clean the area and keep it clean.",
+     "Plan: a Saturday clean-up with gloves and bags, permission from the principal, and bins from the municipality.",
+     "Reflect: count the bags, take before and after photos, and check a month later."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the first step in a community project?",
+     "options": [
+      "Identify a need",
+      "Buy equipment",
+      "Post on social media",
+      "Finish it"
+     ],
+     "answer": 0,
+     "hints": [
+      "What problem are you solving?",
+      "Start there.",
+      "Identify a need."
+     ],
+     "explain": "Start by identifying a real need."
+    },
+    {
+     "type": "mcq",
+     "q": "Why ask permission before a project?",
+     "options": [
+      "To work safely and with support",
+      "It is never needed",
+      "To slow things down",
+      "To get famous"
+     ],
+     "answer": 0,
+     "hints": [
+      "Some places belong to others.",
+      "Support makes it safer.",
+      "Safely and with support."
+     ],
+     "explain": "Permission keeps the project safe and supported."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a measurable result?",
+     "options": [
+      "35 bags of litter collected",
+      "We felt good",
+      "It was fun",
+      "People noticed"
+     ],
+     "answer": 0,
+     "hints": [
+      "Can you count it?",
+      "A number.",
+      "35 bags."
+     ],
+     "explain": "35 bags is measurable."
+    },
+    {
+     "type": "mcq",
+     "q": "What does volunteering mean?",
+     "options": [
+      "Giving your time to help without being paid",
+      "A paid job",
+      "A school test",
+      "Being forced to work"
+     ],
+     "answer": 0,
+     "hints": [
+      "You choose to help.",
+      "No pay.",
+      "Giving your time freely."
+     ],
+     "explain": "Volunteering is helping by choice, without pay."
+    },
+    {
+     "type": "order",
+     "q": "Put the project steps in order.",
+     "items": [
+      "Identify a need",
+      "Plan and get permission",
+      "Carry it out",
+      "Reflect on the impact"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What comes first?",
+      "Plan before doing.",
+      "Reflect last."
+     ],
+     "explain": "Need, plan, act, reflect."
+    }
+   ],
+   "reflect": {
+    "q": "Which kind of project interests you?",
+    "options": [
+     "Environment",
+     "Helping younger learners",
+     "Helping older people",
+     "Sport and play"
+    ]
+   },
+   "parent": "Your child planned a community project, from spotting a need to measuring the impact.",
+   "teacher": "Shows identifying community needs, planning a project with resources and permissions, and evaluating impact.",
+   "done": "Spot a need, plan carefully, act, and measure your impact."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam9-pythagoras",
+   "grade": 9,
+   "title": "Pythagoras' theorem",
+   "topic": "Geometry: right-angled triangles",
+   "category": "Problem Solving",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 9: Geometry and measure (Pythagoras' theorem in two dimensions)",
+   "intention": "Today I am using Pythagoras' theorem to find missing sides.",
+   "prompt": "How long is the diagonal of a soccer field?",
+   "lesson": [
+    {
+     "h": "The theorem",
+     "say": "In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides. The hypotenuse is the longest side, opposite the right angle.",
+     "html": "<p>a² + b² = <b>c²</b></p>"
+    },
+    {
+     "h": "Finding the hypotenuse",
+     "say": "If the two shorter sides are 3 and 4, then c squared is 9 plus 16, which is 25. So c is 5.",
+     "html": "<p>3² + 4² = 25 → c = <b>5</b></p>"
+    },
+    {
+     "h": "Finding a shorter side",
+     "say": "To find a shorter side, subtract. If c is 13 and a is 5, then b squared is 169 minus 25, which is 144, so b is 12.",
+     "html": "<p>13² − 5² = 144 → b = <b>12</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A ladder 10 m long leans against a wall with its foot 6 m from the wall. How high up the wall does it reach?",
+    "steps": [
+     "The ladder is the hypotenuse: 10 m.",
+     "h² = 10² − 6² = 100 − 36 = 64.",
+     "h = 8 m."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "The two shorter sides are 6 and 8. Find the hypotenuse.",
+     "answer": "10",
+     "options": [
+      "10",
+      "14",
+      "100",
+      "48"
+     ],
+     "hints": [
+      "36 + 64.",
+      "= 100.",
+      "√100."
+     ],
+     "explain": "√100 = 10."
+    },
+    {
+     "type": "num",
+     "q": "The hypotenuse is 13 and one side is 12. Find the other side.",
+     "answer": "5",
+     "options": [
+      "5",
+      "25",
+      "1",
+      "17.7"
+     ],
+     "hints": [
+      "Subtract the squares.",
+      "169 − 144 = 25.",
+      "√25."
+     ],
+     "explain": "√25 = 5."
+    },
+    {
+     "type": "mcq",
+     "q": "Which side is the hypotenuse?",
+     "options": [
+      "The longest side, opposite the right angle",
+      "The shortest side",
+      "Any side",
+      "The bottom side"
+     ],
+     "answer": 0,
+     "hints": [
+      "Find the right angle.",
+      "Look across from it.",
+      "Longest."
+     ],
+     "explain": "It is opposite the right angle and is the longest side."
+    },
+    {
+     "type": "mcq",
+     "q": "Do the sides 5, 12 and 13 make a right-angled triangle?",
+     "options": [
+      "Yes, because 25 + 144 = 169",
+      "No",
+      "Only if it is drawn",
+      "You can't tell"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check a² + b² = c².",
+      "25 + 144.",
+      "169 = 13²."
+     ],
+     "explain": "25 + 144 = 169 = 13², so yes."
+    },
+    {
+     "type": "num",
+     "q": "A rectangle is 9 cm by 12 cm. How long is its diagonal, in cm?",
+     "answer": "15",
+     "options": [
+      "15",
+      "21",
+      "225",
+      "10.5"
+     ],
+     "hints": [
+      "The diagonal is the hypotenuse.",
+      "81 + 144 = 225.",
+      "√225."
+     ],
+     "explain": "√225 = 15 cm."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Spotting the hypotenuse",
+     "Adding or subtracting squares",
+     "Drawing the triangle",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used Pythagoras' theorem to find missing sides.",
+   "teacher": "Shows applying Pythagoras' theorem to find the hypotenuse and shorter sides, and testing for right angles.",
+   "done": "a² + b² = c²: add to find the hypotenuse, subtract to find a shorter side."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "cam9-expected-frequency",
+   "grade": 9,
+   "title": "Probability and expected frequency",
+   "topic": "Statistics and probability",
+   "category": "Inquiry and Exploration",
+   "caps": "Cambridge Lower Secondary Mathematics (0862), Stage 9: Statistics and probability (relative frequency; expected frequency; comparing with theoretical probability)",
+   "intention": "Today I am predicting how often an event should happen.",
+   "prompt": "If you toss a coin 100 times, will you get exactly 50 heads?",
+   "lesson": [
+    {
+     "h": "Expected frequency",
+     "say": "Expected frequency is the probability times the number of trials. Rolling a dice 60 times, you expect a 6 about 1 sixth of 60, which is 10 times.",
+     "html": "<p>Expected frequency = P(event) × number of trials</p>"
+    },
+    {
+     "h": "Relative frequency",
+     "say": "Relative frequency is how often something actually happened, divided by the number of trials. If you got 12 sixes in 60 rolls, the relative frequency is 12 over 60, or 0.2.",
+     "html": "<p>Relative frequency = times it happened ÷ trials</p>"
+    },
+    {
+     "h": "Is it fair?",
+     "say": "With many trials, relative frequency should be close to the theoretical probability. A big difference after many trials may suggest the dice is biased.",
+     "html": "<p>More trials → more <b>reliable</b> estimate</p>"
+    }
+   ],
+   "example": {
+    "q": "A spinner has P(red) = 0.25. It is spun 200 times. How many reds do you expect?",
+    "steps": [
+     "Expected = P × trials.",
+     "0.25 × 200.",
+     "= 50 reds."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A coin is tossed 80 times. How many heads do you expect?",
+     "answer": "40",
+     "options": [
+      "40",
+      "80",
+      "20",
+      "50"
+     ],
+     "hints": [
+      "P(heads) = 0.5.",
+      "0.5 × 80.",
+      "40."
+     ],
+     "explain": "0.5 × 80 = 40."
+    },
+    {
+     "type": "num",
+     "q": "A dice is rolled 120 times. How many 3s do you expect?",
+     "answer": "20",
+     "options": [
+      "20",
+      "40",
+      "3",
+      "60"
+     ],
+     "hints": [
+      "P(3) = 1/6.",
+      "120 ÷ 6.",
+      "20."
+     ],
+     "explain": "1/6 × 120 = 20."
+    },
+    {
+     "type": "num",
+     "q": "A drawing pin lands point-up 30 times in 50 throws. What is the relative frequency of point-up?",
+     "answer": "0.6",
+     "options": [
+      "0.6",
+      "30",
+      "0.3",
+      "1.6"
+     ],
+     "hints": [
+      "Times ÷ trials.",
+      "30 ÷ 50.",
+      "0.6."
+     ],
+     "explain": "30 ÷ 50 = 0.6."
+    },
+    {
+     "type": "mcq",
+     "q": "A dice lands on 6 in 300 of 600 rolls. What might this suggest?",
+     "options": [
+      "The dice may be biased",
+      "The dice is fair",
+      "Nothing at all",
+      "Sixes are impossible"
+     ],
+     "answer": 0,
+     "hints": [
+      "Expected about 100.",
+      "300 is far more.",
+      "Possibly biased."
+     ],
+     "explain": "300 is far more than the expected 100, so it may be biased."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is a relative frequency from 1 000 trials more reliable than from 10?",
+     "options": [
+      "More trials give a better estimate of the true probability",
+      "Bigger numbers are always right",
+      "10 trials are illegal",
+      "It isn't more reliable"
+     ],
+     "answer": 0,
+     "hints": [
+      "Small samples vary a lot.",
+      "Large samples settle down.",
+      "Better estimate."
+     ],
+     "explain": "With more trials, results get closer to the true probability."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "P × trials",
+     "Times ÷ trials",
+     "Comparing with theory",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child predicted results using probability and compared them with experiments.",
+   "teacher": "Shows calculating expected and relative frequency and interpreting differences from theoretical probability.",
+   "done": "Expected = P × trials. Relative frequency = times ÷ trials."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam9-eng-structure",
+   "grade": 9,
+   "title": "How texts are structured",
+   "topic": "Reading: structure",
+   "category": "Planning and Organisation",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 9: Reading (how writers structure non-fiction texts for effect)",
+   "intention": "Today I am analysing how a writer structures a text.",
+   "prompt": "Why do news reports put the most important facts first?",
+   "passage": "<div class=\"passage-text\"><p><b>Should our town ban plastic bags?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Plastic bags are cheap, light and useful, which is exactly the problem: we use them for minutes and throw them away. In our town, volunteers removed more than 3 000 bags from the river last year.</p>\n<p>However, a ban is not simple. Some small shop owners say paper bags cost them five times as much, and some families reuse plastic bags as bin liners.</p>\n<p>A charge for each bag may be a fairer first step. Where shops have charged for bags, many shoppers have switched to bags they can reuse.</p></div>",
+   "lesson": [
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Should our town ban plastic bags?</b> <span class=\"muted\">(a 2to.iQ article)</span></p>\n<p>Plastic bags are cheap, light and useful, which is exactly the problem: we use them for minutes and throw them away. In our town, volunteers removed more than 3 000 bags from the river last year.</p>\n<p>However, a ban is not simple. Some small shop owners say paper bags cost them five times as much, and some families reuse plastic bags as bin liners.</p>\n<p>A charge for each bag may be a fairer first step. Where shops have charged for bags, many shoppers have switched to bags they can reuse.</p></div>"
+    },
+    {
+     "h": "Structure is a choice",
+     "say": "Writers decide what goes first, in the middle and last. This article opens with the problem, then gives the other side, and ends with a solution.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Problem</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Complication</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Solution</span></div>"
+    },
+    {
+     "h": "Openings and endings",
+     "say": "The opening hooks the reader with a surprising idea: plastic bags are useful, and that is exactly the problem. The ending leaves the reader with a possible way forward.",
+     "html": "<p>Opening: <b>hook</b>. Ending: <b>resolution</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Why does the writer put the river statistic in the first paragraph?",
+    "steps": [
+     "It gives evidence of the problem early.",
+     "A concrete number makes the problem real.",
+     "It hooks the reader before the complications."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How does the article begin?",
+     "options": [
+      "With a surprising statement about why bags are a problem",
+      "With the solution",
+      "With a story about a shop",
+      "With a question"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the first sentence.",
+      "'Which is exactly the problem.'",
+      "A surprising statement."
+     ],
+     "explain": "It opens by turning the bags' usefulness into the problem."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the purpose of the second paragraph?",
+     "options": [
+      "To present complications with a ban",
+      "To repeat the first paragraph",
+      "To end the article",
+      "To tell a joke"
+     ],
+     "answer": 0,
+     "hints": [
+      "It starts with 'However'.",
+      "The other side.",
+      "Complications."
+     ],
+     "explain": "It shows why a ban is not simple."
+    },
+    {
+     "type": "mcq",
+     "q": "Why does the writer end with a possible solution?",
+     "options": [
+      "To leave the reader with a way forward",
+      "Because they ran out of words",
+      "To confuse the reader",
+      "To start a new topic"
+     ],
+     "answer": 0,
+     "hints": [
+      "After problem and complication…",
+      "…comes a resolution.",
+      "A way forward."
+     ],
+     "explain": "It resolves the tension the article built up."
+    },
+    {
+     "type": "mcq",
+     "q": "Which structure does the article follow?",
+     "options": [
+      "Problem, complication, solution",
+      "Solution, problem, question",
+      "Story, list, poem",
+      "Question, answer, question"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at each paragraph's job.",
+      "Problem first.",
+      "Then complication, then solution."
+     ],
+     "explain": "Problem → complication → solution."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best comment on structure?",
+     "options": [
+      "By moving from problem to complication to solution, the writer guides the reader towards the bag charge.",
+      "The article has three paragraphs.",
+      "The article is about bags.",
+      "It is well written."
+     ],
+     "answer": 0,
+     "hints": [
+      "Explain the effect.",
+      "On the reader.",
+      "The first."
+     ],
+     "explain": "It explains how the structure guides the reader."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding each paragraph's job",
+     "Looking at the opening and ending",
+     "Explaining the effect",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how the structure of an article guides the reader.",
+   "teacher": "Shows analysing the function of paragraphs and the effect of structural choices in non-fiction.",
+   "done": "Ask what each part does, and how the order guides the reader."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "cam9-eng-speech",
+   "grade": 9,
+   "title": "Writing a speech",
+   "topic": "Writing and speaking: persuasion",
+   "category": "Communication",
+   "caps": "Cambridge Lower Secondary English (1111), Stage 9: Writing and speaking (writing and delivering a persuasive speech for an audience)",
+   "intention": "Today I am writing a speech that persuades an audience.",
+   "prompt": "What makes a speaker worth listening to?",
+   "lesson": [
+    {
+     "h": "Speeches are heard",
+     "say": "A speech is written to be heard. So use short sentences. Speak directly to the audience with you and we. Use clear signpost words like firstly and finally.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Short sentences</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">You and we</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Signposts</span></div>"
+    },
+    {
+     "h": "Rhetorical devices",
+     "say": "Speakers use the rule of three, rhetorical questions and repetition to make ideas memorable. For example: we can recycle, we can reuse, we can refuse.",
+     "html": "<p><b>We can</b> recycle. <b>We can</b> reuse. <b>We can</b> refuse.</p>"
+    },
+    {
+     "h": "A strong ending",
+     "say": "End with a call to action that tells the audience exactly what to do next.",
+     "html": "<p>'Bring one reusable bag tomorrow. That's all it takes to start.'</p>"
+    }
+   ],
+   "example": {
+    "q": "Write an opening line for a speech about saving water.",
+    "steps": [
+     "Hook the audience directly.",
+     "Use a question or a striking fact.",
+     "'What would you do if you turned on the tap tomorrow and nothing came out?'"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Why do speeches use 'you' and 'we'?",
+     "options": [
+      "To involve the audience directly",
+      "To make them longer",
+      "Because it is formal",
+      "To avoid facts"
+     ],
+     "answer": 0,
+     "hints": [
+      "Speeches talk to people.",
+      "Direct address.",
+      "Involves them."
+     ],
+     "explain": "Direct address makes the audience feel involved."
+    },
+    {
+     "type": "mcq",
+     "q": "'We can recycle, we can reuse, we can refuse' uses…",
+     "options": [
+      "the rule of three and repetition",
+      "a statistic",
+      "a simile",
+      "a counter-argument"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count the ideas.",
+      "Notice what repeats.",
+      "Three, repeated."
+     ],
+     "explain": "Three parallel ideas with a repeated phrase."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a rhetorical question?",
+     "options": [
+      "'Do we really want our children to inherit a dirty river?'",
+      "'What time is it?'",
+      "'The river is dirty.'",
+      "'Recycle now.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "It doesn't expect an answer.",
+      "It makes a point.",
+      "The first."
+     ],
+     "explain": "It makes a point rather than asking for information."
+    },
+    {
+     "type": "mcq",
+     "q": "Which ending is a clear call to action?",
+     "options": [
+      "'Bring one reusable bag tomorrow.'",
+      "'Thank you.'",
+      "'That's my speech.'",
+      "'Bags exist.'"
+     ],
+     "answer": 0,
+     "hints": [
+      "What should the audience do?",
+      "Something specific.",
+      "Bring a bag."
+     ],
+     "explain": "It tells the audience exactly what to do."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are short sentences useful in a speech?",
+     "options": [
+      "They are easier for listeners to follow",
+      "They are required by law",
+      "They hide the meaning",
+      "They make the speech longer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Listeners can't re-read.",
+      "Keep it clear.",
+      "Easy to follow."
+     ],
+     "explain": "Listeners follow short sentences more easily."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Writing for the ear",
+     "Rule of three",
+     "The call to action",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised writing a persuasive speech.",
+   "teacher": "Shows adapting writing for spoken delivery, using rhetorical devices and crafting a call to action.",
+   "done": "Write for the ear: short, direct, memorable, with a clear call to action."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam9-sci-reactivity",
+   "grade": 9,
+   "title": "The reactivity of metals",
+   "topic": "Chemistry: metals",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 9: Chemistry (the reactivity series; displacement reactions)",
+   "intention": "Today I am ordering metals by how reactive they are.",
+   "prompt": "Why do iron gates rust but gold rings don't?",
+   "lesson": [
+    {
+     "h": "The reactivity series",
+     "say": "Metals can be put in order of how readily they react. Potassium and sodium are very reactive. Gold and silver hardly react at all.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Potassium</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sodium</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Magnesium</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Zinc</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Iron</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Copper</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Gold</span></div><p>Most reactive → least reactive</p>"
+    },
+    {
+     "h": "Reactions with acid and water",
+     "say": "More reactive metals react faster with acids and water, giving off hydrogen gas. Magnesium fizzes quickly in acid; copper doesn't react with dilute acid.",
+     "html": "<p>metal + acid → salt + <b>hydrogen</b></p>"
+    },
+    {
+     "h": "Displacement",
+     "say": "A more reactive metal displaces a less reactive metal from a solution of its compound. Iron placed in copper sulfate becomes coated in copper.",
+     "html": "<p>iron + copper sulfate → iron sulfate + <b>copper</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Will zinc displace copper from copper sulfate solution?",
+    "steps": [
+     "Zinc is above copper in the reactivity series.",
+     "A more reactive metal displaces a less reactive one.",
+     "Yes: zinc sulfate and copper are formed."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which metal is most reactive?",
+     "options": [
+      "Potassium",
+      "Iron",
+      "Copper",
+      "Gold"
+     ],
+     "answer": 0,
+     "hints": [
+      "The top of the series.",
+      "It reacts violently with water.",
+      "Potassium."
+     ],
+     "explain": "Potassium is at the top of the series."
+    },
+    {
+     "type": "mcq",
+     "q": "What gas is given off when magnesium reacts with acid?",
+     "options": [
+      "Hydrogen",
+      "Oxygen",
+      "Carbon dioxide",
+      "Nitrogen"
+     ],
+     "answer": 0,
+     "hints": [
+      "Metal + acid → salt + …",
+      "It makes a squeaky pop.",
+      "Hydrogen."
+     ],
+     "explain": "Metals and acids produce hydrogen."
+    },
+    {
+     "type": "mcq",
+     "q": "Will copper displace iron from iron sulfate?",
+     "options": [
+      "No, copper is less reactive than iron",
+      "Yes",
+      "Only when hot",
+      "Only in water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Compare their positions.",
+      "Copper is below iron.",
+      "No."
+     ],
+     "explain": "A less reactive metal can't displace a more reactive one."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is gold used for jewellery?",
+     "options": [
+      "It is very unreactive, so it doesn't tarnish",
+      "It is very reactive",
+      "It is cheap",
+      "It fizzes in water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Gold rings stay shiny.",
+      "It hardly reacts.",
+      "Unreactive."
+     ],
+     "explain": "Gold's low reactivity keeps it shiny."
+    },
+    {
+     "type": "mcq",
+     "q": "Iron is placed in copper sulfate solution. What do you see?",
+     "options": [
+      "Copper forms on the iron",
+      "Nothing happens",
+      "The iron turns to gold",
+      "The solution freezes"
+     ],
+     "answer": 0,
+     "hints": [
+      "Iron is more reactive.",
+      "It displaces copper.",
+      "Copper appears."
+     ],
+     "explain": "Iron displaces copper, which coats the iron."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Learning the series",
+     "Comparing positions",
+     "Predicting displacement",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child ordered metals by reactivity and predicted reactions.",
+   "teacher": "Shows using the reactivity series to predict reactions with acids and displacement reactions.",
+   "done": "Higher in the series means more reactive, and it can displace metals below it."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "cam9-sci-carbon-cycle",
+   "grade": 9,
+   "title": "The carbon cycle and climate",
+   "topic": "Earth and space: climate",
+   "caps": "Cambridge Lower Secondary Science (0893), Stage 9: Earth and space (the carbon cycle; the greenhouse effect; human impact on climate)",
+   "intention": "Today I am tracing carbon through the carbon cycle.",
+   "prompt": "Where does the carbon in a burning log go?",
+   "lesson": [
+    {
+     "h": "Carbon moves around",
+     "say": "Carbon moves between the air, living things, the oceans and rocks. Plants take in carbon dioxide for photosynthesis. Respiration, decay and burning release it.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Photosynthesis: takes CO₂ in</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Respiration, decay, burning: give CO₂ out</span></div>"
+    },
+    {
+     "h": "The greenhouse effect",
+     "say": "Carbon dioxide and some other gases trap heat in the atmosphere, keeping Earth warm enough for life. More of these gases trap more heat.",
+     "html": "<p>More greenhouse gases → more heat <b>trapped</b></p>"
+    },
+    {
+     "h": "Human impact",
+     "say": "Burning fossil fuels and cutting down forests add carbon dioxide to the air faster than it is removed. This is causing global temperatures to rise.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Burning fossil fuels</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Deforestation</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">More CO₂</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Warming</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Explain how cutting down forests increases carbon dioxide in the air.",
+    "steps": [
+     "Trees remove carbon dioxide by photosynthesis.",
+     "Fewer trees means less carbon dioxide is removed.",
+     "If the trees are burnt, their stored carbon is released too."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which process removes carbon dioxide from the air?",
+     "options": [
+      "Photosynthesis",
+      "Respiration",
+      "Burning",
+      "Decay"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plants do it.",
+      "They use CO₂ to make glucose.",
+      "Photosynthesis."
+     ],
+     "explain": "Photosynthesis takes carbon dioxide in."
+    },
+    {
+     "type": "mcq",
+     "q": "Which process releases carbon dioxide?",
+     "options": [
+      "Burning fuels",
+      "Photosynthesis",
+      "Dissolving in rain only",
+      "Freezing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Combustion.",
+      "Fossil fuels.",
+      "Burning."
+     ],
+     "explain": "Burning releases carbon dioxide."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the greenhouse effect do?",
+     "options": [
+      "Traps heat in the atmosphere",
+      "Cools the Earth down",
+      "Removes all CO₂",
+      "Makes plants grow faster only"
+     ],
+     "answer": 0,
+     "hints": [
+      "Like a blanket.",
+      "Heat stays in.",
+      "Traps heat."
+     ],
+     "explain": "Greenhouse gases trap heat."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is the greenhouse effect needed for life?",
+     "options": [
+      "Without it, Earth would be too cold",
+      "It makes oxygen",
+      "It stops rain",
+      "It isn't needed"
+     ],
+     "answer": 0,
+     "hints": [
+      "Earth needs some warmth.",
+      "Without any trapped heat…",
+      "…too cold."
+     ],
+     "explain": "Some trapped heat keeps Earth warm enough for life."
+    },
+    {
+     "type": "mcq",
+     "q": "Which action would reduce carbon dioxide in the air?",
+     "options": [
+      "Planting trees",
+      "Burning more coal",
+      "Cutting down forests",
+      "Driving more"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which removes CO₂?",
+      "Photosynthesis.",
+      "Plant trees."
+     ],
+     "explain": "More trees remove more carbon dioxide."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following carbon around the cycle",
+     "In and out processes",
+     "Linking to climate",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child traced carbon through the carbon cycle and linked it to climate change.",
+   "teacher": "Shows describing processes in the carbon cycle, explaining the greenhouse effect and evaluating human impact.",
+   "done": "Photosynthesis takes carbon dioxide in; respiration, decay and burning release it."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ib9-linear-models",
+   "grade": 9,
+   "title": "Linear models",
+   "topic": "Algebra: modelling",
+   "category": "Problem Solving",
+   "caps": "IB MYP Mathematics, year 4: Algebra (linear functions as models). Key concept: Relationships. Global context: Globalization and sustainability.",
+   "intention": "Today I am using straight-line equations to model real situations.",
+   "prompt": "How could you predict next month's water bill?",
+   "lesson": [
+    {
+     "h": "Statement of inquiry",
+     "say": "Statement of inquiry: Modelling relationships between quantities helps us make sustainable choices. Key concept: Relationships. Global context: Globalization and sustainability.",
+     "html": "<p><b>Statement of inquiry:</b> Modelling relationships between quantities helps us make sustainable choices.</p><p>Key concept: <b>Relationships</b> · Global context: <b>Globalization and sustainability</b></p>"
+    },
+    {
+     "h": "A linear model",
+     "say": "Many costs have a fixed part and a part that grows at a steady rate. A water bill of 50 dollars a month plus 2 dollars per kilolitre is C equals 2k plus 50.",
+     "html": "<p>C = 2k + 50: <b>2</b> is the rate, <b>50</b> is the fixed cost</p>"
+    },
+    {
+     "h": "Questioning the model",
+     "say": "Use the model to predict, then ask whether it is realistic. Many cities charge more per kilolitre for heavy users, so a straight line may stop fitting.",
+     "html": "<p>Every model has <b>limits</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Using C = 2k + 50, what do 15 kilolitres cost?",
+    "steps": [
+     "Substitute k = 15: C = 2(15) + 50.",
+     "= 30 + 50.",
+     "= $80."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "Using C = 2k + 50, find the cost of 10 kL, in dollars.",
+     "answer": "70",
+     "options": [
+      "70",
+      "52",
+      "120",
+      "20"
+     ],
+     "hints": [
+      "Substitute k = 10.",
+      "2 × 10 + 50.",
+      "20 + 50."
+     ],
+     "explain": "2 × 10 + 50 = $70."
+    },
+    {
+     "type": "mcq",
+     "q": "In C = 2k + 50, what does 50 represent?",
+     "options": [
+      "The fixed monthly cost",
+      "The cost per kilolitre",
+      "The number of kilolitres",
+      "The total bill"
+     ],
+     "answer": 0,
+     "hints": [
+      "It doesn't depend on k.",
+      "You pay it even with no water.",
+      "Fixed cost."
+     ],
+     "explain": "50 is paid whatever you use: the fixed cost."
+    },
+    {
+     "type": "num",
+     "q": "A taxi charges $3 plus $1.50 per km. What does a 6 km trip cost, in dollars?",
+     "answer": "12",
+     "options": [
+      "12",
+      "9",
+      "4.50",
+      "18"
+     ],
+     "hints": [
+      "1.50 × 6 = 9.",
+      "Add the fixed $3.",
+      "9 + 3."
+     ],
+     "explain": "1.50 × 6 + 3 = $12."
+    },
+    {
+     "type": "mcq",
+     "q": "A gym charges $20 to join and $15 per month. Which equation models the cost for m months?",
+     "options": [
+      "C = 15m + 20",
+      "C = 20m + 15",
+      "C = 35m",
+      "C = 15 + 20"
+     ],
+     "answer": 0,
+     "hints": [
+      "The rate is per month.",
+      "The joining fee is fixed.",
+      "15m + 20."
+     ],
+     "explain": "Rate $15 per month, fixed $20: C = 15m + 20."
+    },
+    {
+     "type": "mcq",
+     "q": "A city charges more per kilolitre above 20 kL. What does this mean for the straight-line model?",
+     "options": [
+      "It stops fitting above 20 kL",
+      "It still fits perfectly",
+      "The fixed cost disappears",
+      "Water becomes free"
+     ],
+     "answer": 0,
+     "hints": [
+      "The rate changes.",
+      "A straight line has one rate.",
+      "It stops fitting."
+     ],
+     "explain": "The rate changes above 20 kL, so one straight line no longer fits."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Finding the rate and the fixed part",
+     "Substituting values",
+     "Questioning the model",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child used straight-line equations to model costs, and judged where a model stops working.",
+   "teacher": "Criterion D (applying mathematics in real-life contexts): constructs and uses linear models, interprets parameters and evaluates a model's limits.",
+   "done": "Rate × amount + fixed cost. Then ask: is the model realistic?"
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "ib9-similarity",
+   "grade": 9,
+   "title": "Similar shapes and scale",
+   "topic": "Geometry: similarity",
+   "category": "Pattern Thinking",
+   "caps": "IB MYP Mathematics, year 4: Geometry (similarity and scale factors). Key concept: Form. Global context: Personal and cultural expression.",
+   "intention": "Today I am using scale factors with similar shapes and models.",
+   "prompt": "How do architects show a building before it is built?",
+   "lesson": [
+    {
+     "h": "Statement of inquiry",
+     "say": "Statement of inquiry: The form of an object can be scaled while keeping its proportions. This lets artists and architects plan their work. Key concept: Form. Global context: Personal and cultural expression.",
+     "html": "<p><b>Statement of inquiry:</b> The form of an object can be scaled while keeping its proportions. This lets artists and architects plan their work.</p><p>Key concept: <b>Form</b> · Global context: <b>Personal and cultural expression</b></p>"
+    },
+    {
+     "h": "Similar shapes",
+     "say": "Two shapes are similar if one is an enlargement of the other. The angles are the same. Every length is multiplied by the same scale factor.",
+     "html": "<p>Scale factor = new length ÷ original length</p>"
+    },
+    {
+     "h": "Scale models",
+     "say": "Architects build scale models. In a 1 to 50 model, every real length is 50 times the model length.",
+     "html": "<p>Model 1 : 50 → 4 cm on the model = 200 cm = <b>2 m</b> real</p>"
+    }
+   ],
+   "example": {
+    "q": "A photo 10 cm wide is enlarged to 25 cm wide. It was 8 cm high. Find the new height.",
+    "steps": [
+     "Scale factor = 25 ÷ 10 = 2.5.",
+     "New height = 8 × 2.5.",
+     "= 20 cm."
+    ]
+   },
+   "questions": [
+    {
+     "type": "num",
+     "q": "A rectangle 4 cm by 6 cm is enlarged by scale factor 3. How long is the 6 cm side now, in cm?",
+     "answer": "18",
+     "options": [
+      "18",
+      "9",
+      "12",
+      "24"
+     ],
+     "hints": [
+      "Multiply by the scale factor.",
+      "6 × 3.",
+      "18."
+     ],
+     "explain": "6 × 3 = 18 cm."
+    },
+    {
+     "type": "num",
+     "q": "A 5 cm side becomes 15 cm. What is the scale factor?",
+     "answer": "3",
+     "options": [
+      "3",
+      "10",
+      "1/3",
+      "75"
+     ],
+     "hints": [
+      "New ÷ original.",
+      "15 ÷ 5.",
+      "3."
+     ],
+     "explain": "15 ÷ 5 = 3."
+    },
+    {
+     "type": "mcq",
+     "q": "Two triangles are similar. Which must be true?",
+     "options": [
+      "Their angles are equal",
+      "Their sides are equal",
+      "Their areas are equal",
+      "They are both right-angled"
+     ],
+     "answer": 0,
+     "hints": [
+      "Similar means the same shape.",
+      "Sizes can differ.",
+      "Angles stay the same."
+     ],
+     "explain": "Similar shapes have equal angles; lengths are in proportion."
+    },
+    {
+     "type": "num",
+     "q": "A model is 1 : 50. A wall is 6 cm long on the model. How long is it really, in metres?",
+     "answer": "3",
+     "options": [
+      "3",
+      "300",
+      "0.12",
+      "30"
+     ],
+     "hints": [
+      "6 × 50 = 300 cm.",
+      "100 cm = 1 m.",
+      "300 ÷ 100."
+     ],
+     "explain": "300 cm = 3 m."
+    },
+    {
+     "type": "mcq",
+     "q": "A sculpture is enlarged by scale factor 2. What happens to its angles?",
+     "options": [
+      "They stay the same",
+      "They double",
+      "They halve",
+      "They become right angles"
+     ],
+     "answer": 0,
+     "hints": [
+      "Enlarging changes size, not shape.",
+      "Angles describe shape.",
+      "They stay the same."
+     ],
+     "explain": "Angles don't change in an enlargement."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "New ÷ original",
+     "Thinking about real models",
+     "Remembering angles stay the same",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child worked with similar shapes, scale factors and scale models.",
+   "teacher": "Criterion A (knowing and understanding): identifies similar figures and applies scale factors to lengths and models.",
+   "done": "Similar: the same angles, and lengths × the same scale factor."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language and Literature",
+   "domain": "Communication and Expression",
+   "id": "ib9-ll-perspective",
+   "grade": 9,
+   "title": "Point of view",
+   "topic": "Analysing narrative",
+   "category": "Flexible Thinking",
+   "caps": "IB MYP Language and Literature, year 4: Criterion A, Analysing (narrative point of view and its effect). Key concept: Perspective. Global context: Identities and relationships.",
+   "intention": "Today I am analysing how point of view changes a story.",
+   "prompt": "How would your day sound told by someone else?",
+   "passage": "<div class=\"passage-text\"><p><b>Version 1</b></p>\n<p>I hate Saturdays at the stall. Ma says smile, so I smile, but my feet ache and every customer wants change for a R200 note. When Thabo from school walks past, I duck behind the tomatoes.</p>\n<p><b>Version 2</b></p>\n<p>Every Saturday, Naledi helped her mother at the vegetable stall. She smiled at the customers and counted their change carefully. When a boy from her class walked past, she suddenly became very interested in the tomatoes.</p></div>",
+   "lesson": [
+    {
+     "h": "Statement of inquiry",
+     "say": "Statement of inquiry: The perspective a writer chooses shapes how readers understand a character's identity. Key concept: Perspective. Global context: Identities and relationships.",
+     "html": "<p><b>Statement of inquiry:</b> The perspective a writer chooses shapes how readers understand a character's identity.</p><p>Key concept: <b>Perspective</b> · Global context: <b>Identities and relationships</b></p>"
+    },
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>Version 1</b></p>\n<p>I hate Saturdays at the stall. Ma says smile, so I smile, but my feet ache and every customer wants change for a R200 note. When Thabo from school walks past, I duck behind the tomatoes.</p>\n<p><b>Version 2</b></p>\n<p>Every Saturday, Naledi helped her mother at the vegetable stall. She smiled at the customers and counted their change carefully. When a boy from her class walked past, she suddenly became very interested in the tomatoes.</p></div>"
+    },
+    {
+     "h": "First and third person",
+     "say": "Version 1 is in the first person: the narrator says I, and we hear her private thoughts. Version 2 is in the third person: the narrator says she, and we watch from outside.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">First person: I, my</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Third person: she, he, they</span></div>"
+    },
+    {
+     "h": "The effect of the choice",
+     "say": "First person feels close and honest: we know she hates Saturdays. Third person gives distance: we have to infer her feelings from what she does, such as hiding behind the tomatoes.",
+     "html": "<p>Ask: <b>what do we know, and how do we know it?</b></p>"
+    }
+   ],
+   "example": {
+    "q": "What does 'she suddenly became very interested in the tomatoes' suggest?",
+    "steps": [
+     "She is not really interested in tomatoes.",
+     "She is avoiding the boy from her class.",
+     "The narrator hints at her embarrassment with gentle humour."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which version is written in the first person?",
+     "options": [
+      "Version 1",
+      "Version 2",
+      "Both",
+      "Neither"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look for 'I'.",
+      "'I hate Saturdays…'",
+      "Version 1."
+     ],
+     "explain": "Version 1 uses 'I'."
+    },
+    {
+     "type": "mcq",
+     "q": "What do we learn directly in Version 1 that we must infer in Version 2?",
+     "options": [
+      "That she dislikes working at the stall",
+      "That she works on Saturdays",
+      "That a boy walks past",
+      "That she sells vegetables"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which feeling is stated in Version 1?",
+      "'I hate Saturdays.'",
+      "Her dislike."
+     ],
+     "explain": "Version 1 states her dislike; Version 2 never does."
+    },
+    {
+     "type": "mcq",
+     "q": "Why might a writer choose the first person?",
+     "options": [
+      "To let readers share the character's private thoughts",
+      "To give an outside view",
+      "To describe many characters equally",
+      "To avoid feelings"
+     ],
+     "answer": 0,
+     "hints": [
+      "Whose voice do we hear?",
+      "The character's own.",
+      "Private thoughts."
+     ],
+     "explain": "First person lets us inside the narrator's head."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the effect of 'I duck behind the tomatoes'?",
+     "options": [
+      "It shows her embarrassment directly, with humour",
+      "It shows she is hungry",
+      "It describes the weather",
+      "It shows she is proud"
+     ],
+     "answer": 0,
+     "hints": [
+      "Why would she hide?",
+      "Someone from school is there.",
+      "Embarrassment."
+     ],
+     "explain": "Hiding shows her embarrassment in a funny, honest way."
+    },
+    {
+     "type": "mcq",
+     "q": "Which pronoun shows third-person narration?",
+     "options": [
+      "She",
+      "I",
+      "My",
+      "We"
+     ],
+     "answer": 0,
+     "hints": [
+      "Third person is outside the character.",
+      "Not I or we.",
+      "She."
+     ],
+     "explain": "'She' shows third person."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Comparing the two versions",
+     "Asking how we know",
+     "Looking at pronouns",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how telling a story as 'I' or 'she' changes what readers know.",
+   "teacher": "Criterion A: analyses how narrative point of view shapes characterisation and the reader's response.",
+   "done": "Point of view decides what we know and how close we feel."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language and Literature",
+   "domain": "Communication and Expression",
+   "id": "ib9-ll-advert",
+   "grade": 9,
+   "title": "Analysing an advertisement",
+   "topic": "Analysing media texts",
+   "category": "Reflection",
+   "caps": "IB MYP Language and Literature, year 4: Criterion A, Analysing (persuasive techniques and audience in media texts). Key concept: Communication. Global context: Globalization and sustainability.",
+   "intention": "Today I am analysing how an advert persuades, and questioning its claims.",
+   "prompt": "Which advert have you seen that you didn't believe?",
+   "passage": "<div class=\"passage-text\"><p><b>FRESHA bottled water</b> <span class=\"muted\">(a made-up advert)</span></p>\n<p><b>Pure. Natural. You.</b></p>\n<p>Drawn from ancient mountain springs, FRESHA is the choice of champions. 9 out of 10 athletes we asked prefer it. Why settle for ordinary when you could be extraordinary?</p>\n<p><i>Now in new 100% recycled bottles.*</i></p>\n<p class=\"muted\">*Cap and label not included.</p></div>",
+   "lesson": [
+    {
+     "h": "Statement of inquiry",
+     "say": "Statement of inquiry: Advertisers communicate with carefully chosen audiences, and critical readers question the claims they make. Key concept: Communication. Global context: Globalization and sustainability.",
+     "html": "<p><b>Statement of inquiry:</b> Advertisers communicate with carefully chosen audiences, and critical readers question the claims they make.</p><p>Key concept: <b>Communication</b> · Global context: <b>Globalization and sustainability</b></p>"
+    },
+    {
+     "h": "Read the text",
+     "say": "Read the text, or press Read aloud to hear it part by part.",
+     "html": "<div class=\"passage-text\"><p><b>FRESHA bottled water</b> <span class=\"muted\">(a made-up advert)</span></p>\n<p><b>Pure. Natural. You.</b></p>\n<p>Drawn from ancient mountain springs, FRESHA is the choice of champions. 9 out of 10 athletes we asked prefer it. Why settle for ordinary when you could be extraordinary?</p>\n<p><i>Now in new 100% recycled bottles.*</i></p>\n<p class=\"muted\">*Cap and label not included.</p></div>"
+    },
+    {
+     "h": "Techniques",
+     "say": "Adverts use many techniques. They use short slogans, statistics and rhetorical questions. They appeal to who the reader is, or link the product with nature or success.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Slogan</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Statistic</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Rhetorical question</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Association</span></div>"
+    },
+    {
+     "h": "Reading critically",
+     "say": "Ask who made the advert, who it is for, and what it leaves out. Small print often limits a big claim.",
+     "html": "<p>Check the <b>small print</b> and the <b>sample</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Analyse '9 out of 10 athletes we asked prefer it'.",
+    "steps": [
+     "It is a statistic, which sounds scientific.",
+     "'We asked' means the company chose whom to ask, and we don't know how many.",
+     "It persuades by linking the water with athletes, but the evidence is weak."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Who is the target audience?",
+     "options": [
+      "People who want to feel healthy and successful",
+      "Young children",
+      "Farmers buying equipment",
+      "People who dislike water"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at 'champions' and 'extraordinary'.",
+      "Who wants to feel like that?",
+      "Healthy, ambitious people."
+     ],
+     "explain": "The advert appeals to people who want health and success."
+    },
+    {
+     "type": "mcq",
+     "q": "'Why settle for ordinary when you could be extraordinary?' is…",
+     "options": [
+      "a rhetorical question",
+      "a statistic",
+      "a fact",
+      "small print"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is a question.",
+      "It doesn't expect an answer.",
+      "Rhetorical."
+     ],
+     "explain": "It is a question asked for effect."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the small print reveal?",
+     "options": [
+      "The 100% recycled claim isn't true of the whole bottle",
+      "The water is free",
+      "The athletes are famous",
+      "The springs are new"
+     ],
+     "answer": 0,
+     "hints": [
+      "Read the line with *.",
+      "Cap and label not included.",
+      "So not all of it is recycled."
+     ],
+     "explain": "The cap and label aren't recycled, so the claim is limited."
+    },
+    {
+     "type": "mcq",
+     "q": "Why is '9 out of 10 athletes we asked' weak evidence?",
+     "options": [
+      "We don't know how many were asked or how they were chosen",
+      "Athletes don't drink water",
+      "Statistics are always lies",
+      "It is too long"
+     ],
+     "answer": 0,
+     "hints": [
+      "Who chose the athletes?",
+      "How many?",
+      "We don't know."
+     ],
+     "explain": "The sample size and selection are unknown."
+    },
+    {
+     "type": "mcq",
+     "q": "'Pure. Natural. You.' links the product with…",
+     "options": [
+      "the reader's identity",
+      "a price",
+      "a competitor",
+      "a recipe"
+     ],
+     "answer": 0,
+     "hints": [
+      "The last word is 'You'.",
+      "It talks about the reader.",
+      "Identity."
+     ],
+     "explain": "It suggests the water is part of who you are."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Naming the techniques",
+     "Reading the small print",
+     "Asking who the advert is for",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child analysed how an advert persuades and questioned its claims.",
+   "teacher": "Criterion A: analyses persuasive techniques, audience and purpose, and evaluates the reliability of claims in media texts.",
+   "done": "Name the technique, find the audience, and question the claim."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ib9-sci-fair-test",
+   "grade": 9,
+   "title": "Designing a fair test",
+   "topic": "Inquiring and designing",
+   "caps": "IB MYP Sciences, year 4: Criterion B, Inquiring and designing (hypotheses, variables and fair testing). Key concept: Relationships. Global context: Scientific and technical innovation.",
+   "intention": "Today I am planning a fair scientific investigation.",
+   "prompt": "How could you test which washing powder works best?",
+   "lesson": [
+    {
+     "h": "Statement of inquiry",
+     "say": "Statement of inquiry: Scientists test relationships between variables by changing one thing at a time. Key concept: Relationships. Global context: Scientific and technical innovation.",
+     "html": "<p><b>Statement of inquiry:</b> Scientists test relationships between variables by changing one thing at a time.</p><p>Key concept: <b>Relationships</b> · Global context: <b>Scientific and technical innovation</b></p>"
+    },
+    {
+     "h": "Variables",
+     "say": "The independent variable is what you change. The dependent variable is what you measure. Control variables are kept the same, so the test is fair.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Change: independent</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Measure: dependent</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Keep the same: controls</span></div>"
+    },
+    {
+     "h": "Hypothesis",
+     "say": "A hypothesis predicts the relationship and gives a scientific reason. For example: if the water is warmer, then sugar will dissolve faster, because the particles move faster.",
+     "html": "<p><b>If</b> … <b>then</b> … <b>because</b> …</p>"
+    },
+    {
+     "h": "Reliable results",
+     "say": "Repeat each trial at least three times and calculate a mean, so one odd result doesn't mislead you.",
+     "html": "<p>Repeat, then find the <b>mean</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Plan: does the amount of light affect how tall bean plants grow?",
+    "steps": [
+     "Independent: hours of light each day.",
+     "Dependent: plant height after two weeks.",
+     "Controls: the same water, soil, pot size and type of bean."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "You test how ramp height affects a toy car's speed. What is the independent variable?",
+     "options": [
+      "Ramp height",
+      "Car speed",
+      "The car's mass",
+      "The floor surface"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do you change on purpose?",
+      "The ramp.",
+      "Its height."
+     ],
+     "explain": "You change the ramp height."
+    },
+    {
+     "type": "mcq",
+     "q": "In the same test, what is the dependent variable?",
+     "options": [
+      "Car speed",
+      "Ramp height",
+      "The ramp's length",
+      "The car's colour"
+     ],
+     "answer": 0,
+     "hints": [
+      "What do you measure?",
+      "How fast the car goes.",
+      "Speed."
+     ],
+     "explain": "You measure the car's speed."
+    },
+    {
+     "type": "mcq",
+     "q": "Why must control variables stay the same?",
+     "options": [
+      "So any change is caused only by the independent variable",
+      "To make the test faster",
+      "Because they are expensive",
+      "So the results look bigger"
+     ],
+     "answer": 0,
+     "hints": [
+      "Think about fairness.",
+      "Only one thing should change.",
+      "To know the cause."
+     ],
+     "explain": "Keeping controls the same means you know what caused the change."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is the best hypothesis?",
+     "options": [
+      "If the water is warmer, then the sugar will dissolve faster, because the particles move faster.",
+      "Sugar dissolves.",
+      "Warm water is nice.",
+      "I think it will work."
+     ],
+     "answer": 0,
+     "hints": [
+      "If … then … because.",
+      "It needs a reason.",
+      "The first one."
+     ],
+     "explain": "It predicts a relationship and gives a scientific reason."
+    },
+    {
+     "type": "mcq",
+     "q": "Why repeat each trial three times?",
+     "options": [
+      "To spot odd results and make the data more reliable",
+      "To use up materials",
+      "Because three is lucky",
+      "To change the variables"
+     ],
+     "answer": 0,
+     "hints": [
+      "One result could be a mistake.",
+      "Repeats show patterns.",
+      "Reliability."
+     ],
+     "explain": "Repeats reveal odd results and make the mean more reliable."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Naming the three kinds of variable",
+     "If, then, because",
+     "Planning repeats",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child planned a fair investigation with a hypothesis and controlled variables.",
+   "teacher": "Criterion B: formulates testable hypotheses with scientific reasoning, identifies variables and designs a fair, repeatable method.",
+   "done": "Change one thing, measure one thing, keep the rest the same, and repeat."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Sciences",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "ib9-sci-ecosystems",
+   "grade": 9,
+   "title": "Energy in ecosystems",
+   "topic": "Biology: ecosystems",
+   "caps": "IB MYP Sciences, year 4: Biology (food chains and webs; energy transfer between trophic levels). Key concept: Systems. Global context: Globalization and sustainability.",
+   "intention": "Today I am tracing how energy flows through an ecosystem.",
+   "prompt": "What would happen if all the bees disappeared?",
+   "lesson": [
+    {
+     "h": "Statement of inquiry",
+     "say": "Statement of inquiry: Ecosystems are systems in which energy flows and matter cycles; human actions can upset their balance. Key concept: Systems. Global context: Globalization and sustainability.",
+     "html": "<p><b>Statement of inquiry:</b> Ecosystems are systems in which energy flows and matter cycles; human actions can upset their balance.</p><p>Key concept: <b>Systems</b> · Global context: <b>Globalization and sustainability</b></p>"
+    },
+    {
+     "h": "Food chains",
+     "say": "A food chain shows what eats what. Energy flows from producers, such as grass, to consumers, such as a springbok and then a lion.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Grass (producer)</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Springbok</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Lion</span></div>"
+    },
+    {
+     "h": "Energy is lost",
+     "say": "Only about 10 percent of the energy at one level passes to the next. The rest is used for living or lost as heat. That is why food chains are short.",
+     "html": "<p>1 000 kJ in grass → about 100 kJ in springbok → about 10 kJ in lion</p>"
+    },
+    {
+     "h": "Upsetting the balance",
+     "say": "Removing one species affects others in the food web. If lions are removed, springbok numbers may grow and they may overgraze the grass.",
+     "html": "<p>Every link <b>matters</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Grass stores 5 000 kJ. Using the 10% rule, about how much reaches the springbok?",
+    "steps": [
+     "About 10% passes to the next level.",
+     "10% of 5 000 = 500.",
+     "About 500 kJ reaches the springbok."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is the producer in grass → springbok → lion?",
+     "options": [
+      "Grass",
+      "Springbok",
+      "Lion",
+      "The sun"
+     ],
+     "answer": 0,
+     "hints": [
+      "Producers make their own food.",
+      "Using sunlight.",
+      "Grass."
+     ],
+     "explain": "Grass makes food by photosynthesis."
+    },
+    {
+     "type": "num",
+     "q": "A producer stores 2 000 kJ. Using the 10% rule, about how much passes to the primary consumer, in kJ?",
+     "answer": "200",
+     "options": [
+      "200",
+      "20",
+      "1 800",
+      "2 000"
+     ],
+     "hints": [
+      "10% passes on.",
+      "10% of 2 000.",
+      "200."
+     ],
+     "explain": "10% of 2 000 = 200 kJ."
+    },
+    {
+     "type": "mcq",
+     "q": "Where does most of the energy at each level go?",
+     "options": [
+      "It is used for living or lost as heat",
+      "It is stored for ever",
+      "It goes back to the sun",
+      "It turns into soil"
+     ],
+     "answer": 0,
+     "hints": [
+      "Animals move and keep warm.",
+      "That uses energy.",
+      "Lost as heat."
+     ],
+     "explain": "Most is used in life processes and lost as heat."
+    },
+    {
+     "type": "mcq",
+     "q": "Lions are removed from an area. What might happen first?",
+     "options": [
+      "The springbok population increases",
+      "The grass grows taller",
+      "Nothing changes",
+      "The sun gets hotter"
+     ],
+     "answer": 0,
+     "hints": [
+      "Lions eat springbok.",
+      "Fewer predators…",
+      "…more springbok."
+     ],
+     "explain": "Without predators, springbok numbers rise."
+    },
+    {
+     "type": "mcq",
+     "q": "Why are food chains rarely longer than four or five levels?",
+     "options": [
+      "Too little energy is left at the top",
+      "Animals don't like long chains",
+      "Producers stop growing",
+      "There are no more animals"
+     ],
+     "answer": 0,
+     "hints": [
+      "About 90% is lost at each step.",
+      "Very little reaches the top.",
+      "Too little energy."
+     ],
+     "explain": "So much energy is lost that little remains for higher levels."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Following the arrows",
+     "The 10% rule",
+     "Predicting changes",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child traced how energy flows through food chains, and what happens when the balance is upset.",
+   "teacher": "Criterion A: explains energy flow in ecosystems, applies the 10% rule and predicts the effects of disturbance in a food web.",
+   "done": "Energy flows up the chain, but about 90% is lost at each step."
+  }
+ ],
+ "words": {
+  "g9-factorise": {
+   "words": [
+    [
+     "✖️",
+     "Factorise",
+     "write as a product of factors"
+    ],
+    [
+     "🔢",
+     "HCF",
+     "highest common factor"
+    ],
+    [
+     "²",
+     "Perfect square",
+     "a number made by squaring, like 9 or 25"
+    ]
+   ]
+  },
+  "g9-graphs": {
+   "words": [
+    [
+     "📈",
+     "Gradient",
+     "how steep a line is"
+    ],
+    [
+     "📍",
+     "y-intercept",
+     "where the line crosses the y-axis"
+    ]
+   ]
+  },
+  "g9-probability": {
+   "words": [
+    [
+     "🎲",
+     "Probability",
+     "how likely something is"
+    ],
+    [
+     "📋",
+     "Sample space",
+     "all possible outcomes"
+    ],
+    [
+     "🔁",
+     "Relative frequency",
+     "how often it happened ÷ number of trials"
+    ]
+   ]
+  },
+  "g9-argument": {
+   "words": [
+    [
+     "📣",
+     "Claim",
+     "a point someone argues"
+    ],
+    [
+     "🔎",
+     "Evidence",
+     "facts that support a claim"
+    ],
+    [
+     "↩️",
+     "Counter-argument",
+     "a point from the other side"
+    ]
+   ]
+  },
+  "g9-summary": {
+   "words": [
+    [
+     "✂️",
+     "Summary",
+     "a short version with only the main points"
+    ]
+   ]
+  },
+  "g9-concord": {
+   "words": [
+    [
+     "🤝",
+     "Concord",
+     "the verb agreeing with its subject"
+    ],
+    [
+     "👥",
+     "Collective noun",
+     "a word for a group, like team or class"
+    ]
+   ]
+  },
+  "g9-cells": {
+   "words": [
+    [
+     "🧫",
+     "Cell",
+     "the smallest unit of life"
+    ],
+    [
+     "🧬",
+     "Nucleus",
+     "the control centre of a cell"
+    ],
+    [
+     "🧱",
+     "Tissue",
+     "a group of similar cells"
+    ]
+   ]
+  },
+  "g9-acids": {
+   "words": [
+    [
+     "🍋",
+     "Acid",
+     "a substance with pH below 7"
+    ],
+    [
+     "🧼",
+     "Base",
+     "a substance with pH above 7"
+    ],
+    [
+     "⚖️",
+     "Neutralise",
+     "an acid and base cancel each other out"
+    ]
+   ]
+  },
+  "g9-rocks": {
+   "words": [
+    [
+     "🌋",
+     "Igneous",
+     "rock formed from cooled magma"
+    ],
+    [
+     "🪨",
+     "Sedimentary",
+     "rock formed from pressed layers"
+    ],
+    [
+     "💎",
+     "Metamorphic",
+     "rock changed by heat and pressure"
+    ]
+   ]
+  },
+  "g9-subjects": {
+   "words": [
+    [
+     "🎓",
+     "Admission requirements",
+     "what you need to get into a course"
+    ]
+   ]
+  },
+  "g9-goals": {
+   "words": [
+    [
+     "🎯",
+     "SMART",
+     "specific, measurable, achievable, relevant, time-bound"
+    ],
+    [
+     "🔄",
+     "Setback",
+     "something that slows your progress"
+    ]
+   ]
+  },
+  "g9-community": {
+   "words": [
+    [
+     "🙋",
+     "Volunteer",
+     "someone who helps without pay"
+    ],
+    [
+     "📊",
+     "Impact",
+     "the difference something makes"
+    ]
+   ]
+  },
+  "cam9-pythagoras": {
+   "words": [
+    [
+     "📐",
+     "Hypotenuse",
+     "the longest side, opposite the right angle"
+    ],
+    [
+     "⬛",
+     "Right angle",
+     "an angle of 90 degrees"
+    ],
+    [
+     "✖️",
+     "Squared",
+     "a number times itself"
+    ]
+   ]
+  },
+  "cam9-expected-frequency": {
+   "words": [
+    [
+     "🔮",
+     "Expected frequency",
+     "how many times you predict something will happen"
+    ],
+    [
+     "🎲",
+     "Relative frequency",
+     "how often it happened, out of all the tries"
+    ],
+    [
+     "⚖️",
+     "Fair",
+     "every outcome is equally likely"
+    ]
+   ]
+  },
+  "cam9-eng-structure": {
+   "words": [
+    [
+     "🧱",
+     "Structure",
+     "how a text is put together"
+    ],
+    [
+     "🚪",
+     "Opening",
+     "how a text starts"
+    ],
+    [
+     "🔚",
+     "Ending",
+     "how a text finishes"
+    ],
+    [
+     "🔄",
+     "Shift",
+     "a change in focus, time or place"
+    ]
+   ]
+  },
+  "cam9-eng-speech": {
+   "words": [
+    [
+     "🎤",
+     "Speech",
+     "a talk given to an audience"
+    ],
+    [
+     "❓",
+     "Rhetorical question",
+     "a question asked for effect, not for an answer"
+    ],
+    [
+     "3️⃣",
+     "Rule of three",
+     "listing three things for effect"
+    ]
+   ]
+  },
+  "cam9-sci-reactivity": {
+   "words": [
+    [
+     "📊",
+     "Reactivity series",
+     "metals listed from most to least reactive"
+    ],
+    [
+     "🫧",
+     "Reactive",
+     "reacts easily"
+    ],
+    [
+     "🔄",
+     "Displacement",
+     "a more reactive metal taking the place of a less reactive one"
+    ]
+   ]
+  },
+  "cam9-sci-carbon-cycle": {
+   "words": [
+    [
+     "🔄",
+     "Carbon cycle",
+     "carbon moving between air, living things, oceans and rocks"
+    ],
+    [
+     "🌡️",
+     "Greenhouse effect",
+     "gases trapping heat around the Earth"
+    ],
+    [
+     "🏭",
+     "Fossil fuels",
+     "coal, oil and gas, made from things that lived long ago"
+    ]
+   ]
+  },
+  "ib9-linear-models": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "📏",
+     "Linear model",
+     "a straight-line rule that describes real data"
+    ],
+    [
+     "📈",
+     "Gradient",
+     "the rate of change"
+    ],
+    [
+     "✂️",
+     "Intercept",
+     "the starting value"
+    ]
+   ]
+  },
+  "ib9-similarity": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🔍",
+     "Similar",
+     "the same shape, but a different size"
+    ],
+    [
+     "📐",
+     "Scale factor",
+     "the number every length is multiplied by"
+    ]
+   ]
+  },
+  "ib9-ll-perspective": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "👁️",
+     "Point of view",
+     "who is telling the story"
+    ],
+    [
+     "1️⃣",
+     "First person",
+     "told by a character, using I"
+    ],
+    [
+     "3️⃣",
+     "Third person",
+     "told by an outside narrator, using he, she or they"
+    ]
+   ]
+  },
+  "ib9-ll-advert": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "💬",
+     "Slogan",
+     "a short phrase that is easy to remember"
+    ],
+    [
+     "❓",
+     "Rhetorical question",
+     "a question asked for effect"
+    ],
+    [
+     "🎯",
+     "Target audience",
+     "the people an advert is aimed at"
+    ]
+   ]
+  },
+  "ib9-sci-fair-test": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🔧",
+     "Independent variable",
+     "what you change"
+    ],
+    [
+     "📏",
+     "Dependent variable",
+     "what you measure"
+    ],
+    [
+     "🔒",
+     "Control variable",
+     "what you keep the same"
+    ]
+   ]
+  },
+  "ib9-sci-ecosystems": {
+   "words": [
+    [
+     "💡",
+     "Statement of inquiry",
+     "the big idea this unit explores"
+    ],
+    [
+     "🔗",
+     "Food chain",
+     "shows what eats what"
+    ],
+    [
+     "🌱",
+     "Producer",
+     "a plant that makes its own food"
+    ],
+    [
+     "☀️",
+     "Energy transfer",
+     "energy passing from one living thing to the next"
+    ]
+   ]
+  }
+ }
+}

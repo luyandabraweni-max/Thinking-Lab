@@ -15,7 +15,7 @@ const UNITS_ADULT = [
     intention: "Today I am learning to complete official forms accurately.", prompt: "Which form have you found confusing before?",
     lesson: [
       { h: "Read first", say: "Read the whole form before you write. Note which fields are compulsory, often marked with a star, and what documents you must attach.", html: chainRow(["Read all", "Find required fields *", "Gather documents"]) + P("Use <b>BLOCK CAPITALS</b> if the form asks for them.") },
-      { h: "Common fields", say: "Forms often ask for your full names, surname, ID number, date of birth in a set format, physical address, postal address, and contact details.", html: chainRow(["Surname", "Full names", "ID number", "Date of birth (YYYY/MM/DD)", "Address"]) + P("<b>Physical</b> address is where you live. <b>Postal</b> address is where mail goes.") },
+      { h: "Common fields", say: "Forms ask for your full names, surname and ID number. They ask for your date of birth in a set format. They also ask for your home address, postal address and contact details.", html: chainRow(["Surname", "Full names", "ID number", "Date of birth (YYYY/MM/DD)", "Address"]) + P("<b>Physical</b> address is where you live. <b>Postal</b> address is where mail goes.") },
       { h: "Check and sign", say: "Check spelling, numbers and dates. Do not leave required fields blank: write N slash A if something does not apply. Sign and date only after checking. Keep a copy.", html: chainRow(["Check", "N/A if not applicable", "Sign and date", "Keep a copy"]) + P("Never sign a blank form.") }
     ],
     example: { q: "A form asks for date of birth as YYYY/MM/DD. You were born on 5 March 2003. What do you write?", steps: ["YYYY is the year: 2003.", "MM is the month: 03. DD is the day: 05.", "2003/03/05."] },
@@ -35,7 +35,7 @@ const UNITS_ADULT = [
     caps: GETCA + ", English: writing functional texts for work, such as emails and messages",
     intention: "Today I am writing clear, polite emails for work and study.", prompt: "Who might you need to email formally this month?",
     lesson: [
-      { h: "Parts of an email", say: "A professional email has a clear subject line, a greeting, a short purpose, the details, a polite closing, and your name and contact number.", html: chainRow(["Subject", "Greeting", "Purpose", "Details", "Closing", "Name"]) },
+      { h: "Parts of an email", say: "A professional email has a clear subject line and a greeting. Then say why you are writing, and give the details. End politely, with your name and contact number.", html: chainRow(["Subject", "Greeting", "Purpose", "Details", "Closing", "Name"]) },
       { h: "Clear and short", say: "Say why you are writing in the first sentence. Use short paragraphs. Ask for one clear action, such as please confirm the time.", html: `<div class="passage-text"><p><b>Subject:</b> Application for Admin Assistant post, ref 24/07</p><p>Dear Ms Naidoo</p><p>I am applying for the Admin Assistant post advertised on your website. Please find my CV attached.</p><p>Kind regards<br>Sipho Mokoena<br>072 000 0000</p></div>` },
       { h: "Tone and checking", say: "Avoid slang, emojis and all capitals, which look like shouting. Check names and spelling, and attach any files you mention before you press send.", html: chainRow(["No slang", "No ALL CAPS", "Check attachments", "Reread"]) }
     ],
@@ -59,7 +59,7 @@ const UNITS_ADULT = [
     lesson: [
       { h: "Read the extract", say: "Read the lease extract, or press Read aloud to hear it part by part.", html: LEASE_TEXT },
       { h: "Key terms", say: "The tenant rents the property. The landlord owns it. The deposit is money held as security. Notice is the warning you must give before ending the lease.", html: chainRow(["Tenant", "Landlord", "Deposit", "Notice"]) + P("Read every clause before you sign.") },
-      { h: "Your rights", say: "Under South Africa's Rental Housing Act, the deposit must be kept in an interest-bearing account, and landlord and tenant should inspect the property together at the start and end. Disputes can go to the Rental Housing Tribunal in your province.", html: chainRow(["Interest on deposit", "Joint inspection", "Rental Housing Tribunal"]) + P("Take dated photos of the property when you move in.") }
+      { h: "Your rights", say: "South Africa's Rental Housing Act has rules about deposits. The deposit must be kept in an account that earns interest. The landlord and tenant should check the property together at the start and at the end. Disputes can go to the Rental Housing Tribunal in your province.", html: chainRow(["Interest on deposit", "Joint inspection", "Rental Housing Tribunal"]) + P("Take dated photos of the property when you move in.") }
     ],
     example: { q: "You pay rent on the 9th. What happens, according to the lease?", steps: ["Rent is due on or before the 1st.", "Paying after the 7th incurs a late fee.", "You pay R3 200 plus a R150 late fee."] },
     questions: [
@@ -121,9 +121,9 @@ const UNITS_ADULT = [
     caps: GETCA + ", Mathematics: ratio, rate and measurement in everyday contexts (unit prices, comparing value)",
     intention: "Today I am comparing prices to find the best value.", prompt: "Is the biggest pack always the best buy?",
     lesson: [
-      { h: "Unit price", say: "To compare products of different sizes, find the unit price: the price for one unit, such as per kilogram or per litre.", html: chainRow(["Price ÷ quantity", "=", "unit price"]) + P("Many shop labels show the unit price in small print.") },
+      { h: "Unit price", say: "To compare products of different sizes, find the unit price. That is the price for one unit, such as one kilogram or one litre.", html: chainRow(["Price ÷ quantity", "=", "unit price"]) + P("Many shop labels show the unit price in small print.") },
       { h: "An example", say: "Two kilograms of rice for R40 is R20 per kilogram. Five kilograms for R90 is R18 per kilogram. The bigger bag is cheaper per kilogram.", html: chainRow(["2 kg: R40 → R20/kg", "5 kg: R90 → R18/kg"]) },
-      { h: "Think beyond price", say: "The best buy also depends on whether you can afford it now, whether it will spoil before you use it, and whether you have space to store it.", html: chainRow(["Unit price", "Can I afford it?", "Will it spoil?"]) + P("Bulk buying with neighbours or a stokvel can lower costs.") }
+      { h: "Think beyond price", say: "The best buy also depends on three things. Can you afford it now? Will it spoil before you use it? Do you have space to store it?", html: chainRow(["Unit price", "Can I afford it?", "Will it spoil?"]) + P("Bulk buying with neighbours or a stokvel can lower costs.") }
     ],
     example: { q: "500 ml of oil costs R25. 2 litres costs R80. Which is cheaper per litre?", steps: ["500 ml is half a litre: R25 × 2 = R50 per litre.", "2 litres for R80: R40 per litre.", "The 2-litre bottle is cheaper per litre."] },
     questions: [
@@ -143,17 +143,17 @@ const UNITS_ADULT = [
     caps: GETCA + ", Information and Communication Technology elective: safe and responsible use of digital devices and the internet",
     intention: "Today I am learning to spot and avoid scams.", prompt: "Have you received a message that looked like a scam?",
     lesson: [
-      { h: "Common scams", say: "Common scams include fake job offers that ask for a fee, messages pretending to be from your bank, prizes you never entered, and people asking for money urgently.", html: chainRow(["Fake jobs", "Bank phishing", "Fake prizes", "Urgent money requests"]) },
-      { h: "Warning signs", say: "Warning signs are urgency, requests for passwords or one-time PINs, payment to get a job, spelling mistakes, and links that do not match the real website.", html: chainRow(["Urgent!", "Asks for PIN or OTP", "Pay to get a job", "Strange link"]) + P("A real bank will <b>never</b> ask for your PIN or OTP.") },
+      { h: "Common scams", say: "Here are common scams. A fake job offer asks you to pay a fee. A message pretends to be from your bank. You win a prize you never entered. Someone asks you for money urgently.", html: chainRow(["Fake jobs", "Bank phishing", "Fake prizes", "Urgent money requests"]) },
+      { h: "Warning signs", say: "Watch for these warning signs. Someone rushes you. Someone asks for a password or a one-time PIN. You must pay to get a job. There are spelling mistakes, or a link does not match the real website.", html: chainRow(["Urgent!", "Asks for PIN or OTP", "Pay to get a job", "Strange link"]) + P("A real bank will <b>never</b> ask for your PIN or OTP.") },
       { h: "What to do", say: "Do not click links or share codes. Contact the organisation using a number from their official website or your card. Report scams and warn others. Use strong, different passwords.", html: chainRow(["Don't click", "Call the official number", "Report", "Strong passwords"]) }
     ],
-    example: { q: "An SMS says: Your account is blocked. Click here and enter your OTP to unlock. What should you do?", steps: ["Urgency plus a request for an OTP are red flags.", "Do not click or share anything.", "Call your bank on the number on the back of your card."] },
+    example: { q: "An SMS says: Your account is blocked. Click here and enter your OTP to unlock. What should you do?", steps: ["Urgency plus a request for an OTP are warning signs.", "Do not click or share anything.", "Call your bank on the number on the back of your card."] },
     questions: [
-      { type: "mcq", q: "A job advert asks you to pay R300 for training before you start. What is it likely to be?", options: ["A scam", "A normal job", "A bursary", "A learnership"], answer: 0, hints: ["Real employers pay you.", "Paying to get a job is a red flag.", "A scam."], explain: "Asking you to pay for a job is a classic scam." },
+      { type: "mcq", q: "A job advert asks you to pay R300 for training before you start. What is it likely to be?", options: ["A scam", "A normal job", "A bursary", "A learnership"], answer: 0, hints: ["Real employers pay you.", "Paying to get a job is a warning sign.", "A scam."], explain: "Asking you to pay for a job is a classic scam." },
       { type: "mcq", q: "Who should you share your OTP with?", options: ["Nobody", "The bank caller", "A friend", "Anyone who asks politely"], answer: 0, hints: ["One-time PIN.", "It approves transactions.", "Nobody."], explain: "Never share your OTP with anyone." },
       { type: "mcq", q: "Which is the safest way to check if a message from your bank is real?", options: ["Call the number on your card", "Reply to the SMS", "Click the link", "Call the number in the message"], answer: 0, hints: ["Use a number you trust.", "Not from the message.", "The number on your card."], explain: "Use the official number you already trust." },
       { type: "mcq", q: "Which password is strongest?", options: ["Blue!Taxi7Mango", "123456", "password", "your name"], answer: 0, hints: ["Long and mixed.", "Hard to guess.", "Blue!Taxi7Mango."], explain: "A long mix of words, numbers and symbols is strongest." },
-      { type: "sort", q: "Red flag or safe?", items: ["Pay a fee to get the job", "Official website address you typed yourself", "Urgent request for your PIN", "Calling the number on your bank card"], bins: ["Red flag", "Safe"], answer: [0, 1, 0, 1], hints: ["Fees and PIN requests are warnings.", "Using official contacts is safe.", "Sort each."], explain: "Fees and PIN requests are red flags." }
+      { type: "sort", q: "Warning sign or safe?", items: ["Pay a fee to get the job", "Official website address you typed yourself", "Urgent request for your PIN", "Calling the number on your bank card"], bins: ["Warning sign", "Safe"], answer: [0, 1, 0, 1], hints: ["Fees and PIN requests are warnings.", "Using official contacts is safe.", "Sort each."], explain: "Fees and PIN requests are warning signs." }
     ],
     reflect: { q: "What will you do?", options: ["Never share OTPs", "Check before clicking", "Use stronger passwords", "Warn my family"] },
     parent: "The learner learned to recognise and avoid common scams.",
@@ -186,8 +186,8 @@ const UNITS_ADULT = [
     caps: "Life and work skills: job search strategies, linked to the Department of Employment and Labour and youth employment services",
     intention: "Today I am planning a job search that uses many routes.", prompt: "Which job search route have you not tried yet?",
     lesson: [
-      { h: "Many routes", say: "Look for work through job sites, company websites, recruitment agencies, the Department of Employment and Labour's ESSA system, youth employment programmes, and people you know.", html: chainRow(["Job sites", "Company websites", "Labour centres (ESSA)", "Youth programmes", "Your network"]) + P("Many jobs are filled through <b>word of mouth</b>.") },
-      { h: "Be ready", say: "Have an updated CV, certified copies of your ID and qualifications, a professional email address and a phone with airtime and data.", html: chainRow(["CV", "Certified copies", "Email", "Airtime"]) + P("Keep digital copies on your phone.") },
+      { h: "Many routes", say: "Look for work on job sites and company websites, and through recruitment agencies. Use ESSA, the job system of the Department of Employment and Labour. Try youth employment programmes, and ask people you know.", html: chainRow(["Job sites", "Company websites", "Labour centres (ESSA)", "Youth programmes", "Your network"]) + P("Many jobs are filled through <b>word of mouth</b>.") },
+      { h: "Be ready", say: "Have an updated CV, and certified copies of your ID and qualifications. You also need a professional email address, and a phone with airtime and data.", html: chainRow(["CV", "Certified copies", "Email", "Airtime"]) + P("Keep digital copies on your phone.") },
       { h: "Stay organised", say: "Keep a list of where you applied, the date, the contact person and any follow-up. Follow up politely after one or two weeks.", html: chainRow(["Where", "When", "Contact", "Follow-up"]) + P("Rejections are normal. Keep going and keep learning.") }
     ],
     example: { q: "Ayanda applies for 10 jobs online and hears nothing. What else could she do?", steps: ["Register on ESSA and with youth employment programmes.", "Ask people she knows about openings, and visit local businesses with her CV.", "Keep a list and follow up on her applications."] },

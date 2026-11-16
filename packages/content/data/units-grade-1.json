@@ -1,0 +1,3073 @@
+{
+ "level": "grade-1",
+ "units": [
+  {
+   "id": "g1-count",
+   "grade": 1,
+   "subject": "Mathematics",
+   "title": "Counting to 100",
+   "topic": "Count, before and after",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 1 Mathematics: Numbers, Operations and Relationships (count forwards and backwards in 1s from any number 0 to 100; skip count in 2s, 5s and 10s; number before and after)",
+   "intention": "Today I am practising counting on, counting back and counting in tens.",
+   "prompt": "How did you find the number that comes next?",
+   "lesson": [
+    {
+     "h": "Counting on",
+     "say": "When we count on, we start at any number and keep going. Twenty-seven, twenty-eight, twenty-nine, thirty.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">27</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">28</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">29</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">30</span></div><p>Start at any number and <b>count on</b>, one more each time.</p>"
+    },
+    {
+     "h": "Before and after",
+     "say": "The number before 40 is 39. The number after 40 is 41.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">39</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">40</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">41</span></div><p><b>Before</b> means one less. <b>After</b> means one more.</p>"
+    },
+    {
+     "h": "Counting in tens",
+     "say": "We can count in tens. Ten, twenty, thirty, forty, fifty. It is faster than counting in ones.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Five groups of ten\">🔟 🔟 🔟 🔟 🔟</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">20</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">30</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">40</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">50</span></div><p>Counting in <b>tens</b> is quick: 10, 20, 30, 40, 50.</p>"
+    }
+   ],
+   "example": {
+    "q": "What number comes after 59?",
+    "steps": [
+     "Count on one more from 59.",
+     "Fifty-nine, …",
+     "After 59 comes 60."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What number comes after 34?",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">32</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">33</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">34</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">?</span></div>",
+     "options": [
+      "35",
+      "33",
+      "44"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count on one more.",
+      "Thirty-four, …",
+      "Thirty-five."
+     ],
+     "explain": "35 comes after 34."
+    },
+    {
+     "type": "mcq",
+     "q": "What number comes before 70?",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">?</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">70</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">71</span></div>",
+     "options": [
+      "69",
+      "60",
+      "71"
+     ],
+     "answer": 0,
+     "hints": [
+      "Before means one less.",
+      "Count back one from 70.",
+      "Sixty-nine."
+     ],
+     "explain": "69 comes before 70."
+    },
+    {
+     "type": "mcq",
+     "q": "Count in tens: 10, 20, 30, what comes next?",
+     "options": [
+      "40",
+      "31",
+      "35"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add ten each time.",
+      "Thirty and ten more.",
+      "Forty."
+     ],
+     "explain": "10, 20, 30, 40."
+    },
+    {
+     "type": "mcq",
+     "q": "Count in fives: 5, 10, 15, what comes next?",
+     "options": [
+      "20",
+      "16",
+      "25"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add five each time.",
+      "Fifteen and five more.",
+      "Twenty."
+     ],
+     "explain": "5, 10, 15, 20."
+    },
+    {
+     "type": "mcq",
+     "q": "Count back: 18, 17, 16, what comes next?",
+     "options": [
+      "15",
+      "17",
+      "19"
+     ],
+     "answer": 0,
+     "hints": [
+      "Counting back means one less each time.",
+      "Sixteen take away one.",
+      "Fifteen."
+     ],
+     "explain": "18, 17, 16, 15."
+    },
+    {
+     "type": "order",
+     "q": "Put the numbers in order, smallest first.",
+     "items": [
+      "19",
+      "46",
+      "83"
+     ],
+     "orderLabel": "smallest to biggest",
+     "hints": [
+      "Look at the tens first.",
+      "1 ten is less than 4 tens.",
+      "8 tens is the biggest."
+     ],
+     "explain": "19, 46, 83."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you count?",
+    "options": [
+     "Saying the numbers out loud",
+     "Counting in tens",
+     "Looking at the number row",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child counted on and back, found numbers before and after, and counted in 5s and 10s.",
+   "teacher": "Shows counting forwards and backwards within 100, before and after, and skip counting in 5s and 10s.",
+   "done": "You can count on, count back and count in tens."
+  },
+  {
+   "id": "g1-addsub",
+   "grade": 1,
+   "subject": "Mathematics",
+   "title": "Adding and taking away to 20",
+   "topic": "Addition and subtraction",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 1 Mathematics: Numbers, Operations and Relationships (add and subtract to 20; number bonds to 10; solve word problems in context)",
+   "intention": "Today I am practising adding and taking away with numbers up to 20.",
+   "prompt": "Did you count on or count back?",
+   "lesson": [
+    {
+     "h": "Adding means more",
+     "say": "Adding means putting groups together. Six marbles and three marbles make nine marbles.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Six marbles plus three marbles\">🔵 🔵 🔵 🔵 🔵 🔵 ➕ 🔵 🔵 🔵</p><p>6 + 3 = <b>9</b>. Start at 6 and <b>count on</b> 3: 7, 8, 9.</p>"
+    },
+    {
+     "h": "Taking away means less",
+     "say": "Taking away means some go. Twelve birds sit on a fence and four fly away. Eight are left.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Eight birds stay and four fly away\">🐦 🐦 🐦 🐦 🐦 🐦 🐦 🐦 🕊️ 🕊️ 🕊️ 🕊️</p><p>12 − 4 = <b>8</b>. Start at 12 and <b>count back</b> 4: 11, 10, 9, 8.</p>"
+    },
+    {
+     "h": "Number bonds to 10",
+     "say": "Pairs that make ten are called number bonds. Seven and three make ten. Six and four make ten.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 + 9</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 + 8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3 + 7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4 + 6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">5 + 5</span></div><p>These pairs all make <b>10</b>. Knowing them helps you add fast.</p>"
+    }
+   ],
+   "example": {
+    "q": "Thandi has 9 sweets. Her gogo gives her 5 more. How many does she have now?",
+    "steps": [
+     "More sweets means we add.",
+     "Start at 9 and count on 5: 10, 11, 12, 13, 14.",
+     "Thandi has 14 sweets."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What is 8 plus 4?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"8 apples and 4 apples\">🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎 ➕ 🍎 🍎 🍎 🍎</p>",
+     "options": [
+      "12",
+      "11",
+      "4"
+     ],
+     "answer": 0,
+     "hints": [
+      "Start at 8.",
+      "Count on 4.",
+      "9, 10, 11, 12."
+     ],
+     "explain": "8 + 4 = 12."
+    },
+    {
+     "type": "mcq",
+     "q": "What is 15 take away 3?",
+     "options": [
+      "12",
+      "18",
+      "13"
+     ],
+     "answer": 0,
+     "hints": [
+      "Start at 15.",
+      "Count back 3.",
+      "14, 13, 12."
+     ],
+     "explain": "15 − 3 = 12."
+    },
+    {
+     "type": "mcq",
+     "q": "Which number makes 10 with 7?",
+     "options": [
+      "3",
+      "4",
+      "17"
+     ],
+     "answer": 0,
+     "hints": [
+      "7 and what make 10?",
+      "Count on from 7 to 10.",
+      "8, 9, 10 is three more."
+     ],
+     "explain": "7 + 3 = 10."
+    },
+    {
+     "type": "num",
+     "q": "There are 11 children on the bus. 5 get off. How many are still on the bus?",
+     "answer": "6",
+     "options": [
+      "6",
+      "16",
+      "5",
+      "7"
+     ],
+     "hints": [
+      "Getting off means fewer.",
+      "Take away 5 from 11.",
+      "Count back 5 from 11: 10, 9, 8, 7, 6."
+     ],
+     "explain": "11 − 5 = 6 children."
+    },
+    {
+     "type": "num",
+     "q": "Lebo has 10 crayons and finds 6 more. How many does she have now?",
+     "answer": "16",
+     "options": [
+      "16",
+      "4",
+      "15",
+      "17"
+     ],
+     "hints": [
+      "Finding more means adding.",
+      "Start at 10.",
+      "10 and 6 make 16."
+     ],
+     "explain": "10 + 6 = 16 crayons."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the sums. Which make 10 and which do not?",
+     "items": [
+      "6 + 4",
+      "5 + 4",
+      "2 + 8",
+      "3 + 6"
+     ],
+     "bins": [
+      "Makes 10",
+      "Not 10"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Work out each sum.",
+      "5 + 4 = 9 and 3 + 6 = 9.",
+      "6 + 4 and 2 + 8 make 10."
+     ],
+     "explain": "6 + 4 and 2 + 8 make 10. The others make 9."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Counting on",
+     "Counting back",
+     "Number bonds to 10",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child added and subtracted with numbers to 20 and practised pairs that make 10.",
+   "teacher": "Shows addition and subtraction to 20 using counting on and back, number bonds to 10 and word problems.",
+   "done": "You can add and take away with numbers up to 20."
+  },
+  {
+   "id": "g1-share",
+   "grade": 1,
+   "subject": "Mathematics",
+   "title": "Sharing and grouping",
+   "topic": "Equal sharing, grouping and repeated addition",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 1 Mathematics: Numbers, Operations and Relationships (repeated addition to 20; equal sharing and grouping to 20, including remainders)",
+   "intention": "Today I am practising sharing things fairly and making equal groups.",
+   "prompt": "How did you make the groups fair?",
+   "lesson": [
+    {
+     "h": "Sharing fairly",
+     "say": "Sharing fairly means everyone gets the same. Six oranges shared between two children. Each child gets three.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Two children with three oranges each\">🧒 🍊🍊🍊 &nbsp; 👧 🍊🍊🍊</p><p>6 shared between 2 is <b>3 each</b>. Everyone gets the <b>same</b>.</p>"
+    },
+    {
+     "h": "Making groups",
+     "say": "We can put things into equal groups. Ten eggs in groups of two make five groups.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Five groups of two eggs\">🥚🥚 🥚🥚 🥚🥚 🥚🥚 🥚🥚</p><p>10 in groups of 2 makes <b>5 groups</b>.</p>"
+    },
+    {
+     "h": "Some left over",
+     "say": "Sometimes some are left over. Seven sweets shared between two children is three each, with one left over.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Three each with one left over\">🧒 🍬🍬🍬 &nbsp; 👧 🍬🍬🍬 &nbsp; ➕ 🍬</p><p>7 shared between 2 is 3 each, and <b>1 left over</b>. The one left over is the <b>remainder</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "Share 12 biscuits between 3 friends. How many does each friend get?",
+    "steps": [
+     "Give one biscuit to each friend, again and again.",
+     "Keep going until there are none left.",
+     "Each friend gets 4 biscuits."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Share 8 apples between 2 children. How many does each child get?",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"8 apples\">🍎 🍎 🍎 🍎 🍎 🍎 🍎 🍎</p>",
+     "options": [
+      "4",
+      "6",
+      "2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Give one to each child at a time.",
+      "Keep going until all are given.",
+      "Each child gets 4."
+     ],
+     "explain": "8 shared between 2 is 4 each."
+    },
+    {
+     "type": "mcq",
+     "q": "How many groups of 5 can you make with 15 marbles?",
+     "options": [
+      "3",
+      "5",
+      "10"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count in fives.",
+      "5, 10, 15.",
+      "That is 3 groups."
+     ],
+     "explain": "15 makes 3 groups of 5."
+    },
+    {
+     "type": "mcq",
+     "q": "What is 4 plus 4 plus 4?",
+     "options": [
+      "12",
+      "8",
+      "16"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add the 4s one at a time.",
+      "4 and 4 is 8.",
+      "8 and 4 more is 12."
+     ],
+     "explain": "4 + 4 + 4 = 12."
+    },
+    {
+     "type": "mcq",
+     "q": "Share 9 pencils between 2 children. How many are left over?",
+     "options": [
+      "1",
+      "0",
+      "2"
+     ],
+     "answer": 0,
+     "hints": [
+      "Each child gets 4.",
+      "4 and 4 make 8.",
+      "9 take away 8 is 1."
+     ],
+     "explain": "Each child gets 4, and 1 pencil is left over."
+    },
+    {
+     "type": "mcq",
+     "q": "Which is a fair share?",
+     "pics": [
+      "🍪🍪🍪 | 🍪🍪🍪",
+      "🍪🍪🍪🍪 | 🍪🍪"
+     ],
+     "options": [
+      "3 and 3",
+      "4 and 2"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Fair means the same.",
+      "Is 4 the same as 2?",
+      "3 and 3 are the same."
+     ],
+     "explain": "3 and 3 is fair because each child gets the same."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you share?",
+    "options": [
+     "Giving one at a time",
+     "Counting in groups",
+     "Drawing it",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child shared things fairly, made equal groups and found what was left over.",
+   "teacher": "Shows equal sharing and grouping to 20, repeated addition and remainders.",
+   "done": "Fair sharing means everyone gets the same amount."
+  },
+  {
+   "id": "g1-money",
+   "grade": 1,
+   "subject": "Mathematics",
+   "title": "Rands and cents",
+   "topic": "South African coins and notes",
+   "domain": "Logical and Analytical Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 1 Mathematics: Measurement and Numbers (recognise South African coins and notes; solve money problems with totals and change to R20)",
+   "intention": "Today I am learning our coins and notes and adding up money.",
+   "prompt": "How did you work out the total?",
+   "lesson": [
+    {
+     "h": "Our coins",
+     "say": "South Africa has coins for 10 cents, 20 cents, 50 cents, 1 rand, 2 rand and 5 rand.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">10c</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">20c</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">50c</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R1</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R5</span></div><p><b>c</b> means cents. <b>R</b> means rand. 100 cents make R1.</p>"
+    },
+    {
+     "h": "Our notes",
+     "say": "Notes are paper money. The smallest notes are 10 rand and 20 rand.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Two bank notes\">💵 💵</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R10</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R20</span></div><p>Notes are worth more than most coins.</p>"
+    },
+    {
+     "h": "Adding money",
+     "say": "A R5 coin and a R2 coin make R7. We add rands the same way we add numbers.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R5</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">+</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R2</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">=</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">R7</span></div><p>Add money just like numbers: 5 + 2 = 7, so <b>R7</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "A juice costs R6. You pay with a R10 note. How much change do you get?",
+    "steps": [
+     "Change is what is left after you pay.",
+     "Count on from 6 to 10: 7, 8, 9, 10.",
+     "That is R4 change."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is the biggest amount?",
+     "options": [
+      "R5",
+      "R2",
+      "R1"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the numbers.",
+      "5 is more than 2.",
+      "R5 is the most."
+     ],
+     "explain": "R5 is more than R2 and R1."
+    },
+    {
+     "type": "mcq",
+     "q": "R2 and R2 and R1. How much is that?",
+     "options": [
+      "R5",
+      "R4",
+      "R3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add the first two.",
+      "R2 + R2 = R4.",
+      "R4 + R1 = R5."
+     ],
+     "explain": "R2 + R2 + R1 = R5."
+    },
+    {
+     "type": "mcq",
+     "q": "A pencil costs R3. You pay R5. How much change?",
+     "options": [
+      "R2",
+      "R8",
+      "R3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count on from 3 to 5.",
+      "4, 5.",
+      "That is 2."
+     ],
+     "explain": "R5 − R3 = R2 change."
+    },
+    {
+     "type": "num",
+     "q": "You buy an apple for R4 and a bun for R7. How much do you pay?",
+     "answer": "R11",
+     "options": [
+      "R11",
+      "R3",
+      "R10",
+      "R12"
+     ],
+     "hints": [
+      "Add the two prices.",
+      "Start at 7 and count on 4.",
+      "8, 9, 10, 11."
+     ],
+     "explain": "R4 + R7 = R11."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into coins and notes.",
+     "items": [
+      "R20",
+      "50c",
+      "R10",
+      "R5"
+     ],
+     "bins": [
+      "Coin",
+      "Note"
+     ],
+     "answer": [
+      1,
+      0,
+      1,
+      0
+     ],
+     "hints": [
+      "Notes are paper.",
+      "R10 and R20 are notes.",
+      "50c and R5 are coins."
+     ],
+     "explain": "50c and R5 are coins. R10 and R20 are notes."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you with money?",
+    "options": [
+     "Counting on",
+     "Knowing the coins",
+     "Thinking about shopping",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned South African coins and notes and added up small amounts of money.",
+   "teacher": "Shows recognition of SA coins and notes and solving totals and change to R20.",
+   "done": "You know our coins and notes and can add up money."
+  },
+  {
+   "id": "g1-phonics",
+   "grade": 1,
+   "subject": "English Home Language",
+   "title": "Word families",
+   "topic": "Letter sounds and word families",
+   "domain": "Communication and Expression",
+   "category": "Pattern Thinking",
+   "caps": "CAPS Grade 1 English Home Language: Phonics (letter-sound relationships of single letters; build word families such as -at, -ig, -op, -un)",
+   "intention": "Today I am building words that belong to the same family.",
+   "prompt": "Which part of the words stayed the same?",
+   "lesson": [
+    {
+     "h": "Sounds make words",
+     "say": "Every letter has a sound. C, a, t. Put the sounds together and you get cat.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">c</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">t</span></div><p class=\"pics\" role=\"img\" aria-label=\"Cat\">🐱</p><p>Say each sound, then <b>blend</b> them together: c-a-t, <b>cat</b>.</p>"
+    },
+    {
+     "h": "A word family",
+     "say": "Cat, hat, mat and sat all end with a t. They belong to the a t family.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">c-at</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">h-at</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m-at</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">s-at</span></div><p>Words in a <b>family</b> end the same way. Only the first sound changes.</p>"
+    },
+    {
+     "h": "More families",
+     "say": "Pig, big and dig are in the i g family. Sun, run and fun are in the u n family.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">p-ig</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">b-ig</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">d-ig</span></div><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">s-un</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">r-un</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">f-un</span></div><p>Change the first sound to make a new word.</p>"
+    }
+   ],
+   "example": {
+    "q": "Change the first sound of hop to t. What word do you make?",
+    "steps": [
+     "Hop is h, o, p.",
+     "Take away h and put t: t, o, p.",
+     "The new word is top."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word is in the same family as cat?",
+     "options": [
+      "hat",
+      "cup",
+      "dog"
+     ],
+     "answer": 0,
+     "hints": [
+      "Cat ends with a t.",
+      "Which word ends with a t?",
+      "Hat."
+     ],
+     "explain": "Cat and hat both end with -at."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is in the same family as pig?",
+     "pics": [
+      "🪵",
+      "☀️",
+      "🎩"
+     ],
+     "options": [
+      "big",
+      "sun",
+      "hat"
+     ],
+     "answer": 0,
+     "hints": [
+      "Pig ends with i g.",
+      "Say each word.",
+      "Big ends with i g."
+     ],
+     "explain": "Pig and big are in the -ig family."
+    },
+    {
+     "type": "mcq",
+     "q": "Blend the sounds s, u, n. What is the word?",
+     "pics": [
+      "☀️",
+      "🐶",
+      "🧺"
+     ],
+     "options": [
+      "sun",
+      "son",
+      "sat"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say the sounds slowly.",
+      "s, u, n.",
+      "Sun."
+     ],
+     "explain": "s-u-n makes sun."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the first sound in mop?",
+     "options": [
+      "m",
+      "o",
+      "p"
+     ],
+     "answer": 0,
+     "hints": [
+      "Say mop slowly.",
+      "Which sound comes first?",
+      "m."
+     ],
+     "explain": "Mop starts with the m sound."
+    },
+    {
+     "type": "sort",
+     "q": "Sort the words into their families.",
+     "items": [
+      "mat",
+      "dig",
+      "sat",
+      "wig"
+     ],
+     "bins": [
+      "-at family",
+      "-ig family"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Look at how each word ends.",
+      "Mat and sat end in a t.",
+      "Dig and wig end in i g."
+     ],
+     "explain": "Mat and sat are -at words. Dig and wig are -ig words."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you read the words?",
+    "options": [
+     "Saying each sound",
+     "Finding the family",
+     "Looking at the picture",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child blended sounds to read words and sorted words into word families.",
+   "teacher": "Shows letter-sound knowledge, blending CVC words and recognising -at, -ig and -un word families.",
+   "done": "Words in a family end the same way. Change the first sound to make new words."
+  },
+  {
+   "id": "g1-sentences",
+   "grade": 1,
+   "subject": "English Home Language",
+   "title": "Writing a sentence",
+   "topic": "Capital letters and full stops",
+   "domain": "Communication and Expression",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 1 English Home Language: Writing and Language Structure (write sentences using a capital letter and a full stop)",
+   "intention": "Today I am learning how to write a sentence properly.",
+   "prompt": "How do you know where a sentence starts and ends?",
+   "lesson": [
+    {
+     "h": "What is a sentence?",
+     "say": "A sentence tells us one whole idea. The dog runs. That is a sentence.",
+     "html": "<div class=\"passage-text\"><p><b>T</b>he dog runs<b>.</b></p></div><p>A <b>sentence</b> is a group of words that makes sense on its own.</p>"
+    },
+    {
+     "h": "Start with a capital",
+     "say": "Every sentence starts with a capital letter. A capital letter is a big letter.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">a → A</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">t → T</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">m → M</span></div><p><b>The</b> cat sleeps. The first letter is a <b>capital</b>.</p>"
+    },
+    {
+     "h": "End with a full stop",
+     "say": "Most sentences end with a full stop. A full stop is a little dot that says stop.",
+     "html": "<div class=\"passage-text\"><p>We play outside<b style=\"font-size:1.6rem\">.</b></p></div><p>The <b>full stop</b> shows the sentence has ended.</p>"
+    }
+   ],
+   "example": {
+    "q": "Fix this sentence: my mum cooks.",
+    "steps": [
+     "A sentence starts with a capital letter.",
+     "Change my to My.",
+     "My mum cooks. It already ends with a full stop."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one is a sentence?",
+     "options": [
+      "The bird sings.",
+      "the bird",
+      "sings bird the"
+     ],
+     "answer": 0,
+     "hints": [
+      "A sentence makes sense.",
+      "It starts with a capital and ends with a full stop.",
+      "The bird sings."
+     ],
+     "explain": "The bird sings. It makes sense, starts with a capital and ends with a full stop."
+    },
+    {
+     "type": "mcq",
+     "q": "Which sentence is written correctly?",
+     "options": [
+      "I like rice.",
+      "i like rice.",
+      "I like rice"
+     ],
+     "answer": 0,
+     "hints": [
+      "Check the first letter.",
+      "Check the end.",
+      "Capital I and a full stop."
+     ],
+     "explain": "I like rice. has a capital letter and a full stop."
+    },
+    {
+     "type": "mcq",
+     "q": "What goes at the end of this sentence? We go to school",
+     "options": [
+      "A full stop",
+      "A capital letter",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "The sentence has ended.",
+      "What shows a sentence has ended?",
+      "A full stop."
+     ],
+     "explain": "We go to school. It needs a full stop."
+    },
+    {
+     "type": "order",
+     "q": "Put the words in order to make a sentence.",
+     "items": [
+      "The",
+      "sun",
+      "is",
+      "hot."
+     ],
+     "orderLabel": "first word to last word",
+     "hints": [
+      "Which word has a capital letter?",
+      "The comes first.",
+      "Which word has the full stop?"
+     ],
+     "explain": "The sun is hot."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word should start with a capital letter? the baby sleeps.",
+     "options": [
+      "the",
+      "baby",
+      "sleeps"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which word is first?",
+      "The first word needs a capital.",
+      "The."
+     ],
+     "explain": "The baby sleeps. The first word needs a capital."
+    }
+   ],
+   "reflect": {
+    "q": "What will you remember when you write?",
+    "options": [
+     "Start with a capital",
+     "End with a full stop",
+     "Make it make sense",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned that a sentence starts with a capital letter and ends with a full stop.",
+   "teacher": "Shows understanding of sentence boundaries, capital letters and full stops, and word order.",
+   "done": "A sentence starts with a capital letter and ends with a full stop."
+  },
+  {
+   "id": "g1-story",
+   "grade": 1,
+   "subject": "English Home Language",
+   "title": "Story: Sipho and the Big Seed",
+   "topic": "Beginning, middle and end",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 1 English Home Language: Listening and Speaking, Reading (listen to a story; answer questions; retell a story with a beginning, middle and end)",
+   "intention": "Today I am listening to a story and finding its beginning, middle and end.",
+   "prompt": "What happened in the middle of the story?",
+   "passage": "<div class=\"passage-text\"><p><b>Sipho and the Big Seed</b> <span class=\"muted\">(a 2to.iQ story)</span></p>\n<p>Sipho found a big seed in the garden. \"What will you grow into?\" he asked.</p>\n<p>He dug a little hole. He put the seed in the hole and covered it with soil. Then he gave it some water.</p>\n<p>Every day, Sipho watered the seed. Every day, he looked. Nothing happened.</p>\n<p>Then one morning, he saw a tiny green shoot. \"You are growing!\" Sipho shouted.</p>\n<p>By the end of summer, a tall yellow sunflower stood in the garden. It was even taller than Sipho!</p></div>",
+   "lesson": [
+    {
+     "h": "Listen to the story",
+     "say": "Listen to the story. You can press Read aloud to hear it.",
+     "html": "<div class=\"passage-text\"><p><b>Sipho and the Big Seed</b> <span class=\"muted\">(a 2to.iQ story)</span></p>\n<p>Sipho found a big seed in the garden. \"What will you grow into?\" he asked.</p>\n<p>He dug a little hole. He put the seed in the hole and covered it with soil. Then he gave it some water.</p>\n<p>Every day, Sipho watered the seed. Every day, he looked. Nothing happened.</p>\n<p>Then one morning, he saw a tiny green shoot. \"You are growing!\" Sipho shouted.</p>\n<p>By the end of summer, a tall yellow sunflower stood in the garden. It was even taller than Sipho!</p></div>"
+    },
+    {
+     "h": "Beginning, middle and end",
+     "say": "Every story has a beginning, a middle and an end. The beginning starts the story. The middle is what happens. The end tells how it finishes.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Beginning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Middle</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">End</span></div><p>Stories go in <b>order</b>, like steps.</p>"
+    },
+    {
+     "h": "Characters",
+     "say": "The people or animals in a story are the characters. Sipho is the main character.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Sipho and a sunflower\">👦🌻</p><p><b>Sipho</b> is the main <b>character</b>.</p>"
+    }
+   ],
+   "example": {
+    "q": "What happened at the beginning of the story?",
+    "steps": [
+     "Think about the first part.",
+     "Sipho was in the garden.",
+     "Sipho found a big seed."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "What did Sipho find?",
+     "pics": [
+      "🌰",
+      "🐛",
+      "🪨"
+     ],
+     "options": [
+      "A big seed",
+      "A worm",
+      "A stone"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the title.",
+      "It is something that grows.",
+      "A big seed."
+     ],
+     "explain": "Sipho found a big seed in the garden."
+    },
+    {
+     "type": "mcq",
+     "q": "What did Sipho give the seed every day?",
+     "pics": [
+      "💧",
+      "🍞",
+      "🎈"
+     ],
+     "options": [
+      "Water",
+      "Bread",
+      "A balloon"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plants need something to drink.",
+      "He watered it.",
+      "Water."
+     ],
+     "explain": "Sipho watered the seed every day."
+    },
+    {
+     "type": "mcq",
+     "q": "How did Sipho feel when he saw the green shoot?",
+     "options": [
+      "Happy and excited",
+      "Sad",
+      "Angry"
+     ],
+     "answer": 0,
+     "hints": [
+      "He shouted.",
+      "What did he shout?",
+      "You are growing!"
+     ],
+     "explain": "He shouted, so he was happy and excited."
+    },
+    {
+     "type": "mcq",
+     "q": "What did the seed grow into?",
+     "pics": [
+      "🌻",
+      "🌳",
+      "🍎"
+     ],
+     "options": [
+      "A sunflower",
+      "A tree",
+      "An apple"
+     ],
+     "answer": 0,
+     "hints": [
+      "It was tall and yellow.",
+      "Look at the end of the story.",
+      "A sunflower."
+     ],
+     "explain": "The seed grew into a tall yellow sunflower."
+    },
+    {
+     "type": "order",
+     "q": "Put the story in order.",
+     "items": [
+      "Sipho found a seed.",
+      "He planted and watered it.",
+      "A sunflower grew."
+     ],
+     "orderLabel": "beginning to end",
+     "hints": [
+      "What happened first?",
+      "Then what did he do?",
+      "How did it end?"
+     ],
+     "explain": "He found the seed, planted and watered it, and a sunflower grew."
+    }
+   ],
+   "reflect": {
+    "q": "How did you understand the story best?",
+    "options": [
+     "Listening to it",
+     "Looking at the pictures",
+     "Thinking about the order",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child listened to a story and told its beginning, middle and end.",
+   "teacher": "Shows literal comprehension, inferring feelings, and sequencing a story into beginning, middle and end.",
+   "done": "Stories have a beginning, a middle and an end."
+  },
+  {
+   "id": "g1-words",
+   "grade": 1,
+   "subject": "English Home Language",
+   "title": "Naming words and doing words",
+   "topic": "Nouns and verbs",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "caps": "CAPS Grade 1 English Home Language: Language Structure and Use (nouns, verbs, pronouns I, you, he, she, it; plurals with -s)",
+   "intention": "Today I am learning naming words and doing words.",
+   "prompt": "How did you tell a naming word from a doing word?",
+   "lesson": [
+    {
+     "h": "Naming words",
+     "say": "A naming word is called a noun. It names a person, an animal, a place or a thing. Mum, dog, school and ball are nouns.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Mum</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">dog</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">school</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">ball</span></div><p><b>Nouns</b> name people, animals, places and things.</p>"
+    },
+    {
+     "h": "Doing words",
+     "say": "A doing word is called a verb. It tells us what someone does. Run, jump, eat and sing are verbs.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Run, jump, eat, sing\">🏃 🤸 🍽️ 🎤</p><p><b>Verbs</b> are action words.</p>"
+    },
+    {
+     "h": "One or more",
+     "say": "When there is more than one, we often add s. One cup, two cups.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">cup → cups</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">hat → hats</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">dog → dogs</span></div><p>Add <b>s</b> for more than one.</p>"
+    }
+   ],
+   "example": {
+    "q": "In the sentence The baby cries, which word is the doing word?",
+    "steps": [
+     "Ask: what does the baby do?",
+     "The baby cries.",
+     "Cries is the doing word."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word is a naming word?",
+     "options": [
+      "table",
+      "jump",
+      "run"
+     ],
+     "answer": 0,
+     "hints": [
+      "A naming word is a thing.",
+      "Can you touch it?",
+      "Table."
+     ],
+     "explain": "Table is a noun. It names a thing."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word is a doing word?",
+     "options": [
+      "swim",
+      "tree",
+      "girl"
+     ],
+     "answer": 0,
+     "hints": [
+      "A doing word is an action.",
+      "Can you do it?",
+      "Swim."
+     ],
+     "explain": "Swim is a verb. It is an action."
+    },
+    {
+     "type": "mcq",
+     "q": "One book, two …",
+     "options": [
+      "books",
+      "book",
+      "bookes"
+     ],
+     "answer": 0,
+     "hints": [
+      "More than one.",
+      "Add s.",
+      "Books."
+     ],
+     "explain": "One book, two books."
+    },
+    {
+     "type": "mcq",
+     "q": "Thabo kicks the ball. Which word tells what Thabo does?",
+     "options": [
+      "kicks",
+      "ball",
+      "Thabo"
+     ],
+     "answer": 0,
+     "hints": [
+      "What does Thabo do?",
+      "He …",
+      "Kicks."
+     ],
+     "explain": "Kicks is the doing word."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into naming words and doing words.",
+     "items": [
+      "cat",
+      "sing",
+      "house",
+      "eat"
+     ],
+     "bins": [
+      "Naming word",
+      "Doing word"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Can you do it, or is it a thing?",
+      "Sing and eat are actions.",
+      "Cat and house are things."
+     ],
+     "explain": "Cat and house are nouns. Sing and eat are verbs."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking: can I do it?",
+     "Thinking of pictures",
+     "Using the word in a sentence",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned naming words (nouns), doing words (verbs) and adding s for more than one.",
+   "teacher": "Shows identification of nouns and verbs and regular plurals with -s.",
+   "done": "Nouns name things. Verbs tell what we do."
+  },
+  {
+   "id": "g1-healthy",
+   "grade": 1,
+   "subject": "Life Skills",
+   "title": "Healthy habits",
+   "topic": "Sleep, food, washing and exercise",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "caps": "CAPS Grade 1 Life Skills, Beginning Knowledge and Personal and Social Well-being, Term 1: Healthy habits (sleep, healthy eating, washing hands, personal cleanliness, exercise)",
+   "intention": "Today I am learning habits that keep my body healthy.",
+   "prompt": "Which healthy habit will you do today?",
+   "lesson": [
+    {
+     "h": "Wash your hands",
+     "say": "Wash your hands with soap after the toilet and before you eat. Soap washes germs away.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Soap, hands and water\">🧼 🙌 💧</p><p>Wash with <b>soap</b> after the toilet and before eating.</p>"
+    },
+    {
+     "h": "Eat well and drink water",
+     "say": "Fruit, vegetables and water help your body grow. Too many sweets are not good for your teeth.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Apple, carrot, milk and water\">🍎 🥕 🥛 💧</p><p>Healthy food and <b>water</b> help you grow strong.</p>"
+    },
+    {
+     "h": "Sleep and move",
+     "say": "Children need lots of sleep every night. Playing and running every day keeps your body strong.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Sleeping and playing\">😴 🛏️ &nbsp; ⚽ 🏃</p><p><b>Sleep</b> and <b>exercise</b> are healthy habits.</p>"
+    }
+   ],
+   "example": {
+    "q": "Ayanda has just played in the sand. Now it is lunch time. What should she do first?",
+    "steps": [
+     "Her hands may have germs.",
+     "Germs can make her sick.",
+     "She should wash her hands with soap first."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "When should you wash your hands?",
+     "options": [
+      "Before you eat",
+      "Only on Sunday",
+      "Never"
+     ],
+     "answer": 0,
+     "hints": [
+      "Germs can get on our food.",
+      "Think about meal times.",
+      "Before you eat."
+     ],
+     "explain": "Wash your hands before you eat and after the toilet."
+    },
+    {
+     "type": "mcq",
+     "q": "Which snack is the healthiest?",
+     "pics": [
+      "🍌",
+      "🍭",
+      "🍟"
+     ],
+     "options": [
+      "A banana",
+      "A lollipop",
+      "Chips"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one is fruit?",
+      "Fruit is good for you.",
+      "A banana."
+     ],
+     "explain": "A banana is fruit, so it is the healthiest."
+    },
+    {
+     "type": "mcq",
+     "q": "What is the best drink when you are thirsty?",
+     "pics": [
+      "💧",
+      "🥤"
+     ],
+     "options": [
+      "Water",
+      "Fizzy cooldrink"
+     ],
+     "fixed": true,
+     "answer": 0,
+     "hints": [
+      "Which one has no sugar?",
+      "Your body needs it every day.",
+      "Water."
+     ],
+     "explain": "Water is the best drink."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into healthy and not healthy.",
+     "items": [
+      "Brushing teeth",
+      "Staying up very late",
+      "Playing outside",
+      "Eating lots of sweets"
+     ],
+     "bins": [
+      "Healthy",
+      "Not healthy"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which ones help your body?",
+      "Sleep and exercise help.",
+      "Too many sweets and late nights do not."
+     ],
+     "explain": "Brushing teeth and playing outside are healthy."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do we use soap?",
+     "options": [
+      "It washes germs away",
+      "It makes our hands dirty",
+      "It is food"
+     ],
+     "answer": 0,
+     "hints": [
+      "Germs can make us sick.",
+      "Soap cleans.",
+      "It washes germs away."
+     ],
+     "explain": "Soap washes germs away."
+    }
+   ],
+   "reflect": {
+    "q": "Which healthy habit is easiest for you?",
+    "options": [
+     "Washing my hands",
+     "Drinking water",
+     "Sleeping well",
+     "Playing outside"
+    ]
+   },
+   "parent": "Your child learned about washing hands, healthy food, water, sleep and exercise.",
+   "teacher": "Shows knowledge of personal hygiene, healthy eating, sleep and exercise as healthy habits.",
+   "done": "Healthy habits keep your body strong every day."
+  },
+  {
+   "id": "g1-homesafe",
+   "grade": 1,
+   "subject": "Life Skills",
+   "title": "Safe at home",
+   "topic": "Dangers at home and emergency numbers",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Problem Solving",
+   "caps": "CAPS Grade 1 Life Skills, Personal and Social Well-being, Term 2: Safety in the home (dangers at home; medicines and poisons; emergency numbers)",
+   "intention": "Today I am learning how to stay safe at home and who to call for help.",
+   "prompt": "What would you do if you saw something dangerous?",
+   "lesson": [
+    {
+     "h": "Dangers at home",
+     "say": "Some things at home can hurt us. Hot stoves, sharp knives, matches and plugs are not for playing with.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Fire, knife, plug\">🔥 🔪 🔌 🧯</p><p><b>Hot</b>, <b>sharp</b> and <b>electric</b> things can hurt you. Tell a grown-up.</p>"
+    },
+    {
+     "h": "Medicine and poison",
+     "say": "Medicine is only taken from a grown-up. Never drink from a bottle if you do not know what is inside. Some bottles have poison.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Medicine and poison bottles\">💊 ☠️ 🧴</p><p>Only take <b>medicine</b> from a grown-up you trust.</p>"
+    },
+    {
+     "h": "Call for help",
+     "say": "In an emergency, tell a grown-up. You can call 10111 for the police and 10177 for an ambulance. From a cellphone, you can also call 112.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Police 10111</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Ambulance 10177</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Cellphone 112</span></div><p>Learn your <b>address</b> so you can tell people where you are.</p>"
+    }
+   ],
+   "example": {
+    "q": "Lwazi finds a bottle with a skull on it under the sink. What should he do?",
+    "steps": [
+     "A skull means poison.",
+     "Poison can make you very sick.",
+     "He should not touch it and should tell a grown-up."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which of these is dangerous to play with?",
+     "pics": [
+      "🔥",
+      "🧸",
+      "📚"
+     ],
+     "options": [
+      "Matches",
+      "A teddy bear",
+      "A book"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one can burn?",
+      "Fire is dangerous.",
+      "Matches."
+     ],
+     "explain": "Matches can start a fire. Do not play with them."
+    },
+    {
+     "type": "mcq",
+     "q": "Who should give you medicine?",
+     "options": [
+      "A grown-up you trust",
+      "A friend",
+      "Nobody, take it yourself"
+     ],
+     "answer": 0,
+     "hints": [
+      "Medicine can be dangerous.",
+      "Only a grown-up knows how much.",
+      "A grown-up you trust."
+     ],
+     "explain": "Only take medicine from a grown-up you trust."
+    },
+    {
+     "type": "mcq",
+     "q": "What number do you call for the police?",
+     "options": [
+      "10111",
+      "10177",
+      "123"
+     ],
+     "answer": 0,
+     "hints": [
+      "Police has three ones.",
+      "One, zero, one, one, one.",
+      "10111."
+     ],
+     "explain": "10111 is the police number."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into safe and not safe.",
+     "items": [
+      "Playing with plugs",
+      "Telling a grown-up about a danger",
+      "Touching a hot pot",
+      "Learning your address"
+     ],
+     "bins": [
+      "Safe",
+      "Not safe"
+     ],
+     "answer": [
+      1,
+      0,
+      1,
+      0
+     ],
+     "hints": [
+      "Which ones could hurt you?",
+      "Plugs and hot pots can hurt.",
+      "Telling a grown-up and knowing your address keep you safe."
+     ],
+     "explain": "Telling a grown-up and knowing your address are safe things to do."
+    },
+    {
+     "type": "mcq",
+     "q": "A pot is boiling on the stove. What should you do?",
+     "options": [
+      "Stay away",
+      "Touch it",
+      "Put your hand in"
+     ],
+     "answer": 0,
+     "hints": [
+      "Boiling water is very hot.",
+      "It can burn you.",
+      "Stay away."
+     ],
+     "explain": "Stay away from hot pots and the stove."
+    }
+   ],
+   "reflect": {
+    "q": "What will you remember?",
+    "options": [
+     "Stay away from hot things",
+     "Ask before taking medicine",
+     "The emergency numbers",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned about dangers at home, medicine safety and South African emergency numbers. Please practise your home address together.",
+   "teacher": "Shows recognition of household dangers, medicine and poison safety, and emergency numbers (10111, 10177, 112).",
+   "done": "Stay away from danger, and tell a grown-up you trust."
+  },
+  {
+   "id": "g1-plants",
+   "grade": 1,
+   "subject": "Life Skills",
+   "title": "Plants and seeds",
+   "topic": "Plant parts and what plants need",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "caps": "CAPS Grade 1 Life Skills, Beginning Knowledge, Term 3: Plants and seeds (parts of a plant; seeds; what plants need; growing a seed)",
+   "intention": "Today I am learning the parts of a plant and what plants need to grow.",
+   "prompt": "What would happen if a plant got no water?",
+   "lesson": [
+    {
+     "h": "Parts of a plant",
+     "say": "A plant has roots, a stem, leaves and flowers. The roots are under the ground.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Flower, leaves, stem\">🌸 🍃 🌱</p><div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Roots</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Stem</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Leaves</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Flower</span></div><p><b>Roots</b> hold the plant and drink water. The <b>stem</b> holds it up.</p>"
+    },
+    {
+     "h": "What plants need",
+     "say": "Plants need water, sunlight, air and soil to grow.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Water, sun, air and soil\">💧 ☀️ 💨 🟫</p><p>Plants need <b>water</b>, <b>sunlight</b>, <b>air</b> and <b>soil</b>.</p>"
+    },
+    {
+     "h": "From a seed",
+     "say": "Many plants grow from seeds. A bean seed grows roots, then a shoot, then leaves.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Seed</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Roots</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Shoot</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Leaves</span></div><p>A <b>seed</b> grows into a new plant.</p>"
+    }
+   ],
+   "example": {
+    "q": "A plant was kept in a dark cupboard. It turned yellow. Why?",
+    "steps": [
+     "Think about what plants need.",
+     "A cupboard has no sunlight.",
+     "The plant needs sunlight to stay green and healthy."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which part of the plant is under the ground?",
+     "options": [
+      "The roots",
+      "The flower",
+      "The leaves"
+     ],
+     "answer": 0,
+     "hints": [
+      "It drinks water from the soil.",
+      "You cannot see it.",
+      "The roots."
+     ],
+     "explain": "The roots are under the ground."
+    },
+    {
+     "type": "mcq",
+     "q": "Which of these does a plant need?",
+     "pics": [
+      "☀️",
+      "🍫",
+      "📺"
+     ],
+     "options": [
+      "Sunlight",
+      "Chocolate",
+      "Television"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plants make food with light.",
+      "It comes from the sky.",
+      "Sunlight."
+     ],
+     "explain": "Plants need sunlight."
+    },
+    {
+     "type": "mcq",
+     "q": "What holds the plant up?",
+     "options": [
+      "The stem",
+      "The flower",
+      "The seed"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is like a body.",
+      "It is between the roots and the leaves.",
+      "The stem."
+     ],
+     "explain": "The stem holds the plant up."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps in order to grow a bean.",
+     "items": [
+      "Plant the seed in soil",
+      "Water it",
+      "A shoot grows"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "What do you do first?",
+      "Then it needs water.",
+      "Then it grows."
+     ],
+     "explain": "Plant it, water it, and a shoot grows."
+    },
+    {
+     "type": "sort",
+     "q": "What do plants need?",
+     "items": [
+      "Water",
+      "Sweets",
+      "Soil",
+      "Toys"
+     ],
+     "bins": [
+      "Plants need it",
+      "Plants do not need it"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Think about the garden.",
+      "Plants need water and soil.",
+      "Sweets and toys are not for plants."
+     ],
+     "explain": "Plants need water and soil."
+    }
+   ],
+   "reflect": {
+    "q": "Would you like to grow a seed?",
+    "options": [
+     "Yes, a bean",
+     "Yes, a flower",
+     "Yes, a vegetable",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learned the parts of a plant and what plants need. You could plant a bean in a cup together.",
+   "teacher": "Shows naming of plant parts, plant needs and the sequence of a seed germinating.",
+   "done": "Plants need water, sunlight, air and soil to grow."
+  },
+  {
+   "id": "g1-manners",
+   "grade": 1,
+   "subject": "Life Skills",
+   "title": "Kindness and good manners",
+   "topic": "Manners and responsibilities",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "CAPS Grade 1 Life Skills, Personal and Social Well-being, Term 3: Manners and responsibilities (greeting; taking turns; listening; sharing; kindness; honesty; respect)",
+   "intention": "Today I am learning kind ways to treat other people.",
+   "prompt": "How can you be kind to someone today?",
+   "lesson": [
+    {
+     "h": "Kind words",
+     "say": "Please, thank you and sorry are kind words. They show respect.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Please</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Thank you</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sorry</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Excuse me</span></div><p>Kind words show <b>respect</b>.</p>"
+    },
+    {
+     "h": "Taking turns and listening",
+     "say": "When someone is speaking, we listen and wait for our turn.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Listen, wait, then speak\">👂 ⏳ 🙋</p><p><b>Listen</b> first, then take your <b>turn</b>.</p>"
+    },
+    {
+     "h": "Being honest",
+     "say": "Being honest means telling the truth, even when it is hard.",
+     "html": "<p class=\"pics\" role=\"img\" aria-label=\"Telling the truth\">✅ 🗣️</p><p><b>Honest</b> people tell the truth.</p>"
+    }
+   ],
+   "example": {
+    "q": "You bump into a friend and their juice spills. What can you say?",
+    "steps": [
+     "It was an accident, but it upset your friend.",
+     "Kind words help.",
+     "Say sorry, and help clean up."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "A friend gives you a crayon. What do you say?",
+     "options": [
+      "Thank you",
+      "Go away",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "They did something kind.",
+      "Which words show you are glad?",
+      "Thank you."
+     ],
+     "explain": "We say thank you when someone helps us."
+    },
+    {
+     "type": "mcq",
+     "q": "Your teacher is talking. What should you do?",
+     "options": [
+      "Listen and wait",
+      "Shout over her",
+      "Walk away"
+     ],
+     "answer": 0,
+     "hints": [
+      "Good manners mean taking turns.",
+      "Wait for your turn.",
+      "Listen and wait."
+     ],
+     "explain": "We listen and wait for our turn to speak."
+    },
+    {
+     "type": "mcq",
+     "q": "You broke a cup by mistake. What is the honest thing to do?",
+     "options": [
+      "Tell a grown-up",
+      "Hide it",
+      "Blame your brother"
+     ],
+     "answer": 0,
+     "hints": [
+      "Honest means telling the truth.",
+      "Hiding it is not honest.",
+      "Tell a grown-up."
+     ],
+     "explain": "Telling the truth is honest."
+    },
+    {
+     "type": "sort",
+     "q": "Sort into kind and unkind.",
+     "items": [
+      "Sharing your ball",
+      "Pushing in the line",
+      "Saying please",
+      "Laughing at someone who fell"
+     ],
+     "bins": [
+      "Kind",
+      "Unkind"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "How would the other person feel?",
+      "Sharing and saying please feel good.",
+      "Pushing and laughing hurt others."
+     ],
+     "explain": "Sharing and saying please are kind."
+    },
+    {
+     "type": "mcq",
+     "q": "How do you greet your teacher in the morning?",
+     "options": [
+      "Good morning",
+      "Bye",
+      "What?"
+     ],
+     "answer": 0,
+     "hints": [
+      "It is morning.",
+      "A friendly greeting.",
+      "Good morning."
+     ],
+     "explain": "We say good morning to greet someone in the morning."
+    }
+   ],
+   "reflect": {
+    "q": "Which kind action will you try?",
+    "options": [
+     "Saying thank you",
+     "Taking turns",
+     "Telling the truth",
+     "Sharing"
+    ]
+   },
+   "parent": "Your child learned about kind words, listening, taking turns and being honest.",
+   "teacher": "Shows understanding of manners, turn-taking, honesty and respectful behaviour.",
+   "done": "Kind words and actions help everyone feel good."
+  },
+  {
+   "subject": "Mathematics",
+   "curriculum": "Cambridge",
+   "domain": "Logical and Analytical Thinking",
+   "id": "camp1-bonds",
+   "grade": 1,
+   "title": "Number bonds to 10",
+   "topic": "Number: addition",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary Mathematics (0096), Stage 1: Number (pairs of numbers that make 10)",
+   "intention": "Today I am finding pairs of numbers that make 10.",
+   "prompt": "How many fingers do you have altogether?",
+   "lesson": [
+    {
+     "h": "Ten fingers",
+     "say": "You have ten fingers. If you hold up 7 fingers, 3 are down. 7 and 3 make 10.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🖐️🖐️</p><p>7 + 3 = 10</p>"
+    },
+    {
+     "h": "All the pairs",
+     "say": "These pairs all make 10: 1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">1 + 9</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">2 + 8</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">3 + 7</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">4 + 6</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">5 + 5</span></div>"
+    },
+    {
+     "h": "Missing numbers",
+     "say": "If 6 plus something makes 10, count on from 6 to 10: 7, 8, 9, 10. That is 4.",
+     "html": "<p>6 + <b>4</b> = 10</p>"
+    }
+   ],
+   "example": {
+    "q": "8 + ? = 10",
+    "steps": [
+     "Start at 8.",
+     "Count on: 9, 10.",
+     "That is 2 more. 8 + 2 = 10."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "3 + ? = 10",
+     "pics": [
+      "7️⃣",
+      "6️⃣",
+      "3️⃣"
+     ],
+     "options": [
+      "7",
+      "6",
+      "3"
+     ],
+     "answer": 0,
+     "hints": [
+      "Count on from 3.",
+      "4, 5, 6, 7, 8, 9, 10.",
+      "7."
+     ],
+     "explain": "3 + 7 = 10."
+    },
+    {
+     "type": "mcq",
+     "q": "Which pair makes 10?",
+     "options": [
+      "4 and 6",
+      "4 and 5",
+      "3 and 3",
+      "2 and 9"
+     ],
+     "answer": 0,
+     "hints": [
+      "Add each pair.",
+      "4 + 6.",
+      "10."
+     ],
+     "explain": "4 + 6 = 10."
+    },
+    {
+     "type": "num",
+     "q": "5 + ? = 10",
+     "answer": "5",
+     "options": [
+      "5",
+      "4",
+      "6",
+      "10"
+     ],
+     "hints": [
+      "Double 5.",
+      "5 and 5.",
+      "5."
+     ],
+     "explain": "5 + 5 = 10."
+    },
+    {
+     "type": "num",
+     "q": "1 + ? = 10",
+     "answer": "9",
+     "options": [
+      "9",
+      "8",
+      "10",
+      "1"
+     ],
+     "hints": [
+      "Count on from 1.",
+      "Nine more steps.",
+      "9."
+     ],
+     "explain": "1 + 9 = 10."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Using my fingers",
+     "Counting on",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found pairs of numbers that make 10.",
+   "teacher": "Shows recalling number bonds to 10 and finding missing addends by counting on.",
+   "done": "Pairs that make 10: 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5."
+  },
+  {
+   "subject": "English",
+   "curriculum": "Cambridge",
+   "domain": "Communication and Expression",
+   "id": "camp1-rhymes",
+   "grade": 1,
+   "title": "Rhyming words",
+   "topic": "Phonics: rhyme",
+   "category": "Pattern Thinking",
+   "caps": "Cambridge Primary English (0058), Stage 1: Reading (hearing and making rhymes)",
+   "intention": "Today I am finding words that rhyme.",
+   "prompt": "Do you know a song with rhyming words?",
+   "lesson": [
+    {
+     "h": "What is a rhyme?",
+     "say": "Words rhyme when they end with the same sound. Cat and hat rhyme. Dog and log rhyme.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🐱 🎩</p><p>c<b>at</b>, h<b>at</b></p>"
+    },
+    {
+     "h": "Listen for the end",
+     "say": "Say the words aloud and listen to the end. Sun, run, fun. They all end in un.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">sun</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">run</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">fun</span></div>"
+    },
+    {
+     "h": "Make your own",
+     "say": "Change the first sound to make a new rhyme. From bed you can make red and fed.",
+     "html": "<p>b<b>ed</b> → r<b>ed</b> → f<b>ed</b></p>"
+    }
+   ],
+   "example": {
+    "q": "What rhymes with 'pig'?",
+    "steps": [
+     "Pig ends with 'ig'.",
+     "Change the first sound.",
+     "Big, dig and wig all rhyme with pig."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'cat'?",
+     "pics": [
+      "🎩",
+      "🐶",
+      "☀️"
+     ],
+     "options": [
+      "hat",
+      "dog",
+      "sun"
+     ],
+     "answer": 0,
+     "hints": [
+      "Listen to the end sound.",
+      "c-at.",
+      "h-at."
+     ],
+     "explain": "Cat and hat both end in 'at'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'sun'?",
+     "pics": [
+      "🏃",
+      "🌙",
+      "🐟"
+     ],
+     "options": [
+      "run",
+      "moon",
+      "fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "s-un.",
+      "Which ends in 'un'?",
+      "Run."
+     ],
+     "explain": "Sun and run both end in 'un'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which word rhymes with 'log'?",
+     "pics": [
+      "🐸",
+      "🐄",
+      "🚗"
+     ],
+     "options": [
+      "frog",
+      "cow",
+      "car"
+     ],
+     "answer": 0,
+     "hints": [
+      "l-og.",
+      "Which ends in 'og'?",
+      "Frog."
+     ],
+     "explain": "Log and frog both end in 'og'."
+    },
+    {
+     "type": "mcq",
+     "q": "Which two words rhyme?",
+     "options": [
+      "bed and red",
+      "bed and bat",
+      "red and run",
+      "sun and sit"
+     ],
+     "answer": 0,
+     "hints": [
+      "Look at the ends.",
+      "Same ending sound.",
+      "-ed."
+     ],
+     "explain": "Bed and red both end in 'ed'."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Saying the words aloud",
+     "Looking at the pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found and made rhyming words.",
+   "teacher": "Shows recognising and generating rhymes by identifying shared word endings.",
+   "done": "Rhyming words end with the same sound."
+  },
+  {
+   "subject": "Science",
+   "curriculum": "Cambridge",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Inquiry and Exploration",
+   "id": "camp1-living",
+   "grade": 1,
+   "title": "Living and not living",
+   "topic": "Biology: living things",
+   "caps": "Cambridge Primary Science (0097), Stage 1: Biology (sorting living and non-living things)",
+   "intention": "Today I am sorting things into living and not living.",
+   "prompt": "Is a tree alive? How do you know?",
+   "lesson": [
+    {
+     "h": "Living things",
+     "say": "Living things grow, need food and water, and can make new living things. Plants, animals and people are living.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🌳 🐕 👧</p>"
+    },
+    {
+     "h": "Not living",
+     "say": "Things that are not living do not grow, eat or breathe. A rock, a chair and a ball are not living.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🪨 🪑 ⚽</p>"
+    },
+    {
+     "h": "Was once alive",
+     "say": "Some things were alive once, like a wooden table that came from a tree, or a dry leaf.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍂 🪵</p>"
+    }
+   ],
+   "example": {
+    "q": "Is a dog living or not living?",
+    "steps": [
+     "A dog eats and drinks.",
+     "A dog grows and can have puppies.",
+     "A dog is living."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which one is living?",
+     "pics": [
+      "🌻",
+      "🪨",
+      "🧸"
+     ],
+     "options": [
+      "A sunflower",
+      "A rock",
+      "A teddy"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one grows?",
+      "It needs water.",
+      "The sunflower."
+     ],
+     "explain": "A sunflower grows and needs water."
+    },
+    {
+     "type": "mcq",
+     "q": "Which one is NOT living?",
+     "pics": [
+      "🚗",
+      "🐦",
+      "🐟"
+     ],
+     "options": [
+      "A car",
+      "A bird",
+      "A fish"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which one doesn't eat?",
+      "It doesn't grow.",
+      "The car."
+     ],
+     "explain": "A car doesn't grow, eat or breathe."
+    },
+    {
+     "type": "mcq",
+     "q": "What do all living things need?",
+     "pics": [
+      "💧",
+      "📺",
+      "🎮"
+     ],
+     "options": [
+      "Water",
+      "A TV",
+      "Games"
+     ],
+     "answer": 0,
+     "hints": [
+      "Plants and animals both need it.",
+      "We drink it.",
+      "Water."
+     ],
+     "explain": "All living things need water."
+    },
+    {
+     "type": "sort",
+     "q": "Sort them.",
+     "items": [
+      "Tree",
+      "Ball",
+      "Cat",
+      "Chair"
+     ],
+     "bins": [
+      "Living",
+      "Not living"
+     ],
+     "answer": [
+      0,
+      1,
+      0,
+      1
+     ],
+     "hints": [
+      "Which ones grow?",
+      "Tree and cat grow.",
+      "Ball and chair don't."
+     ],
+     "explain": "The tree and cat are living; the ball and chair are not."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Asking 'does it grow?'",
+     "The pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child sorted things into living and not living.",
+   "teacher": "Shows identifying characteristics of living things and classifying objects.",
+   "done": "Living things grow, need food and water, and make new living things."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Communication and Expression",
+   "category": "Communication",
+   "id": "sid1-hello",
+   "grade": 1,
+   "subject": "English Home Language",
+   "title": "Saying hello",
+   "topic": "Listening and speaking: greetings",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Home Language (listening and speaking: greetings in everyday situations)",
+   "intention": "Today I am learning to say hello and goodbye.",
+   "prompt": "Who do you say hello to every day?",
+   "lesson": [
+    {
+     "h": "Hello and goodbye",
+     "say": "When we meet someone, we say hello. When we leave, we say goodbye.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">👋 Hello</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">👋 Goodbye</span></div>"
+    },
+    {
+     "h": "Look and smile",
+     "say": "When you say hello, look at the person and smile. You can wave too.",
+     "html": "<p style=\"font-size:2rem;margin:0\">😊 👋</p>"
+    },
+    {
+     "h": "My name",
+     "say": "You can say: Hello, my name is. Then say your name.",
+     "html": "<p><b>Hello, my name is ___.</b></p>"
+    }
+   ],
+   "example": {
+    "q": "Gogo comes to visit. What do you say?",
+    "steps": [
+     "Gogo has just arrived.",
+     "We are meeting her.",
+     "We say: Hello, Gogo!"
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Your teacher arrives in the morning. What do you say?",
+     "pics": [
+      "👋",
+      "😴",
+      "🍎"
+     ],
+     "options": [
+      "Hello",
+      "Goodnight",
+      "Apple"
+     ],
+     "answer": 0,
+     "hints": [
+      "You are meeting your teacher.",
+      "We greet people we meet.",
+      "Hello."
+     ],
+     "explain": "We say hello when we meet someone."
+    },
+    {
+     "type": "mcq",
+     "q": "Your friend is going home. What do you say?",
+     "pics": [
+      "👋",
+      "🎂",
+      "🐶"
+     ],
+     "options": [
+      "Goodbye",
+      "Happy birthday",
+      "Dog"
+     ],
+     "answer": 0,
+     "hints": [
+      "Your friend is leaving.",
+      "What do we say when someone leaves?",
+      "Goodbye."
+     ],
+     "explain": "We say goodbye when someone leaves."
+    },
+    {
+     "type": "order",
+     "q": "Put it in order.",
+     "items": [
+      "Look at the person",
+      "Smile",
+      "Say hello"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "First we look.",
+      "Then we smile.",
+      "Then we say hello."
+     ],
+     "explain": "Look, smile, say hello."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Practising with someone",
+     "The pictures",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child practised greeting people: hello, goodbye and saying their name.",
+   "teacher": "Shows using greetings in context with eye contact and gesture (functional listening and speaking).",
+   "done": "Look, smile, and say hello."
+  },
+  {
+   "curriculum": "CAPS-SID",
+   "domain": "Inquiry and Systems Thinking",
+   "category": "Planning and Organisation",
+   "id": "sid1-teeth",
+   "grade": 1,
+   "subject": "Life Skills",
+   "title": "Brushing my teeth",
+   "topic": "Personal and social well-being: hygiene",
+   "caps": "CAPS for Learners with Severe Intellectual Disability (draft): Life Skills (personal and social well-being: personal hygiene routines)",
+   "intention": "Today I am learning how to brush my teeth.",
+   "prompt": "When do you brush your teeth?",
+   "lesson": [
+    {
+     "h": "Why we brush",
+     "say": "We brush our teeth to keep them clean and strong. We brush in the morning and at night.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">☀️ morning</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">🌙 night</span></div>"
+    },
+    {
+     "h": "What I need",
+     "say": "You need a toothbrush, toothpaste and water. Use a little toothpaste, the size of a pea.",
+     "html": "<p>Toothbrush · toothpaste · 💧 water</p>"
+    },
+    {
+     "h": "How to brush",
+     "say": "Wet the brush. Put on toothpaste. Brush every tooth, front and back. Spit and rinse.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wet</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Toothpaste</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Brush</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Spit</span></div>"
+    }
+   ],
+   "example": {
+    "q": "It is bedtime. What do you do before you sleep?",
+    "steps": [
+     "It is night.",
+     "We brush our teeth at night.",
+     "Brush your teeth, then sleep."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "When do we brush our teeth?",
+     "pics": [
+      "🌙",
+      "🏫",
+      "⚽"
+     ],
+     "options": [
+      "At night, before bed",
+      "Only at school",
+      "When playing soccer"
+     ],
+     "answer": 0,
+     "hints": [
+      "Morning and…",
+      "…night.",
+      "Before bed."
+     ],
+     "explain": "We brush in the morning and at night."
+    },
+    {
+     "type": "mcq",
+     "q": "What do we brush our teeth with?",
+     "pics": [
+      "🪥",
+      "🍴",
+      "🖍️"
+     ],
+     "options": [
+      "A toothbrush",
+      "A fork",
+      "A crayon"
+     ],
+     "answer": 0,
+     "hints": [
+      "It has soft bristles.",
+      "Not for eating or drawing.",
+      "A toothbrush."
+     ],
+     "explain": "We use a toothbrush."
+    },
+    {
+     "type": "order",
+     "q": "Put the steps in order.",
+     "items": [
+      "Wet the brush",
+      "Put on toothpaste",
+      "Brush every tooth",
+      "Spit and rinse"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "First we wet the brush.",
+      "Toothpaste comes next.",
+      "Spit and rinse comes last."
+     ],
+     "explain": "Wet, toothpaste, brush, spit and rinse."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Doing the steps in order",
+     "Practising at home",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child learnt when and how to brush their teeth.",
+   "teacher": "Shows sequencing a personal hygiene routine (personal and social well-being).",
+   "done": "Brush in the morning and at night, every tooth."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Mathematics",
+   "domain": "Logical and Analytical Thinking",
+   "id": "pyp1-measure",
+   "grade": 1,
+   "title": "Longer and shorter",
+   "topic": "Measurement",
+   "category": "Pattern Thinking",
+   "caps": "IB PYP Mathematics: measurement (comparing and ordering lengths; non-standard units)",
+   "intention": "Today I am comparing how long things are.",
+   "prompt": "Who is the tallest person in your family?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: We compare and measure things to describe our world. Key concept: Form. Today we are inquirers.",
+     "html": "<p><b>Central idea:</b> We compare and measure things to describe our world.</p><p>Key concept: <b>Form</b> · Learner profile: <b>Inquirers</b></p>"
+    },
+    {
+     "h": "Longer and shorter",
+     "say": "Put two things side by side, starting at the same line. The one that goes further is longer.",
+     "html": "<p style=\"font-size:2rem;margin:0\">✏️<br>🖍️</p><p>The pencil is <b>longer</b> than the crayon.</p>"
+    },
+    {
+     "h": "Measuring with hands",
+     "say": "We can measure with hand spans or paper clips. The table is 6 hand spans long.",
+     "html": "<p>Table: 🖐️🖐️🖐️🖐️🖐️🖐️ = <b>6 hand spans</b></p>"
+    }
+   ],
+   "example": {
+    "q": "A book is 4 paper clips long. A pencil is 6 paper clips long. Which is longer?",
+    "steps": [
+     "Compare the numbers: 4 and 6.",
+     "6 is more than 4.",
+     "The pencil is longer."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is longer?",
+     "pics": [
+      "🐍",
+      "🐛"
+     ],
+     "options": [
+      "The snake",
+      "The caterpillar"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which stretches further?",
+      "Snakes are long.",
+      "The snake."
+     ],
+     "explain": "The snake is longer."
+    },
+    {
+     "type": "mcq",
+     "q": "Why do we line things up at the same start?",
+     "options": [
+      "So the comparison is fair",
+      "To make them look nice",
+      "Because it is faster",
+      "It doesn't matter"
+     ],
+     "answer": 0,
+     "hints": [
+      "If one starts further ahead…",
+      "…it might look longer.",
+      "Fair."
+     ],
+     "explain": "Starting at the same line makes the comparison fair."
+    },
+    {
+     "type": "num",
+     "q": "A desk is 5 hand spans. A rug is 9 hand spans. How many more hand spans is the rug?",
+     "answer": "4",
+     "options": [
+      "4",
+      "14",
+      "5",
+      "9"
+     ],
+     "hints": [
+      "Find the difference.",
+      "9 − 5.",
+      "4."
+     ],
+     "explain": "9 − 5 = 4 hand spans."
+    },
+    {
+     "type": "order",
+     "q": "Put them in order, shortest first.",
+     "items": [
+      "Ant",
+      "Cat",
+      "Giraffe"
+     ],
+     "orderLabel": "shortest to longest",
+     "hints": [
+      "Which is tiny?",
+      "Which is in the middle?",
+      "Which is very tall?"
+     ],
+     "explain": "Ant, cat, giraffe."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "Lining things up",
+     "Counting hand spans",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child compared and measured lengths using hands and paper clips.",
+   "teacher": "Shows comparing and ordering lengths and measuring with non-standard units (inquirer).",
+   "done": "Line things up to compare. Count units to measure."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Language",
+   "domain": "Communication and Expression",
+   "id": "pyp1-story",
+   "grade": 1,
+   "title": "Beginning, middle and end",
+   "topic": "Reading and storytelling",
+   "category": "Creativity",
+   "caps": "IB PYP Language: reading and oral language (story structure: beginning, middle and end)",
+   "intention": "Today I am finding the beginning, middle and end of a story.",
+   "prompt": "What is your favourite story?",
+   "lesson": [
+    {
+     "h": "Central idea",
+     "say": "Central idea: Stories help us share ideas and feelings. Key concept: Form. Today we are communicators.",
+     "html": "<p><b>Central idea:</b> Stories help us share ideas and feelings.</p><p>Key concept: <b>Form</b> · Learner profile: <b>Communicators</b></p>"
+    },
+    {
+     "h": "Every story has three parts",
+     "say": "The beginning tells us who and where. The middle has a problem. The end tells us how it was solved.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Beginning: who and where</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Middle: a problem</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">End: solved</span></div>"
+    },
+    {
+     "h": "A little story",
+     "say": "Lindi planted a seed. The seed did not grow because there was no rain. Lindi watered it every day, and it grew into a sunflower.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🌱 🌧️ 🌻</p>"
+    }
+   ],
+   "example": {
+    "q": "What is the problem in Lindi's story?",
+    "steps": [
+     "Look at the middle.",
+     "The seed did not grow.",
+     "There was no rain."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "How does Lindi's story begin?",
+     "pics": [
+      "🌱",
+      "🌻",
+      "🌧️"
+     ],
+     "options": [
+      "Lindi plants a seed",
+      "A sunflower grows",
+      "It rains"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens first?",
+      "Before the problem.",
+      "She plants a seed."
+     ],
+     "explain": "The story begins when Lindi plants a seed."
+    },
+    {
+     "type": "mcq",
+     "q": "How does the story end?",
+     "pics": [
+      "🌻",
+      "🌱",
+      "☀️"
+     ],
+     "options": [
+      "It grows into a sunflower",
+      "She plants a seed",
+      "The sun shines"
+     ],
+     "answer": 0,
+     "hints": [
+      "What happens last?",
+      "After she waters it.",
+      "A sunflower."
+     ],
+     "explain": "It ends when the seed grows into a sunflower."
+    },
+    {
+     "type": "order",
+     "q": "Put the story in order.",
+     "items": [
+      "Lindi planted a seed",
+      "It did not grow",
+      "She watered it every day",
+      "It grew into a sunflower"
+     ],
+     "orderLabel": "first to last",
+     "hints": [
+      "Start with planting.",
+      "Then the problem.",
+      "Watering comes before growing."
+     ],
+     "explain": "Plant, problem, water, grow."
+    },
+    {
+     "type": "mcq",
+     "q": "What does the middle of a story usually have?",
+     "options": [
+      "A problem",
+      "The title",
+      "The end",
+      "Nothing"
+     ],
+     "answer": 0,
+     "hints": [
+      "Something goes wrong.",
+      "In the middle.",
+      "A problem."
+     ],
+     "explain": "The middle usually has a problem."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pictures",
+     "Retelling the story",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child found the beginning, middle and end of a story.",
+   "teacher": "Shows identifying story structure and sequencing events (communicator).",
+   "done": "Beginning, middle with a problem, and an end that solves it."
+  },
+  {
+   "curriculum": "IB",
+   "subject": "Personal, Social and Physical Education",
+   "id": "pyp1-healthy",
+   "grade": 1,
+   "title": "Keeping my body healthy",
+   "topic": "Who we are: health",
+   "domain": "Creativity and Metacognition",
+   "category": "Emotional Readiness",
+   "caps": "IB PYP PSPE, transdisciplinary theme 'Who we are': healthy choices: food, sleep, exercise and hygiene",
+   "intention": "Today I am finding out what my body needs to be healthy.",
+   "prompt": "What do you do to feel strong and well?",
+   "lesson": [
+    {
+     "h": "Theme: Who we are",
+     "say": "Our theme is Who we are. Central idea: The choices we make help our bodies stay healthy. Key concept: Responsibility. Today we are balanced.",
+     "html": "<p><b>Central idea:</b> The choices we make help our bodies stay healthy.</p><p>Key concept: <b>Responsibility</b> · Learner profile: <b>Balanced</b></p>"
+    },
+    {
+     "h": "What my body needs",
+     "say": "My body needs healthy food, water, sleep and exercise to grow strong.",
+     "html": "<p style=\"font-size:2rem;margin:0\">🍎 💧 😴 🏃</p>"
+    },
+    {
+     "h": "Every day",
+     "say": "Playing outside, eating fruit and vegetables, and washing my hands help me stay healthy.",
+     "html": "<div class=\"row\" style=\"gap:8px\"><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Play</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Eat well</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Wash hands</span><span aria-hidden=\"true\">&rarr;</span><span class=\"chip\" style=\"font-size:1rem;padding:0 10px\">Sleep</span></div>"
+    }
+   ],
+   "example": {
+    "q": "Is an apple or a packet of sweets a healthier snack?",
+    "steps": [
+     "An apple has vitamins and fibre.",
+     "Sweets have lots of sugar.",
+     "The apple is healthier."
+    ]
+   },
+   "questions": [
+    {
+     "type": "mcq",
+     "q": "Which is a healthy snack?",
+     "pics": [
+      "🍌",
+      "🍭",
+      "🍟"
+     ],
+     "options": [
+      "A banana",
+      "A lollipop",
+      "Chips"
+     ],
+     "answer": 0,
+     "hints": [
+      "Which grows on a plant?",
+      "Fruit.",
+      "A banana."
+     ],
+     "explain": "Fruit is a healthy snack."
+    },
+    {
+     "type": "mcq",
+     "q": "What does your body need every night?",
+     "pics": [
+      "😴",
+      "📱",
+      "🍬"
+     ],
+     "options": [
+      "Sleep",
+      "A phone",
+      "Sweets"
+     ],
+     "answer": 0,
+     "hints": [
+      "At night we…",
+      "…rest.",
+      "Sleep."
+     ],
+     "explain": "Sleep helps your body grow and rest."
+    },
+    {
+     "type": "mcq",
+     "q": "Which keeps your body strong?",
+     "pics": [
+      "🏃",
+      "📺",
+      "🛋️"
+     ],
+     "options": [
+      "Running and playing",
+      "Watching TV all day",
+      "Sitting all day"
+     ],
+     "answer": 0,
+     "hints": [
+      "Move your body.",
+      "Exercise.",
+      "Running."
+     ],
+     "explain": "Exercise keeps you strong."
+    },
+    {
+     "type": "mcq",
+     "q": "What should you drink most?",
+     "pics": [
+      "💧",
+      "🥤",
+      "🧋"
+     ],
+     "options": [
+      "Water",
+      "Fizzy drinks",
+      "Sweet tea"
+     ],
+     "answer": 0,
+     "hints": [
+      "It has no sugar.",
+      "From the tap.",
+      "Water."
+     ],
+     "explain": "Water is the best drink."
+    }
+   ],
+   "reflect": {
+    "q": "What helped you most?",
+    "options": [
+     "The pictures",
+     "Thinking about my day",
+     "Not sure"
+    ]
+   },
+   "parent": "Your child explored food, sleep and exercise choices that keep them healthy.",
+   "teacher": "Who we are: shows identifying healthy choices and taking responsibility for wellbeing (balanced).",
+   "done": "Healthy food, water, sleep and play keep me strong."
+  }
+ ],
+ "words": {
+  "g1-count": {
+   "words": [
+    [
+     "⬅️",
+     "Before",
+     "one less"
+    ],
+    [
+     "➡️",
+     "After",
+     "one more"
+    ]
+   ]
+  },
+  "g1-addsub": {
+   "words": [
+    [
+     "➕",
+     "Add",
+     "put groups together"
+    ],
+    [
+     "➖",
+     "Take away",
+     "some go, so there are fewer"
+    ],
+    [
+     "🔟",
+     "Number bond",
+     "two numbers that make a total"
+    ]
+   ]
+  },
+  "g1-share": {
+   "words": [
+    [
+     "⚖️",
+     "Fair",
+     "everyone gets the same"
+    ],
+    [
+     "➕",
+     "Remainder",
+     "what is left over"
+    ]
+   ]
+  },
+  "g1-money": {
+   "words": [
+    [
+     "🪙",
+     "Coin",
+     "round metal money"
+    ],
+    [
+     "💵",
+     "Note",
+     "paper money"
+    ],
+    [
+     "🔁",
+     "Change",
+     "money you get back when you pay too much"
+    ]
+   ]
+  },
+  "g1-phonics": {
+   "words": [
+    [
+     "🔊",
+     "Blend",
+     "put sounds together to say a word"
+    ],
+    [
+     "👪",
+     "Word family",
+     "words that end the same way"
+    ]
+   ]
+  },
+  "g1-sentences": {
+   "words": [
+    [
+     "🔠",
+     "Capital letter",
+     "a big letter, like A or T"
+    ],
+    [
+     "⏺️",
+     "Full stop",
+     "a dot that ends a sentence"
+    ]
+   ]
+  },
+  "g1-story": {
+   "words": [
+    [
+     "🌱",
+     "Shoot",
+     "the first green part of a new plant"
+    ],
+    [
+     "👦",
+     "Character",
+     "a person or animal in a story"
+    ]
+   ]
+  },
+  "g1-words": {
+   "words": [
+    [
+     "🏷️",
+     "Noun",
+     "a naming word"
+    ],
+    [
+     "🏃",
+     "Verb",
+     "a doing word"
+    ]
+   ]
+  },
+  "g1-healthy": {
+   "words": [
+    [
+     "🦠",
+     "Germs",
+     "tiny living things that can make us sick"
+    ],
+    [
+     "🔁",
+     "Habit",
+     "something you do again and again"
+    ]
+   ]
+  },
+  "g1-homesafe": {
+   "words": [
+    [
+     "☠️",
+     "Poison",
+     "something that makes you very sick if you eat or drink it"
+    ],
+    [
+     "🚑",
+     "Emergency",
+     "a time when someone needs help fast"
+    ]
+   ]
+  },
+  "g1-plants": {
+   "words": [
+    [
+     "🌱",
+     "Roots",
+     "the part under the ground that drinks water"
+    ],
+    [
+     "🌿",
+     "Stem",
+     "the part that holds the plant up"
+    ]
+   ]
+  },
+  "g1-manners": {
+   "words": [
+    [
+     "🤝",
+     "Respect",
+     "treating people with care"
+    ],
+    [
+     "✅",
+     "Honest",
+     "telling the truth"
+    ]
+   ]
+  },
+  "camp1-bonds": {
+   "words": [
+    [
+     "🤝",
+     "Number bond",
+     "two numbers that make a total"
+    ],
+    [
+     "🔟",
+     "Ten",
+     "the number of fingers on two hands"
+    ],
+    [
+     "❓",
+     "Missing number",
+     "the number you need to find"
+    ]
+   ]
+  },
+  "camp1-rhymes": {
+   "words": [
+    [
+     "🎵",
+     "Rhyme",
+     "words that end with the same sound"
+    ],
+    [
+     "🔚",
+     "End",
+     "the last part"
+    ]
+   ]
+  },
+  "camp1-living": {
+   "words": [
+    [
+     "🌱",
+     "Living",
+     "it grows, eats and breathes"
+    ],
+    [
+     "🪨",
+     "Not living",
+     "it was never alive"
+    ],
+    [
+     "🍂",
+     "Once alive",
+     "it was alive before, like a dry leaf"
+    ]
+   ]
+  },
+  "sid1-hello": {
+   "words": [
+    [
+     "👋",
+     "Hello",
+     "what we say when we meet someone"
+    ],
+    [
+     "🚪",
+     "Goodbye",
+     "what we say when we leave"
+    ],
+    [
+     "🙂",
+     "Smile",
+     "a happy face"
+    ]
+   ]
+  },
+  "sid1-teeth": {
+   "words": [
+    [
+     "🦷",
+     "Teeth",
+     "the hard white parts in your mouth for biting"
+    ],
+    [
+     "🪥",
+     "Toothbrush",
+     "a small brush for your teeth"
+    ],
+    [
+     "🧴",
+     "Toothpaste",
+     "the paste you put on the brush"
+    ]
+   ]
+  },
+  "pyp1-measure": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "📏",
+     "Longer",
+     "more long"
+    ],
+    [
+     "✋",
+     "Measure",
+     "find out how long something is"
+    ]
+   ]
+  },
+  "pyp1-story": {
+   "words": [
+    [
+     "💡",
+     "Central idea",
+     "the big idea we are learning about"
+    ],
+    [
+     "🟢",
+     "Beginning",
+     "the start"
+    ],
+    [
+     "🟡",
+     "Middle",
+     "the part in between"
+    ],
+    [
+     "🔴",
+     "End",
+     "the last part"
+    ]
+   ]
+  },
+  "pyp1-healthy": {
+   "words": [
+    [
+     "🌍",
+     "Theme",
+     "the big topic we explore across subjects"
+    ],
+    [
+     "🥕",
+     "Healthy",
+     "well and strong"
+    ],
+    [
+     "😴",
+     "Rest",
+     "sleep or stay still so your body can recover"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@tl/data",
+  "private": true,
+  "description": "The only module that reads or saves data: offline-first local store, outbox and server transports.",
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./supabase": "./src/supabase-transport.ts" },
+  "dependencies": { "idb": "8.0.4" },
+  "peerDependencies": { "@supabase/supabase-js": "2.118.0" },
+  "peerDependenciesMeta": { "@supabase/supabase-js": { "optional": true } }
+}
