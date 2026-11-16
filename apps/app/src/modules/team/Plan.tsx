@@ -37,7 +37,7 @@ export function Goals({ me, learner }: { me: Account; learner: Learner }) {
         <form className="tl-stack" onSubmit={e => { e.preventDefault(); s.addGoal(learner.id, { text, area, target }).then(() => { setText(""); setTarget(""); setError(""); done("Goal added."); }, (err: Error) => setError(err.message)); }}>
           <VoiceField label="Goal" value={text} onChange={setText} hint="Small and observable, for example: follows a 3-step plan without reminders." error={error} required />
           <div className="tl-field"><label htmlFor="gArea">Area</label><select id="gArea" value={area} onChange={e => setArea(e.target.value)}>{AREAS.map(a => <option key={a}>{a}</option>)}</select></div>
-          <div className="tl-field"><label htmlFor="gTarget">Target date (optional)</label><input id="gTarget" type="date" value={target} onChange={e => setTarget(e.target.value)} /></div>
+          <div className="tl-field"><label htmlFor="gTarget">Target date</label><input id="gTarget" type="date" value={target} onChange={e => setTarget(e.target.value)} /></div>
           <div className="tl-row"><Button type="submit" variant="primary">Add goal</Button></div>
         </form>
       </Card> : null}
@@ -64,7 +64,7 @@ function AddObservation({ goal, onSave }: { goal: Goal; onSave: (level: Observat
     <details className="goal-add"><summary>Add an observation</summary>
       <fieldset><legend>How did it go?</legend>{(Object.keys(LEVEL_TEXT) as Observation["level"][]).map(k =>
         <label key={k} className="consent" htmlFor={`go-${goal.id}-${k}`}><input type="radio" name={`go-${goal.id}`} id={`go-${goal.id}-${k}`} checked={level === k} onChange={() => setLevel(k)} /><span>{LEVEL_MARK[k]} {LEVEL_TEXT[k]}</span></label>)}</fieldset>
-      <Field label="What you saw (optional)" value={note} onChange={setNote} multiline />
+      <Field label="What you saw" value={note} onChange={setNote} multiline />
       <div className="tl-row"><Button small variant="primary" onClick={() => void onSave(level, note).then(() => setNote(""))}>Save observation</Button></div>
     </details>
   );

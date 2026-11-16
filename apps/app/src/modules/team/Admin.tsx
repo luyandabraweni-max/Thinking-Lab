@@ -63,7 +63,7 @@ function AddStaff({ api, org, invites, onChange }: { api: OrgAdmin; org: string;
       <h2>Add staff</h2>
       <div className="note"><More label="About this">Enter a colleague's work email. If they already use Thinking Lab, they join straight away. If not, they join when they register with that email. We don't send them an email: tell them yourself.</More></div>
       <form className="tl-stack" onSubmit={e => { e.preventDefault(); void add(); }}>
-        <Field label="Their email address" value={email} onChange={setEmail} type="email" autoComplete="off" error={error} />
+        <Field label="Their email address" value={email} onChange={setEmail} type="email" autoComplete="off" error={error} required />
         <div className="tl-field"><label htmlFor="stRole">Their role</label>
           <select id="stRole" value={role} onChange={e => setRole(e.target.value as StaffInvite["role"])}>{(Object.keys(ROLE) as StaffInvite["role"][]).map(k => <option key={k} value={k}>{ROLE[k]}</option>)}</select></div>
         <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !email.trim()}>Add to {org}</Button></div>

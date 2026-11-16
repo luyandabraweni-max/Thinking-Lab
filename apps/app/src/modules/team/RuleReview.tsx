@@ -40,7 +40,7 @@ function OneRule({ rule, name, text, mine, others, onSave }: { rule: string; nam
       <h2 id={`rr-${rule}`}>{name}</h2><p>{text}</p>
       <fieldset><legend>Your view</legend>{(Object.keys(VERDICTS) as Review["verdict"][]).map(v =>
         <label key={v} className="consent"><input type="radio" name={`rv-${rule}`} checked={verdict === v} onChange={() => setVerdict(v)} /><span>{VERDICTS[v]}</span></label>)}</fieldset>
-      <div className="tl-field"><label htmlFor={`rc-${rule}`}>What would you change, and why? (optional)</label>
+      <div className="tl-field"><label htmlFor={`rc-${rule}`}>What would you change, and why?</label>
         <textarea id={`rc-${rule}`} rows={2} maxLength={800} value={comment} onChange={e => setComment(e.target.value)} /></div>
       {error ? <p className="tl-error" role="alert">{error}</p> : null}
       <div className="tl-row"><Button small variant="primary" onClick={() => { if (!verdict) return setError("Choose your view first."); setError(""); void onSave(verdict, comment); }}>Save my review of {name}</Button></div>

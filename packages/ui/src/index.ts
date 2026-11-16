@@ -1,3 +1,3 @@
 // Public interface of the design system. Import the styles once with: import "@tl/ui/tokens.css".
 export { Button, Card, Field, More, Notice, TabPanel, Tabs, type FieldProps, type Tab } from "./components";
-export { applyPrefs, DEFAULT_PREFS, motionAllowed, type Prefs } from "./prefs";
+export { applyPrefs, applyTextSize, DEFAULT_PREFS, motionAllowed, type Prefs, type TextSize } from "./prefs";

@@ -53,7 +53,7 @@ export function Field({ label, value, onChange, hint, error, multiline, required
     onChange: (e: { target: { value: string } }) => onChange(e.target.value) };
   return (
     <div className="tl-field">
-      <label htmlFor={id}>{label}{required ? <span className="tl-muted"> (needed)</span> : null}</label>
+      <label htmlFor={id}>{label}{required ? <span className="tl-req" aria-hidden="true"> *</span> : null}</label>
       {hint ? <p className="tl-hint" id={hintId}>{hint}</p> : null}
       <div className="tl-field-input">
         {multiline ? <textarea {...common} /> : <input type={type} autoComplete={autoComplete} {...common} />}

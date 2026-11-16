@@ -170,3 +170,5 @@ p { margin: 0; }
 .tl-more-i { display: inline-grid; place-items: center; width: 1.3em; height: 1.3em; border-radius: 50%; border: 2px solid currentColor; font-family: Georgia, serif; font-style: italic; font-weight: 700; font-size: 0.85em; line-height: 1; }
 .tl-more-btn[aria-expanded="true"] .tl-more-i { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
 .tl-more-text { display: block; color: var(--muted); font-size: 0.97rem; margin: 4px 0 6px; white-space: pre-wrap; }
+/* A required field: the asterisk is for sight; the input itself tells screen readers it is required. */
+.tl-req { color: var(--crit); font-weight: 700; }

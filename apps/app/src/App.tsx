@@ -1,5 +1,5 @@
 import type { Account, Learner } from "@tl/data";
-import { Button } from "@tl/ui";
+import { applyTextSize, Button, type TextSize } from "@tl/ui";
 import type { SpeechEngine } from "@tl/voice";
 import { VoiceProvider } from "@tl/voice/react";
 import { useEffect, useRef, useState } from "react";
@@ -30,16 +30,23 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
     return () => { live = false; stop?.(); };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- once, when the app opens
   }, [services]);
+  // Adults choose their own text size on this device; a learner's My way choice applies while the learner is here.
+  const [size, setSize] = useState<TextSize>(() => { try { return (localStorage.getItem("text-size") as TextSize | null) ?? "normal"; } catch { return "normal"; } });
+  useEffect(() => { if (view.at !== "space") applyTextSize(size); }, [size, view.at]);
+  const chooseSize = (s: TextSize) => { setSize(s); try { localStorage.setItem("text-size", s); } catch { /* private mode: this visit only */ } };
   const signOut = async (next: View = { at: "front" }) => { await services.auth.signOut(); signedInRef.current = false; setMe(null); setRegistering(false); setPw(null); setView(next); };
   return (
     <ServicesProvider services={services}>
       <VoiceProvider {...(voice ?? {})}>
         <WhoContext.Provider value={{ me, setMe }}>
           <a className="tl-visually-hidden" href="#main">Skip to content</a>
-          {me ? <header className="tl-page" style={{ paddingBottom: 0 }}>
+          {view.at !== "space" ? <header className="tl-page" style={{ paddingBottom: 0 }}>
             <div className="tl-row" style={{ justifyContent: "space-between" }}>
-              <p><b>{me.name}</b> <span className="tl-muted">· {ROLE_NAME[me.role]}</span></p>
-              <div className="tl-row"><Button small variant="quiet" onClick={() => setPw("change")}>Password</Button><Button small variant="quiet" onClick={() => void signOut()}>Sign out</Button></div>
+              {me ? <p><b>{me.name}</b> <span className="tl-muted">· {ROLE_NAME[me.role]}</span></p> : <span />}
+              <div className="tl-row">
+                <TextSizePicker size={size} onChange={chooseSize} />
+                {me ? <><Button small variant="quiet" onClick={() => setPw("change")}>Password</Button><Button small variant="quiet" onClick={() => void signOut()}>Sign out</Button></> : null}
+              </div>
             </div>
           </header> : null}
           <main id="main" className="tl-page">
@@ -58,3 +65,13 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
   );
 }
 const ROLE_NAME: Record<Account["role"], string> = { guardian: "Parent or guardian", teacher: "Teacher", specialist: "Specialist", site_admin: "Site admin", org_admin: "School admin" };
+
+/** Three letter buttons, small to big. Each says what it does to a screen reader. */
+function TextSizePicker({ size, onChange }: { size: TextSize; onChange: (s: TextSize) => void }) {
+  const opts: [TextSize, string, string][] = [["normal", "Usual", "0.9rem"], ["large", "Bigger", "1.1rem"], ["larger", "Biggest", "1.35rem"]];
+  return (
+    <div className="tl-row" role="group" aria-label="Text size" style={{ gap: 2 }}>
+      {opts.map(([k, name, fs]) => <Button key={k} small variant="quiet" aria-pressed={size === k} aria-label={`${name} text`} onClick={() => onChange(k)} style={{ fontSize: fs, minWidth: 40, textDecoration: "none" }}>A</Button>)}
+    </div>
+  );
+}

@@ -9,7 +9,7 @@ const FIELDS: (VoiceFormField & { hint?: string })[] = [
   { key: "name", label: "Medicine name", question: "What is the medicine called?", kind: "name", required: true },
   { key: "dose", label: "Dose", question: "How much is each dose? For example, ten milligrams, or two drops.", kind: "dose", required: true, hint: "As written on the label, for example 10 mg or 2 drops." },
   { key: "schedule", label: "When it's taken", question: "When is it taken? For example, mornings with breakfast.", kind: "text" },
-  { key: "reason", label: "What it's for (optional)", question: "What is it for? You can say next to skip this.", kind: "text" }
+  { key: "reason", label: "What it's for", question: "What is it for? You can say next to skip this.", kind: "text" }
 ];
 const EMPTY = { name: "", dose: "", schedule: "", reason: "" };
 

@@ -53,6 +53,16 @@ describe("signing in", () => {
     await user.click(screen.getByRole("button", { name: "Sign in" }));
     expect(await screen.findByRole("heading", { name: "Your children" })).toBeInTheDocument();
   });
+  it("lets an adult make the text bigger on this device, before and after signing in", async () => {
+    const user = start();
+    await user.click(await screen.findByRole("button", { name: "Biggest text" }));
+    expect(document.documentElement.style.fontSize).toBe("130%");
+    expect(screen.getByRole("button", { name: "Biggest text" })).toHaveAttribute("aria-pressed", "true");
+    await signInDemo(user, "Demo parent");
+    expect(document.documentElement.style.fontSize).toBe("130%");
+    await user.click(screen.getByRole("button", { name: "Usual text" }));
+    expect(document.documentElement.style.fontSize).toBe("100%");
+  });
   it("shows a school admin totals and staff, never learner records, and lets them choose the safeguarding lead", async () => {
     const user = start();
     await signInDemo(user, "Demo school admin");

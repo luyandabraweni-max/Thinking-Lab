@@ -22,7 +22,12 @@ export interface Prefs {
   voiceIn: boolean;       // answer lesson questions by speaking (a grown-up turns it on)
 }
 export const DEFAULT_PREFS: Prefs = { theme: "system", contrast: false, grey: false, palette: "standard", font: "atkinson", size: "normal", spacing: false, calm: false, motion: false, plain: false, pictures: false, speak: false, captions: false, rate: "normal", scan: false, scanSpeed: "medium", dwell: false, dwellSpeed: "medium", voiceIn: false };
-const SIZES = { normal: "1.15rem", large: "1.3rem", larger: "1.5rem" };
+/** Text size scales the whole page (every rem), not only body text, so headings, buttons and choices grow too. */
+const SIZES = { normal: "100%", large: "112.5%", larger: "130%" };
+
+export type TextSize = Prefs["size"];
+/** The text size on its own, for adults' screens (learners set theirs in My way, with everything else). */
+export function applyTextSize(size: TextSize, root: HTMLElement = document.documentElement) { root.style.fontSize = SIZES[size]; }
 
 /** Animation only when it can't get in the way: not for "No movement", calm mode, or a device set to reduce motion. */
 export const motionAllowed = (p: Prefs) => !p.motion && !p.calm && !globalThis.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
@@ -36,5 +41,5 @@ export function applyPrefs(p: Prefs, root: HTMLElement = document.documentElemen
   root.setAttribute("data-font", p.font);
   flag("data-grey", p.grey); flag("data-calm", p.calm); flag("data-spacing", p.spacing); flag("data-plain", p.plain); flag("data-pictures", p.pictures);
   flag("data-anim", motionAllowed(p));
-  root.style.setProperty("--text", SIZES[p.size]);
+  root.style.fontSize = SIZES[p.size];
 }
