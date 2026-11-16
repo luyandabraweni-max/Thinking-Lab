@@ -1,13 +1,18 @@
-/* Design tokens and display modes, carried over unchanged from the live app (css/app.css). Every component uses these. */
+/* Design tokens and display modes. Warm and calm (November 2026 redesign): a cream page, white cards, the teal brand,
+   and soft coral and sunflower accents used for decoration only, never for text. Every component uses these. */
 :root {
-  --bg: #EEF2F0;
-  --surface: #F8FAF8;
-  --ink: #2E3A39;
-  --muted: #5D6B69;
-  --line: #D3DDDA;
-  --brand: #426C65;
-  --brand-ink: #F8FAF8;
-  --brand-soft: #DFEBE7;
+  --bg: #F7F3EC;
+  --surface: #FFFFFF;
+  --ink: #23302E;
+  --muted: #56635F;
+  --line: #E6DFD3;
+  --brand: #2F6B62;
+  --brand-ink: #FFFFFF;
+  --brand-soft: #E4F0ED;
+  --accent: #E07A5F;
+  --accent-soft: #FBEAE3;
+  --sun: #F2C14E;
+  --sun-soft: #FCF2D6;
   --gold: #A88A4C;
   --gold-soft: #EFE8D8;
   --ok: #3F6F55;
@@ -22,8 +27,8 @@
   --font-display: "Lexend", "Atkinson Hyperlegible", system-ui, sans-serif;
   --font-body: "Atkinson Hyperlegible", "Lexend", system-ui, sans-serif;
   --text: 1.15rem;
-  --radius: 18px;
-  --shadow: 0 1px 0 var(--line);
+  --radius: 20px;
+  --shadow: 0 1px 2px rgba(35, 48, 46, 0.05), 0 6px 20px rgba(35, 48, 46, 0.06);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -31,6 +36,7 @@
     --brand: #8DBDB3; --brand-ink: #1D2423; --brand-soft: #2E3D3A; --gold: #CDB27A; --gold-soft: #39362B;
     --ok: #9CC9AE; --ok-soft: #26352D; --shape-a: #8DBDB3; --shape-b: #CDB27A; --shape-c: #9AB2CF; --shape-d: #D3A291;
     --soil: #A88E76; --leaf: #8FBF98; --sky: #2C3A3E; --shadow: 0 1px 0 var(--line); color-scheme: dark;
+    --accent: #E59A84; --accent-soft: #3A2B26; --sun: #E2BC63; --sun-soft: #3A3424;
   }
 }
 :root[data-theme="dark"] {
@@ -38,6 +44,7 @@
     --brand: #8DBDB3; --brand-ink: #1D2423; --brand-soft: #2E3D3A; --gold: #CDB27A; --gold-soft: #39362B;
     --ok: #9CC9AE; --ok-soft: #26352D; --shape-a: #8DBDB3; --shape-b: #CDB27A; --shape-c: #9AB2CF; --shape-d: #D3A291;
     --soil: #A88E76; --leaf: #8FBF98; --sky: #2C3A3E; --shadow: 0 1px 0 var(--line); color-scheme: dark;
+    --accent: #E59A84; --accent-soft: #3A2B26; --sun: #E2BC63; --sun-soft: #3A3424;
 }
 /* Colour-vision palettes: only the colours that carry meaning change; contrast of text stays the same.
    Red-green safe uses blue and orange (Okabe-Ito). Blue-yellow safe uses red, teal and pink. */
@@ -86,7 +93,7 @@ p { margin: 0; }
 .tl-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* ---------- Layout ---------- */
-.tl-page { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; display: grid; gap: 20px; }
+.tl-page { max-width: 1120px; margin: 0 auto; padding: 24px 16px 64px; display: grid; gap: 20px; }
 .tl-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; display: grid; gap: 14px; min-width: 0; }
 .tl-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .tl-stack { display: grid; gap: 12px; min-width: 0; }
@@ -94,11 +101,11 @@ p { margin: 0; }
 .tl-eyebrow { color: var(--muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
 
 /* ---------- Buttons: at least 48px tall, the same size targets as the live app ---------- */
-.tl-btn { font: inherit; min-height: 48px; padding: 10px 18px; border-radius: 14px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+.tl-btn { font: inherit; font-weight: 600; min-height: 48px; padding: 10px 18px; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
 .tl-btn:hover { border-color: var(--brand); }
 .tl-btn[disabled] { opacity: 0.55; cursor: not-allowed; }
 .tl-btn--primary { background: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
-.tl-btn--quiet { border-color: transparent; background: transparent; text-decoration: underline; }
+.tl-btn--quiet { border-color: transparent; background: transparent; text-decoration: underline; font-weight: 500; }
 .tl-btn--small { min-height: 40px; padding: 6px 12px; font-size: 0.95rem; }
 .tl-btn[aria-pressed="true"] { border-color: var(--brand); background: var(--brand-soft); }
 
@@ -106,7 +113,7 @@ p { margin: 0; }
 .tl-field { display: grid; gap: 6px; min-width: 0; }
 .tl-field label { font-weight: 700; }
 .tl-field .tl-hint { color: var(--muted); font-size: 0.95rem; }
-.tl-field input, .tl-field textarea, .tl-field select { font: inherit; color: var(--ink); background: var(--bg); border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px; min-height: 48px; width: 100%; max-width: 100%; min-width: 0; }
+.tl-field input, .tl-field textarea, .tl-field select { font: inherit; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px; min-height: 48px; width: 100%; max-width: 100%; min-width: 0; }
 .tl-field textarea { min-height: 96px; resize: vertical; }
 .tl-field-input { display: flex; gap: 8px; align-items: stretch; min-width: 0; }
 .tl-field-input > :first-child { flex: 1; }
@@ -120,9 +127,53 @@ p { margin: 0; }
 .tl-notice--warn { background: var(--gold-soft); }
 .tl-notice--ok { background: var(--ok-soft); }
 
-/* ---------- Tabs ---------- */
-.tl-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 2px solid var(--line); padding-bottom: 6px; }
+/* ---------- Tabs: one line that scrolls sideways, never two rows ---------- */
+.tl-tabs { display: flex; flex-wrap: nowrap; gap: 6px; overflow-x: auto; padding: 4px 2px 8px; scrollbar-width: thin; }
+.tl-tabs [role="tab"] { flex: 0 0 auto; white-space: nowrap; }
 .tl-tabs [role="tab"][aria-selected="true"] { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.tl-tab-icon { font-size: 1.1em; line-height: 1; }
+/* Inner tabs (inside a section): underlined text, so they never look like the main sections. */
+.tl-tabs--underline { gap: 2px; border-bottom: 2px solid var(--line); padding: 0; }
+.tl-tabs--underline [role="tab"] { border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: transparent; min-height: 44px; padding: 8px 12px; color: var(--muted); }
+.tl-tabs--underline [role="tab"][aria-selected="true"] { background: transparent; color: var(--brand); border-bottom-color: var(--brand); }
+/* Main sections: icon pills on a phone; a side menu on a wide screen. */
+.tl-tabs--nav [role="tab"] { background: var(--surface); }
+.tl-layout { display: grid; gap: 16px; min-width: 0; }
+@media (min-width: 900px) {
+  .tl-layout { grid-template-columns: 230px minmax(0, 1fr); align-items: start; gap: 24px; }
+  .tl-tabs--nav { flex-direction: column; overflow: visible; position: sticky; top: 88px; padding: 0; gap: 2px; }
+  .tl-tabs--nav [role="tab"] { justify-content: flex-start; border-color: transparent; background: transparent; border-radius: 12px; width: 100%; min-height: 46px; }
+  .tl-tabs--nav [role="tab"]:hover { background: var(--surface); border-color: var(--line); }
+  .tl-tabs--nav [role="tab"][aria-selected="true"] { background: var(--brand-soft); color: var(--brand); border-color: transparent; box-shadow: inset 4px 0 0 var(--brand); }
+}
+
+/* ---------- The top bar, the account menu and page headers ---------- */
+.tl-topbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.tl-topbar-inner { max-width: 1120px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.tl-brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+.tl-brand svg { width: 36px; height: 36px; flex: none; }
+.tl-menu { position: relative; }
+.tl-menu > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 4px 10px 4px 4px; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); font-weight: 600; }
+.tl-menu > summary::-webkit-details-marker { display: none; }
+.tl-menu-panel { position: absolute; right: 0; top: calc(100% + 8px); min-width: 230px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); padding: 10px; display: grid; gap: 4px; z-index: 30; }
+.tl-menu-panel .tl-btn { justify-content: flex-start; width: 100%; text-decoration: none; }
+.tl-initial { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--sun-soft); color: var(--ink); font-weight: 700; font-family: var(--font-display); flex: none; }
+.tl-initial--big { width: 72px; height: 72px; font-size: 1.8rem; }
+.tl-hide-small { display: none; }
+@media (min-width: 640px) { .tl-hide-small { display: inline; } }
+.tl-hero { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.tl-hero h1 { font-size: 2rem; }
+.tl-badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); font-size: 0.9rem; font-weight: 600; }
+.tl-cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.tl-card--lift { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+:root[data-anim] .tl-card--lift:hover { transform: translateY(-2px); }
+.tl-tile-icon { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; font-size: 1.6rem; background: var(--brand-soft); }
+.tl-tile-icon--coral { background: var(--accent-soft); }
+.tl-tile-icon--sun { background: var(--sun-soft); }
+.tl-welcome { display: grid; gap: 10px; padding: 8px 0 4px; }
+.tl-welcome h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.tl-tools { display: flex; flex-wrap: wrap; gap: 10px; }
+details.tl-inline > summary { cursor: pointer; color: var(--brand); font-weight: 600; min-height: 40px; display: inline-flex; align-items: center; }
 
 /* ---------- Voice ---------- */
 .tl-mic[aria-pressed="true"] { background: var(--gold-soft); border-color: var(--gold); }
@@ -172,3 +223,10 @@ p { margin: 0; }
 .tl-more-text { display: block; color: var(--muted); font-size: 0.97rem; margin: 4px 0 6px; white-space: pre-wrap; }
 /* A required field: the asterisk is for sight; the input itself tells screen readers it is required. */
 .tl-req { color: var(--crit); font-weight: 700; }
+.tl-greeting { font-size: 1.15rem; color: var(--muted); }
+.tl-brand span { white-space: nowrap; }
+.tl-topbar-inner > .tl-row { flex-wrap: nowrap; }
+.tl-wide-only { display: none; }
+.tl-narrow-only { display: block; padding: 0 4px 6px; }
+@media (min-width: 640px) { .tl-wide-only { display: inline-flex; } .tl-narrow-only { display: none; } }
+.tl-tabs--nav [role="tab"] { font-weight: 600; }

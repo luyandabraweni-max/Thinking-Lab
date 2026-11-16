@@ -39,7 +39,7 @@ export function SchoolProfileView({ me, learner }: { me: Account; learner: Learn
   return (
     <div className="tl-stack">
       <div className="pf-noprint"><More label="About the school profile">For the school. It records what staff observe, rates how much each thing limits access to learning, and raises a prompt when something needs action. It is <b>not</b> a diagnostic tool or a screening test, and it gives no diagnosis or score. Under SIAS a learner does not need a diagnosis to receive support. Only {learner.nickname}'s teachers and specialists see it.</More></div>
-      <Tabs label="School profile sections" tabs={TABS} current={tab} onChange={setTab} />
+      <Tabs label="School profile sections" tabs={TABS} current={tab} onChange={setTab} variant="underline" />
       <TabPanel id={tab}>
         {tab === "about" ? <About p={p} learner={learner} phase={phase} save={save} />
           : tab === "guide" ? <Guide phase={phase} />

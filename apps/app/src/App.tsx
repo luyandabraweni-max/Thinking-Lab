@@ -1,8 +1,8 @@
 import type { Account, Learner } from "@tl/data";
-import { applyTextSize, Button, type TextSize } from "@tl/ui";
+import { applyTextSize, Button, Logo, type TextSize } from "@tl/ui";
 import type { SpeechEngine } from "@tl/voice";
 import { VoiceProvider } from "@tl/voice/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { SetPassword, SignIn } from "./modules/auth";
 import { LearnerHome } from "./modules/learner";
 import { HandOver, LearnerPage, TeamHome } from "./modules/team";
@@ -40,12 +40,12 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
       <VoiceProvider {...(voice ?? {})}>
         <WhoContext.Provider value={{ me, setMe }}>
           <a className="tl-visually-hidden" href="#main">Skip to content</a>
-          {view.at !== "space" ? <header className="tl-page" style={{ paddingBottom: 0 }}>
-            <div className="tl-row" style={{ justifyContent: "space-between" }}>
-              {me ? <p><b>{me.name}</b> <span className="tl-muted">· {ROLE_NAME[me.role]}</span></p> : <span />}
-              <div className="tl-row">
-                <TextSizePicker size={size} onChange={chooseSize} />
-                {me ? <><Button small variant="quiet" onClick={() => setPw("change")}>Password</Button><Button small variant="quiet" onClick={() => void signOut()}>Sign out</Button></> : null}
+          {view.at !== "space" ? <header className="tl-topbar">
+            <div className="tl-topbar-inner">
+              <span className="tl-brand"><Logo /><span>Thinking Lab</span></span>
+              <div className="tl-row" style={{ gap: 8 }}>
+                <span className={me ? "tl-wide-only" : undefined}><TextSizePicker size={size} onChange={chooseSize} /></span>
+                {me ? <AccountMenu me={me} onPassword={() => setPw("change")} onSignOut={() => void signOut()} sizePicker={<span className="tl-narrow-only"><TextSizePicker size={size} onChange={chooseSize} /></span>} /> : null}
               </div>
             </div>
           </header> : null}
@@ -65,6 +65,21 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
   );
 }
 const ROLE_NAME: Record<Account["role"], string> = { guardian: "Parent or guardian", teacher: "Teacher", specialist: "Specialist", site_admin: "Site admin", org_admin: "School admin" };
+
+/** The signed-in adult: their name and role, changing the password, and signing out. */
+function AccountMenu({ me, onPassword, onSignOut, sizePicker }: { me: Account; onPassword: () => void; onSignOut: () => void; sizePicker: ReactNode }) {
+  return (
+    <details className="tl-menu">
+      <summary aria-label={`${me.name}, ${ROLE_NAME[me.role]}: account menu`}><span className="tl-initial" aria-hidden="true">{me.name.trim().charAt(0).toUpperCase() || "?"}</span><span className="tl-hide-small">{me.name}</span></summary>
+      <div className="tl-menu-panel">
+        <p style={{ padding: "4px 8px" }}><b>{me.name}</b><br /><span className="tl-muted">{ROLE_NAME[me.role]}</span></p>
+        {sizePicker}
+        <Button small variant="quiet" onClick={e => { e.currentTarget.closest("details")?.removeAttribute("open"); onPassword(); }}><span aria-hidden="true">🔑</span>Password</Button>
+        <Button small variant="quiet" onClick={onSignOut}><span aria-hidden="true">👋</span>Sign out</Button>
+      </div>
+    </details>
+  );
+}
 
 /** Three letter buttons, small to big. Each says what it does to a screen reader. */
 function TextSizePicker({ size, onChange }: { size: TextSize; onChange: (s: TextSize) => void }) {

@@ -60,7 +60,7 @@ describe("signing in", () => {
     expect(screen.getByRole("button", { name: "Biggest text" })).toHaveAttribute("aria-pressed", "true");
     await signInDemo(user, "Demo parent");
     expect(document.documentElement.style.fontSize).toBe("130%");
-    await user.click(screen.getByRole("button", { name: "Usual text" }));
+    await user.click(screen.getAllByRole("button", { name: "Usual text" })[0]!); // one picker for wide screens, one in the menu for phones
     expect(document.documentElement.style.fontSize).toBe("100%");
   });
   it("shows a school admin totals and staff, never learner records, and lets them choose the safeguarding lead", async () => {

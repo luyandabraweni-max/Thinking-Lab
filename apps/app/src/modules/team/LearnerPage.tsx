@@ -1,8 +1,7 @@
 import type { Account } from "@tl/data";
-import { Button, Card, TabPanel, Tabs } from "@tl/ui";
+import { Button, Card, TabPanel, Tabs, type Tab } from "@tl/ui";
 import { lazy, Suspense, useState } from "react";
 import { useServices } from "../../platform";
-import { AvatarPicture } from "../avatar";
 import { Health } from "./Health";
 import { Messages } from "./Messages";
 import { curriculumOf, School } from "./School";
@@ -17,6 +16,7 @@ const IntakeView = lazy(() => import("../intake").then(m => ({ default: m.Intake
 const SchoolProfileView = lazy(() => import("../school-profile").then(m => ({ default: m.SchoolProfileView })));
 import { Sharing } from "./Sharing";
 import { useLoad } from "./use-load";
+import { LearnerFace } from "./Home";
 
 export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId: string; onBack: () => void }) {
   const { store } = useServices();
@@ -27,25 +27,34 @@ export function LearnerPage({ me, learnerId, onBack }: { me: Account; learnerId:
   if (error) return <Card><p className="tl-error">{error}</p><Button onClick={onBack}>Back</Button></Card>;
   if (!learner) return <Card><p>Loading…</p></Card>;
   const team = me.role === "teacher" || me.role === "specialist";
-  const tabs = [{ id: "messages", label: "Messages" }, { id: "goals", label: "Goals" }, ...(team ? [{ id: "notes", label: "Notes" }, { id: "profile", label: "School profile" }] : []), { id: "progress", label: "Progress" }, { id: "next", label: "Next session" }, { id: "adapting", label: "Adapting" }, { id: "report", label: "Report" }, { id: "health", label: "Health" }, { id: "intake", label: "Intake" }, { id: "sharing", label: team ? "Team" : "Sharing" }];
+  const tabs: Tab[] = [
+    { id: "messages", label: "Messages", icon: "💬" }, { id: "goals", label: "Goals", icon: "🎯" },
+    ...(team ? [{ id: "notes", label: "Notes", icon: "📝" }, { id: "profile", label: "School profile", icon: "🏫" }] : []),
+    { id: "intake", label: "Intake", icon: "🧩" }, { id: "progress", label: "Progress", icon: "📈" }, { id: "next", label: "Next session", icon: "📅" },
+    { id: "adapting", label: "Adapting", icon: "⚙️" }, { id: "report", label: "Report", icon: "📄" }, { id: "health", label: "Health", icon: "💊" },
+    { id: "sharing", label: team ? "Team" : "Sharing", icon: "👥" }];
   return (
-    <Card>
-      <div className="tl-row"><Button variant="quiet" onClick={onBack}>All learners</Button></div>
-      <div className="tl-row" style={{ alignItems: "center" }}>
-        {settings?.avatar ? <AvatarPicture look={settings.avatar} size={72} label={`${learner.nickname}'s character, ${settings.avatar.name}`} /> : null}
-        <h1>{learner.nickname}</h1>
-      </div>
-      <p className="tl-muted">{curriculumOf(learner, settings?.curriculum)}, {learner.level}</p>
-      <School me={me} learner={learner} onChanged={reloadSettings} />
+    <div className="tl-stack" style={{ gap: 18 }}>
+      <div className="tl-row"><Button small variant="quiet" onClick={onBack}><span aria-hidden="true">←</span>All learners</Button></div>
+      <section className="tl-hero">
+        <LearnerFace name={learner.nickname} look={settings?.avatar} size={80} />
+        <div className="tl-stack" style={{ gap: 4 }}>
+          <h1>{learner.nickname}</h1>
+          <p className="tl-muted">{curriculumOf(learner, settings?.curriculum)}, {learner.level}</p>
+          <details className="tl-inline"><summary>School and curriculum</summary><School me={me} learner={learner} onChanged={reloadSettings} /></details>
+        </div>
+      </section>
       {concerns?.length ? <div className="safety-alert" role="alert">
         <h2><span aria-hidden="true">🛟</span> Safeguarding: {learner.nickname} said they feel unsafe</h2>
         <ul className="plain">{concerns.map(c => <li key={c.id}>{new Date(c.at).toLocaleString("en-ZA", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })} · from the {c.where}</li>)}</ul>
         <p>Stay calm and listen. Don't ask leading questions or promise to keep a secret. Follow your organisation's child protection policy and tell its designated safeguarding lead today.</p>
       </div> : null}
-      <Tabs label={`${learner.nickname}'s sections`} tabs={tabs} current={tab} onChange={setTab} />
-      <TabPanel id={tab}>
+      <div className="tl-layout">
+      <Tabs label={`${learner.nickname}'s sections`} tabs={tabs} current={tab} onChange={setTab} variant="nav" />
+      <Card><TabPanel id={tab}>
         {tab === "messages" ? <Messages me={me} learner={learner} /> : tab === "goals" ? <Goals me={me} learner={learner} /> : tab === "notes" ? <Notes me={me} learner={learner} /> : tab === "profile" ? <Suspense fallback={<p>Loading…</p>}><SchoolProfileView me={me} learner={learner} /></Suspense> : tab === "progress" ? <Suspense fallback={<p>Loading…</p>}><Progress me={me} learner={learner} /></Suspense> : tab === "next" ? <Suspense fallback={<p>Loading…</p>}><NextSession me={me} learner={learner} /></Suspense> : tab === "adapting" ? <Suspense fallback={<p>Loading…</p>}><Adapting me={me} learner={learner} /></Suspense> : tab === "report" ? <Suspense fallback={<p>Loading…</p>}><Report me={me} learner={learner} /></Suspense> : tab === "health" ? <Health me={me} learner={learner} /> : tab === "intake" ? <Suspense fallback={<p>Loading…</p>}><IntakeView me={me} learner={learner} /></Suspense> : <Sharing me={me} learner={learner} onChanged={reload} onDeleted={onBack} />}
-      </TabPanel>
-    </Card>
+      </TabPanel></Card>
+      </div>
+    </div>
   );
 }

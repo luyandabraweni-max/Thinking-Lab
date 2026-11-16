@@ -37,7 +37,7 @@ export function ClinicalIntake({ me, learner, family, onChange }: { me: Account;
   return (
     <div className="tl-stack">
       <div className="pf-noprint"><More label="About this view">For the clinical team: {learner.nickname}'s team members with health access. The family's pages are read-only here. This is an information gathering pack: it is not a screening instrument, it has no norms and it produces no diagnostic score. Diagnosis needs qualified assessment with validated tools, direct observation and clinical judgement, and the conclusion belongs in a conversation with the family.</More></div>
-      <Tabs label="Intake for the team" tabs={TABS} current={tab} onChange={setTab} />
+      <Tabs label="Intake for the team" tabs={TABS} current={tab} onChange={setTab} variant="underline" />
       <TabPanel id={tab}>
         {tab === "summary" ? <Summary learner={learner} d={family} extra={extra} />
           : tab === "family" ? <div className="tl-stack">

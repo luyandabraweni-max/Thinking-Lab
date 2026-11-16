@@ -36,7 +36,7 @@ export function FamilyIntake({ me, learner, data, onChange, support }: { me: Acc
       <div className="pf-noprint"><More label="About the intake">This intake collects {learner.nickname}'s background once, so you don't have to repeat the same story to every professional. <b>It is not a test.</b> There are no right answers and nothing is marked. Write <i>Not known</i> or <i>Not sure</i> as often as you need to; a guessed date is worse than a blank one. You can skip any question, and you don't have to finish in one sitting: every answer saves as you go. Start with <b>Our story</b>, which begins with what is going well.</More></div>
       <div className="pf-noprint"><More label="Not a test or a diagnosis">It gives no score and no diagnosis. Only a qualified professional, using proper assessment, can reach a conclusion, and that will be discussed with you face to face.</More></div>
       <Helplines urgent={R.immediateDanger(data)} />
-      <Tabs label="Intake pages" tabs={[...FAMILY_TABS, { id: "share", label: "How to support me" }]} current={tab} onChange={setTab} />
+      <Tabs label="Intake pages" tabs={[...FAMILY_TABS, { id: "share", label: "How to support me" }]} current={tab} onChange={setTab} variant="underline" />
       <TabPanel id={tab}>{tab === "share" ? <Share me={me} learner={learner} data={data} support={support} onChange={onChange} /> : <FamilyPage tab={tab} learner={learner} data={data} save={save} me={me} />}</TabPanel>
     </div>
   );

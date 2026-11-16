@@ -65,24 +65,39 @@ export function Field({ label, value, onChange, hint, error, multiline, required
   );
 }
 
-export interface Tab { id: string; label: string }
-export function Tabs({ tabs, current, onChange, label }: { tabs: Tab[]; current: string; onChange: (id: string) => void; label: string }) {
+export interface Tab { id: string; label: string; icon?: string }
+/** "pills" (default), "nav" for a page's main sections (a side menu on wide screens), "underline" for tabs inside a section. */
+export function Tabs({ tabs, current, onChange, label, variant = "pills" }: { tabs: Tab[]; current: string; onChange: (id: string) => void; label: string; variant?: "pills" | "nav" | "underline" }) {
   return (
-    <div className="tl-tabs" role="tablist" aria-label={label}>
+    <div className={`tl-tabs tl-tabs--${variant}`} role="tablist" aria-label={label}>
       {tabs.map(t => (
         <Button key={t.id} small role="tab" id={`tab-${t.id}`} aria-selected={t.id === current} aria-controls={`panel-${t.id}`}
           tabIndex={t.id === current ? 0 : -1} onClick={() => onChange(t.id)}
           onKeyDown={e => {
-            const i = tabs.findIndex(x => x.id === current), step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+            const i = tabs.findIndex(x => x.id === current), step = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
             if (!step) return;
+            e.preventDefault();
             const next = tabs[(i + step + tabs.length) % tabs.length]!;
             onChange(next.id);
             requestAnimationFrame(() => document.getElementById(`tab-${next.id}`)?.focus());
-          }}>{t.label}</Button>
+          }}>{t.icon ? <span className="tl-tab-icon" aria-hidden="true">{t.icon}</span> : null}{t.label}</Button>
       ))}
     </div>
   );
 }
 export function TabPanel({ id, children }: { id: string; children: ReactNode }) {
   return <div role="tabpanel" id={`panel-${id}`} aria-labelledby={`tab-${id}`} className="tl-stack">{children}</div>;
+}
+
+/** The Thinking Lab mark: a calm circle with a growing leaf and a spark of thought. */
+export function Logo() {
+  return (
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <circle cx="20" cy="20" r="19" fill="var(--brand-soft)" />
+      <path d="M20 31c0-7 1-12 8-17-1 8-4 12-8 13" fill="var(--brand)" />
+      <path d="M20 31c0-6-2-10-8-13 1 6 3 9 8 10" fill="var(--leaf, #5E8C68)" />
+      <circle cx="27.5" cy="10.5" r="3" fill="var(--sun)" />
+      <circle cx="12" cy="12" r="2" fill="var(--accent)" />
+    </svg>
+  );
 }

@@ -1,6 +1,6 @@
 import { DEMO, type Account } from "@tl/data";
-import { Button, Card, Field, Notice } from "@tl/ui";
-import { useEffect, useState } from "react";
+import { Button, Card, Field, Logo, More, Notice } from "@tl/ui";
+import { useEffect, useState, type ReactNode } from "react";
 import { PrivacyNotice } from "../privacy";
 import { checkPassword, checkPictures, DEMO_CODE, deviceLearners, PASSWORD_RULE, PICTURES, useServices, type DeviceLearner } from "../../platform";
 
@@ -29,26 +29,31 @@ export function SignIn({ onAdult, onLearner, registering }: { onAdult: (a: Accou
     </Card>);
   if (step.at === "pictures") return <PicturePassword learner={step.learner} onOk={() => onLearner(step.learner)} onBack={() => setStep({ at: "learners" })} />;
 
+  const door = (icon: string, tone: string, title: string, text: string, action: ReactNode) => (
+    <Card as="div">
+      <span className={`tl-tile-icon ${tone}`} aria-hidden="true">{icon}</span>
+      <h2>{title}</h2><p className="tl-muted">{text}</p>
+      <div className="tl-row" style={{ marginTop: "auto" }}>{action}</div>
+    </Card>);
   return (
-    <Card>
-      <p className="tl-eyebrow">2to.iQ Thinking Lab</p>
-      <h1>Welcome</h1>
-      <p>Calm, accessible thinking activities for learners aged 3 to 25.</p>
-      <div className="tl-stack">
-        {(Object.keys(DOOR_TEXT) as Door[]).map(d => (
-          <Card key={d} as="div">
-            <h2>{DOOR_TEXT[d][0]}</h2><p className="tl-muted">{DOOR_TEXT[d][1]}</p>
-            <div className="tl-row"><Button variant="primary" onClick={() => setStep({ at: "adult", door: d })}>Sign in or register</Button></div>
-          </Card>))}
-        <Card as="div">
-          <h2>Learners</h2><p className="tl-muted">Go to your own learning space with your picture password.</p>
-          <div className="tl-row"><Button onClick={() => setStep({ at: "learners" })}>I'm a learner</Button></div>
-        </Card>
+    <div className="tl-stack" style={{ gap: 24 }}>
+      <section className="tl-welcome tl-hero" style={{ alignItems: "flex-start" }}>
+        <span style={{ width: 72, height: 72, display: "inline-flex" }}><Logo /></span>
+        <div className="tl-stack" style={{ gap: 6, flex: 1, minWidth: 240 }}>
+          <p className="tl-eyebrow">2to.iQ Thinking Lab</p>
+          <h1>Welcome</h1>
+          <p className="tl-muted">Calm, accessible thinking activities for learners aged 3 to 25, with their families, teachers and therapists.</p>
+        </div>
+      </section>
+      <div className="tl-cards">
+        {door("👪", "tl-tile-icon--sun", DOOR_TEXT.guardian[0], DOOR_TEXT.guardian[1], <Button variant="primary" onClick={() => setStep({ at: "adult", door: "guardian" })}>Sign in or register</Button>)}
+        {door("🧑‍🏫", "", DOOR_TEXT.specialist[0], DOOR_TEXT.specialist[1], <Button variant="primary" onClick={() => setStep({ at: "adult", door: "specialist" })}>Sign in or register</Button>)}
+        {door("🧒", "tl-tile-icon--coral", "Learners", "Go to your own learning space with your picture password.", <Button onClick={() => setStep({ at: "learners" })}>I'm a learner</Button>)}
       </div>
       {mode === "demo" ? <DemoAccounts onAdult={onAdult} /> : null}
-      <p className="tl-muted">School and organisation admins: your account is set up with us when your organisation joins.</p>
+      <div className="tl-muted"><More label="School and organisation admins">Your account is set up with us when your organisation joins.</More></div>
       <details className="privacy-box"><summary>Privacy: how we look after your information</summary><PrivacyNotice /></details>
-    </Card>
+    </div>
   );
 }
 
