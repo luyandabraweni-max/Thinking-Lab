@@ -95,7 +95,7 @@ jobs:
           node-version: "22"
 
       - name: Stage site files
-        run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='node_modules' --exclude='native' --exclude='tests' --exclude='docs' --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='apps' --exclude='packages' --exclude='supabase' --exclude='tools' --exclude='tsconfig*.json' --exclude='*.config.mjs' --exclude='*.config.mts' --exclude='test-results' --exclude='playwright-report' ./ _site/
+        run: rsync -a --exclude='.*' --exclude='netlify.toml' --exclude='node_modules' --exclude='native' --exclude='tests' --exclude='docs' --exclude='README.md' --exclude='package*.json' --exclude='*.config.js' --exclude='apps' --exclude='packages' --exclude='supabase' --exclude='tools' --exclude='tsconfig*.json' --exclude='*.config.mjs' --exclude='*.config.mts' --exclude='test-results' --exclude='playwright-report' ./ "$RUNNER_TEMP/_site/"
 
       - name: Deploy to Netlify
         id: deploy
@@ -125,6 +125,8 @@ jobs:
           else
             target="--alias=dev"
           fi
+          # Deploy from a folder outside the repo: inside it, Netlify's tool sees the workspaces and asks which to use.
+          cd "$RUNNER_TEMP"
           npx --yes netlify-cli@17.38.1 deploy --dir=_site $target \
             --message="$GITHUB_REF_NAME @ ${GITHUB_SHA::7}" --json > deploy.json
           url=$(python3 -c "import json; d=json.load(open('deploy.json')); print(d.get('url') or d['deploy_url'])")
