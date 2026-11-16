@@ -110,9 +110,11 @@ jobs:
   ios:
     name: iOS app (simulator build)
     needs: checks
+    # Not on pull requests: GitHub's Mac runners are often unavailable ("not acquired by Runner"), which marks the PR red
+    # although nothing is wrong with our code. It runs on every push and by hand (Run workflow), where that does no harm.
+    if: github.event_name != 'pull_request'
     runs-on: macos-15
-    # GitHub's Mac runners are sometimes unavailable ("not acquired by Runner"). That says nothing about our code, so
-    # it doesn't fail the run; check this job's own result, and use "Re-run jobs" when Macs are free again.
+    # When it does run and no Mac is free, it doesn't fail the run; check this job's own result, and use "Re-run jobs".
     continue-on-error: true
     timeout-minutes: 45
     steps:
