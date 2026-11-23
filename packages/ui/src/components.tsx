@@ -89,15 +89,17 @@ export function TabPanel({ id, children }: { id: string; children: ReactNode }) 
   return <div role="tabpanel" id={`panel-${id}`} aria-labelledby={`tab-${id}`} className="tl-stack">{children}</div>;
 }
 
-/** The Thinking Lab mark: a calm circle with a growing leaf and a spark of thought. */
+/** The 2to.iQ app icon (from 2toiq.africa): the figure in white on a purple tile, so it reads on light and dark. */
 export function Logo() {
+  return <img className="tl-logo" src="/brand/icon.png" alt="" width={128} height={128} />;
+}
+/** The 2to.iQ wordmark, "powered by Pholoso Afrika Foundation": purple on light screens, light grey on dark ones. */
+export function Wordmark({ width = 240 }: { width?: number }) {
+  const h = Math.round(width * 127 / 420);
   return (
-    <svg viewBox="0 0 40 40" aria-hidden="true">
-      <circle cx="20" cy="20" r="19" fill="var(--brand-soft)" />
-      <path d="M20 31c0-7 1-12 8-17-1 8-4 12-8 13" fill="var(--brand)" />
-      <path d="M20 31c0-6-2-10-8-13 1 6 3 9 8 10" fill="var(--leaf, #5E8C68)" />
-      <circle cx="27.5" cy="10.5" r="3" fill="var(--sun)" />
-      <circle cx="12" cy="12" r="2" fill="var(--accent)" />
-    </svg>
+    <span className="tl-wordmark" style={{ width }}>
+      <img className="tl-wordmark-light" src="/brand/wordmark.png" alt="2to.iQ, powered by Pholoso Afrika Foundation" width={width} height={h} />
+      <img className="tl-wordmark-dark" src="/brand/wordmark-light.png" alt="2to.iQ, powered by Pholoso Afrika Foundation" width={width} height={h} />
+    </span>
   );
 }

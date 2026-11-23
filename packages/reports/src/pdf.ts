@@ -109,7 +109,7 @@ export function reportToPdf(rep: ReportModel): Uint8Array {
   });
   objs[catalog - 1] = `<< /Type /Catalog /Pages ${pagesId} 0 R /ViewerPreferences << /DisplayDocTitle true >> /Lang (en) >>`;
   objs[pagesId - 1] = `<< /Type /Pages /Kids [${kids.map(k => k + " 0 R").join(" ")}] /Count ${kids.length} >>`;
-  const info = add(`<< /Title (${pdfEsc(pdfBytes(rep.title))}) /Producer (2to.iQ Thinking Lab) /CreationDate (D:${new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14)}Z) >>`);
+  const info = add(`<< /Title (${pdfEsc(pdfBytes(rep.title))}) /Producer (2to.iQ) /CreationDate (D:${new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14)}Z) >>`);
   let out = "%PDF-1.4\n%\xE2\xE3\xCF\xD3\n"; const offs: number[] = [];
   objs.forEach((o, i) => { offs.push(out.length); out += `${i + 1} 0 obj\n${o}\nendobj\n`; });
   const xref = out.length;

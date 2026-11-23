@@ -1,14 +1,14 @@
-/* Design tokens and display modes. Warm and calm (November 2026 redesign): a cream page, white cards, the teal brand,
+/* Design tokens and display modes. Warm and calm (November 2026 redesign): a cream page, white cards, the 2to.iQ purple (from 2toiq.africa),
    and soft coral and sunflower accents used for decoration only, never for text. Every component uses these. */
 :root {
-  --bg: #F7F3EC;
+  --bg: #F6F0E6;
   --surface: #FFFFFF;
-  --ink: #23302E;
-  --muted: #56635F;
-  --line: #E6DFD3;
-  --brand: #2F6B62;
+  --ink: #2D2531;
+  --muted: #5C5161;
+  --line: #E8DED6;
+  --brand: #752971;
   --brand-ink: #FFFFFF;
-  --brand-soft: #E4F0ED;
+  --brand-soft: #F3EAF4;
   --accent: #E07A5F;
   --accent-soft: #FBEAE3;
   --sun: #F2C14E;
@@ -28,20 +28,20 @@
   --font-body: "Atkinson Hyperlegible", "Lexend", system-ui, sans-serif;
   --text: 1.15rem;
   --radius: 20px;
-  --shadow: 0 1px 2px rgba(35, 48, 46, 0.05), 0 6px 20px rgba(35, 48, 46, 0.06);
+  --shadow: 0 1px 2px rgba(45, 37, 49, 0.05), 0 6px 20px rgba(45, 37, 49, 0.06);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1D2423; --surface: #252E2D; --ink: #E4EBE9; --muted: #A9B7B4; --line: #34403E;
-    --brand: #8DBDB3; --brand-ink: #1D2423; --brand-soft: #2E3D3A; --gold: #CDB27A; --gold-soft: #39362B;
+    --bg: #211620; --surface: #2C1F2B; --ink: #EEE6EE; --muted: #BBAAB9; --line: #45323F;
+    --brand: #D3A6CF; --brand-ink: #211620; --brand-soft: #3E2A3C; --gold: #CDB27A; --gold-soft: #39362B;
     --ok: #9CC9AE; --ok-soft: #26352D; --shape-a: #8DBDB3; --shape-b: #CDB27A; --shape-c: #9AB2CF; --shape-d: #D3A291;
     --soil: #A88E76; --leaf: #8FBF98; --sky: #2C3A3E; --shadow: 0 1px 0 var(--line); color-scheme: dark;
     --accent: #E59A84; --accent-soft: #3A2B26; --sun: #E2BC63; --sun-soft: #3A3424;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1D2423; --surface: #252E2D; --ink: #E4EBE9; --muted: #A9B7B4; --line: #34403E;
-    --brand: #8DBDB3; --brand-ink: #1D2423; --brand-soft: #2E3D3A; --gold: #CDB27A; --gold-soft: #39362B;
+  --bg: #211620; --surface: #2C1F2B; --ink: #EEE6EE; --muted: #BBAAB9; --line: #45323F;
+    --brand: #D3A6CF; --brand-ink: #211620; --brand-soft: #3E2A3C; --gold: #CDB27A; --gold-soft: #39362B;
     --ok: #9CC9AE; --ok-soft: #26352D; --shape-a: #8DBDB3; --shape-b: #CDB27A; --shape-c: #9AB2CF; --shape-d: #D3A291;
     --soil: #A88E76; --leaf: #8FBF98; --sky: #2C3A3E; --shadow: 0 1px 0 var(--line); color-scheme: dark;
     --accent: #E59A84; --accent-soft: #3A2B26; --sun: #E2BC63; --sun-soft: #3A3424;
@@ -151,7 +151,13 @@ p { margin: 0; }
 .tl-topbar { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .tl-topbar-inner { max-width: 1120px; margin: 0 auto; padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .tl-brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
-.tl-brand svg { width: 36px; height: 36px; flex: none; }
+.tl-brand .tl-logo { width: 36px; height: 36px; flex: none; border-radius: 9px; }
+.tl-wordmark { display: inline-block; max-width: 100%; }
+.tl-wordmark img { width: 100%; height: auto; }
+.tl-wordmark-dark { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tl-wordmark-light { display: none; } :root:not([data-theme="light"]) .tl-wordmark-dark { display: block; } }
+:root[data-theme="dark"] .tl-wordmark-light { display: none; }
+:root[data-theme="dark"] .tl-wordmark-dark { display: block; }
 .tl-menu { position: relative; }
 .tl-menu > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 4px 10px 4px 4px; border-radius: 999px; border: 2px solid var(--line); background: var(--surface); font-weight: 600; }
 .tl-menu > summary::-webkit-details-marker { display: none; }

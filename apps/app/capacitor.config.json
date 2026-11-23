@@ -1,6 +1,6 @@
 {
   "appId": "africa.pholoso.thinkinglab",
-  "appName": "Thinking Lab",
+  "appName": "2to.iQ",
   "webDir": "dist",
   "backgroundColor": "#EEF2F0",
   "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": false }

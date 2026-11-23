@@ -1,7 +1,7 @@
 {
   "name": "@tl/app",
   "private": true,
-  "description": "Thinking Lab app for learners, families and specialists: web, iOS and Android from one React codebase.",
+  "description": "2to.iQ app for learners, families and specialists: web, iOS and Android from one React codebase.",
   "type": "module",
   "scripts": {
     "dev": "vite",

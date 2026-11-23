@@ -736,7 +736,7 @@ describe("privacy and deleting a profile", () => {
     await user.click(await screen.findByRole("button", { name: "Add a child" }));
     await user.click(await screen.findByText(/How we look after your child's information/));
     expect(screen.getByText(/Paris, France/)).toBeInTheDocument();
-    expect(screen.getByRole("checkbox", { name: /I have read how Thinking Lab looks after their information/ })).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: /I have read how 2to.iQ looks after their information/ })).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: /^Open Quiet River/ }));
     await user.click(screen.getByRole("tab", { name: "Sharing" }));
     await user.click(screen.getByRole("button", { name: "Delete Quiet River's profile" }));

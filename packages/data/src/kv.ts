@@ -38,7 +38,7 @@ export class MemoryKv implements Kv {
 }
 
 /** Shown when another tab of the app holds an older copy of the device database. */
-export const BLOCKED = "Thinking Lab is open in another tab or window. Close the other ones, then reload this page.";
+export const BLOCKED = "2to.iQ is open in another tab or window. Close the other ones, then reload this page.";
 
 export class IdbKv implements Kv {
   private db: Promise<IDBPDatabase>;

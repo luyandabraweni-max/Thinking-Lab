@@ -47,7 +47,7 @@ function DeleteProfile({ me, learner, onDeleted }: { me: Account; learner: Learn
   return (
     <Card as="section">
       <h2>Delete {name}'s profile?</h2>
-      <p>This deletes everything about {name} from Thinking Lab: their progress, goals, notes, messages, reports, settings, character and health records. Teachers and therapists lose access. <b>It can't be undone.</b></p>
+      <p>This deletes everything about {name} from 2to.iQ: their progress, goals, notes, messages, reports, settings, character and health records. Teachers and therapists lose access. <b>It can't be undone.</b></p>
       <div className="tl-field"><label htmlFor="delName">To confirm, type {name}</label>
         <input id="delName" autoComplete="off" value={typed} onChange={e => setTyped(e.target.value)} /></div>
       {error ? <p className="tl-error" role="alert">{error}</p> : null}

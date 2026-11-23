@@ -55,13 +55,13 @@ function AddStaff({ api, org, invites, onChange }: { api: OrgAdmin; org: string;
       const r = await api.addStaff(email, role), e = email.trim().toLowerCase();
       setEmail("");
       onChange(r === "added" ? `${e} already had an account and is now staff at ${org}.`
-        : `Invitation saved for ${e}. Ask them to open Thinking Lab and register with this email address: they'll join ${org} automatically.`);
+        : `Invitation saved for ${e}. Ask them to open 2to.iQ and register with this email address: they'll join ${org} automatically.`);
     } catch (err) { setError((err as Error).message); } finally { setBusy(false); }
   };
   return (
     <>
       <h2>Add staff</h2>
-      <div className="note"><More label="About this">Enter a colleague's work email. If they already use Thinking Lab, they join straight away. If not, they join when they register with that email. We don't send them an email: tell them yourself.</More></div>
+      <div className="note"><More label="About this">Enter a colleague's work email. If they already use 2to.iQ, they join straight away. If not, they join when they register with that email. We don't send them an email: tell them yourself.</More></div>
       <form className="tl-stack" onSubmit={e => { e.preventDefault(); void add(); }}>
         <Field label="Their email address" value={email} onChange={setEmail} type="email" autoComplete="off" error={error} required />
         <div className="tl-field"><label htmlFor="stRole">Their role</label>

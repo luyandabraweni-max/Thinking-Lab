@@ -10,8 +10,8 @@ cd apps/app
 rm -rf "$platform"
 npx cap add "$platform"
 npx cap sync "$platform"
-MIC="Thinking Lab uses the microphone so you can answer and fill in forms by speaking. You can always type instead."
-SPEECH="Thinking Lab turns what you say into words, so you can answer and fill in forms by speaking."
+MIC="2to.iQ uses the microphone so you can answer and fill in forms by speaking. You can always type instead."
+SPEECH="2to.iQ turns what you say into words, so you can answer and fill in forms by speaking."
 if [ "$platform" = android ]; then
   manifest=android/app/src/main/AndroidManifest.xml
   # Speech recognition: the microphone permission, and (Android 11+) permission to find the phone's speech service.
