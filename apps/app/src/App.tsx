@@ -42,7 +42,7 @@ export function App({ services, voice }: { services: Services; voice?: { engine:
           <a className="tl-visually-hidden" href="#main">Skip to content</a>
           {view.at !== "space" ? <header className="tl-topbar">
             <div className="tl-topbar-inner">
-              <span className="tl-brand"><Logo /><span>Thinking Lab</span></span>
+              <span className="tl-brand"><Logo /><span>2to.iQ</span></span>
               <div className="tl-row" style={{ gap: 8 }}>
                 <span className={me ? "tl-wide-only" : undefined}><TextSizePicker size={size} onChange={chooseSize} /></span>
                 {me ? <AccountMenu me={me} onPassword={() => setPw("change")} onSignOut={() => void signOut()} sizePicker={<span className="tl-narrow-only"><TextSizePicker size={size} onChange={chooseSize} /></span>} /> : null}

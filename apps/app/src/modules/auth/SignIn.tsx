@@ -1,5 +1,5 @@
 import { DEMO, type Account } from "@tl/data";
-import { Button, Card, Field, Logo, More, Notice } from "@tl/ui";
+import { Button, Card, Field, More, Notice, Wordmark } from "@tl/ui";
 import { useEffect, useState, type ReactNode } from "react";
 import { PrivacyNotice } from "../privacy";
 import { checkPassword, checkPictures, DEMO_CODE, deviceLearners, PASSWORD_RULE, PICTURES, useServices, type DeviceLearner } from "../../platform";
@@ -38,9 +38,8 @@ export function SignIn({ onAdult, onLearner, registering }: { onAdult: (a: Accou
   return (
     <div className="tl-stack" style={{ gap: 24 }}>
       <section className="tl-welcome tl-hero" style={{ alignItems: "flex-start" }}>
-        <span style={{ width: 72, height: 72, display: "inline-flex" }}><Logo /></span>
-        <div className="tl-stack" style={{ gap: 6, flex: 1, minWidth: 240 }}>
-          <p className="tl-eyebrow">2to.iQ Thinking Lab</p>
+        <div className="tl-stack" style={{ gap: 10, flex: 1, minWidth: 240 }}>
+          <Wordmark />
           <h1>Welcome</h1>
           <p className="tl-muted">Calm, accessible thinking activities for learners aged 3 to 25, with their families, teachers and therapists.</p>
         </div>
@@ -83,7 +82,7 @@ function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "ad
       <h1>{DOOR_TEXT[step.door][0]}</h1>
       {auth.methods.google && step.at === "adult" ? <>
         <Button variant="primary" disabled={busy} onClick={() => void attempt(() => auth.signInWithGoogle())}>Continue with Google</Button>
-        <p className="tl-muted">Google shares only your name and email address with Thinking Lab.</p>
+        <p className="tl-muted">Google shares only your name and email address with 2to.iQ.</p>
         <p><b>Or use your email</b></p></> : null}
       {step.at === "adult" ? <div className="tl-stack">
         <Field label="Email address" value={email} onChange={setEmail} autoComplete="email" required />
@@ -102,7 +101,7 @@ function AdultSignIn({ step, setStep, onAdult }: { step: Extract<Step, { at: "ad
       </div> : <form className="tl-stack" onSubmit={e => { e.preventDefault(); void attempt(async () => { const r = await auth.verifyEmailCode(step.email, code); if (r === "new") setStep({ at: "register", door: step.door }); else onAdult(r); }); }}>
         {mode === "demo" ? <Notice>Demo mode: no email is sent. The code is <b>{DEMO_CODE}</b>.</Notice>
           : <><p>We sent an email to <b>{step.email}</b>. Open it <b>on this device, in this browser</b>, and tap the sign-in link. Use the newest email: each link works once, within an hour.</p>
-            <p className="tl-muted">Can't find it? Check your spam folder. The email comes from Supabase, the service that keeps Thinking Lab accounts. You can close this page; the link opens Thinking Lab for you.</p></>}
+            <p className="tl-muted">Can't find it? Check your spam folder. The email comes from Supabase, the service that keeps 2to.iQ accounts. You can close this page; the link opens 2to.iQ for you.</p></>}
         <Field label="Code from the email (if it shows one)" value={code} onChange={setCode} autoComplete="one-time-code" required />
         <div className="tl-row"><Button type="submit" variant="primary" disabled={busy || !code.trim()}>Sign in</Button></div>
       </form>}

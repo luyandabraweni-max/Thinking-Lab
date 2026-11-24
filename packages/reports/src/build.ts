@@ -16,7 +16,7 @@ export function buildReport(input: ReportInput, opts: ReportOptions): ReportMode
   const notes = input.notes.filter(n => kind === "specialist" || n.shareFamily);
   sections.push({ heading: "Summary", paras: [dates.length
     ? `Between ${fullDate(dates[0]!)} and ${fullDate(dates[dates.length - 1]!)}, ${name} took part in ${dates.length} session${dates.length > 1 ? "s" : ""} and tried ${acts.length} different activit${acts.length === 1 ? "y" : "ies"}.`
-    : `${name} has not done any sessions yet. This report will fill in as they use Thinking Lab.`] });
+    : `${name} has not done any sessions yet. This report will fill in as they use 2to.iQ.`] });
   if (kind === "family") {
     const top = ss.filter(s => s.level !== "Early").slice(0, 3);
     sections.push({ heading: "What went well", bullets: top.map(s => `${s.label}.`), paras: top.length ? [] : ["It's early days. Patterns will show after a few more sessions."] });
@@ -33,7 +33,7 @@ export function buildReport(input: ReportInput, opts: ReportOptions): ReportMode
   if (input.goals.length) sections.push({ heading: "Individual support goals", table: { head: ["Goal", "Area", "Status", "Target date"], rows: input.goals.map(g => [g.text, g.area, GOAL_STATUS[g.status], g.target ? fullDate(g.target) : "Not set"]), widths: [3, 1.6, 1.1, 1.2] } });
   if (opts.support && L.supportConsent && L.supportNeeds) sections.push({ heading: "Supports", bullets: [`Support needs (shared with the guardian's consent): ${L.supportNeeds}`] });
   const linked = acts.filter(a => activity(a)?.curriculum?.(L.cohort));
-  if (linked.length) sections.push({ heading: "Curriculum links (proposed)", paras: ["Draft links awaiting specialist confirmation. Thinking Lab does not replace the school's curriculum."], bullets: linked.map(a => `${activity(a)!.name}: ${activity(a)!.curriculum!(L.cohort)}`) });
+  if (linked.length) sections.push({ heading: "Curriculum links (proposed)", paras: ["Draft links awaiting specialist confirmation. 2to.iQ does not replace the school's curriculum."], bullets: linked.map(a => `${activity(a)!.name}: ${activity(a)!.curriculum!(L.cohort)}`) });
   if (kind === "specialist" && opts.history && rows.length) sections.push({ heading: "Session history", table: { head: ["Date", "Activity", "What was observed", "Answered by", "Hints"],
     rows: rows.filter(r => activity(r[1])).slice().reverse().map(r => [fullDate(r[0]), activity(r[1])!.name, STATUS_TEXT[r[2]] ?? r[2], r[3], String(r[4])]), widths: [1.4, 1.6, 1.8, 1.6, 0.6] } });
   if (notes.length) sections.push({ heading: kind === "family" ? "Notes from specialists" : "Notes", table: { head: ["Date", "From", "Note"],
@@ -41,7 +41,7 @@ export function buildReport(input: ReportInput, opts: ReportOptions): ReportMode
   const by = input.by;
   return {
     title: kind === "family" ? `Family summary for ${name}` : `Learning report for ${name}`,
-    subtitle: "2to.iQ Thinking Lab",
+    subtitle: "2to.iQ",
     meta: [["Learner", name], ["Age group", L.cohortLabel], ["Curriculum", [L.curriculum, L.level].filter(Boolean).join(", ") || "Not set"], ["Period", period],
       ["Prepared by", `${by.name} (${by.role === "guardian" ? "parent or guardian" : by.profession || "specialist"})`], ["Date", fullDate(today)]],
     sections,

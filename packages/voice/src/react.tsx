@@ -32,7 +32,7 @@ export function VoiceConsent({ onAgree, onCancel }: { onAgree: () => void; onCan
     <Notice tone="warn">
       <div className="tl-stack">
         <p><b>Before you speak:</b> {engine?.sendsAudioAway
-          ? "this browser sends what you say to Google or Apple to turn it into words. They don't keep it for Thinking Lab, but it does leave this device."
+          ? "this browser sends what you say to Google or Apple to turn it into words. They don't keep it for 2to.iQ, but it does leave this device."
           : "your phone turns what you say into words. Some older phones use their maker's online service to do this."}</p>
         <p>You can always type instead. You can change your mind later in settings.</p>
         <div className="tl-row"><Button variant="primary" onClick={onAgree}>Agree and speak</Button><Button onClick={onCancel}>Type instead</Button></div>

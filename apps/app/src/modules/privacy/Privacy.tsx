@@ -7,7 +7,7 @@ export const PRIVACY_VERSION = "2026-11-12";
 export function PrivacyNotice() {
   return (
     <div className="tl-stack privacy">
-      <p><b>Thinking Lab is run by the Pholoso Afrika Foundation (2to.iQ).</b> This is how we look after your information and your child's.</p>
+      <p><b>2to.iQ is run by the Pholoso Afrika Foundation.</b> This is how we look after your information and your child's.</p>
 
       <h3>What we keep</h3>
       <ul className="plain">
@@ -22,7 +22,7 @@ export function PrivacyNotice() {
 
       <h3>Who can see it</h3>
       <ul className="plain">
-        <li>You, and any other parent or guardian of your child on Thinking Lab.</li>
+        <li>You, and any other parent or guardian of your child on 2to.iQ.</li>
         <li>Teachers and therapists, <b>only if you share your child with them</b>. You can stop sharing at any time.</li>
         <li>School admins see totals only, never a child's name, progress or notes.</li>
         <li>If your child says they feel unsafe, the designated safeguarding lead is told, so they can help.</li>

@@ -101,7 +101,7 @@ function VoiceAnswers({ prefs, change }: { prefs: Prefs; change: (p: Partial<Pre
   if (asking) return (
     <div className="obs-item tl-stack" role="group" aria-labelledby="vaH">
       <h3 id="vaH">For a grown-up</h3>
-      <p>{voice.engine.sendsAudioAway ? "This browser sends what is said to Google or Apple to turn it into words. They don't keep it for Thinking Lab, but it does leave this device." : "This device turns what is said into words. Some older phones use their maker's online service to do this."} Thinking Lab never records or keeps the sound. Tapping and typing always work too.</p>
+      <p>{voice.engine.sendsAudioAway ? "This browser sends what is said to Google or Apple to turn it into words. They don't keep it for 2to.iQ, but it does leave this device." : "This device turns what is said into words. Some older phones use their maker's online service to do this."} 2to.iQ never records or keeps the sound. Tapping and typing always work too.</p>
       <div className="tl-row"><button className="btn primary" onClick={() => { voice.agree(); change({ voiceIn: true }); setAsking(false); }}>I'm a grown-up, and I agree</button><button className="btn quiet" onClick={() => setAsking(false)}>Not now</button></div>
     </div>);
   return <label className="consent"><input type="checkbox" checked={prefs.voiceIn} onChange={e => (e.target.checked && !voice.consent ? setAsking(true) : change({ voiceIn: e.target.checked }))} /><span>Answer questions by speaking</span></label>;
