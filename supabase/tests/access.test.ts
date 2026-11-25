@@ -381,3 +381,46 @@ describe("the multidisciplinary intake", () => {
     expect(await rows(SPECIALIST, "intake_team")).toEqual([]);
   });
 });
+
+describe("a family adding people to their child's team", () => {
+  it("adds teachers and specialists by email, invites the rest until they register, and only the family can", async () => {
+    const TEACHER = "00000000-0000-4000-8000-000000000021", NEWBIE = "00000000-0000-4000-8000-000000000022", MUM = "00000000-0000-4000-8000-000000000023";
+    await adult(db, TEACHER, "Team Teacher");
+    const org = (await db.query<{ id: string }>("insert into public.organisations (name, kind) values ('Teacher practice', 'families') returning id")).rows[0]!.id;
+    await db.query("insert into public.memberships (user_id, org_id, role) values ($1, $2, 'teacher')", [TEACHER, org]);
+    const owl = (await db.query<{ id: string }>("select id from public.learners where nickname = 'Calm Owl'")).rows[0]!.id;
+    const call = (who: string, sql: string, args: unknown[]) => as(db, who, q => q<{ r: unknown }>(sql, args)).then(r => r[0]?.r);
+    const team = async () => (await db.query<{ user_id: string }>("select user_id from public.learner_team where learner_id = $1 order by user_id", [owl])).rows.map(r => r.user_id);
+    const invites = () => call(OTHER_PARENT, "select public.team_invites_for($1) as r", [owl]) as Promise<{ email: string }[]>;
+
+    // Someone with a teacher account joins at once, with no health access
+    expect(await call(OTHER_PARENT, "select public.invite_to_team($1, $2) as r", [owl, ` ${TEACHER.toUpperCase()}@Example.org `])).toBe("added");
+    expect(await team()).toEqual([TEACHER]);
+    expect((await db.query("select health_access from public.learner_team where learner_id = $1", [owl])).rows).toEqual([{ health_access: false }]);
+    // Only the child's family, a real email, and never a family account or yourself
+    await expect(call(PARENT, "select public.invite_to_team($1, $2) as r", [owl, "x@example.org"])).rejects.toThrow(/Only the child's parent or guardian/);
+    await expect(call(TEACHER, "select public.invite_to_team($1, $2) as r", [owl, "x@example.org"])).rejects.toThrow(/Only the child's parent or guardian/);
+    await expect(call(OTHER_PARENT, "select public.invite_to_team($1, $2) as r", [owl, "not an email"])).rejects.toThrow(/check the email/);
+    await expect(call(OTHER_PARENT, "select public.invite_to_team($1, $2) as r", [owl, `${STRANGER}@example.org`])).rejects.toThrow(/family account/);
+    await expect(call(OTHER_PARENT, "select public.invite_to_team($1, $2) as r", [owl, `${OTHER_PARENT}@example.org`])).rejects.toThrow(/your own email/);
+    await expect(call(PARENT, "select public.team_invites_for($1) as r", [owl])).rejects.toThrow(/Only the child's parent or guardian/);
+
+    // Anyone else is invited, and joins when they register as a teacher or specialist; a family account never joins
+    expect(await call(OTHER_PARENT, "select public.invite_to_team($1, $2) as r", [owl, "new.person@example.org"])).toBe("invited");
+    expect(await call(OTHER_PARENT, "select public.invite_to_team($1, $2) as r", [owl, "a.mum@example.org"])).toBe("invited");
+    expect((await invites()).map(i => i.email)).toEqual(["new.person@example.org", "a.mum@example.org"]);
+    await db.query("insert into auth.users (id, email) values ($1, 'a.mum@example.org'), ($2, 'new.person@example.org')", [MUM, NEWBIE]);
+    await as(db, MUM, q => q("select public.register_adult('A Mum', 'guardian')"));
+    await as(db, NEWBIE, q => q("select public.register_adult('New Person', 'specialist', 'Speech-language therapist')"));
+    expect(await team()).toEqual([TEACHER, NEWBIE].sort());
+    expect((await invites()).map(i => i.email)).toEqual(["a.mum@example.org"]);
+    await as(db, OTHER_PARENT, q => q("select public.cancel_team_invite($1, $2)", [owl, "A.Mum@example.org"]));
+    expect(await invites()).toEqual([]);
+
+    // The family takes someone off the team; nobody else can
+    await as(db, NEWBIE, q => q("delete from public.learner_team where learner_id = $1 and user_id = $2", [owl, TEACHER]));
+    expect(await team()).toContain(TEACHER);
+    await as(db, OTHER_PARENT, q => q("delete from public.learner_team where learner_id = $1 and user_id = $2", [owl, NEWBIE]));
+    expect(await team()).toEqual([TEACHER]);
+  });
+});

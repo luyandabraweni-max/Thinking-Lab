@@ -1,4 +1,4 @@
-import { IdbKv, LocalOrgAdmin, LocalSafeguarding, LocalStore, prune, seedDemo, sync, type Account, type Learner, type OrgAdmin, type Safeguarding, type SyncResult } from "@tl/data";
+import { IdbKv, LocalOrgAdmin, LocalSafeguarding, LocalStore, LocalTeamSharing, type TeamSharing, prune, seedDemo, sync, type Account, type Learner, type OrgAdmin, type Safeguarding, type SyncResult } from "@tl/data";
 import { createContext, useContext, type ReactNode } from "react";
 import { DemoAuth, type AuthAdapter } from "./auth";
 import { removeDeviceLearner } from "./learner-lock";
@@ -15,6 +15,8 @@ export interface Services {
   safeguarding(me: Account): Safeguarding;
   /** The organisation admin's totals and staff. */
   admin(me: Account): OrgAdmin;
+  /** A family adds teachers and specialists to their child's team, and takes them off. */
+  team(me: Account): TeamSharing;
   /** A parent or guardian adds their child. Needs the server (it decides the learner's id and links the guardian). */
   registerLearner(me: Account, child: NewLearner): Promise<void>;
   /** A parent or guardian deletes their child's profile and everything about them. Needs the server. */
@@ -27,7 +29,7 @@ export async function createServices(env: ImportMetaEnv = import.meta.env, store
   if (url && key) {
     const link = linkError();
     // Loaded only when connected, so demo and offline try-outs don't download the server library.
-    const [{ createClient }, { SupabaseTransport, SupabaseSafeguarding, SupabaseOrgAdmin }, { SupabaseAuth }] = await Promise.all([import("@supabase/supabase-js"), import("@tl/data/supabase"), import("./supabase-auth")]);
+    const [{ createClient }, { SupabaseTransport, SupabaseSafeguarding, SupabaseOrgAdmin, SupabaseTeamSharing }, { SupabaseAuth }] = await Promise.all([import("@supabase/supabase-js"), import("@tl/data/supabase"), import("./supabase-auth")]);
     const client = createClient(url, key, { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } });
     const transport = new SupabaseTransport(client);
     const syncNow = async () => ((await client.auth.getSession()).data.session ? sync(store, transport) : null);
@@ -43,7 +45,7 @@ export async function createServices(env: ImportMetaEnv = import.meta.env, store
       await forget(store, id);
       await syncNow();
     };
-    return { mode: "supabase", store, auth: new SupabaseAuth(client, store, syncNow, link), syncNow, safeguarding: () => new SupabaseSafeguarding(client), admin: me => new SupabaseOrgAdmin(client, me.orgId ?? ""), registerLearner, deleteLearner };
+    return { mode: "supabase", store, auth: new SupabaseAuth(client, store, syncNow, link), syncNow, safeguarding: () => new SupabaseSafeguarding(client), admin: me => new SupabaseOrgAdmin(client, me.orgId ?? ""), team: () => new SupabaseTeamSharing(client), registerLearner, deleteLearner };
   }
   if (!(await store.accounts()).length) await seedDemo(store);
   const registerLearner = async (me: Account, c: NewLearner) => {
@@ -55,7 +57,7 @@ export async function createServices(env: ImportMetaEnv = import.meta.env, store
     if (!L || !L.guardianIds.includes(me.id)) throw new Error("Only the child's parent or guardian can delete their profile");
     await forget(store, id);
   };
-  return { mode: "demo", store, auth: new DemoAuth(store), syncNow: async () => null, safeguarding: me => new LocalSafeguarding(store, me), admin: me => new LocalOrgAdmin(store, me), registerLearner, deleteLearner };
+  return { mode: "demo", store, auth: new DemoAuth(store), syncNow: async () => null, safeguarding: me => new LocalSafeguarding(store, me), admin: me => new LocalOrgAdmin(store, me), team: me => new LocalTeamSharing(store, me), registerLearner, deleteLearner };
 }
 
 /** An email link that didn't work comes back with the reason in the address. Read it, then tidy the address. */

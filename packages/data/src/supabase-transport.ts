@@ -1,6 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { OutboxEntry } from "./kv";
 import type { OrgAdmin, OrgOverview } from "./admin";
+import type { TeamInvite, TeamSharing } from "./team";
 import type { ConcernRecord, Safeguarding } from "./safeguarding";
 import type { Changes, Transport } from "./sync";
 
@@ -63,3 +64,28 @@ export class SupabaseOrgAdmin implements OrgAdmin {
     if (error) throw new Error(error.code === "PGRST202" ? "Removing staff isn't switched on yet. The project owner needs to approve one database change (supabase/migrations/20261112082000_remove_staff.sql)." : error.message);
   }
 }
+
+/** The family's own team changes: invitations through database functions that only answer the child's guardians, and
+ *  taking someone off the team through the family's own row rule on learner_team. */
+export class SupabaseTeamSharing implements TeamSharing {
+  constructor(private client: SupabaseClient) {}
+  async invites(learnerId: string) {
+    const { data, error } = await this.client.rpc("team_invites_for", { p_learner: learnerId });
+    if (error) throw new Error(error.code === "PGRST202" ? NOT_YET : error.message);
+    return data as TeamInvite[];
+  }
+  async add(learnerId: string, email: string) {
+    const { data, error } = await this.client.rpc("invite_to_team", { p_learner: learnerId, p_email: email });
+    if (error) throw new Error(error.code === "PGRST202" ? NOT_YET : error.message);
+    return data as "added" | "invited";
+  }
+  async cancel(learnerId: string, email: string) {
+    const { error } = await this.client.rpc("cancel_team_invite", { p_learner: learnerId, p_email: email });
+    if (error) throw new Error(error.message);
+  }
+  async remove(learnerId: string, userId: string) {
+    const { error } = await this.client.from("learner_team").delete().eq("learner_id", learnerId).eq("user_id", userId);
+    if (error) throw new Error(error.message);
+  }
+}
+const NOT_YET = "Adding people to the team isn't switched on yet. The project owner needs to apply one database change (supabase/migrations/20261125090000_team_invites.sql).";

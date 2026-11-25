@@ -7,3 +7,4 @@ export { LocalSafeguarding, type ConcernRecord, type Safeguarding } from "./safe
 export { prune, sync, type Changes, type SyncResult, type Transport, type Visible } from "./sync";
 export { DEMO, DEMO_ACCOUNTS, DEMO_LEARNERS, seedDemo } from "./demo";
 export { LocalOrgAdmin, type OrgAdmin, type OrgOverview, type StaffInvite, type StaffRow } from "./admin";
+export { LocalTeamSharing, type TeamInvite, type TeamSharing } from "./team";

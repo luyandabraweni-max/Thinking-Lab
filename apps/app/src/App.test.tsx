@@ -756,3 +756,28 @@ describe("privacy and deleting a profile", () => {
     expect(screen.queryByRole("button", { name: /Delete .* profile/ })).toBeNull();
   });
 });
+
+describe("adding people to a child's team", () => {
+  it("lets the family add a specialist by email, invite someone new, cancel it, and take someone off", async () => {
+    const user = start();
+    await signInDemo(user, "Demo parent");
+    await user.click(await screen.findByRole("button", { name: /^Open Quiet River/ }));
+    await user.click(screen.getByRole("tab", { name: "Sharing" }));
+    const email = screen.getByRole("textbox", { name: /Their email address/ });
+    await user.type(email, "therapist@example.org");
+    await user.click(screen.getByRole("button", { name: "Add to team" }));
+    expect(await screen.findByText("Added to Quiet River's team.")).toBeInTheDocument();
+    expect(await screen.findByText("Demo Therapist")).toBeInTheDocument();
+    await user.type(email, "parent@example.org");
+    await user.click(screen.getByRole("button", { name: "Add to team" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("your own email");
+    await user.clear(email); await user.type(email, "New.Person@example.org");
+    await user.click(screen.getByRole("button", { name: "Add to team" }));
+    expect(await screen.findByText(/Invitation saved/)).toBeInTheDocument();
+    await user.click(await screen.findByRole("button", { name: "Cancel the invitation for new.person@example.org" }));
+    await waitFor(() => expect(screen.queryByRole("button", { name: /Cancel the invitation/ })).not.toBeInTheDocument());
+    await user.click(screen.getByRole("button", { name: "Remove from team" }));
+    await user.click(screen.getByRole("button", { name: "Remove" }));
+    await waitFor(() => expect(screen.queryByText("Demo Therapist")).not.toBeInTheDocument());
+  });
+});
